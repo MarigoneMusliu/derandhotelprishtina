@@ -48,37 +48,31 @@ html
 }
 
 @media (max-width: 480px) {
-  
   html,
   body {
     max-width: 100%;
     overflow-x: hidden;
   }
 
-  
   .sacher-home .sacher-hero__content h1 {
     font-size: clamp(26px, 8vw, 32px);
   }
 
-  
   .sacher-home .container {
     padding-left: 18px;
     padding-right: 18px;
   }
 
-  
   .sacher-home .sacher-mozart__content h4,
   .sacher-home .sacher-mozart__content p {
     margin-left: 0;
   }
 
-  
   .sacher-home .sacher-facilities__img--sub {
     right: 0;
     width: 60%;
   }
 
-  
   .guest-testimonials__inner {
     padding-left: 18px;
     padding-right: 18px;
@@ -98,7 +92,6 @@ html
     height: 32px;
   }
 
-  
   .sacher-instagram__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -190,7 +183,6 @@ html
     max-width: 98vw;
   }
 
-  
   .rooms-page .hero__text h2[data-i18n="hero-title"] {
     white-space: normal !important;
   }
@@ -301,7 +293,7 @@ html
 }
 
 .home__room__item {
-  flex: 0 0 calc(33.333% - 17px); 
+  flex: 0 0 calc(33.333% - 17px);
   box-sizing: border-box;
 }
 
@@ -362,7 +354,7 @@ html
 @media (max-width: 991px) {
   .home__room__item {
     flex: 0 0 calc(50% - 13px);
-  } 
+  }
   .section-title h2 {
     font-size: 32px;
   }
@@ -429,13 +421,13 @@ html
 @media (max-width: 767px) {
   .home__room__item {
     flex: 0 0 100%;
-  } 
+  }
   .home-room__carousel-wrapper {
     padding: 0 15px;
   }
   .home-room__nav {
     display: none;
-  } 
+  }
   .home__room__img {
     height: 350px;
   }
@@ -1023,7 +1015,7 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  
+
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
@@ -1418,7 +1410,7 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin-bottom: 180px; 
+  margin-bottom: 180px;
   position: relative;
 }
 
@@ -1816,7 +1808,7 @@ body {
   text-align: center;
   font-family: "Forum", serif;
   padding: 40px;
-  background-color: #fff; 
+  background-color: #fff;
 }
 
 .content-overlay--room-detail .subtitle {
@@ -1830,7 +1822,7 @@ body {
 }
 
 .content-overlay--room-detail h2 {
-  font-size: 48px; 
+  font-size: 48px;
   line-height: 1.2;
   font-weight: 400;
   color: #1a1a1a;
@@ -6161,12 +6153,10 @@ body {
 }
 
 @media (max-width: 767px) {
-  
   body.rooms-page {
     padding-top: 72px !important;
   }
 
-  
   .rooms-page .header__nav {
     display: none !important;
   }
@@ -6221,7 +6211,6 @@ body {
     margin-left: 0;
   }
 
-  
   .rooms-page .home-room__carousel {
     overflow: visible !important;
   }
@@ -6246,7 +6235,6 @@ body {
     height: 260px !important;
   }
 
-  
   .rooms-page .hero--left {
     margin-top: -8px !important;
     height: 58vh;
@@ -6298,7 +6286,6 @@ body {
     font-weight: 600;
   }
 
-  
   .rooms-page .header__logo a img {
     max-height: 34px !important;
   }
@@ -6346,7 +6333,6 @@ body {
     width: auto !important;
   }
 
-  
   .rooms-page .header__nav .header__lang__selector,
   .rooms-page .header__nav__widget {
     display: none !important;
@@ -6410,7 +6396,7 @@ body {
     min-height: 0 !important;
     height: auto !important;
     max-height: none !important;
-    aspect-ratio: 2.4 / 1 !important; 
+    aspect-ratio: 2.4 / 1 !important;
     background-position: left top !important;
     background-size: 108% auto !important;
   }
@@ -6509,7 +6495,6 @@ body {
     border-radius: 3px !important;
   }
 
-  
   .rooms-page .canvas__open span,
   .rooms-page .canvas__open .fa {
     font-family: FontAwesome !important;
@@ -6530,7 +6515,7 @@ body {
     height: auto !important;
     min-height: 0 !important;
     max-height: none !important;
-    aspect-ratio: 2.4 / 1 !important; 
+    aspect-ratio: 2.4 / 1 !important;
     padding: 0 !important;
     position: relative !important;
     align-items: flex-end !important;
@@ -8054,7 +8039,6 @@ body {
     min-height: 0;
   }
 
-  
   .sacher-home .sacher-welcome .sacher-feature__left {
     min-height: 0;
   }
@@ -8148,7 +8132,7 @@ body {
 
   .sacher-home .sacher-hero {
     min-height: 62vh;
-    
+
     margin-bottom: clamp(44px, 12vw, 88px);
   }
 
@@ -8570,14 +8554,13 @@ body {
     display: none !important;
   }
 
-  
   .sacher-home .sacher-hero {
     margin-bottom: clamp(44px, 12vw, 88px);
   }
 
   .sacher-home .sacher-rooms {
     min-height: clamp(300px, 48vh, 460px);
-    
+
     margin-bottom: 40px;
   }
 
@@ -8607,7 +8590,6 @@ body {
     font-size: 11px;
   }
 
-  
   .sacher-home br {
     display: none;
   }
@@ -9051,7 +9033,6 @@ body {
     display: none;
   }
 
-  
   .rooms-page > br,
   .rooms-page .sacher-roomcats > br,
   .rooms-page .home-about > br {
@@ -9201,7 +9182,6 @@ body {
 }
 
 .sacher-testimonials__card {
-  
   flex: 0 0 100%;
   width: 100%;
   max-width: 100%;
@@ -11028,7 +11008,7 @@ body {
 
 .guest-testimonials__bg {
   position: absolute;
-  
+
   inset: -24px;
   z-index: 0;
   background-repeat: no-repeat;
@@ -11305,7 +11285,6 @@ body {
 }
 
 @media (max-width: 767px) {
-  
   .guest-testimonials__inner.container {
     padding-left: max(10px, env(safe-area-inset-left, 0px));
     padding-right: max(10px, env(safe-area-inset-right, 0px));
@@ -11383,7 +11362,6 @@ body {
 }
 
 @media (max-width: 991px) {
-  
   body.sacher-home:has(.sacher-hero) {
     padding-top: 0 !important;
   }
@@ -11399,7 +11377,7 @@ body {
   .header__logo {
     padding: 16px max(16px, env(safe-area-inset-left)) 16px
       max(16px, env(safe-area-inset-left));
-    
+
     padding-right: max(76px, min(200px, 46vw));
   }
 
@@ -11407,8 +11385,6 @@ body {
     max-height: 48px;
     width: auto;
   }
-
-  
 
   .header .canvas__open,
   .sacher-home .canvas__open {
@@ -11450,10 +11426,9 @@ body {
     line-height: 1 !important;
   }
 
-  
   .footer .container {
     box-sizing: border-box !important;
-    
+
     padding-left: max(
       20px,
       env(safe-area-inset-left),
@@ -11564,7 +11539,6 @@ body {
     margin-bottom: 4px !important;
   }
 
-  
   .footer__links__grid {
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
@@ -11909,13 +11883,11 @@ body {
     pointer-events: none;
   }
 
-  
   .rooms-page .hero[data-hero-rotate].hero--left::before {
     display: none !important;
     content: none !important;
   }
 
-  
   .rooms-page .hero[data-hero-rotate].hero--left {
     height: auto !important;
     min-height: clamp(220px, 72vw, 560px) !important;
@@ -12022,7 +11994,6 @@ body {
     max-width: 100% !important;
   }
 
-  
   .junior-room-page .rooms-page .sacher-roomcats__head {
     display: block !important;
     padding: 0 14px 8px !important;
@@ -12248,7 +12219,8 @@ body {
     -ms-flex-negative: 0;
     flex-shrink: 0;
     margin: 0 !important;
-    padding: max(20px, env(safe-area-inset-top)) max(52px, env(safe-area-inset-right)) 18px
+    padding: max(20px, env(safe-area-inset-top))
+      max(52px, env(safe-area-inset-right)) 18px
       max(40px, env(safe-area-inset-left)) !important;
     border-bottom: 1px solid #e0e0e0;
     text-align: left;
@@ -12302,8 +12274,12 @@ body {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    -webkit-transition: opacity 0.2s ease, color 0.2s ease;
-    transition: opacity 0.2s ease, color 0.2s ease;
+    -webkit-transition:
+      opacity 0.2s ease,
+      color 0.2s ease;
+    transition:
+      opacity 0.2s ease,
+      color 0.2s ease;
     -webkit-tap-highlight-color: transparent;
   }
 
@@ -12364,8 +12340,10 @@ body {
     border-bottom: none;
   }
 
-  
-  #mobile-menu-wrap .slicknav_nav > li > span.slicknav_parent-link.slicknav_row {
+  #mobile-menu-wrap
+    .slicknav_nav
+    > li
+    > span.slicknav_parent-link.slicknav_row {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
@@ -12396,7 +12374,11 @@ body {
     -webkit-font-smoothing: antialiased;
   }
 
-  #mobile-menu-wrap .slicknav_nav > li > span.slicknav_parent-link > a:not(.slicknav_item) {
+  #mobile-menu-wrap
+    .slicknav_nav
+    > li
+    > span.slicknav_parent-link
+    > a:not(.slicknav_item) {
     -webkit-box-flex: 1;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
@@ -12415,7 +12397,11 @@ body {
     line-height: inherit !important;
   }
 
-  #mobile-menu-wrap .slicknav_nav > li > span.slicknav_parent-link > a.slicknav_item {
+  #mobile-menu-wrap
+    .slicknav_nav
+    > li
+    > span.slicknav_parent-link
+    > a.slicknav_item {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
@@ -12439,7 +12425,6 @@ body {
     -webkit-tap-highlight-color: transparent;
   }
 
-  
   #mobile-menu-wrap .slicknav_nav > li > a.slicknav_row {
     font-family: "Traviata", "Forum", serif !important;
     font-size: 15px !important;
@@ -12475,8 +12460,11 @@ body {
     -webkit-font-smoothing: antialiased;
   }
 
-  
-  #mobile-menu-wrap .slicknav_nav > li:nth-child(-n + 4) > span.slicknav_parent-link > a:not(.slicknav_item),
+  #mobile-menu-wrap
+    .slicknav_nav
+    > li:nth-child(-n + 4)
+    > span.slicknav_parent-link
+    > a:not(.slicknav_item),
   #mobile-menu-wrap .slicknav_nav > li:nth-child(1) > a.slicknav_row,
   #mobile-menu-wrap .slicknav_nav > li:nth-child(1) > a.slicknav_row a,
   #mobile-menu-wrap .slicknav_nav > li:nth-child(2) > a.slicknav_row,
@@ -12488,8 +12476,16 @@ body {
     color: #b17256 !important;
   }
 
-  #mobile-menu-wrap .slicknav_nav > li:nth-child(-n + 4) > span.slicknav_parent-link:hover > a:not(.slicknav_item),
-  #mobile-menu-wrap .slicknav_nav > li:nth-child(-n + 4) > span.slicknav_parent-link:focus-within > a:not(.slicknav_item),
+  #mobile-menu-wrap
+    .slicknav_nav
+    > li:nth-child(-n + 4)
+    > span.slicknav_parent-link:hover
+    > a:not(.slicknav_item),
+  #mobile-menu-wrap
+    .slicknav_nav
+    > li:nth-child(-n + 4)
+    > span.slicknav_parent-link:focus-within
+    > a:not(.slicknav_item),
   #mobile-menu-wrap .slicknav_nav > li:nth-child(1) > a.slicknav_row:hover,
   #mobile-menu-wrap .slicknav_nav > li:nth-child(1) > a.slicknav_row:hover a,
   #mobile-menu-wrap .slicknav_nav > li:nth-child(2) > a.slicknav_row:hover,
@@ -12511,9 +12507,17 @@ body {
   }
 
   #mobile-menu-wrap .slicknav_nav > li:nth-child(n + 5) > a.slicknav_row:hover,
-  #mobile-menu-wrap .slicknav_nav > li:nth-child(n + 5) > a.slicknav_row:hover a,
+  #mobile-menu-wrap
+    .slicknav_nav
+    > li:nth-child(n + 5)
+    > a.slicknav_row:hover
+    a,
   #mobile-menu-wrap .slicknav_nav > li:nth-child(n + 5) > a.slicknav_row:focus,
-  #mobile-menu-wrap .slicknav_nav > li:nth-child(n + 5) > a.slicknav_row:focus a {
+  #mobile-menu-wrap
+    .slicknav_nav
+    > li:nth-child(n + 5)
+    > a.slicknav_row:focus
+    a {
     background: rgba(0, 0, 0, 0.04) !important;
     color: #1a1a1a !important;
   }
@@ -12578,7 +12582,8 @@ body {
     -ms-flex-negative: 0;
     flex-shrink: 0;
     margin: 0 !important;
-    padding: 0 max(12px, env(safe-area-inset-right)) max(14px, env(safe-area-inset-bottom))
+    padding: 0 max(12px, env(safe-area-inset-right))
+      max(14px, env(safe-area-inset-bottom))
       max(12px, env(safe-area-inset-left)) !important;
     border-top: 1px solid #e0e0e0;
     background: #b17256 !important;
@@ -12655,7 +12660,9 @@ body {
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
-    bottom: calc(58px + max(12px, env(safe-area-inset-bottom)) + 8px) !important;
+    bottom: calc(
+      58px + max(12px, env(safe-area-inset-bottom)) + 8px
+    ) !important;
     z-index: 10060 !important;
     padding: 6px 14px;
     border-radius: 999px;
