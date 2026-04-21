@@ -518,7 +518,7 @@
       }
     </style>
     <style>
-      /* Darker, top-heavy overlay for 1111.jpeg to avoid light band near bottom */
+      /* Darker, top-heavy overlay for 1111.webp to avoid light band near bottom */
       .junior-room-page .sacher-hero__overlay {
         background: linear-gradient(
             to bottom,
@@ -587,7 +587,7 @@
     <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu-wrapper">
       <div class="offcanvas__logo">
-        <a href="./index.html"><img src="img/logoo.webp" alt="Logo" /></a>
+        <a href="./index.html"><img src="img/logoo.webp" alt="Logo" decoding="async" loading="lazy"></a>
       </div>
       <div id="mobile-menu-wrap"></div>
       <div class="offcanvas__btn__widget">
@@ -618,7 +618,7 @@
               <div class="header__logo">
                 <a href="./index.html"
                   ><img src="img/logoo.webp" alt="Logo"
-                /></a>
+                decoding="async" loading="lazy"></a>
               </div>
             </div>
             <div class="col-lg-10">
@@ -750,14 +750,14 @@
     >
       <img
         class="sacher-hero__video"
-        src="img/1111.jpeg"
+        src="img/1111.webp"
         muted
         loop
         playsinline
         preload="none"
         data-parallax="y"
         data-parallax-speed="0.12"
-      ></img>
+       decoding="async" loading="eager" fetchpriority="high" width="1920" height="1080"></img>
       <div class="sacher-hero__overlay"></div>
       <div class="container">
         <div class="sacher-hero__content">
@@ -804,7 +804,7 @@
                 width="560"
                 height="560"
                 loading="lazy"
-              />
+              decoding="async">
               <span class="preview-badge" aria-hidden="true"
                 ><span class="preview-badge__txt">360</span></span
               >
@@ -1021,35 +1021,35 @@
     <section class="junior-photo-grid" aria-label="Junior Suite gallery grid">
       <div class="junior-photo-grid__grid">
         <div class="junior-photo-grid__cell">
-          <img src="img/j1.webp" alt="Junior suite detail 1" loading="lazy" />
+          <img src="img/j1.webp" alt="Junior suite detail 1" loading="lazy" decoding="async">
         </div>
         <div class="junior-photo-grid__cell">
-          <img src="img/j5.webp" alt="Junior suite detail 2" loading="lazy" />
+          <img src="img/j5.webp" alt="Junior suite detail 2" loading="lazy" decoding="async">
       </div>
         <div class="junior-photo-grid__cell">
-          <img src="img/j3.webp" alt="Junior suite detail 3" loading="lazy" />
+          <img src="img/j3.webp" alt="Junior suite detail 3" loading="lazy" decoding="async">
     </div>
         <div class="junior-photo-grid__cell">
-          <img src="img/j4.webp" alt="Junior suite detail 4" loading="lazy" />
+          <img src="img/j4.webp" alt="Junior suite detail 4" loading="lazy" decoding="async">
         </div>
         <div class="junior-photo-grid__cell">
-          <img src="img/j6.webp" alt="Junior suite detail 5" loading="lazy" />
+          <img src="img/j6.webp" alt="Junior suite detail 5" loading="lazy" decoding="async">
         </div>
         <div class="junior-photo-grid__cell">
-          <img src="img/j2.webp" alt="Junior suite detail 6" loading="lazy" />
+          <img src="img/j2.webp" alt="Junior suite detail 6" loading="lazy" decoding="async">
         </div>
         <div class="junior-photo-grid__cell">
-          <img src="img/j8.webp" alt="Junior suite detail 7" loading="lazy" />
+          <img src="img/j8.webp" alt="Junior suite detail 7" loading="lazy" decoding="async">
         </div>
         <div class="junior-photo-grid__cell">
-          <img src="img/j.webp" alt="Junior suite detail 8" loading="lazy" />
+          <img src="img/j.webp" alt="Junior suite detail 8" loading="lazy" decoding="async">
         </div>
       </div>
     </section>
 
     <div class="img-lightbox" id="imgLightbox" hidden>
       <div class="img-lightbox__backdrop" data-close></div>
-      <img class="img-lightbox__img" alt="Preview" />
+      <img class="img-lightbox__img" alt="Preview" decoding="async" loading="lazy">
       <button class="img-lightbox__close" type="button" aria-label="Close" data-close>ï¿½</button>
     </div>
 
@@ -1119,7 +1119,7 @@
               comfort and timeless elegance.
             </blockquote>
             <p class="director-showcase__quote-sig">
-              <img src="img/signature.webp" alt="Signature" style="max-width:300px;width:55%;height:auto" />
+              <img src="img/signature.webp" alt="Signature" style="max-width:300px;width:55%;height:auto" decoding="async" loading="lazy">
             </p>
             <p
               class="director-showcase__name"
@@ -1139,7 +1139,7 @@
               width="720"
               height="960"
               loading="lazy"
-            />
+            decoding="async">
           </div>
         </div>
       </div>
@@ -1157,7 +1157,7 @@
           width="380"
           height="200"
           loading="lazy"
-        />
+        decoding="async">
 
       </div>
     </section>
@@ -1168,12 +1168,12 @@
         >
           <div class="director-showcase__stagger-img-wrap">
             <img
-              src="img/juniorbath.jpeg"
+              src="img/juniorbath1.webp"
               alt="Elegant hotel lighting and interior detail"
               width="800"
               height="1000"
               loading="lazy"
-            />
+            decoding="async">
           </div>
           <p class="juniorbath-left-note" data-i18n="junior-bath-note">
           Generous proportions and thoughtful details give our Junior Suites a calm, residential atmosphere. Warm lighting and marble finishes in the bathroom create a spa-like sense of ease.
@@ -1189,7 +1189,7 @@
               width="800"
               height="1000"
               loading="lazy"
-            />
+            decoding="async">
           </div>
         </div>
       </div>
@@ -1264,7 +1264,7 @@
           <div class="sacher-roomcats__viewport">
             <div class="sacher-roomcats__grid">
               <a href="deluxe-double.html" class="sacher-roomcats__item">
-                <img src="img/picture4.webp" alt="Deluxe Double Room" />
+                <img src="img/picture4.webp" alt="Deluxe Double Room" decoding="async" loading="lazy">
                 <div class="sacher-roomcats__content">
                   <span data-i18n="card-badge-2">SECOND TO NONE</span>
                   <h4 data-i18n="card-name-2">Deluxe Double Room</h4>
@@ -1272,7 +1272,7 @@
                 </div>
               </a>
               <a href="twin-room.html" class="sacher-roomcats__item">
-                <img src="img/picture2.webp" alt="Superior Twin Room" />
+                <img src="img/picture2.webp" alt="Superior Twin Room" decoding="async" loading="lazy">
                 <div class="sacher-roomcats__content">
                   <span data-i18n="card-badge-3">TOP TIER LUXURY</span>
                   <h4 data-i18n="card-name-3">Superior Twin Room</h4>
@@ -1280,7 +1280,7 @@
                 </div>
               </a>
               <a href="premium-double.html" class="sacher-roomcats__item">
-                <img src="img/picture1.webp" alt="Premium Double Room" />
+                <img src="img/picture1.webp" alt="Premium Double Room" decoding="async" loading="lazy">
                 <div class="sacher-roomcats__content">
                   <span data-i18n="card-badge-4">TIMELESS ELEGANCE</span>
                   <h4 data-i18n="card-name-4">Premium Double Room</h4>
@@ -1288,7 +1288,7 @@
                 </div>
               </a>
               <a href="superior-double.html" class="sacher-roomcats__item">
-                <img src="img/picture3.webp" alt="Superior Double Room" />
+                <img src="img/picture3.webp" alt="Superior Double Room" decoding="async" loading="lazy">
                 <div class="sacher-roomcats__content">
                   <span data-i18n="card-badge-5">HIGH-CLASS COMFORT</span>
                   <h4 data-i18n="card-name-5">Superior Double Room</h4>
@@ -1317,12 +1317,12 @@
       <div class="container">
         <div class="footer__brandbar">
           <a href="index.html" class="footer__brandbar__logo">
-            <img src="img/logo3.webp" alt="Derand Crest" />
+            <img src="img/logo3.webp" alt="Derand Crest" decoding="async" loading="lazy">
           </a>
           <span class="footer__brandbar__divider"></span>
           <a href="#" class="footer__brandbar__partner">
             <span data-i18n="footer-powered">Powered by</span>
-            <img src="img/logo/logo-1.webp" alt="Powered by partner logo" />
+            <img src="img/logo/logo-1.webp" alt="Powered by partner logo" decoding="async" loading="lazy">
           </a>
         </div>
 
@@ -1517,13 +1517,13 @@
       </div>
     </footer>
 
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js?v=20260416-2"></script>
+    <script src="js/jquery-3.3.1.min.js" defer></script>
+    <script src="js/bootstrap.min.js" defer></script>
+    <script src="js/jquery.nice-select.min.js" defer></script>
+    <script src="js/jquery-ui.min.js" defer></script>
+    <script src="js/jquery.slicknav.js" defer></script>
+    <script src="js/owl.carousel.min.js" defer></script>
+    <script src="js/main.js?v=20260416-2" defer></script>
     <script>
       // Junior page: dropdown opens on hover and on click; closes on outside/leave
       (function () {
@@ -1596,5 +1596,6 @@
     </script>
   </body>
 </html>
+
 
 

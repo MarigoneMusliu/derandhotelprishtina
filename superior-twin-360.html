@@ -16,27 +16,68 @@
       .bathroom-logo span { font-family: "Traviata", "Forum", serif; font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; line-height: 1; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.65); }
       .bathroom-logo:hover { transform: translateY(-50%) scale(1.03); }
     </style>
-  </head>
+  <style>
+  .vt-shell{position:relative;width:100%;height:100%;min-height:420px;border:0;background:linear-gradient(140deg,#1f1f1f,#3d3d3d);display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .vt-shell::before{content:"360° Virtual Tour";position:absolute;top:14px;left:16px;color:#fff;font:600 14px/1.2 Arial,sans-serif;opacity:.88;letter-spacing:.04em}
+  .vt-shell__btn{position:relative;z-index:2;border:1px solid rgba(255,255,255,.7);background:rgba(0,0,0,.35);color:#fff;padding:12px 20px;font:600 14px/1 Arial,sans-serif;letter-spacing:.05em;cursor:pointer}
+  .vt-shell iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+</style>
+</head>
 
     <a class="back-link" href="superior-twin.html">Back to Superior Twin</a>
     <a class="bathroom-logo" href="superior-twin-bathroom-360.html" title="Superior Twin bathroom 360">
-      <img src="img/background.webp" alt="Bathroom logo" />
+      <img src="img/background.webp" alt="Bathroom logo" decoding="async" loading="eager" fetchpriority="high" width="1920" height="1080">
       <span>bathroom</span>
     </a>
     <div class="viewer-wrap">
       <div class="embed-container">
-        <iframe
-          src="https://momento360.com/e/u/da7c71c0ff1f4c33ae506ad9864e6ba3?utm_campaign=embed&utm_source=other&heading=0&pitch=0&field-of-view=75&size=medium&display-plan=true"
-          class="viewer-frame"
-          style="border: 0"
-          allowfullscreen
-        ></iframe>
+        <div class="vt-shell" data-vt-src="https://momento360.com/e/u/da7c71c0ff1f4c33ae506ad9864e6ba3?utm_campaign=embed&utm_source=other&heading=0&pitch=0&field-of-view=75&size=medium&display-plan=true" data-vt-title="360 virtual tour"><button type="button" class="vt-shell__btn">View Tour</button></div>
       </div>
     </div>
 
-<script src='js/jquery-3.3.1.min.js'></script>
-<script src='js/main.js?v=20260416-2'></script>
+<script src="js/jquery-3.3.1.min.js" defer></script>
+<script src="js/main.js?v=20260416-2" defer></script>
+<script>
+(function () {
+  function mountTour(shell) {
+    if (!shell || shell.dataset.loaded === "1") return;
+    var src = shell.getAttribute("data-vt-src");
+    if (!src) return;
+    var iframe = document.createElement("iframe");
+    iframe.src = src;
+    iframe.loading = "lazy";
+    iframe.decoding = "async";
+    iframe.allowFullscreen = true;
+    iframe.title = shell.getAttribute("data-vt-title") || "360 virtual tour";
+    shell.dataset.loaded = "1";
+    shell.innerHTML = "";
+    shell.appendChild(iframe);
+  }
+
+  var shells = document.querySelectorAll(".vt-shell[data-vt-src]");
+  if (!shells.length) return;
+
+  shells.forEach(function (shell) {
+    var btn = shell.querySelector(".vt-shell__btn");
+    if (btn) btn.addEventListener("click", function () { mountTour(shell); }, { passive: true });
+  });
+
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          mountTour(entry.target);
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: "320px 0px" });
+    shells.forEach(function (shell) { io.observe(shell); });
+  }
+})();
+</script>
 </body>
 </html>
+
+
 
 

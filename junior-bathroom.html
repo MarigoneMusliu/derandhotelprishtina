@@ -49,7 +49,13 @@
         border-color: #8f543e;
       }
     </style>
-  </head>
+  <style>
+  .vt-shell{position:relative;width:100%;height:100%;min-height:420px;border:0;background:linear-gradient(140deg,#1f1f1f,#3d3d3d);display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .vt-shell::before{content:"360° Virtual Tour";position:absolute;top:14px;left:16px;color:#fff;font:600 14px/1.2 Arial,sans-serif;opacity:.88;letter-spacing:.04em}
+  .vt-shell__btn{position:relative;z-index:2;border:1px solid rgba(255,255,255,.7);background:rgba(0,0,0,.35);color:#fff;padding:12px 20px;font:600 14px/1 Arial,sans-serif;letter-spacing:.05em;cursor:pointer}
+  .vt-shell iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+</style>
+</head>
 
 <style>
   .global-lang-floating {
@@ -93,17 +99,51 @@
 </div>
     <a class="back-link" href="junior.html"> Back to Junior Room</a>
     <div class="viewer-wrap">
-      <iframe
-        class="viewer-frame"
-        src="https://momento360.com/e/u/08303753f8b74caca3a6fd0be21e4d15?utm_campaign=embed&utm_source=other&heading=0&pitch=0&field-of-view=75&size=medium&display-plan=true"
-        title="Junior Bathroom 360"
-        allowfullscreen
-      ></iframe>
+      <div class="vt-shell" data-vt-src="https://momento360.com/e/u/08303753f8b74caca3a6fd0be21e4d15?utm_campaign=embed&utm_source=other&heading=0&pitch=0&field-of-view=75&size=medium&display-plan=true" data-vt-title="Junior Bathroom 360"><button type="button" class="vt-shell__btn">View Tour</button></div>
     </div>
 
-<script src='js/jquery-3.3.1.min.js'></script>
-<script src='js/main.js?v=20260416-2'></script>
+<script src="js/jquery-3.3.1.min.js" defer></script>
+<script src="js/main.js?v=20260416-2" defer></script>
+<script>
+(function () {
+  function mountTour(shell) {
+    if (!shell || shell.dataset.loaded === "1") return;
+    var src = shell.getAttribute("data-vt-src");
+    if (!src) return;
+    var iframe = document.createElement("iframe");
+    iframe.src = src;
+    iframe.loading = "lazy";
+    iframe.decoding = "async";
+    iframe.allowFullscreen = true;
+    iframe.title = shell.getAttribute("data-vt-title") || "360 virtual tour";
+    shell.dataset.loaded = "1";
+    shell.innerHTML = "";
+    shell.appendChild(iframe);
+  }
+
+  var shells = document.querySelectorAll(".vt-shell[data-vt-src]");
+  if (!shells.length) return;
+
+  shells.forEach(function (shell) {
+    var btn = shell.querySelector(".vt-shell__btn");
+    if (btn) btn.addEventListener("click", function () { mountTour(shell); }, { passive: true });
+  });
+
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          mountTour(entry.target);
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: "320px 0px" });
+    shells.forEach(function (shell) { io.observe(shell); });
+  }
+})();
+</script>
 </body>
 </html>
+
 
 

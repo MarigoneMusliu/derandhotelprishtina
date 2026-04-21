@@ -7492,7 +7492,7 @@ body {
   object-position: center;
 }
 
-/* Keep junior 1111.jpeg slightly lighter than the darker home overlay */
+/* Keep junior 1111.webp slightly lighter than the darker home overlay */
 .junior-room-page .sacher-hero__overlay {
   background: transparent;
 }
@@ -8348,7 +8348,7 @@ body {
 
   .sacher-home .sacher-hero {
     min-height: 62vh;
-    /* Clear strip between hero (1111.jpeg) and Mozart video */
+    /* Clear strip between hero (1111.webp) and Mozart video */
     margin-bottom: clamp(44px, 12vw, 88px);
   }
 

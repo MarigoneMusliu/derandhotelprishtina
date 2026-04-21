@@ -169,7 +169,7 @@
           <div class="row">
             <div class="col-lg-2">
               <div class="header__logo">
-                <a href="./index.html"><img src="img/logoo.webp" alt="Logo" /></a>
+                <a href="./index.html"><img src="img/logoo.webp" alt="Logo" decoding="async" loading="eager" fetchpriority="high" width="1920" height="1080"></a>
               </div>
             </div>
             <div class="col-lg-10">
@@ -201,7 +201,7 @@
     </header>
 
     <section class="onze-hero">
-      <img src="img/o1.webp" alt="Cryotherapy at ONZE" />
+      <img src="img/o1.webp" alt="Cryotherapy at ONZE" decoding="async" loading="lazy">
       <div class="onze-hero__overlay"></div>
       <div class="onze-hero__content">
         <h1>Cryotherapy</h1>
@@ -350,11 +350,13 @@
       </div>
     </main>
 
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js" defer></script>
+    <script src="js/bootstrap.min.js" defer></script>
 
-<script src='js/main.js?v=20260416-2'></script>
+<script src="js/main.js?v=20260416-2" defer></script>
 </body>
 </html>
+
+
 
 

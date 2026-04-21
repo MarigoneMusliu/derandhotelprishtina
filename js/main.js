@@ -5833,7 +5833,7 @@
     Parallax Engine (data-parallax)
   --------------------*/
 
-  // Decorate index sections with parallax by default (except the hero 1111.jpeg)
+  // Decorate index sections with parallax by default (except the hero 1111.webp)
   (function addIndexParallaxDefaults() {
     var isIndex =
       document.body && document.body.classList.contains("sacher-home");
@@ -5854,9 +5854,9 @@
       if (speed) node.setAttribute("data-parallax-speed", speed.toString());
     }
 
-    // Exclude anything inside the hero that contains the 1111.jpeg image
+    // Exclude anything inside the hero that contains the 1111.webp image
     var hero = document.querySelector(".sacher-hero");
-    var excluded = hero ? hero.querySelector("img[src*='1111.jpeg']") : null;
+    var excluded = hero ? hero.querySelector("img[src*='1111.webp']") : null;
 
     // Target all main sections before footer
     var footer = document.querySelector("footer.footer");
