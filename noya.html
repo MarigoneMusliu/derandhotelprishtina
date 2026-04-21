@@ -56,7 +56,6 @@
         background: #0f120e;
       }
 
-      /* Force the same base color across the full page */
       .noya-reborn .noya-shell,
       .noya-reborn .noya-section,
       .noya-reborn .noya-principles,
@@ -73,7 +72,6 @@
         margin: 0;
       }
 
-      /* Full-bleed image at page end — no horizontal gutter */
       .noya-footer-fullbleed {
         position: relative;
         display: block;
@@ -214,7 +212,6 @@
         }
       }
 
-      /* EN/DE/AL: slight margin-left nudges group right vs nav; clamp keeps it responsive */
       body.noya-reborn .noya-header-strip .header__lang__selector {
         display: inline-flex !important;
         flex-direction: row;
@@ -252,7 +249,6 @@
         background: rgba(255, 255, 255, 0.22) !important;
       }
 
-      /* One row: logo | nav (scrolls if needed) | langs — overrides style.css .header__nav { display:none } ≤991px */
       body.noya-reborn .header__nav__option > .container {
         max-width: 100% !important;
         width: 100% !important;
@@ -287,7 +283,6 @@
         overflow-x: visible;
       }
 
-      /* One horizontal row: logo | nav | EN / DE / AL (CSS grid, never wraps) */
       body.noya-reborn .header__nav.noya-header-strip {
         display: grid !important;
         grid-template-columns: auto minmax(0, 1fr) auto;
@@ -343,7 +338,6 @@
         flex: none !important;
       }
 
-      /* Nav links: single line, scroll horizontally on very narrow screens */
       body.noya-reborn .header__menu .menu__class {
         display: flex !important;
         list-style: none !important;
@@ -2277,7 +2271,6 @@
           grid-template-columns: 1fr;
         }
 
-        /* Remove empty side columns on mobile so the hero image starts immediately */
         .noya-hero__left,
         .noya-hero__right {
           display: none;
@@ -2580,7 +2573,6 @@
         }
       }
 
-      /* Desktop header tune: bigger menu labels, tighter spacing */
       @media (min-width: 992px) {
         body.noya-reborn .header__nav.noya-header-strip {
           grid-template-columns: auto auto auto !important;
@@ -2714,8 +2706,12 @@
               <div class="header__nav noya-header-strip">
                 <div class="header__logo">
                   <a href="./index.html"
-                    ><img src="img/logoja.webp" alt="Derand logo"
-                  decoding="async" loading="lazy"></a>
+                    ><img
+                      src="img/logoja.webp"
+                      alt="Derand logo"
+                      decoding="async"
+                      loading="lazy"
+                  /></a>
                 </div>
                 <nav
                   class="header__menu noya-header-menu"
@@ -2769,7 +2765,12 @@
             class="noya-mockup-hero__logo"
             src="img/logo12.webp"
             alt="Noya logo"
-          decoding="async" loading="eager" fetchpriority="high" width="1920" height="1080">
+            decoding="async"
+            loading="eager"
+            fetchpriority="high"
+            width="1920"
+            height="1080"
+          />
           <h1 class="noya-mockup-hero__title" data-i18n="noya-hero-title">
             NOYA
           </h1>
@@ -2793,7 +2794,12 @@
       <section class="noya-section noya-mockup-about" aria-label="Noya Intro">
         <div class="noya-mockup-about__card">
           <div class="noya-mockup-about__image">
-            <img src="img/A7409396.webp" alt="Noya interior view" decoding="async" loading="lazy">
+            <img
+              src="img/A7409396.webp"
+              alt="Noya interior view"
+              decoding="async"
+              loading="lazy"
+            />
           </div>
           <div class="noya-mockup-about__content">
             <h3 data-i18n="noya-about-heading">
@@ -2826,7 +2832,12 @@
       >
         <div class="noya-about-gallery__frame">
           <article class="noya-about-gallery__item noya-about-gallery__item--a">
-            <img src="img/n1.webp" alt="Noya cuisine preparation" decoding="async" loading="lazy">
+            <img
+              src="img/n1.webp"
+              alt="Noya cuisine preparation"
+              decoding="async"
+              loading="lazy"
+            />
             <a
               class="noya-about-gallery__zoom js-noya-zoom"
               href="#"
@@ -2837,7 +2848,12 @@
           </article>
 
           <article class="noya-about-gallery__item noya-about-gallery__item--b">
-            <img src="img/n2.webp" alt="Noya guests at the bar" decoding="async" loading="lazy">
+            <img
+              src="img/n2.webp"
+              alt="Noya guests at the bar"
+              decoding="async"
+              loading="lazy"
+            />
             <a
               class="noya-about-gallery__zoom js-noya-zoom"
               href="#"
@@ -2848,7 +2864,12 @@
           </article>
 
           <article class="noya-about-gallery__item noya-about-gallery__item--c">
-            <img src="img/noya.8.webp" alt="Noya interior social atmosphere" decoding="async" loading="lazy">
+            <img
+              src="img/noya.8.webp"
+              alt="Noya interior social atmosphere"
+              decoding="async"
+              loading="lazy"
+            />
             <a
               class="noya-about-gallery__zoom js-noya-zoom"
               href="#"
@@ -2859,7 +2880,12 @@
           </article>
 
           <article class="noya-about-gallery__item noya-about-gallery__item--d">
-            <img src="img/n3.webp" alt="Noya vibrant cocktail space" decoding="async" loading="lazy">
+            <img
+              src="img/n3.webp"
+              alt="Noya vibrant cocktail space"
+              decoding="async"
+              loading="lazy"
+            />
             <a
               class="noya-about-gallery__zoom js-noya-zoom"
               href="#"
@@ -2870,7 +2896,12 @@
           </article>
 
           <article class="noya-about-gallery__item noya-about-gallery__item--e">
-            <img src="img/nnn.webp" alt="Noya signature details and drinks" decoding="async" loading="lazy">
+            <img
+              src="img/nnn.webp"
+              alt="Noya signature details and drinks"
+              decoding="async"
+              loading="lazy"
+            />
             <a
               class="noya-about-gallery__zoom js-noya-zoom"
               href="#"
@@ -2918,7 +2949,12 @@
             <div class="noya-menu-showcase__viewport">
               <div class="noya-menu-showcase__grid">
                 <article class="noya-menu-showcase__card">
-                  <img src="img/A7409401.webp" alt="Noya menu image" decoding="async" loading="lazy">
+                  <img
+                    src="img/A7409401.webp"
+                    alt="Noya menu image"
+                    decoding="async"
+                    loading="lazy"
+                  />
                   <p
                     class="noya-menu-showcase__sub"
                     data-i18n="noya-menu-sub-food"
@@ -2927,7 +2963,12 @@
                   </p>
                 </article>
                 <article class="noya-menu-showcase__card">
-                  <img src="img/A7409413.webp" alt="Noya menu image" decoding="async" loading="lazy">
+                  <img
+                    src="img/A7409413.webp"
+                    alt="Noya menu image"
+                    decoding="async"
+                    loading="lazy"
+                  />
                   <p
                     class="noya-menu-showcase__sub"
                     data-i18n="noya-menu-sub-food"
@@ -2936,7 +2977,12 @@
                   </p>
                 </article>
                 <article class="noya-menu-showcase__card">
-                  <img src="img/A7409030.webp" alt="Noya menu image" decoding="async" loading="lazy">
+                  <img
+                    src="img/A7409030.webp"
+                    alt="Noya menu image"
+                    decoding="async"
+                    loading="lazy"
+                  />
                   <p
                     class="noya-menu-showcase__sub"
                     data-i18n="noya-menu-sub-food"
@@ -2945,7 +2991,12 @@
                   </p>
                 </article>
                 <article class="noya-menu-showcase__card">
-                  <img src="img/A7409271.webp" alt="Noya menu image" decoding="async" loading="lazy">
+                  <img
+                    src="img/A7409271.webp"
+                    alt="Noya menu image"
+                    decoding="async"
+                    loading="lazy"
+                  />
                   <p
                     class="noya-menu-showcase__sub"
                     data-i18n="noya-menu-sub-food"
@@ -2954,7 +3005,12 @@
                   </p>
                 </article>
                 <article class="noya-menu-showcase__card">
-                  <img src="img/DSC08609.webp" alt="Noya menu image" decoding="async" loading="lazy">
+                  <img
+                    src="img/DSC08609.webp"
+                    alt="Noya menu image"
+                    decoding="async"
+                    loading="lazy"
+                  />
                   <p
                     class="noya-menu-showcase__sub"
                     data-i18n="noya-menu-sub-food"
@@ -2963,7 +3019,12 @@
                   </p>
                 </article>
                 <article class="noya-menu-showcase__card">
-                  <img src="img/A7409084.webp" alt="Noya menu image" decoding="async" loading="lazy">
+                  <img
+                    src="img/A7409084.webp"
+                    alt="Noya menu image"
+                    decoding="async"
+                    loading="lazy"
+                  />
                   <p
                     class="noya-menu-showcase__sub"
                     data-i18n="noya-menu-sub-food"
@@ -3002,7 +3063,12 @@
             <div class="noya-menu-showcase__viewport">
               <div class="noya-menu-showcase__grid">
                 <article class="noya-menu-showcase__card">
-                  <img src="img/A7409226.webp" alt="Noya food image" decoding="async" loading="lazy">
+                  <img
+                    src="img/A7409226.webp"
+                    alt="Noya food image"
+                    decoding="async"
+                    loading="lazy"
+                  />
                   <p
                     class="noya-menu-showcase__sub"
                     data-i18n="noya-menu-sub-food"
@@ -3011,7 +3077,12 @@
                   </p>
                 </article>
                 <article class="noya-menu-showcase__card">
-                  <img src="img/DSC08612.webp" alt="Noya food image" decoding="async" loading="lazy">
+                  <img
+                    src="img/DSC08612.webp"
+                    alt="Noya food image"
+                    decoding="async"
+                    loading="lazy"
+                  />
                   <p
                     class="noya-menu-showcase__sub"
                     data-i18n="noya-menu-sub-food"
@@ -3020,7 +3091,12 @@
                   </p>
                 </article>
                 <article class="noya-menu-showcase__card">
-                  <img src="img/A7409365.webp" alt="Noya food image" decoding="async" loading="lazy">
+                  <img
+                    src="img/A7409365.webp"
+                    alt="Noya food image"
+                    decoding="async"
+                    loading="lazy"
+                  />
                   <p
                     class="noya-menu-showcase__sub"
                     data-i18n="noya-menu-sub-food"
@@ -3029,7 +3105,12 @@
                   </p>
                 </article>
                 <article class="noya-menu-showcase__card">
-                  <img src="img/A7409421.webp" alt="Noya food image" decoding="async" loading="lazy">
+                  <img
+                    src="img/A7409421.webp"
+                    alt="Noya food image"
+                    decoding="async"
+                    loading="lazy"
+                  />
                   <p
                     class="noya-menu-showcase__sub"
                     data-i18n="noya-menu-sub-food"
@@ -3038,7 +3119,12 @@
                   </p>
                 </article>
                 <article class="noya-menu-showcase__card">
-                  <img src="img/DSC08519.webp" alt="Noya food image" decoding="async" loading="lazy">
+                  <img
+                    src="img/DSC08519.webp"
+                    alt="Noya food image"
+                    decoding="async"
+                    loading="lazy"
+                  />
                   <p
                     class="noya-menu-showcase__sub"
                     data-i18n="noya-menu-sub-food"
@@ -3047,7 +3133,12 @@
                   </p>
                 </article>
                 <article class="noya-menu-showcase__card">
-                  <img src="img/A7409080.webp" alt="Noya food image" decoding="async" loading="lazy">
+                  <img
+                    src="img/A7409080.webp"
+                    alt="Noya food image"
+                    decoding="async"
+                    loading="lazy"
+                  />
                   <p
                     class="noya-menu-showcase__sub"
                     data-i18n="noya-menu-sub-food"
@@ -3082,7 +3173,12 @@
             <div class="noya-menu-showcase__viewport">
               <div class="noya-menu-showcase__grid">
                 <article class="noya-menu-showcase__card">
-                  <img src="img/bar.webp" alt="Noya menu image" decoding="async" loading="lazy">
+                  <img
+                    src="img/bar.webp"
+                    alt="Noya menu image"
+                    decoding="async"
+                    loading="lazy"
+                  />
                   <p
                     class="noya-menu-showcase__sub"
                     data-i18n="noya-menu-sub-drink"
@@ -3091,7 +3187,12 @@
                   </p>
                 </article>
                 <article class="noya-menu-showcase__card">
-                  <img src="img/bar1.webp" alt="Noya menu image" decoding="async" loading="lazy">
+                  <img
+                    src="img/bar1.webp"
+                    alt="Noya menu image"
+                    decoding="async"
+                    loading="lazy"
+                  />
                   <p
                     class="noya-menu-showcase__sub"
                     data-i18n="noya-menu-sub-drink"
@@ -3100,7 +3201,12 @@
                   </p>
                 </article>
                 <article class="noya-menu-showcase__card">
-                  <img src="img/bar2.webp" alt="Noya menu image" decoding="async" loading="lazy">
+                  <img
+                    src="img/bar2.webp"
+                    alt="Noya menu image"
+                    decoding="async"
+                    loading="lazy"
+                  />
                   <p
                     class="noya-menu-showcase__sub"
                     data-i18n="noya-menu-sub-drink"
@@ -3109,7 +3215,12 @@
                   </p>
                 </article>
                 <article class="noya-menu-showcase__card">
-                  <img src="img/bar6.webp" alt="Noya menu image" decoding="async" loading="lazy">
+                  <img
+                    src="img/bar6.webp"
+                    alt="Noya menu image"
+                    decoding="async"
+                    loading="lazy"
+                  />
                   <p
                     class="noya-menu-showcase__sub"
                     data-i18n="noya-menu-sub-drink"
@@ -3118,7 +3229,12 @@
                   </p>
                 </article>
                 <article class="noya-menu-showcase__card">
-                  <img src="img/bar4.webp" alt="Noya menu image" decoding="async" loading="lazy">
+                  <img
+                    src="img/bar4.webp"
+                    alt="Noya menu image"
+                    decoding="async"
+                    loading="lazy"
+                  />
                   <p
                     class="noya-menu-showcase__sub"
                     data-i18n="noya-menu-sub-drink"
@@ -3127,7 +3243,12 @@
                   </p>
                 </article>
                 <article class="noya-menu-showcase__card">
-                  <img src="img/bar5.webp" alt="Noya menu image" decoding="async" loading="lazy">
+                  <img
+                    src="img/bar5.webp"
+                    alt="Noya menu image"
+                    decoding="async"
+                    loading="lazy"
+                  />
                   <p
                     class="noya-menu-showcase__sub"
                     data-i18n="noya-menu-sub-drink"
@@ -3352,19 +3473,31 @@
           id="noyaLightboxImg"
           src=""
           alt="Noya gallery full image"
-        decoding="async" loading="lazy">
+          decoding="async"
+          loading="lazy"
+        />
       </div>
     </main>
     <footer class="footer">
       <div class="container">
         <div class="footer__brandbar">
           <a href="index.html" class="footer__brandbar__logo">
-            <img src="img/logo3.webp" alt="Derand Crest" decoding="async" loading="lazy">
+            <img
+              src="img/logo3.webp"
+              alt="Derand Crest"
+              decoding="async"
+              loading="lazy"
+            />
           </a>
           <span class="footer__brandbar__divider"></span>
           <a href="#" class="footer__brandbar__partner">
             <span data-i18n="footer-powered">Powered by</span>
-            <img src="img/logo/logo-1.webp" alt="Powered by partner logo" decoding="async" loading="lazy">
+            <img
+              src="img/logo/logo-1.webp"
+              alt="Powered by partner logo"
+              decoding="async"
+              loading="lazy"
+            />
           </a>
         </div>
 
@@ -4162,19 +4295,23 @@
         if (!form) return;
         var statusEl = form.querySelector(".footer__newslatter__status");
         var submitBtn = form.querySelector('button[type="submit"]');
-        var defaultBtnText = submitBtn ? submitBtn.textContent.trim() : "SIGN ME UP";
+        var defaultBtnText = submitBtn
+          ? submitBtn.textContent.trim()
+          : "SIGN ME UP";
         var formAction = (form.getAttribute("action") || "").trim();
 
         function setStatus(type, text) {
           if (!statusEl) return;
-          var icon = type === "success" ? "fa fa-check" : "fa fa-exclamation-circle";
+          var icon =
+            type === "success" ? "fa fa-check" : "fa fa-exclamation-circle";
           statusEl.classList.remove(
             "footer__newslatter__status--success",
             "footer__newslatter__status--error",
           );
           statusEl.classList.add("footer__newslatter__status--show");
           statusEl.classList.add("footer__newslatter__status--" + type);
-          statusEl.innerHTML = '<i class="' + icon + '"></i><span>' + text + "</span>";
+          statusEl.innerHTML =
+            '<i class="' + icon + '"></i><span>' + text + "</span>";
         }
 
         form.addEventListener(
@@ -4186,14 +4323,24 @@
               e.stopImmediatePropagation();
             }
 
-            var firstName = (form.querySelector('input[name="firstName"]')?.value || "").trim();
-            var lastName = (form.querySelector('input[name="lastName"]')?.value || "").trim();
-            var email = (form.querySelector('input[name="email"]')?.value || "").trim();
-            var consent = !!form.querySelector('input[name="consent"]')?.checked;
+            var firstName = (
+              form.querySelector('input[name="firstName"]')?.value || ""
+            ).trim();
+            var lastName = (
+              form.querySelector('input[name="lastName"]')?.value || ""
+            ).trim();
+            var email = (
+              form.querySelector('input[name="email"]')?.value || ""
+            ).trim();
+            var consent = !!form.querySelector('input[name="consent"]')
+              ?.checked;
             var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
             if (!firstName || !lastName || !email) {
-              setStatus("error", "Please complete your name, surname, and email.");
+              setStatus(
+                "error",
+                "Please complete your name, surname, and email.",
+              );
               return;
             }
             if (!emailRegex.test(email)) {
@@ -4201,7 +4348,10 @@
               return;
             }
             if (!consent) {
-              setStatus("error", "Please accept the privacy policy to continue.");
+              setStatus(
+                "error",
+                "Please accept the privacy policy to continue.",
+              );
               return;
             }
 
@@ -4242,7 +4392,10 @@
                 throw new Error("Submit failed");
               })
               .catch(function () {
-                setStatus("error", "We could not send your message. Please try again.");
+                setStatus(
+                  "error",
+                  "We could not send your message. Please try again.",
+                );
               })
               .finally(function () {
                 if (submitBtn) {
@@ -4258,5 +4411,3 @@
     <script src="js/main.js?v=20260416-2" defer></script>
   </body>
 </html>
-
-

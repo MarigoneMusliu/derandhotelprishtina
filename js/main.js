@@ -1,40 +1,50 @@
-﻿/*  ---------------------------------------------------
-  Template Name: Hiroto
-  Description:  Hiroto Hotel HTML Template
-  Author: Colorlib
-  Author URI: https://colorlib.com
-  Version: 1.0
-  Created: Colorlib
----------------------------------------------------------  */
+﻿
 
 "use strict";
+(function preloaderSafetyNet() {
+  function hidePreloaderNow() {
+    var pre = document.getElementById("preloder");
+    if (pre) {
+      pre.style.opacity = "0";
+      pre.style.visibility = "hidden";
+      pre.style.pointerEvents = "none";
+      window.setTimeout(function () {
+        if (pre && pre.parentNode) pre.parentNode.removeChild(pre);
+      }, 320);
+    }
+    var loader = document.querySelector(".loader");
+    if (loader) {
+      loader.style.opacity = "0";
+      loader.style.visibility = "hidden";
+    }
+  }
+
+  if (document.readyState === "interactive" || document.readyState === "complete") {
+    hidePreloaderNow();
+  } else {
+    document.addEventListener("DOMContentLoaded", hidePreloaderNow, { once: true });
+  }
+  window.setTimeout(hidePreloaderNow, 3500);
+})();
 
 (function ($) {
-  /*------------------
-        Preloader
-    --------------------*/
+  
   $(window).on("load", function () {
     $(".loader").fadeOut();
     $("#preloder").delay(200).fadeOut("slow");
   });
-
-  // Fallback: if load event is slow (hosting/photos/videos), ensure the page is usable.
   window.setTimeout(function () {
     $("#preloder").stop(true, true).fadeOut();
     $(".loader").stop(true, true).fadeOut();
   }, 5000);
 
-  /*------------------
-        Background Set
-    --------------------*/
+  
   $(".set-bg").each(function () {
     var bg = $(this).data("setbg");
     $(this).css("background-image", "url(" + bg + ")");
   });
 
-  /*------------------
-        Rooms Hero Rotator (crossfade between data-hero-rotate images)
-    --------------------*/
+  
   (function initRoomsHeroRotator() {
     var $hero = $(".rooms-page .hero[data-hero-rotate]");
     if (!$hero.length) return;
@@ -55,7 +65,7 @@
       return;
     }
 
-    /* Time between slide advances; crossfade duration in css/style.css (.rooms-hero-slides__layer) */
+    
     var HOLD_MS = 1300;
     var url = function (src) {
       return "url(" + JSON.stringify(src) + ")";
@@ -94,8 +104,6 @@
     $("body").toggleClass("mobile-nav-open", !!isOpen);
     $("body").css("overflow", isOpen ? "hidden" : "");
   }
-
-  // Canvas Menu toggle
   $(document).on("click", ".canvas__open", function (e) {
     e.preventDefault();
     $(".offcanvas-menu-wrapper").toggleClass("active");
@@ -109,20 +117,18 @@
     setMobileNavOpen(false);
   });
 
-  /*------------------
-		Navigation
-	--------------------*/
+  
   $(".menu__class").slicknav({
     appendTo: "#mobile-menu-wrap",
     allowParentLinks: true,
-    /* false = parent label stays a normal <a> (no <a> inside <a>); fixes missing ACTIVITIES/CONTACT titles on mobile */
+    
     nestedParentLinks: false,
     showChildren: true,
     closedSymbol: "\u25be",
     openedSymbol: "\u25b4",
   });
 
-  /* SlickNav (nestedParentLinks: false) wraps the parent <a> in .slicknav_parent-link — tap label to toggle submenu */
+  
   $("#mobile-menu-wrap").on(
     "click",
     ".slicknav_nav .slicknav_parent-link.slicknav_row > a[href]:not(.slicknav_item)",
@@ -138,7 +144,7 @@
     },
   );
 
-  /* Dropdown parents use href="#" — avoid in-page jump; submenu links handle real destinations */
+  
   $(document).on(
     "click",
     ".menu__class > li.has-dropdown > a[href='#']",
@@ -172,9 +178,7 @@
     setMobileNavOpen(false);
   });
 
-  /*--------------------------
-        Gallery Slider
-    ----------------------------*/
+  
   $(".gallery__slider").owlCarousel({
     loop: true,
     margin: 10,
@@ -199,9 +203,7 @@
     },
   });
 
-  /*--------------------------
-        Room Pic Slider
-    ----------------------------*/
+  
   $(".room__pic__slider").owlCarousel({
     loop: true,
     margin: 0,
@@ -217,9 +219,7 @@
     autoplay: false,
   });
 
-  /*--------------------------
-        Room Details Pic Slider
-    ----------------------------*/
+  
   $(".room__details__pic__slider").owlCarousel({
     loop: true,
     margin: 10,
@@ -243,9 +243,7 @@
     },
   });
 
-  /*--------------------------
-        Testimonial Slider
-    ----------------------------*/
+  
   var testimonialSlider = $(".testimonial__slider");
   testimonialSlider
     .owlCarousel({
@@ -287,9 +285,7 @@
       $(".slider__progress span").css("width", presentage + "%");
     });
 
-  /*--------------------------
-    Testimonials Horizontal
-  --------------------------*/
+  
   var testimonialScroller = $(".sacher-testimonials__scroller");
   if (testimonialScroller.length) {
     testimonialScroller.each(function () {
@@ -402,9 +398,7 @@
     });
   }
 
-  /*--------------------------
-    Guest testimonials carousel (.guest-testimonials)
-  --------------------------*/
+  
   document
     .querySelectorAll("[data-guest-testimonials-root]")
     .forEach(function (root) {
@@ -452,9 +446,7 @@
       });
     });
 
-  /*--------------------------
-    Instagram Feed Mosaic (tiles)
-  --------------------------*/
+  
   var instaCarousel = $(".sacher-instagram__carousel");
   if (instaCarousel.length) {
     instaCarousel.owlCarousel({
@@ -471,9 +463,7 @@
     });
   }
 
-  /*--------------------------
-        Logo Slider
-    ----------------------------*/
+  
   $(".logo__carousel").owlCarousel({
     loop: true,
     margin: 100,
@@ -498,9 +488,7 @@
     },
   });
 
-  /*--------------------------
-        Home Room Carousel
-    ----------------------------*/
+  
   var carouselState = {
     currentPosition: 0,
   };
@@ -536,8 +524,6 @@
       var cardTotalWidth = cardWidth + cardGap;
       var trackWidth = roomTrack[0].scrollWidth;
       var maxScroll = -(trackWidth - carouselWidth);
-
-      // Update button visibility
       function updateButtonVisibility() {
         if (carouselState.currentPosition >= 0) {
           roomPrev.css("display", "none");
@@ -595,15 +581,11 @@
       setupCarousel();
     });
   }
-
-  // Initialize carousel after DOM is ready
   $(document).ready(function () {
     initRoomCarousel();
   });
 
-  /*--------------------------
-        Sacher Rooms Slider (4 visible + arrows)
-    ----------------------------*/
+  
   function initSacherRoomsSlider() {
     $(".sacher-roomcats__grid-wrap").each(function (i, el) {
       var wrap = $(el);
@@ -673,9 +655,7 @@
     initSacherRoomsSlider();
   });
 
-  /*--------------------------
-        Sacher Events Slider
-    ----------------------------*/
+  
   function initSacherEventsSlider() {
     var viewport = $(".sacher-events__viewport");
     var track = $(".sacher-events__track");
@@ -744,14 +724,10 @@
     initSacherEventsSlider();
   });
 
-  /*--------------------------
-        Select
-    ----------------------------*/
+  
   $("select").niceSelect();
 
-  /*--------------------------
-        Datepicker
-    ----------------------------*/
+  
   var today = new Date();
   var dd = today.getDate();
   var mm = today.getMonth() + 1;
@@ -793,15 +769,11 @@
     minDate: 0,
   });
 
-  /*--------------------------
-        Newsletter Signup
-    ----------------------------*/
+  
 
   function initNewsletterSignup() {
     var $form = $(".footer__newslatter__form");
     if (!$form.length) return;
-
-    // Safety net: even if native submit happens, keep user on same page.
     if (!document.getElementById("footer-submit-sink")) {
       var sink = document.createElement("iframe");
       sink.id = "footer-submit-sink";
@@ -1009,9 +981,7 @@
 
   initNewsletterSignup();
 
-  /*--------------------------
-        Contact Form
-    ----------------------------*/
+  
   function initContactForm() {
     var $form = $(".contact-page__form");
     if (!$form.length) return;
@@ -1141,9 +1111,7 @@
 
   initContactForm();
 
-  /*--------------------------
-        Noya reservation (Web3Forms, same as contact.html)
-    ----------------------------*/
+  
   function initNoyaBookingForm() {
     var $form = $("form.noya-mockup-booking");
     if (!$form.length) return;
@@ -1287,11 +1255,6 @@
   }
 
   initNoyaBookingForm();
-
-  /*------------------
-    Language Selector
-  --------------------*/
-  // Language: load from storage or detect, default to EN
   var storedLang = null;
   try {
     storedLang = window.localStorage && localStorage.getItem("derandLang");
@@ -3686,8 +3649,6 @@
       "deluxe-moments-line-2": "shndërrohen në kujtime të qëndrueshme",
     },
   };
-
-  // Extend translations with FAQ keys (EN/DE/AL)
   (function extendFaqTranslations() {
     var faq = {
       en: {
@@ -4092,8 +4053,6 @@
       Object.assign(translations.al, faq.al);
     }
   })();
-
-  // Add Junior-specific experience line translations
   (function extendJuniorExperienceTranslations() {
     var extra = {
       en: {
@@ -4116,8 +4075,6 @@
       Object.assign(translations.al, extra.al);
     }
   })();
-
-  // Add Superior-specific translations
   (function extendSuperiorTranslations() {
     var extra = {
       en: {
@@ -4165,8 +4122,6 @@
       Object.assign(translations.al, extra.al);
     }
   })();
-
-  // Ensure Careers page always has a clean EN set when language switches to EN.
   (function enforceCareersEnglishTranslations() {
     var enCareers = {
       "careers-current-positions-title": "Current Open Positions",
@@ -4202,8 +4157,6 @@
       Object.assign(translations.en, enCareers);
     }
   })();
-
-  // Housekeeping job page translations (career-housekeeping.html)
   (function extendHousekeepingJobTranslations() {
     var extra = {
       en: {
@@ -4420,8 +4373,6 @@
       Object.assign(translations.al, extra.al);
     }
   })();
-
-  // Housekeeping manager job page translations (career-housekeeping-manager.html)
   (function extendHousekeepingManagerJobTranslations() {
     var extra = {
       en: {
@@ -4539,8 +4490,6 @@
       Object.assign(translations.al, extra.al);
     }
   })();
-
-  // Receptionist job page translations (career-receptionist.html)
   (function extendReceptionistJobTranslations() {
     var extra = {
       en: {
@@ -4719,8 +4668,6 @@
       Object.assign(translations.al, extra.al);
     }
   })();
-
-  // Security guard job page translations (career-security.html)
   (function extendSecurityJobTranslations() {
     var extra = {
       en: {
@@ -4832,8 +4779,6 @@
       Object.assign(translations.al, extra.al);
     }
   })();
-
-  // Security manager job page translations (career-security-manager.html)
   (function extendSecurityManagerJobTranslations() {
     var extra = {
       en: {
@@ -4951,8 +4896,6 @@
       Object.assign(translations.al, extra.al);
     }
   })();
-
-  // Bellboy job page translations (career-bellboy.html)
   (function extendBellboyJobTranslations() {
     var extra = {
       en: {
@@ -5046,8 +4989,6 @@
       Object.assign(translations.al, extra.al);
     }
   })();
-
-  // IT specialist job page translations (career-it-specialist.html)
   (function extendITJobTranslations() {
     var extra = {
       en: {
@@ -5175,8 +5116,6 @@
       Object.assign(translations.al, extra.al);
     }
   })();
-
-  // Procurement & Logistics job page translations (career-procurement-logistics.html)
   (function extendProcurementJobTranslations() {
     var extra = {
       en: {
@@ -5296,8 +5235,6 @@
       Object.assign(translations.al, extra.al);
     }
   })();
-
-  // Finance/Admin/HR leadership job page translations (career-finance.html)
   (function extendFinanceLeadershipTranslations() {
     var extra = {
       en: {
@@ -5448,8 +5385,6 @@
       Object.assign(translations.al, extra.al);
     }
   })();
-
-  // Architect job page translations (career-architect.html)
   (function extendArchitectJobTranslations() {
     var extra = {
       en: {
@@ -5518,8 +5453,6 @@
       Object.assign(translations.al, extra.al);
     }
   })();
-
-  // Sales job page translations (career-sales.html)
   (function extendSalesJobTranslations() {
     var extra = {
       en: {
@@ -5648,7 +5581,7 @@
     document.documentElement.setAttribute("lang", htmlLang);
   }
 
-  /** Keep EN / DE / AL labels literal — applyTranslations must never wipe them. */
+  
   function restoreStaticLangLabels() {
     $(".lang-btn[data-lang]").each(function () {
       var code = String($(this).data("lang") || "").toLowerCase();
@@ -5731,23 +5664,17 @@
   initLanguage();
   applyTranslations();
 
-  /*------------------
-    Media performance
-  --------------------*/
+  
   (function initMediaPerformance() {
     var prefersReduced =
       window.matchMedia &&
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    // Lazy-load images (except hero images already above the fold).
     document.querySelectorAll("img").forEach(function (img) {
       if (!img || img.getAttribute("loading")) return;
       if (img.closest && img.closest(".sacher-hero")) return;
       img.setAttribute("loading", "lazy");
       img.setAttribute("decoding", "async");
     });
-
-    // Defer autoplaying videos until visible.
     if (!("IntersectionObserver" in window)) return;
     if (prefersReduced) return;
 
@@ -5763,8 +5690,6 @@
           var video = entry.target;
           if (!video) return;
           if (entry.isIntersecting) {
-            // Some browsers require a direct user gesture before play.
-            // If it fails, the page still looks fine (video will stay paused).
             try {
               video.play && video.play();
             } catch (e) {}
@@ -5782,8 +5707,6 @@
       videoObserver.observe(v);
     });
   })();
-
-  // Add Premium-specific translations
   (function extendPremiumTranslations() {
     var extra = {
       en: {
@@ -5829,44 +5752,29 @@
       Object.assign(translations.al, extra.al);
     }
   })();
-  /*------------------
-    Parallax Engine (data-parallax)
-  --------------------*/
-
-  // Decorate index sections with parallax by default (except the hero 1111.webp)
   (function addIndexParallaxDefaults() {
     var isIndex =
       document.body && document.body.classList.contains("sacher-home");
     if (!isIndex) return;
-
-    // Skip reduced motion
     if (
       window.matchMedia &&
       window.matchMedia("(prefers-reduced-motion: reduce)").matches
     ) {
       return;
     }
-
-    // Helper to mark a node if not already parallax-enabled
     function ensureParallax(node, speed) {
       if (!node || node.hasAttribute("data-parallax")) return;
       node.setAttribute("data-parallax", "y");
       if (speed) node.setAttribute("data-parallax-speed", speed.toString());
     }
-
-    // Exclude anything inside the hero that contains the 1111.webp image
     var hero = document.querySelector(".sacher-hero");
     var excluded = hero ? hero.querySelector("img[src*='1111.webp']") : null;
-
-    // Target all main sections before footer
     var footer = document.querySelector("footer.footer");
     var sections = Array.prototype.slice.call(
       document.querySelectorAll(
         "section, .guest-testimonials, .sacher-welcome, .sacher-facilities, .sacher-events, .sacher-arch-quote",
       ),
     );
-
-    // Apply gentle parallax to section wrappers and their prominent headings
     sections.forEach(function (sec, i) {
       if (
         !sec ||
@@ -5876,16 +5784,11 @@
       )
         return;
       if (hero && hero.contains(sec)) return; // never within hero
-
-      // Slower baseline speeds
       var speed = 0.045 + (i % 3) * 0.012; // 0.045, 0.057, 0.069 variety
       ensureParallax(sec, speed);
-      // Ensure gentle reveal class exists
       if (!sec.classList.contains("scroll-reveal")) {
         sec.classList.add("scroll-reveal", "index-scroll-slow");
       }
-
-      // Headings or key content inside
       var heading = sec.querySelector(
         "h1, h2, h3, .sacher-section-head, .sacher-card__content, .sacher-banner-content, .sacher-feature__content",
       );
@@ -5896,15 +5799,11 @@
         }
       }
     });
-
-    // Remove parallax from the excluded hero image if any
     if (excluded) {
       excluded.removeAttribute("data-parallax");
       excluded.removeAttribute("data-parallax-speed");
     }
   })();
-
-  // Add Twin-specific translations
   (function extendTwinTranslations() {
     var extra = {
       en: {
@@ -6002,7 +5901,6 @@
 
       var type = node.getAttribute("data-parallax"); // "bg" | "y"
       var speedAttr = node.getAttribute("data-parallax-speed");
-      // Default slower parallax
       var speed = speedAttr ? parseFloat(speedAttr) : 0.09;
       if (Number.isNaN(speed)) speed = 0.18;
 
@@ -6051,9 +5949,7 @@
     window.addEventListener("resize", requestParallaxUpdate);
   }
 
-  /*------------------
-    Scroll Reveal
-  --------------------*/
+  
   var revealObserver = new IntersectionObserver(
     function (entries) {
       entries.forEach(function (entry) {
@@ -6075,9 +5971,7 @@
     revealObserver.observe(el);
   });
 
-  /*------------------
-    Room specs carousel (below 360Â° preview on room pages)
-  --------------------*/
+  
   document.querySelectorAll("[data-room-specs]").forEach(function (root) {
     var panels = root.querySelectorAll(".room-specs__panel");
     var dots = root.querySelectorAll(".room-specs__dot");
@@ -6116,9 +6010,7 @@
     show(0);
   });
 
-  /*------------------
-    Cookie consent banner
-  --------------------*/
+  
   (function initCookieConsent() {
     var storageKey = "derandCookieConsent";
     var existing = null;

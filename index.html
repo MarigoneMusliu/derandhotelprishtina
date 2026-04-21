@@ -11,10 +11,34 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="css/elegant-icons.css" type="text/css" />
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css" />
-    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css" />
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css" />
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css" />
+    <link
+      rel="preload"
+      href="css/nice-select.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href="css/jquery-ui.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href="css/owl.carousel.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href="css/slicknav.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="css/nice-select.css" type="text/css" /></noscript>
+    <noscript><link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css" /></noscript>
+    <noscript><link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css" /></noscript>
+    <noscript><link rel="stylesheet" href="css/slicknav.min.css" type="text/css" /></noscript>
     <link rel="stylesheet" href="css/style.css" type="text/css" />
   </head>
 
@@ -27,7 +51,7 @@
     <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu-wrapper">
       <div class="offcanvas__logo">
-        <a href="./index.html"><img src="img/logoo.webp" alt="Logo" decoding="async" loading="lazy"></a>
+        <a href="./index.html"><img src="img/logoo.webp" alt="Logo" decoding="async" loading="lazy" width=1200 height=800></a>
       </div>
       <div id="mobile-menu-wrap"></div>
 
@@ -60,7 +84,7 @@
               <div class="header__logo">
                 <a href="./index.html"
                   ><img src="img/logoo.webp" alt="Logo"
-                decoding="async" loading="lazy"></a>
+                decoding="async" loading="lazy" width=1200 height=800></a>
               </div>
             </div>
             <div class="col-lg-10">
@@ -187,6 +211,7 @@
       </div>
     </header>
 
+    <main id="main-content">
     <section
       class="sacher-hero"
     >
@@ -195,7 +220,7 @@
           <source
             type="image/webp"
             srcset="
-              img/headeri.webp 1920w
+              img/headeri.png 1920w
             "
             sizes="100vw"
           />
@@ -249,7 +274,7 @@
               data-parallax-speed="0.09"
               loading="lazy"
               decoding="async"
-            ></img>
+             alt=Image width=1200 height=800></img>
           </div>
           <div
             class="sacher-mozart__content scroll-reveal index-scroll-slow"
@@ -312,7 +337,7 @@
                 <a href="rinu.html" style="display:block;text-decoration:none;color:inherit;">
                   <article
                     class="sacher-card set-bg"
-                    data-setbg="img/rinu.webp"
+                    data-setbg="img/rinuheader.webp"
                     data-parallax="bg"
                     data-parallax-speed="0.055"
                   >
@@ -486,7 +511,7 @@
               data-parallax-speed="0.09"
               loading="lazy"
               decoding="async"
-            />
+            / width=1200 height=800>
           </div>
           <div class="sacher-feature__right">
             <div
@@ -501,7 +526,7 @@
                 data-parallax-speed="0.1"
                 loading="lazy"
                 decoding="async"
-              />
+              / width=1200 height=800>
             </div>
             <div
               class="sacher-feature__content scroll-reveal index-scroll-slow"
@@ -570,7 +595,7 @@
               data-parallax-speed="0.09"
               loading="lazy"
               decoding="async"
-            />
+            / width=1200 height=800>
             <img
               src="img/minibar.webp"
               alt="Derand comfort detail"
@@ -579,7 +604,7 @@
               data-parallax-speed="0.1"
               loading="lazy"
               decoding="async"
-            />
+            / width=1200 height=800>
           </div>
           <div
             class="sacher-facilities__content scroll-reveal index-scroll-slow"
@@ -690,7 +715,7 @@
             data-parallax-speed="0.07"
             loading="lazy"
             decoding="async"
-          />
+          / width=1200 height=800>
           <div class="sacher-arch-quote__content">
             <div class="sacher-arch-quote__mark">"</div>
             <p class="sacher-arch-quote__text" data-i18n="index-quote-text">
@@ -703,7 +728,7 @@
               class="sacher-arch-quote__signature"
               loading="lazy"
               decoding="async"
-            />
+            / width=1200 height=800>
             <p class="sacher-arch-quote__name" data-i18n="index-quote-name">DERAND HOTEL PRISHTINA</p>
             <p class="sacher-arch-quote__role" data-i18n="index-quote-role">GENERAL Manager</p>
           </div>
@@ -773,7 +798,7 @@
                 <p class="guest-testimonials__location" data-i18n="index-guest-0-loc">United States</p>
                 <p class="guest-testimonials__room" data-i18n="index-guest-0-room">Superior Double Room</p>
                 <a
-                  class="guest-testimonials__source"
+                  class="guest-testimonials__source" aria-label="Read review on Booking.com"
                   href="https://www.booking.com/hotel/xk/derand.html"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -804,7 +829,7 @@
                 <p class="guest-testimonials__location" data-i18n="index-guest-1-loc">United Kingdom</p>
                 <p class="guest-testimonials__room" data-i18n="index-guest-1-room">Superior Double Room</p>
                 <a
-                  class="guest-testimonials__source"
+                  class="guest-testimonials__source" aria-label="Read review on Booking.com"
                   href="https://www.booking.com/hotel/xk/derand.html"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -837,7 +862,7 @@
                 <p class="guest-testimonials__location" data-i18n="index-guest-2-loc">United Kingdom</p>
                 <p class="guest-testimonials__room" data-i18n="index-guest-2-room">Superior Double Room</p>
                 <a
-                  class="guest-testimonials__source"
+                  class="guest-testimonials__source" aria-label="Read review on Booking.com"
                   href="https://www.booking.com/hotel/xk/derand.html"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -868,7 +893,7 @@
                 <p class="guest-testimonials__location" data-i18n="index-guest-3-loc">Slovenia</p>
                 <p class="guest-testimonials__room" data-i18n="index-guest-3-room">Deluxe Double Room</p>
                 <a
-                  class="guest-testimonials__source"
+                  class="guest-testimonials__source" aria-label="Read review on Booking.com"
                   href="https://www.booking.com/hotel/xk/derand.html"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -901,7 +926,7 @@
                 <p class="guest-testimonials__location" data-i18n="index-guest-4-loc">Oman</p>
                 <p class="guest-testimonials__room" data-i18n="index-guest-4-room">Deluxe Double Room</p>
                 <a
-                  class="guest-testimonials__source"
+                  class="guest-testimonials__source" aria-label="Read review on Booking.com"
                   href="https://www.booking.com/hotel/xk/derand.html"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -996,7 +1021,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="img/outside1.webp" alt="Instagram tile 1" loading="lazy" decoding="async" />
+                <img src="img/outside1.webp" alt="Instagram tile 1" loading="lazy" decoding="async" / width=1200 height=800>
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1004,7 +1029,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="img/view.webp" alt="Instagram tile 2" loading="lazy" decoding="async" />
+                <img src="img/view.webp" alt="Instagram tile 2" loading="lazy" decoding="async" / width=1200 height=800>
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1012,7 +1037,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="img/tile3.webp" alt="Instagram tile 3" loading="lazy" decoding="async" />
+                <img src="img/tile3.webp" alt="Instagram tile 3" loading="lazy" decoding="async" / width=1200 height=800>
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1020,7 +1045,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="img/hand1.webp" alt="Instagram tile 4" loading="lazy" decoding="async" />
+                <img src="img/hand1.webp" alt="Instagram tile 4" loading="lazy" decoding="async" / width=1200 height=800>
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1028,7 +1053,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="img/girl.webp" alt="Instagram tile 5" loading="lazy" decoding="async" />
+                <img src="img/girl.webp" alt="Instagram tile 5" loading="lazy" decoding="async" / width=1200 height=800>
               </a>
 
               <a
@@ -1037,7 +1062,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="img/phone.webp" alt="Instagram tile 6" loading="lazy" decoding="async" />
+                <img src="img/phone.webp" alt="Instagram tile 6" loading="lazy" decoding="async" / width=1200 height=800>
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1045,7 +1070,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="img/lift.webp" alt="Instagram tile 7" loading="lazy" decoding="async" />
+                <img src="img/lift.webp" alt="Instagram tile 7" loading="lazy" decoding="async" / width=1200 height=800>
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1053,7 +1078,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="img/legs.webp" alt="Instagram tile 8" loading="lazy" decoding="async" />
+                <img src="img/legs.webp" alt="Instagram tile 8" loading="lazy" decoding="async" / width=1200 height=800>
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1061,7 +1086,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="img/room.webp" alt="Instagram tile 9" loading="lazy" decoding="async" />
+                <img src="img/room.webp" alt="Instagram tile 9" loading="lazy" decoding="async" / width=1200 height=800>
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1069,7 +1094,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="img/model.webp" alt="Instagram tile 10" loading="lazy" decoding="async" />
+                <img src="img/model.webp" alt="Instagram tile 10" loading="lazy" decoding="async" / width=1200 height=800>
               </a>
             </div>
           </div>
@@ -1082,7 +1107,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="img/hand10.webp" alt="Instagram tile 11" loading="lazy" decoding="async" />
+                <img src="img/hand10.webp" alt="Instagram tile 11" loading="lazy" decoding="async" / width=1200 height=800>
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1090,7 +1115,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="img/hand11.webp" alt="Instagram tile 12" loading="lazy" decoding="async" />
+                <img src="img/hand11.webp" alt="Instagram tile 12" loading="lazy" decoding="async" / width=1200 height=800>
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1098,7 +1123,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="img/hand12.webp" alt="Instagram tile 13" loading="lazy" decoding="async" />
+                <img src="img/hand12.webp" alt="Instagram tile 13" loading="lazy" decoding="async" / width=1200 height=800>
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1106,7 +1131,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="img/hand13.webp" alt="Instagram tile 14" loading="lazy" decoding="async" />
+                <img src="img/hand13.webp" alt="Instagram tile 14" loading="lazy" decoding="async" / width=1200 height=800>
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1114,7 +1139,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="img/hand14.webp" alt="Instagram tile 15" loading="lazy" decoding="async" />
+                <img src="img/hand14.webp" alt="Instagram tile 15" loading="lazy" decoding="async" / width=1200 height=800>
               </a>
 
               <a
@@ -1123,7 +1148,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="img/hand15.webp" alt="Instagram tile 16" loading="lazy" decoding="async" />
+                <img src="img/hand15.webp" alt="Instagram tile 16" loading="lazy" decoding="async" / width=1200 height=800>
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1131,7 +1156,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="img/hand16.webp" alt="Instagram tile 17" loading="lazy" decoding="async" />
+                <img src="img/hand16.webp" alt="Instagram tile 17" loading="lazy" decoding="async" / width=1200 height=800>
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1139,7 +1164,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="img/hand17.webp" alt="Instagram tile 18" loading="lazy" decoding="async" />
+                <img src="img/hand17.webp" alt="Instagram tile 18" loading="lazy" decoding="async" / width=1200 height=800>
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1147,7 +1172,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="img/hand18.webp" alt="Instagram tile 19" loading="lazy" decoding="async" />
+                <img src="img/hand18.webp" alt="Instagram tile 19" loading="lazy" decoding="async" / width=1200 height=800>
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1163,7 +1188,7 @@
                   loop
                   playsinline
                   preload="none"
-                 decoding="async" loading="lazy"></img>
+                 decoding="async" loading="lazy" alt=Image width=1200 height=800></img>
               </a>
             </div>
           </div>
@@ -1171,6 +1196,7 @@
       </div>
     </section>
 
+    </main>
     <footer class="footer">
       <div class="container">
         <div class="footer__brandbar">
@@ -1388,6 +1414,5 @@
     ></script>
   </body>
 </html>
-
 
 

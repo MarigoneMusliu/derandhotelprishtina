@@ -1,16 +1,11 @@
 @font-face {
   font-family: "Traviata";
-  src:
-    local("Traviata"),
-    url("../fonts/Traviata.woff2") format("woff2"),
-    url("../fonts/Traviata.woff") format("woff"),
-    url("../fonts/Traviata.ttf") format("truetype");
+  src: local("Traviata");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-/* Slight dark overlay on junior-style heroes (focus darkness toward top) */
 .junior-room-page .sacher-hero__overlay {
   background: linear-gradient(
     to bottom,
@@ -22,12 +17,10 @@
   ) !important;
 }
 
-/* Global typography baseline */
 body {
   font-family: "Traviata", serif;
 }
 
-/* Ensure all elements inherit Traviata, while preserving icon fonts */
 *,
 *::before,
 *::after {
@@ -41,7 +34,6 @@ select {
   font-family: inherit;
 }
 
-/* Force Traviata site-wide for text elements */
 html
   body
   *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]):not([class^="icon_"]):not(
@@ -55,41 +47,38 @@ html
   text-align: center;
 }
 
-/* ------------------------------------------------------------------
-   Derand home – extra responsive hardening for very small screens
-   ------------------------------------------------------------------ */
 @media (max-width: 480px) {
-  /* Prevent horizontal scroll on narrow devices */
+  
   html,
   body {
     max-width: 100%;
     overflow-x: hidden;
   }
 
-  /* Hero title – keep it readable and on one/two lines */
+  
   .sacher-home .sacher-hero__content h1 {
     font-size: clamp(26px, 8vw, 32px);
   }
 
-  /* General container side padding */
+  
   .sacher-home .container {
     padding-left: 18px;
     padding-right: 18px;
   }
 
-  /* Mozart section text insets – remove large left offsets */
+  
   .sacher-home .sacher-mozart__content h4,
   .sacher-home .sacher-mozart__content p {
     margin-left: 0;
   }
 
-  /* Facilities images – let secondary image sit fully inside viewport */
+  
   .sacher-home .sacher-facilities__img--sub {
     right: 0;
     width: 60%;
   }
 
-  /* Guest testimonials – tighter layout, avoid overflow */
+  
   .guest-testimonials__inner {
     padding-left: 18px;
     padding-right: 18px;
@@ -109,7 +98,7 @@ html
     height: 32px;
   }
 
-  /* Instagram grid – compact tiles on mobile */
+  
   .sacher-instagram__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -123,7 +112,7 @@ html
     display: block;
   }
 }
-/* Travisa font for hero title */
+
 @import url("https://fonts.googleapis.com/css2?family=Trispace:wght@500&display=swap");
 
 .travisa-hero-title {
@@ -201,17 +190,17 @@ html
     max-width: 98vw;
   }
 
-  /* Keep hero title readable on small screens in rooms page */
+  
   .rooms-page .hero__text h2[data-i18n="hero-title"] {
     white-space: normal !important;
   }
 }
-/* --- Force Forum Font for Hero Header in rooms.html --- */
+
 .rooms-page .hero__text h5[data-i18n="hero-kicker"],
 .rooms-page .hero__text h2[data-i18n="hero-title"] {
   font-family: "Forum", serif !important;
 }
-/* --- Apply Forum Font to All Main Text in rooms.html --- */
+
 .rooms-page,
 .rooms-page h1,
 .rooms-page h2,
@@ -228,7 +217,7 @@ html
 .rooms-page button {
   font-family: "Forum", serif !important;
 }
-/* General Section Setup */
+
 .spad {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -251,7 +240,6 @@ html
   color: #19191a;
 }
 
-/* Dropdown Styling */
 .room-suite-dropdown {
   position: relative;
   display: inline-block;
@@ -296,7 +284,6 @@ html
   color: #dfa974;
 }
 
-/* Carousel Structure */
 .home-room__carousel-wrapper {
   position: relative;
   padding: 0 50px;
@@ -313,9 +300,8 @@ html
   gap: 25px;
 }
 
-/* Room Item Card */
 .home__room__item {
-  flex: 0 0 calc(33.333% - 17px); /* 3 items on desktop */
+  flex: 0 0 calc(33.333% - 17px); 
   box-sizing: border-box;
 }
 
@@ -348,7 +334,6 @@ html
   font-size: 14px;
 }
 
-/* Navigation Buttons */
 .home-room__nav {
   position: absolute;
   top: 40%;
@@ -374,17 +359,15 @@ html
   right: 0;
 }
 
-/* --- RESPONSIVE QUERIES --- */
 @media (max-width: 991px) {
   .home__room__item {
     flex: 0 0 calc(50% - 13px);
-  } /* 2 items on tablets */
+  } 
   .section-title h2 {
     font-size: 32px;
   }
 }
 
-/* Hidden by default, visible on responsive sizes below */
 .rooms-page .rooms-mobile-categories {
   display: none;
 }
@@ -446,23 +429,23 @@ html
 @media (max-width: 767px) {
   .home__room__item {
     flex: 0 0 100%;
-  } /* 1 item on mobile */
+  } 
   .home-room__carousel-wrapper {
     padding: 0 15px;
   }
   .home-room__nav {
     display: none;
-  } /* Hide nav on mobile, use touch swipe or auto */
+  } 
   .home__room__img {
     height: 350px;
   }
 }
-/* --- Hero Header Font Forum --- */
+
 .hero__text h5[data-i18n="hero-kicker"],
 .hero__text h2[data-i18n="hero-title"] {
   font-family: "Forum", serif !important;
 }
-/* --- Hero Header ROOMS & SUITES White Text --- */
+
 .hero__text h5[data-i18n="hero-kicker"] {
   color: #fff !important;
 }
@@ -545,38 +528,6 @@ footer.footer {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
   }
 }
-/******************************************************************
-  Template Name: Hiroto
-  Description:  Hiroto Hotel HTML Template
-  Author: Colorlib
-  Author URI: https://colorlib.com
-  Version: 1.0
-  Created: Colorlib
-******************************************************************/
-
-/*------------------------------------------------------------------
-[Table of contents]
-
-1.  Template default CSS
-	1.1	Variables
-	1.2	Mixins
-	1.3	Flexbox
-	1.4	Reset
-2.  Helper Css
-3.  Header Section
-4.  Hero Section
-5.  Service Section
-6.  Home Room Section
-7.  Testimonial Section
-8.  Latest Blog Section
-9.  Contact
-10.  Footer Style
--------------------------------------------------------------------*/
-
-/*----------------------------------------*/
-
-/* Template default CSS
-/*----------------------------------------*/
 
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Forum&display=swap");
 html,
@@ -654,10 +605,6 @@ ol {
   padding: 0;
   margin: 0;
 }
-
-/*---------------------
-  Helper CSS
------------------------*/
 
 .section-title {
   margin-bottom: 55px;
@@ -816,7 +763,6 @@ body.rooms-page em {
   will-change: transform;
 }
 
-/* Parallax opt-in items */
 [data-parallax="y"] {
   will-change: transform;
 }
@@ -858,8 +804,6 @@ body.rooms-page em {
   color: #fff;
 }
 
-/* buttons */
-
 .primary-btn {
   display: inline-block;
   font-size: 16px;
@@ -868,8 +812,6 @@ body.rooms-page em {
   background: #e9ad28;
   letter-spacing: 2px;
 }
-
-/* Preloder */
 
 #preloder {
   position: fixed;
@@ -1081,7 +1023,7 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  /* Keep EN/DE/AL visible when nav labels are longer (e.g. German); do not shrink like flex filler */
+  
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
@@ -1149,7 +1091,6 @@ body {
   margin-left: 6px;
 }
 
-/* Offcanvas "Book Now" button – match header style & color */
 .offcanvas_btn_widget a {
   display: inline-flex;
   align-items: center;
@@ -1181,7 +1122,6 @@ body {
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.26);
 }
 
-/* Mobile row: hidden on desktop (languages use .header__nav); shown ≤991px — see @media (max-width: 991px) */
 @media (min-width: 992px) {
   .mobile__lang__selector {
     display: none !important;
@@ -1192,7 +1132,6 @@ body {
   display: none !important;
 }
 
-/* ≤991px: fixed EN/DE/AL beside menu (header nav is off-canvas — keep languages visible on all these pages) */
 @media (max-width: 991px) {
   .mobile__lang__selector.header__lang__selector {
     display: inline-flex !important;
@@ -1237,7 +1176,6 @@ body {
   }
 }
 
-/* elegant-icons .arrow_right uses content "\24" (dollar) — hide in offcanvas CTA */
 .offcanvas_btn_widget a .arrow_right,
 .offcanvas__btn__widget a .arrow_right {
   display: none !important;
@@ -1250,10 +1188,6 @@ body {
 .canvas__open {
   display: none;
 }
-
-/*---------------------
-  Hero
------------------------*/
 
 .hero {
   padding-top: 145px;
@@ -1466,7 +1400,7 @@ body {
   margin-bottom: 10px;
   filter: contrast(0.8);
 }
-/* --- Room Showcase Custom Styles --- */
+
 .room-showcase {
   background: #ffffff;
   padding-top: 100px;
@@ -1484,7 +1418,7 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin-bottom: 180px; /* Hapësira mes rreshtave */
+  margin-bottom: 180px; 
   position: relative;
 }
 
@@ -1875,14 +1809,14 @@ body {
   padding: 0;
   text-align: left;
 }
-/* Import the font if not already in your project */
+
 @import url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
 
 .content-overlay--room-detail {
   text-align: center;
   font-family: "Forum", serif;
   padding: 40px;
-  background-color: #fff; /* Matches the white background in the image */
+  background-color: #fff; 
 }
 
 .content-overlay--room-detail .subtitle {
@@ -1896,7 +1830,7 @@ body {
 }
 
 .content-overlay--room-detail h2 {
-  font-size: 48px; /* Large elegant heading */
+  font-size: 48px; 
   line-height: 1.2;
   font-weight: 400;
   color: #1a1a1a;
@@ -1915,7 +1849,6 @@ body {
   margin-right: auto;
 }
 
-/* The exact button from the image */
 .primary-btn {
   display: inline-block;
   background-color: #b17256;
@@ -1980,9 +1913,6 @@ body {
   font-weight: 900;
 }
 
-/*---------------------
-  Offer Section
------------------------*/
 .offer {
   padding: 96px 0;
   overflow: hidden;
@@ -2445,10 +2375,6 @@ body {
   border-radius: 0;
 }
 
-/*---------------------
-  Home Room
------------------------*/
-
 .home-room__carousel-wrapper {
   position: relative;
   padding: 0 300px;
@@ -2608,10 +2534,6 @@ body {
   line-height: 50px;
 }
 
-/*---------------------
-  Testimonial
------------------------*/
-
 .testimonial {
   padding-top: 0;
 }
@@ -2754,10 +2676,6 @@ body {
   transition: 0.4s;
 }
 
-/*---------------------
-  Chooseus
------------------------*/
-
 .chooseus {
   padding-top: 80px;
   padding-bottom: 200px;
@@ -2805,10 +2723,6 @@ body {
   color: #19191a;
 }
 
-/*---------------------
-  Gallery
------------------------*/
-
 .gallery {
   padding-bottom: 0;
 }
@@ -2835,10 +2749,6 @@ body {
 .gallery__item {
   height: 700px;
 }
-
-/*---------------------
-  Latest Blog
------------------------*/
 
 .latest__blog__pic {
   height: 270px;
@@ -2914,10 +2824,6 @@ body {
   background: #e9ad28;
   content: "";
 }
-
-/*---------------------
-  Car
------------------------*/
 
 .room__pic__slider {
   margin-bottom: 60px;
@@ -3061,10 +2967,6 @@ body {
   background: #39352e;
   color: #ffffff;
 }
-
-/*---------------------
-  Footer
------------------------*/
 
 .footer {
   padding: 50px 0 0;
@@ -3544,10 +3446,6 @@ body {
   text-decoration: none;
 }
 
-/*---------------------
-  Breadcrumb
------------------------*/
-
 .breadcrumb-option {
   padding: 130px 0;
 }
@@ -3589,7 +3487,6 @@ body {
   display: inline-block;
 }
 
-/* Privacy policy breadcrumb contrast fix */
 .policy-breadcrumb {
   position: relative;
   overflow: hidden;
@@ -3614,10 +3511,6 @@ body {
   text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
 }
 
-/*---------------------
-  Home About
------------------------*/
-
 .home-about {
   margin-top: -100px;
 }
@@ -3628,7 +3521,6 @@ body {
   display: block;
 }
 
-/* Scroll Reveal — gentle fade-in + slight rise (to pair with parallax) */
 .scroll-reveal {
   opacity: 0;
   transform: translate3d(0, -24px, 0);
@@ -3637,7 +3529,6 @@ body {
     transform 1.9s cubic-bezier(0.18, 0.72, 0.22, 1);
 }
 
-/* Legacy class names: same motion (no horizontal slide) */
 .scroll-reveal.from-left,
 .scroll-reveal.from-right {
   transform: translate3d(0, -24px, 0);
@@ -3651,7 +3542,6 @@ body {
   transform: translate3d(0, 0, 0);
 }
 
-/* Index home: slower, slightly deeper drop from above */
 .scroll-reveal.index-scroll-slow {
   transform: translate3d(0, -28px, 0);
   transition:
@@ -3671,7 +3561,6 @@ body {
   font-family: "Traviata", "Forum", "Playfair Display", serif !important;
 }
 
-/* Index home: Traviata/Forum over section-specific sans (Poppins, Barlow, etc.) */
 .policy-font-traviata.sacher-home .guest-testimonials__heading,
 .policy-font-traviata.sacher-home .guest-testimonials__card-title,
 .policy-font-traviata.sacher-home .guest-testimonials__body,
@@ -3795,10 +3684,6 @@ body {
   display: block;
 }
 
-/*---------------------
-   About
------------------------*/
-
 .about {
   padding-bottom: 60px;
 }
@@ -3822,9 +3707,6 @@ body {
   margin-bottom: 25px;
 }
 
-/*---------------------
-  Policy Pages
-----------------------*/
 .policy-font-traviata,
 .policy-font-traviata h1,
 .policy-font-traviata h2,
@@ -3843,7 +3725,6 @@ body {
   font-family: "Traviata", "Forum", "Playfair Display", serif !important;
 }
 
-/* Keep icon fonts intact */
 .policy-font-traviata .fa,
 .policy-font-traviata [class^="icon_"],
 .policy-font-traviata [class*=" icon_"],
@@ -4144,10 +4025,6 @@ body {
   }
 }
 
-/*---------------------
-   History
------------------------*/
-
 .section-title.history-title {
   margin-bottom: 95px;
 }
@@ -4256,10 +4133,6 @@ body {
   line-height: 28px;
 }
 
-/*---------------------
-  Services
------------------------*/
-
 .services {
   padding-bottom: 60px;
 }
@@ -4277,10 +4150,6 @@ body {
 .services__item p {
   margin-bottom: 0;
 }
-
-/*---------------------
-  Room Details Slider
------------------------*/
 
 .room-details-slider {
   overflow: hidden;
@@ -4328,10 +4197,6 @@ body {
 .room__details__pic__slider__item {
   height: 380px;
 }
-
-/*---------------------
-  Room Details
------------------------*/
 
 .room-details {
   padding-bottom: 80px;
@@ -4468,10 +4333,6 @@ body {
   display: inline-block;
 }
 
-/*---------------------
-  Latest Blog
------------------------*/
-
 .latest {
   padding-bottom: 70px;
   padding-top: 160px;
@@ -4556,10 +4417,6 @@ body {
   color: #e9ad28;
   margin-left: 6px;
 }
-
-/*---------------------
-  Blog
------------------------*/
 
 .blog__item__large {
   margin-bottom: 68px;
@@ -4657,10 +4514,6 @@ body {
 .pagination__number.blog__pagination {
   text-align: left;
 }
-
-/*---------------------
-  Blog Sidebar
------------------------*/
 
 .blog__sidebar {
   padding-left: 40px;
@@ -4854,10 +4707,6 @@ body {
   padding: 8px 25px 6px 20px;
 }
 
-/*---------------------
-  Blog Hero
------------------------*/
-
 .blog-details-hero {
   padding-top: 145px;
   padding-bottom: 150px;
@@ -4896,10 +4745,6 @@ body {
 .blog__hero__text ul li i {
   margin-right: 5px;
 }
-
-/*---------------------
-  Blog Details
------------------------*/
 
 .blog-details {
   padding-bottom: 0;
@@ -5179,10 +5024,6 @@ body {
   border: none;
 }
 
-/*---------------------
-  Feature Blog
------------------------*/
-
 .feature-blog {
   padding-bottom: 60px;
 }
@@ -5195,10 +5036,6 @@ body {
   margin-top: 0;
 }
 
-/*---------------------
-  Map
------------------------*/
-
 .map {
   height: 600px;
 }
@@ -5206,10 +5043,6 @@ body {
 .map iframe {
   width: 100%;
 }
-
-/*---------------------
-  Contact
------------------------*/
 
 .contact__widget__item {
   margin-bottom: 56px;
@@ -5306,8 +5139,6 @@ body {
   background: #e9ad28;
   content: "";
 }
-
-/*--------------------------------- Responsive Media Quaries -----------------------------*/
 
 @media only screen and (min-width: 1200px) and (max-width: 1749px) {
   .room__details__pic__slider.owl-carousel .owl-nav button {
@@ -5428,8 +5259,6 @@ body {
   }
 }
 
-/* Medium Device = 1200px */
-
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .header__menu ul li {
     margin-right: 35px;
@@ -5482,8 +5311,6 @@ body {
     padding-left: 0;
   }
 }
-
-/* Tablet Device = 768px */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .filter__form {
@@ -5760,8 +5587,6 @@ body {
     position: relative;
   }
 }
-
-/* Wide Mobile = 480px */
 
 @media only screen and (max-width: 767px) {
   .filter__form {
@@ -6107,8 +5932,6 @@ body {
   }
 }
 
-/* Small Device */
-
 @media only screen and (max-width: 479px) {
   .filter__form {
     padding: 30px;
@@ -6178,7 +6001,6 @@ body {
   display: none !important;
 }
 
-/* Rooms showcase final responsive override */
 .rooms-showcase .container > br,
 .rooms-showcase .custom-row > br {
   display: none;
@@ -6322,7 +6144,6 @@ body {
   }
 }
 
-/* rooms.html mobile safety fixes (minimal and isolated) */
 @media (max-width: 991px) {
   .rooms-page .header__logo a img {
     max-height: 46px !important;
@@ -6340,12 +6161,12 @@ body {
 }
 
 @media (max-width: 767px) {
-  /* Remove extra top gap on rooms page mobile */
+  
   body.rooms-page {
     padding-top: 72px !important;
   }
 
-  /* Ensure mobile menu button is visible on rooms page */
+  
   .rooms-page .header__nav {
     display: none !important;
   }
@@ -6400,7 +6221,7 @@ body {
     margin-left: 0;
   }
 
-  /* Ensure room cards/images are visible and stack cleanly on mobile */
+  
   .rooms-page .home-room__carousel {
     overflow: visible !important;
   }
@@ -6425,7 +6246,7 @@ body {
     height: 260px !important;
   }
 
-  /* Mobile hero style close to Sacher reference */
+  
   .rooms-page .hero--left {
     margin-top: -8px !important;
     height: 58vh;
@@ -6477,7 +6298,7 @@ body {
     font-weight: 600;
   }
 
-  /* Smaller logo + cleaner top bar on phones */
+  
   .rooms-page .header__logo a img {
     max-height: 34px !important;
   }
@@ -6487,7 +6308,6 @@ body {
   }
 }
 
-/* Strong responsive layout for rooms page (tablet + mobile) */
 @media (max-width: 991px) {
   html,
   body,
@@ -6526,7 +6346,7 @@ body {
     width: auto !important;
   }
 
-  /* Hide desktop nav lang + book strip on small rooms header (mobile row + drawer handle the rest) */
+  
   .rooms-page .header__nav .header__lang__selector,
   .rooms-page .header__nav__widget {
     display: none !important;
@@ -6590,7 +6410,7 @@ body {
     min-height: 0 !important;
     height: auto !important;
     max-height: none !important;
-    aspect-ratio: 2.4 / 1 !important; /* a bit taller */
+    aspect-ratio: 2.4 / 1 !important; 
     background-position: left top !important;
     background-size: 108% auto !important;
   }
@@ -6632,7 +6452,6 @@ body {
   }
 }
 
-/* Desktop placement for rooms hero headline (match reference composition) */
 @media (min-width: 992px) {
   .rooms-page .hero--left .container-fluid {
     padding-left: 64px;
@@ -6665,7 +6484,6 @@ body {
   }
 }
 
-/* Final lock: rooms.html responsive hero/menu behavior */
 @media (max-width: 991px) {
   body.rooms-page {
     padding-top: 74px !important;
@@ -6691,7 +6509,7 @@ body {
     border-radius: 3px !important;
   }
 
-  /* Fix square icon: keep FontAwesome icon font on mobile menu button */
+  
   .rooms-page .canvas__open span,
   .rooms-page .canvas__open .fa {
     font-family: FontAwesome !important;
@@ -6712,7 +6530,7 @@ body {
     height: auto !important;
     min-height: 0 !important;
     max-height: none !important;
-    aspect-ratio: 2.4 / 1 !important; /* a bit taller */
+    aspect-ratio: 2.4 / 1 !important; 
     padding: 0 !important;
     position: relative !important;
     align-items: flex-end !important;
@@ -6754,7 +6572,6 @@ body {
   }
 }
 
-/* Rotating rooms hero: tablet sizing (inherits base aspect + clamp from block above) */
 @media (max-width: 991px) {
   .rooms-page .hero[data-hero-rotate].hero--left {
     margin-top: -8px !important;
@@ -6779,7 +6596,6 @@ body {
   }
 }
 
-/* Junior Suite page (Sacher-inspired) */
 .junior-page .junior-hero {
   height: 78vh;
   min-height: 560px;
@@ -7199,7 +7015,6 @@ body {
   line-height: 1.7;
 }
 
-/* Sacher-inspired homepage (index) */
 .sacher-home {
   background: #ffffff;
 }
@@ -7251,7 +7066,6 @@ body {
   background: #8f8f8f;
 }
 
-/* Make home header + hero full-width with no side padding */
 .sacher-home .header .container,
 .sacher-home .header__nav__option > .container {
   max-width: 100%;
@@ -7259,12 +7073,10 @@ body {
   padding-right: 0;
 }
 
-/* Remove the empty top strip that creates white space above the hero */
 .sacher-home .header__top {
   display: none;
 }
 
-/* Keep only a small left inset for logo as requested */
 .sacher-home .header__logo {
   padding: 10px 0 10px 5px;
 }
@@ -7273,7 +7085,6 @@ body {
   padding-right: 5px;
 }
 
-/* Remove visible white gap under fixed header by matching home offset to header height */
 .sacher-home {
   padding-top: 84px;
 }
@@ -7282,13 +7093,11 @@ body {
   padding: 10px 0;
 }
 
-/* Let the hero image bleed edge-to-edge */
 .sacher-home .sacher-hero {
   width: 100vw;
   margin-left: calc(50% - 50vw);
 }
 
-/* Remove gap between header and first hero on home */
 .sacher-home .sacher-hero {
   padding-top: 0 !important;
   margin-top: 0 !important;
@@ -7304,12 +7113,10 @@ body {
   z-index: 1;
 }
 
-/* Darker home header (noya image) overlay */
 .sacher-home .sacher-hero__overlay {
   background: rgba(0, 0, 0, 0.68);
 }
 
-/* Keep NOYA header image (noyaheaderr) without dark tint */
 .sacher-home .sacher-hero .sacher-hero__slider + .sacher-hero__overlay {
   background: rgba(0, 0, 0, 0.62);
 }
@@ -7351,14 +7158,12 @@ body {
   letter-spacing: 1.2px;
 }
 
-/* Hide the off-canvas hamburger on desktop home header */
 @media (min-width: 992px) {
   .sacher-home .canvas__open {
     display: none !important;
   }
 }
 
-/* Junior Suite hero — Sacher-style: large primary line + small wide-tracked brand (parallax on .junior-hero-headline) */
 .junior-room-page .junior-hero-headline {
   will-change: transform;
   text-align: left;
@@ -7392,7 +7197,6 @@ body {
   padding-left: 0.12em;
 }
 
-/* Cookie consent banner */
 .cookie-consent {
   position: fixed;
   left: 20px;
@@ -7492,7 +7296,6 @@ body {
   object-position: center;
 }
 
-/* Keep junior 1111.webp slightly lighter than the darker home overlay */
 .junior-room-page .sacher-hero__overlay {
   background: transparent;
 }
@@ -7725,7 +7528,6 @@ body {
   color: #fff;
 }
 
-/* Match banner design for Health Club */
 .sacher-home .sacher-health .sacher-banner-content {
   margin-top: 110px;
   margin-left: -70px;
@@ -7834,7 +7636,6 @@ body {
   max-height: 1320px;
 }
 
-/* coat.webp (welcome): never rely on height:100% — parent only had min-height, so intrinsic size overflowed */
 .sacher-home .sacher-welcome .sacher-feature__image--tall {
   width: 100%;
   max-width: 100%;
@@ -8208,7 +8009,6 @@ body {
   padding-left: 10px;
 }
 
-/* Mobile-only room category block like Sacher card list */
 .sacher-home .sacher-mobile-categories {
   display: none;
 }
@@ -8254,7 +8054,7 @@ body {
     min-height: 0;
   }
 
-  /* Welcome: desktop min-height: 1000px must not apply on mobile (huge gap coat → hand) */
+  
   .sacher-home .sacher-welcome .sacher-feature__left {
     min-height: 0;
   }
@@ -8348,7 +8148,7 @@ body {
 
   .sacher-home .sacher-hero {
     min-height: 62vh;
-    /* Clear strip between hero (1111.webp) and Mozart video */
+    
     margin-bottom: clamp(44px, 12vw, 88px);
   }
 
@@ -8701,7 +8501,6 @@ body {
   }
 }
 
-/* Make header logos responsive */
 .header__logo img,
 .offcanvas__logo img {
   width: auto;
@@ -8727,7 +8526,6 @@ body {
   }
 }
 
-/* Ensure mobile menu icon is visible on the home page */
 .sacher-home .canvas__open {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -8772,14 +8570,14 @@ body {
     display: none !important;
   }
 
-  /* Reinforce gap hero → Mozart (spacer <br> hidden on small screens) */
+  
   .sacher-home .sacher-hero {
     margin-bottom: clamp(44px, 12vw, 88px);
   }
 
   .sacher-home .sacher-rooms {
     min-height: clamp(300px, 48vh, 460px);
-    /* Spacer <br> tags are hidden on mobile — add gap before next section */
+    
     margin-bottom: 40px;
   }
 
@@ -8809,7 +8607,7 @@ body {
     font-size: 11px;
   }
 
-  /* Hide stray spacer <br> tags across the home page on medium-and-down */
+  
   .sacher-home br {
     display: none;
   }
@@ -8990,7 +8788,6 @@ body {
   }
 }
 
-/* Sacher-style room categories section for rooms.html */
 .rooms-page .sacher-roomcats {
   background: #efefef;
   padding: 42px 0 26px;
@@ -9061,7 +8858,6 @@ body {
   transition: all 0.2s ease;
 }
 
-/* Keep dropdown always above cards/images on room pages */
 .rooms-page .sacher-roomcats__grid-wrap,
 .rooms-page .sacher-roomcats__viewport,
 .rooms-page .sacher-roomcats__grid {
@@ -9255,7 +9051,7 @@ body {
     display: none;
   }
 
-  /* Remove large empty gaps created by manual <br> spacers on mobile */
+  
   .rooms-page > br,
   .rooms-page .sacher-roomcats > br,
   .rooms-page .home-about > br {
@@ -9325,9 +9121,6 @@ body {
   }
 }
 
-/*--------------------------
-  Testimonials Horizontal
----------------------------*/
 .sacher-testimonials {
   padding: 66px 0;
   overflow-x: hidden;
@@ -9380,7 +9173,6 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
-/* Owl mode for stable testimonial navigation */
 .sacher-testimonials__scroller.owl-carousel {
   display: block;
   overflow: hidden;
@@ -9400,7 +9192,6 @@ body {
   display: flex;
 }
 
-/* Hide scrollbar while keeping scroll usable */
 .sacher-testimonials__scroller::-webkit-scrollbar {
   height: 0;
 }
@@ -9410,7 +9201,7 @@ body {
 }
 
 .sacher-testimonials__card {
-  /* Keep exactly one full card per step; never shrink into columns */
+  
   flex: 0 0 100%;
   width: 100%;
   max-width: 100%;
@@ -9718,9 +9509,6 @@ body {
   }
 }
 
-/*--------------------------
-  Instagram Feed Mosaic
----------------------------*/
 .sacher-instagram {
   padding: 86px 0;
   overflow: visible;
@@ -9765,7 +9553,6 @@ body {
   display: block;
 }
 
-/* Darken tile on hover to indicate it is clickable */
 .sacher-instagram__tile::after {
   content: "";
   position: absolute;
@@ -9780,7 +9567,6 @@ body {
   opacity: 1;
 }
 
-/* Owl arrows */
 .sacher-instagram__carousel .owl-nav {
   position: absolute;
   left: -92px;
@@ -9838,9 +9624,6 @@ body {
   }
 }
 
-/*--------------------------
-  Architecture Quote Block
----------------------------*/
 .sacher-arch-quote {
   padding: 88px 0;
 }
@@ -9952,7 +9735,6 @@ body {
   }
 }
 
-/* Contact page */
 .contact-page {
   background: transparent;
 }
@@ -9994,7 +9776,6 @@ body {
   line-height: 1.8;
 }
 
-/* FAQs page intro */
 .faq-intro {
   padding: 130px 0 110px;
   background: transparent;
@@ -10636,9 +10417,6 @@ body {
   }
 }
 
-/* ------------------------------------------------------------------
-   Room preview: left column + specs carousel (below 360° image)
-   ------------------------------------------------------------------ */
 .preview-left-col {
   width: 100%;
   max-width: 560px;
@@ -10827,9 +10605,6 @@ body {
   }
 }
 
-/* ------------------------------------------------------------------
-   Full-bleed suite photo mosaic (1 : 2 : 1 columns, center spans 2 rows)
-   ------------------------------------------------------------------ */
 .suite-collage {
   width: 100%;
   max-width: 100%;
@@ -10900,9 +10675,6 @@ body {
   }
 }
 
-/* ------------------------------------------------------------------
-   Experience headline (after suite collage, Junior page)
-   ------------------------------------------------------------------ */
 .experience-editorial {
   background: #fff;
   padding: clamp(72px, 11vw, 140px) 0;
@@ -10942,9 +10714,6 @@ body {
   }
 }
 
-/* ------------------------------------------------------------------
-   Director testimonial + staggered duo (Junior Suite editorial)
-   ------------------------------------------------------------------ */
 .director-showcase {
   background: #fff;
   padding: clamp(48px, 7vw, 100px) 0 0;
@@ -11045,7 +10814,6 @@ body {
   background: #eaeaea;
 }
 
-/* Right column sits higher; left column offset lower (screenshot 2) */
 .director-showcase__stagger-cell--right {
   align-self: start;
 }
@@ -11105,9 +10873,6 @@ body {
   }
 }
 
-/* ------------------------------------------------------------------
-   Culinary hero (inset like header container, overlay, parallax bg)
-   ------------------------------------------------------------------ */
 .culinary-hero {
   background: #fff;
   padding: clamp(20px, 3vw, 36px) 0 clamp(40px, 6vw, 72px);
@@ -11197,7 +10962,6 @@ body {
   }
 }
 
-/* Junior Suite: culinary banner — left stack in container (matches reference) */
 .junior-room-page .culinary-hero__frame {
   justify-content: flex-start;
   align-items: center;
@@ -11223,9 +10987,6 @@ body {
   }
 }
 
-/* ------------------------------------------------------------------
-   Architectural line art + “Our exquisite rooms and suites” kicker
-   ------------------------------------------------------------------ */
 .arch-rooms-heading {
   background: #fff;
   padding: clamp(48px, 8vw, 110px) clamp(24px, 5vw, 48px);
@@ -11259,9 +11020,6 @@ body {
   line-height: 1.5;
 }
 
-/* ------------------------------------------------------------------
-   Guest testimonials (index — cream card, parallax bed bg, dots)
-   ------------------------------------------------------------------ */
 .guest-testimonials {
   position: relative;
   padding: clamp(88px, 13vw, 148px) 0 clamp(72px, 11vw, 130px);
@@ -11270,7 +11028,7 @@ body {
 
 .guest-testimonials__bg {
   position: absolute;
-  /* Extend past section edges so blur fringe is clipped by .guest-testimonials overflow */
+  
   inset: -24px;
   z-index: 0;
   background-repeat: no-repeat;
@@ -11339,7 +11097,6 @@ body {
   animation: guest-testimonials-in 0.5s ease;
 }
 
-/* Keep every testimonial slide in the same centered vertical layout */
 .guest-testimonials__panel > * {
   float: none !important;
   clear: both !important;
@@ -11548,7 +11305,7 @@ body {
 }
 
 @media (max-width: 767px) {
-  /* Side arrows flanking the card (same row, vertically centered) */
+  
   .guest-testimonials__inner.container {
     padding-left: max(10px, env(safe-area-inset-left, 0px));
     padding-right: max(10px, env(safe-area-inset-right, 0px));
@@ -11625,15 +11382,8 @@ body {
   }
 }
 
-/* ------------------------------------------------------------------
-   Mobile / tablet — luxury menu (offcanvas + SlickNav) & footer
-   ------------------------------------------------------------------ */
 @media (max-width: 991px) {
-  /*
-   * Desktop body padding-top (112px) is taller than the mobile header → white strip above
-   * full-bleed heroes. Only zero it when a .sacher-hero exists; other sacher-home pages get
-   * a tighter offset so content clears the fixed bar.
-   */
+  
   body.sacher-home:has(.sacher-hero) {
     padding-top: 0 !important;
   }
@@ -11649,7 +11399,7 @@ body {
   .header__logo {
     padding: 16px max(16px, env(safe-area-inset-left)) 16px
       max(16px, env(safe-area-inset-left));
-    /* Clear fixed EN/DE/AL + menu button on the right */
+    
     padding-right: max(76px, min(200px, 46vw));
   }
 
@@ -11658,7 +11408,7 @@ body {
     width: auto;
   }
 
-  /* Off-canvas + SlickNav: full-screen Sacher-style panel — see “Derand mobile nav — Sacher” at end of file */
+  
 
   .header .canvas__open,
   .sacher-home .canvas__open {
@@ -11700,10 +11450,10 @@ body {
     line-height: 1 !important;
   }
 
-  /* Footer — refined cards & rhythm */
+  
   .footer .container {
     box-sizing: border-box !important;
-    /* Match left/right gutter (safe areas can differ; use the larger on both sides) */
+    
     padding-left: max(
       20px,
       env(safe-area-inset-left),
@@ -11814,7 +11564,7 @@ body {
     margin-bottom: 4px !important;
   }
 
-  /* Simple two-column link list — no panel or button styling */
+  
   .footer__links__grid {
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
@@ -11941,7 +11691,6 @@ body {
   }
 }
 
-/* Mobile footer logos: keep brand + partner in one horizontal row */
 @media (max-width: 767px) {
   .footer__brandbar {
     flex-direction: row !important;
@@ -11964,7 +11713,6 @@ body {
   }
 }
 
-/* Home hero text tuning for phones: smaller and lower */
 @media (max-width: 575px) {
   .sacher-home .sacher-hero__content {
     left: 12px !important;
@@ -11992,9 +11740,6 @@ body {
   }
 }
 
-/* ------------------------------------------------------------------
-   Rooms page final overrides
-   ------------------------------------------------------------------ */
 .rooms-page
   *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]):not([class^="icon_"]):not(
     [class*=" icon_"]
@@ -12003,7 +11748,6 @@ body {
   font-weight: 400 !important;
 }
 
-/* Remove gray background from room categories section/grid */
 .rooms-page .sacher-roomcats,
 .rooms-page .sacher-roomcats__item {
   background: transparent !important;
@@ -12014,7 +11758,6 @@ body {
   background: transparent !important;
 }
 
-/* Rooms hero: crossfade, edge-to-edge image (cover), no grey bars; timing in initRoomsHeroRotator (main.js) */
 .rooms-page .hero[data-hero-rotate] {
   overflow: hidden;
   background-color: transparent !important;
@@ -12025,7 +11768,6 @@ body {
   padding-bottom: 0 !important;
 }
 
-/* Empty hero: slides are position:absolute — give the box a responsive height (no grey fill; layers use cover) */
 .rooms-page .hero[data-hero-rotate].hero--left {
   width: 100%;
   max-width: 100%;
@@ -12076,7 +11818,6 @@ body {
   z-index: 2;
 }
 
-/* Mobile polish for rooms page */
 @media (max-width: 991px) {
   .rooms-page .sacher-roomcats > br,
   .rooms-page .home-about > br,
@@ -12101,7 +11842,6 @@ body {
   }
 }
 
-/* Keep main hero titles consistent on rooms, index, and junior pages */
 .rooms-page .hero--left .hero__text h2[data-i18n="hero-title"],
 .sacher-home
   .sacher-hero__content
@@ -12141,7 +11881,6 @@ body {
   }
 }
 
-/* Match rooms/junior mobile hero composition to index mobile */
 @media (max-width: 767px) {
   .rooms-page .hero--left {
     width: 100vw !important;
@@ -12170,13 +11909,13 @@ body {
     pointer-events: none;
   }
 
-  /* Rotating photo hero: no dark overlay (image only) */
+  
   .rooms-page .hero[data-hero-rotate].hero--left::before {
     display: none !important;
     content: none !important;
   }
 
-  /* Rotating hero: responsive height (overrides 56vh .hero--left above in this query) */
+  
   .rooms-page .hero[data-hero-rotate].hero--left {
     height: auto !important;
     min-height: clamp(220px, 72vw, 560px) !important;
@@ -12238,7 +11977,6 @@ body {
   }
 }
 
-/* Rooms page typography lock: ensure all text uses Traviata */
 .rooms-page h1,
 .rooms-page h2,
 .rooms-page h3,
@@ -12258,7 +11996,6 @@ body {
   font-weight: 400 !important;
 }
 
-/* SlickNav: only force-open lists that are not collapsed (.slicknav_hidden); otherwise toggles cannot hide submenus */
 @media (max-width: 991px) {
   .offcanvas-menu-wrapper .slicknav_nav ul:not(.slicknav_hidden),
   .offcanvas-menu-wrapper .slicknav_nav .dropdown:not(.slicknav_hidden) {
@@ -12279,14 +12016,13 @@ body {
   }
 }
 
-/* Mobile room categories slider: keep desktop-style horizontal cards with 2 visible */
 @media (max-width: 991px) {
   .junior-room-page .sacher-roomcats__grid-wrap {
     padding: 0 14px !important;
     max-width: 100% !important;
   }
 
-  /* Ensure the heading and dropdown are visible on deluxe page wrapper */
+  
   .junior-room-page .rooms-page .sacher-roomcats__head {
     display: block !important;
     padding: 0 14px 8px !important;
@@ -12429,10 +12165,6 @@ body {
   }
 }
 
-/*
- * Derand mobile nav — Sacher layout (full viewport white, accent #b17256, Traviata type).
- * Includes .rooms-page so older rooms-only drawer rules cannot override.
- */
 @media only screen and (max-width: 991px) {
   .offcanvas-menu-overlay {
     position: fixed !important;
@@ -12632,7 +12364,7 @@ body {
     border-bottom: none;
   }
 
-  /* Top-level row: SlickNav uses span.slicknav_parent-link when nestedParentLinks is false */
+  
   #mobile-menu-wrap .slicknav_nav > li > span.slicknav_parent-link.slicknav_row {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -12707,7 +12439,7 @@ body {
     -webkit-tap-highlight-color: transparent;
   }
 
-  /* Fallback if any menu item is still a bare top-level <a> */
+  
   #mobile-menu-wrap .slicknav_nav > li > a.slicknav_row {
     font-family: "Traviata", "Forum", serif !important;
     font-size: 15px !important;
@@ -12743,7 +12475,7 @@ body {
     -webkit-font-smoothing: antialiased;
   }
 
-  /* All four main sections: same accent as Rooms & Suites */
+  
   #mobile-menu-wrap .slicknav_nav > li:nth-child(-n + 4) > span.slicknav_parent-link > a:not(.slicknav_item),
   #mobile-menu-wrap .slicknav_nav > li:nth-child(1) > a.slicknav_row,
   #mobile-menu-wrap .slicknav_nav > li:nth-child(1) > a.slicknav_row a,
@@ -12902,7 +12634,6 @@ body {
   }
 }
 
-/* Mobile ≤991px: EN/DE/AL visible; when full-screen menu is open, sit above red bar */
 @media (max-width: 991px) {
   .mobile__lang__selector.header__lang__selector {
     visibility: visible !important;

@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/style.css" type="text/css" />
 
     <style>
-      /* Force Traviata typography across the full Noya form page */
+      
       html,
       body,
       body *:not(i):not(.fa):not([class^="icon_"]):not([class*=" icon_"]) {
@@ -311,25 +311,25 @@
         }
       }
 
-      /* Page-specific hero tuning so the subject sits on the left */
+      
       .rinu-hero .sacher-hero__video {
         object-position: left center;
       }
       @media (max-width: 575px) {
-        /* Remove the top padding that is pushing the content down */
+        
         .rinu-hero {
           padding: 0 !important;
           position: relative;
-          overflow: hidden; /* Ensures no scroll issues */
+          overflow: hidden; 
         }
 
         .rinu-hero .sacher-hero__slider {
           min-height: auto;
           display: block;
-          margin-bottom: -5px; /* Tiny offset to prevent sub-pixel gaps */
+          margin-bottom: -5px; 
         }
         @media (max-width: 575px) {
-          /* 1. Force the section to collapse any extra padding/margin */
+          
           .rinu-hero {
             padding: 0 !important;
             margin: 0 !important;
@@ -339,16 +339,16 @@
             overflow: hidden;
           }
 
-          /* 2. Ensure the slider doesn't hold an invisible height */
+          
           .rinu-hero .sacher-hero__slider {
             height: auto !important;
             min-height: 0 !important;
-            line-height: 0; /* Removes text-node gaps under images */
+            line-height: 0; 
             margin: 0 !important;
             display: block !important;
           }
 
-          /* 3. Make the image fill the width and snap the container to it */
+          
           .rinu-hero .sacher-hero__video {
             width: 100% !important;
             height: auto !important;
@@ -357,10 +357,10 @@
             object-fit: cover !important;
           }
 
-          /* 4. Position text directly on top of the image */
+          
           .rinu-hero .container {
             position: absolute !important;
-            bottom: 15px !important; /* Adjust this to move text up/down */
+            bottom: 15px !important; 
             left: 0 !important;
             right: 0 !important;
             z-index: 5;
@@ -368,12 +368,12 @@
             margin: 0 !important;
           }
 
-          /* 5. Hide the overlay if it's creating a ghost layer */
+          
           .rinu-hero .sacher-hero__overlay {
             display: none !important;
           }
 
-          /* 6. Ensure the section BELOW (intro) doesn't have top margin */
+          
           .rinu-hero + .rinu-intro {
             margin-top: 0 !important;
             padding-top: 0 !important;
@@ -397,16 +397,16 @@
             display: block !important;
           }
 
-          /* Text Positioning Wrapper */
+          
           .rinu-hero .container {
             position: absolute !important;
-            bottom: 20px; /* Adjust this to move text up/down from the bottom edge */
+            bottom: 20px; 
             left: 0;
             right: 0;
             width: 100%;
-            padding: 0 20px; /* Space from the left/right edges */
+            padding: 0 20px; 
             z-index: 10;
-            pointer-events: none; /* Allows clicks to pass through to the image if needed */
+            pointer-events: none; 
           }
 
           .rinu-hero .sacher-hero__content {
@@ -416,17 +416,17 @@
             padding: 0 !important;
           }
 
-          /* The Headline Styling */
+          
           .rinu-hero .traviata-hero-title {
             font-family: "Traviata", "Forum", serif !important;
-            /* This makes the font smaller (approx 18-20px) and responsive */
+            
             font-size: clamp(16px, 5.5vw, 20px) !important;
             line-height: 1.1 !important;
             letter-spacing: 0.02em;
             color: #ffffff !important;
             text-transform: uppercase;
             margin: 0 !important;
-            /* Optional: subtle shadow to make it pop against the image */
+            
             text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
           }
 
@@ -445,12 +445,12 @@
           display: none;
         }
 
-        /* Adjust positioning of the text to sit on the image */
+        
         .rinu-hero .container {
           position: absolute;
           left: 12px;
           right: 12px;
-          bottom: 20px; /* Adjust this to move the text up or down */
+          bottom: 20px; 
           padding-bottom: 0;
           z-index: 2;
         }
@@ -458,10 +458,10 @@
         .rinu-hero .traviata-hero-title {
           font-size: 24px !important;
           line-height: 1.08;
-          color: #fff; /* Ensure text is visible over the image background */
+          color: #fff; 
         }
       }
-      /* Ensure hero image scales responsively */
+      
       .rinu-hero .sacher-hero__video {
         width: 100%;
         height: 78vh;
@@ -478,12 +478,12 @@
       .rinu-hero .sacher-hero__slider {
         min-height: 78vh;
       }
-      /* Remove any gap below image on next section */
+      
       .rinu-hero + .rinu-intro {
         margin-top: 0;
       }
       @media (max-width: 575px) {
-        /* On small screens, show the image completely (no cropping) */
+        
         .rinu-hero {
           padding: 14px 0 0;
           position: relative;
@@ -503,7 +503,7 @@
         .rinu-hero .sacher-hero__overlay {
           display: none;
         }
-        /* Place the text/button over the image so the section doesn't add extra blank space */
+        
         .rinu-hero .container {
           position: absolute;
           left: 12px;
@@ -522,7 +522,7 @@
       }
     </style>
     <style>
-      /* Darken rinu header image with a consistent overlay on all viewports */
+      
       .rinu-hero {
         position: relative;
       }
@@ -536,11 +536,11 @@
         pointer-events: none;
         display: block !important;
       }
-      /* Mobile tweaks for rinu intro banner: shorter height and 50% opacity */
+      
       @media (max-width: 575px) {
         .rinu-intro .rinu-cta-banner {
-          background: rgba(177, 114, 86, 1) !important; /* 100% */
-          padding: 24px 12px !important; /* shorter box */
+          background: rgba(177, 114, 86, 1) !important; 
+          padding: 24px 12px !important; 
         }
       }
     </style>
@@ -1062,6 +1062,4 @@
     ></script>
   </body>
 </html>
-
-
 
