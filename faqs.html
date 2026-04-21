@@ -1,0 +1,1030 @@
+﻿<!doctype html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Hiroto Template" />
+    <meta name="keywords" content="Hiroto, unica, creative, html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Derand Hotel</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css" />
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css" />
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <style>
+      /* Enforce Traviata everywhere on FAQs; remove bold */
+      .faqs-page
+        *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]):not([class^="icon_"]):not(
+          [class*=" icon_"]
+        ) {
+        font-family: "Traviata", serif !important;
+        font-weight: 400 !important;
+      }
+      .faqs-page b,
+      .faqs-page strong {
+        font-weight: 400 !important;
+      }
+
+      /* Keep footer icons on Font Awesome */
+      .faqs-page .footer i.fa,
+      .faqs-page .footer [class^="fa-"],
+      .faqs-page .footer [class*=" fa-"] {
+        font-family: FontAwesome !important;
+        font-style: normal !important;
+        font-weight: normal !important;
+      }
+      /* Gentle parallax feel for header/logo */
+      .faq-intro__inner [data-parallax] {
+        will-change: transform;
+      }
+      /* Responsive title sizing */
+      .faq-intro__title {
+        font-size: clamp(26px, 5.6vw, 56px) !important;
+        line-height: 1.12;
+        margin: 0 auto;
+        padding: 0 12px;
+        word-break: break-word;
+      }
+      .faqs-page .faq-intro .faq-intro__title { font-size: clamp(26px, 5.6vw, 56px) !important; }
+      @media (max-width: 575.98px) {
+        .faq-intro__title {
+          font-size: clamp(22px, 7.2vw, 34px) !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="sacher-home policy-font-traviata faqs-page">
+
+    <div id="preloder">
+      <div class="loader"></div>
+    </div>
+
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+      <div class="offcanvas__logo">
+        <a href="./index.html"><img src="img/logoo.webp" alt="Logo" /></a>
+      </div>
+      <div id="mobile-menu-wrap"></div>
+      <div class="offcanvas__btn__widget">
+        <a
+          href="https://derand-hotel.hotelrunner.com/bv3/search"
+          target="_blank"
+          rel="noopener noreferrer"
+          >BOOK NOW <span class="arrow_right"></span
+        ></a>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="header__top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7"></div>
+            <div class="col-lg-5">
+              <div class="header__top__right"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__nav__option">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-2">
+              <div class="header__logo">
+                <a href="./index.html"
+                  ><img src="img/logoo.webp" alt="Logo"
+                /></a>
+              </div>
+            </div>
+            <div class="col-lg-10">
+              <div class="header__nav">
+                <nav class="header__menu">
+                  <ul class="menu__class">
+                    <li>
+                      <a href="rooms.html" data-i18n="nav-rooms"
+                        >ROOMS & SUITES</a
+                      >
+                      <ul class="dropdown">
+                        <li>
+                          <a href="junior.html" data-i18n="nav-room-1"
+                            >JUNIOR SUITE</a
+                          >
+                        </li>
+                        <li>
+                          <a href="deluxe-double.html" data-i18n="nav-room-2"
+                            >DELUXE DOUBLE ROOM</a
+                          >
+                        </li>
+                        <li>
+                          <a href="superior-twin.html" data-i18n="nav-room-3"
+                            >SUPERIOR TWIN ROOM</a
+                          >
+                        </li>
+                        <li>
+                          <a href="premium-double.html" data-i18n="nav-room-4"
+                            >PREMIUM DOUBLE ROOM</a
+                          >
+                        </li>
+                        <li>
+                          <a href="superior-double.html" data-i18n="nav-room-5"
+                            >SUPERIOR DOUBLE ROOM</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="#" data-i18n="nav-restaurant"
+                        >RESTAURANT & BAR</a
+                      >
+                      <ul class="dropdown">
+                        <li>
+                          <a
+                            href="noya.html"
+                            data-i18n="nav-restaurant-1"
+                            >NOYA</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="omma.html"
+                            data-i18n="nav-restaurant-2"
+                            >OMMA-Cafe & Buffet</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="#" data-i18n="nav-activities"
+                        >ACTIVITIES</a
+                      >
+                      <ul class="dropdown">
+                        <li>
+                          <a href="onze.html" data-i18n="nav-activity-1"
+                            >ONZE RECOVERY</a
+                          >
+                        </li>
+                        <li>
+                          <a href="rinu.html" data-i18n="nav-activity-2"
+                            >RINU MEDSPA</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                          <li class="has-dropdown">
+  <a href="#" data-i18n="nav-inquiry">CONTACT</a>
+
+  <ul class="dropdown">
+    <li>
+      <a href="contact.html" data-i18n="nav-contact-us">CONTACT US</a>
+    </li>
+    <li>
+      <a href="faqs.html" data-i18n="nav-faqs">FAQS</a>
+    </li>
+  </ul>
+</li>
+                  </ul>
+                </nav>
+
+                <div class="header__lang__selector">
+                  <button class="lang-btn lang-active" data-lang="en">
+                    EN
+                  </button>
+                  <button class="lang-btn" data-lang="de">DE</button>
+                  <button class="lang-btn" data-lang="al">AL</button>
+                </div>
+
+                <div class="header__nav__widget">
+                  <a
+                    href="https://derand-hotel.hotelrunner.com/bv3/search"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span data-i18n="book-now">BOOK NOW</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="canvas__open">
+            <span class="fa fa-bars"></span>
+          </div>
+        <div class="mobile__lang__selector header__lang__selector">
+          <button class="lang-btn lang-active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="de">DE</button>
+          <button class="lang-btn" data-lang="al">AL</button>
+        </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="faq-intro">
+      <div class="container">
+        <div class="faq-intro__inner text-center">
+          <img src="img/background.webp" alt="Derand emblem" class="faq-intro__logo" data-parallax="y" data-parallax-speed="0.06" />
+          <br>
+          <br>
+        <br>
+          <br>
+
+          <p class="faq-intro__kicker" data-i18n="faq-kicker" data-parallax="y" data-parallax-speed="0.05">Frequently Asked Questions</p>
+          <br>
+
+          <h1 class="faq-intro__title" data-i18n="faq-title" data-parallax="y" data-parallax-speed="0.06">Questions and Answers</h1>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-lead">
+      <div class="container">
+        <div class="faq-lead__inner">
+          <span class="faq-lead__dropcap" aria-hidden="true">W</span>
+          <p data-i18n="faq-lead" data-parallax="y" data-parallax-speed="0.03">
+            We're pleased to provide you with answers to the most frequently asked
+            questions. If we should've missed one in particular, don't hesitate to
+            let us know at any point in time. Thank you very much.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-list">
+      <div class="container">
+        <div class="faq-list__inner">
+          <br>
+          <br>
+          <br>
+          <h2 data-i18n="faq-sec-1" data-parallax="y" data-parallax-speed="0.035">General Information About Derand Hotel Prishtina</h2>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <br>
+            <br>
+            <summary data-i18n="faq-q-1">What is the address of Derand Hotel Prishtina?</summary>
+            <div class="faq-list__answer">
+              <p data-i18n="faq-a-1">
+                Derand Hotel is located at Bekim Fehmiu Str. 30, Prishtina 10000,
+                Kosovo, in a central area with easy city access.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary data-i18n="faq-q-2">
+              How far is Derand Hotel Prishtina from the airport or main train
+              station?
+            </summary>
+            <div class="faq-list__answer">
+              <p data-i18n="faq-a-2">
+                The hotel is a short drive from Prishtina International Airport.
+                Transfer time depends on traffic, but many guests arrive within
+                around 20-30 minutes.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary data-i18n="faq-q-3">Does Derand Hotel offer an airport shuttle service?</summary>
+            <div class="faq-list__answer">
+              <p data-i18n="faq-a-3">
+                We can assist with airport transfer arrangements upon request.
+                Please contact us before arrival so we can organize the best
+                option for your schedule.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary data-i18n="faq-q-4">Does Derand Hotel offer valet parking?</summary>
+            <div class="faq-list__answer">
+              <p data-i18n="faq-a-4">
+                Yes, we do offer valet parking for our guests.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary data-i18n="faq-q-5">Is Derand Hotel wheelchair accessible?</summary>
+            <div class="faq-list__answer">
+              <p data-i18n="faq-a-5">
+                Yes, accessibility support is available in key guest areas. Please
+                share your requirements in advance so we can prepare your stay
+                comfortably.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary data-i18n="faq-q-6">Is smoking allowed at Derand Hotel?</summary>
+            <div class="faq-list__answer">
+              <p data-i18n="faq-a-6">
+                Smoking is not permitted in non-smoking rooms and indoor public
+                areas. Designated smoking areas are available outside.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary data-i18n="faq-q-7">What time is check-in and check-out?</summary>
+            <div class="faq-list__answer">
+              <p data-i18n="faq-a-7">
+                Standard check-in is from 15:00 and check-out is by 11:00. Early
+                check-in or late check-out may be possible depending on
+                availability.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary data-i18n="faq-q-8">Does Derand Hotel Prishtina offer Wi-Fi?</summary>
+            <div class="faq-list__answer">
+              <p data-i18n="faq-a-8">
+                Yes, complimentary high-speed Wi-Fi is available throughout the
+                hotel, including guest rooms and common areas.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary data-i18n="faq-q-9">
+              Does Derand Hotel Prishtina offer guided tours or experiences in
+              the area?
+            </summary>
+            <div class="faq-list__answer">
+              <p data-i18n="faq-a-9">
+                Yes, we can help arrange local guided tours and city experiences
+                through trusted partners. Please contact reception for options
+                and availability.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary data-i18n="faq-q-10">
+              Are guided tours of historic sites in Prishtina available?
+            </summary>
+            <div class="faq-list__answer">
+              <p data-i18n="faq-a-10">
+                Yes, historical and cultural tours can be arranged on request.
+                Our team will gladly assist with recommendations and booking.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary>What is the history of Derand Hotel Prishtina?</summary>
+            <div class="faq-list__answer">
+              <p>
+                Derand Hotel is a long-standing family-run property in Prishtina,
+                known for warm hospitality, elegant interiors, and personalized
+                service.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary>
+              Is medical care available in case of emergency at Derand Hotel
+              Prishtina?
+            </summary>
+            <div class="faq-list__answer">
+              <p>
+                Yes, in case of emergency our team can immediately contact local
+                medical services and assist guests with urgent support.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary>
+              Does Derand Hotel Prishtina offer customized travel itineraries?
+            </summary>
+            <div class="faq-list__answer">
+              <p>
+                Yes, our team can help tailor personalized city and regional
+                itineraries based on your interests, schedule, and preferences.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary>
+              What does Derand Hotel Prishtina recommend for an exclusive
+              shopping experience in Prishtina?
+            </summary>
+            <div class="faq-list__answer">
+              <p>
+                We recommend Albi Mall, Prishtina Mall, and Royal Mall for an
+                excellent shopping experience in Prishtina.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary>
+              What activities does Derand Hotel Prishtina recommend for families
+              and couples?
+            </summary>
+            <div class="faq-list__answer">
+              <p>
+                Popular options include city sightseeing, cultural landmarks,
+                local dining experiences, and nearby day trips. We can suggest
+                activities according to your travel style.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-list">
+      <div class="container">
+        <div class="faq-list__inner">
+          <br>
+          <br>
+          <br>
+          <br>
+          <h2 data-i18n="faq-sec-2" data-parallax="y" data-parallax-speed="0.035">Rooms &amp; Suites</h2>
+ <br>
+          <br>
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary data-i18n="faq-q-11">
+              Which room and suite categories are available at Derand Hotel
+              Prishtina?
+            </summary>
+            <div class="faq-list__answer">
+              <p data-i18n="faq-a-11">
+                Derand Hotel offers Junior, Superior, Deluxe, Twin, and Premium
+                room categories.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary data-i18n="faq-q-12">
+              What amenities can I expect in the room at Derand Hotel
+              Prishtina?
+            </summary>
+            <div class="faq-list__answer">
+              <p data-i18n="faq-a-12">
+                Rooms include modern essentials such as complimentary Wi-Fi,
+                air-conditioning, a private bathroom, TV, minibar, and selected
+                in-room comfort features.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary data-i18n="faq-q-13">Do all rooms at Derand Hotel Prishtina have a view?</summary>
+            <div class="faq-list__answer">
+              <p data-i18n="faq-a-13">
+                Room views vary by category and location in the building. Some
+                rooms offer broader city views, while others face quieter areas.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary data-i18n="faq-q-14">
+              Are the rooms air-conditioned at Derand Hotel Prishtina?
+            </summary>
+            <div class="faq-list__answer">
+              <p data-i18n="faq-a-14">
+                Yes, guest rooms are equipped with air-conditioning for comfort
+                in all seasons.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary data-i18n="faq-q-15">Is room service available at Derand Hotel Prishtina?</summary>
+            <div class="faq-list__answer">
+              <p data-i18n="faq-a-15">
+                Yes, room service is available for selected menu items and
+                service hours.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-list">
+      <div class="container">
+        <div class="faq-list__inner">
+             <br>
+          <br>
+          <br>
+          <br>
+          <h2 data-i18n="faq-sec-3" data-parallax="y" data-parallax-speed="0.035">Reservations &amp; Booking</h2>
+   <br>
+          <br>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary data-i18n="faq-q-16">How can I make a reservation at Derand Hotel?</summary>
+            <div class="faq-list__answer">
+              <p data-i18n="faq-a-16">
+                We recommend booking directly through our website for the fastest
+                and most convenient reservation process. You may also book via
+                our mobile application, online travel platforms such as
+                Booking.com and Expedia, or by contacting the hotel via email or
+                phone.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary data-i18n="faq-q-17">Is a deposit required to secure a booking?</summary>
+            <div class="faq-list__answer">
+              <p data-i18n="faq-a-17">
+                A deposit is required upon arrival at the hotel. It may be
+                provided in cash or by credit card and must be supported by a
+                valid ID card or passport.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary data-i18n="faq-q-18">Which payment methods are accepted at the hotel?</summary>
+            <div class="faq-list__answer">
+              <p data-i18n="faq-a-18">
+                We accept cash, credit cards, virtual cards, and bank
+                transfers.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary data-i18n="faq-q-19">
+              How can I modify or cancel an existing reservation?
+            </summary>
+            <div class="faq-list__answer">
+              <p data-i18n="faq-a-19">
+                Reservations made through OTA platforms can be modified directly
+                through the respective platform. For direct reservations, please
+                contact us by email or phone for assistance.
+              </p>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-list">
+      <div class="container">
+        <div class="faq-list__inner">
+             <br>
+          <br>
+          <br>
+          <br>
+          <h2 data-i18n="faq-sec-4" data-parallax="y" data-parallax-speed="0.035">Wellness &amp; Recovery</h2>
+   <br>
+          <br>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary data-i18n="faq-q-20">
+              What wellness treatments are available through your partners?
+            </summary>
+            <div class="faq-list__answer">
+              <p data-i18n="faq-a-20">
+                Guests can enjoy premium aesthetic and health treatments. Rinu
+                MedSpa offers advanced facial and body treatments, while Onze
+                Recovery specializes in physical recovery, including cryotherapy,
+                IV drips, and sports massages to rejuvenate your body.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary data-i18n="faq-q-21">
+              Do I need to book in advance for a session at Rinu MedSpa or Onze
+              Recovery?
+            </summary>
+            <div class="faq-list__answer">
+              <p data-i18n="faq-a-21">
+                Yes, we highly recommend booking at least 24 hours in advance.
+                Our reception desk can handle all the arrangements to ensure you
+                get your preferred time slot.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary data-i18n="faq-q-22">How can Onze Recovery enhance my stay?</summary>
+            <div class="faq-list__answer">
+              <p data-i18n="faq-a-22">
+                Onze Recovery specializes in professional physical recovery.
+                Whether you have had a long day of work or an energetic night at
+                Noya, you can enjoy recovery therapies, sports massages, and
+                treatments designed to restore your energy quickly.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary data-i18n="faq-q-23">What services are available at Rinu MedSpa?</summary>
+            <div class="faq-list__answer">
+              <p data-i18n="faq-a-23">
+                Rinu MedSpa offers advanced aesthetic treatments, including
+                specialized face and body skincare. Using the latest technology,
+                they help you look and feel your best throughout your stay.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-list">
+      <div class="container">
+        <div class="faq-list__inner">
+             <br>
+          <br>
+          <br>
+          <br>
+          <h2 data-i18n="faq-sec-5" data-parallax="y" data-parallax-speed="0.035">Nightlife &amp; Entertainment</h2>
+   <br>
+          <br>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary data-i18n="faq-q-24">Where is Noya Nightlife located?</summary>
+            <div class="faq-list__answer">
+              <p data-i18n="faq-a-24">
+                Noya Nightlife is located on the rooftop floor of our hotel,
+                offering guests a panoramic city view.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary data-i18n="faq-q-25">What kind of atmosphere does Noya offer?</summary>
+            <div class="faq-list__answer">
+              <p data-i18n="faq-a-25">
+                Noya blends elegance with entertainment. In the evening it is an
+                ideal setting for refined dining, then transitions into a
+                vibrant nightlife destination.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary data-i18n="faq-q-26">Is a prior reservation required for Noya?</summary>
+            <div class="faq-list__answer">
+              <p data-i18n="faq-a-26">
+                Due to high demand and exclusivity, we strongly recommend
+                booking in advance, especially on weekends. Hotel guests enjoy
+                priority reservations through reception.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary data-i18n="faq-q-27">
+              Does Noya offer space for private or corporate events?
+            </summary>
+            <div class="faq-list__answer">
+              <p data-i18n="faq-a-27">
+                Yes, both the terrace and interior are available for private
+                bookings, birthday celebrations, and corporate events in a
+                prestigious rooftop setting.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-list">
+      <div class="container">
+        <div class="faq-list__inner">
+             <br>
+          <br>
+          <br>
+          <br>
+          <h2 data-i18n="faq-sec-6" data-parallax="y" data-parallax-speed="0.035">Our Culinary Partnerships</h2>
+   <br>
+          <br>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary data-i18n="faq-q-28">
+              What defines the culinary experience at Derand Hotel?
+            </summary>
+            <div class="faq-list__answer">
+              <p data-i18n="faq-a-28">
+                Our gastronomic philosophy is built on excellence and local
+                soul. Through our exclusive partnership with Soma Slow Food, we
+                bring the finest organic and artisanal ingredients to your
+                table, crafted for those who appreciate mindful and healthy
+                dining.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary data-i18n="faq-q-29">Looking for a bold and modern dining experience?</summary>
+            <div class="faq-list__answer">
+              <p data-i18n="faq-a-29">
+                We invite you to discover Comandante Marko. Our collaboration
+                offers guests a journey into daring flavors and contemporary
+                cuisine, perfect for those seeking a culinary experience with a
+                strong, unforgettable character.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-list__item" data-parallax="y" data-parallax-speed="0.04">
+            <summary data-i18n="faq-q-30">
+              Can I reserve a table at your partner restaurants through the
+              hotel?
+            </summary>
+            <div class="faq-list__answer">
+              <p data-i18n="faq-a-30">
+                Absolutely. As our guest, you enjoy priority reservations at
+                both Soma and Comandante Marko. Our concierge team is at your
+                service to ensure you get the best seat in the house.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-cta">
+      <div class="container">
+        <a
+          class="faq-cta__link"
+          href="contact.html"
+          data-i18n="faq-cta"
+          data-parallax="y"
+          data-parallax-speed="0.03"
+        >
+          Any open questions? Please send them to us. We will be glad to answer
+          them.
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__brandbar">
+          <a href="index.html" class="footer__brandbar__logo">
+            <img src="img/logo3.webp" alt="Derand Crest" />
+          </a>
+          <span class="footer__brandbar__divider"></span>
+          <a href="#" class="footer__brandbar__partner">
+            <span data-i18n="footer-powered">Powered by</span>
+            <img src="img/logo/logo-1.webp" alt="Powered by partner logo" />
+          </a>
+        </div>
+
+        <div class="footer__contactbar">
+          <a
+            href="https://wa.me/38343727272"
+            class="footer__contactbar__item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-phone"></i>
+            <span>+ 383 43 72 72 72</span>
+          </a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=info@derandhotel.com"
+            class="footer__contactbar__item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-envelope-o"></i>
+            <span>info@derandhotel.com</span>
+          </a>
+          <a
+            href="https://www.google.com/maps/place/Derand+Hotel/@42.655716,21.1505223,200m/data=!3m2!1e3!4b1!4m9!3m8!1s0x13549f6c2e02e469:0xc02b72e6fc22c09b!5m2!4m1!1i2!8m2!3d42.655715!4d21.151166!16s%2Fg%2F11vcm48zlk?entry=ttu&g_ep=EgoyMDI2MDMwOC4wIKXMDSoASAFQAw%3D%3D"
+            class="footer__contactbar__item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-map-marker"></i>
+            <span data-i18n="index-footer-address"
+              >Bekim Fehmiu Str. 30 Pristina 10000 Kosovo</span
+            >
+          </a>
+        </div>
+
+        <div class="footer__content">
+          <div class="row">
+            <div class="col-12 col-lg-5">
+              <div class="footer__newslatter">
+                <h4 data-i18n="newsletter-title">Become part of our world</h4>
+                <p data-i18n="newsletter-copy">
+                  Receive curated stories, seasonal offers, and private
+                  invitations.
+                </p>
+                <form
+                  class="footer__newslatter__form"
+                  action="https://api.web3forms.com/submit"
+                  method="POST"
+                  data-contact-email="info@derandhotel.com"
+                >
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="761d8dce-87b2-4534-bc76-77ec2305d4ec"
+                  />
+                  <input
+                    type="hidden"
+                    name="from_name"
+                    value="Derand Hotel Website (Footer)"
+                  />
+                  <div class="footer__newslatter__group">
+                    <input
+                      type="text"
+                      name="firstName"
+                      placeholder="FIRST NAME"
+                      data-i18n-placeholder="newsletter-first-name"
+                      autocomplete="given-name"
+                    />
+                    <input
+                      type="text"
+                      name="lastName"
+                      placeholder="LAST NAME"
+                      data-i18n-placeholder="newsletter-last-name"
+                      autocomplete="family-name"
+                    />
+                  </div>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="EMAIL ADDRESS"
+                    data-i18n-placeholder="newsletter-email"
+                    autocomplete="email"
+                  />
+                  <label class="footer__newslatter__check">
+                    <input type="checkbox" name="consent" />
+                    <span data-i18n="newsletter-agree"
+                      >I agree to the terms and privacy policy.</span
+                    >
+                  </label>
+                  <button type="submit" data-i18n="newsletter-button">
+                    SIGN ME UP
+                  </button>
+                  <p
+                    class="footer__newslatter__status"
+                    role="status"
+                    aria-live="polite"
+                  ></p>
+                </form>
+              </div>
+            </div>
+            <div class="col-12 col-lg-7">
+              <div class="footer__widget">
+                <div class="footer__links__grid">
+                  <ul>
+                    <li>
+                      <a href="contact.html" data-i18n="footer-link-1"
+                        >Contact Us
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" data-i18n="footer-link-2"
+                        >Derand History</a
+                      >
+                    </li>
+                    <li>
+                      <a href="termsofservices.html" data-i18n="footer-link-3"
+                        >Terms of Service</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" data-i18n="footer-link-4">Derand Magazine</a>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <a href="careers.html" data-i18n="footer-link-5">Careers</a>
+                    </li>
+                    <li>
+                      <a href="faqs.html" data-i18n="footer-link-6"
+                        >FAQs</a
+                      >
+                    </li>
+                    <li>
+                      <a href="privacypolicy.html" data-i18n="footer-link-7"
+                        >Privacy Policy</a
+                      >
+                    </li>
+                    <li><a href="#" data-i18n="footer-link-8">Payments</a></li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <a href="guestapp.html" data-i18n="footer-link-9">Guest App </a>
+                    </li>
+                    <li>
+                      <a href="our-location.html" data-i18n="footer-link-11">Our Location</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__social footer__social--bottom">
+          <a
+            href="https://www.facebook.com/derandhotel"
+            aria-label="Facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-facebook"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/derandhotel_prishtina/"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/100894439/admin/dashboard/"
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-linkedin"></i
+          ></a>
+          <a
+            href="https://www.youtube.com/watch?v=cyq_5a9X3wA"
+            aria-label="YouTube"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-youtube-play"></i
+          ></a>
+          <a
+            href="https://www.tiktok.com/@derandhotel"
+            aria-label="TikTok"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-music"></i
+          ></a>
+        </div>
+
+      </div>
+    </footer>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js?v=20260416-2"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const revealTargets = document.querySelectorAll(
+          ".faqs-page .faq-intro__kicker, " +
+            ".faqs-page .faq-intro__title, " +
+            ".faqs-page .faq-lead__dropcap, " +
+            ".faqs-page .faq-lead__inner p, " +
+            ".faqs-page .faq-list__inner h2, " +
+            ".faqs-page .faq-list__item summary, " +
+            ".faqs-page .faq-list__answer p, " +
+            ".faqs-page .faq-cta__link"
+        );
+
+        if (!("IntersectionObserver" in window)) {
+          revealTargets.forEach((el) => el.classList.add("faq-in-view"));
+          return;
+        }
+
+        const observer = new IntersectionObserver(
+          (entries, obs) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("faq-in-view");
+                obs.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            root: null,
+            threshold: 0.15,
+            rootMargin: "0px 0px -8% 0px",
+          }
+        );
+
+        revealTargets.forEach((el) => observer.observe(el));
+      });
+    </script>
+    <script
+      src="https://code.tidio.co/bnuc9odotvfbltnpijihm3enhpjj0ovy.js"
+      async
+    ></script>
+  </body>
+</html>
+
+

@@ -1,0 +1,1660 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>RINU MEDSPA � Derand Hotel</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css" />
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css" />
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+    <style>
+      /* Force Traviata typography across the full RINU form page */
+      html,
+      body,
+      body *:not(i):not(.fa):not([class^="icon_"]):not([class*=" icon_"]) {
+        font-family: "Traviata", "Forum", serif !important;
+      }
+
+      .rinu-booking {
+        min-height: calc(100vh - 72px);
+        padding: clamp(26px, 4vw, 42px) 14px;
+        background:
+          linear-gradient(rgba(8, 7, 7, 0.1), rgba(8, 7, 7, 0.1)),
+          url("img/RINU - Reception.webp") center / cover no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .rinu-booking,
+      .rinu-booking * {
+        box-sizing: border-box;
+      }
+      .rinu-booking__card {
+        width: min(100%, 760px);
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.74);
+        border-radius: 12px;
+        box-shadow: 0 20px 48px rgba(0, 0, 0, 0.24);
+        padding: clamp(18px, 3vw, 28px);
+        position: relative;
+      }
+      .rinu-booking__close {
+        position: absolute;
+        top: 14px;
+        right: 16px;
+        font-size: 22px;
+        line-height: 1;
+        color: #6d6d6d;
+        text-decoration: none;
+      }
+      .rinu-booking__head {
+        text-align: center;
+        margin-bottom: 22px;
+      }
+      .rinu-booking__title {
+        margin: 0 0 10px;
+        color: #1b1d23;
+        font-size: clamp(34px, 6vw, 60px);
+        line-height: 0.9;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+      }
+      .rinu-booking__sub {
+        margin: 0 auto;
+        max-width: 560px;
+        color: #4d4d51;
+        text-transform: uppercase;
+        font-size: clamp(11px, 1.5vw, 14px);
+        line-height: 1.45;
+      }
+      .rinu-booking__form {
+        margin: 0 auto;
+      }
+      .rinu-booking__grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px 14px;
+      }
+      .rinu-booking__field--half {
+        grid-column: span 1;
+      }
+      .rinu-booking__field--with-icon {
+        position: relative;
+      }
+      .rinu-booking__field--with-icon::after {
+        content: var(--rinu-icon, "");
+        position: absolute;
+        left: 2px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-family: "FontAwesome";
+        font-size: 12px;
+        line-height: 1;
+        color: #7d8089;
+        pointer-events: none;
+      }
+      .rinu-booking__field--full.rinu-booking__field--with-icon::after {
+        top: 18px;
+        transform: none;
+      }
+      .rinu-booking__field--icon-date {
+        --rinu-icon: "\f073";
+      }
+      .rinu-booking__field--icon-time {
+        --rinu-icon: "\f017";
+      }
+      .rinu-booking__field--icon-email {
+        --rinu-icon: "\f0e0";
+      }
+      .rinu-booking__field--icon-name {
+        --rinu-icon: "\f007";
+      }
+      .rinu-booking__field--icon-phone {
+        --rinu-icon: "\f095";
+      }
+      .rinu-booking__field--icon-message {
+        --rinu-icon: "\f27a";
+      }
+      .rinu-booking__field--with-icon .rinu-booking__input {
+        padding-left: 22px;
+      }
+      .rinu-booking__field--with-icon .rinu-booking__textarea {
+        padding-left: 22px;
+      }
+      .rinu-booking__field--date.rinu-booking__field--with-icon::before,
+      .rinu-booking__field--time.rinu-booking__field--with-icon::before {
+        left: 22px;
+      }
+      .rinu-booking__field--time {
+        position: relative;
+      }
+      .rinu-booking__field--date {
+        position: relative;
+      }
+      .rinu-booking__field--date::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 2px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #666a73;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        pointer-events: none;
+      }
+      .rinu-booking__field--date:focus-within::before,
+      .rinu-booking__field--date.has-value::before {
+        opacity: 0;
+      }
+      .rinu-booking__field--time::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 2px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #666a73;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        pointer-events: none;
+      }
+      .rinu-booking__field--time:focus-within::before,
+      .rinu-booking__field--time.has-value::before {
+        opacity: 0;
+      }
+      .rinu-booking__field--full {
+        grid-column: 1 / -1;
+      }
+      .rinu-booking__label {
+        display: none;
+      }
+      .rinu-booking__input {
+        width: 100%;
+        min-width: 0;
+        height: 44px;
+        border: 0;
+        border-bottom: 1px solid #c4c5c8;
+        background: transparent;
+        padding: 0 2px;
+        color: #24262c;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      .rinu-booking__input::placeholder {
+        color: #6f727b;
+        opacity: 1;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      .rinu-booking__textarea {
+        width: 100%;
+        min-width: 0;
+        min-height: 92px;
+        border: 0;
+        border-bottom: 1px solid #c4c5c8;
+        background: transparent;
+        padding: 10px 2px;
+        color: #24262c;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 1.45;
+        text-transform: uppercase;
+        resize: vertical;
+      }
+      .rinu-booking__textarea::placeholder {
+        color: #6f727b;
+        opacity: 1;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      .rinu-booking__textarea:focus {
+        outline: none;
+        border-bottom-color: #222;
+      }
+      .rinu-booking__input:focus {
+        outline: none;
+        border-bottom-color: #222;
+      }
+      .rinu-booking__field--time .rinu-booking__input[type="time"] {
+        color: #24262c;
+      }
+      .rinu-booking__field--date .rinu-booking__input[type="date"] {
+        color: #24262c;
+      }
+      .rinu-booking__field--date
+        .rinu-booking__input[type="date"]::-webkit-datetime-edit {
+        color: #24262c;
+      }
+      .rinu-booking__field--date:not(.has-value):not(:focus-within)
+        .rinu-booking__input[type="date"]::-webkit-datetime-edit {
+        color: transparent;
+      }
+      .rinu-booking__field--date
+        .rinu-booking__input[type="date"]:focus::-webkit-datetime-edit,
+      .rinu-booking__field--date
+        .rinu-booking__input[type="date"]:valid::-webkit-datetime-edit {
+        color: #24262c;
+      }
+      .rinu-booking__input:-webkit-autofill,
+      .rinu-booking__input:-webkit-autofill:hover,
+      .rinu-booking__input:-webkit-autofill:focus,
+      .rinu-booking__textarea:-webkit-autofill,
+      .rinu-booking__textarea:-webkit-autofill:hover,
+      .rinu-booking__textarea:-webkit-autofill:focus {
+        -webkit-text-fill-color: #24262c;
+        -webkit-box-shadow: 0 0 0 1000px transparent inset;
+        transition: background-color 9999s ease-out 0s;
+        background-color: transparent !important;
+      }
+      .rinu-booking__field--date
+        .rinu-booking__input[type="date"]::-webkit-calendar-picker-indicator {
+        display: none;
+      }
+      .rinu-booking__field--time
+        .rinu-booking__input[type="time"]::-webkit-calendar-picker-indicator {
+        display: none;
+      }
+      .rinu-booking__field--time
+        .rinu-booking__input[type="time"]::-webkit-datetime-edit {
+        color: #24262c;
+      }
+      .rinu-booking__field--time:not(.has-value):not(:focus-within)
+        .rinu-booking__input[type="time"]::-webkit-datetime-edit {
+        color: transparent;
+      }
+      .rinu-booking__field--time
+        .rinu-booking__input[type="time"]:focus::-webkit-datetime-edit,
+      .rinu-booking__field--time
+        .rinu-booking__input[type="time"]:valid::-webkit-datetime-edit {
+        color: #24262c;
+      }
+      .rinu-booking__actions {
+        display: flex;
+        justify-content: center;
+        margin-top: 22px;
+      }
+      .rinu-booking__toast {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        background: transparent;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 0.25s ease, visibility 0.25s ease;
+      }
+      .rinu-booking__toast--show {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+      .rinu-booking__toast-card {
+        min-width: min(92vw, 520px);
+        max-width: 520px;
+        text-align: center;
+        background: transparent;
+        border-radius: 0;
+        padding: 0;
+        box-shadow: none;
+      }
+      .rinu-booking__toast-icon {
+        width: clamp(86px, 10vw, 118px);
+        height: clamp(86px, 10vw, 118px);
+        display: block;
+        margin: 0 auto;
+        fill: none;
+        stroke: currentColor;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.8;
+        margin-bottom: 12px;
+      }
+      .rinu-booking__toast-text {
+        margin: 0;
+        color: #2a2b2f;
+        font-size: clamp(16px, 2vw, 22px);
+        font-weight: 600;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        font-family: "Traviata", serif !important;
+      }
+      .rinu-booking__toast--success .rinu-booking__toast-icon {
+        color: #2f7a42;
+      }
+      .rinu-booking__toast--error .rinu-booking__toast-icon {
+        color: #b24f4f;
+      }
+      .rinu-booking__submit {
+        min-width: 270px;
+        height: 48px;
+        border: 1px solid #b17256;
+        border-radius: 999px;
+        background: #b17256;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 13px;
+        letter-spacing: 0.06em;
+        font-weight: 700;
+        cursor: pointer;
+        transition:
+          background 0.2s ease,
+          color 0.2s ease;
+      }
+      .rinu-booking__submit:hover {
+        background: #9f644b;
+        color: #fff;
+      }
+      @media (max-width: 767px) {
+        .rinu-booking {
+          min-height: auto;
+          padding: 16px 10px 14px;
+          align-items: center;
+          justify-content: center;
+          min-height: 90svh;
+        }
+        .rinu-booking__card {
+          width: min(100%, 320px);
+          border-radius: 12px;
+          padding: 12px 8px 10px;
+          background: rgba(255, 255, 255, 0.93);
+          box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+        }
+        .rinu-booking__close {
+          top: 8px;
+          right: 10px;
+          font-size: 18px;
+        }
+        .rinu-booking__head {
+          margin-bottom: 14px;
+          padding-right: 24px;
+        }
+        .rinu-booking__title {
+          font-size: clamp(20px, 8.2vw, 28px);
+          line-height: 0.95;
+          margin-bottom: 6px;
+        }
+        .rinu-booking__sub {
+          max-width: 100%;
+          font-size: 9px;
+          line-height: 1.3;
+          padding-top: 6px;
+        }
+        .rinu-booking__grid {
+          grid-template-columns: 1fr;
+          gap: 6px;
+        }
+        .rinu-booking__field--half,
+        .rinu-booking__field--full {
+          grid-column: 1 / -1;
+        }
+        .rinu-booking__input {
+          height: 34px;
+          font-size: 12px;
+          padding-left: 22px;
+        }
+        .rinu-booking__input::placeholder {
+          font-size: 12px;
+        }
+        .rinu-booking__textarea {
+          padding-left: 22px;
+        }
+        .rinu-booking__field--date.rinu-booking__field--with-icon::before,
+        .rinu-booking__field--time.rinu-booking__field--with-icon::before {
+          left: 22px;
+        }
+        .rinu-booking__field--with-icon::after {
+          left: 0;
+          font-size: 11px;
+        }
+        .rinu-booking__field--full.rinu-booking__field--with-icon::after {
+          top: 14px;
+        }
+        .rinu-booking__field--time::before {
+          font-size: 12px;
+        }
+        .rinu-booking__field--date::before {
+          font-size: 12px;
+        }
+        .rinu-booking__textarea {
+          min-height: 58px;
+          padding-top: 6px;
+          font-size: 12px;
+        }
+        .rinu-booking__submit {
+          min-width: 100%;
+          height: 38px;
+          font-size: 11px;
+          letter-spacing: 0.05em;
+        }
+        .rinu-booking__actions {
+          margin-top: 10px;
+        }
+        .rinu-booking__toast-card {
+          max-width: 360px;
+          padding: 0;
+        }
+        .rinu-booking__toast-text {
+          font-size: clamp(13px, 3.8vw, 16px);
+        }
+      }
+
+      @media (max-width: 420px) {
+        .rinu-booking {
+          padding: 14px 8px 12px;
+          align-items: center;
+          justify-content: center;
+          min-height: 88svh;
+        }
+        .rinu-booking__card {
+          border-radius: 10px;
+          width: min(100%, 300px);
+          padding: 10px 7px 8px;
+          background: rgba(255, 255, 255, 0.92);
+        }
+        .rinu-booking__title {
+          font-size: clamp(19px, 8.6vw, 25px);
+        }
+        .rinu-booking__sub {
+          font-size: 8px;
+          padding-top: 7px;
+        }
+        .rinu-booking__input {
+          height: 32px;
+          font-size: 11px;
+          padding-left: 20px;
+        }
+        .rinu-booking__textarea {
+          padding-left: 20px;
+        }
+        .rinu-booking__field--date.rinu-booking__field--with-icon::before,
+        .rinu-booking__field--time.rinu-booking__field--with-icon::before {
+          left: 20px;
+        }
+        .rinu-booking__field--with-icon::after {
+          font-size: 10px;
+        }
+        .rinu-booking__field--time::before {
+          font-size: 11px;
+        }
+        .rinu-booking__field--date::before {
+          font-size: 11px;
+        }
+        .rinu-booking__textarea {
+          min-height: 52px;
+          font-size: 11px;
+        }
+      }
+
+      .job-page {
+        background: #f7f5f2;
+        color: #25211f;
+      }
+      .job-shell {
+        padding-top: 92px;
+      }
+      .job-wrap {
+        padding: 62px 0 0;
+      }
+      .footer {
+        margin: 0;
+        padding-bottom: 0;
+      }
+      .job-hero {
+        display: grid;
+        grid-template-columns: 460px 1fr;
+        gap: 44px;
+        align-items: start;
+        margin-bottom: 36px;
+      }
+      .job-hero img {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        display: block;
+        border-radius: 8px;
+      }
+      .job-title {
+        margin: 0 0 10px;
+        font-family: "Forum", serif;
+        font-size: clamp(34px, 4vw, 52px);
+      }
+      .job-meta {
+        margin: 0 0 8px;
+        color: #5c544d;
+        font-size: 15px;
+      }
+      .job-text {
+        margin: 0 0 14px;
+        color: #5b544e;
+        line-height: 1.8;
+        font-size: 16px;
+      }
+      .job-card {
+        border: 1px solid rgba(177, 114, 86, 0.25);
+        border-radius: 10px;
+        background: #fffdfa;
+        padding: 20px;
+      }
+      .job-section {
+        margin-top: 24px;
+      }
+      .job-section h3 {
+        margin: 0 0 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        font-size: 12px;
+        color: #b17256;
+      }
+      .job-section ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+      .job-section li {
+        margin-bottom: 8px;
+        color: #5b544e;
+        line-height: 1.75;
+      }
+      .job-cta {
+        margin-top: 34px;
+      }
+      .job-btn {
+        display: inline-block;
+        padding: 14px 24px;
+        background: #b17256;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-weight: 700;
+        font-size: 12px;
+        border-radius: 8px;
+      }
+      @media (max-width: 991px) {
+        .job-shell {
+          padding-top: 78px;
+        }
+        .job-hero {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 575px) {
+        .job-wrap {
+          padding: 42px 0 0;
+        }
+        .job-text {
+          font-size: 15px;
+        }
+      }
+
+      /* Page-specific hero tuning so the subject sits on the left */
+      .rinu-hero .sacher-hero__video {
+        object-position: left center;
+      }
+      @media (max-width: 575px) {
+        /* Remove the top padding that is pushing the content down */
+        .rinu-hero {
+          padding: 0 !important;
+          position: relative;
+          overflow: hidden; /* Ensures no scroll issues */
+        }
+
+        .rinu-hero .sacher-hero__slider {
+          min-height: auto;
+          display: block;
+          margin-bottom: -5px; /* Tiny offset to prevent sub-pixel gaps */
+        }
+        @media (max-width: 575px) {
+          /* 1. Force the section to collapse any extra padding/margin */
+          .rinu-hero {
+            padding: 0 !important;
+            margin: 0 !important;
+            height: auto !important;
+            min-height: 0 !important;
+            display: block !important;
+            overflow: hidden;
+          }
+
+          /* 2. Ensure the slider doesn't hold an invisible height */
+          .rinu-hero .sacher-hero__slider {
+            height: auto !important;
+            min-height: 0 !important;
+            line-height: 0; /* Removes text-node gaps under images */
+            margin: 0 !important;
+            display: block !important;
+          }
+
+          /* 3. Make the image fill the width and snap the container to it */
+          .rinu-hero .sacher-hero__video {
+            width: 100% !important;
+            height: auto !important;
+            display: block !important;
+            position: relative !important;
+            object-fit: cover !important;
+          }
+
+          /* 4. Position text directly on top of the image */
+          .rinu-hero .container {
+            position: absolute !important;
+            bottom: 15px !important; /* Adjust this to move text up/down */
+            left: 0 !important;
+            right: 0 !important;
+            z-index: 5;
+            padding: 0 15px !important;
+            margin: 0 !important;
+          }
+
+          /* 5. Hide the overlay if it's creating a ghost layer */
+          .rinu-hero .sacher-hero__overlay {
+            display: none !important;
+          }
+
+          /* 6. Ensure the section BELOW (intro) doesn't have top margin */
+          .rinu-hero + .rinu-intro {
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+          }
+        }
+        @media (max-width: 575px) {
+          .rinu-hero {
+            padding: 0 !important;
+            position: relative;
+            overflow: hidden;
+          }
+
+          .rinu-hero .sacher-hero__slider {
+            line-height: 0;
+            margin: 0 !important;
+          }
+
+          .rinu-hero .sacher-hero__video {
+            width: 100% !important;
+            height: auto !important;
+            display: block !important;
+          }
+
+          /* Text Positioning Wrapper */
+          .rinu-hero .container {
+            position: absolute !important;
+            bottom: 20px; /* Adjust this to move text up/down from the bottom edge */
+            left: 0;
+            right: 0;
+            width: 100%;
+            padding: 0 20px; /* Space from the left/right edges */
+            z-index: 10;
+            pointer-events: none; /* Allows clicks to pass through to the image if needed */
+          }
+
+          .rinu-hero .sacher-hero__content {
+            display: block !important;
+            text-align: left;
+            margin: 0 !important;
+            padding: 0 !important;
+          }
+
+          /* The Headline Styling */
+          .rinu-hero .traviata-hero-title {
+            font-family: "Traviata", "Forum", serif !important;
+            /* This makes the font smaller (approx 18-20px) and responsive */
+            font-size: clamp(16px, 5.5vw, 20px) !important;
+            line-height: 1.1 !important;
+            letter-spacing: 0.02em;
+            color: #ffffff !important;
+            text-transform: uppercase;
+            margin: 0 !important;
+            /* Optional: subtle shadow to make it pop against the image */
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+          }
+
+          .rinu-hero .sacher-hero__overlay {
+            display: none !important;
+          }
+        }
+        .rinu-hero .sacher-hero__video {
+          width: 100%;
+          height: auto;
+          display: block;
+          object-fit: contain;
+        }
+
+        .rinu-hero .sacher-hero__overlay {
+          display: none;
+        }
+
+        /* Adjust positioning of the text to sit on the image */
+        .rinu-hero .container {
+          position: absolute;
+          left: 12px;
+          right: 12px;
+          bottom: 20px; /* Adjust this to move the text up or down */
+          padding-bottom: 0;
+          z-index: 2;
+        }
+
+        .rinu-hero .traviata-hero-title {
+          font-size: 24px !important;
+          line-height: 1.08;
+          color: #fff; /* Ensure text is visible over the image background */
+        }
+      }
+      /* Ensure hero image scales responsively */
+      .rinu-hero .sacher-hero__video {
+        width: 100%;
+        height: 78vh;
+        object-fit: cover;
+        display: block;
+      }
+      .rinu-hero {
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+      .rinu-hero .container {
+        padding-bottom: 0;
+      }
+      .rinu-hero .sacher-hero__slider {
+        min-height: 78vh;
+      }
+      /* Remove any gap below image on next section */
+      .rinu-hero + .rinu-intro {
+        margin-top: 0;
+      }
+      @media (max-width: 575px) {
+        /* On small screens, show the image completely (no cropping) */
+        .rinu-hero {
+          padding: 14px 0 0;
+          position: relative;
+        }
+        .rinu-hero .sacher-hero__slider {
+          min-height: auto;
+          display: block;
+          margin-bottom: 0;
+        }
+        .rinu-hero .sacher-hero__video {
+          width: 100vw;
+          height: auto;
+          max-height: none;
+          object-fit: contain;
+          object-position: center center;
+        }
+        .rinu-hero .sacher-hero__overlay {
+          display: none;
+        }
+        /* Place the text/button over the image so the section doesn't add extra blank space */
+        .rinu-hero .container {
+          position: absolute;
+          left: 12px;
+          right: 12px;
+          bottom: 10px;
+          padding-bottom: 0;
+        }
+        .rinu-hero .sacher-hero__content {
+          position: static;
+          margin: 0;
+        }
+        .rinu-hero .traviata-hero-title {
+          font-size: 16px !important;
+          line-height: 1.08;
+        }
+      }
+    </style>
+    <style>
+      /* Darken rinu header image with a consistent overlay on all viewports */
+      .rinu-hero {
+        position: relative;
+      }
+      .rinu-hero .sacher-hero__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.38);
+        pointer-events: none;
+        display: block !important;
+      }
+      /* Mobile tweaks for rinu intro banner: shorter height and 50% opacity */
+      @media (max-width: 575px) {
+        .rinu-intro .rinu-cta-banner {
+          background: rgba(177, 114, 86, 1) !important; /* 100% */
+          padding: 24px 12px !important; /* shorter box */
+        }
+      }
+    </style>
+  </head>
+
+  <body class="sacher-home rinu-page">
+    <div id="preloder">
+      <div class="loader"></div>
+    </div>
+
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+      <div class="offcanvas__logo">
+        <a href="./index.html"><img src="img/logoo.webp" alt="Logo" /></a>
+      </div>
+      <div id="mobile-menu-wrap"></div>
+      <div class="offcanvas__btn__widget">
+        <a
+          href="https://derand-hotel.hotelrunner.com/bv3/search"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span data-i18n="book-now">BOOK NOW</span>
+          <span class="arrow_right"></span
+        ></a>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="header__top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7"></div>
+            <div class="col-lg-5">
+              <div class="header__top__right"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__nav__option">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-2">
+              <div class="header__logo">
+                <a href="./index.html"
+                  ><img src="img/logoo.webp" alt="Logo"
+                /></a>
+              </div>
+            </div>
+            <div class="col-lg-10">
+              <div class="header__nav">
+                <nav class="header__menu">
+                  <ul class="menu__class">
+                    <li>
+                      <a href="rooms.html" data-i18n="nav-rooms"
+                        >ROOMS & SUITES</a
+                      >
+                      <ul class="dropdown">
+                        <li>
+                          <a href="junior.html" data-i18n="nav-room-1"
+                            >JUNIOR SUITE</a
+                          >
+                        </li>
+                        <li>
+                          <a href="deluxe-double.html" data-i18n="nav-room-2"
+                            >DELUXE DOUBLE ROOM</a
+                          >
+                        </li>
+                        <li>
+                          <a href="superior-twin.html" data-i18n="nav-room-3"
+                            >SUPERIOR TWIN ROOM</a
+                          >
+                        </li>
+                        <li>
+                          <a href="premium-double.html" data-i18n="nav-room-4"
+                            >PREMIUM DOUBLE ROOM</a
+                          >
+                        </li>
+                        <li>
+                          <a href="superior-double.html" data-i18n="nav-room-5"
+                            >SUPERIOR DOUBLE ROOM</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="#" data-i18n="nav-restaurant"
+                        >RESTAURANT & BAR</a
+                      >
+                      <ul class="dropdown">
+                        <li>
+                          <a href="noya.html" data-i18n="nav-restaurant-1"
+                            >NOYA</a
+                          >
+                        </li>
+                        <li>
+                          <a href="omma.html" data-i18n="nav-restaurant-2"
+                            >OMMA-Cafe & Buffet</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="#" data-i18n="nav-activities">ACTIVITIES</a>
+                      <ul class="dropdown">
+                        <li>
+                          <a href="onze.html" data-i18n="nav-activity-1"
+                            >ONZE RECOVERY</a
+                          >
+                        </li>
+                        <li>
+                          <a href="rinu.html" data-i18n="nav-activity-2"
+                            >RINU MEDSPA</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="has-dropdown">
+                      <a href="#" data-i18n="nav-inquiry">CONTACT</a>
+
+                      <ul class="dropdown">
+                        <li>
+                          <a href="contact.html" data-i18n="nav-contact-us"
+                            >CONTACT US</a
+                          >
+                        </li>
+                        <li>
+                          <a href="faqs.html" data-i18n="nav-faqs">FAQS</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+
+                <div class="header__lang__selector">
+                  <button class="lang-btn lang-active" data-lang="en">
+                    EN
+                  </button>
+                  <button class="lang-btn" data-lang="de">DE</button>
+                  <button class="lang-btn" data-lang="al">AL</button>
+                </div>
+
+                <div class="header__nav__widget">
+                  <a
+                    href="https://derand-hotel.hotelrunner.com/bv3/search"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span data-i18n="book-now">BOOK NOW</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="canvas__open">
+            <span class="fa fa-bars"></span>
+          </div>
+          <div class="mobile__lang__selector header__lang__selector">
+            <button class="lang-btn lang-active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="de">DE</button>
+            <button class="lang-btn" data-lang="al">AL</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="rinu-booking">
+      <section class="rinu-booking__card">
+        <a class="rinu-booking__close" href="rinu.html" aria-label="Close form" data-i18n-aria-label="rinuform-close-aria"
+          >&times;</a
+        >
+        <div class="rinu-booking__head">
+          <p class="rinu-booking__sub" data-i18n="rinuform-sub">
+            Request an appointment. Rinu is open 12:00 - 20:00. We'll confirm
+            your request soon.
+          </p>
+        </div>
+        <form
+          class="rinu-booking__form"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          data-contact-email="info@derandhotel.com"
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="761d8dce-87b2-4534-bc76-77ec2305d4ec"
+          />
+
+          <input type="hidden" name="from_name" value="RINU Booking Form" />
+
+          <input type="hidden" name="subject" id="rinu-subject" value="" />
+
+          
+          <input
+            type="hidden"
+            name="replyto"
+            id="rinu-replyto"
+            value="info@derandhotel.com"
+          />
+          <input type="hidden" name="lastName" id="rinu-last-name" value="-" />
+          <input
+            type="hidden"
+            name="appointment"
+            id="rinu-appointment"
+            value=""
+          />
+
+          <div class="rinu-booking__grid">
+            <div
+              class="rinu-booking__field rinu-booking__field--half rinu-booking__field--date rinu-booking__field--with-icon rinu-booking__field--icon-date"
+              data-label="DATE"
+            >
+              <input
+                id="rinu-date"
+                class="rinu-booking__input"
+                type="date"
+                name="preferredDate"
+                aria-label="Date"
+                data-i18n-aria-label="rinuform-date-aria"
+                required
+              />
+            </div>
+            <div
+              class="rinu-booking__field rinu-booking__field--half rinu-booking__field--time rinu-booking__field--with-icon rinu-booking__field--icon-time"
+              data-label="TIME"
+            >
+              <input
+                id="rinu-time"
+                class="rinu-booking__input"
+                type="time"
+                name="preferredTime"
+                aria-label="Time"
+                data-i18n-aria-label="rinuform-time-aria"
+                min="12:00"
+                max="20:00"
+                step="900"
+                required
+              />
+            </div>
+            <div class="rinu-booking__field rinu-booking__field--half rinu-booking__field--with-icon rinu-booking__field--icon-email">
+              <input
+                id="rinu-email"
+                class="rinu-booking__input"
+                type="email"
+                name="email"
+                placeholder="EMAIL"
+                aria-label="Email"
+                data-i18n-placeholder="rinuform-email-ph"
+                data-i18n-aria-label="rinuform-email-aria"
+                autocomplete="email"
+                pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$"
+                title="Please enter a valid email with @ and ."
+                required
+              />
+            </div>
+            <div class="rinu-booking__field rinu-booking__field--half rinu-booking__field--with-icon rinu-booking__field--icon-name">
+              <input
+                id="rinu-first-name"
+                class="rinu-booking__input"
+                type="text"
+                name="firstName"
+                placeholder="Name"
+                aria-label="Name"
+                data-i18n-placeholder="rinuform-name-ph"
+                data-i18n-aria-label="rinuform-name-aria"
+                autocomplete="name"
+                required
+              />
+            </div>
+            <div class="rinu-booking__field rinu-booking__field--half rinu-booking__field--with-icon rinu-booking__field--icon-phone">
+              <input
+                id="rinu-phone"
+                class="rinu-booking__input"
+                type="tel"
+                name="phone"
+                placeholder="Phone number"
+                aria-label="Phone number"
+                data-i18n-placeholder="rinuform-phone-ph"
+                data-i18n-aria-label="rinuform-phone-aria"
+                autocomplete="tel"
+                pattern="^\+\d[\d\s\-]{6,}$"
+                title="Phone number must start with + and contain at least 7 digits."
+                required
+              />
+            </div>
+            <div class="rinu-booking__field rinu-booking__field--full rinu-booking__field--with-icon rinu-booking__field--icon-message">
+              <textarea
+                id="rinu-message"
+                class="rinu-booking__textarea"
+                name="message"
+                placeholder="Message"
+                aria-label="Message"
+                data-i18n-placeholder="rinuform-message-ph"
+                data-i18n-aria-label="rinuform-message-aria"
+                required
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="rinu-booking__actions">
+            <button
+              class="rinu-booking__submit"
+              type="submit"
+              data-i18n="rinuform-submit"
+            >
+              Confirm Appointment
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <div class="rinu-booking__toast" role="status" aria-live="polite">
+      <div class="rinu-booking__toast-card">
+        <svg
+          class="rinu-booking__toast-icon"
+          viewBox="0 0 64 64"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <path d="M14 34l12 12 24-26"></path>
+        </svg>
+        <p class="rinu-booking__toast-text"></p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__brandbar">
+          <a href="index.html" class="footer__brandbar__logo">
+            <img src="img/logo3.webp" alt="Derand Crest" />
+          </a>
+          <span class="footer__brandbar__divider"></span>
+          <a href="#" class="footer__brandbar__partner">
+            <span data-i18n="footer-powered">Powered by</span>
+            <img src="img/logo/logo-1.webp" alt="Powered by partner logo" />
+          </a>
+        </div>
+
+        <div class="footer__contactbar">
+          <a
+            href="https://wa.me/38343727272"
+            class="footer__contactbar__item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-phone"></i>
+            <span>+ 383 43 72 72 72</span>
+          </a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=info@derandhotel.com"
+            class="footer__contactbar__item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-envelope-o"></i>
+            <span>info@derandhotel.com</span>
+          </a>
+          <a
+            href="https://www.google.com/maps/place/Derand+Hotel/@42.655716,21.1505223,200m/data=!3m2!1e3!4b1!4m9!3m8!1s0x13549f6c2e02e469:0xc02b72e6fc22c09b!5m2!4m1!1i2!8m2!3d42.655715!4d21.151166!16s%2Fg%2F11vcm48zlk?entry=ttu&g_ep=EgoyMDI2MDMwOC4wIKXMDSoASAFQAw%3D%3D"
+            class="footer__contactbar__item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-map-marker"></i>
+            <span data-i18n="index-footer-address"
+              >Bekim Fehmiu Str. 30 Pristina 10000 Kosovo</span
+            >
+          </a>
+        </div>
+
+        <div class="footer__content">
+          <div class="row">
+            <div class="col-12 col-lg-5">
+              <div class="footer__newslatter">
+                <h4 data-i18n="newsletter-title">Become part of our world</h4>
+                <p data-i18n="newsletter-copy">
+                  Receive curated stories, seasonal offers, and private
+                  invitations.
+                </p>
+                <form
+                  class="footer__newslatter__form"
+                  action="https://api.web3forms.com/submit"
+                  method="POST"
+                  data-contact-email="info@derandhotel.com"
+                >
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="761d8dce-87b2-4534-bc76-77ec2305d4ec"
+                  />
+                  <input
+                    type="hidden"
+                    name="from_name"
+                    value="Derand Hotel Website (Footer)"
+                  />
+                  <div class="footer__newslatter__group">
+                    <input
+                      type="text"
+                      name="firstName"
+                      placeholder="FIRST NAME"
+                      data-i18n-placeholder="newsletter-first-name"
+                      autocomplete="given-name"
+                    />
+                    <input
+                      type="text"
+                      name="lastName"
+                      placeholder="LAST NAME"
+                      data-i18n-placeholder="newsletter-last-name"
+                      autocomplete="family-name"
+                    />
+                  </div>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="EMAIL ADDRESS"
+                    data-i18n-placeholder="newsletter-email"
+                    autocomplete="email"
+                  />
+                  <label class="footer__newslatter__check">
+                    <input type="checkbox" name="consent" />
+                    <span data-i18n="newsletter-agree"
+                      >I agree to the terms and privacy policy.</span
+                    >
+                  </label>
+                  <button type="submit" data-i18n="newsletter-button">
+                    SIGN ME UP
+                  </button>
+                  <p
+                    class="footer__newslatter__status"
+                    role="status"
+                    aria-live="polite"
+                  ></p>
+                </form>
+              </div>
+            </div>
+            <div class="col-12 col-lg-7">
+              <div class="footer__widget">
+                <div class="footer__links__grid">
+                  <ul>
+                    <li>
+                      <a href="contact.html" data-i18n="footer-link-1"
+                        >Contact Us</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" data-i18n="footer-link-2">Derand History</a>
+                    </li>
+                    <li>
+                      <a href="termsofservices.html" data-i18n="footer-link-3"
+                        >Terms of Service</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" data-i18n="footer-link-4">Derand Magazine</a>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <a href="careers.html" data-i18n="footer-link-5"
+                        >Careers</a
+                      >
+                    </li>
+                    <li>
+                      <a href="faqs.html" data-i18n="footer-link-6">FAQs</a>
+                    </li>
+                    <li>
+                      <a href="privacypolicy.html" data-i18n="footer-link-7"
+                        >Privacy Policy</a
+                      >
+                    </li>
+                    <li><a href="#" data-i18n="footer-link-8">Payments</a></li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <a href="guestapp.html" data-i18n="footer-link-9"
+                        >Guest App
+                      </a>
+                    </li>
+                    <li>
+                      <a href="our-location.html" data-i18n="footer-link-11"
+                        >Our Location</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__social footer__social--bottom">
+          <a
+            href="https://www.facebook.com/derandhotel"
+            aria-label="Facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-facebook"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/derandhotel_prishtina/"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/100894439/admin/dashboard/"
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-linkedin"></i
+          ></a>
+          <a
+            href="https://www.youtube.com/watch?v=cyq_5a9X3wA"
+            aria-label="YouTube"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-youtube-play"></i
+          ></a>
+          <a
+            href="https://www.tiktok.com/@derandhotel"
+            aria-label="TikTok"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-music"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js?v=20260416-2"></script>
+    <script>
+      (function () {
+        var form = document.querySelector(".rinu-booking__form");
+        var firstNameInput = document.getElementById("rinu-first-name");
+        var emailInput = document.getElementById("rinu-email");
+        var phoneInput = document.getElementById("rinu-phone");
+        var dateInput = document.getElementById("rinu-date");
+        var timeInput = document.getElementById("rinu-time");
+        var dateField = dateInput
+          ? dateInput.closest(".rinu-booking__field--date")
+          : null;
+        var timeField = timeInput
+          ? timeInput.closest(".rinu-booking__field--time")
+          : null;
+        var messageInput = document.getElementById("rinu-message");
+        var appointmentInput = document.getElementById("rinu-appointment");
+        var subjectInput = document.getElementById("rinu-subject");
+        var replyToInput = document.getElementById("rinu-replyto");
+        var submitBtn = form.querySelector(".rinu-booking__submit");
+        var toastEl = document.querySelector(".rinu-booking__toast");
+        var toastIcon = toastEl
+          ? toastEl.querySelector(".rinu-booking__toast-icon")
+          : null;
+        var toastText = toastEl
+          ? toastEl.querySelector(".rinu-booking__toast-text")
+          : null;
+        var toastHideTimer = null;
+        var toastMessages = {
+          en: {
+            success: "Your appointment request was sent successfully.",
+            error: "We could not submit your request. Please try again.",
+            sending: "SENDING...",
+            dateLabel: "DATE",
+            timeLabel: "TIME",
+            invalidTime: "Please select a time between 12:00 and 20:00.",
+            invalidDate: "Please select today or a future date.",
+          },
+          de: {
+            success: "Ihre Terminanfrage wurde erfolgreich gesendet.",
+            error:
+              "Wir konnten Ihre Anfrage nicht senden. Bitte versuchen Sie es erneut.",
+            sending: "WIRD GESENDET...",
+            dateLabel: "DATUM",
+            timeLabel: "UHRZEIT",
+            invalidTime: "Bitte wählen Sie eine Uhrzeit zwischen 12:00 und 20:00.",
+            invalidDate: "Bitte wählen Sie heute oder ein zukünftiges Datum.",
+          },
+          al: {
+            success: "Kerkesa juaj per termin u dergua me sukses.",
+            error:
+              "Nuk mund ta dergonim kerkesen tuaj. Ju lutem provoni perseri.",
+            sending: "DUKE DERGUAR...",
+            dateLabel: "DATA",
+            timeLabel: "ORA",
+            invalidTime: "Ju lutem zgjidhni nje ore nga 12:00 deri ne 20:00.",
+            invalidDate: "Ju lutem zgjidhni daten e sotme ose nje date ne te ardhmen.",
+          },
+        };
+        if (
+          !form ||
+          !firstNameInput ||
+          !emailInput ||
+          !phoneInput ||
+          !dateInput ||
+          !timeInput ||
+          !messageInput ||
+          !appointmentInput ||
+          !subjectInput ||
+          !replyToInput ||
+          !submitBtn
+        ) {
+          return;
+        }
+
+        var clearToast = function () {
+          if (!toastEl) return;
+          if (toastHideTimer) {
+            clearTimeout(toastHideTimer);
+            toastHideTimer = null;
+          }
+          toastEl.classList.remove(
+            "rinu-booking__toast--show",
+            "rinu-booking__toast--success",
+            "rinu-booking__toast--error"
+          );
+        };
+
+        var getActiveLang = function () {
+          var activeBtn = document.querySelector(".lang-btn.lang-active");
+          var lang = activeBtn ? activeBtn.getAttribute("data-lang") : "en";
+          if (!toastMessages[lang]) return "en";
+          return lang;
+        };
+
+        var getToastText = function (type) {
+          var lang = getActiveLang();
+          var pack = toastMessages[lang] || toastMessages.en;
+          return pack[type] || toastMessages.en[type] || "";
+        };
+
+        var localizeDynamicFormText = function () {
+          var lang = getActiveLang();
+          var pack = toastMessages[lang] || toastMessages.en;
+          if (dateField) {
+            dateField.setAttribute("data-label", pack.dateLabel || "DATE");
+          }
+          if (timeField) {
+            timeField.setAttribute("data-label", pack.timeLabel || "TIME");
+          }
+        };
+
+        var showToast = function (type) {
+          if (!toastEl || !toastIcon || !toastText) return;
+          clearToast();
+          toastEl.classList.add("rinu-booking__toast--show");
+          toastEl.classList.add("rinu-booking__toast--" + type);
+          toastText.textContent = getToastText(type);
+          toastHideTimer = setTimeout(function () {
+            clearToast();
+          }, 4000);
+        };
+
+        var getTodayLocalISO = function () {
+          var now = new Date();
+          var tzOffsetMs = now.getTimezoneOffset() * 60000;
+          return new Date(now.getTime() - tzOffsetMs).toISOString().slice(0, 10);
+        };
+
+        var todayISO = getTodayLocalISO();
+        dateInput.setAttribute("min", todayISO);
+        timeInput.setAttribute("min", "12:00");
+        timeInput.setAttribute("max", "20:00");
+        timeInput.setAttribute("step", "900");
+
+        var isTimeInAllowedRange = function (value) {
+          if (!value) return false;
+          var parts = value.split(":");
+          if (parts.length < 2) return false;
+          var hour = parseInt(parts[0], 10);
+          var minute = parseInt(parts[1], 10);
+          if (isNaN(hour) || isNaN(minute)) return false;
+          var totalMinutes = hour * 60 + minute;
+          return totalMinutes >= 12 * 60 && totalMinutes <= 20 * 60;
+        };
+
+        var validateTimeRange = function () {
+          var selectedTime = (timeInput.value || "").trim();
+          if (!selectedTime) {
+            timeInput.setCustomValidity("");
+            return true;
+          }
+          if (!isTimeInAllowedRange(selectedTime)) {
+            timeInput.setCustomValidity(
+              getToastText("invalidTime")
+            );
+            return false;
+          }
+          timeInput.setCustomValidity("");
+          return true;
+        };
+
+        var buildSubject = function () {
+          var firstName = (firstNameInput.value || "").trim();
+          var email = (emailInput.value || "").trim();
+          var phone = (phoneInput.value || "").trim();
+          var date = (dateInput.value || "").trim();
+          var time = (timeInput.value || "").trim();
+          var message = (messageInput.value || "").trim();
+          var appointment = (date + " " + time).trim();
+
+          appointmentInput.value = appointment;
+          replyToInput.value = email;
+          subjectInput.value =
+            "RINU booking request from " +
+            firstName +
+            " | Email: " +
+            email +
+            " | Phone: " +
+            phone +
+            " | Date/Time: " +
+            appointment +
+            " | Message: " +
+            message;
+
+          if (timeField) {
+            timeField.classList.toggle("has-value", !!time);
+          }
+          if (dateField) {
+            dateField.classList.toggle("has-value", !!date);
+          }
+        };
+
+        [
+          firstNameInput,
+          emailInput,
+          phoneInput,
+          dateInput,
+          timeInput,
+          messageInput,
+        ].forEach(function (input) {
+          input.addEventListener("input", buildSubject);
+          input.addEventListener("change", buildSubject);
+        });
+
+        phoneInput.addEventListener("input", function () {
+          var value = phoneInput.value || "";
+          if (!value) return;
+          if (value.charAt(0) !== "+") {
+            phoneInput.value = "+" + value.replace(/^\++/, "");
+          }
+        });
+
+        timeInput.addEventListener("input", function () {
+          validateTimeRange();
+          buildSubject();
+        });
+
+        timeInput.addEventListener("change", function () {
+          if (!validateTimeRange()) {
+            timeInput.reportValidity();
+          }
+          buildSubject();
+        });
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          var selectedDate = (dateInput.value || "").trim();
+          if (selectedDate && selectedDate < todayISO) {
+            dateInput.setCustomValidity(getToastText("invalidDate"));
+            dateInput.reportValidity();
+            return;
+          }
+          dateInput.setCustomValidity("");
+          if (!validateTimeRange()) {
+            timeInput.reportValidity();
+            return;
+          }
+          if (!form.reportValidity()) {
+            return;
+          }
+          buildSubject();
+          clearToast();
+
+          var defaultBtnText = submitBtn.textContent;
+          submitBtn.disabled = true;
+          submitBtn.textContent = getToastText("sending");
+
+          var formData = new FormData(form);
+          fetch(form.getAttribute("action"), {
+            method: "POST",
+            body: formData,
+            headers: { Accept: "application/json" },
+          })
+            .then(function (response) {
+              if (!response.ok) throw new Error("Submit failed");
+              return response.json();
+            })
+            .then(function (data) {
+              if (!data || !data.success) {
+                throw new Error("Submit failed");
+              }
+              form.reset();
+              buildSubject();
+              showToast("success");
+            })
+            .catch(function () {
+              showToast("error");
+            })
+            .finally(function () {
+              submitBtn.disabled = false;
+              submitBtn.textContent = defaultBtnText;
+            });
+        });
+        document.querySelectorAll(".lang-btn").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            window.setTimeout(localizeDynamicFormText, 0);
+          });
+        });
+        localizeDynamicFormText();
+        buildSubject();
+      })();
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,1014 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OMMA-Cafe & Buffet</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css" />
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css" />
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        background: #ffffff;
+      }
+      body.omma-page {
+        padding-top: 0 !important;
+      }
+      .omma-page
+        *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]):not(
+          [class^="icon_"]
+        ):not([class*=" icon_"]) {
+        font-family: "Traviata", serif !important;
+      }
+      .omma-hero-wrap {
+        padding: 0;
+      }
+      .omma-hero {
+        position: relative;
+        min-height: min(76vh, 760px);
+        border-radius: 0;
+        overflow: hidden;
+        background:
+          linear-gradient(rgba(9, 20, 12, 0.36), rgba(9, 20, 12, 0.46)),
+          url("img/header9.webp") center center / cover no-repeat;
+        color: #f4f4f0;
+      }
+      .omma-hero__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 22px 34px;
+        font-size: clamp(20px, 1.6vw, 30px);
+        letter-spacing: 0.01em;
+      }
+      .omma-hero__center {
+        position: absolute;
+        top: 52%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: clamp(14px, 2vw, 26px);
+        width: min(94vw, 760px);
+        z-index: 2;
+      }
+      .omma-hero__logo {
+        width: min(100%, 760px);
+        height: auto;
+        pointer-events: none;
+      }
+      .omma-hero__coming-soon {
+        margin: 0;
+        color: #f4f4f0;
+        font-family: "Traviata", serif !important;
+        font-size: clamp(22px, 2.4vw, 40px);
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        line-height: 1;
+        text-align: center;
+        white-space: nowrap;
+      }
+      .omma-hero__title {
+        position: absolute;
+        left: clamp(44px, 12vw, 200px);
+        bottom: clamp(20px, 11vh, 96px);
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(34px, 5.4vw, 82px);
+        line-height: 0.9;
+        letter-spacing: 0.015em;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+      @media (max-width: 767px) {
+        .omma-hero-wrap {
+          padding: 0;
+        }
+        .omma-hero {
+          min-height: clamp(240px, 46vh, 340px);
+          background-size: cover;
+          background-position: center top;
+          background-repeat: no-repeat;
+        }
+        .omma-hero__top {
+          padding: 18px 16px 10px;
+          font-size: 14px;
+        }
+        .omma-hero__center {
+          top: 56%;
+          width: min(94vw, 460px);
+          gap: 12px;
+        }
+        .omma-hero__logo {
+          width: 100%;
+        }
+        .omma-hero__coming-soon {
+          font-size: clamp(16px, 6.2vw, 26px);
+          letter-spacing: 0.04em;
+        }
+        .omma-hero__title {
+          left: 16px;
+          bottom: 12px;
+          font-size: clamp(28px, 7.2vw, 38px);
+          line-height: 0.92;
+        }
+      }
+      .omma-intro {
+        background: #ded8cc;
+        padding: clamp(48px, 8vw, 96px) 20px;
+        text-align: center;
+      }
+      .omma-hero-wrap + .omma-intro {
+        margin-top: -20px;
+      }
+      .omma-intro__inner {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      .omma-intro__inner--parallax {
+        will-change: transform;
+        transform: translate3d(0, 0, 0);
+        transition: transform 0.12s linear;
+      }
+      .omma-intro__title {
+        margin: 0 0 16px;
+        color: #2f2c28;
+        font-size: clamp(34px, 5vw, 62px);
+        line-height: 1;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        font-family: "Traviata", serif !important;
+      }
+      .omma-intro__copy {
+        margin: 0 auto 10px;
+        max-width: 620px;
+        color: #35322d;
+        font-size: clamp(14px, 1.4vw, 19px);
+        line-height: 1.65;
+        font-family: "Traviata", serif !important;
+        text-transform: uppercase;
+      }
+      .omma-intro__btn {
+        display: inline-block;
+        margin-top: 20px;
+        border: 1px solid #6f665b;
+        padding: 10px 22px;
+        font-size: 13px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #3b362f;
+        text-decoration: none;
+        transition:
+          background-color 0.2s ease,
+          color 0.2s ease;
+      }
+      .omma-intro__btn:hover {
+        background: #3b362f;
+        color: #efe9dd;
+      }
+      .omma-team {
+        background: #3f3d38;
+        padding: clamp(44px, 8vw, 84px) 20px;
+      }
+      .omma-team__gallery {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        gap: clamp(22px, 3.4vw, 42px);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .omma-team__image {
+        width: 100%;
+        height: clamp(320px, 40vw, 560px);
+        object-fit: cover;
+        border: 2px solid #d6d0c4;
+        display: block;
+      }
+      @media (max-width: 767px) {
+        .omma-team__gallery {
+          grid-template-columns: 1fr;
+        }
+      }
+      .omma-services {
+        background: #f2f2f2;
+        padding: clamp(54px, 8vw, 92px) 20px 0;
+      }
+      .omma-services__inner {
+        max-width: 1060px;
+        margin: 0 auto;
+      }
+      .omma-services__heading {
+        margin: 0 0 clamp(34px, 5vw, 58px);
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 0.9;
+      }
+      .omma-services__heading span {
+        display: block;
+      }
+      .omma-services__heading-main {
+        color: #111111;
+        font-size: clamp(52px, 10vw, 112px);
+      }
+      .omma-services__heading-sub {
+        color: #6d4e3c;
+        font-size: clamp(52px, 10vw, 112px);
+      }
+      .omma-services__list {
+        display: grid;
+        gap: clamp(30px, 4vw, 46px);
+      }
+      .omma-services__item {
+        display: grid;
+        grid-template-columns: 72px 1fr 1.1fr;
+        align-items: center;
+        gap: clamp(14px, 2vw, 26px);
+        will-change: transform;
+        transform: translate3d(0, 0, 0);
+        transition: transform 0.12s linear;
+      }
+      .omma-services__item--reverse {
+        grid-template-columns: 72px 1.1fr 1fr;
+      }
+      .omma-services__num {
+        color: #c9c9c9;
+        font-size: clamp(28px, 3.1vw, 42px);
+        text-align: center;
+        line-height: 1;
+        font-family: "Traviata", serif !important;
+      }
+      .omma-services__content h3 {
+        margin: 0 0 10px;
+        color: #181818;
+        text-transform: uppercase;
+        font-size: clamp(20px, 2.2vw, 30px);
+      }
+      .omma-services__content p {
+        margin: 0;
+        color: #474747;
+        font-size: clamp(13px, 1.1vw, 16px);
+        line-height: 1.6;
+        font-family: "Traviata", serif !important;
+      }
+      .omma-services__image-wrap {
+        position: relative;
+        border: 1px solid #d1d1d1;
+        background: #ffffff;
+        padding: 8px;
+        width: 100%;
+      }
+      .omma-services__image {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        height: auto;
+        object-fit: cover;
+        display: block;
+      }
+      .omma-services__image--horizontal {
+        aspect-ratio: 24 / 9;
+      }
+      .omma-services__fullbleed {
+        margin: 24px calc(50% - 50vw) 0;
+      }
+      .omma-services__fullbleed .omma-services__image {
+        width: 100vw;
+        max-width: 100vw;
+        margin: 0;
+        object-fit: cover;
+      }
+      .omma-services__zoom-btn {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        width: 32px;
+        height: 32px;
+        border: 1px solid rgba(255, 255, 255, 0.85);
+        background: rgba(20, 20, 20, 0.5);
+        color: #ffffff;
+        font-size: 20px;
+        line-height: 1;
+        cursor: pointer;
+      }
+      .omma-lightbox {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.82);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        padding: 24px;
+      }
+      .omma-lightbox.is-open {
+        display: flex;
+      }
+      .omma-lightbox__img {
+        max-width: min(92vw, 1200px);
+        max-height: 86vh;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        transform-origin: center center;
+      }
+      .omma-lightbox__close {
+        position: absolute;
+        top: 18px;
+        right: 20px;
+        width: 38px;
+        height: 38px;
+        border: 1px solid #ffffff;
+        background: transparent;
+        color: #ffffff;
+        font-size: 26px;
+        line-height: 1;
+        cursor: pointer;
+      }
+      @media (max-width: 900px) {
+        .omma-services__item,
+        .omma-services__item--reverse {
+          align-items: center;
+          gap: 10px;
+        }
+        .omma-services__item {
+          grid-template-columns: 40px 1fr 1fr;
+        }
+        .omma-services__item--reverse {
+          grid-template-columns: 40px 1fr 1fr;
+        }
+        .omma-services__num {
+          text-align: center;
+          font-size: 22px;
+        }
+        .omma-services__image-wrap {
+          width: 100%;
+          margin: 0;
+          padding: 5px;
+        }
+        .omma-services__content p {
+          font-size: 12px;
+          line-height: 1.45;
+        }
+      }
+      .omma-collage {
+        background: #3f3d38;
+        color: #e8e2d6;
+        padding: clamp(40px, 6vw, 70px) 0;
+      }
+      .omma-collage__viewport {
+        width: min(100%, 1080px);
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .omma-collage__inner {
+        display: grid;
+        grid-template-columns: 0.92fr 1.08fr 0.92fr;
+        gap: 16px;
+        align-items: end;
+      }
+      .omma-collage__text {
+        text-transform: uppercase;
+        font-family: "Traviata", serif !important;
+        letter-spacing: 0.01em;
+        color: #ffffff;
+      }
+      .omma-collage__text--left {
+        margin-bottom: 10px;
+        font-size: clamp(20px, 2.2vw, 34px);
+        line-height: 1.1;
+      }
+      .omma-collage__text--right {
+        margin-top: 12px;
+        text-align: right;
+        font-size: clamp(18px, 2vw, 30px);
+        line-height: 1.12;
+      }
+      .omma-collage__card {
+        position: relative;
+        border: 1px solid rgba(255, 255, 255, 0.34);
+        padding: 8px;
+        background: rgba(255, 255, 255, 0.02);
+      }
+      .omma-collage__img {
+        width: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .omma-collage__img--left {
+        aspect-ratio: 4 / 5;
+      }
+      .omma-collage__img--center {
+        aspect-ratio: 3 / 4;
+      }
+      .omma-collage__img--right {
+        aspect-ratio: 4 / 5;
+      }
+      @media (max-width: 767px) {
+        .omma-collage__viewport {
+          width: 100%;
+          max-width: 1080px;
+          padding: 0 10px;
+        }
+        .omma-collage__inner {
+          grid-template-columns: 0.92fr 1.08fr 0.92fr;
+          gap: 8px;
+          align-items: end;
+        }
+        .omma-collage__text--left,
+        .omma-collage__text--right {
+          font-size: clamp(10px, 2.5vw, 18px);
+          line-height: 1.08;
+        }
+        .omma-collage__card {
+          padding: 4px;
+        }
+      }
+      @media (max-width: 430px) {
+        .omma-collage__viewport {
+          padding: 0 8px;
+        }
+        .omma-collage__inner {
+          gap: 6px;
+        }
+        .omma-collage__text--left,
+        .omma-collage__text--right {
+          font-size: clamp(9px, 2.7vw, 13px);
+        }
+      }
+    </style>
+  </head>
+  <body class="omma-page">
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+      <div class="offcanvas__logo">
+        <a href="./index.html"><img src="img/logoo.webp" alt="Logo" /></a>
+      </div>
+      <div id="mobile-menu-wrap"></div>
+      <div class="offcanvas__btn__widget">
+        <a
+          href="https://derand-hotel.hotelrunner.com/bv3/search"
+          target="_blank"
+          rel="noopener noreferrer"
+          >BOOK NOW <span class="arrow_right"></span
+        ></a>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="header__top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7"></div>
+            <div class="col-lg-5">
+              <div class="header__top__right"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__nav__option">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-2">
+              <div class="header__logo">
+                <a href="./index.html"
+                  ><img src="img/logoo.webp" alt="Logo"
+                /></a>
+              </div>
+            </div>
+            <div class="col-lg-10">
+              <div class="header__nav">
+                <nav class="header__menu">
+                  <ul class="menu__class">
+                    <li>
+                      <a href="rooms.html" data-i18n="nav-rooms"
+                        >ROOMS & SUITES</a
+                      >
+                      <ul class="dropdown">
+                        <li>
+                          <a href="junior.html" data-i18n="nav-room-1"
+                            >JUNIOR SUITE</a
+                          >
+                        </li>
+                        <li>
+                          <a href="deluxe-double.html" data-i18n="nav-room-2"
+                            >DELUXE DOUBLE ROOM</a
+                          >
+                        </li>
+                        <li>
+                          <a href="superior-twin.html" data-i18n="nav-room-3"
+                            >SUPERIOR TWIN ROOM</a
+                          >
+                        </li>
+                        <li>
+                          <a href="premium-double.html" data-i18n="nav-room-4"
+                            >PREMIUM DOUBLE ROOM</a
+                          >
+                        </li>
+                        <li>
+                          <a href="superior-double.html" data-i18n="nav-room-5"
+                            >SUPERIOR DOUBLE ROOM</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="#" data-i18n="nav-restaurant"
+                        >RESTAURANT & BAR</a
+                      >
+                      <ul class="dropdown">
+                        <li>
+                          <a href="noya.html" data-i18n="nav-restaurant-1"
+                            >NOYA</a
+                          >
+                        </li>
+                        <li>
+                          <a href="omma.html" data-i18n="nav-restaurant-2"
+                            >OMMA-Cafe & Buffet</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="#" data-i18n="nav-activities">ACTIVITIES</a>
+                      <ul class="dropdown">
+                        <li>
+                          <a href="onze.html" data-i18n="nav-activity-1"
+                            >ONZE RECOVERY</a
+                          >
+                        </li>
+                        <li>
+                          <a href="rinu.html" data-i18n="nav-activity-2"
+                            >RINU MEDSPA</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="has-dropdown">
+                      <a href="#" data-i18n="nav-inquiry">CONTACT</a>
+
+                      <ul class="dropdown">
+                        <li>
+                          <a href="contact.html" data-i18n="nav-contact-us"
+                            >CONTACT US</a
+                          >
+                        </li>
+                        <li>
+                          <a href="faqs.html" data-i18n="nav-faqs">FAQS</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+
+                <div class="header__lang__selector">
+                  <button class="lang-btn lang-active" data-lang="en">
+                    EN
+                  </button>
+                  <button class="lang-btn" data-lang="de">DE</button>
+                  <button class="lang-btn" data-lang="al">AL</button>
+                </div>
+
+                <div class="header__nav__widget">
+                  <a
+                    href="https://derand-hotel.hotelrunner.com/bv3/search"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span data-i18n="book-now">BOOK NOW</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="canvas__open">
+            <span class="fa fa-bars"></span>
+          </div>
+          <div class="mobile__lang__selector header__lang__selector">
+            <button class="lang-btn lang-active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="de">DE</button>
+            <button class="lang-btn" data-lang="al">AL</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="omma-hero-wrap" aria-label="OMMA hero header">
+      <section class="omma-hero">
+        <div class="omma-hero__center">
+          <img
+            class="omma-hero__logo"
+            src="img/logo5.webp"
+            alt="OMMA logo"
+          />
+          <p class="omma-hero__coming-soon" data-i18n="omma-hero-middle">
+            COMING SOON
+          </p>
+        </div>
+      </section>
+    </main>
+    <section class="omma-intro">
+      <div class="omma-intro__inner omma-intro__inner--parallax">
+        <p class="omma-intro__copy" data-i18n="omma-intro-copy-2">
+          WHETHER YOU ARE JOINING US FOR A SLOW MORNING COFFEE OR A VIBRANT
+          BREAKFAST GATHERING, OMMA OFFERS A SOPHISTICATED YET WELCOMING
+          ATMOSPHERE. OPEN TO HOTEL GUESTS AND THE PUBLIC ALIKE, WE INVITE YOU
+          TO STEP INTO OUR MINIMALIST SANCTUARY AND START YOUR DAY WITH QUALITY
+          INGREDIENTS AND EXCEPTIONAL SERVICE.
+        </p>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__brandbar">
+          <a href="index.html" class="footer__brandbar__logo">
+            <img src="img/logo3.webp" alt="Derand Crest" />
+          </a>
+          <span class="footer__brandbar__divider"></span>
+          <a href="#" class="footer__brandbar__partner">
+            <span data-i18n="footer-powered">Powered by</span>
+            <img src="img/logo/logo-1.webp" alt="Powered by partner logo" />
+          </a>
+        </div>
+
+        <div class="footer__contactbar">
+          <a
+            href="https://wa.me/38343727272"
+            class="footer__contactbar__item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-phone"></i>
+            <span>+ 383 43 72 72 72</span>
+          </a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=info@derandhotel.com"
+            class="footer__contactbar__item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-envelope-o"></i>
+            <span>info@derandhotel.com</span>
+          </a>
+          <a
+            href="https://www.google.com/maps/place/Derand+Hotel/@42.655716,21.1505223,200m/data=!3m2!1e3!4b1!4m9!3m8!1s0x13549f6c2e02e469:0xc02b72e6fc22c09b!5m2!4m1!1i2!8m2!3d42.655715!4d21.151166!16s%2Fg%2F11vcm48zlk?entry=ttu&g_ep=EgoyMDI2MDMwOC4wIKXMDSoASAFQAw%3D%3D"
+            class="footer__contactbar__item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-map-marker"></i>
+            <span data-i18n="index-footer-address"
+              >Bekim Fehmiu Str. 30 Pristina 10000 Kosovo</span
+            >
+          </a>
+        </div>
+
+        <div class="footer__content">
+          <div class="row">
+            <div class="col-12 col-lg-5">
+              <div class="footer__newslatter">
+                <h4 data-i18n="newsletter-title">Become part of our world</h4>
+                <p data-i18n="newsletter-copy">
+                  Receive curated stories, seasonal offers, and private
+                  invitations.
+                </p>
+                <form
+                  class="footer__newslatter__form"
+                  action="https://api.web3forms.com/submit"
+                  method="POST"
+                  data-contact-email="info@derandhotel.com"
+                >
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="761d8dce-87b2-4534-bc76-77ec2305d4ec"
+                  />
+                  <input
+                    type="hidden"
+                    name="from_name"
+                    value="Derand Hotel Website (Footer)"
+                  />
+                  <div class="footer__newslatter__group">
+                    <input
+                      type="text"
+                      name="firstName"
+                      placeholder="FIRST NAME"
+                      data-i18n-placeholder="newsletter-first-name"
+                      autocomplete="given-name"
+                    />
+                    <input
+                      type="text"
+                      name="lastName"
+                      placeholder="LAST NAME"
+                      data-i18n-placeholder="newsletter-last-name"
+                      autocomplete="family-name"
+                    />
+                  </div>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="EMAIL ADDRESS"
+                    data-i18n-placeholder="newsletter-email"
+                    autocomplete="email"
+                  />
+                  <label class="footer__newslatter__check">
+                    <input type="checkbox" name="consent" />
+                    <span data-i18n="newsletter-agree"
+                      >I agree to the terms and privacy policy.</span
+                    >
+                  </label>
+                  <button type="submit" data-i18n="newsletter-button">
+                    SIGN ME UP
+                  </button>
+                  <p
+                    class="footer__newslatter__status"
+                    role="status"
+                    aria-live="polite"
+                  ></p>
+                </form>
+              </div>
+            </div>
+            <div class="col-12 col-lg-7">
+              <div class="footer__widget">
+                <div class="footer__links__grid">
+                  <ul>
+                    <li>
+                      <a href="contact.html" data-i18n="footer-link-1"
+                        >Contact Us
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" data-i18n="footer-link-2">Derand History</a>
+                    </li>
+                    <li>
+                      <a href="termsofservices.html" data-i18n="footer-link-3"
+                        >Terms of Service</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" data-i18n="footer-link-4">Derand Magazine</a>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <a href="careers.html" data-i18n="footer-link-5"
+                        >Careers</a
+                      >
+                    </li>
+                    <li>
+                      <a href="faqs.html" data-i18n="footer-link-6">FAQs</a>
+                    </li>
+                    <li>
+                      <a href="privacypolicy.html" data-i18n="footer-link-7"
+                        >Privacy Policy</a
+                      >
+                    </li>
+                    <li><a href="#" data-i18n="footer-link-8">Payments</a></li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <a href="guestapp.html" data-i18n="footer-link-9"
+                        >Guest App
+                      </a>
+                    </li>
+                    <li>
+                      <a href="our-location.html" data-i18n="footer-link-11"
+                        >Our Location</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__social footer__social--bottom">
+          <a
+            href="https://www.facebook.com/derandhotel"
+            aria-label="Facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-facebook"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/derandhotel_prishtina/"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/100894439/admin/dashboard/"
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-linkedin"></i
+          ></a>
+          <a
+            href="https://www.youtube.com/watch?v=cyq_5a9X3wA"
+            aria-label="YouTube"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-youtube-play"></i
+          ></a>
+          <a
+            href="https://www.tiktok.com/@derandhotel"
+            aria-label="TikTok"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-music"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js?v=20260416-2"></script>
+    <div class="omma-lightbox" id="omma-lightbox" aria-hidden="true">
+      <button
+        type="button"
+        class="omma-lightbox__close"
+        data-i18n-aria-label="omma-lightbox-close"
+        aria-label="Close image zoom"
+      >
+        &times;
+      </button>
+      <img
+        class="omma-lightbox__img"
+        src=""
+        data-i18n-alt="omma-lightbox-img-alt"
+        alt="Zoomed OMMA image"
+      />
+    </div>
+    <script>
+      // Keep language buttons reliable on this page even if another script fails early.
+      document.addEventListener("DOMContentLoaded", function () {
+        var buttons = document.querySelectorAll(".lang-btn");
+        var introParallaxTargets = document.querySelectorAll(
+          ".omma-intro__inner--parallax",
+        );
+        var serviceParallaxTargets = document.querySelectorAll(
+          ".omma-services__item",
+        );
+        if (
+          (introParallaxTargets.length || serviceParallaxTargets.length) &&
+          !(
+            window.matchMedia &&
+            window.matchMedia("(prefers-reduced-motion: reduce)").matches
+          )
+        ) {
+          var ticking = false;
+          var introMaxShift = window.innerWidth < 768 ? 10 : 18;
+          var serviceMaxShift = window.innerWidth < 768 ? 6 : 12;
+          var updateParallax = function () {
+            ticking = false;
+            var viewportCenter = window.innerHeight * 0.5;
+            introParallaxTargets.forEach(function (el) {
+              var rect = el.getBoundingClientRect();
+              var elementCenter = rect.top + rect.height * 0.5;
+              var delta = (viewportCenter - elementCenter) * 0.08;
+              var shift = Math.max(
+                -introMaxShift,
+                Math.min(introMaxShift, delta),
+              );
+              el.style.transform =
+                "translate3d(0," + shift.toFixed(2) + "px,0)";
+            });
+            serviceParallaxTargets.forEach(function (el, index) {
+              var rect = el.getBoundingClientRect();
+              var elementCenter = rect.top + rect.height * 0.5;
+              var direction = index % 2 === 0 ? 1 : -1;
+              var delta = (viewportCenter - elementCenter) * 0.05 * direction;
+              var shift = Math.max(
+                -serviceMaxShift,
+                Math.min(serviceMaxShift, delta),
+              );
+              el.style.transform =
+                "translate3d(0," + shift.toFixed(2) + "px,0)";
+            });
+          };
+          var queueParallax = function () {
+            if (!ticking) {
+              window.requestAnimationFrame(updateParallax);
+              ticking = true;
+            }
+          };
+          window.addEventListener("scroll", queueParallax, { passive: true });
+          window.addEventListener("resize", function () {
+            introMaxShift = window.innerWidth < 768 ? 10 : 18;
+            serviceMaxShift = window.innerWidth < 768 ? 6 : 12;
+            queueParallax();
+          });
+          queueParallax();
+        }
+
+        var zoomableImages = document.querySelectorAll(
+          ".omma-services__image[src*='img/omma4'], .omma-services__image[src*='img/omma5'], .omma-services__image[src*='img/omma6'], .omma-services__image[src*='img/omma8'], .omma-collage__img",
+        );
+        var lightbox = document.getElementById("omma-lightbox");
+        if (zoomableImages.length && lightbox) {
+          var lightboxImg = lightbox.querySelector(".omma-lightbox__img");
+          var closeBtn = lightbox.querySelector(".omma-lightbox__close");
+          var zoomLabel =
+            (window.translations &&
+              window.currentLang &&
+              window.translations[window.currentLang] &&
+              window.translations[window.currentLang]["omma-zoom-image"]) ||
+            (window.translations &&
+              window.translations.en &&
+              window.translations.en["omma-zoom-image"]) ||
+            "Zoom image";
+          zoomableImages.forEach(function (img) {
+            var wrap =
+              img.closest(".omma-services__image-wrap") ||
+              img.closest(".omma-collage__card");
+            if (!wrap) return;
+            if (wrap.querySelector(".omma-services__zoom-btn")) return;
+            var btn = document.createElement("button");
+            btn.type = "button";
+            btn.className = "omma-services__zoom-btn";
+            btn.setAttribute("aria-label", zoomLabel);
+            btn.textContent = "+";
+            btn.setAttribute("data-zoom-src", img.getAttribute("src") || "");
+            btn.addEventListener("click", function () {
+              var localImg = wrap.querySelector(".omma-services__image");
+              var src =
+                (localImg &&
+                  (localImg.currentSrc || localImg.getAttribute("src"))) ||
+                btn.getAttribute("data-zoom-src") ||
+                "";
+              if (!src) return;
+              lightboxImg.src = src;
+              lightbox.classList.add("is-open");
+              lightbox.setAttribute("aria-hidden", "false");
+            });
+            wrap.appendChild(btn);
+          });
+          var closeLightbox = function () {
+            lightbox.classList.remove("is-open");
+            lightbox.setAttribute("aria-hidden", "true");
+            lightboxImg.src = "";
+          };
+          closeBtn && closeBtn.addEventListener("click", closeLightbox);
+          lightbox.addEventListener("click", function (e) {
+            if (e.target === lightbox) closeLightbox();
+          });
+          document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && lightbox.classList.contains("is-open")) {
+              closeLightbox();
+            }
+          });
+        }
+
+        if (!buttons.length) return;
+
+        buttons.forEach(function (btn) {
+          btn.addEventListener("click", function (e) {
+            e.preventDefault();
+            var lang = btn.getAttribute("data-lang");
+            if (!lang) return;
+
+            try {
+              window.localStorage && localStorage.setItem("derandLang", lang);
+            } catch (err) {}
+
+            document.querySelectorAll(".lang-btn").forEach(function (b) {
+              b.classList.remove("lang-active");
+            });
+            document
+              .querySelectorAll(".lang-btn[data-lang='" + lang + "']")
+              .forEach(function (b) {
+                b.classList.add("lang-active");
+              });
+            document.documentElement.setAttribute(
+              "lang",
+              lang === "al" ? "sq" : lang,
+            );
+
+            if (typeof window.applyTranslations === "function") {
+              window.currentLang = lang;
+              window.applyTranslations();
+            } else {
+              window.location.reload();
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
+

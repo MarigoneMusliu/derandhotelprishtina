@@ -1,0 +1,759 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Careers at Derand Hotel" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Careers</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css" />
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <style>
+      /* Enforce Traviata font across Careers page, exclude icon fonts */
+      .career-page
+        *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]):not([class^="icon_"]):not([class*=" icon_"]) {
+        font-family: "Traviata", serif !important;
+        font-weight: 400 !important;
+      }
+      .career-page input::placeholder,
+      .career-page textarea::placeholder {
+        font-family: "Traviata", serif !important;
+      }
+      .career-page [data-parallax] {
+        will-change: transform;
+      }
+      .career-page { background: #f7f5f2; color: #25211f; }
+      .career-shell { padding-top: 92px; }
+      .career-hero {
+        position: relative;
+        padding: 86px 0 62px;
+        background:
+          linear-gradient(180deg, rgba(16, 14, 13, 0.7) 0%, rgba(16, 14, 13, 0.74) 100%),
+          url("img/careers.webp") center center / cover no-repeat;
+        border-bottom: 1px solid rgba(177, 114, 86, 0.22);
+      }
+      .career-hero .container {
+        position: relative;
+        z-index: 1;
+      }
+      .career-kicker {
+        margin: 0 0 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        font-size: 12px;
+        color: #d6a692;
+        font-weight: 600;
+      }
+      .career-title {
+        margin: 0 0 10px;
+        font-family: "Traviata", serif !important;
+        font-size: clamp(36px, 4.3vw, 60px);
+        color: #ffffff;
+      }
+      .career-sub {
+        margin: 0;
+        max-width: 760px;
+        color: rgba(255, 255, 255, 0.92);
+        font-size: 17px;
+        line-height: 1.7;
+      }
+
+      .career-main { padding: 52px 0 56px; }
+      .footer { margin: 0; padding-bottom: 0; }
+      .career-grid { display: grid; grid-template-columns: 320px 1fr; gap: 30px; align-items: start; }
+      .career-open-box {
+        background: transparent;
+        border: 1px solid rgba(177, 114, 86, 0.24);
+        border-radius: 14px;
+        padding: 24px;
+        margin-left: -18px;
+      }
+      .career-open-box h3 {
+        margin: 0 0 10px;
+        font-family: "Traviata", serif !important;
+        font-size: 32px;
+        color: #2a2320;
+      }
+      .career-open-box p {
+        margin: 0 0 14px;
+        color: #5f5750;
+        line-height: 1.65;
+        font-size: 14px;
+      }
+      .career-open-form label {
+        display: block;
+        margin-bottom: 6px;
+        color: #6c6159;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+      }
+      .career-open-box input,
+      .career-open-box select {
+        width: 100%;
+        height: 42px;
+        margin-bottom: 12px;
+        border: 0;
+        border-bottom: 1px solid rgba(177, 114, 86, 0.45);
+        border-radius: 0;
+        background: transparent;
+        padding: 0 2px;
+        font-size: 14px;
+        color: #3d3530;
+      }
+      .career-open-box input:focus,
+      .career-open-box select:focus {
+        outline: none;
+        border-bottom-color: #b17256;
+      }
+      .career-open-btn {
+        display: block;
+        width: 100%;
+        height: 40px;
+        border: 0;
+        border-radius: 6px;
+        background: #b17256;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: 700;
+        font-size: 11px;
+        line-height: 40px;
+        text-align: center;
+        text-decoration: none;
+        margin-top: 6px;
+      }
+
+      .career-list-head {
+        margin: 0 0 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.19em;
+        font-size: 12px;
+        color: #7a6e65;
+      }
+      .career-list-scroll { max-height: none; overflow: visible; padding-right: 0; }
+      .career-list-scroll::-webkit-scrollbar { width: 0; } .career-list-scroll::-webkit-scrollbar-thumb { background: transparent; }
+      .career-item {
+        display: grid;
+        grid-template-columns: 88px 1fr 20px;
+        gap: 16px;
+        align-items: center;
+        padding: 17px 12px;
+        border: 1px solid transparent;
+        border-top: 1px solid rgba(177, 114, 86, 0.25);
+        border-radius: 10px;
+        text-decoration: none;
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+      }
+      .career-item:hover {
+        background: #fffdfa;
+        border-color: rgba(177, 114, 86, 0.3);
+      }
+      .career-item img { width: 100%; opacity: 0.74; }
+      .career-item h4 {
+        margin: 0 0 5px;
+        font-size: 24px;
+        line-height: 1.2;
+        color: #262220;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .career-item p { margin: 0; color: #5f5750; font-size: 14px; }
+      .career-item small {
+        display: block;
+        margin-bottom: 5px;
+        color: #b17256;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        font-size: 11px;
+        font-weight: 700;
+      }
+      .career-item i { color: #9f8a7f; font-size: 18px; }
+      .career-item.career-item--no-logo {
+        grid-template-columns: 1fr 20px;
+      }
+
+      @media (max-width: 991px) {
+        .career-shell { padding-top: 78px; }
+        .career-grid { grid-template-columns: 1fr; }
+        .career-open-box { margin-left: 0; }
+      }
+      @media (max-width: 575px) { .career-hero { padding: 58px 0 42px; } .career-sub { font-size: 15px; } .career-item { grid-template-columns: 66px 1fr 14px; gap: 11px; padding: 14px 8px; }
+        .career-item h4 { font-size: 18px; }
+        .career-item p { font-size: 13px; }
+      }
+    </style>
+  </head>
+  <body class="career-page career-shell policy-font-traviata">
+    <div id="preloder"><div class="loader"></div></div>
+    <header class="header">
+      <div class="header__top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7"></div>
+            <div class="col-lg-5">
+              <div class="header__top__right"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__nav__option">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-2">
+              <div class="header__logo">
+                <a href="./index.html"
+                  ><img src="img/logoo.webp" alt="Logo"
+                /></a>
+              </div>
+            </div>
+            <div class="col-lg-10">
+              <div class="header__nav">
+                <nav class="header__menu">
+                  <ul class="menu__class">
+                    <li>
+                      <a href="rooms.html" data-i18n="nav-rooms"
+                        >ROOMS & SUITES</a
+                      >
+                      <ul class="dropdown">
+                        <li>
+                          <a href="junior.html" data-i18n="nav-room-1"
+                            >JUNIOR SUITE</a
+                          >
+                        </li>
+                        <li>
+                          <a href="deluxe-double.html" data-i18n="nav-room-2"
+                            >DELUXE DOUBLE ROOM</a
+                          >
+                        </li>
+                        <li>
+                          <a href="superior-twin.html" data-i18n="nav-room-3"
+                            >SUPERIOR TWIN ROOM</a
+                          >
+                        </li>
+                        <li>
+                          <a href="premium-double.html" data-i18n="nav-room-4"
+                            >PREMIUM DOUBLE ROOM</a
+                          >
+                        </li>
+                        <li>
+                          <a href="superior-double.html" data-i18n="nav-room-5"
+                            >SUPERIOR DOUBLE ROOM</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="#" data-i18n="nav-restaurant"
+                        >RESTAURANT & BAR</a
+                      >
+                      <ul class="dropdown">
+                        <li>
+                          <a
+                            href="noya.html" data-i18n="nav-restaurant-1"
+                            >NOYA</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="omma.html"
+                            data-i18n="nav-restaurant-2"
+                            >OMMA-Cafe & Buffet</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="#" data-i18n="nav-activities"
+                        >ACTIVITIES</a
+                      >
+                      <ul class="dropdown">
+                        <li>
+                          <a href="onze.html" data-i18n="nav-activity-1"
+                            >ONZE RECOVERY</a
+                          >
+                        </li>
+                        <li>
+                          <a href="rinu.html" data-i18n="nav-activity-2"
+                            >RINU MEDSPA</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#" data-i18n="nav-activity-3"
+                            >NOYA NIGHTLIFE</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+       <li class="has-dropdown">
+  <a href="#" data-i18n="nav-inquiry">CONTACT</a>
+
+  <ul class="dropdown">
+    <li>
+      <a href="contact.html" data-i18n="nav-contact-us">CONTACT US</a>
+    </li>
+    <li>
+      <a href="faqs.html" data-i18n="nav-faqs">FAQS</a>
+    </li>
+  </ul>
+</li>
+                  </ul>
+                </nav>
+
+                <div class="header__lang__selector">
+                  <button class="lang-btn lang-active" data-lang="en">
+                    EN
+                  </button>
+                  <button class="lang-btn" data-lang="de">DE</button>
+                  <button class="lang-btn" data-lang="al">AL</button>
+                </div>
+
+                <div class="header__nav__widget">
+                  <a
+                    href="https://derand-hotel.hotelrunner.com/bv3/search"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span data-i18n="book-now">BOOK NOW</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="canvas__open">
+            <span class="fa fa-bars"></span>
+          </div>
+          <div class="mobile__lang__selector header__lang__selector">
+            <button class="lang-btn lang-active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="de">DE</button>
+            <button class="lang-btn" data-lang="al">AL</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="career-hero">
+      <div class="container" data-parallax="y" data-parallax-speed="0.04">
+        <p class="career-kicker" data-i18n="careers-hero-kicker" data-parallax="y" data-parallax-speed="0.03">Derand Careers</p>
+        <h1 class="career-title" data-i18n="careers-hero-title" data-parallax="y" data-parallax-speed="0.05">Work With Us</h1>
+        <p class="career-sub" data-i18n="careers-hero-sub" data-parallax="y" data-parallax-speed="0.04">
+          Explore current roles or submit an open application. Even when a role is not available today, we can review your CV for future opportunities.
+        </p>
+      </div>
+    </section>
+
+    <section class="career-main" data-parallax="y" data-parallax-speed="0.025">
+      <div class="container">
+        <div class="career-grid">
+          <aside class="career-open-box" data-parallax="y" data-parallax-speed="0.03">
+            <h3 data-i18n="careers-open-application-title">Open Application</h3>
+            <p data-i18n="careers-open-application-copy">
+              Send your profile directly to our HR team. We keep strong candidates in review for upcoming positions.
+            </p>
+            <form id="open-application-form" class="career-open-form">
+              <label for="open-position" data-i18n="careers-preferred-position-label">Preferred Position</label>
+              <input
+                type="text"
+                id="open-position"
+                placeholder="e.g. Receptionist"
+                data-i18n-placeholder="careers-preferred-position-placeholder"
+              />
+              <label for="open-department" data-i18n="careers-preferred-department-label">Preferred Department</label>
+              <input
+                type="text"
+                id="open-department"
+                list="department-options"
+                placeholder="Select or type a department"
+                data-i18n-placeholder="careers-preferred-department-placeholder"
+              />
+              <datalist id="department-options">
+                <option data-i18n="careers-dept-housekeeping">Housekeeping</option>
+                <option data-i18n="careers-dept-housekeeping-mgmt">Housekeeping Management</option>
+                <option data-i18n="careers-dept-reception">Reception / Front Office</option>
+                <option data-i18n="careers-dept-security">Security</option>
+                <option data-i18n="careers-dept-procurement">Procurement & Logistics</option>
+                <option data-i18n="careers-dept-bell">Bell Service</option>
+                <option data-i18n="careers-dept-sales">Sales</option>
+                <option data-i18n="careers-dept-architecture">Architecture</option>
+                <option data-i18n="careers-dept-social">Social Media</option>
+                <option data-i18n="careers-dept-it">IT</option>
+                <option data-i18n="careers-dept-finance">Finance</option>
+                <option data-i18n="careers-dept-uiux">UI/UX Design</option>
+                <option data-i18n="careers-dept-management">Management</option>
+                <option data-i18n="careers-dept-other">Other</option>
+              </datalist>
+              <button class="career-open-btn" type="submit" data-i18n="careers-submit-cv">Submit Your CV</button>
+            </form>
+          </aside>
+
+          <div>
+            <p class="career-list-head" data-i18n="careers-current-positions-title" data-parallax="y" data-parallax-speed="0.02">Current Open Positions</p>
+            <div class="career-list-scroll" data-parallax="y" data-parallax-speed="0.02">
+              <a class="career-item" href="career-housekeeping.html">
+              <img src="img/derandlogo.webp" alt="Derand" />
+              <div>
+                <small data-i18n="careers-company-name">Derand Hotel Prishtina</small>
+                <h4 data-i18n="careers-job-1-title">Housekeeping Staff</h4>
+                <p data-i18n="careers-job-1-detail">Type: Full-time | Position: Operations</p>
+              </div>
+              <i class="fa fa-angle-right"></i>
+            </a>
+            <a class="career-item" href="career-housekeeping-manager.html">
+              <img src="img/derandlogo.webp" alt="Derand" />
+              <div>
+                <small data-i18n="careers-company-name">Derand Hotel Prishtina</small>
+                <h4 data-i18n="careers-job-2-title">Housekeeping Manager</h4>
+                <p data-i18n="careers-job-2-detail">Type: Full-time | Position: Management</p>
+              </div>
+              <i class="fa fa-angle-right"></i>
+            </a>
+            <a class="career-item" href="career-receptionist.html">
+              <img src="img/derandlogo.webp" alt="Derand" />
+              <div>
+                <small data-i18n="careers-company-name">Derand Hotel Prishtina</small>
+                <h4 data-i18n="careers-job-3-title">Receptionist </h4>
+                <p data-i18n="careers-job-3-detail">Type: Full-time | Position: Front Office</p>
+              </div>
+              <i class="fa fa-angle-right"></i>
+            </a>
+            <a class="career-item" href="career-security.html">
+              <img src="img/derandlogo.webp" alt="Derand" />
+              <div>
+                <small data-i18n="careers-company-name">Derand Hotel Prishtina</small>
+                <h4 data-i18n="careers-job-4-title">Security  </h4>
+                <p data-i18n="careers-job-4-detail">Type: Full-time | Position: Security</p>
+              </div>
+              <i class="fa fa-angle-right"></i>
+            </a>
+            <a class="career-item" href="career-security-manager.html">
+              <img src="img/derandlogo.webp" alt="Derand" />
+              <div>
+                <small data-i18n="careers-company-name">Derand Hotel Prishtina</small>
+                <h4 data-i18n="careers-job-5-title">Security Manager</h4>
+                <p data-i18n="careers-job-5-detail">Type: Full-time | Position: Security Management</p>
+              </div>
+              <i class="fa fa-angle-right"></i>
+            </a>
+            <a class="career-item" href="career-bellboy.html">
+              <img src="img/derandlogo.webp" alt="Derand" />
+              <div>
+                <small data-i18n="careers-company-name">Derand Hotel Prishtina</small>
+                <h4 data-i18n="careers-job-6-title">Bellboy </h4>
+                <p data-i18n="careers-job-6-detail">Type: Full-time | Position: Guest Service</p>
+              </div>
+              <i class="fa fa-angle-right"></i>
+            </a>
+            <a class="career-item" href="career-sales.html">
+              <img src="img/derandlogo.webp" alt="Derand" />
+              <div>
+                <small data-i18n="careers-company-name">Derand Hotel Prishtina</small>
+                <h4 data-i18n="careers-job-7-title">Sales  </h4>
+                <p data-i18n="careers-job-7-detail">Type: Full-time  | Position: Sales</p>
+              </div>
+              <i class="fa fa-angle-right"></i>
+            </a>
+            <a class="career-item" href="career-architect.html">
+              <img src="img/derandlogo.webp" alt="Derand" />
+              <div>
+                <small data-i18n="careers-company-name">Derand Hotel Prishtina</small>
+                <h4 data-i18n="careers-job-8-title">Architect </h4>
+                <p data-i18n="careers-job-8-detail">Type: Full-time | Position: Architecture</p>
+              </div>
+              <i class="fa fa-angle-right"></i>
+            </a>
+            <a class="career-item" href="career-social-media.html">
+              <img src="img/derandlogo.webp" alt="Derand" />
+              <div>
+                <small data-i18n="careers-company-name">Derand Hotel Prishtina</small>
+                <h4 data-i18n="careers-job-9-title">Social Media Marketing</h4>
+                <p data-i18n="careers-job-9-detail">Type: Full-time |  Position: Marketing</p>
+              </div>
+              <i class="fa fa-angle-right"></i>
+            </a>
+            <a class="career-item" href="career-it-specialist.html">
+              <img src="img/derandlogo.webp" alt="Derand" />
+              <div>
+                <small data-i18n="careers-company-name">Derand Hotel Prishtina</small>
+                <h4 data-i18n="careers-job-10-title">IT Specialist </h4>
+                <p data-i18n="careers-job-10-detail">Type: Full-time | Position: IT</p>
+              </div>
+              <i class="fa fa-angle-right"></i>
+            </a>
+            <a class="career-item" href="career-procurement-logistics.html">
+              <img src="img/derandlogo.webp" alt="Derand" />
+              <div>
+                <small data-i18n="careers-company-name">Derand Hotel Prishtina</small>
+                <h4 data-i18n="careers-job-11-title">Procurement / Logistics</h4>
+                <p data-i18n="careers-job-11-detail">Type: Full-time | Position: Operations</p>
+              </div>
+              <i class="fa fa-angle-right"></i>
+            </a>
+            <a class="career-item" href="career-finance.html">
+              <img src="img/derandlogo.webp" alt="Derand" />
+              <div>
+                <small data-i18n="careers-company-name">Derand Hotel Prishtina</small>
+                <h4 data-i18n="careers-job-12-title">Finance Officer </h4>
+                <p data-i18n="careers-job-12-detail">Type: Full-time | Position: Finance</p>
+              </div>
+              <i class="fa fa-angle-right"></i>
+            </a>
+            <a class="career-item" href="career-uiux.html">
+              <img src="img/derandlogo.webp" alt="Derand" />
+              <div>
+                <small data-i18n="careers-company-name">Derand Hotel Prishtina</small>
+                <h4 data-i18n="careers-job-13-title">UI/UX Designer </h4>
+                <p data-i18n="careers-job-13-detail">Type: Full-time | Position: Design</p>
+              </div>
+              <i class="fa fa-angle-right"></i>
+            </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__brandbar">
+          <a href="index.html" class="footer__brandbar__logo">
+            <img src="img/logo3.webp" alt="Derand Crest" />
+          </a>
+          <span class="footer__brandbar__divider"></span>
+          <a href="#" class="footer__brandbar__partner">
+            <span data-i18n="footer-powered">Powered by</span>
+            <img src="img/logo/logo-1.webp" alt="Powered by partner logo" />
+          </a>
+        </div>
+
+        <div class="footer__contactbar">
+          <a
+            href="https://wa.me/38343727272"
+            class="footer__contactbar__item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-phone"></i>
+            <span>+ 383 43 72 72 72</span>
+          </a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=info@derandhotel.com"
+            class="footer__contactbar__item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-envelope-o"></i>
+            <span>info@derandhotel.com</span>
+          </a>
+          <a
+            href="https://www.google.com/maps/place/Derand+Hotel/@42.655716,21.1505223,200m/data=!3m2!1e3!4b1!4m9!3m8!1s0x13549f6c2e02e469:0xc02b72e6fc22c09b!5m2!4m1!1i2!8m2!3d42.655715!4d21.151166!16s%2Fg%2F11vcm48zlk?entry=ttu&g_ep=EgoyMDI2MDMwOC4wIKXMDSoASAFQAw%3D%3D"
+            class="footer__contactbar__item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-map-marker"></i>
+            <span data-i18n="index-footer-address"
+              >Bekim Fehmiu Str. 30 Pristina 10000 Kosovo</span
+            >
+          </a>
+        </div>
+
+        <div class="footer__content">
+          <div class="row">
+            <div class="col-12 col-lg-5">
+              <div class="footer__newslatter">
+                <h4 data-i18n="newsletter-title">Become part of our world</h4>
+                <p data-i18n="newsletter-copy">
+                  Receive curated stories, seasonal offers, and private
+                  invitations.
+                </p>
+                <form
+                  class="footer__newslatter__form"
+                  action="https://api.web3forms.com/submit"
+                  method="POST"
+                  data-contact-email="info@derandhotel.com"
+                >
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="761d8dce-87b2-4534-bc76-77ec2305d4ec"
+                  />
+                  <input
+                    type="hidden"
+                    name="from_name"
+                    value="Derand Hotel Website (Footer)"
+                  />
+                  <div class="footer__newslatter__group">
+                    <input
+                      type="text"
+                      name="firstName"
+                      placeholder="FIRST NAME"
+                      data-i18n-placeholder="newsletter-first-name"
+                      autocomplete="given-name"
+                    />
+                    <input
+                      type="text"
+                      name="lastName"
+                      placeholder="LAST NAME"
+                      data-i18n-placeholder="newsletter-last-name"
+                      autocomplete="family-name"
+                    />
+                  </div>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="EMAIL ADDRESS"
+                    data-i18n-placeholder="newsletter-email"
+                    autocomplete="email"
+                  />
+                  <label class="footer__newslatter__check">
+                    <input type="checkbox" name="consent" />
+                    <span data-i18n="newsletter-agree"
+                      >I agree to the terms and privacy policy.</span
+                    >
+                  </label>
+                  <button type="submit" data-i18n="newsletter-button">
+                    SIGN ME UP
+                  </button>
+                  <p
+                    class="footer__newslatter__status"
+                    role="status"
+                    aria-live="polite"
+                  ></p>
+                </form>
+</div>
+            </div>
+            <div class="col-12 col-lg-7">
+              <div class="footer__widget">
+                <div class="footer__links__grid">
+                  <ul>
+                    <li>
+                      <a href="contact.html" data-i18n="footer-link-1"
+                        >Contact Us
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" data-i18n="footer-link-2"
+                        >Derand History</a
+                      >
+                    </li>
+                    <li>
+                      <a href="termsofservices.html" data-i18n="footer-link-3"
+                        >Terms of Service</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" data-i18n="footer-link-4">Derand Magazine</a>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <a href="careers.html" data-i18n="footer-link-5">Careers</a>
+                    </li>
+                    <li>
+                      <a href="faqs.html" data-i18n="footer-link-6"
+                        >FAQs</a
+                      >
+                    </li>
+                    <li>
+                      <a href="privacypolicy.html" data-i18n="footer-link-7"
+                        >Privacy Policy</a
+                      >
+                    </li>
+                    <li><a href="#" data-i18n="footer-link-8">Payments</a></li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <a href="guestapp.html" data-i18n="footer-link-9">Guest App </a>
+                    </li>
+                    <li>
+                      <a href="our-location.html" data-i18n="footer-link-11">Our Location</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__social footer__social--bottom">
+          <a
+            href="https://www.facebook.com/derandhotel"
+            aria-label="Facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-facebook"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/derandhotel_prishtina/"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/100894439/admin/dashboard/"
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-linkedin"></i
+          ></a>
+          <a
+            href="https://www.youtube.com/watch?v=cyq_5a9X3wA"
+            aria-label="YouTube"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-youtube-play"></i
+          ></a>
+          <a
+            href="https://www.tiktok.com/@derandhotel"
+            aria-label="TikTok"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-music"></i
+          ></a>
+        </div>
+
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var form = document.getElementById("open-application-form");
+        if (!form) return;
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          var position = document.getElementById("open-position");
+          var department = document.getElementById("open-department");
+          var params = new URLSearchParams();
+
+          if (position && position.value.trim()) {
+            params.set("position", position.value.trim());
+          }
+          if (department && department.value.trim()) {
+            params.set("department", department.value.trim());
+          }
+
+          var target = "career-apply.html";
+          var query = params.toString();
+          window.location.href = query ? target + "?" + query : target;
+        });
+      })();
+    </script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js?v=20260416-2"></script>
+  </body>
+</html>
+
+

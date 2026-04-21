@@ -1,0 +1,3426 @@
+﻿<!-- <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="ONZE  — curated aesthetic and wellness treatments at Derand Hotel, Prishtina."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ONZE</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css" />
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css" />
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+    <style>
+      /* RINU page: typography inherits site Traviata (policy-font-traviata) */
+      html {
+        scroll-padding-top: 100px;
+      }
+
+      body.onze1-page {
+        overflow-x: hidden;
+      }
+
+      .onze1-main {
+        --onze1-cream: #f7f4ef;
+        --onze1-white: #fdfcfa;
+        --onze1-sand: #ebe4da;
+        --onze1-line: rgba(28, 27, 26, 0.12);
+        --onze1-taupe: #8f8378;
+        --onze1-olive: #5e574e;
+        --onze1-ink: #1c1b1a;
+        --onze1-muted: #6a6560;
+        --onze1-accent: #7a6f63;
+        color: var(--onze1-ink);
+        background: var(--onze1-white);
+        overflow-x: hidden;
+      }
+
+      /* Keep one consistent page background except hero header */
+      .onze1-main > div.onze1-strip {
+        background: var(--onze1-cream);
+      }
+
+      .onze1-main * {
+        box-sizing: border-box;
+      }
+
+      /* Force Traviata style across RINU text content */
+      .onze1-main,
+      .onze1-main h1,
+      .onze1-main h2,
+      .onze1-main h3,
+      .onze1-main h4,
+      .onze1-main p,
+      .onze1-main a,
+      .onze1-main button,
+      .onze1-main li,
+      .onze1-main summary,
+      .onze1-main span,
+      .onze1-main input,
+      .onze1-main textarea {
+        font-family: "Traviata", serif !important;
+      }
+
+      .onze1-main img {
+        max-width: 100%;
+        height: auto;
+        vertical-align: middle;
+      }
+
+      /* Global slow-appear text reveal + gentle parallax drift */
+      .onze1-scroll-reveal {
+        opacity: 0;
+        transform: translate3d(0, 34px, 0);
+        transition:
+          opacity 1.05s cubic-bezier(0.21, 0.61, 0.35, 1),
+          transform 1.2s cubic-bezier(0.21, 0.61, 0.35, 1);
+        will-change: opacity, transform;
+      }
+
+      .onze1-scroll-reveal.is-visible {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .onze1-scroll-reveal {
+          opacity: 1;
+          transform: none !important;
+          transition: none;
+        }
+      }
+
+      .onze1-inner {
+        width: 100%;
+        max-width: 1360px;
+        margin: 0 auto;
+        padding-left: clamp(16px, 2.2vw, 32px);
+        padding-right: clamp(16px, 2.2vw, 32px);
+      }
+
+      .onze1-eyebrow {
+        font-size: 0.72rem;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: var(--onze1-taupe);
+        margin-bottom: 1rem;
+      }
+
+      .onze1-h2 {
+        font-size: clamp(2rem, 4.2vw, 3.25rem);
+        font-weight: 500;
+        line-height: 1.12;
+        letter-spacing: -0.02em;
+        margin: 0 0 1.25rem;
+        color: var(--onze1-ink);
+      }
+
+      .onze1-lead {
+        font-size: clamp(1rem, 1.35vw, 1.125rem);
+        font-weight: 300;
+        line-height: 1.75;
+        color: var(--onze1-muted);
+        max-width: 38rem;
+        margin: 0;
+      }
+
+      .onze1-divider {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+        margin: 0 auto 2.5rem;
+        max-width: 520px;
+      }
+
+      .onze1-divider::before,
+      .onze1-divider::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--onze1-line);
+      }
+
+      .onze1-divider span {
+        font-size: 0.85rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--onze1-taupe);
+        white-space: nowrap;
+      }
+
+      .onze1-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.95rem 1.85rem;
+        font-size: 0.72rem;
+        font-weight: 500;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        text-decoration: none !important;
+        border: 1px solid transparent;
+        transition:
+          background 0.25s ease,
+          color 0.25s ease,
+          border-color 0.25s;
+        cursor: pointer;
+      }
+
+      .onze1-btn--solid {
+        background: var(--onze1-olive);
+        color: #fff !important;
+        border-color: var(--onze1-olive);
+      }
+
+      .onze1-btn--solid:hover {
+        background: var(--onze1-ink);
+        border-color: var(--onze1-ink);
+        color: #fff !important;
+      }
+
+      .onze1-btn--ghost {
+        background: transparent;
+        color: var(--onze1-ink) !important;
+        border-color: var(--onze1-line);
+      }
+
+      .onze1-btn--ghost:hover {
+        border-color: var(--onze1-ink);
+        color: var(--onze1-ink) !important;
+      }
+
+      .onze1-btn--light {
+        background: rgba(255, 255, 255, 0.92);
+        color: var(--onze1-ink) !important;
+        border-color: transparent;
+      }
+
+      .onze1-btn--light:hover {
+        background: #fff;
+        color: var(--onze1-ink) !important;
+      }
+
+      /* Hero */
+      .onze1-hero {
+        position: relative;
+        min-height: min(88vh, 920px);
+        display: flex;
+        align-items: flex-end;
+        padding: clamp(100px, 14vh, 160px) 0 clamp(48px, 8vh, 88px);
+        background: #2a2622 url("img/onzeheader.webp") center / cover no-repeat;
+        color: #fff;
+      }
+
+      .onze1-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          105deg,
+          rgba(18, 16, 14, 0.97) 0%,
+          rgba(18, 16, 14, 0.78) 48%,
+          rgba(18, 16, 14, 0.7) 100%
+        );
+        pointer-events: none;
+      }
+
+      .onze1-hero__content {
+        position: relative;
+        z-index: 1;
+        max-width: 640px;
+        animation: onze1FadeInLeft 3.2s cubic-bezier(0.22, 1, 0.36, 1) 0.25s
+          both;
+        will-change: transform, opacity;
+      }
+
+      .onze1-hero__title {
+        font-size: clamp(2.35rem, 5.5vw, 4rem);
+        font-family: "Traviata", serif;
+        font-weight: 400;
+        line-height: 1.04;
+        letter-spacing: 0.01em;
+        margin: 0 0 1.25rem;
+        color: #fff !important;
+        text-wrap: balance;
+        text-shadow: 0 8px 24px rgba(0, 0, 0, 0.32);
+      }
+
+      .onze1-hero__title-sub {
+        display: block;
+        margin-top: 0.6rem;
+        font-size: clamp(1rem, 2vw, 1.45rem);
+        line-height: 1.35;
+        letter-spacing: 0.04em;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.96);
+      }
+
+      @keyframes onze1FadeInLeft {
+        0% {
+          opacity: 0;
+          transform: translate3d(-46px, 0, 0);
+        }
+        100% {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .onze1-hero__content {
+          animation: none;
+        }
+      }
+
+      .onze1-hero__sub {
+        font-size: clamp(1rem, 1.4vw, 1.2rem);
+        font-weight: 300;
+        line-height: 1.65;
+        opacity: 0.92;
+        margin: 0 0 2rem;
+        max-width: 32rem;
+        color: rgba(255, 255, 255, 0.95) !important;
+      }
+
+      .onze1-hero__actions {
+        margin-top: 0.4rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.65rem;
+        padding: 0.38rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.13);
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        backdrop-filter: blur(2px);
+      }
+
+      @media (min-width: 768px) {
+        .onze1-hero__actions {
+          display: flex;
+          width: min(100%, 620px);
+          justify-content: space-between;
+          gap: 1.25rem;
+          padding: 0;
+          border: 0;
+          border-radius: 0;
+          background: transparent;
+          backdrop-filter: none;
+        }
+
+        .onze1-hero__divider {
+          display: none;
+        }
+
+        .onze1-hero__link {
+          flex: 0 0 auto;
+          justify-content: center;
+          min-height: 48px;
+          padding: 0.72rem 1.1rem;
+          border-radius: 999px;
+          background: rgba(255, 255, 255, 0.13);
+          border: 1px solid rgba(255, 255, 255, 0.28);
+        }
+
+        .onze1-hero__link:last-child {
+          margin-left: 170px;
+        }
+      }
+
+      .onze1-hero__divider {
+        width: 1px;
+        height: 1.7rem;
+        background: rgba(255, 255, 255, 0.34);
+      }
+
+      .onze1-hero__link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        position: relative;
+        z-index: 2;
+        pointer-events: auto;
+        touch-action: manipulation;
+        font-family: "Traviata", serif;
+        font-size: clamp(0.9rem, 1.4vw, 1.04rem);
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.95) !important;
+        text-decoration: none !important;
+        white-space: nowrap;
+        padding: 0.45rem 0.95rem;
+        border-radius: 999px;
+        transition:
+          background 0.3s ease,
+          color 0.3s ease,
+          transform 0.3s ease;
+      }
+
+      .onze1-hero__link::after {
+        content: "→";
+        font-size: 0.92em;
+        opacity: 0.78;
+      }
+
+      .onze1-hero__link:hover {
+        color: #fff !important;
+        background: rgba(255, 255, 255, 0.18);
+        transform: translateY(-1px);
+      }
+
+      .onze1-hero__note {
+        margin-top: 1.5rem;
+        font-size: 0.7rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        opacity: 0.65;
+        color: #fff !important;
+      }
+
+      /* Circular showcase below hero */
+      .onze1-orbit {
+        background: var(--onze1-cream);
+        padding: clamp(42px, 6vw, 72px) 0;
+        overflow: hidden;
+      }
+
+      .onze1-orbit .onze1-inner {
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .onze1-orbit__head {
+        text-align: center;
+        margin-bottom: 1.2rem;
+      }
+
+      .onze1-orbit__kicker {
+        display: block;
+        font-size: 0.64rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: rgba(28, 27, 26, 0.56);
+        margin-bottom: 0.5rem;
+      }
+
+      .onze1-orbit__title {
+        margin: 0;
+        font-family: "Traviata", serif;
+        font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+        color: rgba(28, 27, 26, 0.92);
+      }
+
+      .onze1-orbit__track-wrap {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .onze1-orbit__track {
+        position: relative;
+        height: clamp(190px, 26vw, 250px);
+      }
+
+      .onze1-orbit__item {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: clamp(86px, 10.2vw, 118px);
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.26);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+        transform: translate(-50%, -50%);
+        transition:
+          transform 0.48s cubic-bezier(0.22, 1, 0.36, 1),
+          filter 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+          opacity 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+          width 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      .onze1-orbit__item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .onze1-orbit__item--center {
+        width: clamp(192px, 21.5vw, 258px);
+        border-color: rgba(255, 255, 255, 0.6);
+        filter: blur(0);
+        opacity: 1;
+        z-index: 4;
+        box-shadow: 0 18px 38px rgba(0, 0, 0, 0.4);
+      }
+
+      .onze1-orbit__item--near {
+        filter: blur(1.4px);
+        opacity: 0.8;
+        z-index: 3;
+        transform: translate(-50%, -50%) scale(0.92);
+      }
+
+      .onze1-orbit__item--far {
+        filter: blur(2.4px);
+        opacity: 0.42;
+        z-index: 2;
+        transform: translate(-50%, -50%) scale(0.84);
+      }
+
+      .onze1-orbit__item--hidden {
+        opacity: 0;
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      .onze1-orbit__controls {
+        position: absolute;
+        inset: 50% 0 auto 0;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+        padding: 0 clamp(6px, 2vw, 18px);
+        pointer-events: none;
+        z-index: 8;
+      }
+
+      .onze1-orbit__btn {
+        width: 46px;
+        height: 46px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.44);
+        background: linear-gradient(
+          145deg,
+          rgba(18, 17, 16, 0.58),
+          rgba(18, 17, 16, 0.36)
+        );
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 0.95rem;
+        font-weight: 400;
+        line-height: 1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        pointer-events: auto;
+        backdrop-filter: blur(6px);
+        box-shadow:
+          0 12px 24px rgba(0, 0, 0, 0.34),
+          inset 0 1px 0 rgba(255, 255, 255, 0.26);
+        transition:
+          background 0.35s ease,
+          border-color 0.35s ease,
+          transform 0.35s ease,
+          box-shadow 0.35s ease,
+          color 0.35s ease;
+      }
+
+      .onze1-orbit__btn:hover {
+        background: linear-gradient(
+          145deg,
+          rgba(18, 17, 16, 0.74),
+          rgba(18, 17, 16, 0.48)
+        );
+        border-color: rgba(255, 255, 255, 0.68);
+        color: #fff;
+        transform: translateY(-2px) scale(1.04);
+        box-shadow:
+          0 16px 30px rgba(0, 0, 0, 0.4),
+          inset 0 1px 0 rgba(255, 255, 255, 0.32);
+      }
+
+      .onze1-orbit__btn:active {
+        transform: translateY(0) scale(0.98);
+      }
+
+      .onze1-orbit__btn:focus-visible {
+        outline: none;
+        border-color: rgba(255, 255, 255, 0.82);
+        box-shadow:
+          0 0 0 3px rgba(255, 255, 255, 0.2),
+          0 14px 26px rgba(0, 0, 0, 0.32);
+      }
+
+      .onze1-orbit__btn svg {
+        width: 14px;
+        height: 14px;
+        display: block;
+      }
+
+      .onze1-orbit__btn svg path {
+        stroke: currentColor;
+        stroke-width: 2.2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill: none;
+      }
+
+      /* Trust strip */
+      .onze1-strip {
+        background: var(--onze1-cream);
+        margin-top: 0;
+        padding-top: clamp(16px, 2.6vw, 32px);
+      }
+
+      .onze1-strip__inner {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: clamp(10px, 2.2vw, 20px);
+        padding: 1.1rem clamp(20px, 4vw, 48px);
+        font-size: 0.68rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--onze1-muted);
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .onze1-strip__inner span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+
+      .onze1-strip__inner .fa {
+        font-size: 0.55rem;
+        opacity: 0.55;
+      }
+
+      /* Philosophy */
+      .onze1-philosophy {
+        padding: clamp(58px, 9vw, 90px) 0;
+        background: var(--onze1-cream);
+      }
+
+      .onze1-philosophy__grid {
+        display: grid;
+        grid-template-columns: minmax(280px, 420px) minmax(0, 1fr);
+        gap: clamp(24px, 4.2vw, 56px);
+        align-items: center;
+        min-width: 0;
+        max-width: 980px;
+        margin: 0 auto;
+      }
+
+      .onze1-philosophy__copy {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 500px;
+      }
+
+      @media (max-width: 991px) {
+        .onze1-philosophy__grid {
+          grid-template-columns: 1fr;
+          gap: clamp(16px, 3vw, 28px);
+        }
+      }
+
+      .onze1-philosophy__visual {
+        position: relative;
+        min-height: 0;
+      }
+
+      .onze1-philosophy__visual img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+        filter: contrast(1.01) saturate(0.94);
+        border: 1px solid rgba(28, 27, 26, 0.08);
+      }
+
+      .onze1-philosophy__frame {
+        display: none;
+      }
+
+      @media (max-width: 991px) {
+        .onze1-philosophy__frame {
+          display: none;
+        }
+      }
+
+      /* Services */
+      .onze1-services {
+        padding: clamp(72px, 11vw, 112px) 0 clamp(42px, 7vw, 68px);
+        background: var(--onze1-cream);
+      }
+
+      .onze1-services__head {
+        text-align: center;
+        margin-bottom: clamp(40px, 6vw, 64px);
+      }
+
+      #onze1-services-title {
+        text-transform: uppercase;
+      }
+
+      .onze1-services__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: clamp(28px, 4vw, 48px);
+      }
+
+      @media (max-width: 767px) {
+        .onze1-services__grid {
+          grid-template-columns: 1fr;
+          max-width: 420px;
+          margin: 0 auto;
+        }
+      }
+
+      .onze1-svc {
+        text-align: center;
+        padding: 2rem 1.25rem 0;
+        border-top: 1px solid var(--onze1-line);
+      }
+
+      .onze1-svc__icon {
+        width: 48px;
+        height: 48px;
+        margin: 0 auto 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--onze1-line);
+        border-radius: 50%;
+        color: var(--onze1-taupe);
+        font-size: 1.1rem;
+      }
+
+      .onze1-svc h3 {
+        font-size: 1.45rem;
+        font-weight: 500;
+        margin: 0 0 0.75rem;
+        color: var(--onze1-ink);
+      }
+
+      .onze1-svc p {
+        font-size: 0.95rem;
+        font-weight: 300;
+        line-height: 1.7;
+        color: var(--onze1-muted);
+        margin: 0;
+      }
+
+      /* Spotlight */
+      .onze1-spotlight {
+        padding: clamp(18px, 3vw, 34px) 0 clamp(72px, 11vw, 112px);
+        background: var(--onze1-cream);
+      }
+
+      @media (min-width: 992px) {
+        .onze1-spotlight .onze1-inner {
+          max-width: 100%;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+
+      .onze1-spotlight__intro {
+        text-align: center;
+        max-width: 900px;
+        margin: 0 auto clamp(30px, 5vw, 48px);
+      }
+
+      .onze1-spotlight__grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: clamp(14px, 2.2vw, 24px);
+      }
+
+      @media (max-width: 991px) {
+        .onze1-spotlight__grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 575px) {
+        .onze1-spotlight__grid {
+          grid-template-columns: 1fr;
+          gap: 14px;
+        }
+      }
+
+      .onze1-treatment {
+        border: 1px solid var(--onze1-line);
+        background: var(--onze1-cream);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+      }
+
+      .onze1-treatment__media {
+        aspect-ratio: 4 / 3;
+        overflow: hidden;
+      }
+
+      .onze1-treatment__media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .onze1-treatment__body {
+        padding: clamp(16px, 2.3vw, 22px);
+        display: flex;
+        flex-direction: column;
+        gap: 0.55rem;
+      }
+
+      .onze1-treatment__note {
+        margin: 0;
+        font-size: 0.84rem;
+        line-height: 1.55;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--onze1-muted);
+      }
+
+      .onze1-treatment__title {
+        font-size: clamp(1.06rem, 1.8vw, 1.28rem);
+        font-weight: 500;
+        margin: 0;
+        color: var(--onze1-ink);
+      }
+
+      .onze1-treatment__copy {
+        margin: 0;
+        font-size: 0.9rem;
+        line-height: 1.65;
+        font-weight: 300;
+        color: var(--onze1-muted);
+      }
+
+      .onze1-treatment__meta {
+        margin-top: auto;
+        padding-top: 0.55rem;
+        font-size: 0.66rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--onze1-taupe);
+      }
+
+      .onze1-treatment__link {
+        margin-top: auto;
+        padding-top: 0.55rem;
+        display: inline-block;
+        font-size: 0.74rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--onze1-ink);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(28, 27, 26, 0.3);
+        padding-bottom: 0.08rem;
+      }
+
+      .onze1-treatment__toggle {
+        margin-top: auto;
+        padding-top: 0.55rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        border: 0;
+        background: transparent;
+        font-size: 0.74rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--onze1-ink);
+        padding-left: 0;
+        cursor: pointer;
+      }
+
+      .onze1-treatment__toggle::after {
+        content: "→";
+        font-size: 0.9em;
+      }
+
+      .onze1-treatment__toggle.is-active {
+        color: var(--onze1-accent);
+      }
+
+      .onze1-spotlight__panel {
+        margin-top: clamp(16px, 2.8vw, 28px);
+        border: 1px solid rgba(177, 114, 86, 0.18);
+        background: #fbf8f4;
+        border-radius: 14px;
+        padding: clamp(18px, 2.6vw, 30px);
+        display: none;
+      }
+
+      .onze1-spotlight__panel.is-open {
+        display: block;
+      }
+
+      .onze1-spotlight__content {
+        display: none;
+      }
+
+      .onze1-spotlight__content.is-active {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.9rem clamp(16px, 2.4vw, 26px);
+        align-items: start;
+      }
+
+      .onze1-spotlight__content h4 {
+        margin: 0;
+        font-size: 1.05rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--onze1-ink);
+      }
+
+      .onze1-spotlight__content.is-active h4 {
+        grid-column: 1 / -1;
+        margin-bottom: 0.35rem;
+      }
+
+      .onze1-spotlight__content p {
+        margin: 0;
+        font-size: 0.88rem;
+        line-height: 1.62;
+        color: var(--onze1-muted);
+        background: #fff;
+        border: 1px solid rgba(177, 114, 86, 0.16);
+        border-left: 3px solid #b17256;
+        border-radius: 10px;
+        padding: 0.78rem 0.86rem;
+      }
+
+      .onze1-spotlight__content strong,
+      .onze1-treatment__mobile-content strong {
+        display: block;
+        margin-bottom: 0.18rem;
+        font-size: 0.9rem;
+        font-weight: 700 !important;
+        color: var(--onze1-ink);
+      }
+
+      .onze1-spotlight__content.is-active p {
+        margin: 0;
+      }
+
+      .onze1-spotlight__content p:last-child {
+        margin-bottom: 0;
+      }
+
+      .onze1-treatment__mobile-content {
+        display: none;
+        margin-top: 0.8rem;
+        padding-top: 0.7rem;
+        border-top: 1px solid rgba(28, 27, 26, 0.12);
+      }
+
+      .onze1-treatment__mobile-content.is-open {
+        display: block;
+      }
+
+      .onze1-treatment__mobile-content h4 {
+        margin: 0 0 0.55rem;
+        font-size: 0.98rem;
+        color: var(--onze1-ink);
+      }
+
+      .onze1-treatment__mobile-content p {
+        margin: 0 0 0.5rem;
+        font-size: 0.84rem;
+        line-height: 1.58;
+        color: var(--onze1-muted);
+        background: #fff;
+        border: 1px solid rgba(177, 114, 86, 0.14);
+        border-left: 3px solid #b17256;
+        border-radius: 8px;
+        padding: 0.68rem 0.72rem;
+      }
+
+      .onze1-treatment__mobile-content p:last-child {
+        margin-bottom: 0;
+      }
+
+      .onze1-emfusion-banner {
+        padding: clamp(36px, 6vw, 76px) 0 clamp(24px, 4vw, 56px);
+        margin-top: 0;
+        background: var(--onze1-cream);
+        margin-bottom: 0;
+      }
+
+      .onze1-emfusion-banner img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Treatments accordion */
+      .onze1-treatments {
+        padding: clamp(72px, 11vw, 112px) 0 clamp(30px, 5vw, 52px);
+        background: #e5ddd2;
+      }
+
+      .onze1-treatments .onze1-inner {
+        max-width: 100%;
+        padding-left: 210px;
+        padding-right: 210px;
+      }
+
+      @media (max-width: 1199px) {
+        .onze1-treatments .onze1-inner {
+          padding-left: 110px;
+          padding-right: 110px;
+        }
+      }
+
+      @media (max-width: 991px) {
+        .onze1-treatments .onze1-inner {
+          padding-left: 48px;
+          padding-right: 48px;
+        }
+      }
+
+      @media (max-width: 575px) {
+        .onze1-treatments .onze1-inner {
+          padding-left: 18px;
+          padding-right: 18px;
+        }
+      }
+
+      .onze1-treatments__head {
+        text-align: center;
+        margin-bottom: clamp(40px, 6vw, 64px);
+      }
+
+      .onze1-treatments .onze1-divider span {
+        color: #111 !important;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+      }
+
+      .onze1-acc {
+        max-width: 100%;
+        margin: 0 auto;
+        border-top: 1px solid rgba(28, 27, 26, 0.15);
+      }
+
+      .onze1-acc details {
+        border-bottom: 1px solid rgba(28, 27, 26, 0.15);
+      }
+
+      .onze1-acc summary {
+        list-style: none;
+        cursor: pointer;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem 0;
+        font-size: clamp(0.92rem, 2.2vw, 1.24rem);
+        font-weight: 500;
+        color: var(--onze1-ink);
+        min-width: 0;
+        overflow-wrap: anywhere;
+      }
+
+      .onze1-acc summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .onze1-acc summary::after {
+        content: "+";
+        font-size: 1rem;
+        font-weight: 400;
+        color: var(--onze1-taupe);
+        flex-shrink: 0;
+        width: 1.25rem;
+        text-align: center;
+        line-height: 1;
+      }
+
+      .onze1-acc details[open] summary::after {
+        content: "−";
+      }
+
+      .onze1-acc__body {
+        padding: 0 0 1rem;
+        max-width: 62rem;
+        font-size: 0.86rem;
+        line-height: 1.62;
+        font-weight: 300;
+        color: var(--onze1-muted);
+      }
+
+      .onze1-qa-services {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.55rem 1.1rem;
+      }
+
+      .onze1-qa-services li {
+        position: relative;
+        padding-left: 1rem;
+        line-height: 1.55;
+      }
+
+      .onze1-qa-services li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.7em;
+        width: 0.35rem;
+        height: 0.35rem;
+        border-radius: 50%;
+        background: rgba(122, 111, 99, 0.8);
+      }
+
+      /* Post Q&A image trio */
+      .onze1-trio {
+        padding: clamp(34px, 6vw, 64px) 0;
+        background: var(--onze1-cream);
+      }
+
+      .onze1-trio .onze1-inner {
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .onze1-trio__grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: clamp(12px, 2vw, 20px);
+      }
+
+      .onze1-trio__card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        background: #d9cec1;
+        aspect-ratio: 4 / 3;
+      }
+
+      .onze1-trio__card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.55s ease;
+      }
+
+      .onze1-trio__card::after {
+        content: "";
+        position: absolute;
+        inset: auto 0 0 0;
+        height: 35%;
+        background: linear-gradient(
+          to top,
+          rgba(17, 14, 12, 0.48),
+          rgba(17, 14, 12, 0)
+        );
+        pointer-events: none;
+      }
+
+      .onze1-trio__label {
+        position: absolute;
+        left: 12px;
+        bottom: 10px;
+        z-index: 1;
+        font-size: 0.72rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #fff;
+      }
+
+      @media (prefers-reduced-motion: no-preference) {
+        .onze1-trio__card:hover img {
+          transform: scale(1.04);
+        }
+      }
+
+      @media (max-width: 900px) {
+        .onze1-trio .onze1-inner {
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+
+        .onze1-trio__grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 12px;
+        }
+
+        .onze1-trio__card:first-child {
+          grid-column: 1 / -1;
+          aspect-ratio: 16 / 9;
+        }
+      }
+
+      @media (max-width: 575px) {
+        .onze1-trio .onze1-inner {
+          padding-left: 14px;
+          padding-right: 14px;
+        }
+
+        .onze1-trio__grid {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+
+        .onze1-trio__card {
+          aspect-ratio: 16 / 10;
+          border-radius: 10px;
+        }
+
+        .onze1-trio__card::after {
+          height: 26%;
+        }
+      }
+
+      /* Gallery */
+      .onze1-gallery {
+        padding: clamp(42px, 7vw, 68px) 0 clamp(72px, 11vw, 112px);
+        background: var(--onze1-cream);
+      }
+
+      .onze1-gallery .onze1-inner {
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .onze1-gallery__head {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .onze1-gallery__grid {
+        display: grid;
+        grid-template-columns: minmax(170px, 1fr) minmax(380px, 2.3fr) minmax(
+            170px,
+            1fr
+          );
+        grid-template-rows: repeat(2, minmax(220px, 1fr));
+        gap: 14px;
+        width: 100%;
+        min-width: 0;
+      }
+
+      .onze1-gallery__cell {
+        position: relative;
+        overflow: hidden;
+        background: var(--onze1-sand);
+        min-height: 140px;
+      }
+
+      .onze1-gallery__cell img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.6s ease;
+      }
+
+      @media (prefers-reduced-motion: no-preference) {
+        .onze1-gallery__cell:hover img {
+          transform: scale(1.04);
+        }
+      }
+
+      .onze1-gallery__cell--a {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        min-height: 454px;
+      }
+
+      .onze1-gallery__cell--b {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .onze1-gallery__cell--c {
+        grid-column: 1;
+        grid-row: 2;
+      }
+
+      .onze1-gallery__cell--d {
+        grid-column: 3;
+        grid-row: 1;
+      }
+
+      .onze1-gallery__cell--e {
+        grid-column: 3;
+        grid-row: 2;
+      }
+
+      @media (max-width: 767px) {
+        .onze1-gallery__grid {
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: auto;
+          gap: 10px;
+        }
+
+        .onze1-gallery__cell--a,
+        .onze1-gallery__cell--b,
+        .onze1-gallery__cell--c,
+        .onze1-gallery__cell--d,
+        .onze1-gallery__cell--e {
+          grid-column: span 1;
+          grid-row: auto;
+          min-height: 160px;
+        }
+
+        .onze1-gallery__cell--a {
+          grid-column: 1 / -1;
+          min-height: 260px;
+        }
+      }
+
+      .onze1-gallery__caption {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 1rem 1.1rem;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #fff;
+        background: linear-gradient(transparent, rgba(18, 16, 14, 0.75));
+      }
+
+      /* Process */
+      .onze1-process {
+        padding: 0 0 clamp(72px, 11vw, 112px);
+        background: var(--onze1-cream);
+      }
+
+      .onze1-process__sub {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.8rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--onze1-taupe);
+        margin: 0 auto 1.25rem;
+      }
+
+      .onze1-process__head {
+        text-align: center;
+        margin-bottom: 3.5rem;
+      }
+
+      .onze1-process__steps {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: clamp(24px, 3vw, 40px);
+        margin-top: clamp(56px, 8vw, 92px);
+      }
+
+      .onze1-step__num {
+        font-size: clamp(2.5rem, 4vw, 3.25rem);
+        font-weight: 600;
+        color: var(--onze1-taupe);
+        opacity: 0.45;
+        line-height: 1;
+        margin-bottom: 0.75rem;
+      }
+
+      .onze1-step h3 {
+        font-size: 1.1rem;
+        font-weight: 500;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin: 0 0 0.65rem;
+        color: var(--onze1-ink);
+      }
+
+      .onze1-step p {
+        font-size: 0.92rem;
+        font-weight: 300;
+        line-height: 1.7;
+        color: var(--onze1-muted);
+        margin: 0;
+      }
+
+      /* Testimonial */
+      .onze1-quoteblock {
+        padding: clamp(72px, 10vw, 100px) 0;
+        background: var(--onze1-cream);
+        text-align: center;
+      }
+
+      .onze1-quote {
+        font-size: clamp(1.65rem, 3.2vw, 2.35rem);
+        font-style: italic;
+        font-weight: 400;
+        line-height: 1.45;
+        max-width: 860px;
+        margin: 0 auto 1.5rem;
+        color: #b17256;
+      }
+
+      .onze1-quote::before {
+        content: "“";
+        display: block;
+        font-size: 2.5rem;
+        line-height: 1;
+        color: #b17256;
+        opacity: 0.45;
+        margin-bottom: 0.5rem;
+      }
+
+      .onze1-quoteby {
+        font-size: 0.85rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #b17256;
+      }
+
+      /* Visit / CTA */
+      .onze1-visit {
+        padding: clamp(34px, 6vw, 56px) 0 clamp(72px, 12vw, 120px);
+        background: var(--onze1-olive);
+        color: #fff;
+        text-align: center;
+      }
+
+      .onze1-visit .onze1-eyebrow {
+        color: rgba(255, 255, 255, 0.55);
+      }
+
+      .onze1-visit h2 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 500;
+        color: #5a3a2a !important;
+        margin: 0 0 1rem;
+      }
+
+      .onze1-visit__sub {
+        font-size: 1.05rem;
+        font-weight: 300;
+        opacity: 0.88;
+        max-width: 36rem;
+        margin: 0 auto 2.5rem;
+        line-height: 1.65;
+        color: #5a3a2a !important;
+      }
+
+      .onze1-visit__row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2.5rem 4rem;
+        margin-bottom: 2.5rem;
+        text-align: left;
+      }
+
+      .onze1-visit__contact a {
+        color: #b17256 !important;
+        text-decoration: none !important;
+        border-bottom: 1px solid rgba(177, 114, 86, 0.45);
+        font-weight: 400;
+      }
+
+      .onze1-visit__contact a:hover {
+        border-bottom-color: #b17256;
+      }
+
+      .onze1-visit__label {
+        font-size: 0.65rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        opacity: 0.55;
+        margin-bottom: 0.35rem;
+        color: #b17256 !important;
+      }
+
+      .onze1-visit__hours {
+        font-size: 0.95rem;
+        font-weight: 300;
+        opacity: 0.9;
+        line-height: 1.6;
+        color: #b17256 !important;
+      }
+
+      .onze1-visit .onze1-btn--light {
+        background: #b17256 !important;
+        border-color: #b17256 !important;
+        color: #fff !important;
+      }
+
+      .onze1-visit .onze1-btn--light:hover,
+      .onze1-visit .onze1-btn--light:focus-visible {
+        background: #9a6248 !important;
+        border-color: #9a6248 !important;
+        color: #fff !important;
+      }
+
+      /* Showcase: editorial image grid */
+      .onze1-showcase {
+        background: var(--onze1-cream);
+        padding: clamp(44px, 7vw, 76px) 0;
+      }
+
+      .onze1-showcase__inner {
+        width: 100%;
+        max-width: 1180px;
+        margin: 0 auto;
+        padding-left: clamp(20px, 4vw, 48px);
+        padding-right: clamp(20px, 4vw, 48px);
+      }
+
+      .onze1-showcase__grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: clamp(10px, 1.8vw, 18px);
+        max-width: 920px;
+        margin: 0 auto;
+      }
+
+      .onze1-showcase__tile {
+        position: relative;
+        overflow: hidden;
+        background: #ddd4c9;
+        aspect-ratio: 4 / 5;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+      }
+
+      .onze1-showcase__tile img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .onze1-showcase__note {
+        margin-top: 14px;
+        text-align: center;
+        font-size: 0.68rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--onze1-taupe);
+      }
+
+      @media (max-width: 575px) {
+        .onze1-process .onze1-h2 {
+          font-size: clamp(2rem, 4.2vw, 3.25rem);
+        }
+
+        .onze1-spotlight__content.is-active {
+          display: block;
+        }
+
+        .onze1-process__steps {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 18px 14px;
+        }
+
+        .onze1-process__steps .onze1-step:nth-child(n + 3) {
+          margin-top: 14px;
+        }
+
+        .onze1-step {
+          text-align: left;
+        }
+
+        .onze1-step__num {
+          margin-bottom: 0.5rem;
+          font-size: clamp(1.8rem, 6vw, 2.25rem);
+        }
+
+        .onze1-step h3 {
+          font-size: 0.94rem;
+          margin-bottom: 0.45rem;
+          letter-spacing: 0.05em;
+        }
+
+        .onze1-step p {
+          font-size: 0.8rem;
+          line-height: 1.5;
+        }
+
+        .onze1-spotlight__panel {
+          display: none !important;
+        }
+
+        .onze1-qa-services {
+          grid-template-columns: 1fr;
+          gap: 0.5rem;
+        }
+      }
+
+      @media (max-width: 767px) {
+        html {
+          scroll-padding-top: 72px;
+        }
+
+        .onze1-inner {
+          padding-left: max(16px, env(safe-area-inset-left, 0px));
+          padding-right: max(16px, env(safe-area-inset-right, 0px));
+        }
+
+        .onze1-showcase__inner {
+          padding-left: max(16px, env(safe-area-inset-left, 0px));
+          padding-right: max(16px, env(safe-area-inset-right, 0px));
+        }
+
+        .onze1-showcase {
+          padding-top: 28px;
+          padding-bottom: 28px;
+        }
+
+        .onze1-showcase__grid {
+          grid-template-columns: 1fr;
+          gap: 10px;
+        }
+
+        .onze1-showcase__note {
+          margin-top: 10px;
+          font-size: 0.58rem;
+          letter-spacing: 0.1em;
+          line-height: 1.5;
+        }
+
+        .onze1-hero {
+          min-height: min(72vh, 620px);
+          padding-top: max(100px, calc(72px + env(safe-area-inset-top, 0px)));
+          padding-bottom: max(28px, env(safe-area-inset-bottom, 0px));
+          align-items: flex-end;
+        }
+
+        .onze1-hero__title {
+          font-size: clamp(1.65rem, 7.5vw, 2.35rem);
+        }
+
+        .onze1-hero__sub {
+          font-size: 0.95rem;
+          line-height: 1.6;
+        }
+
+        .onze1-hero__actions {
+          display: flex;
+          width: 100%;
+          max-width: 420px;
+          flex-direction: column;
+          align-items: stretch;
+          border-radius: 18px;
+          padding: 0.5rem;
+        }
+
+        .onze1-hero__divider {
+          width: calc(100% - 16px);
+          height: 1px;
+          margin: 0.08rem auto;
+          background: rgba(255, 255, 255, 0.24);
+        }
+
+        .onze1-hero__link {
+          justify-content: center;
+          font-size: 0.92rem;
+        }
+
+        .onze1-hero__note {
+          font-size: 0.58rem;
+          letter-spacing: 0.08em;
+          line-height: 1.55;
+        }
+
+        .onze1-strip__inner {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 0.55rem 0.75rem;
+          padding-top: 0.9rem;
+          padding-bottom: 0.9rem;
+          font-size: 0.56rem;
+          letter-spacing: 0.08em;
+        }
+
+        .onze1-strip__inner span {
+          justify-content: center;
+        }
+
+        .onze1-h2 {
+          font-size: clamp(1.5rem, 6.5vw, 2.15rem);
+        }
+
+        .onze1-lead {
+          font-size: 0.95rem;
+        }
+
+        .onze1-philosophy {
+          padding-top: 42px;
+          padding-bottom: 42px;
+        }
+
+        .onze1-philosophy__copy .onze1-h2 {
+          font-size: clamp(1.35rem, 5.6vw, 1.85rem);
+          line-height: 1.24;
+        }
+
+        .onze1-philosophy__copy .onze1-lead {
+          font-size: 0.92rem;
+          line-height: 1.68;
+        }
+
+        .onze1-philosophy__grid {
+          gap: 18px;
+        }
+
+        .onze1-philosophy__visual img {
+          width: 100%;
+          aspect-ratio: 4 / 3;
+          height: auto;
+        }
+
+        .onze1-services__grid {
+          max-width: none;
+          width: 100%;
+        }
+
+        .onze1-svc {
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        .onze1-treatment__media {
+          aspect-ratio: 16 / 11;
+        }
+
+        .onze1-treatment__body {
+          padding: 14px;
+        }
+
+        .onze1-treatment__title {
+          font-size: 1rem;
+        }
+
+        .onze1-treatment__copy {
+          font-size: 0.86rem;
+          line-height: 1.55;
+        }
+
+        .onze1-treatments,
+        .onze1-services,
+        .onze1-gallery {
+          padding-top: 48px;
+          padding-bottom: 48px;
+        }
+
+        .onze1-treatments__head,
+        .onze1-services__head,
+        .onze1-gallery__head {
+          margin-bottom: 2rem;
+        }
+
+        .onze1-gallery__grid {
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: auto;
+          gap: 10px;
+        }
+
+        .onze1-gallery__cell--a,
+        .onze1-gallery__cell--b,
+        .onze1-gallery__cell--c,
+        .onze1-gallery__cell--d,
+        .onze1-gallery__cell--e {
+          grid-column: span 1;
+          grid-row: auto;
+          min-height: 170px;
+        }
+
+        .onze1-gallery__cell--a {
+          grid-column: 1 / -1;
+          min-height: 240px;
+        }
+
+        .onze1-gallery__caption {
+          font-size: 0.9rem;
+          padding: 0.65rem 0.75rem;
+        }
+
+        .onze1-quote {
+          font-size: clamp(1.2rem, 5vw, 1.65rem);
+          padding: 0 0.25rem;
+        }
+
+        .onze1-visit__row {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          gap: 1.5rem;
+        }
+
+        .onze1-visit__contact {
+          text-align: center;
+        }
+
+        .onze1-visit .onze1-btn {
+          width: 100%;
+          max-width: 320px;
+        }
+
+        .onze1-divider {
+          margin-bottom: 1.75rem;
+        }
+
+        .onze1-divider span {
+          white-space: normal;
+          text-align: center;
+          max-width: 12rem;
+          line-height: 1.35;
+        }
+
+        .onze1-process__head {
+          margin-bottom: 2rem;
+        }
+      }
+
+      .onze1-philosophy__link {
+        margin-top: 0.9rem;
+        display: inline-block;
+        font-size: 0.84rem;
+        letter-spacing: 0.02em;
+        color: var(--onze1-ink);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(28, 27, 26, 0.35);
+        padding-bottom: 0.1rem;
+      }
+
+      @media (max-width: 380px) {
+        .onze1-hero__title {
+          font-size: 1.5rem;
+        }
+      }
+
+      @media (max-width: 991px) {
+        .onze1-orbit {
+          padding: clamp(52px, 9vw, 84px) 0;
+        }
+
+        .onze1-orbit__track {
+          height: clamp(240px, 52vw, 320px);
+        }
+
+        .onze1-orbit__controls {
+          padding: 0 8px;
+        }
+
+        .onze1-orbit__item--far {
+          opacity: 0.36;
+          filter: blur(2px);
+          pointer-events: none;
+        }
+      }
+
+      @media (max-width: 575px) {
+        .onze1-orbit__item {
+          width: clamp(96px, 24vw, 132px);
+        }
+
+        .onze1-orbit__item--center {
+          width: clamp(204px, 47vw, 272px);
+        }
+      }
+    </style>
+  </head>
+
+  <body class="sacher-home policy-font-traviata onze1-page">
+    <div id="preloder">
+      <div class="loader"></div>
+    </div>
+
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+      <div class="offcanvas__logo">
+        <a href="./index.html"><img src="img/logoo.webp" alt="Logo" /></a>
+      </div>
+      <div id="mobile-menu-wrap"></div>
+
+      <div class="offcanvas_btn_widget">
+        <a
+          href="https://derand-hotel.hotelrunner.com/bv3/search"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span data-i18n="book-now">BOOK NOW</span>
+          <span class="arrow_right"></span>
+        </a>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="header__top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7"></div>
+            <div class="col-lg-5">
+              <div class="header__top__right"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__nav__option">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-2">
+              <div class="header__logo">
+                <a href="./index.html"
+                  ><img src="img/logoo.webp" alt="Logo"
+                /></a>
+              </div>
+            </div>
+            <div class="col-lg-10">
+              <div class="header__nav">
+                <nav class="header__menu">
+                  <ul class="menu__class">
+                    <li>
+                      <a href="rooms.html" data-i18n="nav-rooms"
+                        >ROOMS & SUITES</a
+                      >
+                      <ul class="dropdown">
+                        <li>
+                          <a href="junior.html" data-i18n="nav-room-1"
+                            >JUNIOR SUITE</a
+                          >
+                        </li>
+                        <li>
+                          <a href="deluxe-double.html" data-i18n="nav-room-2"
+                            >DELUXE DOUBLE ROOM</a
+                          >
+                        </li>
+                        <li>
+                          <a href="superior-twin.html" data-i18n="nav-room-3"
+                            >SUPERIOR TWIN ROOM</a
+                          >
+                        </li>
+                        <li>
+                          <a href="premium-double.html" data-i18n="nav-room-4"
+                            >PREMIUM DOUBLE ROOM</a
+                          >
+                        </li>
+                        <li>
+                          <a href="superior-double.html" data-i18n="nav-room-5"
+                            >SUPERIOR DOUBLE ROOM</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="#" data-i18n="nav-restaurant"
+                        >RESTAURANT & BAR</a
+                      >
+                      <ul class="dropdown">
+                        <li>
+                          <a href="noya.html" data-i18n="nav-restaurant-1"
+                            >NOYA</a
+                          >
+                        </li>
+                        <li>
+                          <a href="omma.html" data-i18n="nav-restaurant-2"
+                            >OMMA-Cafe & Buffet</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="#" data-i18n="nav-activities">ACTIVITIES</a>
+                      <ul class="dropdown">
+                        <li>
+                          <a href="onze.html" data-i18n="nav-activity-1"
+                            >ONZE RECOVERY</a
+                          >
+                        </li>
+                        <li>
+                          <a href="rinu.html" data-i18n="nav-activity-2"></a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="has-dropdown">
+                      <a href="#" data-i18n="nav-inquiry">CONTACT</a>
+
+                      <ul class="dropdown">
+                        <li>
+                          <a href="contact.html" data-i18n="nav-contact-us"
+                            >CONTACT US</a
+                          >
+                        </li>
+                        <li>
+                          <a href="faqs.html" data-i18n="nav-faqs">FAQS</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+
+                <div class="header__lang__selector">
+                  <button class="lang-btn lang-active" data-lang="en">
+                    EN
+                  </button>
+                  <button class="lang-btn" data-lang="de">DE</button>
+                  <button class="lang-btn" data-lang="al">AL</button>
+                </div>
+
+                <div class="header__nav__widget">
+                  <a
+                    href="https://derand-hotel.hotelrunner.com/bv3/search"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span data-i18n="book-now">BOOK NOW</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="canvas__open">
+            <span class="fa fa-bars"></span>
+          </div>
+          <div class="mobile__lang__selector header__lang__selector">
+            <button class="lang-btn lang-active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="de">DE</button>
+            <button class="lang-btn" data-lang="al">AL</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="onze1-main" id="main">
+      <section class="onze1-hero" aria-labelledby="onze1-hero-title">
+        <div class="onze1-inner">
+          <div class="onze1-hero__content">
+            <h1
+              class="onze1-hero__title"
+              id="onze1-hero-title"
+              data-i18n="onze1-hero-title-main"
+            >
+              <span
+                class="onze1-hero__title-sub"
+                data-i18n="onze1-hero-title-sub"
+                >ONZE RECOVERY<br />Advanced treatments for skin, body, and
+                mind.</span
+              >
+            </h1>
+            <div class="onze1-hero__actions">
+              <a
+                class="onze1-hero__link"
+                href="rinuForm.html"
+                data-i18n="onze1-hero-cta-book"
+                >Book a consultation</a
+              >
+              <span class="onze1-hero__divider" aria-hidden="true"></span>
+              <a
+                class="onze1-hero__link"
+                id="onze1-explore-link"
+                href="#onze1-spotlight"
+                data-i18n="onze1-hero-cta-explore"
+                >Explore treatments</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="onze1-strip">
+        <div class="onze1-strip__inner" id="onze1-strip__inner">
+          <span
+            ><i class="fa fa-flask" aria-hidden="true"></i>
+            <span data-i18n="onze1-strip-1">Science-backed tech</span></span
+          >
+          <span
+            ><i class="fa fa-line-chart" aria-hidden="true"></i>
+            <span data-i18n="onze1-strip-2">Data-driven recovery</span></span
+          >
+          <span
+            ><i class="fa fa-clock-o" aria-hidden="true"></i>
+            <span data-i18n="onze1-strip-3">Longevity-focused</span></span
+          >
+          <span
+            ><i class="fa fa-map-marker" aria-hidden="true"></i>
+            <span data-i18n="onze1-strip-4">On-site at Derand</span></span
+          >
+        </div>
+      </div>
+
+      <section
+        class="onze1-spotlight"
+        id="onze1-spotlight"
+        aria-label="Treatment menu highlight"
+      >
+        <div class="onze1-inner">
+          <div class="onze1-spotlight__intro"></div>
+
+          <div class="onze1-spotlight__grid">
+            <article class="onze1-treatment">
+              <div class="onze1-treatment__media">
+                <img
+                  src="img/closup.webp"
+                  alt="Red light therapy close-up"
+                  width="640"
+                  height="480"
+                  loading="lazy"
+                />
+              </div>
+              <div class="onze1-treatment__body">
+                <h3
+                  class="onze1-treatment__title"
+                  data-i18n="onze1-card-skin-title"
+                >
+                  Red light therapy
+                </h3>
+                <button
+                  class="onze1-treatment__toggle"
+                  type="button"
+                  data-treatment="skin"
+                  data-i18n="onze1-card-learn-more"
+                >
+                  Learn more
+                </button>
+                <div
+                  class="onze1-treatment__mobile-content"
+                  data-mobile-treatment-content="skin"
+                >
+                  <h4 data-i18n="onze1-skin-h">Red light therapy</h4>
+                  <p data-i18n="onze1-skin-p1">
+                    <strong>Red Light Therapy</strong><br />
+                    Gentle light-based sessions designed to support skin
+                    renewal, calm visible irritation, and improve overall
+                    radiance.
+                  </p>
+                  <p data-i18n="onze1-skin-p2">
+                    <strong>Glow Recovery Facial</strong><br />
+                    A restorative facial approach focused on hydration, comfort,
+                    and a refreshed post-treatment appearance.
+                  </p>
+                  <p data-i18n="onze1-skin-p3">
+                    <strong>Oxygen-Boosted Skin Support</strong><br />
+                    Freshening protocols that help tired skin feel calmer,
+                    brighter, and more balanced.
+                  </p>
+                  <p data-i18n="onze1-skin-p4">
+                    <strong>Texture &amp; Tone Care</strong><br />
+                    Supportive treatment combinations aimed at smoother-looking
+                    skin and improved tone.
+                  </p>
+                  <p data-i18n="onze1-skin-p5">
+                    <strong>Advanced Recovery Planning</strong><br />
+                    Tailored recommendations based on your skin goals, schedule,
+                    and desired downtime level.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="onze1-treatment">
+              <div class="onze1-treatment__media">
+                <img
+                  src="img/member8.webp"
+                  alt="Cryotherapy treatment"
+                  width="640"
+                  height="480"
+                  loading="lazy"
+                />
+              </div>
+              <div class="onze1-treatment__body">
+                <h3
+                  class="onze1-treatment__title"
+                  data-i18n="onze1-card-body-title"
+                >
+                  Cryotherapy
+                </h3>
+                <button
+                  class="onze1-treatment__toggle"
+                  type="button"
+                  data-treatment="body"
+                  data-i18n="onze1-card-learn-more"
+                >
+                  Learn more
+                </button>
+                <div
+                  class="onze1-treatment__mobile-content"
+                  data-mobile-treatment-content="body"
+                >
+                  <h4 data-i18n="onze1-body-h">Cryotherapy</h4>
+                  <p data-i18n="onze1-body-p1">
+                    <strong>Cryotherapy</strong><br />
+                    Cold-based recovery sessions designed to refresh the body,
+                    reduce fatigue, and support faster post-activity recovery.
+                  </p>
+                  <p data-i18n="onze1-body-p2">
+                    <strong>Body Recovery Rituals</strong><br />
+                    Targeted treatments focused on easing tension and helping
+                    the body feel lighter and more restored.
+                  </p>
+                  <p data-i18n="onze1-body-p3">
+                    <strong>Temperature-Led Wellness</strong><br />
+                    Recovery sessions that use controlled temperature contrast
+                    to energize the body and improve comfort.
+                  </p>
+                  <p data-i18n="onze1-body-p4">
+                    <strong>Circulation Support</strong><br />
+                    Recovery-focused options designed to support circulation and
+                    reduce heavy-body feeling after travel or training.
+                  </p>
+                  <p data-i18n="onze1-body-p5">
+                    <strong>Performance Reset</strong><br />
+                    Body-centered protocols tailored for guests who want to feel
+                    recharged, sharpened, and ready again.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="onze1-treatment">
+              <div class="onze1-treatment__media">
+                <img
+                  src="img/MIND.webp"
+                  alt="Mind treatment"
+                  width="640"
+                  height="480"
+                  loading="lazy"
+                />
+              </div>
+              <div class="onze1-treatment__body">
+                <h3
+                  class="onze1-treatment__title"
+                  data-i18n="onze1-card-mind-title"
+                >
+                  Oxygen therapy
+                </h3>
+                <button
+                  class="onze1-treatment__toggle"
+                  type="button"
+                  data-treatment="mind"
+                  data-i18n="onze1-card-learn-more"
+                >
+                  Learn more
+                </button>
+                <div
+                  class="onze1-treatment__mobile-content"
+                  data-mobile-treatment-content="mind"
+                >
+                  <h4 data-i18n="onze1-mind-h">Oxygen therapy</h4>
+                  <p data-i18n="onze1-mind-p1">
+                    <strong>Oxygen Therapy</strong><br />
+                    Restorative sessions designed to help you feel clearer,
+                    calmer, and more mentally refreshed.
+                  </p>
+                  <p data-i18n="onze1-mind-p2">
+                    <strong>Clarity &amp; Focus Support</strong><br />
+                    Wellness-led recovery sessions created to reduce mental fog
+                    and encourage a more balanced state of mind.
+                  </p>
+                  <p data-i18n="onze1-mind-p3">
+                    <strong>Calm Breathing Recovery</strong><br />
+                    A gentle experience that supports relaxation, breath
+                    quality, and a more grounded post-travel reset.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="onze1-treatment">
+              <div class="onze1-treatment__media">
+                <img
+                  src="img/BODY.webp"
+                  alt="Compression therapy"
+                  width="640"
+                  height="480"
+                  loading="lazy"
+                />
+              </div>
+              <div class="onze1-treatment__body">
+                <h3 class="onze1-treatment__title">COMPRESSION</h3>
+                <button
+                  class="onze1-treatment__toggle"
+                  type="button"
+                  data-treatment="compression"
+                >
+                  Learn more
+                </button>
+                <div
+                  class="onze1-treatment__mobile-content"
+                  data-mobile-treatment-content="compression"
+                >
+                  <h4>COMPRESSION THERAPY</h4>
+                  <p>
+                    <strong>Compression Therapy</strong><br />
+                    Targeted recovery support designed to ease heavy legs, boost
+                    circulation, and help the body recover after travel or
+                    activity.
+                  </p>
+                  <p>
+                    <strong>Leg &amp; Muscle Relief</strong><br />
+                    A comfortable recovery session that helps reduce the feeling
+                    of tension, swelling, and physical heaviness.
+                  </p>
+                  <p>
+                    <strong>Travel Recovery Support</strong><br />
+                    Ideal after long flights, busy schedules, or intense
+                    movement when your body needs a quick reset.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="onze1-treatment">
+              <div class="onze1-treatment__media">
+                <img
+                  src="img/MIND.webp"
+                  alt="Magnetic muscle stimulation"
+                  width="640"
+                  height="480"
+                  loading="lazy"
+                />
+              </div>
+              <div class="onze1-treatment__body">
+                <h3 class="onze1-treatment__title">
+                  Magnetic muscle stimulation
+                </h3>
+                <button
+                  class="onze1-treatment__toggle"
+                  type="button"
+                  data-treatment="magnetic"
+                >
+                  Learn more
+                </button>
+                <div
+                  class="onze1-treatment__mobile-content"
+                  data-mobile-treatment-content="magnetic"
+                >
+                  <h4>MAGNETIC MUSCLE STIMULATION</h4>
+                  <p>
+                    <strong>Magnetic Muscle Stimulation</strong><br />
+                    High-performance recovery support designed to activate
+                    muscle groups, improve tone, and complement
+                    body-conditioning goals.
+                  </p>
+                  <p>
+                    <strong>Strength &amp; Tone Support</strong><br />
+                    A focused treatment option for guests who want a stronger,
+                    more defined physical feeling without downtime.
+                  </p>
+                  <p>
+                    <strong>Smart Recovery Routine</strong><br />
+                    Ideal as part of a modern wellness plan combining recovery,
+                    circulation support, and muscle activation.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="onze1-treatment">
+              <div class="onze1-treatment__media">
+                <img
+                  src="img/Massages_StBarth.webp"
+                  alt="Massage treatment"
+                  width="640"
+                  height="480"
+                  loading="lazy"
+                />
+              </div>
+              <div class="onze1-treatment__body">
+                <h3 class="onze1-treatment__title">MASSAGE</h3>
+                <button
+                  class="onze1-treatment__toggle"
+                  type="button"
+                  data-treatment="massage"
+                >
+                  Learn more
+                </button>
+                <div
+                  class="onze1-treatment__mobile-content"
+                  data-mobile-treatment-content="massage"
+                >
+                  <h4>MASSAGE</h4>
+                  <p>
+                    <strong>Massage Therapy</strong><br />
+                    Restorative hands-on treatments designed to ease tension,
+                    calm the nervous system, and help the body fully unwind.
+                  </p>
+                  <p>
+                    <strong>Deep Relaxation</strong><br />
+                    Tailored massage sessions that support circulation, physical
+                    comfort, and a grounded feeling of recovery.
+                  </p>
+                  <p>
+                    <strong>Travel &amp; Stress Reset</strong><br />
+                    Ideal before or after long days, workouts, or travel when
+                    the body needs softness, warmth, and release.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="onze1-spotlight__panel" id="onze1-spotlight-panel">
+            <div class="onze1-spotlight__content" data-treatment-content="skin">
+              <h4 data-i18n="onze1-skin-h">Red light therapy</h4>
+              <p data-i18n="onze1-skin-p1">
+                <strong>Red Light Therapy</strong><br />
+                Gentle light-based sessions designed to support skin renewal,
+                calm visible irritation, and improve overall radiance.
+              </p>
+              <p data-i18n="onze1-skin-p2">
+                <strong>Glow Recovery Facial</strong><br />
+                A restorative facial approach focused on hydration, comfort, and
+                a refreshed post-treatment appearance.
+              </p>
+              <p data-i18n="onze1-skin-p3">
+                <strong>Oxygen-Boosted Skin Support</strong><br />
+                Freshening protocols that help tired skin feel calmer, brighter,
+                and more balanced.
+              </p>
+              <p data-i18n="onze1-skin-p4">
+                <strong>Texture &amp; Tone Care</strong><br />
+                Supportive treatment combinations aimed at smoother-looking skin
+                and improved tone.
+              </p>
+              <p data-i18n="onze1-skin-p5">
+                <strong>Advanced Recovery Planning</strong><br />
+                Tailored recommendations based on your skin goals, schedule, and
+                desired downtime level.
+              </p>
+            </div>
+
+            <div class="onze1-spotlight__content" data-treatment-content="body">
+              <h4 data-i18n="onze1-body-h">Cryotherapy</h4>
+              <p data-i18n="onze1-body-p1">
+                <strong>Cryotherapy</strong><br />
+                Cold-based recovery sessions designed to refresh the body,
+                reduce fatigue, and support faster post-activity recovery.
+              </p>
+              <p data-i18n="onze1-body-p2">
+                <strong>Body Recovery Rituals</strong><br />
+                Targeted treatments focused on easing tension and helping the
+                body feel lighter and more restored.
+              </p>
+              <p data-i18n="onze1-body-p3">
+                <strong>Temperature-Led Wellness</strong><br />
+                Recovery sessions that use controlled temperature contrast to
+                energize the body and improve comfort.
+              </p>
+              <p data-i18n="onze1-body-p4">
+                <strong>Circulation Support</strong><br />
+                Recovery-focused options designed to support circulation and
+                reduce heavy-body feeling after travel or training.
+              </p>
+              <p data-i18n="onze1-body-p5">
+                <strong>Performance Reset</strong><br />
+                Body-centered protocols tailored for guests who want to feel
+                recharged, sharpened, and ready again.
+              </p>
+            </div>
+
+            <div class="onze1-spotlight__content" data-treatment-content="mind">
+              <h4 data-i18n="onze1-mind-h">Oxygen therapy</h4>
+              <p data-i18n="onze1-mind-p1">
+                <strong>Oxygen Therapy</strong><br />
+                Restorative sessions designed to help you feel clearer, calmer,
+                and more mentally refreshed.
+              </p>
+              <p data-i18n="onze1-mind-p2">
+                <strong>Clarity &amp; Focus Support</strong><br />
+                Wellness-led recovery sessions created to reduce mental fog and
+                encourage a more balanced state of mind.
+              </p>
+              <p data-i18n="onze1-mind-p3">
+                <strong>Calm Breathing Recovery</strong><br />
+                A gentle experience that supports relaxation, breath quality,
+                and a more grounded post-travel reset.
+              </p>
+            </div>
+
+            <div
+              class="onze1-spotlight__content"
+              data-treatment-content="compression"
+            >
+              <h4>COMPRESSION THERAPY</h4>
+              <p>
+                <strong>Compression Therapy</strong><br />
+                Targeted recovery support designed to ease heavy legs, boost
+                circulation, and help the body recover after travel or activity.
+              </p>
+              <p>
+                <strong>Leg &amp; Muscle Relief</strong><br />
+                A comfortable recovery session that helps reduce the feeling of
+                tension, swelling, and physical heaviness.
+              </p>
+              <p>
+                <strong>Travel Recovery Support</strong><br />
+                Ideal after long flights, busy schedules, or intense movement
+                when your body needs a quick reset.
+              </p>
+            </div>
+
+            <div
+              class="onze1-spotlight__content"
+              data-treatment-content="magnetic"
+            >
+              <h4>MAGNETIC MUSCLE STIMULATION</h4>
+              <p>
+                <strong>Magnetic Muscle Stimulation</strong><br />
+                High-performance recovery support designed to activate muscle
+                groups, improve tone, and complement body-conditioning goals.
+              </p>
+              <p>
+                <strong>Strength &amp; Tone Support</strong><br />
+                A focused treatment option for guests who want a stronger, more
+                defined physical feeling without downtime.
+              </p>
+              <p>
+                <strong>Smart Recovery Routine</strong><br />
+                Ideal as part of a modern wellness plan combining recovery,
+                circulation support, and muscle activation.
+              </p>
+            </div>
+
+            <div
+              class="onze1-spotlight__content"
+              data-treatment-content="massage"
+            >
+              <h4>MASSAGE</h4>
+              <p>
+                <strong>Massage Therapy</strong><br />
+                Restorative hands-on treatments designed to ease tension, calm
+                the nervous system, and help the body fully unwind.
+              </p>
+              <p>
+                <strong>Deep Relaxation</strong><br />
+                Tailored massage sessions that support circulation, physical
+                comfort, and a grounded feeling of recovery.
+              </p>
+              <p>
+                <strong>Travel &amp; Stress Reset</strong><br />
+                Ideal before or after long days, workouts, or travel when the
+                body needs softness, warmth, and release.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="onze1-process" id="process" aria-label="How we work">
+        <div class="onze1-inner">
+          <p class="onze1-process__sub" data-i18n="onze1-process-title">
+            How we work
+          </p>
+          <div class="onze1-process__steps">
+            <div class="onze1-step">
+              <div class="onze1-step__num">01</div>
+              <h3 data-i18n="onze1-process-1-h">Consult</h3>
+              <p data-i18n="onze1-process-1-p">
+                Goals, health history, and photography if you consent. No
+                pressure to book same-day.
+              </p>
+            </div>
+            <div class="onze1-step">
+              <div class="onze1-step__num">02</div>
+              <h3 data-i18n="onze1-process-2-h">Plan</h3>
+              <p data-i18n="onze1-process-2-p">
+                A written sequence: what to do in-clinic, what to pause at home,
+                and what to expect hour by hour.
+              </p>
+            </div>
+            <div class="onze1-step">
+              <div class="onze1-step__num">03</div>
+              <h3 data-i18n="onze1-process-3-h">Treat</h3>
+              <p data-i18n="onze1-process-3-p">
+                Unrushed suite time, continuous consent checks, and comfort
+                breaks.
+              </p>
+            </div>
+            <div class="onze1-step">
+              <div class="onze1-step__num">04</div>
+              <h3 data-i18n="onze1-process-4-h">Aftercare</h3>
+              <p data-i18n="onze1-process-4-p">
+                Direct line for questions, cooling tips, and a scheduled
+                check-in photo review.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="onze1-emfusion-banner"
+        aria-label="Emfusion feature image"
+      >
+        <img
+          src="img/Emfusion.webp"
+          alt="Emfusion treatment feature"
+          loading="lazy"
+        />
+      </section>
+
+      <section class="onze1-quoteblock" aria-label="Client words">
+        <div class="onze1-inner">
+          <p class="onze1-quote" data-i18n="onze1-quote-main">
+            I wanted to look like I slept for a week at sea. The team mapped a
+            gentle plan and never rushed the room. It felt like a private wing
+            of the hotel — not a clinic hallway.
+          </p>
+          <p class="onze1-quoteby" data-i18n="onze1-quote-by">— Guest, visit</p>
+        </div>
+      </section>
+
+      <section class="onze1-orbit" aria-label="RINU treatment gallery">
+        <div class="onze1-inner">
+          <div class="onze1-orbit__track-wrap">
+            <div class="onze1-orbit__track" id="onze1-orbit-track">
+              <figure class="onze1-orbit__item">
+                <img
+                  src="img/Massages_Decolte.webp"
+                  alt="Massages Decolte"
+                  loading="eager"
+                  fetchpriority="high"
+                />
+              </figure>
+              <figure class="onze1-orbit__item">
+                <img
+                  src="img/Massages_StBarth.webp"
+                  alt="Massages St Barth"
+                  loading="eager"
+                />
+              </figure>
+              <figure class="onze1-orbit__item">
+                <img
+                  src="img/RINU - EMFUSION - FACIAL.webp"
+                  alt="RINU EMFUSION Facial"
+                  loading="lazy"
+                />
+              </figure>
+              <figure class="onze1-orbit__item">
+                <img
+                  src="img/RINU - EXOMIND2.webp"
+                  alt="RINU EXOMIND 2"
+                  loading="lazy"
+                />
+              </figure>
+              <figure class="onze1-orbit__item">
+                <img
+                  src="img/RINU - EXOMIND.webp"
+                  alt="RINU EXOMIND"
+                  loading="lazy"
+                />
+              </figure>
+              <figure class="onze1-orbit__item">
+                <img
+                  src="img/Massages_Cupping.webp"
+                  alt="Massages Cupping"
+                  loading="lazy"
+                />
+              </figure>
+              <figure class="onze1-orbit__item">
+                <img
+                  src="img/RINU-Pedicure.webp"
+                  alt="RINU Pedicure"
+                  loading="lazy"
+                />
+              </figure>
+              <figure class="onze1-orbit__item">
+                <img
+                  src="img/RINU-Menicure.webp"
+                  alt="RINU Menicure"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+            <div class="onze1-orbit__controls">
+              <button
+                class="onze1-orbit__btn"
+                type="button"
+                id="onze1-orbit-prev"
+                aria-label="Previous image"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M14.5 5.5L8 12l6.5 6.5" />
+                </svg>
+              </button>
+              <button
+                class="onze1-orbit__btn"
+                type="button"
+                id="onze1-orbit-next"
+                aria-label="Next image"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M9.5 5.5L16 12l-6.5 6.5" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="onze1-services"
+        id="services"
+        aria-labelledby="onze1-services-title"
+      >
+        <div class="onze1-inner">
+          <div class="onze1-services__head">
+            <div class="onze1-divider">
+              <span data-i18n="onze1-services-kicker">Signature focus</span>
+            </div>
+            <h2 class="onze1-h2" id="onze1-services-title">
+              <span data-i18n="onze1-services-title"
+                >Take one hour for yourself, without leaving the hotel.</span
+              >
+            </h2>
+            <p
+              class="onze1-lead"
+              style="margin: 0 auto"
+              data-i18n="onze1-services-copy"
+            >
+              brings advanced aesthetic and wellness treatments into your stay
+              at Derand Hotel. Designed for women and men who want visible
+              results without downtime.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="onze1-gallery"
+        id="gallery"
+        aria-labelledby="onze1-gallery-h"
+      >
+        <div class="onze1-inner">
+          <div class="onze1-gallery__grid">
+            <div class="onze1-gallery__cell onze1-gallery__cell--a">
+              <img
+                src="img/RINU - Reception.webp"
+                alt="RINU reception"
+                width="1200"
+                height="900"
+                loading="lazy"
+                style="object-position: center 40%"
+              />
+            </div>
+            <div class="onze1-gallery__cell onze1-gallery__cell--b">
+              <img
+                src="img/RINU---Facials.webp"
+                alt="RINU facials treatment"
+                width="800"
+                height="600"
+                loading="lazy"
+                style="object-position: 20% center"
+              />
+            </div>
+            <div class="onze1-gallery__cell onze1-gallery__cell--c">
+              <img
+                src="img/RINU---Manicure.webp"
+                alt="RINU manicure treatment"
+                width="1200"
+                height="600"
+                loading="lazy"
+                style="object-position: 70% center; filter: saturate(0.92)"
+              />
+            </div>
+            <div class="onze1-gallery__cell onze1-gallery__cell--d">
+              <img
+                src="img/Massages_Cupping (1).webp"
+                alt="RINU cupping massage detail"
+                width="800"
+                height="500"
+                loading="lazy"
+                style="object-position: 85% 30%"
+              />
+            </div>
+            <div class="onze1-gallery__cell onze1-gallery__cell--e">
+              <img
+                src="img/RINU - EXOMIND (1).webp"
+                alt="RINU EXOMIND treatment room"
+                width="800"
+                height="500"
+                loading="lazy"
+                style="object-position: 50% 70%"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="onze1-treatments"
+        id="onze1-treatments"
+        aria-labelledby="onze1-treatments-h"
+      >
+        <div class="onze1-inner">
+          <div class="onze1-treatments__head">
+            <div class="onze1-divider"><span>Q&amp;A</span></div>
+          </div>
+          <div class="onze1-acc">
+            <details>
+              <summary data-i18n="onze1-qa-q1">
+                What should I expect during my first visit?
+              </summary>
+              <div class="onze1-acc__body" data-i18n="onze1-qa-a1">
+                Every treatment at RINU begins with a consultation led by Dr.
+                Diellza Mustafa. We take the time to understand your skin, your
+                body, and your goals, then guide you toward the right treatments
+                based on what actually works for you.<br /><br />
+                Consultations are free.
+              </div>
+            </details>
+            <details>
+              <summary data-i18n="onze1-qa-q2">
+                What can I do during my stay at RINU?
+              </summary>
+              <div class="onze1-acc__body" data-i18n="onze1-qa-a2">
+                <ul class="onze1-qa-services">
+                  <li>Signature massage rituals</li>
+                  <li>Facial lifting and refresh</li>
+                  <li>Biologique Recherche facials</li>
+                  <li>Skin quality and glow enhancement</li>
+                  <li>EXOMIND stress-reset sessions</li>
+                  <li>Body tone and cellulite refinement</li>
+                  <li>Laser hair removal and grooming care</li>
+                  <li>Professional manicure and pedicure</li>
+                </ul>
+              </div>
+            </details>
+            <details>
+              <summary data-i18n="onze1-qa-q3">Massage Rituals</summary>
+              <div class="onze1-acc__body" data-i18n="onze1-qa-a3">
+                - RINU Ritual - St. Barth ChillOut - Deep Tissue - Face &amp;
+                Decollete<br />
+                - Aromatherapy - Cupping - Hot Stone
+              </div>
+            </details>
+            <details>
+              <summary data-i18n="onze1-qa-q4">For women and men</summary>
+              <div class="onze1-acc__body" data-i18n="onze1-qa-a4">
+                Every treatment is adapted to your needs, whether you want to
+                relax, refresh, or refine.
+              </div>
+            </details>
+            <details>
+              <summary data-i18n="onze1-qa-q5">
+                Reset your mind with EXOMIND
+              </summary>
+              <div class="onze1-acc__body" data-i18n="onze1-qa-a5">
+                A non-invasive treatment designed to restore mental balance,
+                improve focus, and support better sleep, while reducing stress
+                and anxiety. Using advanced magnetic stimulation, it works
+                directly on brain activity to bring clarity, calm, and a sense
+                of reset.<br /><br />
+                Perfect during travel or busy periods, when your mind needs to
+                slow down and realign.<br /><br />
+                30 minutes. No downtime.
+              </div>
+            </details>
+            <details>
+              <summary data-i18n="onze1-qa-q6">
+                Treatment Time &amp; Downtime
+              </summary>
+              <div class="onze1-acc__body" data-i18n="onze1-qa-a6">
+                Treatment Time: 15 to 60 minutes depending on the treatment.<br />
+                Downtime: Minimal to none. You can continue your day
+                immediately.
+              </div>
+            </details>
+            <details>
+              <summary data-i18n="onze1-qa-q7">
+                Who performs the treatments?
+              </summary>
+              <div class="onze1-acc__body" data-i18n="onze1-qa-a7">
+                Doctors and trained medical and aesthetic professionals.
+              </div>
+            </details>
+            <details>
+              <summary data-i18n="onze1-qa-q8">Appointments</summary>
+              <div class="onze1-acc__body" data-i18n="onze1-qa-a8">
+                Booking is recommended. Walk-ins are welcome for consultation.
+              </div>
+            </details>
+            <details>
+              <summary data-i18n="onze1-qa-q9">Location</summary>
+              <div class="onze1-acc__body" data-i18n="onze1-qa-a9">
+                Floor -1, Derand Hotel<br />
+                Accessible by elevator or stairs.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="onze1-trio" aria-label="RINU highlights">
+        <div class="onze1-inner">
+          <div class="onze1-trio__grid">
+            <figure class="onze1-trio__card">
+              <img src="img/r1.webp" alt="RINU highlight one" loading="lazy" />
+            </figure>
+            <figure class="onze1-trio__card">
+              <img src="img/r2.webp" alt="RINU highlight two" loading="lazy" />
+            </figure>
+            <figure class="onze1-trio__card">
+              <img src="img/r3.webp" alt="RINU highlight three" loading="lazy" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="onze1-visit" id="visit" aria-labelledby="onze1-visit-h">
+        <div class="onze1-inner">
+          <p class="onze1-eyebrow">Visit RINU</p>
+          <h2 id="onze1-visit-h" data-i18n="onze1-visit-title">
+            Ready when you are
+          </h2>
+          <p class="onze1-visit__sub" data-i18n="onze1-visit-sub">
+            Share your preferred dates — we will take care of all the
+            arrangements and send you the preparation notes for your
+            appointment.
+          </p>
+          <a
+            class="onze1-btn onze1-btn--light"
+            href="rinuForm.html"
+            data-i18n="onze1-visit-cta"
+            >Book a consultation</a
+          >
+          <p style="margin-top: 2rem; font-size: 0.75rem; opacity: 0.55">
+            <a
+              href="our-location.html"
+              style="color: #5a3a2a !important; text-decoration: underline"
+              data-i18n="onze1-visit-directions"
+              >Directions to Derand Hotel</a
+            >
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__brandbar">
+          <a href="index.html" class="footer__brandbar__logo">
+            <img src="img/logo3.webp" alt="Derand Crest" />
+          </a>
+          <span class="footer__brandbar__divider"></span>
+          <a href="#" class="footer__brandbar__partner">
+            <span data-i18n="footer-powered">Powered by</span>
+            <img src="img/logo/logo-1.webp" alt="Powered by partner logo" />
+          </a>
+        </div>
+
+        <div class="footer__contactbar">
+          <a
+            href="https://wa.me/38343727272"
+            class="footer__contactbar__item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-phone"></i>
+            <span>+ 383 43 72 72 72</span>
+          </a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=info@derandhotel.com"
+            class="footer__contactbar__item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-envelope-o"></i>
+            <span>info@derandhotel.com</span>
+          </a>
+          <a
+            href="https://www.google.com/maps/place/Derand+Hotel/@42.655716,21.1505223,200m/data=!3m2!1e3!4b1!4m9!3m8!1s0x13549f6c2e02e469:0xc02b72e6fc22c09b!5m2!4m1!1i2!8m2!3d42.655715!4d21.151166!16s%2Fg%2F11vcm48zlk?entry=ttu&g_ep=EgoyMDI2MDMwOC4wIKXMDSoASAFQAw%3D%3D"
+            class="footer__contactbar__item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-map-marker"></i>
+            <span data-i18n="index-footer-address"
+              >Bekim Fehmiu Str. 30 Pristina 10000 Kosovo</span
+            >
+          </a>
+        </div>
+
+        <div class="footer__content">
+          <div class="row">
+            <div class="col-12 col-lg-5">
+              <div class="footer__newslatter">
+                <h4 data-i18n="newsletter-title">Become part of our world</h4>
+                <p data-i18n="newsletter-copy">
+                  Receive curated stories, seasonal offers, and private
+                  invitations.
+                </p>
+                <form
+                  class="footer__newslatter__form"
+                  action="https://api.web3forms.com/submit"
+                  method="POST"
+                  data-contact-email="info@derandhotel.com"
+                >
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="761d8dce-87b2-4534-bc76-77ec2305d4ec"
+                  />
+                  <input
+                    type="hidden"
+                    name="from_name"
+                    value="Derand Hotel Website (Footer)"
+                  />
+                  <div class="footer__newslatter__group">
+                    <input
+                      type="text"
+                      name="firstName"
+                      placeholder="FIRST NAME"
+                      data-i18n-placeholder="newsletter-first-name"
+                      autocomplete="given-name"
+                    />
+                    <input
+                      type="text"
+                      name="lastName"
+                      placeholder="LAST NAME"
+                      data-i18n-placeholder="newsletter-last-name"
+                      autocomplete="family-name"
+                    />
+                  </div>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="EMAIL ADDRESS"
+                    data-i18n-placeholder="newsletter-email"
+                    autocomplete="email"
+                  />
+                  <label class="footer__newslatter__check">
+                    <input type="checkbox" name="consent" />
+                    <span data-i18n="newsletter-agree"
+                      >I agree to the terms and privacy policy.</span
+                    >
+                  </label>
+                  <button type="submit" data-i18n="newsletter-button">
+                    SIGN ME UP
+                  </button>
+                  <p
+                    class="footer__newslatter__status"
+                    role="status"
+                    aria-live="polite"
+                  ></p>
+                </form>
+              </div>
+            </div>
+            <div class="col-12 col-lg-7">
+              <div class="footer__widget">
+                <div class="footer__links__grid">
+                  <ul>
+                    <li>
+                      <a href="contact.html" data-i18n="footer-link-1"
+                        >Contact Us
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" data-i18n="footer-link-2">Derand History</a>
+                    </li>
+                    <li>
+                      <a href="termsofservices.html" data-i18n="footer-link-3"
+                        >Terms of Service</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" data-i18n="footer-link-4">Derand Magazine</a>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <a href="careers.html" data-i18n="footer-link-5"
+                        >Careers</a
+                      >
+                    </li>
+                    <li>
+                      <a href="faqs.html" data-i18n="footer-link-6">FAQs</a>
+                    </li>
+                    <li>
+                      <a href="privacypolicy.html" data-i18n="footer-link-7"
+                        >Privacy Policy</a
+                      >
+                    </li>
+                    <li><a href="#" data-i18n="footer-link-8">Payments</a></li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <a href="guestapp.html" data-i18n="footer-link-9"
+                        >Guest App
+                      </a>
+                    </li>
+                    <li>
+                      <a href="our-location.html" data-i18n="footer-link-11"
+                        >Our Location</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__social footer__social--bottom">
+          <a
+            href="https://www.facebook.com/derandhotel"
+            aria-label="Facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-facebook"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/derandhotel_prishtina/"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/100894439/admin/dashboard/"
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-linkedin"></i
+          ></a>
+          <a
+            href="https://www.youtube.com/watch?v=cyq_5a9X3wA"
+            aria-label="YouTube"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-youtube-play"></i
+          ></a>
+          <a
+            href="https://www.tiktok.com/@derandhotel"
+            aria-label="TikTok"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-music"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js?v=20260416-2"></script>
+    <script>
+      (function () {
+        var panel = document.getElementById("onze1-spotlight-panel");
+        if (!panel) return;
+
+        var toggles = Array.prototype.slice.call(
+          document.querySelectorAll(".onze1-treatment__toggle"),
+        );
+        var blocks = Array.prototype.slice.call(
+          panel.querySelectorAll("[data-treatment-content]"),
+        );
+        var mobileBlocks = Array.prototype.slice.call(
+          document.querySelectorAll(".onze1-treatment__mobile-content"),
+        );
+        var lastToggleAt = 0;
+
+        function showContent(key) {
+          var isActive = false;
+          blocks.forEach(function (block) {
+            var match = block.getAttribute("data-treatment-content") === key;
+            block.classList.toggle("is-active", match);
+            if (match) isActive = true;
+          });
+
+          panel.classList.toggle("is-open", isActive);
+          toggles.forEach(function (btn) {
+            btn.classList.toggle(
+              "is-active",
+              btn.getAttribute("data-treatment") === key && isActive,
+            );
+          });
+
+          if (isActive) {
+            mobileBlocks.forEach(function (block) {
+              block.classList.remove("is-open");
+            });
+          }
+        }
+
+        function showMobileContent(key) {
+          var isActive = false;
+          mobileBlocks.forEach(function (block) {
+            var match =
+              block.getAttribute("data-mobile-treatment-content") === key;
+            block.classList.toggle("is-open", match);
+            if (match) isActive = true;
+          });
+
+          if (isActive) {
+            blocks.forEach(function (block) {
+              block.classList.remove("is-active");
+            });
+            panel.classList.remove("is-open");
+          }
+
+          toggles.forEach(function (btn) {
+            btn.classList.toggle(
+              "is-active",
+              btn.getAttribute("data-treatment") === key && isActive,
+            );
+          });
+        }
+
+        toggles.forEach(function (btn) {
+          btn.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            var now = Date.now();
+            if (now - lastToggleAt < 220) return;
+            lastToggleAt = now;
+
+            var key = btn.getAttribute("data-treatment");
+            var isResponsive = window.matchMedia("(max-width: 575px)").matches;
+
+            if (isResponsive) {
+              var alreadyOpenMobile = btn.classList.contains("is-active");
+              if (alreadyOpenMobile) {
+                showMobileContent("");
+                return;
+              }
+              showMobileContent(key);
+              return;
+            }
+
+            var alreadyOpenDesktop =
+              panel.classList.contains("is-open") &&
+              btn.classList.contains("is-active");
+            if (alreadyOpenDesktop) {
+              showContent("");
+              return;
+            }
+            showContent(key);
+          });
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        var track = document.getElementById("onze1-orbit-track");
+        if (!track) return;
+
+        var items = Array.prototype.slice.call(
+          track.querySelectorAll(".onze1-orbit__item"),
+        );
+        var prevBtn = document.getElementById("onze1-orbit-prev");
+        var nextBtn = document.getElementById("onze1-orbit-next");
+        var activeIndex = 0;
+        var isAnimating = false;
+
+        function circularDistance(a, b, len) {
+          var diff = (a - b + len) % len;
+          if (diff > len / 2) diff -= len;
+          return diff;
+        }
+
+        function render() {
+          var total = items.length;
+          items.forEach(function (item, idx) {
+            var dist = circularDistance(idx, activeIndex, total);
+            var absDist = Math.abs(dist);
+            var x = dist * 150;
+
+            item.classList.remove(
+              "onze1-orbit__item--center",
+              "onze1-orbit__item--near",
+              "onze1-orbit__item--far",
+              "onze1-orbit__item--hidden",
+            );
+
+            if (absDist === 0) {
+              item.classList.add("onze1-orbit__item--center");
+            } else if (absDist === 1) {
+              item.classList.add("onze1-orbit__item--near");
+            } else if (absDist === 2 || absDist === 3) {
+              item.classList.add("onze1-orbit__item--far");
+            } else {
+              item.classList.add("onze1-orbit__item--hidden");
+            }
+
+            var isLargeScreen = window.matchMedia(
+              "(min-width: 1200px)",
+            ).matches;
+            var isMobileScreen =
+              window.matchMedia("(max-width: 767px)").matches;
+            var step = isLargeScreen
+              ? Math.min(230, Math.max(145, track.clientWidth / 5.2))
+              : isMobileScreen
+                ? Math.min(150, Math.max(104, track.clientWidth / 3.1))
+                : Math.min(220, Math.max(130, track.clientWidth / 5.2));
+            item.style.transform =
+              "translate(calc(-50% + " +
+              (dist * step).toFixed(2) +
+              "px), -50%)";
+          });
+        }
+
+        function goNext() {
+          if (isAnimating) return;
+          isAnimating = true;
+          activeIndex = (activeIndex + 1) % items.length;
+          render();
+          window.setTimeout(function () {
+            isAnimating = false;
+          }, 420);
+        }
+
+        function goPrev() {
+          if (isAnimating) return;
+          isAnimating = true;
+          activeIndex = (activeIndex - 1 + items.length) % items.length;
+          render();
+          window.setTimeout(function () {
+            isAnimating = false;
+          }, 420);
+        }
+
+        if (nextBtn) nextBtn.addEventListener("click", goNext);
+        if (prevBtn) prevBtn.addEventListener("click", goPrev);
+        render();
+      })();
+    </script>
+    <script>
+      (function () {
+        var hero = document.querySelector(".onze1-hero");
+        if (!hero) return;
+
+        var disableParallax =
+          window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+          window.matchMedia("(max-width: 991px)").matches;
+
+        if (disableParallax) return;
+
+        var ticking = false;
+        var parallaxStrength = 0.08;
+
+        function updateParallax() {
+          var heroTop = hero.offsetTop;
+          var scrollY =
+            window.pageYOffset || document.documentElement.scrollTop || 0;
+          var offset = Math.max(0, scrollY - heroTop) * parallaxStrength;
+
+          hero.style.backgroundPosition =
+            "center calc(50% + " + offset.toFixed(2) + "px)";
+          ticking = false;
+        }
+
+        function onScroll() {
+          if (ticking) return;
+          ticking = true;
+          window.requestAnimationFrame(updateParallax);
+        }
+
+        window.addEventListener("scroll", onScroll, { passive: true });
+        window.addEventListener("resize", updateParallax);
+        updateParallax();
+      })();
+    </script>
+    <script>
+      (function () {
+        var reduceMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+        var textNodes = Array.prototype.slice
+          .call(
+            document.querySelectorAll(
+              ".onze1-main h1, .onze1-main h2, .onze1-main h3, .onze1-main h4, .onze1-main p, .onze1-main li, .onze1-main summary, .onze1-main .onze1-hero__link, .onze1-main .onze1-btn",
+            ),
+          )
+          .filter(function (node) {
+            return !node.closest(".onze1-orbit__btn");
+          });
+
+        if (!textNodes.length) return;
+
+        textNodes.forEach(function (node) {
+          node.classList.add("onze1-scroll-reveal");
+        });
+
+        if (reduceMotion) {
+          textNodes.forEach(function (node) {
+            node.classList.add("is-visible");
+          });
+          return;
+        }
+
+        var observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (!entry.isIntersecting) return;
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            });
+          },
+          { threshold: 0.14, rootMargin: "0px 0px -10% 0px" },
+        );
+
+        textNodes.forEach(function (node) {
+          observer.observe(node);
+        });
+
+        var disableParallax =
+          window.matchMedia("(max-width: 991px)").matches || reduceMotion;
+
+        if (disableParallax) return;
+
+        var ticking = false;
+
+        function updateTextParallax() {
+          var viewportH =
+            window.innerHeight || document.documentElement.clientHeight || 0;
+          textNodes.forEach(function (node) {
+            if (!node.classList.contains("is-visible")) return;
+            var rect = node.getBoundingClientRect();
+            if (rect.bottom < 0 || rect.top > viewportH) return;
+            var progress = (rect.top + rect.height * 0.5) / viewportH - 0.5;
+            var offsetY = progress * -22;
+            node.style.transform =
+              "translate3d(0," + offsetY.toFixed(2) + "px,0)";
+          });
+          ticking = false;
+        }
+
+        function onScrollParallax() {
+          if (ticking) return;
+          ticking = true;
+          window.requestAnimationFrame(updateTextParallax);
+        }
+
+        window.addEventListener("scroll", onScrollParallax, { passive: true });
+        window.addEventListener("resize", onScrollParallax);
+        updateTextParallax();
+      })();
+    </script>
+    <script
+      src="https://code.tidio.co/bnuc9odotvfbltnpijihm3enhpjj0ovy.js"
+      async
+    ></script>
+  </body>
+</html>
+ -->

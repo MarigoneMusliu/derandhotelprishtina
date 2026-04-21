@@ -1,0 +1,1600 @@
+﻿<!doctype html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Hiroto Template" />
+    <meta name="keywords" content="Hiroto, unica, creative, html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Derand Hotel</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css" />
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css" />
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+    />
+
+    <style>
+      /* Junior page typography baseline */
+      body.junior-room-page
+        *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]):not([class^="icon_"]):not(
+          [class*=" icon_"]
+        ) {
+        font-family: "Traviata", "Forum", serif !important;
+        font-weight: 400 !important;
+      }
+
+      body.junior-room-page img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .preview-wrap {
+        min-height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: clamp(52px, 7vw, 86px) 24px;
+        box-sizing: border-box;
+        background: #ffffff;
+      }
+
+      .preview-card {
+        width: min(1320px, 94vw);
+        display: grid;
+        grid-template-columns: minmax(420px, 1.08fr) minmax(360px, 0.92fr);
+        gap: clamp(36px, 4.6vw, 96px);
+        align-items: center;
+      }
+
+      .preview-left-col .preview-image-wrap {
+        aspect-ratio: 4 / 5;
+      }
+
+     
+      .preview-badge {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: #b17256;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid rgba(255, 255, 255, 0.95);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.22);
+        pointer-events: none;
+      }
+
+      .preview-badge::after {
+        content: "";
+        position: absolute;
+        inset: 6px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.55);
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .preview-badge__txt {
+        position: relative;
+        z-index: 1;
+        font-family: "Poppins", "Helvetica Neue", Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        line-height: 1;
+      }
+
+      .preview-content {
+        max-width: 560px;
+        padding-right: clamp(0px, 1.8vw, 20px);
+        margin-top: -20px;
+      }
+
+      .preview-copy {
+        margin: 0 0 30px;
+        font-family: "Traviata", "Forum", serif;
+        font-size: clamp(18px, 1.1vw, 22px);
+        line-height: 1.45;
+        letter-spacing: 0.01em;
+        color: #1f1f1f;
+      }
+
+      .preview-copy::first-letter {
+        float: left;
+        font-family: "Traviata", "Forum", serif;
+        font-size: 4.8em;
+        line-height: 0.78;
+        font-weight: 400;
+        color: #b17256;
+        margin: 0.03em 14px 0 0;
+        padding: 0;
+        border: none;
+        width: auto;
+        height: auto;
+        border-radius: 0;
+      }
+
+      .book-btn {
+        display: inline-block;
+        min-width: 196px;
+        text-align: center;
+        text-decoration: none;
+        background: #b17256;
+        color: #fff;
+        padding: 16px 30px;
+        font-family: "Traviata", "Forum", serif;
+        font-size: 20px;
+        letter-spacing: 0.08em;
+        font-weight: 400;
+        text-transform: uppercase;
+        border-radius: 0;
+        border: none;
+        transition: background-color 0.2s ease, color 0.2s ease;
+      }
+
+      .book-btn:hover {
+        background: #8f543e;
+        color: #fff;
+      }
+
+      .junior-specs-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 16px 24px;
+        background: #ffffff;
+      }
+
+      .junior-specs-section .room-specs {
+        max-width: 560px;
+        margin: 0 auto;
+      }
+
+      /* Keep the "more details" slider row horizontal with the added parking stat */
+      .junior-room-page .room-specs__row--prev {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .junior-room-page .room-specs__row--prev .room-specs__stat {
+        flex: 1 1 0;
+        min-width: 0;
+        text-align: center;
+      }
+
+      .junior-room-page .room-specs__row--prev .room-specs__arrow {
+        flex: 0 0 auto;
+      }
+
+      @media (max-width: 900px) {
+        .preview-card {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+
+        .preview-left-col .preview-image-wrap {
+          margin-bottom: 24px;
+        }
+
+        .preview-content {
+          max-width: none;
+        }
+
+        .preview-wrap {
+          padding: 28px 14px;
+        }
+
+        .preview-copy {
+          font-size: 18px;
+          line-height: 1.5;
+        }
+
+        .book-btn {
+          font-size: 16px;
+          min-width: 168px;
+          padding: 13px 22px;
+        }
+
+        .junior-specs-section .room-specs__row--next,
+        .junior-specs-section .room-specs__row--prev {
+          display: flex;
+          flex-wrap: nowrap;
+          align-items: center;
+          justify-content: space-between;
+          gap: 10px;
+        }
+
+        .junior-specs-section .room-specs__stat {
+          flex: 1 1 0;
+          min-width: 0;
+          text-align: center;
+        }
+
+        .junior-specs-section .room-specs__value {
+          font-size: clamp(24px, 5.4vw, 32px);
+        }
+
+        .junior-specs-section .room-specs__label {
+          font-size: 9px;
+        }
+
+        .junior-specs-section .room-specs__arrow {
+          width: 42px;
+          height: 42px;
+        }
+      }
+
+      /* Minimal editorial title (after hero) â€” matches luxury reference */
+      .junior-editorial-title {
+        background: #ffffff;
+        padding: clamp(72px, 11vw, 132px) 24px;
+        text-align: center;
+        overflow: hidden;
+        will-change: transform;
+      }
+
+      .junior-editorial-title .container {
+        max-width: 960px;
+      }
+
+      .junior-editorial-title__kicker {
+        margin: 0 0 clamp(18px, 2.5vw, 28px);
+        font-family: "Poppins", "Helvetica Neue", Arial, sans-serif;
+        font-size: clamp(10px, 1.1vw, 12px);
+        font-weight: 700;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: #1a1a1a;
+      }
+
+      .junior-editorial-title__headline {
+        margin: 0;
+        font-family: "Traviata", "Forum", "Playfair Display", serif;
+        font-size: clamp(30px, 5.6vw, 64px);
+        font-weight: 400;
+        line-height: 1.05;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: #111111;
+      }
+
+      @media (max-width: 575px) {
+        .junior-editorial-title {
+          padding: 56px 20px 64px;
+        }
+
+        .junior-editorial-title__headline {
+          font-size: clamp(32px, 10vw, 48px);
+          letter-spacing: 0.05em;
+        }
+
+        .junior-editorial-title__kicker {
+          letter-spacing: 0.22em;
+        }
+      }
+
+      /* 4x2 image grid section (identical style to provided reference) */
+      .junior-photo-grid {
+        background: #fff;
+        padding: 0;
+        margin: 0;
+      }
+      .junior-photo-grid__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 1fr;
+        gap: 8px;
+        width: 100%;
+      }
+      .junior-photo-grid__cell {
+        position: relative;
+        overflow: hidden;
+        min-height: 200px;
+        background: #f1f1f1;
+        cursor: pointer;
+      }
+      .junior-photo-grid__cell::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0);
+        transition: background-color 0.25s ease;
+      }
+      .junior-photo-grid__cell img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 0.25s ease;
+      }
+      .junior-photo-grid__cell:hover img {
+        transform: scale(1.06);
+      }
+      .junior-photo-grid__cell:hover::after {
+        background: rgba(0, 0, 0, 0.28);
+      }
+      @media (max-width: 991px) {
+        .junior-photo-grid__grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @media (max-width: 575px) {
+        .junior-photo-grid__grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 6px;
+        }
+        .junior-photo-grid__cell {
+          min-height: 140px;
+        }
+      }
+
+      /* Experience headline overrides */
+      .experience-editorial__headline {
+        font-family: "Traviata", "Forum", "Playfair Display", serif !important;
+      }
+      .experience-editorial__line {
+        display: block;
+      }
+
+      /* Image lightbox for junior-photo-grid */
+      .img-lightbox[hidden] {
+        display: none !important;
+      }
+      .img-lightbox {
+        position: fixed;
+        inset: 0;
+        z-index: 2000;
+        display: grid;
+        place-items: center;
+      }
+      .img-lightbox__backdrop {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(2px);
+      }
+      .img-lightbox__img {
+        position: relative;
+        z-index: 1;
+        max-width: 98vw;
+        max-height: 98vh;
+        object-fit: contain;
+        border-radius: 4px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+        animation: lb-zoom 140ms ease-out both;
+      }
+      @keyframes lb-zoom {
+        from {
+          transform: scale(0.96);
+          opacity: 0.6;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      .img-lightbox__close {
+        position: absolute;
+        right: 16px;
+        top: 12px;
+        z-index: 2;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        background: rgba(0, 0, 0, 0.35);
+        color: #fff;
+        font-size: 22px;
+        line-height: 1;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+      }
+
+      /* Junior culinary section overrides */
+      .junior-room-page .culinary-hero .container {
+        max-width: 100%;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+      .junior-room-page .culinary-hero__kicker,
+      .junior-room-page .culinary-hero__title,
+      .junior-room-page .culinary-hero__cta {
+        font-family: "Forum", "Traviata", serif !important;
+      }
+      .junior-room-page .culinary-hero__content {
+        margin-top: clamp(180px, 24vh, 300px);
+      }
+      .junior-room-page .culinary-hero__kicker {
+        font-size: clamp(11px, 1.2vw, 14px) !important;
+        margin-bottom: 12px !important;
+      }
+      .junior-room-page .culinary-hero__title {
+        font-size: clamp(28px, 3.2vw, 44px) !important;
+        line-height: 1.1 !important;
+        letter-spacing: 0.04em !important;
+        white-space: nowrap;
+      }
+      .junior-room-page .culinary-hero__cta {
+        background: #b17256 !important;
+        border-color: #b17256 !important;
+      }
+      .junior-room-page .culinary-hero__cta:hover,
+      .junior-room-page .culinary-hero__cta:focus-visible {
+        background: #8f543e !important;
+        border-color: #8f543e !important;
+      }
+      .junior-room-page .culinary-hero__overlay {
+        background: rgba(0, 0, 0, 0.64) !important;
+      }
+
+      /* Junior-only spacing/sizing tweaks */
+      .junior-room-page .director-showcase__stagger {
+        gap: 30px;
+      }
+      .junior-room-page .director-showcase__stagger-cell {
+        background: transparent !important;
+      }
+      .junior-room-page .director-showcase__stagger-cell--left {
+        margin-top: 0 !important;
+      }
+      .junior-room-page .director-showcase__stagger-cell--left .director-showcase__stagger-img-wrap {
+        width: 48%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .junior-room-page .director-showcase__stagger-cell--right .director-showcase__stagger-img-wrap {
+        width: 88%;
+        margin-left: auto;
+        margin-right: auto;
+        aspect-ratio: 4 / 4.4;
+      }
+      .junior-room-page .arch-rooms-heading__illu {
+        width: min(100%, 120px) !important;
+      }
+      .juniorbath-left-note {
+        width: 48%;
+        margin: 42px auto 0;
+        font-family: "Traviata", "Forum", serif !important;
+        font-size: clamp(18px, 1.7vw, 26px);
+        line-height: 1.62;
+        letter-spacing: 0.01em;
+        color: #1a1a1a;
+        text-align: center;
+        max-width: 36ch;
+        text-wrap: balance;
+      }
+      @media (max-width: 575px) {
+        .junior-room-page .arch-rooms-heading__illu {
+          width: min(100%, 78px) !important;
+        }
+        .juniorbath-left-note {
+          width: 58%;
+          margin-top: 26px;
+          font-size: 16px;
+          line-height: 1.55;
+          max-width: 34ch;
+        }
+        .junior-room-page .director-showcase__stagger {
+          margin-bottom: 26px;
+        }
+      }
+    </style>
+    <style>
+      /* Mobile responsiveness for culinary hero texts (Junior page) */
+      @media (max-width: 575px) {
+        .junior-room-page .culinary-hero__kicker {
+          font-size: 11px !important;
+          letter-spacing: 0.28em !important;
+          margin-bottom: 8px !important;
+        }
+        .junior-room-page .culinary-hero__title {
+          font-size: clamp(20px, 7vw, 28px) !important;
+          line-height: 1.12 !important;
+          letter-spacing: 0.02em !important;
+          white-space: normal !important;
+        }
+        .junior-room-page .culinary-hero__title span {
+          display: block !important;
+        }
+      }
+    </style>
+    <style>
+      /* Darker, top-heavy overlay for 1111.jpeg to avoid light band near bottom */
+      .junior-room-page .sacher-hero__overlay {
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.72) 0%,
+            rgba(0, 0, 0, 0.56) 26%,
+            rgba(0, 0, 0, 0.30) 54%,
+            rgba(0, 0, 0, 0.10) 72%,
+            rgba(0, 0, 0, 0) 82%
+          ) !important;
+      }
+    </style>
+    <style>
+      /* Junior page: clean, small white dropdown for room categories (match Deluxe style) */
+      .junior-room-page .sacher-roomcats__head .room-suite-dropdown > a {
+        border-bottom: 2px solid #b17256 !important;
+        text-decoration: none !important;
+      }
+      .junior-room-page .sacher-roomcats__head .room-suite-dropdown {
+        position: relative;
+      }
+      .junior-room-page .sacher-roomcats__head .room-suite-dropdown__menu {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: calc(100% + 8px);
+        min-width: 220px;
+        background: #ffffff;
+        border: none;
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+        padding: 6px 0;
+        border-radius: 10px;
+        display: none;
+        z-index: 20;
+      }
+      .junior-room-page .sacher-roomcats__head .room-suite-dropdown.is-open .room-suite-dropdown__menu {
+        display: block;
+      }
+      .junior-room-page .sacher-roomcats__head .room-suite-dropdown__menu li {
+        border: none !important;
+      }
+      .junior-room-page .sacher-roomcats__head .room-suite-dropdown__menu li a {
+        display: block;
+        padding: 8px 14px;
+        font-size: 14px;
+        line-height: 1.35;
+        color: #101010;
+        text-transform: none;
+        letter-spacing: 0.2px;
+        border: none !important;
+        text-decoration: none !important;
+        background: transparent;
+      }
+      .junior-room-page .sacher-roomcats__head .room-suite-dropdown__menu li a:hover {
+        background: #f6f6f6;
+        color: #101010;
+      }
+    </style>
+  </head>
+
+  <body class="sacher-home junior-room-page">
+
+    <div id="preloder">
+      <div class="loader"></div>
+    </div>
+
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+      <div class="offcanvas__logo">
+        <a href="./index.html"><img src="img/logoo.webp" alt="Logo" /></a>
+      </div>
+      <div id="mobile-menu-wrap"></div>
+      <div class="offcanvas__btn__widget">
+        <a
+          href="https://derand-hotel.hotelrunner.com/bv3/search"
+          target="_blank"
+          rel="noopener noreferrer"
+          >BOOK NOW <span class="arrow_right"></span
+        ></a>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="header__top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7"></div>
+            <div class="col-lg-5">
+              <div class="header__top__right"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__nav__option">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-2">
+              <div class="header__logo">
+                <a href="./index.html"
+                  ><img src="img/logoo.webp" alt="Logo"
+                /></a>
+              </div>
+            </div>
+            <div class="col-lg-10">
+              <div class="header__nav">
+                <nav class="header__menu">
+                  <ul class="menu__class">
+                    <li>
+                      <a href="rooms.html" data-i18n="nav-rooms"
+                        >ROOMS & SUITES</a
+                      >
+                      <ul class="dropdown">
+                        <li>
+                          <a href="junior.html" data-i18n="nav-room-1"
+                            >JUNIOR SUITE</a
+                          >
+                        </li>
+                        <li>
+                          <a href="deluxe-double.html" data-i18n="nav-room-2"
+                            >DELUXE DOUBLE ROOM</a
+                          >
+                        </li>
+                        <li>
+                          <a href="superior-twin.html" data-i18n="nav-room-3"
+                            >SUPERIOR TWIN ROOM</a
+                          >
+                        </li>
+                        <li>
+                          <a href="premium-double.html" data-i18n="nav-room-4"
+                            >PREMIUM DOUBLE ROOM</a
+                          >
+                        </li>
+                        <li>
+                          <a href="superior-double.html" data-i18n="nav-room-5"
+                            >SUPERIOR DOUBLE ROOM</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="#" data-i18n="nav-restaurant"
+                        >RESTAURANT & BAR</a
+                      >
+                      <ul class="dropdown">
+                        <li>
+                          <a
+                            href="noya.html"
+                            data-i18n="nav-restaurant-1"
+                            >NOYA</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="omma.html"
+                            data-i18n="nav-restaurant-2"
+                            >OMMA-Cafe & Buffet</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="#" data-i18n="nav-activities"
+                        >ACTIVITIES</a
+                      >
+                      <ul class="dropdown">
+                        <li>
+                          <a href="onze.html" data-i18n="nav-activity-1"
+                            >ONZE RECOVERY</a
+                          >
+                        </li>
+                        <li>
+                          <a href="rinu.html" data-i18n="nav-activity-2"
+                            >RINU MEDSPA</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                           <li class="has-dropdown">
+  <a href="#" data-i18n="nav-inquiry">CONTACT</a>
+
+  <ul class="dropdown">
+    <li>
+      <a href="contact.html" data-i18n="nav-contact-us">CONTACT US</a>
+    </li>
+    <li>
+      <a href="faqs.html" data-i18n="nav-faqs">FAQS</a>
+    </li>
+  </ul>
+</li>
+                  </ul>
+                </nav>
+
+                <div class="header__lang__selector">
+                  <button class="lang-btn lang-active" data-lang="en">
+                    EN
+                  </button>
+                  <button class="lang-btn" data-lang="de">DE</button>
+                  <button class="lang-btn" data-lang="al">AL</button>
+                </div>
+
+                <div class="header__nav__widget">
+                  <a
+                    href="https://derand-hotel.hotelrunner.com/bv3/search"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span data-i18n="book-now">BOOK NOW</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="canvas__open">
+            <span class="fa fa-bars"></span>
+          </div>
+          <div class="mobile__lang__selector header__lang__selector">
+            <button class="lang-btn lang-active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="de">DE</button>
+            <button class="lang-btn" data-lang="al">AL</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+<section
+      class="sacher-hero"
+    >
+      <img
+        class="sacher-hero__video"
+        src="img/1111.jpeg"
+        muted
+        loop
+        playsinline
+        preload="none"
+        data-parallax="y"
+        data-parallax-speed="0.12"
+      ></img>
+      <div class="sacher-hero__overlay"></div>
+      <div class="container">
+        <div class="sacher-hero__content">
+          <div
+            class="junior-hero-headline"
+            data-parallax="y"
+            data-parallax-speed="0.28"
+          >
+            <h1 class="junior-hero-title" data-i18n="junior-hero-title">
+              Junior Suite in Prishtina
+            </h1>
+            <p class="junior-hero-brand" data-i18n="junior-hero-brand">
+              Derand Hotel
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="junior-editorial-title"
+      aria-label="Junior Suite"
+      data-parallax="y"
+      data-parallax-speed="0.18"
+    >
+      <div class="container">
+        <p class="junior-editorial-title__kicker" data-i18n="junior-kicker">
+          Pure excellence
+        </p>
+        <h2 class="junior-editorial-title__headline">
+          <span data-i18n="junior-headline">360 Junior Suite</span>
+        </h2>
+      </div>
+    </section>
+
+    <div class="preview-wrap">
+      <div class="preview-card">
+        <div class="preview-left-col">
+          <div class="preview-image-wrap">
+            <a class="preview-link" href="junior-360.html" title="Open 360 view">
+              <img
+                src="img/6.webp"
+                alt="Junior Suite  click for 360 tour"
+                width="560"
+                height="560"
+                loading="lazy"
+              />
+              <span class="preview-badge" aria-hidden="true"
+                ><span class="preview-badge__txt">360</span></span
+              >
+            </a>
+          </div>
+
+        </div>
+
+        <div class="preview-content">
+          <p class="preview-copy" data-i18n="junior-preview-copy">
+            Spacious Junior Suites offer the comfort and finish you expect from
+            a five-star hotel: refined living space, elegant marble bathrooms,
+            and thoughtful details throughout. Typical suites span about 35 to
+            45 square metres, with a calm atmosphere and views toward the city.
+          </p>
+          <a
+            class="book-btn"
+            href="https://derand-hotel.hotelrunner.com/bv3/search"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span data-i18n="book-now">BOOK NOW</span></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <section class="junior-specs-section">
+          <div class="room-specs" data-room-specs>
+            <div class="room-specs__panel" id="junior-specs-0">
+              <div class="room-specs__row room-specs__row--next">
+                <div class="room-specs__stat">
+              <span class="room-specs__value" data-i18n="junior-size-value"
+                >m2</span
+              >
+              <span class="room-specs__label" data-i18n="junior-size-label"
+                >Size</span
+              >
+                </div>
+                <div class="room-specs__stat">
+              <span class="room-specs__value" data-i18n="junior-bed-value"
+                >King size</span
+              >
+              <span class="room-specs__label" data-i18n="junior-bed-label"
+                >Bed</span
+              >
+                </div>
+                <div class="room-specs__stat">
+              <span class="room-specs__value" data-i18n="junior-concierge-value"
+                >24 h</span
+              >
+              <span class="room-specs__label" data-i18n="junior-concierge-label"
+                >Concierge service</span
+              >
+                </div>
+                <button
+                  type="button"
+                  class="room-specs__arrow room-specs__arrow--next"
+                  aria-label="Show more room details"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M10 7l5 5-5 5"
+                      stroke="currentColor"
+                      stroke-width="1.25"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="room-specs__panel" id="junior-specs-1" hidden>
+              <div class="room-specs__row room-specs__row--prev">
+                <button
+                  type="button"
+                  class="room-specs__arrow room-specs__arrow--prev"
+                  aria-label="Back to overview"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M14 7l-5 5 5 5"
+                      stroke="currentColor"
+                      stroke-width="1.25"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                <div class="room-specs__stat">
+              <span class="room-specs__value" data-i18n="junior-bed-value"
+                >King size</span
+              >
+              <span class="room-specs__label" data-i18n="junior-bed-label"
+                >Bed</span
+              >
+                </div>
+                <div class="room-specs__stat">
+              <span class="room-specs__value" data-i18n="junior-concierge-value"
+                >24 h</span
+              >
+              <span class="room-specs__label" data-i18n="junior-concierge-label"
+                >Concierge service</span
+              >
+                </div>
+                <div class="room-specs__stat">
+              <span class="room-specs__value" data-i18n="junior-water-value"
+                >Water</span
+              >
+              <span class="room-specs__label" data-i18n="junior-water-label"
+                >Free</span
+                  >
+                </div>
+                <button
+                  type="button"
+                  class="room-specs__arrow room-specs__arrow--next"
+                  aria-label="Show more room details"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M10 7l5 5-5 5"
+                      stroke="currentColor"
+                      stroke-width="1.25"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="room-specs__panel" id="junior-specs-2" hidden>
+              <div class="room-specs__row room-specs__row--prev">
+                <button
+                  type="button"
+                  class="room-specs__arrow room-specs__arrow--prev"
+                  aria-label="Back to previous details"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M14 7l-5 5 5 5"
+                      stroke="currentColor"
+                      stroke-width="1.25"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                <div class="room-specs__stat">
+              <span class="room-specs__value" data-i18n="junior-water-value"
+                >Water</span
+              >
+              <span class="room-specs__label" data-i18n="junior-water-label"
+                >Free</span
+                  >
+                </div>
+                <div class="room-specs__stat">
+              <span class="room-specs__value" data-i18n="junior-parking-value"
+                >24/7 Parking</span
+              >
+              <span class="room-specs__label" data-i18n="junior-parking-label"
+                >Free</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="room-specs__dots" role="tablist" aria-label="Room details">
+              <button
+                type="button"
+                class="room-specs__dot is-active"
+                role="tab"
+                aria-selected="true"
+                aria-controls="junior-specs-0"
+                id="junior-specs-tab-0"
+              ></button>
+              <button
+                type="button"
+                class="room-specs__dot"
+                role="tab"
+                aria-selected="false"
+                aria-controls="junior-specs-1"
+                id="junior-specs-tab-1"
+              ></button>
+              <button
+                type="button"
+                class="room-specs__dot"
+                role="tab"
+                aria-selected="false"
+                aria-controls="junior-specs-2"
+                id="junior-specs-tab-2"
+              ></button>
+            </div>
+          </div>
+    </section>
+
+    <section class="junior-photo-grid" aria-label="Junior Suite gallery grid">
+      <div class="junior-photo-grid__grid">
+        <div class="junior-photo-grid__cell">
+          <img src="img/j1.webp" alt="Junior suite detail 1" loading="lazy" />
+        </div>
+        <div class="junior-photo-grid__cell">
+          <img src="img/j5.webp" alt="Junior suite detail 2" loading="lazy" />
+      </div>
+        <div class="junior-photo-grid__cell">
+          <img src="img/j3.webp" alt="Junior suite detail 3" loading="lazy" />
+    </div>
+        <div class="junior-photo-grid__cell">
+          <img src="img/j4.webp" alt="Junior suite detail 4" loading="lazy" />
+        </div>
+        <div class="junior-photo-grid__cell">
+          <img src="img/j6.webp" alt="Junior suite detail 5" loading="lazy" />
+        </div>
+        <div class="junior-photo-grid__cell">
+          <img src="img/j2.webp" alt="Junior suite detail 6" loading="lazy" />
+        </div>
+        <div class="junior-photo-grid__cell">
+          <img src="img/j8.webp" alt="Junior suite detail 7" loading="lazy" />
+        </div>
+        <div class="junior-photo-grid__cell">
+          <img src="img/j.webp" alt="Junior suite detail 8" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <div class="img-lightbox" id="imgLightbox" hidden>
+      <div class="img-lightbox__backdrop" data-close></div>
+      <img class="img-lightbox__img" alt="Preview" />
+      <button class="img-lightbox__close" type="button" aria-label="Close" data-close>ï¿½</button>
+    </div>
+
+    <section
+      class="experience-editorial"
+      aria-label="Dining experience"
+    >
+      <div class="container experience-editorial__inner">
+        <div
+          class="experience-editorial__text scroll-reveal"
+          data-reveal-delay="0.1s"
+          data-parallax="y"
+          data-parallax-speed="0.09"
+        >
+          <h2 class="experience-editorial__headline">
+            <span class="experience-editorial__line" data-i18n="junior-experience-line-1"
+              >This time together</span
+            >
+            <span class="experience-editorial__line" data-i18n="junior-experience-line-2"
+              >turns into an unforgettable experience</span
+            >
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="culinary-hero" aria-label="Restaurant and bar">
+      <div class="container">
+        <div
+          class="culinary-hero__frame set-bg parallax-bg"
+          data-setbg="img/restaurant.webp"
+          data-parallax="bg"
+          data-parallax-speed="0.055"
+        >
+          <div class="culinary-hero__overlay"></div>
+          <div
+            class="culinary-hero__content scroll-reveal"
+            data-reveal-delay="0.12s"
+          >
+            <p class="culinary-hero__kicker" data-i18n="culinary-kicker">
+              Eat and drink in style
+            </p>
+            <h1 class="culinary-hero__title">
+              <span data-i18n="culinary-title-line-1">The finest culinary</span>
+              <span data-i18n="culinary-title-line-2">experiences</span>
+            </h1>
+            <a
+              class="culinary-hero__cta"
+              href="omma.html"
+              data-i18n="learn-more"
+              >LEARN MORE</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="director-showcase" aria-labelledby="director-showcase-heading">
+      <div class="director-showcase__inner">
+        <div class="director-showcase__split">
+          <div class="director-showcase__quote-col">
+            <blockquote class="director-showcase__quote" data-i18n="junior-director-quote">
+              <br>
+              <br>
+              <br>
+              Our Junior Suites redefine luxury and well-being with spacious
+              comfort and timeless elegance.
+            </blockquote>
+            <p class="director-showcase__quote-sig">
+              <img src="img/signature.webp" alt="Signature" style="max-width:300px;width:55%;height:auto" />
+            </p>
+            <p
+              class="director-showcase__name"
+              id="director-showcase-heading"
+              data-i18n="junior-director-name"
+            >
+              Derand Hotel PRISHTINA
+            </p>
+            <p class="director-showcase__role" data-i18n="junior-director-role">
+              GENERAL MANAGER
+            </p>
+          </div>
+          <div class="director-showcase__portrait">
+            <img
+              src="img/dafina2.webp"
+              alt="Junior Suite interior â€” bed, headboard, and lighting"
+              width="720"
+              height="960"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+<br>
+<br>
+<section
+      class="arch-rooms-heading"
+      aria-labelledby="arch-rooms-heading-label"
+    >
+      <div class="arch-rooms-heading__inner">
+        <img
+          class="arch-rooms-heading__illu"
+          src="img/arkitektura.webp"
+          alt=""
+          width="380"
+          height="200"
+          loading="lazy"
+        />
+
+      </div>
+    </section>
+
+      <div class="director-showcase__stagger">
+        <div
+          class="director-showcase__stagger-cell director-showcase__stagger-cell--left"
+        >
+          <div class="director-showcase__stagger-img-wrap">
+            <img
+              src="img/juniorbath.jpeg"
+              alt="Elegant hotel lighting and interior detail"
+              width="800"
+              height="1000"
+              loading="lazy"
+            />
+          </div>
+          <p class="juniorbath-left-note" data-i18n="junior-bath-note">
+          Generous proportions and thoughtful details give our Junior Suites a calm, residential atmosphere. Warm lighting and marble finishes in the bathroom create a spa-like sense of ease.
+          </p>
+        </div>
+        <div
+          class="director-showcase__stagger-cell director-showcase__stagger-cell--right"
+        >
+          <div class="director-showcase__stagger-img-wrap">
+            <img
+              src="img/juniorbath.webp"
+              alt="Suite bedding and pillow detail"
+              width="800"
+              height="1000"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="rooms-page">
+      <section class="sacher-roomcats scroll-reveal" data-reveal-delay="0.1">
+        <br />
+        <br />
+        <br />
+
+        <div class="container">
+          <div
+            class="sacher-roomcats__head scroll-reveal from-left"
+            data-reveal-delay="0.2"
+          >
+            <h5>OUR EXQUISITE ROOM CATEGORIES</h5>
+            <br />
+
+            <h2>
+              <span class="room-suite-intro" data-i18n="categories-intro"
+                >I am looking for</span
+              >
+
+              <span class="room-suite-dropdown">
+                <a href="#" data-i18n="categories-trigger"
+                  >all rooms &amp; suites <i class="fa fa-angle-down"></i
+                ></a>
+
+                <ul class="room-suite-dropdown__menu">
+                  <li>
+                    <a href="junior.html" data-i18n="categories-item-1"
+                      >JUNIOR SUITE</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="superior-double.html"
+                      data-i18n="categories-item-2"
+                      >SUPERIOR DOUBLE ROOM</a
+                    >
+                  </li>
+                  <li>
+                    <a href="deluxe-double.html" data-i18n="categories-item-3"
+                      >DELUXE DOUBLE ROOM</a
+                    >
+                  </li>
+                  <li>
+                    <a href="premium-double.html" data-i18n="categories-item-4"
+                      >PREMIUM DOUBLE ROOM</a
+                    >
+                  </li>
+                  <li>
+                    <a href="twin-room.html" data-i18n="categories-item-5"
+                      >TWIN ROOM</a
+                    >
+                  </li>
+                </ul>
+              </span>
+            </h2>
+          </div>
+        </div>
+
+        <div
+          class="sacher-roomcats__grid-wrap scroll-reveal from-right"
+          data-reveal-delay="0.35"
+        >
+          <br />
+          <br />
+          <br />
+
+          <div class="sacher-roomcats__viewport">
+            <div class="sacher-roomcats__grid">
+              <a href="deluxe-double.html" class="sacher-roomcats__item">
+                <img src="img/picture4.webp" alt="Deluxe Double Room" />
+                <div class="sacher-roomcats__content">
+                  <span data-i18n="card-badge-2">SECOND TO NONE</span>
+                  <h4 data-i18n="card-name-2">Deluxe Double Room</h4>
+                  <p>30 m2</p>
+                </div>
+              </a>
+              <a href="twin-room.html" class="sacher-roomcats__item">
+                <img src="img/picture2.webp" alt="Superior Twin Room" />
+                <div class="sacher-roomcats__content">
+                  <span data-i18n="card-badge-3">TOP TIER LUXURY</span>
+                  <h4 data-i18n="card-name-3">Superior Twin Room</h4>
+                  <p>23 m2</p>
+                </div>
+              </a>
+              <a href="premium-double.html" class="sacher-roomcats__item">
+                <img src="img/picture1.webp" alt="Premium Double Room" />
+                <div class="sacher-roomcats__content">
+                  <span data-i18n="card-badge-4">TIMELESS ELEGANCE</span>
+                  <h4 data-i18n="card-name-4">Premium Double Room</h4>
+                  <p>28 m2</p>
+                </div>
+              </a>
+              <a href="superior-double.html" class="sacher-roomcats__item">
+                <img src="img/picture3.webp" alt="Superior Double Room" />
+                <div class="sacher-roomcats__content">
+                  <span data-i18n="card-badge-5">HIGH-CLASS COMFORT</span>
+                  <h4 data-i18n="card-name-5">Superior Double Room</h4>
+                  <p>22 m2</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <button
+            class="sacher-roomcats__nav sacher-roomcats__nav--prev"
+            aria-label="Previous room"
+          >
+            <i class="fa fa-angle-left"></i>
+          </button>
+          <button
+            class="sacher-roomcats__nav sacher-roomcats__nav--next"
+            aria-label="Next room"
+          >
+            <i class="fa fa-angle-right"></i>
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__brandbar">
+          <a href="index.html" class="footer__brandbar__logo">
+            <img src="img/logo3.webp" alt="Derand Crest" />
+          </a>
+          <span class="footer__brandbar__divider"></span>
+          <a href="#" class="footer__brandbar__partner">
+            <span data-i18n="footer-powered">Powered by</span>
+            <img src="img/logo/logo-1.webp" alt="Powered by partner logo" />
+          </a>
+        </div>
+
+        <div class="footer__contactbar">
+          <a
+            href="https://wa.me/38343727272"
+            class="footer__contactbar__item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-phone"></i>
+            <span>+ 383 43 72 72 72</span>
+          </a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=info@derandhotel.com"
+            class="footer__contactbar__item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-envelope-o"></i>
+            <span>info@derandhotel.com</span>
+          </a>
+          <a
+            href="https://www.google.com/maps/place/Derand+Hotel/@42.655716,21.1505223,200m/data=!3m2!1e3!4b1!4m9!3m8!1s0x13549f6c2e02e469:0xc02b72e6fc22c09b!5m2!4m1!1i2!8m2!3d42.655715!4d21.151166!16s%2Fg%2F11vcm48zlk?entry=ttu&g_ep=EgoyMDI2MDMwOC4wIKXMDSoASAFQAw%3D%3D"
+            class="footer__contactbar__item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-map-marker"></i>
+            <span data-i18n="index-footer-address"
+              >Bekim Fehmiu Str. 30 Pristina 10000 Kosovo</span
+            >
+          </a>
+        </div>
+
+        <div class="footer__content">
+          <div class="row">
+            <div class="col-12 col-lg-5">
+              <div class="footer__newslatter">
+                <h4 data-i18n="newsletter-title">Become part of our world</h4>
+                <p data-i18n="newsletter-copy">
+                  Receive curated stories, seasonal offers, and private
+                  invitations.
+                </p>
+                <form
+                  class="footer__newslatter__form"
+                  action="https://api.web3forms.com/submit"
+                  method="POST"
+                  data-contact-email="info@derandhotel.com"
+                >
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="761d8dce-87b2-4534-bc76-77ec2305d4ec"
+                  />
+                  <input
+                    type="hidden"
+                    name="from_name"
+                    value="Derand Hotel Website (Footer)"
+                  />
+                  <div class="footer__newslatter__group">
+                    <input
+                      type="text"
+                      name="firstName"
+                      placeholder="FIRST NAME"
+                      data-i18n-placeholder="newsletter-first-name"
+                      autocomplete="given-name"
+                    />
+                    <input
+                      type="text"
+                      name="lastName"
+                      placeholder="LAST NAME"
+                      data-i18n-placeholder="newsletter-last-name"
+                      autocomplete="family-name"
+                    />
+                  </div>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="EMAIL ADDRESS"
+                    data-i18n-placeholder="newsletter-email"
+                    autocomplete="email"
+                  />
+                  <label class="footer__newslatter__check">
+                    <input type="checkbox" name="consent" />
+                    <span data-i18n="newsletter-agree"
+                      >I agree to the terms and privacy policy.</span
+                    >
+                  </label>
+                  <button type="submit" data-i18n="newsletter-button">
+                    SIGN ME UP
+                  </button>
+                  <p
+                    class="footer__newslatter__status"
+                    role="status"
+                    aria-live="polite"
+                  ></p>
+                </form>
+              </div>
+            </div>
+            <div class="col-12 col-lg-7">
+              <div class="footer__widget">
+                <div class="footer__links__grid">
+                  <ul>
+                    <li>
+                      <a href="contact.html" data-i18n="footer-link-1"
+                        >Contact Us
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" data-i18n="footer-link-2"
+                        >Derand History</a
+                      >
+                    </li>
+                    <li>
+                      <a href="termsofservices.html" data-i18n="footer-link-3"
+                        >Terms of Service</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" data-i18n="footer-link-4">Derand Magazine</a>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <a href="careers.html" data-i18n="footer-link-5">Careers</a>
+                    </li>
+                    <li>
+                      <a href="faqs.html" data-i18n="footer-link-6"
+                        >FAQs</a
+                      >
+                    </li>
+                    <li>
+                      <a href="privacypolicy.html" data-i18n="footer-link-7"
+                        >Privacy Policy</a
+                      >
+                    </li>
+                    <li><a href="#" data-i18n="footer-link-8">Payments</a></li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <a href="guestapp.html" data-i18n="footer-link-9">Guest App </a>
+                    </li>
+                    <li>
+                      <a href="our-location.html" data-i18n="footer-link-11">Our Location</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__social footer__social--bottom">
+          <a
+            href="https://www.facebook.com/derandhotel"
+            aria-label="Facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-facebook"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/derandhotel_prishtina/"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/100894439/admin/dashboard/"
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-linkedin"></i
+          ></a>
+          <a
+            href="https://www.youtube.com/watch?v=cyq_5a9X3wA"
+            aria-label="YouTube"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-youtube-play"></i
+          ></a>
+          <a
+            href="https://www.tiktok.com/@derandhotel"
+            aria-label="TikTok"
+                target="_blank"
+                rel="noopener noreferrer"
+            ><i class="fa fa-music"></i
+          ></a>
+            </div>
+
+      </div>
+    </footer>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js?v=20260416-2"></script>
+    <script>
+      // Junior page: dropdown opens on hover and on click; closes on outside/leave
+      (function () {
+        var root = document.querySelector(".junior-room-page .sacher-roomcats__head");
+        if (!root) return;
+        var dd = root.querySelector(".room-suite-dropdown");
+        if (!dd) return;
+        var trigger = dd.querySelector("a");
+        if (!trigger) return;
+        // Click (for touch)
+        trigger.addEventListener("click", function (e) {
+          e.preventDefault();
+          dd.classList.toggle("is-open");
+        });
+        // Hover (desktop)
+        var open = function () { dd.classList.add("is-open"); };
+        var close = function () { dd.classList.remove("is-open"); };
+        trigger.addEventListener("mouseenter", open);
+        dd.addEventListener("mouseenter", open);
+        dd.addEventListener("mouseleave", close);
+        // Outside click
+        document.addEventListener("click", function (e) {
+          if (!dd.contains(e.target)) close();
+        });
+      })();
+    </script>
+    <script
+      src="https://code.tidio.co/bnuc9odotvfbltnpijihm3enhpjj0ovy.js"
+      async
+    ></script>
+    <script>
+      (function () {
+        var gridImages = document.querySelectorAll(
+          ".junior-photo-grid__cell img"
+        );
+        var lightbox = document.getElementById("imgLightbox");
+        if (!lightbox) return;
+        var lightboxImg = lightbox.querySelector(".img-lightbox__img");
+
+        function openLightbox(src) {
+          if (!src) return;
+          lightboxImg.src = src;
+          lightbox.removeAttribute("hidden");
+          document.body.style.overflow = "hidden";
+        }
+
+        function closeLightbox() {
+          lightbox.setAttribute("hidden", "");
+          lightboxImg.removeAttribute("src");
+          document.body.style.overflow = "";
+        }
+
+        gridImages.forEach(function (img) {
+          img.addEventListener("click", function () {
+            openLightbox(img.getAttribute("src"));
+          });
+        });
+
+        lightbox.addEventListener("click", function (e) {
+          if (e.target.hasAttribute("data-close")) {
+            closeLightbox();
+          }
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") {
+            closeLightbox();
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
+
+

@@ -1,0 +1,111 @@
+﻿<!doctype html>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Premium 360 View</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        background: #05070c;
+        font-family: "Poppins", Arial, sans-serif;
+      }
+
+      .viewer-wrap {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+      }
+
+      .viewer-frame {
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      .back-link {
+        position: fixed;
+        z-index: 5;
+        top: 18px;
+        left: 18px;
+        text-decoration: none;
+        color: #fff;
+        background: #b17256;
+        border: 1px solid #b17256;
+        padding: 10px 14px;
+        border-radius: 999px;
+        font-size: 12px;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        backdrop-filter: blur(4px);
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+      }
+
+      .back-link:hover {
+        background: #8f543e;
+        border-color: #8f543e;
+      }
+      .bathroom-logo {
+        position: fixed;
+        z-index: 5;
+        left: 22px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        text-decoration: none;
+        color: #fff;
+        background: transparent;
+        border: none;
+        padding: 0;
+        transition: transform 0.2s ease;
+      }
+      .bathroom-logo img {
+        width: 54px;
+        height: 54px;
+        object-fit: contain;
+        background: #ffffff;
+        border-radius: 50%;
+        padding: 8px;
+        box-shadow: 0 8px 26px rgba(0, 0, 0, 0.24);
+      }
+      .bathroom-logo span {
+        font-family: "Traviata", "Forum", serif;
+        font-size: 11px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        line-height: 1;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.65);
+      }
+      .bathroom-logo:hover {
+        transform: translateY(-50%) scale(1.03);
+      }
+    </style>
+  </head>
+
+    <a class="back-link" href="premium-double.html">Back to Premium Room</a>
+    <a class="bathroom-logo" href="premium-bathroom-360.html" title="Premium bathroom 360">
+      <img src="img/background.webp" alt="Bathroom logo" />
+      <span>bathroom</span>
+    </a>
+    <div class="viewer-wrap">
+      <iframe
+        class="viewer-frame"
+        src="https://momento360.com/e/u/ec3804c78aa54ca3b38b5060006457a1?utm_campaign=embed&utm_source=other&heading=0&pitch=0&field-of-view=75&size=medium&display-plan=true"
+        title="Premium Room 360"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+<script src='js/jquery-3.3.1.min.js'></script>
+<script src='js/main.js?v=20260416-2'></script>
+</body>
+</html>
+
+

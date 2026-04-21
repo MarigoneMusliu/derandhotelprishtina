@@ -1,0 +1,590 @@
+﻿<!doctype html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Contact - Derand Hotel" />
+    <meta name="keywords" content="Derand Hotel, contact, support" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Contact Us</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css" />
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css" />
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <style>
+      /* Enforce Traviata font on Contact page; keep icons unchanged */
+      .contact-page-traviata
+        *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]):not(
+          [class^="icon_"]
+        ):not([class*=" icon_"]) {
+        font-family: "Traviata", serif !important;
+        font-weight: 400 !important;
+      }
+
+      /* Remove gap between header and hero image */
+      .contact-page-traviata .header,
+      .contact-page-traviata .header__nav__option,
+      .contact-page-traviata .breadcrumb-option {
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+      }
+
+      .contact-page-traviata .breadcrumb-option {
+        padding-top: 0 !important;
+      }
+    </style>
+  </head>
+
+  <body class="policy-font-traviata contact-page-traviata">
+
+    <div id="preloder">
+      <div class="loader"></div>
+    </div>
+
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+      <div class="offcanvas__logo">
+        <a href="./index.html"><img src="img/logoo.webp" alt="Logo" /></a>
+      </div>
+      <div id="mobile-menu-wrap"></div>
+      <div class="offcanvas__btn__widget">
+        <a
+          href="https://derand-hotel.hotelrunner.com/bv3/search"
+          target="_blank"
+          rel="noopener noreferrer"
+          >BOOK NOW <span class="arrow_right"></span
+        ></a>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="header__top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7"></div>
+            <div class="col-lg-5">
+              <div class="header__top__right"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__nav__option">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-2">
+              <div class="header__logo">
+                <a href="./index.html"
+                  ><img src="img/logoo.webp" alt="Logo"
+                /></a>
+              </div>
+            </div>
+            <div class="col-lg-10">
+              <div class="header__nav">
+                <nav class="header__menu">
+                  <ul class="menu__class">
+                    <li>
+                      <a href="rooms.html" data-i18n="nav-rooms"
+                        >ROOMS & SUITES</a
+                      >
+                      <ul class="dropdown">
+                        <li>
+                          <a href="junior.html" data-i18n="nav-room-1"
+                            >JUNIOR SUITE</a
+                          >
+                        </li>
+                        <li>
+                          <a href="deluxe-double.html" data-i18n="nav-room-2"
+                            >DELUXE DOUBLE ROOM</a
+                          >
+                        </li>
+                        <li>
+                          <a href="superior-twin.html" data-i18n="nav-room-3"
+                            >SUPERIOR TWIN ROOM</a
+                          >
+                        </li>
+                        <li>
+                          <a href="premium-double.html" data-i18n="nav-room-4"
+                            >PREMIUM DOUBLE ROOM</a
+                          >
+                        </li>
+                        <li>
+                          <a href="superior-double.html" data-i18n="nav-room-5"
+                            >SUPERIOR DOUBLE ROOM</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="#" data-i18n="nav-restaurant"
+                        >RESTAURANT & BAR</a
+                      >
+                      <ul class="dropdown">
+                        <li>
+                          <a
+                            href="noya.html"
+                            data-i18n="nav-restaurant-1"
+                            >NOYA</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="omma.html"
+                            data-i18n="nav-restaurant-2"
+                            >OMMA-Cafe & Buffet</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="#" data-i18n="nav-activities"
+                        >ACTIVITIES</a
+                      >
+                      <ul class="dropdown">
+                        <li>
+                          <a href="onze.html" data-i18n="nav-activity-1"
+                            >ONZE RECOVERY</a
+                          >
+                        </li>
+                        <li>
+                          <a href="rinu.html" data-i18n="nav-activity-2"
+                            >RINU MEDSPA</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                           <li class="has-dropdown">
+  <a href="#" data-i18n="nav-inquiry">CONTACT</a>
+
+  <ul class="dropdown">
+    <li>
+      <a href="contact.html" data-i18n="nav-contact-us">CONTACT US</a>
+    </li>
+    <li>
+      <a href="faqs.html" data-i18n="nav-faqs">FAQS</a>
+    </li>
+  </ul>
+</li>
+                  </ul>
+                </nav>
+
+                <div class="header__lang__selector">
+                  <button class="lang-btn lang-active" data-lang="en">
+                    EN
+                  </button>
+                  <button class="lang-btn" data-lang="de">DE</button>
+                  <button class="lang-btn" data-lang="al">AL</button>
+                </div>
+
+                <div class="header__nav__widget">
+                  <a
+                    href="https://derand-hotel.hotelrunner.com/bv3/search"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span data-i18n="book-now">BOOK NOW</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="canvas__open">
+            <span class="fa fa-bars"></span>
+          </div>
+          <div class="mobile__lang__selector header__lang__selector">
+            <button class="lang-btn lang-active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="de">DE</button>
+            <button class="lang-btn" data-lang="al">AL</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div
+      class="breadcrumb-option policy-breadcrumb set-bg"
+      data-setbg="img/122.webp"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <div
+              class="breadcrumb__text scroll-reveal"
+              data-reveal-delay="0.04"
+            >
+              <h1 data-i18n="contact-breadcrumb-title">Contact Us</h1>
+              <div class="breadcrumb__links">
+                <a href="./index.html">Home</a>
+                <span data-i18n="contact-breadcrumb-title">Contact Us</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="contact-page spad">
+      <div class="container">
+        <div class="contact-page__shell">
+          <div class="row">
+            <div class="col-lg-5">
+              <div class="contact-page__intro">
+                <p
+                  class="contact-page__kicker scroll-reveal"
+                  data-reveal-delay="0.05"
+                  data-i18n="contact-kicker"
+                >
+                  Derand Hotel
+                </p>
+                <h2
+                  class="scroll-reveal"
+                  data-reveal-delay="0.11"
+                  data-i18n="contact-title"
+                >
+                  Let's Create Your Perfect Stay
+                </h2>
+                <p
+                  class="contact-page__copy scroll-reveal"
+                  data-reveal-delay="0.17"
+                  data-i18n="contact-copy"
+                >
+                  Send us your message and our team will reply with care and
+                  speed.
+                </p>
+                <div class="contact-page__details">
+                  <a
+                    class="contact-page__detail scroll-reveal"
+                    data-reveal-delay="0.23"
+                    href="https://wa.me/38343722722"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa fa-phone"></i>
+                    <span>+383 (0) 43 722 722</span>
+                  </a>
+                  <a
+                    class="contact-page__detail scroll-reveal"
+                    data-reveal-delay="0.29"
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=info@derandhotel.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa fa-envelope-o"></i>
+                    <span>info@derandhotel.com</span>
+                  </a>
+                  <a
+                    class="contact-page__detail scroll-reveal"
+                    data-reveal-delay="0.35"
+                    href="https://www.derandhotel.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa fa-globe"></i>
+                    <span>www.derandhotel.com</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <form
+                class="contact-page__form"
+                action="https://api.web3forms.com/submit"
+                method="POST"
+                data-contact-email="info@derandhotel.com"
+              >
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="761d8dce-87b2-4534-bc76-77ec2305d4ec"
+                />
+                <input
+                  type="hidden"
+                  name="from_name"
+                  value="Derand Hotel Website"
+                />
+                <div class="contact-page__row">
+                  <input
+                    type="text"
+                    name="fullName"
+                    required
+                    placeholder="Full Name"
+                    data-i18n-placeholder="contact-field-name"
+                  />
+                  <input
+                    type="text"
+                    name="username"
+                    required
+                    placeholder="Username"
+                    data-i18n-placeholder="contact-field-username"
+                  />
+                </div>
+                <div class="contact-page__row contact-page__row--single">
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="Email Address"
+                    data-i18n-placeholder="contact-field-email"
+                  />
+                </div>
+                <div class="contact-page__row contact-page__row--single">
+                  <input
+                    type="text"
+                    name="subject"
+                    required
+                    placeholder="Subject"
+                    data-i18n-placeholder="contact-field-subject"
+                  />
+                </div>
+                <div class="contact-page__row contact-page__row--single">
+                  <textarea
+                    name="message"
+                    rows="6"
+                    required
+                    placeholder="Leave your message..."
+                    data-i18n-placeholder="contact-field-message"
+                  ></textarea>
+                </div>
+                <button type="submit" data-i18n="contact-submit">
+                  Send Message
+                </button>
+                <p
+                  class="contact-page__status"
+                  role="status"
+                  aria-live="polite"
+                ></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__brandbar">
+          <a href="index.html" class="footer__brandbar__logo">
+            <img src="img/logo3.webp" alt="Derand Crest" />
+          </a>
+          <span class="footer__brandbar__divider"></span>
+          <a href="#" class="footer__brandbar__partner">
+            <span data-i18n="footer-powered">Powered by</span>
+            <img src="img/logo/logo-1.webp" alt="Powered by partner logo" />
+          </a>
+        </div>
+
+        <div class="footer__contactbar">
+          <a
+            href="https://wa.me/38343727272"
+            class="footer__contactbar__item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-phone"></i>
+            <span>+ 383 43 72 72 72</span>
+          </a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=info@derandhotel.com"
+            class="footer__contactbar__item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-envelope-o"></i>
+            <span>info@derandhotel.com</span>
+          </a>
+          <a
+            href="https://www.google.com/maps/place/Derand+Hotel/@42.655716,21.1505223,200m/data=!3m2!1e3!4b1!4m9!3m8!1s0x13549f6c2e02e469:0xc02b72e6fc22c09b!5m2!4m1!1i2!8m2!3d42.655715!4d21.151166!16s%2Fg%2F11vcm48zlk?entry=ttu&g_ep=EgoyMDI2MDMwOC4wIKXMDSoASAFQAw%3D%3D"
+            class="footer__contactbar__item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-map-marker"></i>
+            <span data-i18n="index-footer-address"
+              >Bekim Fehmiu Str. 30 Pristina 10000 Kosovo</span
+            >
+          </a>
+        </div>
+
+        <div class="footer__content">
+          <div class="row">
+            <div class="col-12 col-lg-5">
+              <div class="footer__newslatter">
+                <h4 data-i18n="newsletter-title">Become part of our world</h4>
+                <p data-i18n="newsletter-copy">
+                  Receive curated stories, seasonal offers, and private
+                  invitations.
+                </p>
+                <form
+                  class="footer__newslatter__form"
+                  action="https://api.web3forms.com/submit"
+                  method="POST"
+                  data-contact-email="begatimlekaj@gmail.com"
+                >
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="761d8dce-87b2-4534-bc76-77ec2305d4ec"
+                  />
+                  <input
+                    type="hidden"
+                    name="from_name"
+                    value="Derand Hotel Website (Footer)"
+                  />
+                  <div class="footer__newslatter__group">
+                    <input
+                      type="text"
+                      name="firstName"
+                      placeholder="FIRST NAME"
+                      data-i18n-placeholder="newsletter-first-name"
+                      autocomplete="given-name"
+                    />
+                    <input
+                      type="text"
+                      name="lastName"
+                      placeholder="LAST NAME"
+                      data-i18n-placeholder="newsletter-last-name"
+                      autocomplete="family-name"
+                    />
+                  </div>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="EMAIL ADDRESS"
+                    data-i18n-placeholder="newsletter-email"
+                    autocomplete="email"
+                  />
+                  <label class="footer__newslatter__check">
+                    <input type="checkbox" name="consent" />
+                    <span data-i18n="newsletter-agree"
+                      >I agree to the terms and privacy policy.</span
+                    >
+                  </label>
+                  <button type="submit" data-i18n="newsletter-button">
+                    SIGN ME UP
+                  </button>
+                  <p
+                    class="footer__newslatter__status"
+                    role="status"
+                    aria-live="polite"
+                  ></p>
+                </form>
+              </div>
+            </div>
+            <div class="col-12 col-lg-7">
+              <div class="footer__widget">
+                <div class="footer__links__grid">
+                  <ul>
+                    <li>
+                      <a href="contact.html" data-i18n="footer-link-1"
+                        >Contact Us
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" data-i18n="footer-link-2"
+                        >Derand History</a
+                      >
+                    </li>
+                    <li>
+                      <a href="termsofservices.html" data-i18n="footer-link-3"
+                        >Terms of Service</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" data-i18n="footer-link-4">Derand Magazine</a>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <a href="careers.html" data-i18n="footer-link-5"
+                        >Careers</a
+                      >
+                    </li>
+                    <li>
+                      <a href="faqs.html" data-i18n="footer-link-6">FAQs</a>
+                    </li>
+                    <li>
+                      <a href="privacypolicy.html" data-i18n="footer-link-7"
+                        >Privacy Policy</a
+                      >
+                    </li>
+                    <li><a href="#" data-i18n="footer-link-8">Payments</a></li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <a href="guestapp.html" data-i18n="footer-link-9"
+                        >Guest App
+                      </a>
+                    </li>
+                    <li>
+                      <a href="our-location.html" data-i18n="footer-link-11"
+                        >Our Location</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__social footer__social--bottom">
+          <a
+            href="https://www.facebook.com/derandhotel"
+            aria-label="Facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-facebook"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/derandhotel_prishtina/"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/100894439/admin/dashboard/"
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-linkedin"></i
+          ></a>
+          <a
+            href="https://www.youtube.com/watch?v=cyq_5a9X3wA"
+            aria-label="YouTube"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-youtube-play"></i
+          ></a>
+          <a
+            href="https://www.tiktok.com/@derandhotel"
+            aria-label="TikTok"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-music"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js?v=20260416-2"></script>
+    <script
+      src="https://code.tidio.co/bnuc9odotvfbltnpijihm3enhpjj0ovy.js"
+      async
+    ></script>
+  </body>
+</html>
+
+

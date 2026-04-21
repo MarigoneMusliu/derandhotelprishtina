@@ -1,0 +1,419 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Open Application - Derand Hotel Careers" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Open Application | Derand Careers</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <style>
+      /* Enforce Traviata font across page, exclude icon fonts */
+      .apply-page
+        *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]):not([class^="icon_"]):not([class*=" icon_"]) {
+        font-family: "Traviata", serif !important;
+        font-weight: 400 !important;
+      }
+      .apply-page input::placeholder,
+      .apply-page textarea::placeholder {
+        font-family: "Traviata", serif !important;
+      }
+      .apply-page [data-parallax] { will-change: transform; }
+      .apply-page{background:#f6f5f3;color:#24211f;}
+      .apply-shell{padding-top:92px;}
+      .apply-wrap{max-width:980px;margin:0 auto;padding:60px 20px 0;}
+      .footer { margin: 0; padding-bottom: 0; }
+      .apply-title{margin:0 0 10px;font-family:"Traviata",serif !important;font-size:clamp(34px,4vw,50px);}
+      .apply-sub{margin:0 0 28px;color:#5c5651;line-height:1.7;}
+      .apply-grid{display:grid;grid-template-columns:210px 1fr;gap:12px 18px;align-items:center;}
+      .apply-grid label{margin:0;color:#4c4641;font-size:14px;}
+      .apply-grid input,.apply-grid select,.apply-grid textarea{width:100%;height:44px;border:1px solid #d8d2cb;background:#fff;padding:0 12px;font-size:14px;}
+      .apply-grid select{
+        appearance:none;
+        -webkit-appearance:none;
+        -moz-appearance:none;
+        padding-right:42px;
+        cursor:pointer;
+        background-image:
+          linear-gradient(45deg, transparent 50%, #7b6f66 50%),
+          linear-gradient(135deg, #7b6f66 50%, transparent 50%);
+        background-position:
+          calc(100% - 18px) 18px,
+          calc(100% - 12px) 18px;
+        background-size:6px 6px,6px 6px;
+        background-repeat:no-repeat;
+      }
+      .apply-grid select:focus{
+        outline:none;
+        border-color:#b17256;
+        box-shadow:0 0 0 2px rgba(177,114,86,.12);
+      }
+      .apply-grid textarea{height:110px;padding-top:10px;resize:vertical;}
+      .apply-file{display:flex;align-items:center;gap:12px;}
+      .apply-upload{display:inline-flex;align-items:center;justify-content:center;height:42px;min-width:180px;border:1px solid #b17256;background:#fff;color:#5a4a41;text-transform:uppercase;letter-spacing:.1em;font-weight:600;font-size:12px;cursor:pointer;}
+      .apply-file-input{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);}
+      .apply-muted{color:#8c837c;font-size:12px;}
+      .apply-group{margin-top:28px;padding-top:16px;border-top:1px solid #ddd6cf;}
+      .apply-group h3{margin:0 0 10px;text-transform:uppercase;letter-spacing:.18em;font-size:12px;color:#6d635b;}
+      .apply-check{border:1px solid #ddd6cf;background:#fbfaf8;padding:14px;}
+      .apply-check label{display:block;margin-bottom:8px;}
+      .apply-actions{margin-top:30px;display:flex;justify-content:space-between;gap:12px;}
+      .apply-btn{min-width:210px;border:0;padding:13px 20px;color:#fff;text-transform:uppercase;letter-spacing:.11em;font-weight:700;font-size:12px;text-decoration:none;text-align:center;}
+      .apply-btn-cancel{background:#8f5a44;}
+      .apply-btn-submit{background:#b17256;}
+      .apply-feedback{display:none;max-width:620px;margin:22px auto 0;text-align:center;padding:0;border:0;background:transparent;border-radius:0;}
+      .apply-feedback.is-visible{display:block;}
+      .apply-feedback__icon{display:none;}
+      .apply-feedback__title{margin:0 0 6px;color:#24211f;font-size:22px;font-weight:600;}
+      .apply-feedback__text{margin:0;color:#3d3a38;}
+      .apply-feedback--error .apply-feedback__title{color:#24211f;}
+      @media (max-width:991px){.apply-shell{padding-top:78px;}.apply-grid{grid-template-columns:1fr;}}
+      @media (max-width:575px){.apply-actions{flex-direction:column;}.apply-btn{width:100%;min-width:0;}}
+    </style>
+  </head>
+  <body class="apply-page apply-shell">
+    <div id="preloder"><div class="loader"></div></div>
+    <header class="header">
+      <div class="header__top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7"></div>
+            <div class="col-lg-5">
+              <div class="header__top__right"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__nav__option">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-2">
+              <div class="header__logo">
+                <a href="./index.html"
+                  ><img src="img/logoo.webp" alt="Logo"
+                /></a>
+              </div>
+            </div>
+            <div class="col-lg-10">
+              <div class="header__nav">
+                <nav class="header__menu">
+                  <ul class="menu__class">
+                    <li>
+                      <a href="rooms.html" data-i18n="nav-rooms"
+                        >ROOMS & SUITES</a
+                      >
+                      <ul class="dropdown">
+                        <li>
+                          <a href="junior.html" data-i18n="nav-room-1"
+                            >JUNIOR SUITE</a
+                          >
+                        </li>
+                        <li>
+                          <a href="deluxe-double.html" data-i18n="nav-room-2"
+                            >DELUXE DOUBLE ROOM</a
+                          >
+                        </li>
+                        <li>
+                          <a href="superior-twin.html" data-i18n="nav-room-3"
+                            >SUPERIOR TWIN ROOM</a
+                          >
+                        </li>
+                        <li>
+                          <a href="premium-double.html" data-i18n="nav-room-4"
+                            >PREMIUM DOUBLE ROOM</a
+                          >
+                        </li>
+                        <li>
+                          <a href="superior-double.html" data-i18n="nav-room-5"
+                            >SUPERIOR DOUBLE ROOM</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="#" data-i18n="nav-restaurant"
+                        >RESTAURANT & BAR</a
+                      >
+                      <ul class="dropdown">
+                        <li>
+                          <a
+                            href="noya.html"
+                            data-i18n="nav-restaurant-1"
+                            >NOYA</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="omma.html"
+                            data-i18n="nav-restaurant-2"
+                            >OMMA-Cafe & Buffet</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                     <a href="#" data-i18n="nav-activities"
+                        >ACTIVITIES</a
+                      >
+                      <ul class="dropdown">
+                        <li>
+                          <a href="onze.html" data-i18n="nav-activity-1"
+                            >ONZE RECOVERY</a
+                          >
+                        </li>
+                        <li>
+                          <a href="rinu.html" data-i18n="nav-activity-2"
+                            >RINU MEDSPA</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                          <li class="has-dropdown">
+  <a href="#" data-i18n="nav-inquiry">CONTACT</a>
+
+  <ul class="dropdown">
+    <li>
+      <a href="contact.html" data-i18n="nav-contact-us">CONTACT US</a>
+    </li>
+    <li>
+      <a href="faqs.html" data-i18n="nav-faqs">FAQS</a>
+    </li>
+  </ul>
+</li>
+                  </ul>
+                </nav>
+
+                <div class="header__lang__selector">
+                  <button class="lang-btn lang-active" data-lang="en">
+                    EN
+                  </button>
+                  <button class="lang-btn" data-lang="de">DE</button>
+                  <button class="lang-btn" data-lang="al">AL</button>
+                </div>
+
+                <div class="header__nav__widget">
+                  <a
+                    href="https://derand-hotel.hotelrunner.com/bv3/search"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span data-i18n="book-now">BOOK NOW</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="canvas__open">
+            <span class="fa fa-bars"></span>
+          </div>
+          <div class="mobile__lang__selector header__lang__selector">
+            <button type="button" class="lang-btn lang-active" data-lang="en">
+              EN
+            </button>
+            <button type="button" class="lang-btn" data-lang="de">DE</button>
+            <button type="button" class="lang-btn" data-lang="al">AL</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="apply-wrap" data-parallax="y" data-parallax-speed="0.02">
+      <h1 class="apply-title" data-i18n="apply-title" data-parallax="y" data-parallax-speed="0.04">Open Application</h1>
+      <p class="apply-sub" data-i18n="apply-sub" data-parallax="y" data-parallax-speed="0.03">Submit your CV and profile to our HR team. We review applications for current and future roles.</p>
+
+      <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" data-parallax="y" data-parallax-speed="0.015">
+        <input type="hidden" name="access_key" value="f0ebec09-a898-43f4-af9e-8a80710de282" />
+        <input type="hidden" name="subject" value="New Open Application - Derand Hotel" />
+        <input type="hidden" name="from_name" value="Derand Careers Form" />
+        <input type="hidden" name="redirect" value="" />
+        <input type="checkbox" name="botcheck" style="display: none;" />
+
+        <div class="apply-grid">
+          <label data-i18n="apply-first-name-label">First name*</label><input type="text" name="first_name" required data-i18n-placeholder="apply-first-name-ph" placeholder="First name*" />
+          <label data-i18n="apply-last-name-label">Last name*</label><input type="text" name="last_name" required data-i18n-placeholder="apply-last-name-ph" placeholder="Last name*" />
+          <label data-i18n="apply-email-label">Email*</label><input type="email" name="email" required pattern="^[^\\s@]+@[^\\s@]+\\.[^\\s@]{2,}$" title="Please enter a valid email (example@domain.com)" data-i18n-placeholder="apply-email-ph" placeholder="Email*" />
+          <label data-i18n="apply-phone-label">Phone*</label><input type="text" name="phone" required data-i18n-placeholder="apply-phone-ph" placeholder="Phone*" />
+          <label data-i18n="apply-preferred-position-label">Preferred position*</label><input type="text" name="preferred_position" required data-i18n-placeholder="apply-preferred-position-ph" placeholder="e.g. Receptionist" />
+          <label data-i18n="apply-department-label">Department*</label>
+          <select name="department" required>
+            <option value="" selected disabled data-i18n="apply-dept-select">Select department</option>
+            <option value="Housekeeping" data-i18n="careers-dept-housekeeping">Housekeeping</option>
+            <option value="Housekeeping Management" data-i18n="careers-dept-housekeeping-mgmt">Housekeeping Management</option>
+            <option value="Reception / Front Office" data-i18n="careers-dept-reception">Reception / Front Office</option>
+            <option value="Security" data-i18n="careers-dept-security">Security</option>
+            <option value="Procurement & Logistics" data-i18n="careers-dept-procurement">Procurement & Logistics</option>
+            <option value="Bell Service" data-i18n="careers-dept-bell">Bell Service</option>
+            <option value="Sales" data-i18n="careers-dept-sales">Sales</option>
+            <option value="Architecture" data-i18n="careers-dept-architecture">Architecture</option>
+            <option value="Social Media" data-i18n="careers-dept-social">Social Media</option>
+            <option value="IT" data-i18n="careers-dept-it">IT</option>
+            <option value="Finance" data-i18n="careers-dept-finance">Finance</option>
+            <option value="UI/UX Design" data-i18n="careers-dept-uiux">UI/UX Design</option>
+            <option value="Management" data-i18n="careers-dept-management">Management</option>
+            <option value="Other" data-i18n="careers-dept-other">Other</option>
+          </select>
+          <label data-i18n="apply-message-label">Short message*</label><textarea name="message" required data-i18n-placeholder="apply-message-ph" placeholder="Write a short message"></textarea>
+
+          <label data-i18n="apply-photo-label">Photo*</label>
+          <div class="apply-file"><label class="apply-upload" for="photo" data-i18n="apply-upload-file">Upload file</label><input class="apply-file-input" id="photo" type="file" name="photo" accept=".webp,.jpeg,.webp,.webp,.pdf" required /><span class="apply-muted" data-i18n="apply-max-size">Max 2 MB</span></div>
+
+          <label data-i18n="apply-resume-label">CV / Resume</label>
+          <div class="apply-file"><label class="apply-upload" for="resume" data-i18n="apply-upload-file">Upload file</label><input class="apply-file-input" id="resume" type="file" name="resume" accept=".pdf,.doc,.docx" /><span class="apply-muted" data-i18n="apply-max-size">Max 2 MB</span></div>
+        </div>
+
+        <div class="apply-group" data-parallax="y" data-parallax-speed="0.02">
+          <h3 data-i18n="apply-consent-title">Data Consent</h3>
+          <div class="apply-check">
+            <label><input type="checkbox" name="data_storage_consent" required /> <span data-i18n="apply-consent-storage">I agree that my data can be stored for recruitment purposes.</span></label>
+            <label><input type="checkbox" name="privacy_policy_consent" required /> <span data-i18n="apply-consent-privacy">I agree to the privacy policy.</span></label>
+          </div>
+        </div>
+
+        <div class="apply-actions" data-parallax="y" data-parallax-speed="0.03">
+          <a class="apply-btn apply-btn-cancel" href="careers.html" data-i18n="apply-cancel">Cancel</a>
+          <button type="submit" class="apply-btn apply-btn-submit" data-i18n="apply-submit">Submit Application</button>
+        </div>
+      </form>
+      <div id="apply-feedback" class="apply-feedback" aria-live="polite" data-parallax="y" data-parallax-speed="0.02">
+        <h3 class="apply-feedback__title" data-i18n="apply-success-title">Application submitted successfully.</h3>
+        <p class="apply-feedback__text" data-i18n="apply-success-text">
+          Thank you. Your application has been received.
+        </p>
+      </div>
+    </main>
+<br>
+<br>
+<br>
+<br>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script>
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var position = params.get("position");
+        var department = params.get("department");
+        var positionInput = document.querySelector('input[name="preferred_position"]');
+        var departmentSelect = document.querySelector('select[name="department"]');
+        var form = document.querySelector("form");
+        var photoInput = document.getElementById("photo");
+        var resumeInput = document.getElementById("resume");
+        var feedback = document.getElementById("apply-feedback");
+        var submitBtn = form ? form.querySelector(".apply-btn-submit") : null;
+        var maxBytes = 2 * 1024 * 1024;
+
+        if (position && positionInput) {
+          positionInput.value = position;
+        }
+        if (department && departmentSelect) {
+          for (var i = 0; i < departmentSelect.options.length; i++) {
+            if (departmentSelect.options[i].value === department) {
+              departmentSelect.value = department;
+              break;
+            }
+          }
+        }
+
+        if (form) {
+          form.addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            if (!form.checkValidity()) {
+              form.reportValidity();
+              return;
+            }
+
+            var errors = [];
+            if (photoInput && photoInput.files[0] && photoInput.files[0].size > maxBytes) {
+              errors.push("Photo must be 2 MB or smaller.");
+            }
+            if (resumeInput && resumeInput.files[0] && resumeInput.files[0].size > maxBytes) {
+              errors.push("CV/Resume must be 2 MB or smaller.");
+            }
+            if (errors.length) {
+              alert(errors.join("\n"));
+              return;
+            }
+
+            if (submitBtn) {
+              submitBtn.disabled = true;
+              submitBtn.textContent = "Submitting...";
+            }
+
+            try {
+              var response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: new FormData(form),
+              });
+              var result = await response.json();
+
+              if (!result.success) {
+                throw new Error(result.message || "Submission failed.");
+              }
+
+              form.style.display = "none";
+              if (feedback) {
+                feedback.classList.remove("apply-feedback--error");
+                feedback.classList.add("is-visible");
+              }
+            } catch (err) {
+              if (feedback) {
+                feedback.classList.add("is-visible", "apply-feedback--error");
+                feedback.querySelector(".apply-feedback__title").textContent = "Unable to submit form";
+                feedback.querySelector(".apply-feedback__text").textContent =
+                  "Please try again in a moment. If the issue continues, email hr@derandhotel.com.";
+              } else {
+                alert("Unable to submit form. Please try again.");
+              }
+            } finally {
+              if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = "Submit Application";
+              }
+            }
+          });
+        }
+
+      })();
+    </script>
+    <script>
+      (function () {
+        var nodes = Array.prototype.slice.call(document.querySelectorAll("[data-parallax='y']"));
+        if (!nodes.length) return;
+
+        var ticking = false;
+        function updateParallax() {
+          var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+          for (var i = 0; i < nodes.length; i++) {
+            var el = nodes[i];
+            var speed = parseFloat(el.getAttribute("data-parallax-speed")) || 0.02;
+            el.style.transform = "translate3d(0," + Math.round(y * speed) + "px,0)";
+          }
+          ticking = false;
+        }
+
+        function onScroll() {
+          if (!ticking) {
+            window.requestAnimationFrame(updateParallax);
+            ticking = true;
+          }
+        }
+
+        window.addEventListener("scroll", onScroll, { passive: true });
+        updateParallax();
+      })();
+    </script>
+    <script src="js/main.js?v=20260416-2"></script>
+
+  </body>
+</html>
+
+
