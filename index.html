@@ -2,19 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Derand Hotel in Prishtina offers elegant rooms and suites, dining, wellness experiences, and modern comfort for business and leisure stays." />
+    <meta name="description" content="Professional description of Derand Hotel in Pristina, offering luxury rooms, premium service, and a top-tier hospitality experience." />
     <meta name="keywords" content="Hiroto, unica, creative, html" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Derand Hotel</title>
+    <link rel="preload" as="image" href="img/indexx.webp" fetchpriority="high" />
 
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css" />
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css" />
-    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css" />
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css" />
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/plugins.min.css" type="text/css" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
     <style>
       .sacher-home .sacher-hero__content {
@@ -112,6 +108,18 @@
       .sacher-instagram__carousel .owl-nav button:focus-visible {
         background: #8a8a8a !important;
       }
+
+      /* Hide Vercel Toolbar/feedback overlays if injected */
+      #__vercel-toolbar,
+      [data-vercel-toolbar],
+      [data-vercel-live-feedback],
+      iframe[src*="vercel.live"],
+      iframe[src*="vercel.com/toolbar"] {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+      }
     </style>
   </head>
 
@@ -198,7 +206,7 @@
                     </li>
 
                     <li>
-                      <a href="#" data-i18n="nav-restaurant"
+                      <a href="noya.html" data-i18n="nav-restaurant"
                         >RESTAURANT & BAR</a
                       >
                       <ul class="dropdown">
@@ -220,7 +228,7 @@
                     </li>
 
                     <li>
-                      <a href="#" data-i18n="nav-activities"
+                      <a href="onze.html" data-i18n="nav-activities"
                         >ACTIVITIES</a
                       >
                       <ul class="dropdown">
@@ -238,7 +246,7 @@
                     </li>
 
                     <li class="has-dropdown">
-  <a href="#" data-i18n="nav-inquiry">CONTACT</a>
+  <a href="contact.html" data-i18n="nav-inquiry">CONTACT</a>
 
   <ul class="dropdown">
     <li>
@@ -272,7 +280,7 @@
               </div>
             </div>
           </div>
-          <div class="canvas__open">
+          <div class="canvas__open" aria-label="Menu" role="button" tabindex="0">
             <span class="fa fa-bars"></span>
           </div>
           <div class="mobile__lang__selector header__lang__selector">
@@ -1257,7 +1265,7 @@
             <img src="img/logo3.webp" alt="Derand Crest"  loading="lazy" decoding="async" width="1200" height="425">
           </a>
           <span class="footer__brandbar__divider"></span>
-          <a href="#" class="footer__brandbar__partner">
+          <a href="index.html" class="footer__brandbar__partner">
             <span data-i18n="footer-powered">Powered by</span>
             <img src="img/logo/logo-1.webp" alt="Powered by partner logo"  loading="lazy" decoding="async" width="3652" height="906">
           </a>
@@ -1370,7 +1378,7 @@
                       </a>
                     </li>
                     <li>
-                      <a href="#" data-i18n="footer-link-2"
+                      <a href="our-location.html" data-i18n="footer-link-2"
                         >Derand History</a
                       >
                     </li>
@@ -1380,7 +1388,7 @@
                       >
                     </li>
                     <li>
-                      <a href="#" data-i18n="footer-link-4">Derand Magazine</a>
+                      <a href="guestapp.html" data-i18n="footer-link-4">Derand Magazine</a>
                     </li>
                   </ul>
                   <ul>
@@ -1397,7 +1405,7 @@
                         >Privacy Policy</a
                       >
                     </li>
-                    <li><a href="#" data-i18n="footer-link-8">Payments</a></li>
+                    <li><a href="termsofservices.html" data-i18n="footer-link-8">Payments</a></li>
                   </ul>
                   <ul>
                     <li>
@@ -1493,15 +1501,46 @@
     </script>
     <script>
       window.addEventListener("load", function () {
-        window.setTimeout(function () {
+        var tidioLoaded = false;
+        function loadTidioOnce() {
+          if (tidioLoaded) return;
+          tidioLoaded = true;
           try {
             var s = document.createElement("script");
             s.src = "https://code.tidio.co/bnuc9odotvfbltnpijihm3enhpjj0ovy.js";
             s.defer = true;
             document.body.appendChild(s);
           } catch (e) {}
-        }, 6000);
+          window.removeEventListener("scroll", onFirstScroll, { passive: true });
+        }
+        function onFirstScroll() {
+          loadTidioOnce();
+        }
+        window.addEventListener("scroll", onFirstScroll, { passive: true, once: true });
+        window.setTimeout(loadTidioOnce, 7000);
       });
+    </script>
+    <script>
+      (function () {
+        function removeToolbarOverlays() {
+          var selectors = [
+            "#__vercel-toolbar",
+            "[data-vercel-toolbar]",
+            "[data-vercel-live-feedback]",
+            'iframe[src*="vercel.live"]',
+            'iframe[src*="vercel.com/toolbar"]'
+          ];
+          for (var i = 0; i < selectors.length; i++) {
+            var nodes = document.querySelectorAll(selectors[i]);
+            for (var j = 0; j < nodes.length; j++) {
+              nodes[j].remove();
+            }
+          }
+        }
+        document.addEventListener("DOMContentLoaded", removeToolbarOverlays);
+        window.addEventListener("load", removeToolbarOverlays);
+        window.setInterval(removeToolbarOverlays, 1500);
+      })();
     </script>
   </body>
 </html>
