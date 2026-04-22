@@ -296,7 +296,7 @@
           height="1280"
           loading="eager"
           fetchpriority="high"
-          decoding="async"
+          decoding="sync"
           sizes="100vw"
           style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
         />
@@ -338,7 +338,7 @@
               class="sacher-mozart__video"
               data-parallax="y"
               data-parallax-speed="0.09"
-             fetchpriority="high"></img>
+             loading="lazy" decoding="async"></img>
           </div>
           <div
             class="sacher-mozart__content scroll-reveal index-scroll-slow"
@@ -574,7 +574,7 @@
               data-parallax="y"
               data-parallax-speed="0.09"
               decoding="async"
-             fetchpriority="high">
+             loading="lazy">
           </div>
           <div class="sacher-feature__right">
             <div
@@ -1500,7 +1500,7 @@
             s.defer = true;
             document.body.appendChild(s);
           } catch (e) {}
-        }, 4000);
+        }, 6000);
       });
     </script>
   </body>
