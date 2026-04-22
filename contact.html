@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Contact Us - Derand Hotel Pristina, Luxury Hotel Kosovo, Hotel Prishtinë, Luxushotel Pristina. Premium rooms, elegant design, and exceptional hospitality." />
+    <meta name="description" content="Derand Hotel Contact in Pristina Luxury offers Premium Rooms, refined hospitality, and elevated city-stay comfort for business and leisure travelers." />
     <meta name="keywords" content="Derand Hotel, contact, support" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -60,7 +60,7 @@
     <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu-wrapper">
       <div class="offcanvas__logo">
-        <a href="./index.html"><img src="img/logoo.webp" alt="Logo" decoding="async" loading="eager" fetchpriority="high" width="1920" height="1080"></a>
+        <a href="./index.html"><img src="img/logoo.webp" alt="Logo" decoding="async" loading="lazy" fetchpriority="high" width="1920" height="1080"></a>
       </div>
       <div id="mobile-menu-wrap"></div>
       <div class="offcanvas__btn__widget">
@@ -591,8 +591,18 @@
     <script src="js/jquery.slicknav.js" defer></script>
     <script src="js/owl.carousel.min.js" defer></script>
     <script src="js/main.js?v=20260416-2" defer></script>
-    <script
-      src="https://code.tidio.co/bnuc9odotvfbltnpijihm3enhpjj0ovy.js" defer></script>
+    <script>
+      window.addEventListener("load", function () {
+        window.setTimeout(function () {
+          try {
+            var s = document.createElement("script");
+            s.src = "https://code.tidio.co/bnuc9odotvfbltnpijihm3enhpjj0ovy.js";
+            s.defer = true;
+            document.body.appendChild(s);
+          } catch (e) {}
+        }, 6000);
+      });
+    </script>
   </body>
 </html>
 
