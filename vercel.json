@@ -2,7 +2,10 @@
   "headers": [
     {
       "source": "/(.*)",
-      "headers": [{ "key": "Vary", "value": "Accept-Encoding" }]
+      "headers": [
+        { "key": "Vary", "value": "Accept-Encoding" },
+        { "key": "x-vercel-skip-toolbar", "value": "1" }
+      ]
     },
     {
       "source": "/(.*)\\.html",
