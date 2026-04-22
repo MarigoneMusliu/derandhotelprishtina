@@ -2,11 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Professional description of Derand Hotel in Pristina, offering luxury rooms, premium service, and a top-tier hospitality experience." />
+    <meta name="description" content="Experience luxury at Derand Hotel in Pristina. Book premium rooms with top-tier amenities, elegant design, and exceptional service in the heart of the city." />
     <meta name="keywords" content="Hiroto, unica, creative, html" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Derand Hotel</title>
+    <link rel="canonical" href="https://derandhotelprishtina.vercel.app/" />
     <link rel="preload" as="image" href="img/indexx.webp" fetchpriority="high" />
 
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
@@ -107,6 +108,20 @@
       .sacher-instagram__carousel .owl-nav button:hover,
       .sacher-instagram__carousel .owl-nav button:focus-visible {
         background: #8a8a8a !important;
+      }
+
+      /* Mobile tap targets: minimum 48x48 for accessibility */
+      @media (max-width: 991.98px) {
+        .canvas__open,
+        .footer__social a,
+        .header__lang__selector .lang-btn,
+        .mobile__lang__selector .lang-btn {
+          min-width: 48px;
+          min-height: 48px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+        }
       }
 
       /* Hide Vercel Toolbar/feedback overlays if injected */
@@ -558,6 +573,7 @@
             data-parallax="y"
             data-parallax-speed="0.11"
             data-i18n="index-link-learn"
+            aria-label="View our luxury rooms and suites"
             >Learn more</a
           >
         </div>
@@ -617,6 +633,7 @@
                 data-parallax="y"
                 data-parallax-speed="0.08"
                 data-i18n="index-link-learn"
+                aria-label="Explore room details and availability"
                 >Learn more</a
               >
             </div>
@@ -643,6 +660,7 @@
             data-parallax="y"
             data-parallax-speed="0.1"
             data-i18n="index-link-learn"
+            aria-label="Explore Omma restaurant and dining experience"
             >Learn more</a
           >
         </div>
@@ -1517,7 +1535,7 @@
           loadTidioOnce();
         }
         window.addEventListener("scroll", onFirstScroll, { passive: true, once: true });
-        window.setTimeout(loadTidioOnce, 7000);
+        window.setTimeout(loadTidioOnce, 5000);
       });
     </script>
     <script>
