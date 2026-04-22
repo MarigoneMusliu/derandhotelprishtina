@@ -118,14 +118,28 @@
       /* Mobile tap targets: minimum 48x48 for accessibility */
       @media (max-width: 991.98px) {
         .canvas__open,
-        .footer__social a,
-        .header__lang__selector .lang-btn,
-        .mobile__lang__selector .lang-btn {
+        .footer__social a {
           min-width: 48px;
           min-height: 48px;
           display: inline-flex;
           align-items: center;
           justify-content: center;
+        }
+      }
+
+      /* Mobile language buttons: closer together and slightly more right */
+      @media (max-width: 991.98px) {
+        .mobile__lang__selector.header__lang__selector {
+          gap: 4px !important;
+          right: max(82px, calc(env(safe-area-inset-right) + 48px)) !important;
+          top: max(24px, calc(env(safe-area-inset-top) + 10px)) !important;
+        }
+
+        .mobile__lang__selector .lang-btn {
+          min-width: 28px !important;
+          min-height: 28px !important;
+          padding: 3px 4px !important;
+          line-height: 1 !important;
         }
       }
 
