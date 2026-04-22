@@ -21,6 +21,19 @@ body {
   font-family: "Traviata", serif;
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
 *,
 *::before,
 *::after {
