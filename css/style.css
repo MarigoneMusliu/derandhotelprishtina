@@ -1141,10 +1141,10 @@ body {
   .mobile__lang__selector.header__lang__selector {
     display: inline-flex !important;
     align-items: center;
-    gap: 10px;
+    gap: 4px;
     position: fixed !important;
-    top: max(14px, env(safe-area-inset-top)) !important;
-    right: max(100px, calc(env(safe-area-inset-right) + 58px)) !important;
+    top: max(24px, calc(env(safe-area-inset-top) + 10px)) !important;
+    right: max(82px, calc(env(safe-area-inset-right) + 48px)) !important;
     left: auto !important;
     margin: 0 !important;
     z-index: 1210 !important;
@@ -1162,7 +1162,10 @@ body {
     background: transparent !important;
     border: none !important;
     border-radius: 0 !important;
-    padding: 4px 8px !important;
+    min-width: 28px !important;
+    min-height: 28px !important;
+    padding: 3px 4px !important;
+    line-height: 1 !important;
     text-transform: uppercase !important;
     cursor: pointer;
     -webkit-transition: color 0.2s ease !important;
