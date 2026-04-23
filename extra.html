@@ -1,0 +1,967 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Derand Hotel Extra offers curated in-room surprises and premium add-ons in Pristina."
+    />
+    <title>Extra | Derand Hotel</title>
+    <link rel="canonical" href="https://www.derandhotel.com/extra.html" />
+    <link rel="icon" href="favicon.ico?v=11" type="image/x-icon" />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/plugins.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Forum&display=swap");
+
+      .extra-hero {
+        min-height: 560px;
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)),
+          url("img/extraheader.jpeg") center center / cover no-repeat;
+      }
+
+      .extra-section {
+        background: #f1f1f1;
+        padding: 56px 0 72px;
+      }
+
+      .extra-heading {
+        text-align: center;
+        margin: 0 auto 44px;
+        max-width: 640px;
+      }
+
+      .extra-heading h1 {
+        margin: 0 0 8px;
+        color: #262626;
+        font-size: clamp(34px, 5vw, 56px);
+        line-height: 1.06;
+        font-family: "Forum", "Traviata", serif;
+        white-space: nowrap;
+      }
+
+      .extra-heading p {
+        margin: 0;
+        color: #b17256;
+        font-size: clamp(18px, 2.2vw, 28px);
+        font-family: "Forum", "Traviata", serif;
+      }
+
+      .extra-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: clamp(28px, 4vw, 64px);
+        align-items: center;
+        margin-bottom: 180px;
+      }
+
+      .extra-row:last-child {
+        margin-bottom: 0;
+      }
+
+      .extra-copy-kicker {
+        margin: 0 0 8px;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        color: #9e6b52;
+        font-family: "Forum", "Traviata", serif;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+      }
+
+      .extra-copy-title {
+        margin: 0 0 14px;
+        color: #2e2520;
+        font-size: clamp(32px, 3.4vw, 50px);
+        line-height: 1.02;
+        letter-spacing: 0.01em;
+        font-family: "Forum", "Traviata", "Cormorant Garamond", serif;
+        text-wrap: balance;
+        text-shadow: 0 2px 14px rgba(79, 52, 38, 0.1);
+      }
+
+      .extra-copy-text {
+        margin: 0 0 20px;
+        color: #413833;
+        line-height: 1.92;
+        letter-spacing: 0.012em;
+        font-size: clamp(16px, 1.2vw, 19px);
+        font-family: "Cormorant Garamond", "Forum", "Traviata", serif;
+        font-weight: 500;
+        max-width: 460px;
+        text-wrap: pretty;
+      }
+
+      .extra-copy-text::first-letter {
+        float: left;
+        font-family: "Forum", "Traviata", serif;
+        font-size: 3.2em;
+        line-height: 0.86;
+        padding-right: 0.12em;
+        margin-top: 0.08em;
+        color: #a3684e;
+      }
+
+      .extra-btn {
+        display: inline-block;
+        background: linear-gradient(135deg, #c68d70 0%, #9f5f45 100%);
+        color: #ffffff;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        font-size: 11px;
+        font-family: "Forum", "Traviata", serif;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        box-shadow: 0 10px 22px rgba(121, 76, 56, 0.24);
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease,
+          filter 0.25s ease;
+      }
+
+      .extra-btn:hover,
+      .extra-btn:focus-visible {
+        color: #ffffff;
+        transform: translateY(-2px);
+        filter: brightness(1.02);
+        box-shadow: 0 14px 28px rgba(121, 76, 56, 0.3);
+      }
+
+      .extra-media img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        display: block;
+      }
+
+      .extra-media {
+        justify-self: center;
+        text-align: center;
+      }
+
+      .extra-slider {
+        position: relative;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .extra-slider__viewport {
+        width: 100%;
+        overflow: hidden;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        background: #fff;
+      }
+
+      .extra-slider__track {
+        display: flex;
+        transition: transform 0.35s ease;
+      }
+
+      .extra-slider__slide {
+        min-width: 100%;
+        flex: 0 0 100%;
+      }
+
+      .extra-slider__slide img {
+        max-width: none;
+        border: 0;
+      }
+
+      .extra-slider__pagination {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .extra-slider__dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        border: none;
+        background: #d8c3b8;
+        cursor: pointer;
+        padding: 0;
+      }
+
+      .extra-slider__dot.is-active {
+        background: #b17256;
+      }
+
+      .extra-slider__arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        border: none;
+        border-radius: 999px;
+        background: #bdbdbd;
+        color: #ffffff;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        line-height: 1;
+        z-index: 2;
+      }
+
+      .extra-slider__arrow--prev {
+        left: -54px;
+      }
+
+      .extra-slider__arrow--next {
+        right: -54px;
+      }
+
+      .extra-slider__arrow:hover {
+        background: #a9a9a9;
+      }
+
+      .extra-dots {
+        margin-top: 10px;
+        letter-spacing: 0.32em;
+        color: #d2b9ab;
+        font-size: 14px;
+      }
+
+      .extra-row--reverse .extra-copy {
+        order: 2;
+      }
+
+      .extra-row--reverse .extra-media {
+        order: 1;
+      }
+
+      @media (max-width: 991px) {
+        .extra-row,
+        .extra-row--reverse {
+          grid-template-columns: 1fr;
+        }
+
+        .extra-row--reverse .extra-copy,
+        .extra-row--reverse .extra-media {
+          order: unset;
+        }
+
+        .extra-copy-text {
+          max-width: none;
+          line-height: 1.82;
+        }
+
+        .extra-copy-text::first-letter {
+          font-size: 2.55em;
+        }
+
+        .extra-slider__arrow--prev {
+          left: 8px;
+        }
+
+        .extra-slider__arrow--next {
+          right: 8px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="sacher-home">
+    <div id="preloder">
+      <div class="loader"></div>
+    </div>
+
+    <header class="header">
+      <div class="header__top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7"></div>
+            <div class="col-lg-5">
+              <div class="header__top__right"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__nav__option">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-2">
+              <div class="header__logo">
+                <a href="./index.html"
+                  ><img
+                    src="img/logoo.webp"
+                    alt="Logo"
+                    loading="lazy"
+                    decoding="async"
+                    width="756"
+                    height="263"
+                /></a>
+              </div>
+            </div>
+            <div class="col-lg-10">
+              <div class="header__nav">
+                <nav class="header__menu">
+                  <ul class="menu__class">
+                    <li>
+                      <a href="rooms.html" data-i18n="nav-rooms"
+                        >ROOMS & SUITES</a
+                      >
+                      <ul class="dropdown">
+                        <li>
+                          <a href="junior.html" data-i18n="nav-room-1"
+                            >JUNIOR SUITE</a
+                          >
+                        </li>
+                        <li>
+                          <a href="deluxe-double.html" data-i18n="nav-room-2"
+                            >DELUXE DOUBLE ROOM</a
+                          >
+                        </li>
+                        <li>
+                          <a href="superior-twin.html" data-i18n="nav-room-3"
+                            >SUPERIOR TWIN ROOM</a
+                          >
+                        </li>
+                        <li>
+                          <a href="premium-double.html" data-i18n="nav-room-4"
+                            >PREMIUM DOUBLE ROOM</a
+                          >
+                        </li>
+                        <li>
+                          <a href="superior-double.html" data-i18n="nav-room-5"
+                            >SUPERIOR DOUBLE ROOM</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="noya.html" data-i18n="nav-restaurant"
+                        >RESTAURANT & BAR</a
+                      >
+                      <ul class="dropdown">
+                        <li>
+                          <a href="noya.html" data-i18n="nav-restaurant-1"
+                            >NOYA</a
+                          >
+                        </li>
+                        <li>
+                          <a href="omma.html" data-i18n="nav-restaurant-2"
+                            >OMMA-Cafe & Buffet</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="#" data-i18n="nav-activities">ACTIVITIES</a>
+                      <ul class="dropdown">
+                        <li>
+                          <a href="rinu.html" data-i18n="nav-activity-2"
+                            >RINU MEDSPA</a
+                          >
+                        </li>
+                        <li>
+                          <a href="onze.html" data-i18n="nav-activity-1"
+                            >ONZE RECOVERY</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="extra.html">EXTRA</a>
+                    </li>
+
+                    <li class="has-dropdown">
+                      <a href="contact.html" data-i18n="nav-inquiry">CONTACT</a>
+
+                      <ul class="dropdown">
+                        <li>
+                          <a href="contact.html" data-i18n="nav-contact-us"
+                            >CONTACT US</a
+                          >
+                        </li>
+                        <li>
+                          <a href="faqs.html" data-i18n="nav-faqs">FAQS</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+
+                <div class="header__lang__selector">
+                  <button class="lang-btn lang-active" data-lang="en">
+                    EN
+                  </button>
+                  <button class="lang-btn" data-lang="de">DE</button>
+                  <button class="lang-btn" data-lang="al">AL</button>
+                </div>
+
+                <div class="header__nav__widget">
+                  <a
+                    href="https://derand-hotel.hotelrunner.com/bv3/search"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span data-i18n="book-now">BOOK NOW</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="canvas__open"
+            aria-label="Menu"
+            role="button"
+            tabindex="0"
+          >
+            <span class="fa fa-bars"></span>
+          </div>
+          <div class="mobile__lang__selector header__lang__selector">
+            <button class="lang-btn lang-active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="de">DE</button>
+            <button class="lang-btn" data-lang="al">AL</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="extra-hero"></section>
+
+    <section class="extra-section">
+      <div class="container">
+        <div class="extra-heading">
+          <h1 id="extra-heading-title">Explore our exclusive products</h1>
+          <p id="extra-heading-subtitle">available at your room</p>
+        </div>
+
+        <article class="extra-row">
+          <div class="extra-copy">
+            <p class="extra-copy-kicker">Fresh Flower Surprise</p>
+            <h2 class="extra-copy-title">
+              Fresh, fragrant, and waiting for you.
+            </h2>
+            <p class="extra-copy-text">
+              Add a touch of nature and color to your stay. Whether it’s an
+              anniversary, a special occasion, or simply a gesture of
+              appreciation, we curate bouquets of fresh seasonal flowers to
+              welcome you upon arrival. <br />
+              From the delicate scent of morning lilies to the bold elegance of
+              deep-hued roses, each petal is hand-selected from local artisans
+              to ensure peak freshness. Let us help you create a lasting first
+              impression the moment you step through the door.
+            </p>
+            <a class="extra-btn" href="contact.html">Order Now</a>
+          </div>
+          <div class="extra-media">
+            <div class="extra-slider" data-extra-slider>
+              <button
+                type="button"
+                class="extra-slider__arrow extra-slider__arrow--prev"
+                aria-label="Previous flower image"
+              >
+                &#8249;
+              </button>
+              <div class="extra-slider__viewport">
+                <div class="extra-slider__track">
+                  <div class="extra-slider__slide">
+                    <img
+                      src="img/flower1.jpg"
+                      alt="Flower bouquet extra 1"
+                      width="1080"
+                      height="1080"
+                    />
+                  </div>
+                  <div class="extra-slider__slide">
+                    <img
+                      src="img/flower2.jpg"
+                      alt="Flower bouquet extra 2"
+                      width="1080"
+                      height="1080"
+                    />
+                  </div>
+                  <div class="extra-slider__slide">
+                    <img
+                      src="img/flower3.jpg"
+                      alt="Flower bouquet extra 3"
+                      width="1080"
+                      height="1080"
+                    />
+                  </div>
+                  <div class="extra-slider__slide">
+                    <img
+                      src="img/flower4.jpg"
+                      alt="Flower bouquet extra 4"
+                      width="1080"
+                      height="1080"
+                    />
+                  </div>
+                </div>
+              </div>
+              <button
+                type="button"
+                class="extra-slider__arrow extra-slider__arrow--next"
+                aria-label="Next flower image"
+              >
+                &#8250;
+              </button>
+              <div
+                class="extra-slider__pagination"
+                aria-label="Flower gallery pagination"
+              >
+                <button
+                  type="button"
+                  class="extra-slider__dot is-active"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  class="extra-slider__dot"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  class="extra-slider__dot"
+                  aria-label="Slide 3"
+                ></button>
+                <button
+                  type="button"
+                  class="extra-slider__dot"
+                  aria-label="Slide 4"
+                ></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="extra-row extra-row--reverse">
+          <div class="extra-copy">
+            <p class="extra-copy-kicker">Celebrate with Champagne</p>
+            <h2 class="extra-copy-title">3 Champagne types available</h2>
+            <p class="extra-copy-text">
+              Start your stay in style. A chilled bottle of our premium
+              champagne, accompanied by crystal flutes, will be set up in your
+              room. Perfect for setting the tone for an unforgettable evening.<br> Whether
+              you are celebrating a personal milestone or simply toasted to the
+              beginning of a luxurious getaway, this arrival ritual is designed
+              for those who appreciate the finer things in life.
+            </p>
+            <a class="extra-btn" href="contact.html">Order Now</a>
+          </div>
+          <div class="extra-media">
+            <div class="extra-slider" data-extra-slider-champ>
+              <button
+                type="button"
+                class="extra-slider__arrow extra-slider__arrow--prev"
+                aria-label="Previous champagne image"
+              >
+                &#8249;
+              </button>
+              <div class="extra-slider__viewport">
+                <div class="extra-slider__track">
+                  <div class="extra-slider__slide">
+                    <img
+                      src="img/champ1.png"
+                      alt="Champagne extra package 1"
+                      width="1080"
+                      height="1080"
+                    />
+                  </div>
+                  <div class="extra-slider__slide">
+                    <img
+                      src="img/champ2.png"
+                      alt="Champagne extra package 2"
+                      width="1080"
+                      height="1080"
+                    />
+                  </div>
+                  <div class="extra-slider__slide">
+                    <img
+                      src="img/champ.png"
+                      alt="Champagne extra package 3"
+                      width="1080"
+                      height="1080"
+                    />
+                  </div>
+                </div>
+              </div>
+              <button
+                type="button"
+                class="extra-slider__arrow extra-slider__arrow--next"
+                aria-label="Next champagne image"
+              >
+                &#8250;
+              </button>
+              <div
+                class="extra-slider__pagination"
+                aria-label="Champagne gallery pagination"
+              >
+                <button
+                  type="button"
+                  class="extra-slider__dot is-active"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  class="extra-slider__dot"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  class="extra-slider__dot"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__brandbar">
+          <a href="index.html" class="footer__brandbar__logo">
+            <img
+              src="img/logo3.webp"
+              alt="Derand Crest"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <span class="footer__brandbar__divider"></span>
+          <a href="index.html" class="footer__brandbar__partner">
+            <span data-i18n="footer-powered">Powered by</span>
+            <img
+              src="img/logo/logo-1.webp"
+              alt="Powered by partner logo"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+        </div>
+
+        <div class="footer__contactbar">
+          <a
+            href="https://wa.me/38343727272"
+            class="footer__contactbar__item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-phone"></i>
+            <span>+ 383 43 72 72 72</span>
+          </a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=info@derandhotel.com"
+            class="footer__contactbar__item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-envelope-o"></i>
+            <span>info@derandhotel.com</span>
+          </a>
+          <a
+            href="https://www.google.com/maps/place/Derand+Hotel/@42.655716,21.1505223,200m/data=!3m2!1e3!4b1!4m9!3m8!1s0x13549f6c2e02e469:0xc02b72e6fc22c09b!5m2!4m1!1i2!8m2!3d42.655715!4d21.151166!16s%2Fg%2F11vcm48zlk?entry=ttu&g_ep=EgoyMDI2MDMwOC4wIKXMDSoASAFQAw%3D%3D"
+            class="footer__contactbar__item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-map-marker"></i>
+            <span data-i18n="index-footer-address"
+              >Bekim Fehmiu Str. 30 Pristina 10000 Kosovo</span
+            >
+          </a>
+        </div>
+
+        <div class="footer__content">
+          <div class="row">
+            <div class="col-12 col-lg-5">
+              <div class="footer__newslatter">
+                <h4 data-i18n="newsletter-title">Become part of our world</h4>
+                <p data-i18n="newsletter-copy">
+                  Receive curated stories, seasonal offers, and private
+                  invitations.
+                </p>
+                <form
+                  class="footer__newslatter__form"
+                  action="https://api.web3forms.com/submit"
+                  method="POST"
+                  data-contact-email="info@derandhotel.com"
+                >
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="761d8dce-87b2-4534-bc76-77ec2305d4ec"
+                  />
+                  <input
+                    type="hidden"
+                    name="from_name"
+                    value="Derand Hotel Website (Footer)"
+                  />
+                  <div class="footer__newslatter__group">
+                    <input
+                      type="text"
+                      name="firstName"
+                      placeholder="FIRST NAME"
+                      data-i18n-placeholder="newsletter-first-name"
+                      autocomplete="given-name"
+                    />
+                    <input
+                      type="text"
+                      name="lastName"
+                      placeholder="LAST NAME"
+                      data-i18n-placeholder="newsletter-last-name"
+                      autocomplete="family-name"
+                    />
+                  </div>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="EMAIL ADDRESS"
+                    data-i18n-placeholder="newsletter-email"
+                    autocomplete="email"
+                  />
+                  <label class="footer__newslatter__check">
+                    <input type="checkbox" name="consent" />
+                    <span data-i18n="newsletter-agree"
+                      >I agree to the terms and privacy policy.</span
+                    >
+                  </label>
+                  <button type="submit" data-i18n="newsletter-button">
+                    SIGN ME UP
+                  </button>
+                  <p
+                    class="footer__newslatter__status"
+                    role="status"
+                    aria-live="polite"
+                  ></p>
+                </form>
+              </div>
+            </div>
+            <div class="col-12 col-lg-7">
+              <div class="footer__widget">
+                <div class="footer__links__grid">
+                  <ul>
+                    <li>
+                      <a href="contact.html" data-i18n="footer-link-1"
+                        >Contact Us
+                      </a>
+                    </li>
+                    <li>
+                      <a href="our-location.html" data-i18n="footer-link-2"
+                        >Derand History</a
+                      >
+                    </li>
+                    <li>
+                      <a href="termsofservices.html" data-i18n="footer-link-3"
+                        >Terms of Service</a
+                      >
+                    </li>
+                    <li>
+                      <a href="guestapp.html" data-i18n="footer-link-4"
+                        >Derand Magazine</a
+                      >
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <a href="careers.html" data-i18n="footer-link-5"
+                        >Careers</a
+                      >
+                    </li>
+                    <li>
+                      <a href="faqs.html" data-i18n="footer-link-6">FAQs</a>
+                    </li>
+                    <li>
+                      <a href="privacypolicy.html" data-i18n="footer-link-7"
+                        >Privacy Policy</a
+                      >
+                    </li>
+                    <li>
+                      <a href="termsofservices.html" data-i18n="footer-link-8"
+                        >Payments</a
+                      >
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <a href="guestapp.html" data-i18n="footer-link-9"
+                        >Guest App
+                      </a>
+                    </li>
+                    <li>
+                      <a href="our-location.html" data-i18n="footer-link-11"
+                        >Our Location</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__social footer__social--bottom">
+          <a
+            href="https://www.facebook.com/derandhotel"
+            aria-label="Facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-facebook"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/derandhotel_prishtina/"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/100894439/admin/dashboard/"
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-linkedin"></i
+          ></a>
+          <a
+            href="https://www.youtube.com/watch?v=cyq_5a9X3wA"
+            aria-label="YouTube"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-youtube-play"></i
+          ></a>
+          <a
+            href="https://www.tiktok.com/@derandhotel"
+            aria-label="TikTok"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-music"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/jquery-3.3.1.min.js" defer></script>
+    <script src="js/bootstrap.min.js" defer></script>
+    <script src="js/jquery.slicknav.js" defer></script>
+    <script src="js/main.js?v=20260416-2" defer></script>
+    <script>
+      (function () {
+        var heading = document.getElementById("extra-heading-title");
+        if (!heading) return;
+
+        var titleTranslations = {
+          en: "Explore our exclusive products",
+          de: "Entdecken Sie unsere exklusiven Produkte",
+          al: "Zbuloni produktet tona ekskluzive",
+        };
+
+        var subtitle = document.getElementById("extra-heading-subtitle");
+        var subtitleTranslations = {
+          en: "available at your room",
+          de: "verfugbar in Ihrem Zimmer",
+          al: "e disponueshme ne dhomen tuaj",
+        };
+
+        function currentLang() {
+          var htmlLang = (
+            document.documentElement.getAttribute("lang") || ""
+          ).toLowerCase();
+          if (htmlLang === "de" || htmlLang === "al") return htmlLang;
+          var stored = (
+            localStorage.getItem("selectedLanguage") ||
+            localStorage.getItem("language") ||
+            localStorage.getItem("lang") ||
+            "en"
+          )
+            .toLowerCase()
+            .trim();
+          if (stored === "de" || stored === "al") return stored;
+          return "en";
+        }
+
+        function apply() {
+          var lang = currentLang();
+          document.documentElement.setAttribute("lang", lang);
+          heading.textContent = titleTranslations[lang] || titleTranslations.en;
+          if (subtitle) {
+            subtitle.textContent =
+              subtitleTranslations[lang] || subtitleTranslations.en;
+          }
+          var allBtns = document.querySelectorAll(".lang-btn[data-lang]");
+          for (var i = 0; i < allBtns.length; i++) {
+            allBtns[i].classList.toggle(
+              "lang-active",
+              allBtns[i].getAttribute("data-lang") === lang,
+            );
+          }
+        }
+
+        function setLang(lang) {
+          localStorage.setItem("selectedLanguage", lang);
+          localStorage.setItem("language", lang);
+          localStorage.setItem("lang", lang);
+          document.documentElement.setAttribute("lang", lang);
+          apply();
+        }
+
+        document.addEventListener("DOMContentLoaded", apply);
+        window.addEventListener("load", apply);
+        document.addEventListener("click", function (event) {
+          var btn = event.target.closest(".lang-btn[data-lang]");
+          if (!btn) return;
+          var lang = (btn.getAttribute("data-lang") || "en").toLowerCase();
+          if (lang !== "en" && lang !== "de" && lang !== "al") lang = "en";
+          setLang(lang);
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        function initSlider(selector) {
+          var slider = document.querySelector(selector);
+          if (!slider) return;
+          var track = slider.querySelector(".extra-slider__track");
+          var dots = slider.querySelectorAll(".extra-slider__dot");
+          var prevBtn = slider.querySelector(".extra-slider__arrow--prev");
+          var nextBtn = slider.querySelector(".extra-slider__arrow--next");
+          if (!track || !dots.length || !prevBtn || !nextBtn) return;
+          var current = 0;
+
+          function setActive(index) {
+            current = (index + dots.length) % dots.length;
+            track.style.transform = "translateX(" + current * -100 + "%)";
+            for (var i = 0; i < dots.length; i++) {
+              dots[i].classList.toggle("is-active", i === current);
+            }
+          }
+
+          for (var j = 0; j < dots.length; j++) {
+            (function (idx) {
+              dots[idx].addEventListener("click", function () {
+                setActive(idx);
+              });
+            })(j);
+          }
+
+          prevBtn.addEventListener("click", function () {
+            setActive(current - 1);
+          });
+
+          nextBtn.addEventListener("click", function () {
+            setActive(current + 1);
+          });
+        }
+
+        initSlider("[data-extra-slider]");
+        initSlider("[data-extra-slider-champ]");
+      })();
+    </script>
+  </body>
+</html>

@@ -692,6 +692,20 @@
       .noya-booking-section__field select {
         cursor: pointer;
         appearance: auto;
+        color: #ffffff;
+      }
+
+      .noya-booking-section__field select:invalid {
+        color: rgba(255, 245, 232, 0.72);
+      }
+
+      .noya-booking-section__field select option {
+        color: #22170f;
+        background: #fff7ec;
+      }
+
+      .noya-booking-section__field select option[value=""] {
+        color: #6f6257;
       }
 
       .noya-booking-section__field input::placeholder {
@@ -749,8 +763,11 @@
       }
 
       .noya-booking-section__field .noya-reserve__submit:disabled {
-        opacity: 0.65;
-        cursor: wait;
+        background: #b17256;
+        color: #ffffff;
+        opacity: 1;
+        cursor: not-allowed;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
       }
 
       .noya-booking-section__thanks {
@@ -3424,11 +3441,11 @@
                   />
                 </div>
                 <div class="noya-booking-section__field">
-                  <label
-                    class="noya-booking-section__visually-hidden"
-                    for="noya-r-time"
-                    data-i18n="noya-field-time-label"
-                    >Time</label
+                  <label class="noya-booking-section__label" for="noya-r-time"
+                    ><span data-i18n="noya-field-time-label">TIME</span>
+                    <span class="noya-booking-section__req" aria-hidden="true"
+                      >*</span
+                    ></label
                   >
                   <select id="noya-r-time" name="preferred_time" required>
                     <option value="18:00" selected>18:00</option>
@@ -4171,6 +4188,12 @@
         var form = document.getElementById("noya-reservation-form");
         if (!form) return;
         var dateInput = form.querySelector('input[name="preferred_date"]');
+        var submitBtn = form.querySelector(".noya-reserve__submit");
+        var closureMessage =
+          "NOYA is closed until 15 June. Reservations are temporarily unavailable.";
+        var now = new Date();
+        var reopenDate = new Date(now.getFullYear(), 5, 15, 0, 0, 0, 0);
+        var isClosed = now < reopenDate;
         if (dateInput) {
           var today = new Date();
           dateInput.min = today.toISOString().slice(0, 10);
@@ -4186,8 +4209,50 @@
           return dict[lang] || dict.en || {};
         }
 
+        function showClosedMessage() {
+          var statusEl = form.querySelector(".noya-mockup-booking__status");
+          if (!statusEl) return;
+          statusEl.classList.remove("noya-mockup-booking__status--success");
+          statusEl.classList.add("noya-mockup-booking__status--error");
+          statusEl.textContent = closureMessage;
+        }
+
+        function showOpenState() {
+          var statusEl = form.querySelector(".noya-mockup-booking__status");
+          var pack = statusPack();
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = pack["noya-reserve-btn"] || "BOOK NOW";
+          }
+          if (statusEl) {
+            statusEl.classList.remove(
+              "noya-mockup-booking__status--error",
+              "noya-mockup-booking__status--success",
+            );
+            statusEl.textContent = "";
+          }
+        }
+
+        function showClosedState() {
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = "CLOSED UNTIL 15 JUNE";
+          }
+          showClosedMessage();
+        }
+
+        if (isClosed) {
+          showClosedState();
+        } else {
+          showOpenState();
+        }
+
         form.addEventListener("submit", function (ev) {
           ev.preventDefault();
+          if (isClosed) {
+            showClosedMessage();
+            return;
+          }
           var statusEl = form.querySelector(".noya-mockup-booking__status");
           var btn = form.querySelector(".noya-reserve__submit");
           var toEmail =
