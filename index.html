@@ -13,7 +13,7 @@
     <link rel="alternate" hreflang="al" href="https://www.derandhotel.com/" />
     <link rel="alternate" hreflang="x-default" href="https://www.derandhotel.com/" />
 
-    <link rel="preload" as="image" href="img/indexx.webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="https://www.derandhotel.com/img/indexx.webp" fetchpriority="high" />
 
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="css/plugins.min.css" type="text/css" />
@@ -143,8 +143,15 @@
 {
   "@context": "https://schema.org",
   "@type": "Hotel",
-  "name": "Derand Hotel",
-  "url": "https://www.derandhotel.com/",
+  "name": "Hotel Derand",
+  "image": [
+    "https://derandhotel.com/img/hand1.webp",
+    "https://derandhotel.com/img/home-about/home-about.webp"
+  ],
+  "@id": "https://derandhotel.com",
+  "url": "https://derandhotel.com",
+  "telephone": "+38343727272",
+  "email": "info@derandhotel.com",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Bekim Fehmiu Str. 30",
@@ -152,10 +159,16 @@
     "postalCode": "10000",
     "addressCountry": "XK"
   },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 42.6629,
+    "longitude": 21.1655
+  },
+  "priceRange": "$$",
+  "amenities": ["Free WiFi", "Parking", "Breakfast Included", "Air Conditioning"],
   "starRating": {
     "@type": "Rating",
-    "ratingValue": "5",
-    "bestRating": "5"
+    "ratingValue": "4"
   }
 }
 </script>
@@ -170,7 +183,7 @@
     <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu-wrapper">
       <div class="offcanvas__logo">
-        <a href="./index.html"><img src="img/logoo.webp" alt="Logo"  loading="lazy" decoding="async" width="756" height="263"></a>
+        <a href="./index.html"><img src="img/logoo.webp" alt="Hotel in Prishtina"  loading="lazy" decoding="async" width="756" height="263"></a>
       </div>
       <div id="mobile-menu-wrap"></div>
 
@@ -202,7 +215,7 @@
             <div class="col-lg-2">
               <div class="header__logo">
                 <a href="./index.html"
-                  ><img src="img/logoo.webp" alt="Logo"
+                  ><img src="img/logoo.webp" alt="Hotels in Prishtina"
                  loading="lazy" decoding="async" width="756" height="263"></a>
               </div>
             </div>
@@ -342,7 +355,7 @@
         <img
           class="sacher-hero__video sacher-hero_slide is-active"
           src="img/indexx.webp"
-          alt="Derand Hotel exterior"
+          alt="Hotel Prishtina"
           width="1920"
           height="1280"
           loading="eager"
@@ -380,7 +393,7 @@
           >
             <img
               src="img/dafina.webp"
-              alt="Derand Hotel interior view"
+              alt="Best hotels in Prishtina"
               autoplay
               muted
               loop
@@ -453,6 +466,7 @@
                   <article
                     class="sacher-card set-bg"
                     data-setbg="img/emp.webp"
+                    aria-label="Hotel in Prishtina"
                     data-parallax="bg"
                     data-parallax-speed="0.055"
                   >
@@ -470,6 +484,7 @@
                   <article
                     class="sacher-card set-bg"
                     data-setbg="img/noyaa13.webp"
+                    aria-label="Hotels in Prishtina"
                     data-parallax="bg"
                     data-parallax-speed="0.055"
                   >
@@ -487,6 +502,7 @@
                   <article
                     class="sacher-card set-bg"
                     data-setbg="img/onze.webp"
+                    aria-label="Hotel Prishtina"
                     data-parallax="bg"
                     data-parallax-speed="0.055"
                   >
@@ -503,6 +519,7 @@
                 <article
                   class="sacher-card set-bg"
                   data-setbg="img/hiking.webp"
+                  aria-label="Best hotels in Prishtina"
                   data-parallax="bg"
                   data-parallax-speed="0.10"
                 >
@@ -516,6 +533,7 @@
                 <article
                   class="sacher-card set-bg"
                   data-setbg="img/yogga.webp"
+                  aria-label="Hotel in Prishtina"
                   data-parallax="bg"
                   data-parallax-speed="0.055"
                 >
@@ -531,6 +549,7 @@
                 <article
                   class="sacher-card set-bg"
                   data-setbg="img/tennis.webp"
+                  aria-label="Hotels in Prishtina"
                   data-parallax="bg"
                   data-parallax-speed="0.055"
                 >
@@ -546,6 +565,7 @@
                 <article
                   class="sacher-card set-bg"
                   data-setbg="img/skiing.webp"
+                  aria-label="Hotel Prishtina"
                   data-parallax="bg"
                   data-parallax-speed="0.055"
                 >
@@ -584,6 +604,7 @@
     <section
       class="sacher-rooms set-bg parallax-bg scroll-reveal index-scroll-slow"
       data-setbg="img/room-1.webp"
+      aria-label="Best hotels in Prishtina"
       data-parallax="bg"
       data-parallax-speed="0.08"
       data-reveal-delay="0.08s"
@@ -621,7 +642,7 @@
           >
             <img
               src="img/coat.webp"
-              alt="Welcome main image"
+              alt="Hotel in Prishtina"
               class="img-fluid sacher-feature__image sacher-feature__image--tall"
               data-parallax="y"
               data-parallax-speed="0.09"
@@ -635,7 +656,7 @@
             >
               <img
                 src="img/hand1.webp"
-                alt="Welcome secondary image"
+                alt="Hotels in Prishtina"
                 class="sacher-feature__image sacher-feature__image--top sacher-feature__image--quarter"
                 data-parallax="y"
                 data-parallax-speed="0.1"
@@ -673,6 +694,7 @@
     <section
       class="sacher-health set-bg scroll-reveal index-scroll-slow"
       data-setbg="img/floor1.webp"
+      aria-label="Hotel in Prishtina"
       data-parallax="bg"
       data-parallax-speed="0.07"
       data-reveal-delay="0.08s"
@@ -704,14 +726,14 @@
           >
             <img
               src="img/reception2.webp"
-              alt="Derand hotel room facilities"
+              alt="Hotel Prishtina"
               class="sacher-facilities__img sacher-facilities__img--main"
               data-parallax="y"
               data-parallax-speed="0.09"
              loading="lazy" decoding="async">
             <img
               src="img/minibar.webp"
-              alt="Derand comfort detail"
+              alt="Best hotels in Prishtina"
               class="sacher-facilities__img sacher-facilities__img--sub"
               data-parallax="y"
               data-parallax-speed="0.1"
@@ -820,7 +842,7 @@
         >
           <img
             src="img/arkitektura.webp"
-            alt="Architecture image"
+            alt="Hotel in Prishtina"
             class="sacher-arch-quote__bg"
             data-parallax="y"
             data-parallax-speed="0.07"
@@ -833,7 +855,7 @@
             </p>
             <img
               src="img/signature.webp"
-              alt="Signature"
+              alt="Hotels in Prishtina"
               class="sacher-arch-quote__signature"
              loading="lazy" decoding="async">
             <p class="sacher-arch-quote__name" data-i18n="index-quote-name">DERAND HOTEL PRISHTINA</p>
@@ -846,6 +868,7 @@
       <div
         class="guest-testimonials__bg set-bg parallax-bg"
         data-setbg="img/index2.webp"
+        aria-label="Hotels in Prishtina"
         data-parallax="bg"
         data-parallax-speed="0.055"
         aria-hidden="true"
@@ -1128,7 +1151,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                aria-label="Follow Derand Hotel on Instagram">
-                <img src="img/outside1.webp" alt="Instagram tile 1"  loading="lazy" decoding="async">
+                <img src="img/outside1.webp" alt="Hotel Prishtina"  loading="lazy" decoding="async">
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1136,7 +1159,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                aria-label="Follow Derand Hotel on Instagram">
-                <img src="img/view.webp" alt="Instagram tile 2"  loading="lazy" decoding="async">
+                <img src="img/view.webp" alt="Best hotels in Prishtina"  loading="lazy" decoding="async">
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1144,7 +1167,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                aria-label="Follow Derand Hotel on Instagram">
-                <img src="img/tile3.webp" alt="Instagram tile 3"  loading="lazy" decoding="async">
+                <img src="img/tile3.webp" alt="Hotel in Prishtina"  loading="lazy" decoding="async">
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1152,7 +1175,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                aria-label="Follow Derand Hotel on Instagram">
-                <img src="img/hand1.webp" alt="Instagram tile 4"  loading="lazy" decoding="async">
+                <img src="img/hand1.webp" alt="Hotels in Prishtina"  loading="lazy" decoding="async">
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1160,7 +1183,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                aria-label="Follow Derand Hotel on Instagram">
-                <img src="img/girl.webp" alt="Instagram tile 5"  loading="lazy" decoding="async">
+                <img src="img/girl.webp" alt="Hotel Prishtina"  loading="lazy" decoding="async">
               </a>
 
               <a
@@ -1169,7 +1192,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                aria-label="Follow Derand Hotel on Instagram">
-                <img src="img/phone.webp" alt="Instagram tile 6"  loading="lazy" decoding="async">
+                <img src="img/phone.webp" alt="Best hotels in Prishtina"  loading="lazy" decoding="async">
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1177,7 +1200,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                aria-label="Follow Derand Hotel on Instagram">
-                <img src="img/lift.webp" alt="Instagram tile 7"  loading="lazy" decoding="async">
+                <img src="img/lift.webp" alt="Hotel in Prishtina"  loading="lazy" decoding="async">
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1185,7 +1208,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                aria-label="Follow Derand Hotel on Instagram">
-                <img src="img/legs.webp" alt="Instagram tile 8"  loading="lazy" decoding="async">
+                <img src="img/legs.webp" alt="Hotels in Prishtina"  loading="lazy" decoding="async">
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1193,7 +1216,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                aria-label="Follow Derand Hotel on Instagram">
-                <img src="img/room.webp" alt="Instagram tile 9"  loading="lazy" decoding="async">
+                <img src="img/room.webp" alt="Hotel Prishtina"  loading="lazy" decoding="async">
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1201,7 +1224,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                aria-label="Follow Derand Hotel on Instagram">
-                <img src="img/model.webp" alt="Instagram tile 10"  loading="lazy" decoding="async">
+                <img src="img/model.webp" alt="Best hotels in Prishtina"  loading="lazy" decoding="async">
               </a>
             </div>
           </div>
@@ -1214,7 +1237,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                aria-label="Follow Derand Hotel on Instagram">
-                <img src="img/hand10.webp" alt="Instagram tile 11"  loading="lazy" decoding="async">
+                <img src="img/hand10.webp" alt="Hotel in Prishtina"  loading="lazy" decoding="async">
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1222,7 +1245,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                aria-label="Follow Derand Hotel on Instagram">
-                <img src="img/hand11.webp" alt="Instagram tile 12"  loading="lazy" decoding="async">
+                <img src="img/hand11.webp" alt="Hotels in Prishtina"  loading="lazy" decoding="async">
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1230,7 +1253,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                aria-label="Follow Derand Hotel on Instagram">
-                <img src="img/hand12.webp" alt="Instagram tile 13"  loading="lazy" decoding="async">
+                <img src="img/hand12.webp" alt="Hotel Prishtina"  loading="lazy" decoding="async">
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1238,7 +1261,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                aria-label="Follow Derand Hotel on Instagram">
-                <img src="img/hand13.webp" alt="Instagram tile 14"  loading="lazy" decoding="async">
+                <img src="img/hand13.webp" alt="Best hotels in Prishtina"  loading="lazy" decoding="async">
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1246,7 +1269,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                aria-label="Follow Derand Hotel on Instagram">
-                <img src="img/hand14.webp" alt="Instagram tile 15"  loading="lazy" decoding="async">
+                <img src="img/hand14.webp" alt="Hotel in Prishtina"  loading="lazy" decoding="async">
               </a>
 
               <a
@@ -1255,7 +1278,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                aria-label="Follow Derand Hotel on Instagram">
-                <img src="img/hand15.webp" alt="Instagram tile 16"  loading="lazy" decoding="async">
+                <img src="img/hand15.webp" alt="Hotels in Prishtina"  loading="lazy" decoding="async">
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1263,7 +1286,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                aria-label="Follow Derand Hotel on Instagram">
-                <img src="img/hand16.webp" alt="Instagram tile 17"  loading="lazy" decoding="async">
+                <img src="img/hand16.webp" alt="Hotel Prishtina"  loading="lazy" decoding="async">
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1271,7 +1294,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                aria-label="Follow Derand Hotel on Instagram">
-                <img src="img/hand17.webp" alt="Instagram tile 18"  loading="lazy" decoding="async">
+                <img src="img/hand17.webp" alt="Best hotels in Prishtina"  loading="lazy" decoding="async">
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1279,7 +1302,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                aria-label="Follow Derand Hotel on Instagram">
-                <img src="img/hand18.webp" alt="Instagram tile 19"  loading="lazy" decoding="async">
+                <img src="img/hand18.webp" alt="Hotel in Prishtina"  loading="lazy" decoding="async">
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1289,7 +1312,7 @@
                aria-label="Follow Derand Hotel on Instagram">
                 <img
                   src="img/video.webp"
-                  alt="Instagram highlight tile"
+                  alt="Hotels in Prishtina"
                   class="sacher-instagram__tileVideo"
                   autoplay
                   muted
@@ -1308,12 +1331,12 @@
       <div class="container">
         <div class="footer__brandbar">
           <a href="index.html" class="footer__brandbar__logo">
-            <img src="img/logo3.webp" alt="Derand Crest"  loading="lazy" decoding="async">
+            <img src="img/logo3.webp" alt="Hotel Prishtina"  loading="lazy" decoding="async">
           </a>
           <span class="footer__brandbar__divider"></span>
           <a href="index.html" class="footer__brandbar__partner">
             <span data-i18n="footer-powered">Powered by</span>
-            <img src="img/logo/logo-1.webp" alt="Powered by partner logo"  loading="lazy" decoding="async">
+            <img src="img/logo/logo-1.webp" alt="Best hotels in Prishtina"  loading="lazy" decoding="async">
           </a>
         </div>
 
