@@ -116,7 +116,7 @@
         letter-spacing: 0.15em;
         font-size: 11px;
         font-family: "Forum", "Traviata", serif;
-        border-radius: 999px;
+        border-radius: 0;
         border: 1px solid rgba(255, 255, 255, 0.35);
         box-shadow: 0 10px 22px rgba(121, 76, 56, 0.24);
         transition:
@@ -269,6 +269,210 @@
         .extra-slider__arrow--next {
           right: 8px;
         }
+      }
+
+      .extra-order-modal {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: none;
+      }
+
+      .extra-order-modal.is-open {
+        display: block;
+      }
+
+      .extra-order-modal__backdrop {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+      }
+
+      .extra-order-modal__dialog {
+        position: relative;
+        width: min(620px, calc(100vw - 28px));
+        max-height: calc(100vh - 28px);
+        overflow-y: auto;
+        margin: 14px auto;
+        background: #ececec;
+        border: 1px solid #d2d2d2;
+        padding: 18px 16px 16px;
+      }
+
+      .extra-order-modal__close {
+        position: absolute;
+        top: 8px;
+        right: 10px;
+        border: 0;
+        background: transparent;
+        color: #3f3f3f;
+        font-size: 22px;
+        line-height: 1;
+        cursor: pointer;
+      }
+
+      .extra-order-modal__title {
+        margin: 0 0 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 13px;
+        color: #c39a86;
+        font-family: "Forum", "Traviata", serif;
+      }
+
+      .extra-order-card {
+        max-width: 360px;
+        margin: 0 auto;
+        background: #f1f1f1;
+        border: 1px solid #bfbfbf;
+        padding: 12px;
+      }
+
+      .extra-order-card__name {
+        margin: 0 0 8px;
+        font-size: 30px;
+        color: #383838;
+        line-height: 1.1;
+      }
+
+      .extra-order-card__img {
+        width: 100%;
+        max-width: 225px;
+        display: block;
+        margin: 0 auto 12px;
+        border: 1px solid #d8d8d8;
+        background: #fff;
+      }
+
+      .extra-order-card__media {
+        display: grid;
+        grid-template-columns: 28px minmax(0, 1fr) 28px;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 12px;
+      }
+
+      .extra-order-card__media-nav {
+        width: 28px;
+        height: 28px;
+        border: 0;
+        background: #b4b4b4;
+        color: #fff;
+        font-size: 18px;
+        line-height: 1;
+        cursor: pointer;
+      }
+
+      .extra-order-card__media-nav[disabled] {
+        opacity: 0.45;
+        cursor: default;
+      }
+
+      .extra-order-card__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        margin-bottom: 8px;
+      }
+
+      .extra-order-card__price {
+        font-size: 38px;
+        line-height: 1;
+        color: #3a3a3a;
+      }
+
+      .extra-order-qty {
+        display: inline-flex;
+        align-items: center;
+        border: 1px solid #bfbfbf;
+        background: #fff;
+      }
+
+      .extra-order-qty__btn {
+        width: 34px;
+        height: 34px;
+        border: 0;
+        background: #b17256;
+        color: #fff;
+        font-size: 22px;
+        line-height: 1;
+        cursor: pointer;
+      }
+
+      .extra-order-qty__value {
+        min-width: 42px;
+        text-align: center;
+        color: #4a4a4a;
+        font-size: 16px;
+      }
+
+      .extra-order-card__desc {
+        margin: 0;
+        font-size: 16px;
+        color: #5f5f5f;
+        line-height: 1.5;
+      }
+
+      .extra-order-form {
+        margin-top: 14px;
+        padding-top: 12px;
+        border-top: 1px solid #c8c8c8;
+      }
+
+      .extra-order-form__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+
+      .extra-order-form input,
+      .extra-order-form textarea {
+        width: 100%;
+        border: 1px solid #a8a8a8;
+        background: #f3f3f3;
+        padding: 8px 10px;
+        font-size: 14px;
+        color: #333;
+      }
+
+      .extra-order-form textarea {
+        margin-top: 8px;
+        resize: vertical;
+        min-height: 54px;
+      }
+
+      .extra-order-form__total {
+        margin-top: 8px;
+        text-align: right;
+        color: #4f4f4f;
+        font-size: 16px;
+      }
+
+      .extra-order-form__total strong {
+        font-size: 38px;
+        margin-left: 6px;
+        color: #3b3b3b;
+        line-height: 1;
+      }
+
+      .extra-order-form__submit {
+        width: 100%;
+        margin-top: 8px;
+        border: 0;
+        background: #b17256;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        padding: 10px 12px;
+        font-size: 12px;
+        font-family: "Forum", "Traviata", serif;
+      }
+
+      .extra-order-form__status {
+        margin: 8px 0 0;
+        font-size: 13px;
+        color: #3f3f3f;
       }
     </style>
   </head>
@@ -459,7 +663,18 @@
               to ensure peak freshness. Let us help you create a lasting first
               impression the moment you step through the door.
             </p>
-            <a class="extra-btn" href="contact.html">Order Now</a>
+            <button
+              type="button"
+              class="extra-btn js-extra-order"
+              data-product="Red Roses Bucket"
+              data-price="35"
+              data-image="img/flower1.jpg"
+              data-images="img/flower1.jpg,img/flower2.jpg,img/flower3.jpg,img/flower4.jpg"
+              data-prices="20,25,30,35"
+              data-description="Fresh red roses wrapped in decorative paper for a romantic in-room surprise."
+            >
+              Order Now
+            </button>
           </div>
           <div class="extra-media">
             <div class="extra-slider" data-extra-slider>
@@ -554,7 +769,17 @@
               beginning of a luxurious getaway, this arrival ritual is designed
               for those who appreciate the finer things in life.
             </p>
-            <a class="extra-btn" href="contact.html">Order Now</a>
+            <button
+              type="button"
+              class="extra-btn js-extra-order"
+              data-product="Champagne Celebration"
+              data-price="65"
+              data-image="img/champ1.png"
+              data-images="img/champ1.png,img/champ2.png,img/champ.png"
+              data-description="Chilled champagne with elegant presentation prepared before your arrival."
+            >
+              Order Now
+            </button>
           </div>
           <div class="extra-media">
             <div class="extra-slider" data-extra-slider-champ>
@@ -637,7 +862,17 @@
               options are served with premium presentation for a complete luxury
               in-room experience.
             </p>
-            <a class="extra-btn" href="contact.html">Order Now</a>
+            <button
+              type="button"
+              class="extra-btn js-extra-order"
+              data-product="Premium Wine Selection"
+              data-price="48"
+              data-image="img/vine.png"
+              data-images="img/vine.png"
+              data-description="A selected premium wine served in-room for a relaxed and luxurious evening."
+            >
+              Order Now
+            </button>
           </div>
           <div class="extra-media">
             <div class="extra-slider" data-extra-slider-vine>
@@ -708,6 +943,40 @@
         </article>
       </div>
     </section>
+    <div class="extra-order-modal" id="extra-order-modal" aria-hidden="true">
+      <div class="extra-order-modal__backdrop" data-modal-close></div>
+      <div class="extra-order-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="extra-order-title">
+        <button type="button" class="extra-order-modal__close" data-modal-close aria-label="Close order modal">&times;</button>
+        <p class="extra-order-modal__title" id="extra-order-title">Order to your room</p>
+        <div class="extra-order-card">
+          <h3 class="extra-order-card__name" id="extra-order-product">Red Roses Bucket</h3>
+          <div class="extra-order-card__media">
+            <button type="button" class="extra-order-card__media-nav" id="extra-order-image-prev" aria-label="Previous product image">&lt;</button>
+            <img class="extra-order-card__img" id="extra-order-image" src="img/flower1.jpg" alt="Selected extra product" />
+            <button type="button" class="extra-order-card__media-nav" id="extra-order-image-next" aria-label="Next product image">&gt;</button>
+          </div>
+          <div class="extra-order-card__row">
+            <span class="extra-order-card__price" id="extra-order-unit-price">35&euro;</span>
+            <div class="extra-order-qty">
+              <button type="button" class="extra-order-qty__btn" id="extra-order-minus" aria-label="Decrease quantity">-</button>
+              <span class="extra-order-qty__value" id="extra-order-qty">1</span>
+              <button type="button" class="extra-order-qty__btn" id="extra-order-plus" aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+          <p class="extra-order-card__desc" id="extra-order-description"></p>
+        </div>
+        <form class="extra-order-form" id="extra-order-form">
+          <div class="extra-order-form__grid">
+            <input type="text" name="roomNumber" placeholder="Room Number" required />
+            <input type="text" name="lastName" placeholder="Last Name" required />
+          </div>
+          <textarea name="message" placeholder="Message (optional)"></textarea>
+          <div class="extra-order-form__total">Total: <strong id="extra-order-total">35&euro;</strong></div>
+          <button type="submit" class="extra-order-form__submit">Order to your room</button>
+          <p class="extra-order-form__status" id="extra-order-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
     <footer class="footer">
       <div class="container">
         <div class="footer__brandbar">
@@ -934,6 +1203,153 @@
     <script src="js/bootstrap.min.js" defer></script>
     <script src="js/jquery.slicknav.js" defer></script>
     <script src="js/main.js?v=20260416-2" defer></script>
+    <script>
+      (function () {
+        var modal = document.getElementById("extra-order-modal");
+        var productEl = document.getElementById("extra-order-product");
+        var imageEl = document.getElementById("extra-order-image");
+        var descriptionEl = document.getElementById("extra-order-description");
+        var unitPriceEl = document.getElementById("extra-order-unit-price");
+        var imagePrevBtn = document.getElementById("extra-order-image-prev");
+        var imageNextBtn = document.getElementById("extra-order-image-next");
+        var qtyEl = document.getElementById("extra-order-qty");
+        var totalEl = document.getElementById("extra-order-total");
+        var minusBtn = document.getElementById("extra-order-minus");
+        var plusBtn = document.getElementById("extra-order-plus");
+        var form = document.getElementById("extra-order-form");
+        var statusEl = document.getElementById("extra-order-status");
+        if (!modal || !productEl || !imageEl || !descriptionEl || !unitPriceEl || !imagePrevBtn || !imageNextBtn || !qtyEl || !totalEl || !minusBtn || !plusBtn || !form || !statusEl) return;
+
+        var currentPrice = 35;
+        var quantitiesByImage = [0];
+        var currentImages = ["img/flower1.jpg"];
+        var currentPrices = [35];
+        var currentImageIndex = 0;
+
+        function updateTotals() {
+          var currentQty = quantitiesByImage[currentImageIndex] || 0;
+          var grandTotal = 0;
+          for (var i = 0; i < currentPrices.length; i++) {
+            grandTotal += (currentPrices[i] || currentPrice) * (quantitiesByImage[i] || 0);
+          }
+          unitPriceEl.textContent = currentPrice + "€";
+          qtyEl.textContent = String(currentQty);
+          totalEl.textContent = grandTotal + "€";
+        }
+
+        function updateImage() {
+          var image = currentImages[currentImageIndex] || "img/flower1.jpg";
+          currentPrice =
+            currentPrices[currentImageIndex] ||
+            currentPrices[currentPrices.length - 1] ||
+            35;
+          imageEl.src = image;
+          updateTotals();
+          imagePrevBtn.disabled = currentImages.length <= 1;
+          imageNextBtn.disabled = currentImages.length <= 1;
+        }
+
+        function openModal(btn) {
+          var product = btn.getAttribute("data-product") || "Extra Product";
+          var img = btn.getAttribute("data-image") || "img/flower1.jpg";
+          var imagesRaw = btn.getAttribute("data-images") || img;
+          var parsedImages = imagesRaw
+            .split(",")
+            .map(function (item) {
+              return item.trim();
+            })
+            .filter(function (item) {
+              return item.length > 0;
+            });
+          var pricesRaw = btn.getAttribute("data-prices") || "";
+          var parsedPrices = pricesRaw
+            .split(",")
+            .map(function (item) {
+              return parseInt(item.trim(), 10);
+            })
+            .filter(function (item) {
+              return !isNaN(item) && item > 0;
+            });
+          var desc = btn.getAttribute("data-description") || "";
+          var price = parseInt(btn.getAttribute("data-price") || "35", 10);
+          if (isNaN(price) || price < 1) price = 35;
+          currentPrice = price;
+          currentImages = parsedImages.length ? parsedImages : [img];
+          currentPrices = parsedPrices.length ? parsedPrices : [price];
+          quantitiesByImage = new Array(currentImages.length).fill(0);
+          currentImageIndex = 0;
+          productEl.textContent = product;
+          imageEl.alt = product;
+          descriptionEl.textContent = desc;
+          form.reset();
+          statusEl.textContent = "";
+          updateImage();
+          modal.classList.add("is-open");
+          modal.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+        }
+
+        function closeModal() {
+          modal.classList.remove("is-open");
+          modal.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "";
+        }
+
+        document.addEventListener("click", function (event) {
+          var orderBtn = event.target.closest(".js-extra-order");
+          if (orderBtn) {
+            openModal(orderBtn);
+            return;
+          }
+          if (event.target.closest("[data-modal-close]")) {
+            closeModal();
+          }
+        });
+
+        minusBtn.addEventListener("click", function () {
+          var currentQty = quantitiesByImage[currentImageIndex] || 0;
+          quantitiesByImage[currentImageIndex] = Math.max(0, currentQty - 1);
+          updateTotals();
+        });
+
+        plusBtn.addEventListener("click", function () {
+          var currentQty = quantitiesByImage[currentImageIndex] || 0;
+          quantitiesByImage[currentImageIndex] = currentQty + 1;
+          updateTotals();
+        });
+
+        imagePrevBtn.addEventListener("click", function () {
+          if (currentImages.length <= 1) return;
+          currentImageIndex =
+            (currentImageIndex - 1 + currentImages.length) % currentImages.length;
+          updateImage();
+        });
+
+        imageNextBtn.addEventListener("click", function () {
+          if (currentImages.length <= 1) return;
+          currentImageIndex = (currentImageIndex + 1) % currentImages.length;
+          updateImage();
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && modal.classList.contains("is-open")) {
+            closeModal();
+          }
+        });
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          var roomNumber = (form.roomNumber.value || "").trim();
+          var lastName = (form.lastName.value || "").trim();
+          if (!roomNumber || !lastName) {
+            statusEl.textContent = "Please enter room number and last name.";
+            return;
+          }
+          statusEl.textContent = "Order sent successfully. Our team will contact your room shortly.";
+          window.setTimeout(closeModal, 1200);
+        });
+      })();
+    </script>
     <script>
       (function () {
         var heading = document.getElementById("extra-heading-title");
