@@ -7,7 +7,7 @@
       name="description"
       content="Derand Hotel Extra offers curated in-room surprises and premium add-ons in Pristina."
     />
-    <title>Extra | Derand Hotel</title>
+    <title>Extra |Hotel in Prishtina</title>
     <link rel="canonical" href="https://www.derandhotel.com/extra.html" />
     <link rel="icon" href="favicon.ico?v=11" type="image/x-icon" />
 
@@ -291,12 +291,12 @@
       .extra-order-modal__dialog {
         position: relative;
         width: min(620px, calc(100vw - 28px));
-        max-height: calc(100vh - 28px);
-        overflow-y: auto;
-        margin: 14px auto;
+        max-height: calc(100vh - 12px);
+        overflow-y: hidden;
+        margin: 6px auto;
         background: #ececec;
         border: 1px solid #d2d2d2;
-        padding: 18px 16px 16px;
+        padding: 14px 14px 12px;
       }
 
       .extra-order-modal__close {
@@ -325,7 +325,7 @@
         margin: 0 auto;
         background: #f1f1f1;
         border: 1px solid #bfbfbf;
-        padding: 12px;
+        padding: 10px;
       }
 
       .extra-order-card__name {
@@ -345,27 +345,62 @@
       }
 
       .extra-order-card__media {
-        display: grid;
-        grid-template-columns: 28px minmax(0, 1fr) 28px;
-        align-items: center;
-        gap: 6px;
+        position: relative;
+        display: flex;
+        justify-content: center;
         margin-bottom: 12px;
       }
 
       .extra-order-card__media-nav {
-        width: 28px;
-        height: 28px;
-        border: 0;
-        background: #b4b4b4;
-        color: #fff;
-        font-size: 18px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 36px;
+        height: 36px;
+        border: 1px solid rgba(177, 114, 86, 0.55);
+        background: linear-gradient(135deg, #cf9a80 0%, #b17256 100%);
+        color: #fffdf9;
+        font-size: 20px;
         line-height: 1;
         cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 8px 18px rgba(88, 52, 38, 0.18);
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease,
+          filter 0.2s ease;
+      }
+
+      .extra-order-card__media-nav:hover {
+        transform: translateY(calc(-50% - 1px));
+        box-shadow: 0 12px 20px rgba(88, 52, 38, 0.24);
+        filter: brightness(1.03);
       }
 
       .extra-order-card__media-nav[disabled] {
-        opacity: 0.45;
+        opacity: 0.38;
+        box-shadow: none;
         cursor: default;
+      }
+
+      .extra-order-card__media-nav#extra-order-image-prev {
+        left: -56px;
+      }
+
+      .extra-order-card__media-nav#extra-order-image-next {
+        right: -56px;
+      }
+
+      @media (max-width: 767px) {
+        .extra-order-card__media-nav#extra-order-image-prev {
+          left: -44px;
+        }
+
+        .extra-order-card__media-nav#extra-order-image-next {
+          right: -44px;
+        }
       }
 
       .extra-order-card__row {
@@ -420,6 +455,26 @@
         border-top: 1px solid #c8c8c8;
       }
 
+      .extra-order-form__note {
+        margin: 0 0 8px;
+        font-size: 13px;
+        line-height: 1.5;
+        color: #5a514b;
+      }
+
+      .extra-order-form__field {
+        margin-top: 8px;
+      }
+
+      .extra-order-form__label {
+        display: block;
+        margin: 0 0 5px;
+        font-size: 12px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #7a675d;
+      }
+
       .extra-order-form__grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -434,6 +489,14 @@
         padding: 8px 10px;
         font-size: 14px;
         color: #333;
+      }
+
+      .extra-order-form input:focus,
+      .extra-order-form textarea:focus {
+        outline: none;
+        border-color: #b17256;
+        box-shadow: 0 0 0 2px rgba(177, 114, 86, 0.12);
+        background: #fff;
       }
 
       .extra-order-form textarea {
@@ -454,6 +517,98 @@
         margin-left: 6px;
         color: #3b3b3b;
         line-height: 1;
+      }
+
+      @media (max-height: 900px) {
+        .extra-order-modal__dialog {
+          padding: 10px 10px 10px;
+        }
+
+        .extra-order-modal__title {
+          margin-bottom: 6px;
+          font-size: 12px;
+        }
+
+        .extra-order-card {
+          padding: 8px;
+        }
+
+        .extra-order-card__name {
+          margin-bottom: 6px;
+          font-size: 24px;
+        }
+
+        .extra-order-card__img {
+          max-width: 178px;
+          margin-bottom: 8px;
+        }
+
+        .extra-order-card__row {
+          margin-bottom: 6px;
+        }
+
+        .extra-order-card__price {
+          font-size: 28px;
+        }
+
+        .extra-order-qty__btn {
+          width: 30px;
+          height: 30px;
+        }
+
+        .extra-order-qty__value {
+          min-width: 36px;
+          font-size: 14px;
+        }
+
+        .extra-order-card__desc {
+          font-size: 14px;
+          line-height: 1.35;
+        }
+
+        .extra-order-form {
+          margin-top: 10px;
+          padding-top: 8px;
+        }
+
+        .extra-order-form__note {
+          margin-bottom: 6px;
+          font-size: 12px;
+          line-height: 1.35;
+        }
+
+        .extra-order-form__label {
+          margin-bottom: 3px;
+          font-size: 11px;
+        }
+
+        .extra-order-form__field {
+          margin-top: 6px;
+        }
+
+        .extra-order-form input,
+        .extra-order-form textarea {
+          padding: 6px 8px;
+          font-size: 13px;
+        }
+
+        .extra-order-form textarea {
+          min-height: 44px;
+        }
+
+        .extra-order-form__total {
+          margin-top: 6px;
+          font-size: 14px;
+        }
+
+        .extra-order-form__total strong {
+          font-size: 32px;
+        }
+
+        .extra-order-form__submit {
+          margin-top: 6px;
+          padding: 8px 10px;
+        }
       }
 
       .extra-order-form__submit {
@@ -668,9 +823,9 @@
               class="extra-btn js-extra-order"
               data-product="Red Roses Bucket"
               data-price="35"
-              data-image="img/flower1.jpg"
-              data-images="img/flower1.jpg,img/flower2.jpg,img/flower3.jpg,img/flower4.jpg"
-              data-prices="20,25,30,35"
+              data-image="img/flower.jpg"
+              data-images="img/flower.jpg,img/flower1.jpg,img/flower2.jpg,img/flower3.jpg,img/flower4.jpg"
+              data-prices="3,20,25,30,35"
               data-description="Fresh red roses wrapped in decorative paper for a romantic in-room surprise."
             >
               Order Now
@@ -689,7 +844,7 @@
                 <div class="extra-slider__track">
                   <div class="extra-slider__slide">
                     <img
-                      src="img/flower1.jpg"
+                      src="img/flower.jpg"
                       alt="Flower bouquet extra 1"
                       width="1080"
                       height="1080"
@@ -697,7 +852,7 @@
                   </div>
                   <div class="extra-slider__slide">
                     <img
-                      src="img/flower2.jpg"
+                      src="img/flower1.jpg"
                       alt="Flower bouquet extra 2"
                       width="1080"
                       height="1080"
@@ -705,7 +860,7 @@
                   </div>
                   <div class="extra-slider__slide">
                     <img
-                      src="img/flower3.jpg"
+                      src="img/flower2.jpg"
                       alt="Flower bouquet extra 3"
                       width="1080"
                       height="1080"
@@ -713,8 +868,16 @@
                   </div>
                   <div class="extra-slider__slide">
                     <img
-                      src="img/flower4.jpg"
+                      src="img/flower3.jpg"
                       alt="Flower bouquet extra 4"
+                      width="1080"
+                      height="1080"
+                    />
+                  </div>
+                  <div class="extra-slider__slide">
+                    <img
+                      src="img/flower4.jpg"
+                      alt="Flower bouquet extra 5"
                       width="1080"
                       height="1080"
                     />
@@ -751,6 +914,11 @@
                   type="button"
                   class="extra-slider__dot"
                   aria-label="Slide 4"
+                ></button>
+                <button
+                  type="button"
+                  class="extra-slider__dot"
+                  aria-label="Slide 5"
                 ></button>
               </div>
             </div>
@@ -966,11 +1134,31 @@
           <p class="extra-order-card__desc" id="extra-order-description"></p>
         </div>
         <form class="extra-order-form" id="extra-order-form">
+         
           <div class="extra-order-form__grid">
-            <input type="text" name="roomNumber" placeholder="Room Number" required />
-            <input type="text" name="lastName" placeholder="Last Name" required />
+            <div class="extra-order-form__field">
+              <label class="extra-order-form__label" for="extra-order-room">Room Number</label>
+              <input id="extra-order-room" type="text" name="roomNumber" placeholder="e.g. 1401" required />
+            </div>
+            <div class="extra-order-form__field">
+              <label class="extra-order-form__label" for="extra-order-lastname">Last Name</label>
+              <input id="extra-order-lastname" type="text" name="lastName" placeholder="e.g. Smith" required />
+            </div>
           </div>
-          <textarea name="message" placeholder="Message (optional)"></textarea>
+          <div class="extra-order-form__grid">
+            <div class="extra-order-form__field">
+              <label class="extra-order-form__label" for="extra-order-date">Delivery Date</label>
+              <input id="extra-order-date" type="date" name="deliveryDate" required />
+            </div>
+            <div class="extra-order-form__field">
+              <label class="extra-order-form__label" for="extra-order-time">Delivery Time</label>
+              <input id="extra-order-time" type="time" name="deliveryTime" required />
+            </div>
+          </div>
+          <div class="extra-order-form__field">
+            <label class="extra-order-form__label" for="extra-order-message">Message (optional)</label>
+            <textarea id="extra-order-message" name="message" placeholder="Add card note, occasion, or any delivery preference"></textarea>
+          </div>
           <div class="extra-order-form__total">Total: <strong id="extra-order-total">35&euro;</strong></div>
           <button type="submit" class="extra-order-form__submit">Order to your room</button>
           <p class="extra-order-form__status" id="extra-order-status" role="status" aria-live="polite"></p>
@@ -1219,6 +1407,9 @@
         var form = document.getElementById("extra-order-form");
         var statusEl = document.getElementById("extra-order-status");
         if (!modal || !productEl || !imageEl || !descriptionEl || !unitPriceEl || !imagePrevBtn || !imageNextBtn || !qtyEl || !totalEl || !minusBtn || !plusBtn || !form || !statusEl) return;
+        var WEB3FORMS_URL = "https://api.web3forms.com/submit";
+        var WEB3FORMS_ACCESS_KEY = "761d8dce-87b2-4534-bc76-77ec2305d4ec";
+        var CARD_CHECKOUT_URL = "https://derand-hotel.hotelrunner.com/bv3/search";
 
         var currentPrice = 35;
         var quantitiesByImage = [0];
@@ -1341,12 +1532,89 @@
           event.preventDefault();
           var roomNumber = (form.roomNumber.value || "").trim();
           var lastName = (form.lastName.value || "").trim();
+          var deliveryDate = (form.deliveryDate.value || "").trim();
+          var deliveryTime = (form.deliveryTime.value || "").trim();
+          var message = (form.message.value || "").trim();
+          var grandTotal = 0;
+          for (var i = 0; i < currentPrices.length; i++) {
+            grandTotal += (currentPrices[i] || currentPrice) * (quantitiesByImage[i] || 0);
+          }
           if (!roomNumber || !lastName) {
             statusEl.textContent = "Please enter room number and last name.";
             return;
           }
-          statusEl.textContent = "Order sent successfully. Our team will contact your room shortly.";
-          window.setTimeout(closeModal, 1200);
+          if (!deliveryDate || !deliveryTime) {
+            statusEl.textContent = "Please select delivery date and time.";
+            return;
+          }
+          if (grandTotal <= 0) {
+            statusEl.textContent = "Please add at least one item using the + button.";
+            return;
+          }
+          var orderLines = [];
+          for (var k = 0; k < currentImages.length; k++) {
+            var qty = quantitiesByImage[k] || 0;
+            if (!qty) continue;
+            var linePrice = currentPrices[k] || currentPrice;
+            orderLines.push(
+              "Item " +
+                (k + 1) +
+                ": " +
+                qty +
+                " x " +
+                linePrice +
+                "€ = " +
+                qty * linePrice +
+                "€",
+            );
+          }
+          var payload = new FormData();
+          payload.append("access_key", WEB3FORMS_ACCESS_KEY);
+          payload.append("subject", "[Extra Order] Room " + roomNumber + " - " + productEl.textContent);
+          payload.append("from_name", "Derand Hotel Website (Extra)");
+          payload.append("email", "info@derandhotel.com");
+          payload.append(
+            "message",
+            [
+              "New extra order request:",
+              "",
+              "Product: " + productEl.textContent,
+              "Room Number: " + roomNumber,
+              "Last Name: " + lastName,
+              "Requested delivery date: " + deliveryDate,
+              "Requested delivery time: " + deliveryTime,
+              "Payment Method: Card checkout requested",
+              "Order Details:",
+              orderLines.join("\n"),
+              "",
+              "Total: " + grandTotal + "€",
+              "",
+              "Guest Message:",
+              message || "-",
+            ].join("\n"),
+          );
+          statusEl.textContent = "Sending order...";
+          fetch(WEB3FORMS_URL, {
+            method: "POST",
+            body: payload,
+            headers: { Accept: "application/json" },
+          })
+            .then(function (response) {
+              if (!response.ok) throw new Error("Submit failed");
+              return response.json();
+            })
+            .then(function (data) {
+              if (!data || !data.success) throw new Error("Submit failed");
+              statusEl.textContent = "Order sent. Redirecting to secure card checkout...";
+              window.setTimeout(function () {
+                window.open(CARD_CHECKOUT_URL, "_blank", "noopener,noreferrer");
+                closeModal();
+              }, 700);
+            })
+            .catch(function () {
+              statusEl.textContent =
+                "We could not send your order right now. Please try again or contact info@derandhotel.com.";
+            });
         });
       })();
     </script>
