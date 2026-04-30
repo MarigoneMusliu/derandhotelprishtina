@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover the in-room minibar selection at Derand Hotel Prishtina."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-store, no-cache, must-revalidate, max-age=0"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Minibar | Derand Hotel</title>
+    <link rel="canonical" href="https://www.derandhotel.com/minibar" />
+    <link rel="icon" href="favicon.ico?v=11" type="image/x-icon" />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/plugins.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+    <style>
+      .minibar-page {
+        background: #f4eee6;
+      }
+
+      .minibar-page
+        *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]):not(
+          [class^="icon_"]
+        ):not([class*=" icon_"]) {
+        font-family: "Traviata", serif !important;
+      }
+
+      .minibar-hero {
+        position: relative;
+        padding: 118px 0 110px;
+        background:
+          linear-gradient(
+            180deg,
+            rgba(17, 13, 11, 0.44) 0%,
+            rgba(17, 13, 11, 0.7) 50%,
+            rgba(17, 13, 11, 0.84) 100%
+          ),
+          url("img/minibar.webp") center center / cover no-repeat;
+      }
+
+      .minibar-hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(135deg, rgba(185, 138, 103, 0.2), transparent 44%),
+          linear-gradient(320deg, rgba(0, 0, 0, 0.16), transparent 36%);
+      }
+
+      .minibar-hero__content {
+        position: relative;
+        z-index: 1;
+        max-width: 620px;
+      }
+
+      .minibar-hero__kicker {
+        margin: 0 0 14px;
+        color: #dfc5af;
+        font-size: 12px;
+        letter-spacing: 0.34em;
+        text-transform: uppercase;
+      }
+
+      .minibar-hero__title {
+        margin: 0 0 16px;
+        color: #ffffff;
+        font-size: clamp(44px, 8vw, 84px);
+        line-height: 0.98;
+        text-transform: uppercase;
+      }
+
+      .minibar-hero__text {
+        margin: 0;
+        max-width: 520px;
+        color: rgba(255, 255, 255, 0.86);
+        font-size: clamp(18px, 2vw, 24px);
+        line-height: 1.6;
+      }
+
+      .minibar-section {
+        position: relative;
+        margin-top: -54px;
+        padding: 0 0 92px;
+      }
+
+      .minibar-intro {
+        background: #fffaf4;
+        border: 1px solid rgba(45, 31, 23, 0.1);
+        box-shadow: 0 20px 56px rgba(48, 31, 23, 0.12);
+        padding: 34px 36px;
+        margin-bottom: 28px;
+      }
+
+      .minibar-intro__kicker {
+        margin: 0 0 10px;
+        color: #ad7d61;
+        font-size: 12px;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+      }
+
+      .minibar-intro__title {
+        margin: 0 0 12px;
+        color: #221814;
+        font-size: clamp(30px, 5vw, 54px);
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .minibar-intro__text {
+        margin: 0;
+        max-width: 760px;
+        color: #64554c;
+        font-size: clamp(18px, 2vw, 22px);
+        line-height: 1.7;
+      }
+
+      .minibar-card {
+        height: 100%;
+        padding: 30px 28px 18px;
+        border: 1px solid rgba(45, 31, 23, 0.1);
+        background:
+          linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.95),
+            rgba(255, 248, 241, 0.98)
+          );
+        box-shadow: 0 18px 50px rgba(48, 31, 23, 0.09);
+        margin-bottom: 24px;
+      }
+
+      .minibar-card__kicker {
+        margin: 0 0 8px;
+        color: #b48466;
+        font-size: 12px;
+        letter-spacing: 0.26em;
+        text-transform: uppercase;
+      }
+
+      .minibar-card__title {
+        margin: 0 0 18px;
+        color: #231916;
+        font-size: clamp(28px, 4vw, 38px);
+        line-height: 1.04;
+        text-transform: uppercase;
+      }
+
+      .minibar-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .minibar-item {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 18px;
+        align-items: start;
+        padding: 14px 0;
+        border-top: 1px solid rgba(45, 31, 23, 0.1);
+      }
+
+      .minibar-item:first-child {
+        padding-top: 0;
+        border-top: 0;
+      }
+
+      .minibar-item__name {
+        display: block;
+        color: #231916;
+        font-size: clamp(22px, 2vw, 28px);
+        line-height: 1.08;
+      }
+
+      .minibar-item__size {
+        display: inline-block;
+        margin-top: 5px;
+        color: #7d6b60;
+        font-size: 15px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .minibar-item__price {
+        color: #8b5d45;
+        white-space: nowrap;
+        font-size: clamp(22px, 2vw, 28px);
+        line-height: 1;
+      }
+
+      .minibar-note {
+        margin-top: 4px;
+        padding: 24px 28px;
+        border: 1px solid rgba(45, 31, 23, 0.1);
+        background: rgba(255, 250, 244, 0.9);
+        color: #66564c;
+        font-size: 18px;
+        line-height: 1.7;
+      }
+
+      .minibar-note strong {
+        color: #2b1d18;
+        font-weight: 400;
+      }
+
+      .minibar-footer {
+        padding: 0 0 72px;
+      }
+
+      .minibar-footer__panel {
+        background: #171210;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 18px 48px rgba(18, 12, 10, 0.16);
+        padding: 34px 28px;
+        text-align: center;
+      }
+
+      .minibar-footer__eyebrow {
+        margin: 0 0 10px;
+        color: #b8947e;
+        font-size: 12px;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+      }
+
+      .minibar-footer__title {
+        margin: 0 0 12px;
+        color: #ffffff;
+        font-size: clamp(28px, 4vw, 40px);
+        line-height: 1.04;
+        text-transform: uppercase;
+      }
+
+      .minibar-footer__text {
+        margin: 0 auto;
+        max-width: 560px;
+        color: #d7c5b8;
+        font-size: 18px;
+        line-height: 1.7;
+      }
+
+      .minibar-footer__link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 220px;
+        margin-top: 22px;
+        padding: 14px 24px;
+        color: #ffffff;
+        font-size: 12px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background: linear-gradient(135deg, #8d6249 0%, #6f4937 100%);
+      }
+
+      .minibar-footer__link:hover,
+      .minibar-footer__link:focus-visible {
+        color: #ffffff;
+        background: linear-gradient(135deg, #9b7056 0%, #7a5140 100%);
+      }
+
+      @media (max-width: 991px) {
+        .minibar-hero {
+          padding: 100px 0 92px;
+        }
+
+        .minibar-section {
+          margin-top: -34px;
+        }
+
+        .minibar-intro {
+          padding: 28px 24px;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .minibar-hero {
+          padding: 88px 0 74px;
+        }
+
+        .minibar-intro__text,
+        .minibar-note,
+        .minibar-footer__text {
+          font-size: 17px;
+        }
+
+        .minibar-item {
+          gap: 12px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="minibar-page">
+    <main>
+      <section class="minibar-hero">
+        <div class="container">
+          <div class="minibar-hero__content">
+            <p class="minibar-hero__kicker">Derand Hotel Prishtina</p>
+            <h1 class="minibar-hero__title">Minibar Menu</h1>
+            <p class="minibar-hero__text">
+              A refined in-room selection of drinks, spirits, and snacks
+              prepared for your stay.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="minibar-section">
+        <div class="container">
+          <div class="minibar-intro">
+            <p class="minibar-intro__kicker">Available in your room</p>
+            <h2 class="minibar-intro__title">Drinks & Snacks</h2>
+            <p class="minibar-intro__text">
+              Browse the minibar selection available in your room. Prices are
+              shown in EUR.
+            </p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6 col-md-6">
+              <article class="minibar-card">
+                <p class="minibar-card__kicker">Refreshments</p>
+                <h3 class="minibar-card__title">Waters</h3>
+                <ul class="minibar-list">
+                  <li class="minibar-item">
+                    <div>
+                      <span class="minibar-item__name">Natural Water</span>
+                      <span class="minibar-item__size">0.25l</span>
+                    </div>
+                    <span class="minibar-item__price">4.00 &euro;</span>
+                  </li>
+                  <li class="minibar-item">
+                    <div>
+                      <span class="minibar-item__name">Mineral Water</span>
+                      <span class="minibar-item__size">0.25l</span>
+                    </div>
+                    <span class="minibar-item__price">4.00 &euro;</span>
+                  </li>
+                </ul>
+              </article>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+              <article class="minibar-card">
+                <p class="minibar-card__kicker">Soft drinks</p>
+                <h3 class="minibar-card__title">Juices & Mixers</h3>
+                <ul class="minibar-list">
+                  <li class="minibar-item">
+                    <div>
+                      <span class="minibar-item__name">Redbull</span>
+                    </div>
+                    <span class="minibar-item__price">7.00 &euro;</span>
+                  </li>
+                  <li class="minibar-item">
+                    <div>
+                      <span class="minibar-item__name">Coca Cola</span>
+                    </div>
+                    <span class="minibar-item__price">5.00 &euro;</span>
+                  </li>
+                  <li class="minibar-item">
+                    <div>
+                      <span class="minibar-item__name"
+                        >Schweppes Bitter Lemon</span
+                      >
+                    </div>
+                    <span class="minibar-item__price">5.00 &euro;</span>
+                  </li>
+                  <li class="minibar-item">
+                    <div>
+                      <span class="minibar-item__name">Schweppes Tonic</span>
+                    </div>
+                    <span class="minibar-item__price">5.00 &euro;</span>
+                  </li>
+                  <li class="minibar-item">
+                    <div>
+                      <span class="minibar-item__name">Carrot Juice</span>
+                    </div>
+                    <span class="minibar-item__price">5.00 &euro;</span>
+                  </li>
+                  <li class="minibar-item">
+                    <div>
+                      <span class="minibar-item__name">Apple Juice</span>
+                    </div>
+                    <span class="minibar-item__price">5.00 &euro;</span>
+                  </li>
+                  <li class="minibar-item">
+                    <div>
+                      <span class="minibar-item__name">Forest Fruit Juice</span>
+                    </div>
+                    <span class="minibar-item__price">5.00 &euro;</span>
+                  </li>
+                </ul>
+              </article>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+              <article class="minibar-card">
+                <p class="minibar-card__kicker">Wine & spirits</p>
+                <h3 class="minibar-card__title">Selection</h3>
+                <ul class="minibar-list">
+                  <li class="minibar-item">
+                    <div>
+                      <span class="minibar-item__name">White Wine</span>
+                    </div>
+                    <span class="minibar-item__price">7.00 &euro;</span>
+                  </li>
+                  <li class="minibar-item">
+                    <div>
+                      <span class="minibar-item__name">Red Wine</span>
+                    </div>
+                    <span class="minibar-item__price">7.00 &euro;</span>
+                  </li>
+                  <li class="minibar-item">
+                    <div>
+                      <span class="minibar-item__name">Jack Daniel's PET</span>
+                      <span class="minibar-item__size">0.05l</span>
+                    </div>
+                    <span class="minibar-item__price">7.00 &euro;</span>
+                  </li>
+                  <li class="minibar-item">
+                    <div>
+                      <span class="minibar-item__name">Jagermeister</span>
+                      <span class="minibar-item__size">0.02l</span>
+                    </div>
+                    <span class="minibar-item__price">7.00 &euro;</span>
+                  </li>
+                  <li class="minibar-item">
+                    <div>
+                      <span class="minibar-item__name">Smirnoff Vodka</span>
+                      <span class="minibar-item__size">0.05l</span>
+                    </div>
+                    <span class="minibar-item__price">7.00 &euro;</span>
+                  </li>
+                  <li class="minibar-item">
+                    <div>
+                      <span class="minibar-item__name">Hendrick's Gin</span>
+                      <span class="minibar-item__size">0.05l</span>
+                    </div>
+                    <span class="minibar-item__price">7.00 &euro;</span>
+                  </li>
+                </ul>
+              </article>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+              <article class="minibar-card">
+                <p class="minibar-card__kicker">Snacks</p>
+                <h3 class="minibar-card__title">Bites</h3>
+                <ul class="minibar-list">
+                  <li class="minibar-item">
+                    <div>
+                      <span class="minibar-item__name">Almonds</span>
+                    </div>
+                    <span class="minibar-item__price">5.00 &euro;</span>
+                  </li>
+                  <li class="minibar-item">
+                    <div>
+                      <span class="minibar-item__name">Hazelnut</span>
+                    </div>
+                    <span class="minibar-item__price">5.00 &euro;</span>
+                  </li>
+                  <li class="minibar-item">
+                    <div>
+                      <span class="minibar-item__name">Pringles Original</span>
+                    </div>
+                    <span class="minibar-item__price">4.00 &euro;</span>
+                  </li>
+                  <li class="minibar-item">
+                    <div>
+                      <span class="minibar-item__name">Pringles Paprika</span>
+                    </div>
+                    <span class="minibar-item__price">4.00 &euro;</span>
+                  </li>
+                  <li class="minibar-item">
+                    <div>
+                      <span class="minibar-item__name">Kit Kat</span>
+                    </div>
+                    <span class="minibar-item__price">3.00 &euro;</span>
+                  </li>
+                </ul>
+              </article>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer class="minibar-footer">
+      <div class="container">
+        <div class="minibar-footer__panel">
+          <p class="minibar-footer__eyebrow">Derand Hotel Prishtina</p>
+          <h2 class="minibar-footer__title">Enjoy your stay</h2>
+          <p class="minibar-footer__text">
+            For the full hotel website and main information, return to the main
+            page below.
+          </p>
+          <a
+            class="minibar-footer__link"
+            href="/"
+            aria-label="Go to the main page"
+            >Go to main page</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
