@@ -8191,12 +8191,18 @@ body {
     gap: 18px;
   }
 
+  /* Mobile / tablet: headline and copy first, image below */
+  .sacher-home .sacher-mozart__image {
+    order: 1;
+  }
+
   .sacher-home .sacher-mozart__image img,
   .sacher-home .sacher-mozart__image video {
     min-height: 420px;
   }
 
   .sacher-home .sacher-mozart__content {
+    order: -1;
     max-width: 100%;
     padding-top: 0;
   }

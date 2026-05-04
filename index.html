@@ -21,10 +21,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
       rel="stylesheet"
     />
     <style>
+      /* Entire index page: text uses Noto Serif only (icon fonts preserved). */
+      body.policy-font-noto-serif.sacher-home,
+      body.policy-font-noto-serif.sacher-home h1,
+      body.policy-font-noto-serif.sacher-home h2,
+      body.policy-font-noto-serif.sacher-home h3,
+      body.policy-font-noto-serif.sacher-home h4,
+      body.policy-font-noto-serif.sacher-home h5,
+      body.policy-font-noto-serif.sacher-home h6,
+      body.policy-font-noto-serif.sacher-home p,
+      body.policy-font-noto-serif.sacher-home span,
+      body.policy-font-noto-serif.sacher-home a,
+      body.policy-font-noto-serif.sacher-home li,
+      body.policy-font-noto-serif.sacher-home small,
+      body.policy-font-noto-serif.sacher-home button,
+      body.policy-font-noto-serif.sacher-home input,
+      body.policy-font-noto-serif.sacher-home textarea,
+      body.policy-font-noto-serif.sacher-home select,
+      body.policy-font-noto-serif.sacher-home label,
+      body.policy-font-noto-serif.sacher-home td,
+      body.policy-font-noto-serif.sacher-home th,
+      body.policy-font-noto-serif.sacher-home div {
+        font-family: "Noto Serif", serif !important;
+      }
+
+      body.policy-font-noto-serif.sacher-home .fa,
+      body.policy-font-noto-serif.sacher-home [class^="icon_"],
+      body.policy-font-noto-serif.sacher-home [class*=" icon_"],
+      body.policy-font-noto-serif.sacher-home .elegant-icons {
+        font-family: FontAwesome !important;
+      }
+
       .sacher-home .sacher-hero__content {
         left: 50%;
         right: auto;
@@ -56,7 +87,7 @@
       .sacher-home .sacher-hero__content .traviata-hero-title {
         margin: 0;
         padding: 0;
-        font-family: "Playfair Display", "Forum", "Traviata", serif;
+        font-family: "Noto Serif", serif;
         font-size: clamp(44px, 5.2vw, 78px) !important;
         line-height: 1.06;
         letter-spacing: 0.02em;
@@ -81,7 +112,7 @@
         margin: 0 auto;
         max-width: min(38em, 92%);
         color: #ffffff;
-        font-family: "Playfair Display", "Forum", "Traviata", serif;
+        font-family: "Noto Serif", serif;
         font-size: clamp(15px, 1.55vw, 22px);
         font-weight: 400;
         line-height: 1.45;
@@ -93,7 +124,7 @@
       .sacher-home .sacher-hero__content .hero-more {
         margin-top: 1.35rem;
         color: rgba(255, 255, 255, 0.95);
-        font-family: "Playfair Display", "Forum", "Traviata", serif;
+        font-family: "Noto Serif", serif;
         font-size: clamp(12px, 1vw, 15px);
         font-weight: 400;
         letter-spacing: 0.12em;
@@ -149,7 +180,7 @@
       .sacher-home
         .sacher-hero__content
         h1.traviata-hero-title[data-i18n="index-hero-title"] {
-        font-family: "Playfair Display", "Forum", serif !important;
+        font-family: "Noto Serif", serif !important;
         font-size: clamp(44px, 5.2vw, 78px) !important;
         line-height: 1.06 !important;
         letter-spacing: 0.02em !important;
@@ -204,6 +235,13 @@
           white-space: normal !important;
           text-wrap: balance !important;
           line-height: 1.12 !important;
+          /*
+            Shift title right on mobile. (Parallax JS was setting inline transform
+            on data-parallax nodes, which overwrote translateX — parallax removed from h1.)
+            Padding shifts centered text without relying on transform.
+          */
+          padding-inline-start: min(14vw, 58px) !important;
+          padding-inline-end: 0 !important;
         }
 
         .sacher-home .sacher-hero__content .hero-divider {
@@ -321,7 +359,7 @@
 </script>
   </head>
 
-  <body class="sacher-home policy-font-traviata">
+  <body class="sacher-home policy-font-noto-serif">
 
     <div id="preloder">
       <div class="loader"></div>
@@ -517,8 +555,6 @@
         <div class="sacher-hero__content">
           <h1
             class="traviata-hero-title"
-            data-parallax="y"
-            data-parallax-speed="0.22"
             data-i18n="index-hero-title"
           >
             Your second home
