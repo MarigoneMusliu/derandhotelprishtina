@@ -16,17 +16,70 @@
     <link rel="stylesheet" href="css/style.css" type="text/css" />
 
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Forum&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap");
 
       .extra-hero {
         min-height: 560px;
         background:
           linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)),
           url("img/extraheader.png") center center / cover no-repeat;
+        display: flex;
+        align-items: center;
+      }
+
+      .extra-hero__content {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 860px;
+        padding: clamp(250px, 35vh, 430px) 18px 0;
+      }
+
+      .extra-hero__content h1 {
+        margin: 0 0 10px;
+        color: #ffffff;
+        font-size: clamp(34px, 5.2vw, 62px);
+        line-height: 1.06;
+        font-family: "Noto Serif", serif;
+        white-space: nowrap;
+        text-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+        transform: translateX(-12px);
+      }
+
+      .extra-hero__content p {
+        margin: 0;
+        color: #b17256;
+        font-size: clamp(18px, 2.1vw, 29px);
+        font-family: "Noto Serif", serif;
+        text-shadow: 0 2px 16px rgba(0, 0, 0, 0.32);
+      }
+
+      .extra-hero__more {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 22px;
+        color: #ffffff;
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        font-family: "Noto Serif", serif;
+      }
+
+      .extra-hero__more-arrow {
+        display: block;
+        margin-top: 6px;
+        font-size: 15px;
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      .extra-hero__more:hover,
+      .extra-hero__more:focus {
+        color: #f2d8c8;
       }
 
       .extra-section {
-        background: #f1f1f1;
+        background: #ffffff;
         padding: 56px 0 72px;
       }
 
@@ -41,7 +94,7 @@
         color: #262626;
         font-size: clamp(34px, 5vw, 56px);
         line-height: 1.06;
-        font-family: "Forum", "Traviata", serif;
+        font-family: "Noto Serif", serif;
         white-space: nowrap;
       }
 
@@ -49,7 +102,7 @@
         margin: 0;
         color: #b17256;
         font-size: clamp(18px, 2.2vw, 28px);
-        font-family: "Forum", "Traviata", serif;
+        font-family: "Noto Serif", serif;
       }
 
       .extra-row {
@@ -64,13 +117,135 @@
         margin-bottom: 0;
       }
 
+      #extra-flowers {
+        gap: clamp(20px, 3vw, 40px);
+        margin-bottom: 130px;
+      }
+
+      #extra-flowers .extra-copy-kicker {
+        font-size: 11px;
+        margin-bottom: 6px;
+      }
+
+      #extra-flowers .extra-copy-title {
+        font-size: clamp(28px, 2.8vw, 44px);
+        margin-bottom: 10px;
+      }
+
+      #extra-flowers .extra-copy-text {
+        font-size: clamp(14px, 1.02vw, 17px);
+        line-height: 1.68;
+        max-width: 420px;
+      }
+
+      #extra-flowers .extra-copy-text::first-letter {
+        font-size: 3.25em;
+        line-height: 0.78;
+        margin-top: 0.16em;
+      }
+
+      #extra-flowers .extra-btn {
+        padding: 9px 16px;
+        font-size: 10px;
+      }
+
+      #extra-flowers .extra-slider,
+      #extra-flowers .extra-media img {
+        max-width: 420px;
+      }
+
+      #extra-flowers .extra-copy,
+      #extra-champagne .extra-copy,
+      #extra-vine .extra-copy,
+      #extra-flowers .extra-media,
+      #extra-champagne .extra-media,
+      #extra-vine .extra-media {
+        justify-self: center;
+        width: 100%;
+        max-width: 420px;
+      }
+
+      #extra-champagne {
+        gap: clamp(20px, 3vw, 40px);
+        margin-bottom: 130px;
+      }
+
+      #extra-champagne .extra-copy-kicker {
+        font-size: 11px;
+        margin-bottom: 6px;
+      }
+
+      #extra-champagne .extra-copy-title {
+        font-size: clamp(28px, 2.8vw, 44px);
+        margin-bottom: 10px;
+      }
+
+      #extra-champagne .extra-copy-text {
+        font-size: clamp(14px, 1.02vw, 17px);
+        line-height: 1.68;
+        max-width: 420px;
+      }
+
+      #extra-champagne .extra-copy-text::first-letter {
+        font-size: 3.25em;
+        line-height: 0.78;
+        margin-top: 0.16em;
+      }
+
+      #extra-champagne .extra-btn {
+        padding: 9px 16px;
+        font-size: 10px;
+      }
+
+      #extra-champagne .extra-slider,
+      #extra-champagne .extra-media img {
+        max-width: 420px;
+      }
+
+      #extra-vine {
+        gap: clamp(20px, 3vw, 40px);
+        margin-bottom: 130px;
+      }
+
+      #extra-vine .extra-copy-kicker {
+        font-size: 11px;
+        margin-bottom: 6px;
+      }
+
+      #extra-vine .extra-copy-title {
+        font-size: clamp(28px, 2.8vw, 44px);
+        margin-bottom: 10px;
+      }
+
+      #extra-vine .extra-copy-text {
+        font-size: clamp(14px, 1.02vw, 17px);
+        line-height: 1.68;
+        max-width: 420px;
+      }
+
+      #extra-vine .extra-copy-text::first-letter {
+        font-size: 3.25em;
+        line-height: 0.78;
+        margin-top: 0.16em;
+      }
+
+      #extra-vine .extra-btn {
+        padding: 9px 16px;
+        font-size: 10px;
+      }
+
+      #extra-vine .extra-slider,
+      #extra-vine .extra-media img {
+        max-width: 420px;
+      }
+
       .extra-copy-kicker {
         margin: 0 0 8px;
         font-size: 12px;
         text-transform: uppercase;
         letter-spacing: 0.22em;
         color: #9e6b52;
-        font-family: "Forum", "Traviata", serif;
+        font-family: "Noto Serif", serif;
         text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
       }
 
@@ -80,7 +255,7 @@
         font-size: clamp(32px, 3.4vw, 50px);
         line-height: 1.02;
         letter-spacing: 0.01em;
-        font-family: "Forum", "Traviata", "Cormorant Garamond", serif;
+        font-family: "Noto Serif", serif;
         text-wrap: balance;
         text-shadow: 0 2px 14px rgba(79, 52, 38, 0.1);
       }
@@ -91,7 +266,7 @@
         line-height: 1.92;
         letter-spacing: 0.012em;
         font-size: clamp(16px, 1.2vw, 19px);
-        font-family: "Cormorant Garamond", "Forum", "Traviata", serif;
+        font-family: "Noto Serif", serif;
         font-weight: 500;
         max-width: 460px;
         text-wrap: pretty;
@@ -99,7 +274,7 @@
 
       .extra-copy-text::first-letter {
         float: left;
-        font-family: "Forum", "Traviata", serif;
+        font-family: "Noto Serif", serif;
         font-size: 3.2em;
         line-height: 0.86;
         padding-right: 0.12em;
@@ -115,7 +290,7 @@
         text-transform: uppercase;
         letter-spacing: 0.15em;
         font-size: 11px;
-        font-family: "Forum", "Traviata", serif;
+        font-family: "Noto Serif", serif;
         border-radius: 0;
         border: 1px solid rgba(255, 255, 255, 0.35);
         box-shadow: 0 10px 22px rgba(121, 76, 56, 0.24);
@@ -137,7 +312,7 @@
         width: 100%;
         max-width: 500px;
         height: auto;
-        border: 1px solid rgba(0, 0, 0, 0.15);
+        border: 0;
         display: block;
       }
 
@@ -156,7 +331,7 @@
       .extra-slider__viewport {
         width: 100%;
         overflow: hidden;
-        border: 1px solid rgba(0, 0, 0, 0.15);
+        border: 0;
         background: #fff;
       }
 
@@ -294,7 +469,7 @@
         max-height: calc(100vh - 12px);
         overflow-y: hidden;
         margin: 6px auto;
-        background: #ececec;
+        background: #ffffff;
         border: 1px solid #d2d2d2;
         padding: 14px 14px 12px;
       }
@@ -317,13 +492,13 @@
         letter-spacing: 0.12em;
         font-size: 13px;
         color: #c39a86;
-        font-family: "Forum", "Traviata", serif;
+        font-family: "Noto Serif", serif;
       }
 
       .extra-order-card {
         max-width: 360px;
         margin: 0 auto;
-        background: #f1f1f1;
+        background: #ffffff;
         border: 1px solid #bfbfbf;
         padding: 10px;
       }
@@ -340,7 +515,7 @@
         max-width: 225px;
         display: block;
         margin: 0 auto 12px;
-        border: 1px solid #d8d8d8;
+        border: 0;
         background: #fff;
       }
 
@@ -491,6 +666,23 @@
         color: #333;
       }
 
+      .extra-order-form input::placeholder,
+      .extra-order-form textarea::placeholder {
+        color: rgba(51, 51, 51, 0.44);
+      }
+
+      .extra-order-form input[type="date"],
+      .extra-order-form input[type="time"] {
+        color: rgba(51, 51, 51, 0.44);
+      }
+
+      .extra-order-form input[type="date"]:valid,
+      .extra-order-form input[type="time"]:valid,
+      .extra-order-form input[type="date"]:focus,
+      .extra-order-form input[type="time"]:focus {
+        color: #333;
+      }
+
       .extra-order-form input:focus,
       .extra-order-form textarea:focus {
         outline: none;
@@ -621,13 +813,549 @@
         letter-spacing: 0.14em;
         padding: 10px 12px;
         font-size: 12px;
-        font-family: "Forum", "Traviata", serif;
+        font-family: "Noto Serif", serif;
       }
 
       .extra-order-form__status {
         margin: 8px 0 0;
         font-size: 13px;
         color: #3f3f3f;
+      }
+
+      .extra-slider__slide img,
+      .extra-continue__decor-card img {
+        cursor: zoom-in;
+      }
+
+      .extra-image-zoom-modal {
+        position: fixed;
+        inset: 0;
+        z-index: 10020;
+        display: none;
+      }
+
+      .extra-image-zoom-modal.is-open {
+        display: block;
+      }
+
+      .extra-image-zoom-modal__backdrop {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.78);
+      }
+
+      .extra-image-zoom-modal__dialog {
+        position: relative;
+        width: min(92vw, 1160px);
+        max-height: 90vh;
+        margin: 5vh auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .extra-image-zoom-modal__img {
+        width: auto;
+        max-width: 100%;
+        max-height: 90vh;
+        display: block;
+        border-radius: 10px;
+        box-shadow: 0 28px 60px rgba(0, 0, 0, 0.45);
+      }
+
+      .extra-image-zoom-modal__close {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        width: 38px;
+        height: 38px;
+        border: 0;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.92);
+        color: #1f1f1f;
+        font-size: 30px;
+        line-height: 1;
+        cursor: pointer;
+      }
+
+      body.extra-zoom-open {
+        overflow: hidden;
+      }
+
+      /* ------------------------------------------------------------
+         Extra "continue" design (decor + feedback) - extra.html only
+      ------------------------------------------------------------ */
+      .extra-continue {
+        background: #ffffff;
+        padding: 56px 0 72px;
+      }
+
+      .extra-continue__hero-copy {
+        text-align: center;
+        margin: 0 auto 26px;
+        max-width: 740px;
+      }
+
+      .extra-continue__hero-copy h2 {
+        margin: 0;
+        font-size: clamp(28px, 4.2vw, 52px);
+        line-height: 1.05;
+        color: #2b2521;
+        font-family: "Noto Serif", serif;
+        font-weight: 200;
+        letter-spacing: 0.01em;
+        white-space: nowrap;
+      }
+
+      .extra-continue__hero-copy p {
+        margin: 8px 0 0;
+        font-size: clamp(26px, 3.4vw, 40px);
+        line-height: 1.45;
+        color: #b17256;
+        font-family: "Noto Serif", serif;
+        font-weight: 400;
+      }
+
+      .extra-continue__decor-wrap {
+        position: relative;
+        margin: 0 auto 26px;
+        max-width: 1120px;
+      }
+
+      .extra-continue__decor-row {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 12px;
+        height: clamp(280px, 38vw, 410px);
+      }
+
+      .extra-continue__decor-card {
+        position: relative;
+        width: clamp(118px, 14.5vw, 188px);
+        height: calc(100% - 110px);
+        border-radius: 14px;
+        overflow: visible;
+        background: #ffffff;
+        box-shadow: 0 18px 42px rgba(0, 0, 0, 0.15);
+        flex: 0 0 auto;
+      }
+
+      .extra-continue__decor-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        border-radius: inherit;
+        transition:
+          opacity 0.32s ease,
+          transform 0.32s ease,
+          filter 0.32s ease;
+      }
+
+      .extra-continue__decor-card img.is-transitioning {
+        opacity: 0;
+        transform: scale(0.98);
+        filter: blur(1px);
+      }
+
+      .extra-continue__decor-card--left {
+        width: clamp(118px, 14.5vw, 188px);
+        height: calc(100% - 110px);
+        margin-bottom: 54px;
+      }
+      .extra-continue__decor-card--right {
+        width: clamp(118px, 14.5vw, 188px);
+        height: calc(100% - 110px);
+        margin-bottom: 54px;
+      }
+
+      .extra-continue__decor-card--center {
+        width: clamp(420px, 58vw, 740px);
+        height: calc(100% - 0px);
+        margin-bottom: 12px;
+        border-radius: 16px;
+        box-shadow: 0 24px 64px rgba(0, 0, 0, 0.18);
+      }
+
+      .extra-continue__decor-center-overlay {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(255, 255, 255, 0.92);
+        border-radius: 12px;
+        padding: 12px 14px;
+        color: #2b2623;
+        max-width: 220px;
+        box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+      }
+
+      .extra-continue__decor-center-overlay strong {
+        display: block;
+        font-weight: 700;
+        font-size: 13px;
+        margin-bottom: 2px;
+        letter-spacing: 0.02em;
+      }
+
+      .extra-continue__decor-center-overlay span {
+        display: block;
+        font-size: 12px;
+        line-height: 1.35;
+        color: rgba(29, 25, 22, 0.88);
+      }
+
+      .extra-continue__decor-label {
+        position: absolute;
+        left: 8px;
+        bottom: -30px;
+        right: 8px;
+        text-align: center;
+        color: #b17256;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        text-shadow: none;
+        pointer-events: none;
+        white-space: nowrap;
+      }
+
+      .extra-continue__decor-card--left .extra-continue__decor-label,
+      .extra-continue__decor-card--right .extra-continue__decor-label {
+        bottom: -80px;
+      }
+
+      .extra-continue__decor-card--center .extra-continue__decor-label {
+        bottom: -34px;
+      }
+
+      .extra-continue__decor-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 46px;
+        height: 46px;
+        border-radius: 10px;
+        background: rgba(189, 189, 189, 0.9);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        font-size: 24px;
+        pointer-events: auto;
+        border: 0;
+        cursor: pointer;
+        z-index: 3;
+      }
+
+      .extra-continue__decor-arrow--prev {
+        left: -84px;
+      }
+      .extra-continue__decor-arrow--next {
+        right: -84px;
+      }
+
+      .extra-continue__special {
+        text-align: center;
+        margin-top: 58px;
+        margin-bottom: 34px;
+      }
+
+      .extra-continue__special-label {
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        font-size: 12px;
+        color: #a58a7b;
+        margin-bottom: 12px;
+      }
+
+      .extra-continue__special-btn {
+        display: inline-block;
+        background: #b17256;
+        color: #ffffff;
+        padding: 10px 22px;
+        border-radius: 0;
+        border: 1px solid rgba(177, 114, 86, 0.55);
+        font-size: 11px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+
+      .extra-continue__story {
+        text-align: left;
+        max-width: 840px;
+        margin: 0 auto 44px;
+        padding-left: clamp(60px, 10vw, 168px);
+        padding-right: 0;
+      }
+
+      .extra-continue__story h3 {
+        margin: 0 0 18px;
+        font-size: clamp(26px, 3.8vw, 44px);
+        line-height: 1.1;
+        color: #2b2521;
+        font-weight: 500;
+      }
+
+      .extra-continue__story p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.85;
+        color: #5c544d;
+        max-width: 680px;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      .extra-continue__feedback {
+        padding-top: 10px;
+      }
+
+      .extra-continue__feedback h3 {
+        margin: 0 0 26px;
+        text-align: center;
+        font-size: clamp(22px, 3vw, 34px);
+        color: #2b2521;
+        font-weight: 500;
+        line-height: 1.2;
+      }
+
+      .extra-continue__feedback-head {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 24px;
+        margin-bottom: 26px;
+      }
+
+      .extra-continue__feedback-head-title {
+        margin: 0;
+        text-align: center;
+      }
+
+      .extra-continue__stats {
+        min-width: 180px;
+        text-align: right;
+        margin-top: 6px;
+      }
+
+      .extra-continue__stats-number {
+        font-size: 42px;
+        line-height: 1;
+        color: #2b2521;
+        font-weight: 600;
+      }
+
+      .extra-continue__stats-label {
+        margin-top: 8px;
+        font-size: 13px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #a58a7b;
+      }
+
+      .extra-continue__stats-badge {
+        margin-top: 10px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        border-radius: 999px;
+        border: 2px solid rgba(177, 114, 86, 0.65);
+        color: rgba(177, 114, 86, 0.95);
+      }
+
+      .extra-continue__feedback-grid {
+        max-width: 980px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1.05fr 1fr;
+        gap: 22px;
+        align-items: start;
+      }
+
+      .extra-continue__feedback-left ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        border-left: 2px solid rgba(177, 114, 86, 0.45);
+        padding-left: 16px;
+      }
+
+      .extra-continue__feedback-left li {
+        margin: 12px 0;
+        font-size: 15px;
+        color: #6a564f;
+        text-transform: capitalize;
+      }
+
+      .extra-continue__feedback-center {
+        text-align: center;
+      }
+
+      .extra-continue__feedback-center-img {
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+        border-radius: 12px;
+        overflow: hidden;
+        background: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        box-shadow: 0 18px 44px rgba(0, 0, 0, 0.12);
+      }
+
+      .extra-continue__feedback-center-img img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .extra-continue__feedback-center-metrics {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        margin-top: -8px;
+        padding: 10px 12px 0;
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .extra-continue__metric {
+        text-align: center;
+        flex: 1;
+      }
+
+      .extra-continue__metric strong {
+        display: block;
+        font-size: 14px;
+        letter-spacing: 0.02em;
+        color: #2b2521;
+      }
+
+      .extra-continue__metric span {
+        display: block;
+        font-size: 12px;
+        letter-spacing: 0.06em;
+        color: #a58a7b;
+        margin-top: 2px;
+        text-transform: uppercase;
+      }
+
+      .extra-continue__feedback-right p {
+        margin: 0 0 10px;
+        color: #5c544d;
+        line-height: 1.7;
+        font-size: 14px;
+      }
+
+      .extra-continue__feedback-right h4 {
+        margin: 0 0 10px;
+        font-size: 16px;
+        color: #2b2521;
+        font-weight: 500;
+      }
+
+      .extra-continue__contact-lines {
+        margin-top: 14px;
+        font-size: 14px;
+        color: #2b2521;
+      }
+
+      .extra-continue__contact-lines .extra-continue__phone {
+        display: block;
+        margin-bottom: 6px;
+        color: #2b2521;
+      }
+
+      .extra-continue__contact-lines a {
+        color: #b17256;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(177, 114, 86, 0.35);
+      }
+
+      @media (max-width: 991px) {
+        .extra-continue__decor-wrap {
+          max-width: 980px;
+        }
+
+        .extra-continue__decor-row {
+          height: clamp(260px, 40vw, 350px);
+        }
+
+        .extra-continue__decor-card--left {
+          width: 22%;
+          height: calc(100% - 92px);
+          margin-bottom: 42px;
+        }
+        .extra-continue__decor-card--right {
+          width: 22%;
+          height: calc(100% - 92px);
+          margin-bottom: 42px;
+        }
+        .extra-continue__decor-card--center {
+          width: 66%;
+          height: calc(100% - 2px);
+          margin-bottom: 10px;
+        }
+
+        .extra-continue__decor-arrow--prev {
+          left: -30px;
+        }
+        .extra-continue__decor-arrow--next {
+          right: -30px;
+        }
+
+        .extra-continue__feedback-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .extra-continue__feedback-center-metrics {
+          max-width: 520px;
+        }
+      }
+
+      @media (max-width: 575px) {
+        .extra-continue__hero-copy h2 {
+          font-size: 30px;
+        }
+        .extra-continue__hero-copy p {
+          font-size: 16px;
+        }
+
+        .extra-continue__decor-row {
+          height: 360px;
+        }
+
+        .extra-continue__decor-card--left {
+          width: 20%;
+          height: calc(100% - 98px);
+          margin-bottom: 34px;
+        }
+
+        .extra-continue__decor-card--right {
+          width: 20%;
+          height: calc(100% - 98px);
+          margin-bottom: 34px;
+        }
+
+        .extra-continue__decor-card--center {
+          width: 70%;
+          height: calc(100% - 4px);
+          margin-bottom: 10px;
+        }
+
+        .extra-continue__decor-center-overlay {
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          max-width: 190px;
+        }
       }
     </style>
   </head>
@@ -793,21 +1521,31 @@
       </div>
     </header>
 
-    <section class="extra-hero"></section>
+    <section class="extra-hero">
+      <div class="container">
+        <div class="extra-hero__content">
+          <h1 id="extra-heading-title">Explore our exclusive products</h1>
+          <p id="extra-heading-subtitle">available at your room</p>
+          <a class="extra-hero__more" href="#extra-flowers"
+            >More <span class="extra-hero__more-arrow">↓</span></a
+          >
+        </div>
+      </div>
+    </section>
+<br>
+<br>
+<br>
+<br>
 
     <section class="extra-section">
       <div class="container">
-        <div class="extra-heading">
-          <h1 id="extra-heading-title">Explore our exclusive products</h1>
-          <p id="extra-heading-subtitle">available at your room</p>
-        </div>
-
-        <article class="extra-row">
+        <article class="extra-row" id="extra-flowers">
           <div class="extra-copy">
             <p class="extra-copy-kicker">Fresh Flower Surprise</p>
             <h2 class="extra-copy-title">
               Fresh, fragrant, and waiting for you.
             </h2>
+            <br>
             <p class="extra-copy-text">
               Add a touch of nature and color to your stay. Whether it’s an
               anniversary, a special occasion, or simply a gesture of
@@ -818,13 +1556,15 @@
               to ensure peak freshness. Let us help you create a lasting first
               impression the moment you step through the door.
             </p>
+            
+            <br>
             <button
               type="button"
               class="extra-btn js-extra-order"
               data-product="Red Roses Bucket"
               data-price="35"
               data-image="img/flower.jpg"
-              data-images="img/flower.jpg,img/flower1.jpg,img/flower2.jpg,img/flower3.jpg,img/flower4.jpg"
+              data-images="img/flower.jpg,img/whiteflower.png,img/flower1.jpg,img/flower2.jpg,img/flower3.jpg,img/flower4.jpg"
               data-prices="3,20,25,30,35"
               data-description="Fresh red roses wrapped in decorative paper for a romantic in-room surprise."
             >
@@ -852,15 +1592,16 @@
                   </div>
                   <div class="extra-slider__slide">
                     <img
-                      src="img/flower1.jpg"
-                      alt="Flower bouquet extra 2"
+                      src="img/whiteflower.png"
+                      alt="Flower bouquet extra 1"
                       width="1080"
                       height="1080"
                     />
                   </div>
+               
                   <div class="extra-slider__slide">
                     <img
-                      src="img/flower2.jpg"
+                      src="img/flower1.jpg"
                       alt="Flower bouquet extra 3"
                       width="1080"
                       height="1080"
@@ -868,22 +1609,24 @@
                   </div>
                   <div class="extra-slider__slide">
                     <img
+                      src="img/flower2.jpg"
+                      alt="Flower bouquet extra 4"
+                      width="1080"
+                      height="1080"
+                    />
+                  </div>
+              
+                 <div class="extra-slider__slide">
+                    <img
                       src="img/flower3.jpg"
                       alt="Flower bouquet extra 4"
                       width="1080"
                       height="1080"
                     />
                   </div>
-                  <div class="extra-slider__slide">
-                    <img
-                      src="img/flower4.jpg"
-                      alt="Flower bouquet extra 5"
-                      width="1080"
-                      height="1080"
-                    />
-                  </div>
-                </div>
+              
               </div>
+              
               <button
                 type="button"
                 class="extra-slider__arrow extra-slider__arrow--next"
@@ -925,17 +1668,18 @@
           </div>
         </article>
 
-        <article class="extra-row extra-row--reverse">
+        <article class="extra-row extra-row--reverse" id="extra-champagne">
           <div class="extra-copy">
             <p class="extra-copy-kicker">Celebrate with Champagne</p>
             <h2 class="extra-copy-title">3 Champagne types available</h2>
             <p class="extra-copy-text">
               Start your stay in style. A chilled bottle of our premium
               champagne, accompanied by crystal flutes, will be set up in your
-              room. Perfect for setting the tone for an unforgettable evening.<br> Whether
-              you are celebrating a personal milestone or simply toasted to the
-              beginning of a luxurious getaway, this arrival ritual is designed
-              for those who appreciate the finer things in life.
+              room. Perfect for setting the tone for an unforgettable
+              evening.<br />
+              Whether you are celebrating a personal milestone or simply toasted
+              to the beginning of a luxurious getaway, this arrival ritual is
+              designed for those who appreciate the finer things in life.
             </p>
             <button
               type="button"
@@ -943,7 +1687,7 @@
               data-product="Champagne Celebration"
               data-price="65"
               data-image="img/champ1.png"
-              data-images="img/champ1.png,img/champ2.png,img/champ.png"
+              data-images="img/champ1.png,img/champ2.png,img/champ.jpg"
               data-description="Chilled champagne with elegant presentation prepared before your arrival."
             >
               Order Now
@@ -978,7 +1722,7 @@
                   </div>
                   <div class="extra-slider__slide">
                     <img
-                      src="img/champ.png"
+                      src="img/champ.jpg"
                       alt="Champagne extra package 3"
                       width="1080"
                       height="1080"
@@ -1017,7 +1761,7 @@
           </div>
         </article>
 
-        <article class="extra-row">
+        <article class="extra-row" id="extra-vine">
           <div class="extra-copy">
             <p class="extra-copy-kicker">Exclusive Wines in our menu</p>
             <h2 class="extra-copy-title">4 Vine types available.</h2>
@@ -1111,58 +1855,343 @@
         </article>
       </div>
     </section>
+    <section class="extra-continue" aria-label="Extra continue design">
+      <div class="container">
+        <div class="extra-continue__hero-copy">
+          <h2>Surprise your most beloved</h2>
+          <p>And make them feels like home.</p>
+        </div>
+
+        <div class="extra-continue__decor-wrap">
+          <button
+            class="extra-continue__decor-arrow extra-continue__decor-arrow--prev"
+            type="button"
+            id="extra-continue-prev"
+            aria-label="Previous decor"
+          >
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+          </button>
+
+          <div class="extra-continue__decor-row">
+            <figure
+              class="extra-continue__decor-card extra-continue__decor-card--left"
+            >
+              <img
+                src="img/valentineday.png"
+                alt="Valentines decor"
+                id="extra-continue-left-img"
+              />
+              <figcaption
+                class="extra-continue__decor-label"
+                id="extra-continue-left-label"
+              >
+                VALENTINE
+              </figcaption>
+            </figure>
+
+            <figure
+              class="extra-continue__decor-card extra-continue__decor-card--center"
+            >
+              <img
+                src="img/birthday.png"
+                alt="Birthday decor"
+                id="extra-continue-center-img"
+              />
+              <div
+                class="extra-continue__decor-center-overlay"
+                id="extra-continue-overlay"
+              >
+                <strong>Balloon with number</strong>
+                <span>Helium</span>
+                <span>No helium</span>
+                <span style="margin-top: 4px; display: block; font-weight: 600"
+                  >10€ per piece</span
+                >
+              </div>
+              <figcaption
+                class="extra-continue__decor-label"
+                id="extra-continue-center-label"
+              >
+                BIRTHDAY PARTY
+              </figcaption>
+            </figure>
+
+            <figure
+              class="extra-continue__decor-card extra-continue__decor-card--right"
+            >
+              <img
+                src="img/custom.png"
+                alt="Custom decor"
+                id="extra-continue-right-img"
+              />
+              <figcaption
+                class="extra-continue__decor-label"
+                id="extra-continue-right-label"
+              >
+                CUSTOM
+              </figcaption>
+            </figure>
+          </div>
+
+          <button
+            class="extra-continue__decor-arrow extra-continue__decor-arrow--next"
+            type="button"
+            id="extra-continue-next"
+            aria-label="Next decor"
+          >
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <div class="extra-continue__special">
+          <button
+            type="button"
+            class="extra-continue__special-btn"
+            aria-label="Order now"
+          >
+            ORDER NOW
+          </button>
+        </div>
+
+        <div class="extra-continue__story">
+          <h3 id="extra-continue-story-title">Make birthday a memory</h3>
+          <p id="extra-continue-story-copy">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+            <br />
+            <br />
+            It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged.
+          </p>
+        </div>
+
+        <!-- <div class="extra-continue__feedback">
+          <div class="extra-continue__feedback-head">
+            <h3 class="extra-continue__feedback-head-title">
+              Our guests have the best feedback and we like to improve.
+            </h3>
+            <div class="extra-continue__stats" aria-hidden="true">
+              <div class="extra-continue__stats-number">188</div>
+              <div class="extra-continue__stats-label">Successful events</div>
+              <div class="extra-continue__stats-badge">
+                <i class="fa fa-check" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="extra-continue__feedback-grid">
+            <div class="extra-continue__feedback-left">
+              <ul>
+                <li>Reception</li>
+                <li>Catering</li>
+                <li>Accommodation</li>
+              </ul>
+            </div>
+
+            <div class="extra-continue__feedback-center">
+              <div class="extra-continue__feedback-center-img">
+                <img src="img/birthday.png" alt="Reception decor image" />
+              </div>
+
+              <div class="extra-continue__feedback-center-metrics">
+                <div class="extra-continue__metric">
+                  <strong>120 sqm2</strong>
+                  <span>Space</span>
+                </div>
+                <div class="extra-continue__metric">
+                  <strong>Max 180 people</strong>
+                  <span>Capacity</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="extra-continue__feedback-right">
+              <h4>Reception</h4>
+              <p>
+                I has survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged.
+              </p>
+              <p style="margin-top: 12px; font-weight: 500; color: #2b2521">
+                For more information
+              </p>
+              <div class="extra-continue__contact-lines">
+                <span class="extra-continue__phone">-383 (0) 41 111 222</span>
+                <a href="mailto:info@derandhotel.com">info@derandhotel.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </section>
+
     <div class="extra-order-modal" id="extra-order-modal" aria-hidden="true">
       <div class="extra-order-modal__backdrop" data-modal-close></div>
-      <div class="extra-order-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="extra-order-title">
-        <button type="button" class="extra-order-modal__close" data-modal-close aria-label="Close order modal">&times;</button>
-        <p class="extra-order-modal__title" id="extra-order-title">Order to your room</p>
+      <div
+        class="extra-order-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="extra-order-title"
+      >
+        <button
+          type="button"
+          class="extra-order-modal__close"
+          data-modal-close
+          aria-label="Close order modal"
+        >
+          &times;
+        </button>
+        <p class="extra-order-modal__title" id="extra-order-title">
+          Order to your room
+        </p>
         <div class="extra-order-card">
-          <h3 class="extra-order-card__name" id="extra-order-product">Red Roses Bucket</h3>
+          <h3 class="extra-order-card__name" id="extra-order-product">
+            Red Roses Bucket
+          </h3>
           <div class="extra-order-card__media">
-            <button type="button" class="extra-order-card__media-nav" id="extra-order-image-prev" aria-label="Previous product image">&lt;</button>
-            <img class="extra-order-card__img" id="extra-order-image" src="img/flower1.jpg" alt="Selected extra product" />
-            <button type="button" class="extra-order-card__media-nav" id="extra-order-image-next" aria-label="Next product image">&gt;</button>
+            <button
+              type="button"
+              class="extra-order-card__media-nav"
+              id="extra-order-image-prev"
+              aria-label="Previous product image"
+            >
+              &lt;
+            </button>
+            <img
+              class="extra-order-card__img"
+              id="extra-order-image"
+              src="img/flower1.jpg"
+              alt="Selected extra product"
+            />
+            <button
+              type="button"
+              class="extra-order-card__media-nav"
+              id="extra-order-image-next"
+              aria-label="Next product image"
+            >
+              &gt;
+            </button>
           </div>
           <div class="extra-order-card__row">
-            <span class="extra-order-card__price" id="extra-order-unit-price">35&euro;</span>
+            <span class="extra-order-card__price" id="extra-order-unit-price"
+              >35&euro;</span
+            >
             <div class="extra-order-qty">
-              <button type="button" class="extra-order-qty__btn" id="extra-order-minus" aria-label="Decrease quantity">-</button>
+              <button
+                type="button"
+                class="extra-order-qty__btn"
+                id="extra-order-minus"
+                aria-label="Decrease quantity"
+              >
+                -
+              </button>
               <span class="extra-order-qty__value" id="extra-order-qty">1</span>
-              <button type="button" class="extra-order-qty__btn" id="extra-order-plus" aria-label="Increase quantity">+</button>
+              <button
+                type="button"
+                class="extra-order-qty__btn"
+                id="extra-order-plus"
+                aria-label="Increase quantity"
+              >
+                +
+              </button>
             </div>
           </div>
           <p class="extra-order-card__desc" id="extra-order-description"></p>
         </div>
         <form class="extra-order-form" id="extra-order-form">
-         
           <div class="extra-order-form__grid">
             <div class="extra-order-form__field">
-              <label class="extra-order-form__label" for="extra-order-room">Room Number</label>
-              <input id="extra-order-room" type="text" name="roomNumber" placeholder="e.g. 1401" required />
+              <label class="extra-order-form__label" for="extra-order-room"
+                >Room Number</label
+              >
+              <input
+                id="extra-order-room"
+                type="text"
+                name="roomNumber"
+                placeholder="e.g. 1401"
+                required
+              />
             </div>
             <div class="extra-order-form__field">
-              <label class="extra-order-form__label" for="extra-order-lastname">Last Name</label>
-              <input id="extra-order-lastname" type="text" name="lastName" placeholder="e.g. Smith" required />
+              <label class="extra-order-form__label" for="extra-order-lastname"
+                >Last Name</label
+              >
+              <input
+                id="extra-order-lastname"
+                type="text"
+                name="lastName"
+                placeholder="e.g. Smith"
+                required
+              />
             </div>
           </div>
           <div class="extra-order-form__grid">
             <div class="extra-order-form__field">
-              <label class="extra-order-form__label" for="extra-order-date">Delivery Date</label>
-              <input id="extra-order-date" type="date" name="deliveryDate" required />
+              <label class="extra-order-form__label" for="extra-order-date"
+                >Delivery Date</label
+              >
+              <input
+                id="extra-order-date"
+                type="date"
+                name="deliveryDate"
+                required
+              />
             </div>
             <div class="extra-order-form__field">
-              <label class="extra-order-form__label" for="extra-order-time">Delivery Time</label>
-              <input id="extra-order-time" type="time" name="deliveryTime" required />
+              <label class="extra-order-form__label" for="extra-order-time"
+                >Delivery Time</label
+              >
+              <input
+                id="extra-order-time"
+                type="time"
+                name="deliveryTime"
+                required
+              />
             </div>
           </div>
           <div class="extra-order-form__field">
-            <label class="extra-order-form__label" for="extra-order-message">Message (optional)</label>
-            <textarea id="extra-order-message" name="message" placeholder="Add card note, occasion, or any delivery preference"></textarea>
+            <label class="extra-order-form__label" for="extra-order-message"
+              >Message (optional)</label
+            >
+            <textarea
+              id="extra-order-message"
+              name="message"
+              placeholder="Add card note, occasion, or any delivery preference"
+            ></textarea>
           </div>
-          <div class="extra-order-form__total">Total: <strong id="extra-order-total">35&euro;</strong></div>
-          <button type="submit" class="extra-order-form__submit">Order to your room</button>
-          <p class="extra-order-form__status" id="extra-order-status" role="status" aria-live="polite"></p>
+          <div class="extra-order-form__total">
+            Total: <strong id="extra-order-total">35&euro;</strong>
+          </div>
+          <button type="submit" class="extra-order-form__submit">
+            Order to your room
+          </button>
+          <p
+            class="extra-order-form__status"
+            id="extra-order-status"
+            role="status"
+            aria-live="polite"
+          ></p>
         </form>
+      </div>
+    </div>
+    <div class="extra-image-zoom-modal" id="extra-image-zoom-modal" aria-hidden="true">
+      <div class="extra-image-zoom-modal__backdrop" data-zoom-close></div>
+      <div class="extra-image-zoom-modal__dialog" role="dialog" aria-modal="true">
+        <button
+          type="button"
+          class="extra-image-zoom-modal__close"
+          aria-label="Close zoomed image"
+          data-zoom-close
+        >
+          &times;
+        </button>
+        <img
+          class="extra-image-zoom-modal__img"
+          id="extra-image-zoom-modal-img"
+          src=""
+          alt="Zoomed image"
+        />
       </div>
     </div>
     <footer class="footer">
@@ -1406,10 +2435,26 @@
         var plusBtn = document.getElementById("extra-order-plus");
         var form = document.getElementById("extra-order-form");
         var statusEl = document.getElementById("extra-order-status");
-        if (!modal || !productEl || !imageEl || !descriptionEl || !unitPriceEl || !imagePrevBtn || !imageNextBtn || !qtyEl || !totalEl || !minusBtn || !plusBtn || !form || !statusEl) return;
+        if (
+          !modal ||
+          !productEl ||
+          !imageEl ||
+          !descriptionEl ||
+          !unitPriceEl ||
+          !imagePrevBtn ||
+          !imageNextBtn ||
+          !qtyEl ||
+          !totalEl ||
+          !minusBtn ||
+          !plusBtn ||
+          !form ||
+          !statusEl
+        )
+          return;
         var WEB3FORMS_URL = "https://api.web3forms.com/submit";
         var WEB3FORMS_ACCESS_KEY = "761d8dce-87b2-4534-bc76-77ec2305d4ec";
-        var CARD_CHECKOUT_URL = "https://derand-hotel.hotelrunner.com/bv3/search";
+        var CARD_CHECKOUT_URL =
+          "https://derand-hotel.hotelrunner.com/bv3/search";
 
         var currentPrice = 35;
         var quantitiesByImage = [0];
@@ -1421,7 +2466,8 @@
           var currentQty = quantitiesByImage[currentImageIndex] || 0;
           var grandTotal = 0;
           for (var i = 0; i < currentPrices.length; i++) {
-            grandTotal += (currentPrices[i] || currentPrice) * (quantitiesByImage[i] || 0);
+            grandTotal +=
+              (currentPrices[i] || currentPrice) * (quantitiesByImage[i] || 0);
           }
           unitPriceEl.textContent = currentPrice + "€";
           qtyEl.textContent = String(currentQty);
@@ -1512,7 +2558,8 @@
         imagePrevBtn.addEventListener("click", function () {
           if (currentImages.length <= 1) return;
           currentImageIndex =
-            (currentImageIndex - 1 + currentImages.length) % currentImages.length;
+            (currentImageIndex - 1 + currentImages.length) %
+            currentImages.length;
           updateImage();
         });
 
@@ -1537,7 +2584,8 @@
           var message = (form.message.value || "").trim();
           var grandTotal = 0;
           for (var i = 0; i < currentPrices.length; i++) {
-            grandTotal += (currentPrices[i] || currentPrice) * (quantitiesByImage[i] || 0);
+            grandTotal +=
+              (currentPrices[i] || currentPrice) * (quantitiesByImage[i] || 0);
           }
           if (!roomNumber || !lastName) {
             statusEl.textContent = "Please enter room number and last name.";
@@ -1548,7 +2596,8 @@
             return;
           }
           if (grandTotal <= 0) {
-            statusEl.textContent = "Please add at least one item using the + button.";
+            statusEl.textContent =
+              "Please add at least one item using the + button.";
             return;
           }
           var orderLines = [];
@@ -1570,7 +2619,10 @@
           }
           var payload = new FormData();
           payload.append("access_key", WEB3FORMS_ACCESS_KEY);
-          payload.append("subject", "[Extra Order] Room " + roomNumber + " - " + productEl.textContent);
+          payload.append(
+            "subject",
+            "[Extra Order] Room " + roomNumber + " - " + productEl.textContent,
+          );
           payload.append("from_name", "Derand Hotel Website (Extra)");
           payload.append("email", "info@derandhotel.com");
           payload.append(
@@ -1605,7 +2657,8 @@
             })
             .then(function (data) {
               if (!data || !data.success) throw new Error("Submit failed");
-              statusEl.textContent = "Order sent. Redirecting to secure card checkout...";
+              statusEl.textContent =
+                "Order sent. Redirecting to secure card checkout...";
               window.setTimeout(function () {
                 window.open(CARD_CHECKOUT_URL, "_blank", "noopener,noreferrer");
                 closeModal();
@@ -1729,6 +2782,180 @@
         initSlider("[data-extra-slider]");
         initSlider("[data-extra-slider-champ]");
         initSlider("[data-extra-slider-vine]");
+      })();
+    </script>
+    <script>
+      (function () {
+        var prevBtn = document.getElementById("extra-continue-prev");
+        var nextBtn = document.getElementById("extra-continue-next");
+        var leftImg = document.getElementById("extra-continue-left-img");
+        var centerImg = document.getElementById("extra-continue-center-img");
+        var rightImg = document.getElementById("extra-continue-right-img");
+        var leftLabel = document.getElementById("extra-continue-left-label");
+        var centerLabel = document.getElementById(
+          "extra-continue-center-label",
+        );
+        var rightLabel = document.getElementById("extra-continue-right-label");
+        var overlay = document.getElementById("extra-continue-overlay");
+        var storyTitle = document.getElementById("extra-continue-story-title");
+        var storyCopy = document.getElementById("extra-continue-story-copy");
+
+        if (
+          !prevBtn ||
+          !nextBtn ||
+          !leftImg ||
+          !centerImg ||
+          !rightImg ||
+          !leftLabel ||
+          !centerLabel ||
+          !rightLabel ||
+          !overlay ||
+          !storyTitle ||
+          !storyCopy
+        ) {
+          return;
+        }
+
+        var items = [
+          {
+            key: "valentines",
+            src: "img/valentineday.png",
+            alt: "Valentines decor",
+            label: "VALENTINE",
+            showOverlay: false,
+            storyTitle: "Make valentine a memory",
+            storyCopy:
+              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley ",
+          },
+          {
+            key: "birthday",
+            src: "img/birthday.png",
+            alt: "Birthday decor",
+            label: "BIRTHDAY PARTY",
+            showOverlay: true,
+            storyTitle: "Make birthday a memory",
+            storyCopy:
+              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+          },
+          {
+            key: "custom",
+            src: "img/custom.png",
+            alt: "Custom decor",
+            label: "CUSTOM",
+            showOverlay: false,
+            storyTitle: "Make custom a memory",
+            storyCopy:
+              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap ",
+          },
+        ];
+
+        var centerIndex = 1; // initial state matches screenshot
+        var isAnimating = false;
+
+        function setCard(imgNode, labelNode, item) {
+          imgNode.src = item.src;
+          imgNode.alt = item.alt;
+          labelNode.textContent = item.label;
+        }
+
+        function render() {
+          var leftIndex = (centerIndex - 1 + items.length) % items.length;
+          var rightIndex = (centerIndex + 1) % items.length;
+
+          setCard(leftImg, leftLabel, items[leftIndex]);
+          setCard(centerImg, centerLabel, items[centerIndex]);
+          setCard(rightImg, rightLabel, items[rightIndex]);
+
+          overlay.style.display = items[centerIndex].showOverlay
+            ? "block"
+            : "none";
+          storyTitle.textContent = items[centerIndex].storyTitle;
+          storyCopy.textContent = items[centerIndex].storyCopy;
+        }
+
+        function animateTo(nextIndex) {
+          if (isAnimating) return;
+          isAnimating = true;
+
+          leftImg.classList.add("is-transitioning");
+          centerImg.classList.add("is-transitioning");
+          rightImg.classList.add("is-transitioning");
+
+          window.setTimeout(function () {
+            centerIndex = (nextIndex + items.length) % items.length;
+            render();
+
+            requestAnimationFrame(function () {
+              leftImg.classList.remove("is-transitioning");
+              centerImg.classList.remove("is-transitioning");
+              rightImg.classList.remove("is-transitioning");
+
+              window.setTimeout(function () {
+                isAnimating = false;
+              }, 340);
+            });
+          }, 180);
+        }
+
+        prevBtn.addEventListener("click", function () {
+          animateTo(centerIndex - 1);
+        });
+
+        nextBtn.addEventListener("click", function () {
+          animateTo(centerIndex + 1);
+        });
+
+        render();
+      })();
+    </script>
+    <script>
+      (function () {
+        var zoomModal = document.getElementById("extra-image-zoom-modal");
+        var zoomImg = document.getElementById("extra-image-zoom-modal-img");
+        if (!zoomModal || !zoomImg) return;
+
+        function openZoom(src, alt) {
+          zoomImg.src = src;
+          zoomImg.alt = alt || "Zoomed image";
+          zoomModal.classList.add("is-open");
+          zoomModal.setAttribute("aria-hidden", "false");
+          document.body.classList.add("extra-zoom-open");
+        }
+
+        function closeZoom() {
+          zoomModal.classList.remove("is-open");
+          zoomModal.setAttribute("aria-hidden", "true");
+          zoomImg.src = "";
+          document.body.classList.remove("extra-zoom-open");
+        }
+
+        document.addEventListener("click", function (event) {
+          var img = event.target.closest(
+            ".extra-slider__slide img, .extra-continue__decor-card img",
+          );
+          if (img) {
+            openZoom(img.currentSrc || img.src, img.alt);
+            return;
+          }
+
+          if (event.target.closest("[data-zoom-close]")) {
+            closeZoom();
+            return;
+          }
+
+          if (
+            zoomModal.classList.contains("is-open") &&
+            !event.target.closest(".extra-image-zoom-modal__img")
+          ) {
+            closeZoom();
+          }
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && zoomModal.classList.contains("is-open")) {
+            closeZoom();
+          }
+        });
       })();
     </script>
   </body>
