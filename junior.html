@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -13,7 +13,7 @@
     <link rel="alternate" hreflang="al" href="https://www.derandhotel.com/junior.html" />
     <link rel="alternate" hreflang="x-default" href="https://www.derandhotel.com/junior.html" />
 
-    <link rel="icon" href="favicon.ico?v=11" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico?v=14" type="image/x-icon" />
 
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="css/plugins.min.css" type="text/css" />
@@ -318,6 +318,7 @@
         inset: 0;
         background: rgba(0, 0, 0, 0);
         transition: background-color 0.25s ease;
+        pointer-events: none;
       }
       .junior-photo-grid__cell img {
         display: block;
@@ -326,12 +327,16 @@
         object-fit: cover;
         object-position: center;
         transition: transform 0.25s ease;
+        cursor: zoom-in;
       }
       .junior-photo-grid__cell:hover img {
         transform: scale(1.06);
       }
       .junior-photo-grid__cell:hover::after {
         background: rgba(0, 0, 0, 0.28);
+      }
+      img.junior-zoomable {
+        cursor: zoom-in;
       }
       @media (max-width: 991px) {
         .junior-photo-grid__grid {
@@ -378,10 +383,13 @@
         z-index: 1;
         max-width: 98vw;
         max-height: 98vh;
+        width: auto;
+        height: auto;
         object-fit: contain;
         border-radius: 4px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
         animation: lb-zoom 140ms ease-out both;
+        cursor: default;
       }
       @keyframes lb-zoom {
         from {
@@ -706,6 +714,9 @@
   <ul class="dropdown">
     <li>
       <a href="contact.html" data-i18n="nav-contact-us">CONTACT US</a>
+    </li>
+    <li>
+      <a href="careers.html" data-i18n="footer-link-5">Careers</a>
     </li>
     <li>
       <a href="faqs.html" data-i18n="nav-faqs">FAQS</a>
@@ -1137,6 +1148,7 @@
           </div>
           <div class="director-showcase__portrait">
             <img
+              class="junior-zoomable"
               src="img/dafina2.webp"
               alt="Best Hotels in Prishtina"
               width="720"
@@ -1171,6 +1183,7 @@
         >
           <div class="director-showcase__stagger-img-wrap">
             <img
+              class="junior-zoomable"
               src="img/juniorbath1.webp"
               alt="Hotel Prishtina"
               width="800"
@@ -1187,6 +1200,7 @@
         >
           <div class="director-showcase__stagger-img-wrap">
             <img
+              class="junior-zoomable"
               src="img/juniorbath.webp"
               alt="Best Hotels in Prishtina"
               width="800"
@@ -1568,16 +1582,17 @@
     </script>
     <script>
       (function () {
-        var gridImages = document.querySelectorAll(
-          ".junior-photo-grid__cell img"
-        );
         var lightbox = document.getElementById("imgLightbox");
         if (!lightbox) return;
         var lightboxImg = lightbox.querySelector(".img-lightbox__img");
+        var lightboxDefaultAlt = lightboxImg ? lightboxImg.getAttribute("alt") || "" : "";
 
-        function openLightbox(src) {
+        function openLightbox(src, alt) {
           if (!src) return;
           lightboxImg.src = src;
+          if (typeof alt === "string") {
+            lightboxImg.alt = alt || lightboxDefaultAlt;
+          }
           lightbox.removeAttribute("hidden");
           document.body.style.overflow = "hidden";
         }
@@ -1585,12 +1600,23 @@
         function closeLightbox() {
           lightbox.setAttribute("hidden", "");
           lightboxImg.removeAttribute("src");
+          lightboxImg.alt = lightboxDefaultAlt;
           document.body.style.overflow = "";
         }
 
-        gridImages.forEach(function (img) {
+        document.querySelectorAll(".junior-photo-grid__cell").forEach(function (cell) {
+          cell.addEventListener("click", function () {
+            var img = cell.querySelector("img");
+            if (!img) return;
+            var src = img.currentSrc || img.getAttribute("src");
+            openLightbox(src, img.alt || "");
+          });
+        });
+
+        document.querySelectorAll("img.junior-zoomable").forEach(function (img) {
           img.addEventListener("click", function () {
-            openLightbox(img.getAttribute("src"));
+            var src = img.currentSrc || img.getAttribute("src");
+            openLightbox(src, img.alt || "");
           });
         });
 
