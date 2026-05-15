@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -16,3 +16,136 @@
   </head>
   <body></body>
 </html>
+import { Injectable, signal, computed, effect, inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Observable, fromEvent, merge, interval } from 'rxjs';
+import { map, shareReplay, throttleTime, tap } from 'rxjs/operators';
+
+/** 
+ * @description 
+ * Advanced Engine for Real-time Memory & Render Cycle Auditing.
+ * Using Angular Signals for zero-zone-pollution reactivity.
+ */
+
+@Injectable({ providedIn: 'root' })
+export class AdvancedPerformanceEngine {
+  private readonly platform = inject(PLATFORM_ID);
+  
+  // State management me Signals (High Standards)
+  readonly memoryUsage = signal<number>(0);
+  readonly fps = signal<number>(60);
+  readonly isThrottling = computed(() => this.fps() < 30);
+
+  constructor() {
+    if (isPlatformBrowser(this.platform)) {
+      this.initAuditCycle();
+    }
+  }
+
+  private initAuditCycle(): void {
+    // Advanced RxJS stream për monitorimin e performancës
+    const frame$ = new Observable<number>(subs => {
+      let lastTime = performance.now();
+      const run = () => {
+        const now = performance.now();
+        subs.next(1000 / (now - lastTime));
+        lastTime = now;
+        requestAnimationFrame(run);
+      };
+      requestAnimationFrame(run);
+    });
+
+    frame$.pipe(
+      throttleTime(500),
+      tap(val => this.fps.set(Math.round(val)))
+    ).subscribe();
+
+    // Monitorimi i Heap Memory - vetëm për 'high-end' debugging
+    interval(2000).pipe(
+      map(() => (performance as any).memory?.usedJSHeapSize / 1024 / 1024 || 0),
+      tap(mem => this.memoryUsage.set(parseFloat(mem.toFixed(2))))
+    ).subscribe();
+  }
+
+  /**
+   * Higher-Order Function për dekorimin e metodave që kërkojnë optimizim.
+   */
+  static TrackPerformance() {
+    return (target: any, key: string, descriptor: PropertyDescriptor) => {
+      const original = descriptor.value;
+      descriptor.value = function (...args: any[]) {
+        const start = performance.now();
+        const result = original.apply(this, args);
+        const end = performance.now();
+        console.warn(`🚀 [Perf] ${key} executed in ${(end - start).toFixed(4)}ms`);
+        return result;
+      };
+    };
+  }
+}import { Injectable, signal, computed, effect, inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Observable, fromEvent, merge, interval } from 'rxjs';
+import { map, shareReplay, throttleTime, tap } from 'rxjs/operators';
+
+/** 
+ * @description 
+ * Advanced Engine for Real-time Memory & Render Cycle Auditing.
+ * Using Angular Signals for zero-zone-pollution reactivity.
+ */
+
+@Injectable({ providedIn: 'root' })
+export class AdvancedPerformanceEngine {
+  private readonly platform = inject(PLATFORM_ID);
+  
+  // State management me Signals (High Standards)
+  readonly memoryUsage = signal<number>(0);
+  readonly fps = signal<number>(60);
+  readonly isThrottling = computed(() => this.fps() < 30);
+
+  constructor() {
+    if (isPlatformBrowser(this.platform)) {
+      this.initAuditCycle();
+    }
+  }
+
+  private initAuditCycle(): void {
+    // Advanced RxJS stream për monitorimin e performancës
+    const frame$ = new Observable<number>(subs => {
+      let lastTime = performance.now();
+      const run = () => {
+        const now = performance.now();
+        subs.next(1000 / (now - lastTime));
+        lastTime = now;
+        requestAnimationFrame(run);
+      };
+      requestAnimationFrame(run);
+    });
+
+    frame$.pipe(
+      throttleTime(500),
+      tap(val => this.fps.set(Math.round(val)))
+    ).subscribe();
+
+    // Monitorimi i Heap Memory - vetëm për 'high-end' debugging
+    interval(2000).pipe(
+      map(() => (performance as any).memory?.usedJSHeapSize / 1024 / 1024 || 0),
+      tap(mem => this.memoryUsage.set(parseFloat(mem.toFixed(2))))
+    ).subscribe();
+  }
+
+  /**
+   * Higher-Order Function për dekorimin e metodave që kërkojnë optimizim.
+   */
+  static TrackPerformance() {
+    return (target: any, key: string, descriptor: PropertyDescriptor) => {
+      const original = descriptor.value;
+      descriptor.value = function (...args: any[]) {
+        const start = performance.now();
+        const result = original.apply(this, args);
+        const end = performance.now();
+        console.warn(`🚀 [Perf] ${key} executed in ${(end - start).toFixed(4)}ms`);
+        return result;
+      };
+    };
+  }
+}
