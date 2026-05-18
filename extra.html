@@ -455,6 +455,8 @@
 
       .extra-order-modal.is-open {
         display: block;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
       }
 
       .extra-order-modal__backdrop {
@@ -466,12 +468,15 @@
       .extra-order-modal__dialog {
         position: relative;
         width: min(620px, calc(100vw - 28px));
-        max-height: calc(100vh - 12px);
-        overflow-y: hidden;
-        margin: 6px auto;
+        max-height: calc(100dvh - 16px);
+        overflow-x: hidden;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 8px auto;
         background: #ffffff;
         border: 1px solid #d2d2d2;
-        padding: 14px 14px 12px;
+        padding: 14px 14px 16px;
+        box-sizing: border-box;
       }
 
       .extra-order-modal__close {
@@ -569,12 +574,151 @@
       }
 
       @media (max-width: 767px) {
+        .extra-order-modal.is-open {
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          padding: 0;
+        }
+
+        .extra-order-modal__dialog {
+          width: 100%;
+          max-width: 100%;
+          min-height: 100dvh;
+          max-height: none;
+          margin: 0;
+          padding: 52px 16px calc(20px + env(safe-area-inset-bottom, 0px));
+          border-left: 0;
+          border-right: 0;
+        }
+
+        .extra-order-modal__close {
+          top: 12px;
+          right: 12px;
+          width: 40px;
+          height: 40px;
+          font-size: 26px;
+          z-index: 2;
+        }
+
+        .extra-order-modal__title {
+          font-size: 12px;
+          margin-bottom: 12px;
+          padding-right: 36px;
+        }
+
+        .extra-order-card {
+          max-width: none;
+          width: 100%;
+          padding: 12px 10px;
+        }
+
+        .extra-order-card__name {
+          font-size: clamp(1.25rem, 5.5vw, 1.65rem);
+          margin-bottom: 10px;
+          padding-right: 8px;
+          word-break: break-word;
+        }
+
+        .extra-order-card__media {
+          padding: 0 48px;
+          margin-bottom: 14px;
+          box-sizing: border-box;
+        }
+
+        .extra-order-card__media-nav {
+          width: 40px;
+          height: 40px;
+          font-size: 18px;
+        }
+
         .extra-order-card__media-nav#extra-order-image-prev {
-          left: -44px;
+          left: 0;
         }
 
         .extra-order-card__media-nav#extra-order-image-next {
-          right: -44px;
+          right: 0;
+        }
+
+        .extra-order-card__img {
+          max-width: 100%;
+          width: 100%;
+          height: auto;
+        }
+
+        .extra-order-card__row {
+          flex-wrap: wrap;
+          gap: 12px;
+          align-items: center;
+        }
+
+        .extra-order-card__price {
+          font-size: clamp(1.75rem, 9vw, 2.35rem);
+        }
+
+        .extra-order-qty__btn {
+          width: 44px;
+          height: 44px;
+          font-size: 22px;
+        }
+
+        .extra-order-qty__value {
+          min-width: 48px;
+          font-size: 17px;
+        }
+
+        .extra-order-card__desc {
+          font-size: 15px;
+          line-height: 1.5;
+        }
+
+        .extra-order-form {
+          margin-top: 16px;
+          padding-top: 14px;
+        }
+
+        .extra-order-form__grid {
+          grid-template-columns: 1fr;
+          gap: 0;
+        }
+
+        .extra-order-form__field {
+          margin-top: 10px;
+        }
+
+        .extra-order-form input,
+        .extra-order-form textarea {
+          font-size: 16px;
+          padding: 12px 12px;
+          min-height: 48px;
+        }
+
+        .extra-order-form textarea {
+          min-height: 88px;
+        }
+
+        .extra-order-form__total {
+          text-align: left;
+          font-size: 15px;
+          margin-top: 14px;
+        }
+
+        .extra-order-form__total strong {
+          display: block;
+          margin: 6px 0 0;
+          font-size: clamp(1.75rem, 9vw, 2.35rem);
+        }
+
+        .extra-order-form__submit {
+          margin-top: 14px;
+          padding: 14px 16px;
+          font-size: 13px;
+          min-height: 48px;
+        }
+
+        .extra-order-form__status {
+          font-size: 14px;
+          line-height: 1.45;
         }
       }
 
@@ -1718,10 +1862,10 @@
               type="button"
               class="extra-btn js-extra-order"
               data-product="Red Roses Bucket"
-              data-price="0"
+              data-price="1"
               data-image="img/flower.jpg"
               data-images="img/flower.jpg,img/whiteflower.png,img/flower5.png,img/flower1.jpg,img/flower2.jpg,img/flower3.jpg"
-              data-prices="0,0,0,0,0,0"
+              data-prices="1,0,0,0,0,0"
               data-description="Fresh red roses wrapped in decorative paper for a romantic in-room surprise."
             >
               Order Now
