@@ -2449,7 +2449,11 @@
           </div>
           <p class="extra-order-card__desc" id="extra-order-description"></p>
         </div>
-        <form class="extra-order-form" id="extra-order-form">
+        <form
+          class="extra-order-form"
+          id="extra-order-form"
+          data-contact-email="info@derandhotel.com"
+        >
           <div class="extra-order-form__grid">
             <div class="extra-order-form__field">
               <label class="extra-order-form__label" for="extra-order-room"
@@ -2803,6 +2807,7 @@
           return;
         var WEB3FORMS_URL = "https://api.web3forms.com/submit";
         var WEB3FORMS_ACCESS_KEY = "761d8dce-87b2-4534-bc76-77ec2305d4ec";
+        var ORDER_TO_EMAIL = "info@derandhotel.com";
         var CARD_CHECKOUT_URL =
           "https://derand-hotel.hotelrunner.com/bv3/search";
 
@@ -2990,68 +2995,115 @@
             var qty = quantitiesByImage[k] || 0;
             if (!qty) continue;
             var linePrice = linePriceAt(k);
+            var imageLabel = (currentImages[k] || "item " + (k + 1))
+              .split("/")
+              .pop();
             orderLines.push(
-              "Item " +
-                (k + 1) +
+              imageLabel +
                 ": " +
                 qty +
-                " x " +
+                " × " +
                 linePrice +
                 "€ = " +
                 qty * linePrice +
                 "€",
             );
           }
-          var payload = new FormData();
-          payload.append("access_key", WEB3FORMS_ACCESS_KEY);
-          payload.append(
-            "subject",
-            "[Extra Order] Room " + roomNumber + " - " + productEl.textContent,
-          );
-          payload.append("from_name", "Derand Hotel Website (Extra)");
-          payload.append("email", "info@derandhotel.com");
-          payload.append(
-            "message",
-            [
-              "New extra order request:",
-              "",
-              "Product: " + productEl.textContent,
-              "Room Number: " + roomNumber,
-              "Last Name: " + lastName,
-              "Requested delivery date: " + deliveryDate,
-              "Requested delivery time: " + deliveryTime,
-              "Payment Method: Card checkout requested",
-              "Order Details:",
-              orderLines.join("\n"),
-              "",
-              "Total: " + grandTotal + "€",
-              "",
-              "Guest Message:",
-              message || "-",
-            ].join("\n"),
-          );
-          statusEl.textContent = "Sending order...";
+          var toEmail =
+            form.getAttribute("data-contact-email") || ORDER_TO_EMAIL;
+          var productName = productEl.textContent || "Extra product";
+          var productDesc = (descriptionEl.textContent || "").trim() || "—";
+          var fullMessage = [
+            "EXTRA ORDER — CONFIRMATION",
+            "========================",
+            "",
+            "Product: " + productName,
+            "Description: " + productDesc,
+            "",
+            "Guest details",
+            "-------------",
+            "Room number: " + roomNumber,
+            "Last name: " + lastName,
+            "Delivery date: " + deliveryDate,
+            "Delivery time: " + deliveryTime,
+            "",
+            "Order items",
+            "-----------",
+            orderLines.join("\n"),
+            "",
+            "Total: " + grandTotal + "€",
+            "Payment: Card checkout requested",
+            "",
+            "Guest message:",
+            message || "(none)",
+            "",
+            "Sent from: extra.html (Derand Hotel website)",
+            "Time: " + new Date().toLocaleString("en-GB", { hour12: false }),
+          ].join("\n");
+
+          var payload = {
+            access_key: WEB3FORMS_ACCESS_KEY,
+            subject:
+              "[Extra Order] Room " +
+              roomNumber +
+              " — " +
+              lastName +
+              " — " +
+              productName,
+            from_name: "Derand Hotel — Extra Order",
+            to_email: toEmail,
+            name: lastName,
+            room_number: roomNumber,
+            delivery_date: deliveryDate,
+            delivery_time: deliveryTime,
+            product: productName,
+            product_description: productDesc,
+            order_items: orderLines.join("\n"),
+            total_eur: grandTotal + " EUR",
+            guest_message: message || "",
+            payment_method: "Card checkout requested",
+            message: fullMessage,
+          };
+
+          var submitBtn = form.querySelector(".extra-order-form__submit");
+          if (submitBtn) submitBtn.disabled = true;
+          statusEl.textContent = "Sending order confirmation...";
+
           fetch(WEB3FORMS_URL, {
             method: "POST",
-            body: payload,
-            headers: { Accept: "application/json" },
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            body: JSON.stringify(payload),
           })
             .then(function (response) {
               if (!response.ok) throw new Error("Submit failed");
               return response.json();
             })
             .then(function (data) {
-              if (!data || !data.success) throw new Error("Submit failed");
+              if (!data || !data.success) {
+                throw new Error(
+                  (data && data.message) || "Submit failed",
+                );
+              }
               statusEl.textContent =
-                "Order sent. Redirecting to secure card checkout...";
+                "Order sent to " +
+                toEmail +
+                ". Opening secure card checkout...";
               window.setTimeout(function () {
                 window.open(CARD_CHECKOUT_URL, "_blank", "noopener,noreferrer");
                 closeModal();
-              }, 700);
+              }, 900);
             })
             .catch(function () {
               statusEl.textContent =
-                "We could not send your order right now. Please try again or contact info@derandhotel.com.";
+                "We could not send your order right now. Please try again or email " +
+                ORDER_TO_EMAIL +
+                ".";
+            })
+            .finally(function () {
+              if (submitBtn) submitBtn.disabled = false;
             });
         });
       })();
