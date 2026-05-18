@@ -18,10 +18,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/sunnyhill.css" type="text/css" />
+    <style>
+      body.sunnyhill-page.policy-font-noto-serif.sacher-home,
+      body.sunnyhill-page.policy-font-noto-serif.sacher-home h1,
+      body.sunnyhill-page.policy-font-noto-serif.sacher-home h2,
+      body.sunnyhill-page.policy-font-noto-serif.sacher-home h3,
+      body.sunnyhill-page.policy-font-noto-serif.sacher-home h4,
+      body.sunnyhill-page.policy-font-noto-serif.sacher-home h5,
+      body.sunnyhill-page.policy-font-noto-serif.sacher-home h6,
+      body.sunnyhill-page.policy-font-noto-serif.sacher-home p,
+      body.sunnyhill-page.policy-font-noto-serif.sacher-home span,
+      body.sunnyhill-page.policy-font-noto-serif.sacher-home a,
+      body.sunnyhill-page.policy-font-noto-serif.sacher-home li,
+      body.sunnyhill-page.policy-font-noto-serif.sacher-home small,
+      body.sunnyhill-page.policy-font-noto-serif.sacher-home button,
+      body.sunnyhill-page.policy-font-noto-serif.sacher-home input,
+      body.sunnyhill-page.policy-font-noto-serif.sacher-home label,
+      body.sunnyhill-page.policy-font-noto-serif.sacher-home div,
+      body.sunnyhill-page.policy-font-noto-serif.sacher-home article {
+        font-family: "Noto Serif", serif !important;
+      }
+
+      body.sunnyhill-page.policy-font-noto-serif.sacher-home .fa,
+      body.sunnyhill-page.policy-font-noto-serif.sacher-home [class^="icon_"],
+      body.sunnyhill-page.policy-font-noto-serif.sacher-home [class*=" icon_"],
+      body.sunnyhill-page.policy-font-noto-serif.sacher-home .elegant-icons {
+        font-family: FontAwesome !important;
+      }
+    </style>
   </head>
 
   <body class="sunnyhill-page policy-font-noto-serif sacher-home">
@@ -210,102 +238,167 @@
       </div>
     </header>
 
+    <section class="sh-page-header" aria-labelledby="sh-page-header-title">
+      <div class="sh-page-header__media">
+        <img
+          src="img/sunnyhillheader.jpg"
+          alt="Sunny Hill Festival crowd and main stage at night"
+          width="1920"
+          height="640"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+        />
+      </div>
+      <div class="sh-page-header__overlay" aria-hidden="true"></div>
+      <div class="sh-page-header__content">
+        <p class="sh-page-header__eyebrow">Derand Hotel · Prishtina</p>
+        <h1 class="sh-page-header__title" id="sh-page-header-title">Sunny Hill Festival</h1>
+        <p class="sh-page-header__subtitle">
+          Exclusive festival &amp; accommodation packages for hotel guests
+        </p>
+      </div>
+    </section>
+
     <main class="sh-tickets sunnyhill-tickets" id="sh-tickets">
       <div class="sh-tickets__wrap">
         <div class="sh-tickets__carousel" aria-label="Ticket offers navigation">
-          <button type="button" class="sh-nav-btn sh-nav-btn--prev" id="sh-prev" aria-label="Previous offers" disabled>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6" /></svg>
+          <button
+            type="button"
+            class="sh-nav-btn sh-nav-btn--prev"
+            id="sh-prev"
+            aria-label="Previous offers"
+            disabled
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15 6l-6 6 6 6" />
+            </svg>
           </button>
           <div class="sh-tickets__content">
             <div class="sh-tickets__viewport">
               <div class="sh-tickets__track" id="sh-track">
-                  <article class="sh-card sh-card--featured">
-                    <p class="sh-card__label">EARLY BIRD</p>
-                    <p class="sh-card__price"><span>195</span> EUR</p>
-                    <p class="sh-card__access">3 DAY ACCESS</p>
-                    <div class="sh-card__status">
-                      <span class="sh-card__ending">ENDING SOON</span>
-                      <div class="sh-card__bar sh-card__bar--ending"></div>
+                <article class="sh-card sh-card--featured sh-card--package sh-card--hotel">
+                  
+                  <p class="sh-card__title">REGULAR PACKAGE</p>
+                  <div class="sh-card__head">
+                    <div class="sh-card__head-text">
+                      <p class="sh-card__price"><span>195</span> EUR</p>
+                      <p class="sh-card__access">3 DAY ACCESS</p>
                     </div>
+                    <div class="sh-card__logo">
+                      <img src="img/logosunny.png" alt="Hotel Derand" width="64" height="64" loading="lazy" decoding="async" />
+                    </div>
+                  </div>
+                  <div class="sh-card__status">
+                    <span class="sh-card__ending">ENDING SOON</span>
+                    <div class="sh-card__bar sh-card__bar--ending"></div>
+                  </div>
+                  <div class="sh-card__divider" aria-hidden="true"></div>
+                  <div class="sh-card__copy">
+                    <p class="sh-card__detail-line">3 DAY FESTIVAL ACCESS + 3 NIGHTS AT HOTEL DERAND (Standard Room)</p>
                     <p class="sh-card__desc sh-card__desc--bullet">
                       <span class="sh-card__dot" aria-hidden="true"></span>
-                      <span>Seize the opportunity to secure your ticket and save 30 Euros off the regular price.</span>
+                      <span>Seize the opportunity to secure your total festival experience. Access to all general stages and comfortable hotel stay at a discounted package price.</span>
                     </p>
-                    <a href="https://www.sunnyhillfestival.com/" class="sh-card__btn sh-card__btn--primary" target="_blank" rel="noopener noreferrer">BUY TICKET</a>
-                  </article>
-
-                  <article class="sh-card sh-card--featured">
-                    <p class="sh-card__label">VIP TICKET</p>
-                    <p class="sh-card__price"><span>500</span> EUR</p>
-                    <p class="sh-card__access">3 DAY ACCESS · SUNNY HILL STAGE</p>
-                    <div class="sh-card__status">
-                      <span class="sh-card__ending">ENDING SOON</span>
-                      <div class="sh-card__bar sh-card__bar--ending"></div>
+                  </div>
+                  <a href="https://www.sunnyhillfestival.com/" class="sh-card__btn sh-card__btn--primary" target="_blank" rel="noopener noreferrer">BUY PACKAGE</a>
+                </article>
+                <article class="sh-card sh-card--featured sh-card--package sh-card--hotel">
+                
+                  <p class="sh-card__title">VIP TICKET </p>
+                  <div class="sh-card__head">
+                    <div class="sh-card__head-text">
+                      <p class="sh-card__price"><span>500</span> EUR</p>
+                      <p class="sh-card__access">3 DAY ACCESS</p>
                     </div>
+                    <div class="sh-card__logo">
+                      <img src="img/logosunny.png" alt="Hotel Derand" width="64" height="64" loading="lazy" decoding="async" />
+                    </div>
+                  </div>
+                  <div class="sh-card__status">
+                    <span class="sh-card__ending">ENDING SOON</span>
+                    <div class="sh-card__bar sh-card__bar--ending"></div>
+                  </div>
+                  <div class="sh-card__divider" aria-hidden="true"></div>
+                  <div class="sh-card__copy">
+                    <p class="sh-card__detail-line">3 DAY FESTIVAL ACCESS + 3 NIGHTS AT HOTEL DERAND (Standard Room)</p>
                     <p class="sh-card__desc sh-card__desc--bullet">
                       <span class="sh-card__dot" aria-hidden="true"></span>
-                      <span>Treat yourself to the ultimate celebration of music. With VIP access, enjoy easy entry, an exclusive stage, and special services for an unforgettable festival experience.</span>
+                      <span>Seize the opportunity to secure your total festival experience. Access to all general stages and comfortable hotel stay at a discounted package price.</span>
                     </p>
-                    <a href="https://www.sunnyhillfestival.com/" class="sh-card__btn sh-card__btn--primary" target="_blank" rel="noopener noreferrer">BUY TICKET</a>
-                  </article>
-
-                  <article class="sh-card sh-card--featured">
-                    <p class="sh-card__label">VIP TICKET</p>
-                    <p class="sh-card__price"><span>400</span> EUR</p>
-                    <p class="sh-card__access">3 DAY ACCESS · C4 STAGE</p>
-                    <div class="sh-card__status">
-                      <span class="sh-card__ending">ENDING SOON</span>
-                      <div class="sh-card__bar sh-card__bar--ending"></div>
+                  </div>
+                  <a href="https://www.sunnyhillfestival.com/" class="sh-card__btn sh-card__btn--primary" target="_blank" rel="noopener noreferrer">BUY PACKAGE</a>
+                </article>
+                <article class="sh-card sh-card--featured sh-card--package sh-card--hotel">
+                
+                  <p class="sh-card__title">VIP TICKET  </p>
+                  <div class="sh-card__head">
+                    <div class="sh-card__head-text">
+                      <p class="sh-card__price"><span>400</span> EUR</p>
+                      <p class="sh-card__access">3 DAY ACCESS</p>
                     </div>
+                    <div class="sh-card__logo">
+                      <img src="img/logosunny.png" alt="Hotel Derand" width="64" height="64" loading="lazy" decoding="async" />
+                    </div>
+                  </div>
+                  <div class="sh-card__status">
+                    <span class="sh-card__ending">ENDING SOON</span>
+                    <div class="sh-card__bar sh-card__bar--ending"></div>
+                  </div>
+                  <div class="sh-card__divider" aria-hidden="true"></div>
+                  <div class="sh-card__copy">
+                    <p class="sh-card__detail-line">3 DAY FESTIVAL ACCESS + 3 NIGHTS AT HOTEL DERAND (Standard Room)</p>
                     <p class="sh-card__desc sh-card__desc--bullet">
                       <span class="sh-card__dot" aria-hidden="true"></span>
-                      <span>Treat yourself to the ultimate celebration of music. With VIP access, enjoy easy entry, an exclusive stage, and special services for an unforgettable festival experience.</span>
+                      <span>Seize the opportunity to secure your total festival experience. Access to all general stages and comfortable hotel stay at a discounted package price.</span>
                     </p>
-                    <a href="https://www.sunnyhillfestival.com/" class="sh-card__btn sh-card__btn--primary" target="_blank" rel="noopener noreferrer">BUY TICKET</a>
-                  </article>
-                </div>
+                  </div>
+                  <a href="https://www.sunnyhillfestival.com/" class="sh-card__btn sh-card__btn--primary" target="_blank" rel="noopener noreferrer">BUY PACKAGE</a>
+                </article>
+                <article class="sh-card sh-card--featured sh-card--package sh-card--hotel">
+                 
+                  <p class="sh-card__title">VIP TICKET </p>
+                  <div class="sh-card__head">
+                    <div class="sh-card__head-text">
+                      <p class="sh-card__price"><span>800</span> EUR</p>
+                      <p class="sh-card__access">3 DAY ACCESS</p>
+                    </div>
+                    <div class="sh-card__logo">
+                      <img src="img/logosunny.png" alt="Hotel Derand" width="64" height="64" loading="lazy" decoding="async" />
+                    </div>
+                  </div>
+                  <div class="sh-card__status">
+                    <span class="sh-card__ending">ENDING SOON</span>
+                    <div class="sh-card__bar sh-card__bar--ending"></div>
+                  </div>
+                  <div class="sh-card__divider" aria-hidden="true"></div>
+                  <div class="sh-card__copy">
+                    <p class="sh-card__detail-line">3 DAY FESTIVAL ACCESS + 3 NIGHTS AT HOTEL DERAND (Standard Room)</p>
+                    <p class="sh-card__desc sh-card__desc--bullet">
+                      <span class="sh-card__dot" aria-hidden="true"></span>
+                      <span>Seize the opportunity to secure your total festival experience. Access to all general stages and comfortable hotel stay at a discounted package price.</span>
+                    </p>
+                  </div>
+                  <a href="https://www.sunnyhillfestival.com/" class="sh-card__btn sh-card__btn--primary" target="_blank" rel="noopener noreferrer">BUY PACKAGE</a>
+                </article>
               </div>
-              <div class="sh-slide" data-slide="1">
-                <div class="sh-slide__grid">
-                  <article class="sh-card sh-card--featured">
-                    <p class="sh-card__label">VIP TICKET</p>
-                    <p class="sh-card__price"><span>500</span> EUR</p>
-                    <p class="sh-card__access">3 DAY ACCESS · SUNNY HILL STAGE  </p>
-                    <div class="sh-card__status">
-                      <span class="sh-card__ending">ENDING SOON</span>
-                      <div class="sh-card__bar sh-card__bar--ending"></div>
-                    </div>
-                    <p class="sh-card__desc sh-card__desc--bullet">
-                      <span class="sh-card__dot" aria-hidden="true"></span>
-                      <span>Immerse yourself in the vibrant atmosphere and enjoy an unforgettable experience. Join us for an unforgettable experience.</span>
-                    </p>
-                    <a href="https://www.sunnyhillfestival.com/" class="sh-card__btn sh-card__btn--primary" target="_blank" rel="noopener noreferrer">BUY TICKET</a>
-                  </article>
-                  <article class="sh-card sh-card--featured">
-                    <p class="sh-card__label">VIP TICKET</p>
-                    <p class="sh-card__price"><span>800</span> EUR</p>
-                    <p class="sh-card__access">3 DAY ACCESS · BUNDLE (SUNNY HILL + C4 STAGE )</p>
-                    <div class="sh-card__status">
-                      <span class="sh-card__ending">ENDING SOON</span>
-                      <div class="sh-card__bar sh-card__bar--ending"></div>
-                    </div>
-                    <p class="sh-card__desc sh-card__desc--bullet">
-                      <span class="sh-card__dot" aria-hidden="true"></span>
-                      <span>Treat yourself to the ultimate celebration of music. With VIP access, enjoy easy entry, an exclusive stage, and special services for an unforgettable festival experience.</span>
-                    </p>
-                    <a href="https://www.sunnyhillfestival.com/" class="sh-card__btn sh-card__btn--primary" target="_blank" rel="noopener noreferrer">BUY TICKET</a>
-                  </article>
-              
-                </div>
               </div>
             </div>
           </div>
-          <button type="button" class="sh-nav-btn sh-nav-btn--next sh-nav-btn--active" id="sh-next" aria-label="Next offers">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" /></svg>
+
+          <button
+            type="button"
+            class="sh-nav-btn sh-nav-btn--next sh-nav-btn--active"
+            id="sh-next"
+            aria-label="Next offers"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 6l6 6-6 6" />
+            </svg>
           </button>
         </div>
-
-          </main>
+      </div>
+    </main>
 
     <footer class="footer">
       <div class="container">
@@ -537,33 +630,61 @@
     <script src="js/jquery.slicknav.js" defer></script>
     <script src="js/owl.carousel.min.js" defer></script>
     <script src="js/main.js?v=20260515-1" defer></script>
-  
+
     <script>
       (function () {
-        var slides = document.querySelectorAll(".sh-slide");
+        var track = document.getElementById("sh-track");
         var prevBtn = document.getElementById("sh-prev");
         var nextBtn = document.getElementById("sh-next");
-        if (!slides.length || !prevBtn || !nextBtn) return;
-        var current = 0;
-        var last = slides.length - 1;
-        function updateNav() {
-          var atStart = current === 0;
-          var atEnd = current === last;
-          prevBtn.disabled = atStart;
-          nextBtn.disabled = atEnd;
-          prevBtn.classList.toggle("sh-nav-btn--active", !atStart);
-          nextBtn.classList.toggle("sh-nav-btn--active", !atEnd);
+        if (!track || !prevBtn || !nextBtn) return;
+
+        var cards = track.querySelectorAll(".sh-card");
+        var index = 0;
+
+        function visibleCount() {
+          if (window.innerWidth <= 575) return 1;
+          if (window.innerWidth <= 991) return 1;
+          return 3;
         }
-        function goTo(index) {
-          if (index < 0 || index > last) return;
-          slides[current].classList.remove("is-active");
-          current = index;
-          slides[current].classList.add("is-active");
-          updateNav();
+
+        function maxIndex() {
+          return Math.max(0, cards.length - visibleCount());
         }
-        prevBtn.addEventListener("click", function () { goTo(current - 1); });
-        nextBtn.addEventListener("click", function () { goTo(current + 1); });
-        updateNav();
+
+        function stepSize() {
+          if (!cards[0]) return 0;
+          var gap = parseFloat(getComputedStyle(track).gap) || 20;
+          return cards[0].offsetWidth + gap;
+        }
+
+        function update() {
+          if (index > maxIndex()) index = maxIndex();
+          track.style.transform = "translateX(" + -index * stepSize() + "px)";
+          prevBtn.disabled = index === 0;
+          nextBtn.disabled = index >= maxIndex();
+          prevBtn.classList.toggle("sh-nav-btn--active", index > 0);
+          nextBtn.classList.toggle("sh-nav-btn--active", index < maxIndex());
+        }
+
+        prevBtn.addEventListener("click", function () {
+          if (index > 0) {
+            index--;
+            update();
+          }
+        });
+
+        nextBtn.addEventListener("click", function () {
+          if (index < maxIndex()) {
+            index++;
+            update();
+          }
+        });
+
+        window.addEventListener("resize", function () {
+          window.requestAnimationFrame(update);
+        });
+
+        update();
       })();
     </script>
   </body>

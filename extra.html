@@ -1720,7 +1720,7 @@
               data-product="Red Roses Bucket"
               data-price="0"
               data-image="img/flower.jpg"
-              data-images="img/flower.jpg,img/whiteflower.png,img/flower5.png,img/flower1.jpg,img/flower2.jpg,img/flower3.jpg,img"
+              data-images="img/flower.jpg,img/whiteflower.png,img/flower5.png,img/flower1.jpg,img/flower2.jpg,img/flower3.jpg"
               data-prices="0,0,0,0,0,0"
               data-description="Fresh red roses wrapped in decorative paper for a romantic in-room surprise."
             >
@@ -1858,6 +1858,7 @@
               data-price="65"
               data-image="img/champ1.png"
               data-images="img/champ1.png,img/champ2.png,img/champ.jpg"
+              data-prices="65,65,65"
               data-description="Chilled champagne with elegant presentation prepared before your arrival."
             >
               Order Now
@@ -2667,24 +2668,44 @@
         var currentPrices = [0];
         var currentImageIndex = 0;
 
+        function syncPricesToImages() {
+          var fallback = currentPrice;
+          if (!currentPrices.length) {
+            currentPrices = [fallback];
+          }
+          while (currentPrices.length < currentImages.length) {
+            var last = currentPrices[currentPrices.length - 1];
+            currentPrices.push(
+              typeof last === "number" && !isNaN(last) ? last : fallback,
+            );
+          }
+          if (currentPrices.length > currentImages.length) {
+            currentPrices = currentPrices.slice(0, currentImages.length);
+          }
+        }
+
+        function linePriceAt(index) {
+          var p = currentPrices[index];
+          if (typeof p === "number" && !isNaN(p)) return p;
+          return currentPrice;
+        }
+
         function updateTotals() {
+          syncPricesToImages();
           var currentQty = quantitiesByImage[currentImageIndex] || 0;
           var grandTotal = 0;
-          for (var i = 0; i < currentPrices.length; i++) {
-            grandTotal +=
-              (currentPrices[i] ?? currentPrice) * (quantitiesByImage[i] || 0);
+          for (var i = 0; i < currentImages.length; i++) {
+            grandTotal += linePriceAt(i) * (quantitiesByImage[i] || 0);
           }
-          unitPriceEl.textContent = currentPrice + "€";
+          unitPriceEl.textContent = linePriceAt(currentImageIndex) + "€";
           qtyEl.textContent = String(currentQty);
           totalEl.textContent = grandTotal + "€";
         }
 
         function updateImage() {
+          syncPricesToImages();
           var image = currentImages[currentImageIndex] || "img/flower1.jpg";
-          currentPrice =
-            currentPrices[currentImageIndex] ??
-            currentPrices[currentPrices.length - 1] ??
-            0;
+          currentPrice = linePriceAt(currentImageIndex);
           imageEl.src = image;
           updateTotals();
           imagePrevBtn.disabled = currentImages.length <= 1;
@@ -2717,7 +2738,13 @@
           if (isNaN(price) || price < 0) price = 0;
           currentPrice = price;
           currentImages = parsedImages.length ? parsedImages : [img];
+          currentImages = currentImages.filter(function (src) {
+            return /\.(jpg|jpeg|png|webp|gif|svg)(\?.*)?$/i.test(src);
+          });
+          if (!currentImages.length) currentImages = [img];
           currentPrices = parsedPrices.length ? parsedPrices : [price];
+          currentPrice = price;
+          syncPricesToImages();
           quantitiesByImage = new Array(currentImages.length).fill(0);
           currentImageIndex = 0;
           productEl.textContent = product;
@@ -2748,16 +2775,22 @@
           }
         });
 
-        minusBtn.addEventListener("click", function () {
+        function onQtyChange(delta, event) {
+          if (event) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
           var currentQty = quantitiesByImage[currentImageIndex] || 0;
-          quantitiesByImage[currentImageIndex] = Math.max(0, currentQty - 1);
+          quantitiesByImage[currentImageIndex] = Math.max(0, currentQty + delta);
           updateTotals();
+        }
+
+        minusBtn.addEventListener("click", function (event) {
+          onQtyChange(-1, event);
         });
 
-        plusBtn.addEventListener("click", function () {
-          var currentQty = quantitiesByImage[currentImageIndex] || 0;
-          quantitiesByImage[currentImageIndex] = currentQty + 1;
-          updateTotals();
+        plusBtn.addEventListener("click", function (event) {
+          onQtyChange(1, event);
         });
 
         imagePrevBtn.addEventListener("click", function () {
@@ -2789,10 +2822,11 @@
           var message = (form.message.value || "").trim();
           var grandTotal = 0;
           var totalQty = 0;
-          for (var i = 0; i < currentPrices.length; i++) {
+          syncPricesToImages();
+          for (var i = 0; i < currentImages.length; i++) {
             var q = quantitiesByImage[i] || 0;
             totalQty += q;
-            grandTotal += (currentPrices[i] ?? currentPrice) * q;
+            grandTotal += linePriceAt(i) * q;
           }
           if (!roomNumber || !lastName) {
             statusEl.textContent = "Please enter room number and last name.";
@@ -2811,7 +2845,7 @@
           for (var k = 0; k < currentImages.length; k++) {
             var qty = quantitiesByImage[k] || 0;
             if (!qty) continue;
-            var linePrice = currentPrices[k] ?? currentPrice;
+            var linePrice = linePriceAt(k);
             orderLines.push(
               "Item " +
                 (k + 1) +
