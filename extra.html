@@ -966,6 +966,484 @@
         color: #3f3f3f;
       }
 
+      .extra-order-modal__actions {
+        margin-top: 18px;
+        padding-top: 16px;
+        border-top: 1px solid rgba(177, 114, 86, 0.22);
+      }
+
+      .extra-order-modal__actions .extra-order-form__total {
+        margin-bottom: 14px;
+      }
+
+      .extra-btn-cart-add {
+        width: 100%;
+        border: 0;
+        cursor: pointer;
+        background: linear-gradient(135deg, #c68d70 0%, #9f5f45 100%);
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        padding: 14px 16px;
+        font-size: 12px;
+        font-family: "Noto Serif", serif;
+        box-shadow: 0 10px 22px rgba(121, 76, 56, 0.24);
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      .extra-btn-cart-add:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 14px 28px rgba(121, 76, 56, 0.3);
+      }
+
+      .extra-order-flower-picker {
+        display: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin: 0 auto 14px;
+        max-width: 320px;
+      }
+
+      .extra-order-flower-picker.is-visible {
+        display: flex;
+      }
+
+      .extra-order-flower-picker__btn {
+        flex: 1 1 auto;
+        min-width: 64px;
+        padding: 8px 12px;
+        border: 1px solid #b17256;
+        background: #fff;
+        color: #5a514b;
+        font-family: "Noto Serif", serif;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition:
+          background 0.2s ease,
+          color 0.2s ease;
+      }
+
+      .extra-order-flower-picker__btn.is-active {
+        background: #b17256;
+        color: #fff;
+        border-color: #b17256;
+      }
+
+      .extra-order-card__media--flower-picker .extra-order-card__media-nav {
+        display: none;
+      }
+
+      .extra-cart-widget {
+        position: fixed;
+        right: 22px;
+        bottom: 24px;
+        z-index: 10040;
+      }
+
+      .extra-cart-widget__toggle {
+        position: relative;
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        border: 0;
+        cursor: pointer;
+        background: linear-gradient(145deg, #cf9a80 0%, #9f5f45 100%);
+        color: #fff;
+        box-shadow: 0 12px 28px rgba(88, 52, 38, 0.35);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      .extra-cart-widget__toggle:hover {
+        transform: translateY(-2px) scale(1.03);
+      }
+
+      .extra-cart-widget__toggle svg {
+        width: 26px;
+        height: 26px;
+        fill: currentColor;
+      }
+
+      .extra-cart-widget__badge {
+        position: absolute;
+        top: -4px;
+        right: -4px;
+        min-width: 22px;
+        height: 22px;
+        padding: 0 6px;
+        border-radius: 999px;
+        background: #2b2521;
+        color: #fff;
+        font-size: 11px;
+        font-weight: 700;
+        font-family: "Noto Serif", serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transform: scale(0.6);
+        transition:
+          opacity 0.2s ease,
+          transform 0.2s ease;
+      }
+
+      .extra-cart-widget__badge.is-visible {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      .extra-cart-drawer {
+        position: fixed;
+        inset: 0;
+        z-index: 10050;
+        pointer-events: none;
+      }
+
+      .extra-cart-drawer.is-open {
+        pointer-events: auto;
+      }
+
+      .extra-cart-drawer__backdrop {
+        position: absolute;
+        inset: 0;
+        background: rgba(30, 24, 20, 0.45);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .extra-cart-drawer.is-open .extra-cart-drawer__backdrop {
+        opacity: 1;
+      }
+
+      .extra-cart-drawer__panel {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: min(420px, 100%);
+        height: 100%;
+        background: #fffdf9;
+        border-left: 1px solid rgba(177, 114, 86, 0.25);
+        box-shadow: -12px 0 40px rgba(43, 37, 33, 0.12);
+        display: flex;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      .extra-cart-drawer.is-open .extra-cart-drawer__panel {
+        transform: translateX(0);
+      }
+
+      .extra-cart-drawer__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 20px 12px;
+        border-bottom: 1px solid rgba(177, 114, 86, 0.18);
+      }
+
+      .extra-cart-drawer__header h2 {
+        margin: 0;
+        font-family: "Noto Serif", serif;
+        font-size: 1.35rem;
+        color: #2b2521;
+        font-weight: 600;
+      }
+
+      .extra-cart-drawer__close {
+        width: 40px;
+        height: 40px;
+        border: 0;
+        background: transparent;
+        font-size: 28px;
+        line-height: 1;
+        color: #5a514b;
+        cursor: pointer;
+      }
+
+      .extra-cart-drawer__body {
+        flex: 1;
+        overflow-y: auto;
+        padding: 12px 16px;
+      }
+
+      .extra-cart-empty {
+        text-align: center;
+        padding: 48px 20px;
+        color: #7a726c;
+        font-family: "Noto Serif", serif;
+      }
+
+      .extra-cart-empty__icon {
+        font-size: 48px;
+        opacity: 0.35;
+        margin-bottom: 12px;
+      }
+
+      .extra-cart-item {
+        display: grid;
+        grid-template-columns: 72px 1fr auto;
+        gap: 12px;
+        align-items: start;
+        padding: 14px 0;
+        border-bottom: 1px solid rgba(177, 114, 86, 0.12);
+      }
+
+      .extra-cart-item__img {
+        width: 72px;
+        height: 72px;
+        object-fit: cover;
+        background: #fff;
+        border: 1px solid rgba(177, 114, 86, 0.15);
+      }
+
+      .extra-cart-item__name {
+        margin: 0 0 4px;
+        font-family: "Noto Serif", serif;
+        font-size: 14px;
+        font-weight: 600;
+        color: #2b2521;
+        line-height: 1.3;
+      }
+
+      .extra-cart-item__variant {
+        margin: 0 0 8px;
+        font-size: 12px;
+        color: #b17256;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+
+      .extra-cart-item__price {
+        font-size: 13px;
+        color: #5a514b;
+      }
+
+      .extra-cart-item__controls {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 8px;
+      }
+
+      .extra-cart-item__qty {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        border: 1px solid rgba(177, 114, 86, 0.35);
+      }
+
+      .extra-cart-item__qty button {
+        width: 32px;
+        height: 32px;
+        border: 0;
+        background: #faf6f2;
+        color: #5a514b;
+        font-size: 18px;
+        cursor: pointer;
+        font-family: inherit;
+      }
+
+      .extra-cart-item__qty span {
+        min-width: 24px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .extra-cart-item__remove {
+        border: 0;
+        background: none;
+        color: #9a6b58;
+        font-size: 11px;
+        text-decoration: underline;
+        cursor: pointer;
+        font-family: "Noto Serif", serif;
+        padding: 0;
+      }
+
+      .extra-cart-item__line-total {
+        font-size: 14px;
+        font-weight: 600;
+        color: #2b2521;
+        font-family: "Noto Serif", serif;
+      }
+
+      .extra-cart-drawer__footer {
+        padding: 16px 20px calc(20px + env(safe-area-inset-bottom, 0px));
+        border-top: 1px solid rgba(177, 114, 86, 0.22);
+        background: #faf6f2;
+      }
+
+      .extra-cart-drawer__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 14px;
+        font-family: "Noto Serif", serif;
+      }
+
+      .extra-cart-drawer__row span {
+        font-size: 13px;
+        color: #5a514b;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .extra-cart-drawer__row strong {
+        font-size: 1.5rem;
+        color: #2b2521;
+      }
+
+      .extra-cart-drawer__checkout {
+        width: 100%;
+        border: 0;
+        cursor: pointer;
+        padding: 15px 16px;
+        background: linear-gradient(135deg, #2b2521 0%, #4a4038 100%);
+        color: #fff;
+        font-family: "Noto Serif", serif;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        transition: opacity 0.2s ease;
+      }
+
+      .extra-cart-drawer__checkout:disabled {
+        opacity: 0.45;
+        cursor: not-allowed;
+      }
+
+      .extra-cart-drawer__checkout:not(:disabled):hover {
+        opacity: 0.92;
+      }
+
+      .extra-cart-toast {
+        position: fixed;
+        left: 50%;
+        bottom: 100px;
+        transform: translateX(-50%) translateY(20px);
+        z-index: 10060;
+        background: #2b2521;
+        color: #fff;
+        padding: 12px 22px;
+        border-radius: 4px;
+        font-family: "Noto Serif", serif;
+        font-size: 14px;
+        opacity: 0;
+        pointer-events: none;
+        transition:
+          opacity 0.25s ease,
+          transform 0.25s ease;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      }
+
+      .extra-cart-toast.is-visible {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+
+      .extra-checkout-modal {
+        position: fixed;
+        inset: 0;
+        z-index: 10055;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .extra-checkout-modal.is-open {
+        display: flex;
+      }
+
+      .extra-checkout-modal__backdrop {
+        position: absolute;
+        inset: 0;
+        background: rgba(30, 24, 20, 0.55);
+      }
+
+      .extra-checkout-modal__dialog {
+        position: relative;
+        width: min(520px, 100%);
+        max-height: min(92vh, 720px);
+        overflow-y: auto;
+        background: #fffdf9;
+        padding: 28px 24px 24px;
+        border: 1px solid rgba(177, 114, 86, 0.3);
+        box-shadow: 0 24px 48px rgba(43, 37, 33, 0.18);
+      }
+
+      .extra-checkout-modal__close {
+        position: absolute;
+        top: 12px;
+        right: 14px;
+        border: 0;
+        background: transparent;
+        font-size: 28px;
+        cursor: pointer;
+        color: #5a514b;
+      }
+
+      .extra-checkout-modal__title {
+        margin: 0 0 6px;
+        font-family: "Noto Serif", serif;
+        font-size: 1.5rem;
+        color: #2b2521;
+      }
+
+      .extra-checkout-modal__subtitle {
+        margin: 0 0 18px;
+        font-size: 13px;
+        color: #7a726c;
+      }
+
+      .extra-checkout-summary {
+        background: #faf6f2;
+        border: 1px solid rgba(177, 114, 86, 0.15);
+        padding: 12px 14px;
+        margin-bottom: 18px;
+        max-height: 160px;
+        overflow-y: auto;
+        font-size: 13px;
+        line-height: 1.5;
+        color: #3f3f3f;
+      }
+
+      .extra-checkout-summary__line {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 4px 0;
+        border-bottom: 1px dashed rgba(177, 114, 86, 0.2);
+      }
+
+      .extra-checkout-summary__line:last-child {
+        border-bottom: 0;
+      }
+
+      @media (max-width: 767px) {
+        .extra-cart-widget {
+          right: 14px;
+          bottom: 16px;
+        }
+
+        .extra-cart-drawer__panel {
+          width: 100%;
+        }
+      }
+
       .extra-slider__slide img,
       .extra-continue__decor-card img {
         cursor: zoom-in;
@@ -1862,13 +2340,14 @@
               type="button"
               class="extra-btn js-extra-order"
               data-product="Red Roses Bucket"
-              data-price="1"
+              data-price="1.3"
               data-image="img/flower.jpg"
-              data-images="img/flower.jpg,img/whiteflower.png,img/flower5.png,img/flower1.jpg,img/flower2.jpg,img/flower3.jpg"
-              data-prices="1,0,0,0,0,0"
+              data-images="img/flower.jpg,img/whiteflower.png,img/redrose.jpg,img/rose.jpg,img/flower5.png,img/flower1.jpg,img/flower2.jpg,img/flower3.jpg"
+              data-prices="1.3,1.3,1.3,0.7,0,0,0,0"
+              data-flower-picker="true"
               data-description="Fresh red roses wrapped in decorative paper for a romantic in-room surprise."
             >
-              Order Now
+              Add to Cart
             </button>
           </div>
           <div class="extra-media">
@@ -1893,12 +2372,28 @@
                   <div class="extra-slider__slide">
                     <img
                       src="img/whiteflower.png"
-                      alt="Flower bouquet extra 1"
+                      alt="White flower bouquet"
                       width="1080"
                       height="1080"
                     />
                   </div>
-                 <div class="extra-slider__slide">
+                  <div class="extra-slider__slide">
+                    <img
+                      src="img/redrose.jpg"
+                      alt="Red rose bouquet"
+                      width="1080"
+                      height="1080"
+                    />
+                  </div>
+                  <div class="extra-slider__slide">
+                    <img
+                      src="img/rose.jpg"
+                      alt="Rose bouquet"
+                      width="1080"
+                      height="1080"
+                    />
+                  </div>
+                  <div class="extra-slider__slide">
                     <img
                       src="img/flower5.png"
                       alt="Flower bouquet extra 6"
@@ -1977,6 +2472,16 @@
                   class="extra-slider__dot"
                   aria-label="Slide 6"
                 ></button>
+                <button
+                  type="button"
+                  class="extra-slider__dot"
+                  aria-label="Slide 7"
+                ></button>
+                <button
+                  type="button"
+                  class="extra-slider__dot"
+                  aria-label="Slide 8"
+                ></button>
               </div>
             </div>
           </div>
@@ -2005,7 +2510,7 @@
               data-prices="65,65,65"
               data-description="Chilled champagne with elegant presentation prepared before your arrival."
             >
-              Order Now
+              Add to Cart
             </button>
           </div>
           <div class="extra-media">
@@ -2098,7 +2603,7 @@
               data-images="img/vine.png"
               data-description="A selected premium wine served in-room for a relaxed and luxurious evening."
             >
-              Order Now
+              Add to Cart
             </button>
           </div>
           <div class="extra-media">
@@ -2393,13 +2898,13 @@
           &times;
         </button>
         <p class="extra-order-modal__title" id="extra-order-title">
-          Order to your room
+          Add to your cart
         </p>
         <div class="extra-order-card">
           <h3 class="extra-order-card__name" id="extra-order-product">
             Red Roses Bucket
           </h3>
-          <div class="extra-order-card__media">
+          <div class="extra-order-card__media" id="extra-order-card-media">
             <button
               type="button"
               class="extra-order-card__media-nav"
@@ -2421,6 +2926,35 @@
               aria-label="Next product image"
             >
               &gt;
+            </button>
+          </div>
+          <div
+            class="extra-order-flower-picker"
+            id="extra-order-flower-picker"
+            role="group"
+            aria-label="Choose flower colour"
+            hidden
+          >
+            <button
+              type="button"
+              class="extra-order-flower-picker__btn is-active"
+              data-flower-index="0"
+            >
+              Red
+            </button>
+            <button
+              type="button"
+              class="extra-order-flower-picker__btn"
+              data-flower-index="1"
+            >
+              White
+            </button>
+            <button
+              type="button"
+              class="extra-order-flower-picker__btn"
+              data-flower-index="2"
+            >
+              Rose
             </button>
           </div>
           <div class="extra-order-card__row">
@@ -2449,18 +2983,120 @@
           </div>
           <p class="extra-order-card__desc" id="extra-order-description"></p>
         </div>
+        <div class="extra-order-modal__actions">
+          <div class="extra-order-form__total">
+            Item total: <strong id="extra-modal-line-total">0&euro;</strong>
+          </div>
+          <button type="button" class="extra-btn-cart-add" id="extra-add-to-cart-btn">
+            Add to cart
+          </button>
+          <p
+            class="extra-order-form__status"
+            id="extra-modal-status"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="extra-cart-widget" id="extra-cart-widget">
+      <button
+        type="button"
+        class="extra-cart-widget__toggle"
+        id="extra-cart-toggle"
+        aria-label="Open shopping cart"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.45a2 2 0 0 0 1.74 2.96h9.01v-2H10.42a.25.25 0 0 1-.22-.37L11.1 14h6.45a2 2 0 0 0 1.79-1.11L21 6H7zm-.01 14a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"
+          />
+        </svg>
+        <span class="extra-cart-widget__badge" id="extra-cart-badge">0</span>
+      </button>
+    </div>
+
+    <aside
+      class="extra-cart-drawer"
+      id="extra-cart-drawer"
+      aria-hidden="true"
+      aria-label="Shopping cart"
+    >
+      <div class="extra-cart-drawer__backdrop" data-cart-close></div>
+      <div class="extra-cart-drawer__panel">
+        <header class="extra-cart-drawer__header">
+          <h2>Your cart</h2>
+          <button
+            type="button"
+            class="extra-cart-drawer__close"
+            data-cart-close
+            aria-label="Close cart"
+          >
+            &times;
+          </button>
+        </header>
+        <div class="extra-cart-drawer__body" id="extra-cart-items"></div>
+        <footer class="extra-cart-drawer__footer">
+          <div class="extra-cart-drawer__row">
+            <span>Subtotal</span>
+            <strong id="extra-cart-subtotal">0&euro;</strong>
+          </div>
+          <button
+            type="button"
+            class="extra-cart-drawer__checkout"
+            id="extra-cart-checkout-btn"
+            disabled
+          >
+            Pay &amp; deliver to room
+          </button>
+        </footer>
+      </div>
+    </aside>
+
+    <div
+      class="extra-checkout-modal"
+      id="extra-checkout-modal"
+      aria-hidden="true"
+    >
+      <div class="extra-checkout-modal__backdrop" data-checkout-close></div>
+      <div
+        class="extra-checkout-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="extra-checkout-title"
+      >
+        <button
+          type="button"
+          class="extra-checkout-modal__close"
+          data-checkout-close
+          aria-label="Close checkout"
+        >
+          &times;
+        </button>
+        <h2 class="extra-checkout-modal__title" id="extra-checkout-title">
+          Checkout
+        </h2>
+        <p class="extra-checkout-modal__subtitle">
+          Complete your details. We will prepare everything for delivery to your
+          room.
+        </p>
+        <div
+          class="extra-checkout-summary"
+          id="extra-checkout-summary"
+          aria-live="polite"
+        ></div>
         <form
           class="extra-order-form"
-          id="extra-order-form"
+          id="extra-checkout-form"
           data-contact-email="info@derandhotel.com"
         >
           <div class="extra-order-form__grid">
             <div class="extra-order-form__field">
-              <label class="extra-order-form__label" for="extra-order-room"
+              <label class="extra-order-form__label" for="extra-checkout-room"
                 >Room Number</label
               >
               <input
-                id="extra-order-room"
+                id="extra-checkout-room"
                 type="text"
                 name="roomNumber"
                 placeholder="e.g. 1401"
@@ -2468,11 +3104,13 @@
               />
             </div>
             <div class="extra-order-form__field">
-              <label class="extra-order-form__label" for="extra-order-lastname"
+              <label
+                class="extra-order-form__label"
+                for="extra-checkout-lastname"
                 >Last Name</label
               >
               <input
-                id="extra-order-lastname"
+                id="extra-checkout-lastname"
                 type="text"
                 name="lastName"
                 placeholder="e.g. Smith"
@@ -2482,22 +3120,22 @@
           </div>
           <div class="extra-order-form__grid">
             <div class="extra-order-form__field">
-              <label class="extra-order-form__label" for="extra-order-date"
+              <label class="extra-order-form__label" for="extra-checkout-date"
                 >Delivery Date</label
               >
               <input
-                id="extra-order-date"
+                id="extra-checkout-date"
                 type="date"
                 name="deliveryDate"
                 required
               />
             </div>
             <div class="extra-order-form__field">
-              <label class="extra-order-form__label" for="extra-order-time"
+              <label class="extra-order-form__label" for="extra-checkout-time"
                 >Delivery Time</label
               >
               <input
-                id="extra-order-time"
+                id="extra-checkout-time"
                 type="time"
                 name="deliveryTime"
                 required
@@ -2505,28 +3143,33 @@
             </div>
           </div>
           <div class="extra-order-form__field">
-            <label class="extra-order-form__label" for="extra-order-message"
+            <label class="extra-order-form__label" for="extra-checkout-message"
               >Message (optional)</label
             >
             <textarea
-              id="extra-order-message"
+              id="extra-checkout-message"
               name="message"
               placeholder="Add card note, occasion, or any delivery preference"
             ></textarea>
           </div>
           <div class="extra-order-form__total">
-            Total: <strong id="extra-order-total">0&euro;</strong>
+            Order total: <strong id="extra-checkout-total">0&euro;</strong>
           </div>
           <button type="submit" class="extra-order-form__submit">
-            Order to your room
+            Pay now
           </button>
           <p
             class="extra-order-form__status"
-            id="extra-order-status"
+            id="extra-checkout-status"
             role="status"
             aria-live="polite"
           ></p>
         </form>
+      </div>
+    </div>
+
+    <div class="extra-cart-toast" id="extra-cart-toast" role="status" aria-live="polite"></div>
+
       </div>
     </div>
     <div class="extra-image-zoom-modal" id="extra-image-zoom-modal" aria-hidden="true">
@@ -2776,6 +3419,10 @@
     <script src="js/main.js?v=20260416-2" defer></script>
     <script>
       (function () {
+        var CART_STORAGE_KEY = "derandExtraCart";
+        var FLOWER_VARIANT_COUNT = 3;
+        var FLOWER_VARIANT_LABELS = ["Red", "White", "Rose"];
+
         var modal = document.getElementById("extra-order-modal");
         var productEl = document.getElementById("extra-order-product");
         var imageEl = document.getElementById("extra-order-image");
@@ -2784,44 +3431,98 @@
         var imagePrevBtn = document.getElementById("extra-order-image-prev");
         var imageNextBtn = document.getElementById("extra-order-image-next");
         var qtyEl = document.getElementById("extra-order-qty");
-        var totalEl = document.getElementById("extra-order-total");
+        var modalLineTotalEl = document.getElementById("extra-modal-line-total");
         var minusBtn = document.getElementById("extra-order-minus");
         var plusBtn = document.getElementById("extra-order-plus");
-        var form = document.getElementById("extra-order-form");
-        var statusEl = document.getElementById("extra-order-status");
+        var addToCartBtn = document.getElementById("extra-add-to-cart-btn");
+        var modalStatusEl = document.getElementById("extra-modal-status");
+        var flowerPicker = document.getElementById("extra-order-flower-picker");
+        var orderCardMedia = document.getElementById("extra-order-card-media");
+
+        var cartDrawer = document.getElementById("extra-cart-drawer");
+        var cartItemsEl = document.getElementById("extra-cart-items");
+        var cartSubtotalEl = document.getElementById("extra-cart-subtotal");
+        var cartBadgeEl = document.getElementById("extra-cart-badge");
+        var cartToggleBtn = document.getElementById("extra-cart-toggle");
+        var cartCheckoutBtn = document.getElementById("extra-cart-checkout-btn");
+        var cartToast = document.getElementById("extra-cart-toast");
+
+        var checkoutModal = document.getElementById("extra-checkout-modal");
+        var checkoutForm = document.getElementById("extra-checkout-form");
+        var checkoutSummaryEl = document.getElementById("extra-checkout-summary");
+        var checkoutTotalEl = document.getElementById("extra-checkout-total");
+        var checkoutStatusEl = document.getElementById("extra-checkout-status");
+
         if (
           !modal ||
           !productEl ||
           !imageEl ||
-          !descriptionEl ||
           !unitPriceEl ||
-          !imagePrevBtn ||
-          !imageNextBtn ||
-          !qtyEl ||
-          !totalEl ||
-          !minusBtn ||
-          !plusBtn ||
-          !form ||
-          !statusEl
-        )
+          !modalLineTotalEl ||
+          !addToCartBtn ||
+          !cartDrawer ||
+          !cartItemsEl ||
+          !checkoutForm
+        ) {
           return;
+        }
+
         var WEB3FORMS_URL = "https://api.web3forms.com/submit";
         var WEB3FORMS_ACCESS_KEY = "761d8dce-87b2-4534-bc76-77ec2305d4ec";
         var ORDER_TO_EMAIL = "info@derandhotel.com";
         var CARD_CHECKOUT_URL =
           "https://derand-hotel.hotelrunner.com/bv3/search";
 
+        var cart = [];
         var currentPrice = 0;
-        var quantitiesByImage = [0];
         var currentImages = ["img/flower1.jpg"];
         var currentPrices = [0];
         var currentImageIndex = 0;
+        var modalQty = 1;
+        var isFlowerOrder = false;
+        var productBaseName = "";
+        var productDescription = "";
+        var toastTimer = null;
+
+        function loadCart() {
+          try {
+            var raw = localStorage.getItem(CART_STORAGE_KEY);
+            if (!raw) return [];
+            var parsed = JSON.parse(raw);
+            return Array.isArray(parsed) ? parsed : [];
+          } catch (e) {
+            return [];
+          }
+        }
+
+        function saveCart() {
+          try {
+            localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
+          } catch (e) {
+            /* ignore */
+          }
+        }
+
+        function formatEuro(amount) {
+          var n = Math.round(Number(amount) * 100) / 100;
+          if (isNaN(n)) n = 0;
+          if (Math.abs(n - Math.round(n)) < 0.001) {
+            return Math.round(n) + "\u20ac";
+          }
+          if (n > 0 && n < 1) {
+            return n.toFixed(2) + "\u20ac";
+          }
+          return n.toFixed(1) + "\u20ac";
+        }
+
+        function parsePrice(value) {
+          var n = parseFloat(String(value).trim().replace(",", "."));
+          return isNaN(n) || n < 0 ? 0 : n;
+        }
 
         function syncPricesToImages() {
           var fallback = currentPrice;
-          if (!currentPrices.length) {
-            currentPrices = [fallback];
-          }
+          if (!currentPrices.length) currentPrices = [fallback];
           while (currentPrices.length < currentImages.length) {
             var last = currentPrices[currentPrices.length - 1];
             currentPrices.push(
@@ -2839,26 +3540,118 @@
           return currentPrice;
         }
 
-        function updateTotals() {
-          syncPricesToImages();
-          var currentQty = quantitiesByImage[currentImageIndex] || 0;
-          var grandTotal = 0;
-          for (var i = 0; i < currentImages.length; i++) {
-            grandTotal += linePriceAt(i) * (quantitiesByImage[i] || 0);
-          }
-          unitPriceEl.textContent = linePriceAt(currentImageIndex) + "€";
-          qtyEl.textContent = String(currentQty);
-          totalEl.textContent = grandTotal + "€";
+        function cartItemKey(item) {
+          return (
+            (item.productBase || "") +
+            "|" +
+            (item.image || "") +
+            "|" +
+            (item.variantLabel || "")
+          );
         }
 
-        function updateImage() {
+        function getVariantLabel(index) {
+          var image = currentImages[index] || "";
+          if (isFlowerOrder && index < FLOWER_VARIANT_LABELS.length) {
+            return FLOWER_VARIANT_LABELS[index];
+          }
+          if (productBaseName.indexOf("Champagne") !== -1) {
+            return "Champagne " + (index + 1);
+          }
+          if (productBaseName.indexOf("Wine") !== -1) {
+            return "Wine selection";
+          }
+          var file = image.split("/").pop() || "";
+          return file.replace(/\.[^.]+$/, "");
+        }
+
+        function getCartCount() {
+          var n = 0;
+          for (var i = 0; i < cart.length; i++) n += cart[i].qty || 0;
+          return n;
+        }
+
+        function getCartSubtotal() {
+          var t = 0;
+          for (var i = 0; i < cart.length; i++) {
+            t += (cart[i].price || 0) * (cart[i].qty || 0);
+          }
+          return t;
+        }
+
+        function showToast(message) {
+          if (!cartToast) return;
+          cartToast.textContent = message;
+          cartToast.classList.add("is-visible");
+          if (toastTimer) window.clearTimeout(toastTimer);
+          toastTimer = window.setTimeout(function () {
+            cartToast.classList.remove("is-visible");
+          }, 2600);
+        }
+
+        function setFlowerPickerVisible(visible) {
+          isFlowerOrder = visible;
+          if (flowerPicker) {
+            if (visible) {
+              flowerPicker.removeAttribute("hidden");
+              flowerPicker.classList.add("is-visible");
+            } else {
+              flowerPicker.setAttribute("hidden", "");
+              flowerPicker.classList.remove("is-visible");
+            }
+          }
+          if (orderCardMedia) {
+            orderCardMedia.classList.toggle(
+              "extra-order-card__media--flower-picker",
+              visible,
+            );
+          }
+        }
+
+        function syncOrderFlowerPicker() {
+          if (!flowerPicker || !isFlowerOrder) return;
+          var btns = flowerPicker.querySelectorAll(
+            ".extra-order-flower-picker__btn",
+          );
+          for (var i = 0; i < btns.length; i++) {
+            var idx = parseInt(btns[i].getAttribute("data-flower-index"), 10);
+            btns[i].classList.toggle("is-active", idx === currentImageIndex);
+          }
+        }
+
+        function selectFlowerVariant(index) {
+          if (
+            !isFlowerOrder ||
+            isNaN(index) ||
+            index < 0 ||
+            index >= FLOWER_VARIANT_COUNT
+          ) {
+            return;
+          }
+          currentImageIndex = index;
+          updateModalView();
+        }
+
+        function updateModalView() {
           syncPricesToImages();
           var image = currentImages[currentImageIndex] || "img/flower1.jpg";
           currentPrice = linePriceAt(currentImageIndex);
           imageEl.src = image;
-          updateTotals();
-          imagePrevBtn.disabled = currentImages.length <= 1;
-          imageNextBtn.disabled = currentImages.length <= 1;
+          unitPriceEl.textContent = formatEuro(currentPrice);
+          qtyEl.textContent = String(modalQty);
+          modalLineTotalEl.textContent = formatEuro(currentPrice * modalQty);
+          var disableNav = currentImages.length <= 1 || isFlowerOrder;
+          imagePrevBtn.disabled = disableNav;
+          imageNextBtn.disabled = disableNav;
+          if (isFlowerOrder) {
+            var label = getVariantLabel(currentImageIndex);
+            productEl.textContent = label + " flowers";
+            imageEl.alt = label + " flowers";
+          } else {
+            productEl.textContent = productBaseName;
+            imageEl.alt = productBaseName;
+          }
+          syncOrderFlowerPicker();
         }
 
         function openModal(btn) {
@@ -2874,17 +3667,14 @@
               return item.length > 0;
             });
           var pricesRaw = btn.getAttribute("data-prices") || "";
-          var parsedPrices = pricesRaw
-            .split(",")
-            .map(function (item) {
-              return parseInt(item.trim(), 10);
-            })
-            .filter(function (item) {
-              return !isNaN(item) && item >= 0;
-            });
+          var parsedPrices = pricesRaw.split(",").map(function (item) {
+            return parsePrice(item);
+          });
           var desc = btn.getAttribute("data-description") || "";
-          var price = parseInt(btn.getAttribute("data-price") || "0", 10);
-          if (isNaN(price) || price < 0) price = 0;
+          var price = parsePrice(btn.getAttribute("data-price") || "0");
+
+          productBaseName = product;
+          productDescription = desc;
           currentPrice = price;
           currentImages = parsedImages.length ? parsedImages : [img];
           currentImages = currentImages.filter(function (src) {
@@ -2892,16 +3682,21 @@
           });
           if (!currentImages.length) currentImages = [img];
           currentPrices = parsedPrices.length ? parsedPrices : [price];
-          currentPrice = price;
           syncPricesToImages();
-          quantitiesByImage = new Array(currentImages.length).fill(0);
+
+          var isFlower = btn.getAttribute("data-flower-picker") === "true";
+          if (isFlower) {
+            currentImages = currentImages.slice(0, FLOWER_VARIANT_COUNT);
+            currentPrices = currentPrices.slice(0, FLOWER_VARIANT_COUNT);
+            syncPricesToImages();
+          }
+
           currentImageIndex = 0;
-          productEl.textContent = product;
-          imageEl.alt = product;
-          descriptionEl.textContent = desc;
-          form.reset();
-          statusEl.textContent = "";
-          updateImage();
+          modalQty = 1;
+          if (descriptionEl) descriptionEl.textContent = desc;
+          if (modalStatusEl) modalStatusEl.textContent = "";
+          setFlowerPickerVisible(isFlower);
+          updateModalView();
           modal.classList.add("is-open");
           modal.setAttribute("aria-hidden", "false");
           document.body.style.overflow = "hidden";
@@ -2910,8 +3705,204 @@
         function closeModal() {
           modal.classList.remove("is-open");
           modal.setAttribute("aria-hidden", "true");
-          document.body.style.overflow = "";
+          if (
+            !cartDrawer.classList.contains("is-open") &&
+            !checkoutModal.classList.contains("is-open")
+          ) {
+            document.body.style.overflow = "";
+          }
+          setFlowerPickerVisible(false);
         }
+
+        function openCart() {
+          cartDrawer.classList.add("is-open");
+          cartDrawer.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+        }
+
+        function closeCart() {
+          cartDrawer.classList.remove("is-open");
+          cartDrawer.setAttribute("aria-hidden", "true");
+          if (
+            !modal.classList.contains("is-open") &&
+            !checkoutModal.classList.contains("is-open")
+          ) {
+            document.body.style.overflow = "";
+          }
+        }
+
+        function openCheckout() {
+          if (!cart.length) return;
+          renderCheckoutSummary();
+          checkoutTotalEl.textContent = formatEuro(getCartSubtotal());
+          checkoutForm.reset();
+          if (checkoutStatusEl) checkoutStatusEl.textContent = "";
+          closeCart();
+          checkoutModal.classList.add("is-open");
+          checkoutModal.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+        }
+
+        function closeCheckout() {
+          checkoutModal.classList.remove("is-open");
+          checkoutModal.setAttribute("aria-hidden", "true");
+          if (!modal.classList.contains("is-open") && !cartDrawer.classList.contains("is-open")) {
+            document.body.style.overflow = "";
+          }
+        }
+
+        function renderCart() {
+          var count = getCartCount();
+          var subtotal = getCartSubtotal();
+
+          if (cartBadgeEl) {
+            cartBadgeEl.textContent = String(count);
+            cartBadgeEl.classList.toggle("is-visible", count > 0);
+          }
+          if (cartSubtotalEl) cartSubtotalEl.textContent = formatEuro(subtotal);
+          if (cartCheckoutBtn) cartCheckoutBtn.disabled = count === 0;
+
+          if (!cart.length) {
+            cartItemsEl.innerHTML =
+              '<div class="extra-cart-empty">' +
+              '<div class="extra-cart-empty__icon" aria-hidden="true">&#128722;</div>' +
+              "<p>Your cart is empty</p>" +
+              '<p style="font-size:13px;margin-top:8px;">Add flowers, champagne, or wine from our extras below.</p>' +
+              "</div>";
+            return;
+          }
+
+          var html = "";
+          for (var i = 0; i < cart.length; i++) {
+            var item = cart[i];
+            var lineTotal = (item.price || 0) * (item.qty || 0);
+            var title = item.productBase || "Extra";
+            if (item.variantLabel) title += " \u2014 " + item.variantLabel;
+            html +=
+              '<article class="extra-cart-item" data-cart-id="' +
+              item.id +
+              '">' +
+              '<img class="extra-cart-item__img" src="' +
+              item.image +
+              '" alt="" />' +
+              "<div>" +
+              '<h3 class="extra-cart-item__name">' +
+              title +
+              "</h3>" +
+              (item.variantLabel
+                ? '<p class="extra-cart-item__variant">' +
+                  item.variantLabel +
+                  "</p>"
+                : "") +
+              '<p class="extra-cart-item__price">' +
+              formatEuro(item.price) +
+              " each</p>" +
+              "</div>" +
+              '<div class="extra-cart-item__controls">' +
+              '<span class="extra-cart-item__line-total">' +
+              formatEuro(lineTotal) +
+              "</span>" +
+              '<div class="extra-cart-item__qty">' +
+              '<button type="button" data-cart-qty="-1" data-cart-id="' +
+              item.id +
+              '" aria-label="Decrease">-</button>' +
+              "<span>" +
+              item.qty +
+              "</span>" +
+              '<button type="button" data-cart-qty="1" data-cart-id="' +
+              item.id +
+              '" aria-label="Increase">+</button>' +
+              "</div>" +
+              '<button type="button" class="extra-cart-item__remove" data-cart-remove="' +
+              item.id +
+              '">Remove</button>' +
+              "</div>" +
+              "</article>";
+          }
+          cartItemsEl.innerHTML = html;
+        }
+
+        function renderCheckoutSummary() {
+          if (!checkoutSummaryEl) return;
+          var html = "";
+          for (var i = 0; i < cart.length; i++) {
+            var item = cart[i];
+            var title = item.productBase || "Item";
+            if (item.variantLabel) title += " (" + item.variantLabel + ")";
+            html +=
+              '<div class="extra-checkout-summary__line"><span>' +
+              title +
+              " \u00d7 " +
+              item.qty +
+              '</span><span>' +
+              formatEuro(item.price * item.qty) +
+              "</span></div>";
+          }
+          checkoutSummaryEl.innerHTML = html;
+        }
+
+        function addCurrentSelectionToCart() {
+          syncPricesToImages();
+          if (modalQty < 1) {
+            if (modalStatusEl) {
+              modalStatusEl.textContent = "Please choose a quantity of at least 1.";
+            }
+            return;
+          }
+          var image = currentImages[currentImageIndex];
+          var price = linePriceAt(currentImageIndex);
+          var variantLabel = getVariantLabel(currentImageIndex);
+          var item = {
+            id: String(Date.now()) + "-" + Math.random().toString(36).slice(2, 8),
+            productBase: productBaseName,
+            variantLabel: variantLabel,
+            image: image,
+            price: price,
+            qty: modalQty,
+            description: productDescription,
+          };
+          var key = cartItemKey(item);
+          var merged = false;
+          for (var i = 0; i < cart.length; i++) {
+            if (cartItemKey(cart[i]) === key) {
+              cart[i].qty += modalQty;
+              merged = true;
+              break;
+            }
+          }
+          if (!merged) cart.push(item);
+          saveCart();
+          renderCart();
+          closeModal();
+          showToast(
+            merged
+              ? "Updated quantity in your cart"
+              : "Added to your cart",
+          );
+          openCart();
+        }
+
+        function changeCartQty(id, delta) {
+          for (var i = 0; i < cart.length; i++) {
+            if (cart[i].id !== id) continue;
+            cart[i].qty = Math.max(0, (cart[i].qty || 0) + delta);
+            if (cart[i].qty === 0) cart.splice(i, 1);
+            break;
+          }
+          saveCart();
+          renderCart();
+        }
+
+        function removeCartItem(id) {
+          cart = cart.filter(function (item) {
+            return item.id !== id;
+          });
+          saveCart();
+          renderCart();
+        }
+
+        cart = loadCart();
+        renderCart();
 
         document.addEventListener("click", function (event) {
           var orderBtn = event.target.closest(".js-extra-order");
@@ -2921,104 +3912,136 @@
           }
           if (event.target.closest("[data-modal-close]")) {
             closeModal();
+            return;
+          }
+          if (event.target.closest("[data-cart-close]")) {
+            closeCart();
+            return;
+          }
+          if (event.target.closest("[data-checkout-close]")) {
+            closeCheckout();
+            return;
+          }
+          if (event.target.closest("#extra-cart-toggle")) {
+            openCart();
+            return;
+          }
+          var qtyBtn = event.target.closest("[data-cart-qty]");
+          if (qtyBtn) {
+            var id = qtyBtn.getAttribute("data-cart-id");
+            var delta = parseInt(qtyBtn.getAttribute("data-cart-qty"), 10);
+            if (id && !isNaN(delta)) changeCartQty(id, delta);
+            return;
+          }
+          var removeBtn = event.target.closest("[data-cart-remove]");
+          if (removeBtn) {
+            removeCartItem(removeBtn.getAttribute("data-cart-remove"));
           }
         });
 
-        function onQtyChange(delta, event) {
-          if (event) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-          var currentQty = quantitiesByImage[currentImageIndex] || 0;
-          quantitiesByImage[currentImageIndex] = Math.max(0, currentQty + delta);
-          updateTotals();
+        if (addToCartBtn) {
+          addToCartBtn.addEventListener("click", addCurrentSelectionToCart);
+        }
+
+        if (cartCheckoutBtn) {
+          cartCheckoutBtn.addEventListener("click", openCheckout);
         }
 
         minusBtn.addEventListener("click", function (event) {
-          onQtyChange(-1, event);
+          event.preventDefault();
+          modalQty = Math.max(1, modalQty - 1);
+          updateModalView();
         });
 
         plusBtn.addEventListener("click", function (event) {
-          onQtyChange(1, event);
+          event.preventDefault();
+          modalQty += 1;
+          updateModalView();
         });
 
         imagePrevBtn.addEventListener("click", function () {
-          if (currentImages.length <= 1) return;
+          if (isFlowerOrder || currentImages.length <= 1) return;
           currentImageIndex =
             (currentImageIndex - 1 + currentImages.length) %
             currentImages.length;
-          updateImage();
+          updateModalView();
         });
 
         imageNextBtn.addEventListener("click", function () {
-          if (currentImages.length <= 1) return;
+          if (isFlowerOrder || currentImages.length <= 1) return;
           currentImageIndex = (currentImageIndex + 1) % currentImages.length;
-          updateImage();
+          updateModalView();
         });
+
+        if (flowerPicker) {
+          flowerPicker.addEventListener("click", function (event) {
+            var btn = event.target.closest(".extra-order-flower-picker__btn");
+            if (!btn) return;
+            selectFlowerVariant(
+              parseInt(btn.getAttribute("data-flower-index"), 10),
+            );
+          });
+        }
 
         document.addEventListener("keydown", function (event) {
-          if (event.key === "Escape" && modal.classList.contains("is-open")) {
-            closeModal();
-          }
+          if (event.key !== "Escape") return;
+          if (checkoutModal.classList.contains("is-open")) closeCheckout();
+          else if (cartDrawer.classList.contains("is-open")) closeCart();
+          else if (modal.classList.contains("is-open")) closeModal();
         });
 
-        form.addEventListener("submit", function (event) {
+        checkoutForm.addEventListener("submit", function (event) {
           event.preventDefault();
-          var roomNumber = (form.roomNumber.value || "").trim();
-          var lastName = (form.lastName.value || "").trim();
-          var deliveryDate = (form.deliveryDate.value || "").trim();
-          var deliveryTime = (form.deliveryTime.value || "").trim();
-          var message = (form.message.value || "").trim();
-          var grandTotal = 0;
-          var totalQty = 0;
-          syncPricesToImages();
-          for (var i = 0; i < currentImages.length; i++) {
-            var q = quantitiesByImage[i] || 0;
-            totalQty += q;
-            grandTotal += linePriceAt(i) * q;
+          if (!cart.length) {
+            if (checkoutStatusEl) {
+              checkoutStatusEl.textContent = "Your cart is empty.";
+            }
+            return;
           }
+
+          var roomNumber = (checkoutForm.roomNumber.value || "").trim();
+          var lastName = (checkoutForm.lastName.value || "").trim();
+          var deliveryDate = (checkoutForm.deliveryDate.value || "").trim();
+          var deliveryTime = (checkoutForm.deliveryTime.value || "").trim();
+          var message = (checkoutForm.message.value || "").trim();
+          var grandTotal = getCartSubtotal();
+
           if (!roomNumber || !lastName) {
-            statusEl.textContent = "Please enter room number and last name.";
+            if (checkoutStatusEl) {
+              checkoutStatusEl.textContent =
+                "Please enter room number and last name.";
+            }
             return;
           }
           if (!deliveryDate || !deliveryTime) {
-            statusEl.textContent = "Please select delivery date and time.";
+            if (checkoutStatusEl) {
+              checkoutStatusEl.textContent =
+                "Please select delivery date and time.";
+            }
             return;
           }
-          if (totalQty <= 0) {
-            statusEl.textContent =
-              "Please add at least one item using the + button.";
-            return;
-          }
+
           var orderLines = [];
-          for (var k = 0; k < currentImages.length; k++) {
-            var qty = quantitiesByImage[k] || 0;
-            if (!qty) continue;
-            var linePrice = linePriceAt(k);
-            var imageLabel = (currentImages[k] || "item " + (k + 1))
-              .split("/")
-              .pop();
+          for (var k = 0; k < cart.length; k++) {
+            var c = cart[k];
+            var title = c.productBase;
+            if (c.variantLabel) title += " (" + c.variantLabel + ")";
             orderLines.push(
-              imageLabel +
+              title +
                 ": " +
-                qty +
-                " × " +
-                linePrice +
-                "€ = " +
-                qty * linePrice +
-                "€",
+                c.qty +
+                " \u00d7 " +
+                formatEuro(c.price) +
+                " = " +
+                formatEuro(c.qty * c.price),
             );
           }
+
           var toEmail =
-            form.getAttribute("data-contact-email") || ORDER_TO_EMAIL;
-          var productName = productEl.textContent || "Extra product";
-          var productDesc = (descriptionEl.textContent || "").trim() || "—";
+            checkoutForm.getAttribute("data-contact-email") || ORDER_TO_EMAIL;
           var fullMessage = [
-            "EXTRA ORDER — CONFIRMATION",
-            "========================",
-            "",
-            "Product: " + productName,
-            "Description: " + productDesc,
+            "EXTRA ORDER — CART CHECKOUT",
+            "=========================",
             "",
             "Guest details",
             "-------------",
@@ -3027,11 +4050,11 @@
             "Delivery date: " + deliveryDate,
             "Delivery time: " + deliveryTime,
             "",
-            "Order items",
-            "-----------",
+            "Cart items",
+            "----------",
             orderLines.join("\n"),
             "",
-            "Total: " + grandTotal + "€",
+            "Total: " + formatEuro(grandTotal),
             "Payment: Card checkout requested",
             "",
             "Guest message:",
@@ -3044,30 +4067,33 @@
           var payload = {
             access_key: WEB3FORMS_ACCESS_KEY,
             subject:
-              "[Extra Order] Room " +
+              "[Extra Cart] Room " +
               roomNumber +
-              " — " +
+              " \u2014 " +
               lastName +
-              " — " +
-              productName,
-            from_name: "Derand Hotel — Extra Order",
+              " \u2014 " +
+              cart.length +
+              " item(s)",
+            from_name: "Derand Hotel \u2014 Extra Cart",
             to_email: toEmail,
             name: lastName,
             room_number: roomNumber,
             delivery_date: deliveryDate,
             delivery_time: deliveryTime,
-            product: productName,
-            product_description: productDesc,
             order_items: orderLines.join("\n"),
-            total_eur: grandTotal + " EUR",
+            total_eur: formatEuro(grandTotal).replace("\u20ac", " EUR"),
             guest_message: message || "",
             payment_method: "Card checkout requested",
             message: fullMessage,
           };
 
-          var submitBtn = form.querySelector(".extra-order-form__submit");
+          var submitBtn = checkoutForm.querySelector(
+            ".extra-order-form__submit",
+          );
           if (submitBtn) submitBtn.disabled = true;
-          statusEl.textContent = "Sending order confirmation...";
+          if (checkoutStatusEl) {
+            checkoutStatusEl.textContent = "Processing your order...";
+          }
 
           fetch(WEB3FORMS_URL, {
             method: "POST",
@@ -3083,30 +4109,34 @@
             })
             .then(function (data) {
               if (!data || !data.success) {
-                throw new Error(
-                  (data && data.message) || "Submit failed",
-                );
+                throw new Error((data && data.message) || "Submit failed");
               }
-              statusEl.textContent =
-                "Order sent to " +
-                toEmail +
-                ". Opening secure card checkout...";
+              if (checkoutStatusEl) {
+                checkoutStatusEl.textContent =
+                  "Order sent. Opening secure payment...";
+              }
+              cart = [];
+              saveCart();
+              renderCart();
               window.setTimeout(function () {
                 window.open(CARD_CHECKOUT_URL, "_blank", "noopener,noreferrer");
-                closeModal();
+                closeCheckout();
               }, 900);
             })
             .catch(function () {
-              statusEl.textContent =
-                "We could not send your order right now. Please try again or email " +
-                ORDER_TO_EMAIL +
-                ".";
+              if (checkoutStatusEl) {
+                checkoutStatusEl.textContent =
+                  "We could not complete checkout. Please try again or email " +
+                  ORDER_TO_EMAIL +
+                  ".";
+              }
             })
             .finally(function () {
               if (submitBtn) submitBtn.disabled = false;
             });
         });
       })();
+
     </script>
     <script>
       (function () {
