@@ -149,9 +149,11 @@
         font-size: 10px;
       }
 
-      #extra-flowers .extra-slider,
       #extra-flowers .extra-media img {
         max-width: 420px;
+        width: 100%;
+        height: auto;
+        display: block;
       }
 
       #extra-flowers .extra-copy,
@@ -566,7 +568,11 @@
         filter: brightness(1.03);
       }
 
-      .extra-order-card__media-nav[disabled] {
+      .extra-order-card__media-nav[hidden] {
+        display: none;
+      }
+
+      .extra-order-card__media-nav[disabled]:not([hidden]) {
         opacity: 0.38;
         box-shadow: none;
         cursor: default;
@@ -2362,164 +2368,33 @@
             </h2>
             <br>
             <p class="extra-copy-text">
-              Add a touch of nature and color to your stay. Whether it’s an
-              anniversary, a special occasion, or simply a gesture of
-              appreciation, we curate bouquets of fresh seasonal flowers to
-              welcome you upon arrival. <br />
-              From the delicate scent of morning lilies to the bold elegance of
-              deep-hued roses, each petal is hand-selected from local artisans
-              to ensure peak freshness. Let us help you create a lasting first
-              impression the moment you step through the door.
+              Add a touch of nature to your stay. Whether it’s a special
+              occasion or a simple gesture, we curate fresh seasonal bouquets
+              from local artisans to welcome you the moment you arrive.
             </p>
             
             <br>
             <button
               type="button"
               class="extra-btn js-extra-order"
-              data-product="Red Roses Bucket"
+              data-product="Single Red Roses"
               data-price="1.3"
               data-image="img/flower.jpg"
               data-images="img/flower.jpg,img/whiteflower.png,img/redrose.jpg,img/rose.jpg,img/flower5.png,img/flower1.jpg,img/flower2.jpg,img/flower3.jpg"
+              data-products="Single Red Roses,Single White Rose,Single Pink Rose"
               data-prices="1.3,1.3,1.3,0.7,0,0,0,0"
-              data-description="Fresh red roses wrapped in decorative paper for a romantic in-room surprise."
+              data-description="Fresh seasonal flowers wrapped in decorative paper for a romantic in-room surprise."
             >
-              Add to Cart
+              Choose Your Flowers
             </button>
           </div>
           <div class="extra-media">
-            <div class="extra-slider" data-extra-slider>
-              <button
-                type="button"
-                class="extra-slider__arrow extra-slider__arrow--prev"
-                aria-label="Previous flower image"
-              >
-                &#8249;
-              </button>
-              <div class="extra-slider__viewport">
-                <div class="extra-slider__track">
-                  <div class="extra-slider__slide">
-                    <img
-                      src="img/flower.jpg"
-                      alt="Flower bouquet extra 1"
-                      width="1080"
-                      height="1080"
-                    />
-                  </div>
-                  <div class="extra-slider__slide">
-                    <img
-                      src="img/whiteflower.png"
-                      alt="White flower bouquet"
-                      width="1080"
-                      height="1080"
-                    />
-                  </div>
-                  <div class="extra-slider__slide">
-                    <img
-                      src="img/redrose.jpg"
-                      alt="Red rose bouquet"
-                      width="1080"
-                      height="1080"
-                    />
-                  </div>
-                  <div class="extra-slider__slide">
-                    <img
-                      src="img/rose.jpg"
-                      alt="Rose bouquet"
-                      width="1080"
-                      height="1080"
-                    />
-                  </div>
-                  <div class="extra-slider__slide">
-                    <img
-                      src="img/flower5.png"
-                      alt="Flower bouquet extra 6"
-                      width="1080"
-                      height="1080"
-                    />
-                  </div>
-                  <div class="extra-slider__slide">
-                    <img
-                      src="img/flower1.jpg"
-                      alt="Flower bouquet extra 3"
-                      width="1080"
-                      height="1080"
-                    />
-                  </div>
-                 
-                  <div class="extra-slider__slide">
-                    <img
-                      src="img/flower2.jpg"
-                      alt="Flower bouquet extra 4"
-                      width="1080"
-                      height="1080"
-                    />
-                  </div>
-              
-                 <div class="extra-slider__slide">
-                    <img
-                      src="img/flower3.jpg"
-                      alt="Flower bouquet extra 4"
-                      width="1080"
-                      height="1080"
-                    />
-                  </div>
-                  
-              
-              </div>
-              
-              <button
-                type="button"
-                class="extra-slider__arrow extra-slider__arrow--next"
-                aria-label="Next flower image"
-              >
-                &#8250;
-              </button>
-              <div
-                class="extra-slider__pagination"
-                aria-label="Flower gallery pagination"
-              >
-                <button
-                  type="button"
-                  class="extra-slider__dot is-active"
-                  aria-label="Slide 1"
-                ></button>
-                <button
-                  type="button"
-                  class="extra-slider__dot"
-                  aria-label="Slide 2"
-                ></button>
-                <button
-                  type="button"
-                  class="extra-slider__dot"
-                  aria-label="Slide 3"
-                ></button>
-                <button
-                  type="button"
-                  class="extra-slider__dot"
-                  aria-label="Slide 4"
-                ></button>
-                <button
-                  type="button"
-                  class="extra-slider__dot"
-                  aria-label="Slide 5"
-                ></button>
-                <button
-                  type="button"
-                  class="extra-slider__dot"
-                  aria-label="Slide 6"
-                ></button>
-                <button
-                  type="button"
-                  class="extra-slider__dot"
-                  aria-label="Slide 7"
-                ></button>
-                <button
-                  type="button"
-                  class="extra-slider__dot"
-                  aria-label="Slide 8"
-                ></button>
-              </div>
-            </div>
+            <img
+              src="img/flowers.png"
+              alt="Fresh flower bouquet"
+              width="1080"
+              height="1080"
+            />
           </div>
         </article>
 
@@ -2563,24 +2438,22 @@
             <p class="extra-copy-kicker">Exclusive Wines in our menu</p>
             <h2 class="extra-copy-title">4 Vine types available.</h2>
             <p class="extra-copy-text">
-              Elevate your stay with a curated wine selection available directly
-              in your room. From light and refreshing notes to bold and rich
-              character, each bottle is chosen to complement your evening and
-              taste preferences.<br />
-              Whether for a quiet unwind or a special celebration, our wine
-              options are served with premium presentation for a complete luxury
-              in-room experience.
+              Elevate your stay with our curated wine collection. From light and
+              refreshing to bold and rich, each bottle is chosen to suit your
+              taste. Perfectly served for a luxury in-room experience, whether
+              you're celebrating or simply unwinding.
             </p>
             <button
               type="button"
               class="extra-btn js-extra-order"
               data-product="Premium Wine Selection"
-              data-price="48"
+              data-price="1"
               data-image="img/vine.png"
-              data-images="img/vine.png"
+              data-images="img/vine.png,img/vine.png,img/vine.png"
+              data-prices="1,1,1"
               data-description="A selected premium wine served in-room for a relaxed and luxurious evening."
             >
-              Add to Cart
+              Choose Your Bottle
             </button>
           </div>
           <div class="extra-media">
@@ -2879,7 +2752,7 @@
         </p>
         <div class="extra-order-card">
           <h3 class="extra-order-card__name" id="extra-order-product">
-            Red Roses Bucket
+            Single Red Roses
           </h3>
           <div class="extra-order-card__media" id="extra-order-card-media">
             <button
@@ -2893,7 +2766,7 @@
             <img
               class="extra-order-card__img"
               id="extra-order-image"
-              src="img/flower1.jpg"
+              src="img/flowers.png"
               alt="Selected extra product"
             />
             <button
@@ -3425,16 +3298,17 @@
 
         var cart = [];
         var currentPrice = 0;
-        var currentImages = ["img/flower1.jpg"];
+        var currentImages = ["img/flowers.png"];
         var currentPrices = [0];
         var currentImageIndex = 0;
-        var modalQty = 0;
+        var modalQtyByIndex = [];
         var isFlowerOrder = false;
         var isSpiritsOrder = false;
         var spiritsProducts = [];
         var spiritsCategories = [];
         var spiritsPrices = [];
         var spiritsDescriptions = [];
+        var extraSlideProducts = [];
         var productBaseName = "";
         var productDescription = "";
         var toastTimer = null;
@@ -3475,6 +3349,21 @@
           return isNaN(n) || n < 0 ? 0 : n;
         }
 
+        function resetModalQuantities(slideCount) {
+          var n = Math.max(0, slideCount | 0);
+          modalQtyByIndex = [];
+          for (var i = 0; i < n; i++) modalQtyByIndex[i] = 0;
+        }
+
+        function getModalQty() {
+          var q = modalQtyByIndex[currentImageIndex];
+          return typeof q === "number" && !isNaN(q) ? q : 0;
+        }
+
+        function setModalQty(value) {
+          modalQtyByIndex[currentImageIndex] = Math.max(0, value | 0);
+        }
+
         function syncPricesToImages() {
           var fallback = currentPrice;
           if (!currentPrices.length) currentPrices = [fallback];
@@ -3505,9 +3394,22 @@
           );
         }
 
+        function getSlideProductName(index) {
+          if (isSpiritsOrder && spiritsProducts[index]) {
+            return spiritsProducts[index];
+          }
+          if (extraSlideProducts[index]) {
+            return extraSlideProducts[index];
+          }
+          return productBaseName;
+        }
+
         function getVariantLabel(index) {
           if (isSpiritsOrder && spiritsProducts[index]) {
             return spiritsProducts[index];
+          }
+          if (extraSlideProducts[index]) {
+            return "";
           }
           var image = currentImages[index] || "";
           if (isFlowerOrder && index < FLOWER_VARIANT_LABELS.length) {
@@ -3590,11 +3492,11 @@
             return;
           }
           currentImageIndex = index;
-          modalQty = 0;
           updateModalView();
         }
 
         function updateModalView() {
+          var qty = getModalQty();
           if (isSpiritsOrder) {
             currentPrice = spiritsPrices[currentImageIndex] || 0;
             imageEl.src =
@@ -3609,32 +3511,68 @@
                 "";
             }
             unitPriceEl.textContent = formatEuro(currentPrice);
-            qtyEl.textContent = String(modalQty);
-            modalLineTotalEl.textContent = formatEuro(currentPrice * modalQty);
-            imagePrevBtn.disabled = spiritsProducts.length <= 1;
-            imageNextBtn.disabled = spiritsProducts.length <= 1;
-            minusBtn.disabled = modalQty <= 0;
+            qtyEl.textContent = String(qty);
+            modalLineTotalEl.textContent = formatEuro(currentPrice * qty);
+            var spiritsNavOff = spiritsProducts.length <= 1;
+            imagePrevBtn.disabled = spiritsNavOff;
+            imageNextBtn.disabled = spiritsNavOff;
+            imagePrevBtn.hidden = spiritsNavOff;
+            imageNextBtn.hidden = spiritsNavOff;
+            minusBtn.disabled = qty <= 0;
             return;
           }
 
           syncPricesToImages();
-          var image = currentImages[currentImageIndex] || "img/flower1.jpg";
+          var image = currentImages[currentImageIndex] || "img/flowers.png";
           currentPrice = linePriceAt(currentImageIndex);
           imageEl.src = image;
           unitPriceEl.textContent = formatEuro(currentPrice);
-          qtyEl.textContent = String(modalQty);
-          modalLineTotalEl.textContent = formatEuro(currentPrice * modalQty);
+          qtyEl.textContent = String(qty);
+          modalLineTotalEl.textContent = formatEuro(currentPrice * qty);
           var disableNav = currentImages.length <= 1;
           imagePrevBtn.disabled = disableNav;
           imageNextBtn.disabled = disableNav;
-          minusBtn.disabled = modalQty <= 0;
-          productEl.textContent = productBaseName;
-          imageEl.alt = productBaseName;
+          imagePrevBtn.hidden = disableNav;
+          imageNextBtn.hidden = disableNav;
+          minusBtn.disabled = qty <= 0;
+          var slideName = getSlideProductName(currentImageIndex);
+          productEl.textContent = slideName;
+          imageEl.alt = slideName;
+        }
+
+        function syncExtraSlideProducts(btn, fallbackName) {
+          var productsRaw = btn.getAttribute("data-products") || "";
+          extraSlideProducts = productsRaw
+            .split(",")
+            .map(function (item) {
+              return item.trim();
+            })
+            .filter(function (item) {
+              return item.length > 0;
+            });
+          if (!extraSlideProducts.length) {
+            extraSlideProducts = [];
+            return;
+          }
+          while (extraSlideProducts.length < currentImages.length) {
+            extraSlideProducts.push(
+              extraSlideProducts.length < 3 ? fallbackName : "Flower Bouquet",
+            );
+          }
+          if (extraSlideProducts.length > currentImages.length) {
+            extraSlideProducts = extraSlideProducts.slice(0, currentImages.length);
+          }
+          for (var i = 0; i < extraSlideProducts.length; i++) {
+            if (!extraSlideProducts[i]) {
+              extraSlideProducts[i] =
+                i < 3 ? fallbackName : "Flower Bouquet";
+            }
+          }
         }
 
         function openModal(btn) {
           var product = btn.getAttribute("data-product") || "Extra Product";
-          var img = btn.getAttribute("data-image") || "img/flower1.jpg";
+          var img = btn.getAttribute("data-image") || "img/flowers.png";
           var imagesRaw = btn.getAttribute("data-images") || img;
           var parsedImages = imagesRaw
             .split(",")
@@ -3644,10 +3582,13 @@
             .filter(function (item) {
               return item.length > 0;
             });
-          var pricesRaw = btn.getAttribute("data-prices") || "";
-          var parsedPrices = pricesRaw.split(",").map(function (item) {
-            return parsePrice(item);
-          });
+          var pricesAttr = btn.getAttribute("data-prices");
+          var parsedPrices = [];
+          if (pricesAttr && pricesAttr.trim()) {
+            parsedPrices = pricesAttr.split(",").map(function (item) {
+              return parsePrice(item);
+            });
+          }
           var desc = btn.getAttribute("data-description") || "";
           var price = parsePrice(btn.getAttribute("data-price") || "0");
 
@@ -3709,11 +3650,15 @@
             currentPrices = spiritsPrices.slice();
             currentImageIndex = 0;
             currentPrice = spiritsPrices[0] || price;
+            extraSlideProducts = [];
           } else {
             currentImageIndex = 0;
+            syncExtraSlideProducts(btn, product);
           }
 
-          modalQty = 0;
+          resetModalQuantities(
+            isSpirits ? spiritsProducts.length : currentImages.length,
+          );
           if (descriptionEl && !isSpirits) descriptionEl.textContent = desc;
           if (modalStatusEl) modalStatusEl.textContent = "";
           setFlowerPickerVisible(false);
@@ -3866,7 +3811,8 @@
 
         function addCurrentSelectionToCart() {
           if (!isSpiritsOrder) syncPricesToImages();
-          if (modalQty < 1) {
+          var addQty = getModalQty();
+          if (addQty < 1) {
             if (modalStatusEl) {
               modalStatusEl.textContent =
                 "Please press + to choose how many you want (at least 1).";
@@ -3883,13 +3829,11 @@
           var variantLabel = getVariantLabel(currentImageIndex);
           var item = {
             id: String(Date.now()) + "-" + Math.random().toString(36).slice(2, 8),
-            productBase: isSpiritsOrder
-              ? spiritsProducts[currentImageIndex] || productBaseName
-              : productBaseName,
+            productBase: getSlideProductName(currentImageIndex),
             variantLabel: isSpiritsOrder ? "" : variantLabel,
             image: image,
             price: price,
-            qty: modalQty,
+            qty: addQty,
             description: isSpiritsOrder
               ? spiritsDescriptions[currentImageIndex] || productDescription
               : productDescription,
@@ -3898,7 +3842,7 @@
           var merged = false;
           for (var i = 0; i < cart.length; i++) {
             if (cartItemKey(cart[i]) === key) {
-              cart[i].qty += modalQty;
+              cart[i].qty += addQty;
               merged = true;
               break;
             }
@@ -3982,13 +3926,13 @@
 
         minusBtn.addEventListener("click", function (event) {
           event.preventDefault();
-          modalQty = Math.max(0, modalQty - 1);
+          setModalQty(getModalQty() - 1);
           updateModalView();
         });
 
         plusBtn.addEventListener("click", function (event) {
           event.preventDefault();
-          modalQty += 1;
+          setModalQty(getModalQty() + 1);
           updateModalView();
         });
 
@@ -3998,7 +3942,6 @@
             currentImageIndex =
               (currentImageIndex - 1 + spiritsProducts.length) %
               spiritsProducts.length;
-            modalQty = 0;
             updateModalView();
             return;
           }
@@ -4006,7 +3949,6 @@
           currentImageIndex =
             (currentImageIndex - 1 + currentImages.length) %
             currentImages.length;
-          modalQty = 0;
           updateModalView();
         });
 
@@ -4015,13 +3957,11 @@
             if (spiritsProducts.length <= 1) return;
             currentImageIndex =
               (currentImageIndex + 1) % spiritsProducts.length;
-            modalQty = 0;
             updateModalView();
             return;
           }
           if (currentImages.length <= 1) return;
           currentImageIndex = (currentImageIndex + 1) % currentImages.length;
-          modalQty = 0;
           updateModalView();
         });
 
@@ -4288,7 +4228,6 @@
           });
         }
 
-        initSlider("[data-extra-slider]");
         initSlider("[data-extra-slider-vine]");
       })();
     </script>
