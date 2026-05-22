@@ -1,0 +1,336 @@
+/* Derand Hotel — Reserve & pay (book.html) */
+
+.book-page {
+  margin: 0;
+  background: #f7f5f2;
+  color: #2c2824;
+}
+
+.book-page * {
+  box-sizing: border-box;
+}
+
+.book {
+  display: grid;
+  min-height: calc(100dvh - 78px);
+  grid-template-columns: minmax(280px, 38%) 1fr;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.book__visual {
+  position: relative;
+  min-height: 240px;
+  background: #ebe6e0;
+  overflow: hidden;
+}
+
+.book__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.book__visual-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(44, 40, 36, 0.08) 0%,
+    rgba(44, 40, 36, 0.22) 100%
+  );
+  pointer-events: none;
+}
+
+.book__panel {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(24px, 4vw, 48px) clamp(20px, 5vw, 56px);
+  background: #fff;
+}
+
+.book__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: clamp(20px, 3vw, 32px);
+}
+
+.book__logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.book__logo img {
+  height: 36px;
+  width: auto;
+  display: block;
+}
+
+.book__close {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: #f3f0ec;
+  color: #5c5650;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.book__close:hover {
+  background: #ebe6e0;
+  color: #2c2824;
+}
+
+.book__kicker {
+  margin: 0 0 8px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #b17256;
+}
+
+.book__title {
+  margin: 0 0 12px;
+  font-size: clamp(1.75rem, 3.5vw, 2.35rem);
+  font-weight: 500;
+  line-height: 1.2;
+  color: #2c2824;
+  letter-spacing: 0.01em;
+}
+
+.book__lead {
+  margin: 0 0 28px;
+  max-width: 520px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #6e6760;
+}
+
+.book__form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 560px;
+}
+
+.book__field {
+  margin-bottom: 18px;
+}
+
+.book__field--row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.book__label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #b17256;
+}
+
+.book__label .book__req {
+  color: #c45c5c;
+}
+
+.book__input,
+.book__select,
+.book__textarea {
+  width: 100%;
+  border: 1px solid rgba(44, 40, 36, 0.12);
+  border-radius: 8px;
+  background: #faf9f7;
+  color: #2c2824;
+  font-family: inherit;
+  font-size: 15px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.book__input,
+.book__select {
+  height: 48px;
+  padding: 0 14px;
+}
+
+.book__select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%236e6760' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+
+.book__textarea {
+  min-height: 100px;
+  padding: 12px 14px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.book__input::placeholder,
+.book__textarea::placeholder {
+  color: rgba(110, 103, 96, 0.65);
+}
+
+.book__input:focus,
+.book__select:focus,
+.book__textarea:focus {
+  outline: none;
+  border-color: #b17256;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(177, 114, 86, 0.12);
+}
+
+.book__input.is-invalid,
+.book__select.is-invalid {
+  border-color: #c45c5c;
+}
+
+.book__hint {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: #9a8f85;
+  line-height: 1.4;
+}
+
+.book__error {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: #c45c5c;
+  display: none;
+}
+
+.book__field.has-error .book__error {
+  display: block;
+}
+
+.book__summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 8px;
+  padding: 20px 0 24px;
+  border-top: 1px solid rgba(44, 40, 36, 0.08);
+}
+
+.book__summary-item {
+  text-align: left;
+}
+
+.book__summary-value {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2c2824;
+  line-height: 1.3;
+}
+
+.book__summary-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #b17256;
+}
+
+.book__submit {
+  width: 100%;
+  max-width: 560px;
+  border: 0;
+  border-radius: 10px;
+  padding: 16px 24px;
+  background: #b17256;
+  color: #fff;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.book__submit:hover:not(:disabled) {
+  background: #9a5f47;
+  transform: translateY(-1px);
+}
+
+.book__submit:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.book__secure {
+  margin: 14px 0 0;
+  font-size: 12px;
+  color: #9a8f85;
+  line-height: 1.5;
+}
+
+.book__secure svg {
+  vertical-align: -2px;
+  margin-right: 4px;
+}
+
+.book__status {
+  margin: 12px 0 0;
+  font-size: 13px;
+  color: #6e6760;
+  min-height: 1.25em;
+}
+
+.book__status.is-error {
+  color: #c45c5c;
+}
+
+.book__status.is-success {
+  color: #4a6b52;
+}
+
+@media (max-width: 900px) {
+  .book {
+    grid-template-columns: 1fr;
+  }
+
+  .book__visual {
+    min-height: 200px;
+    max-height: 220px;
+  }
+
+  .book__summary {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 520px) {
+  .book__field--row {
+    grid-template-columns: 1fr;
+  }
+}

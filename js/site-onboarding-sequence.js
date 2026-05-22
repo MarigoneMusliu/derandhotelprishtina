@@ -185,9 +185,12 @@
 
 
 
-  window.derandLoadTidioChat = function () {
+  function shouldSkipTidio() {
+    return !!window.__derandSkipTidio;
+  }
 
-    if (window.__derandTidioLoaded) return;
+  window.derandLoadTidioChat = function () {
+    if (shouldSkipTidio() || window.__derandTidioLoaded) return;
 
     window.__derandTidioLoaded = true;
 
@@ -345,11 +348,11 @@
 
     watchForCookieBanner();
 
-    tidioFallbackTimer = window.setTimeout(function () {
-
-      if (!window.__derandTidioLoaded) window.derandLoadTidioChat();
-
-    }, TIDIO_FALLBACK_MS);
+    if (!shouldSkipTidio()) {
+      tidioFallbackTimer = window.setTimeout(function () {
+        if (!window.__derandTidioLoaded) window.derandLoadTidioChat();
+      }, TIDIO_FALLBACK_MS);
+    }
 
     window.setTimeout(showCookieBanner, COOKIE_DELAY_MS);
 

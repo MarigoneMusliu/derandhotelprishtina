@@ -14,9 +14,20 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="css/plugins.min.css" type="text/css" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <script>window.__derandSkipTidio = true;</script>
 
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap");
+
+      body.derand-no-tidio #tidio,
+      body.derand-no-tidio #tidio-chat,
+      body.derand-no-tidio #tidio-chat-iframe,
+      body.derand-no-tidio iframe[src*="tidio.co"] {
+        display: none !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        opacity: 0 !important;
+      }
 
       .extra-hero {
         min-height: 560px;
@@ -464,108 +475,138 @@
       .extra-order-modal__backdrop {
         position: absolute;
         inset: 0;
-        background: rgba(0, 0, 0, 0.45);
+        background: rgba(32, 28, 24, 0.42);
+        backdrop-filter: blur(3px);
       }
 
       .extra-order-modal__dialog {
         position: relative;
-        width: min(620px, calc(100vw - 28px));
-        max-height: calc(100dvh - 16px);
+        width: min(440px, calc(100vw - 32px));
+        max-height: calc(100dvh - 32px);
         overflow-x: hidden;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
-        margin: 8px auto;
-        background: #ffffff;
-        border: 1px solid #d2d2d2;
-        padding: 14px 14px 16px;
+        margin: 16px auto;
+        background: #faf9f7;
+        border: none;
+        border-radius: 20px;
+        padding: 28px 28px 24px;
         box-sizing: border-box;
+        box-shadow:
+          0 28px 60px rgba(28, 24, 20, 0.14),
+          0 8px 20px rgba(28, 24, 20, 0.06);
       }
 
       .extra-order-modal__close {
         position: absolute;
-        top: 8px;
-        right: 10px;
+        top: 14px;
+        right: 14px;
+        width: 36px;
+        height: 36px;
         border: 0;
-        background: transparent;
-        color: #3f3f3f;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.85);
+        color: #5c5650;
         font-size: 22px;
         line-height: 1;
         cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition:
+          background 0.2s ease,
+          color 0.2s ease;
+      }
+
+      .extra-order-modal__close:hover {
+        background: #fff;
+        color: #2c2824;
       }
 
       .extra-order-modal__title {
-        margin: 0 0 10px;
+        margin: 0 0 20px;
+        padding-right: 40px;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.18em;
         text-transform: uppercase;
-        letter-spacing: 0.12em;
-        font-size: 13px;
-        color: #c39a86;
+        color: #9a8f85;
         font-family: "Noto Serif", serif;
       }
 
       .extra-order-card {
-        max-width: 360px;
+        max-width: 100%;
         margin: 0 auto;
-        background: #ffffff;
-        border: 1px solid #bfbfbf;
-        padding: 10px;
+        background: transparent;
+        border: none;
+        padding: 0;
         display: flex;
         flex-direction: column;
       }
 
       .extra-order-card__name {
-        margin: 0 0 8px;
-        font-size: 30px;
-        color: #383838;
-        line-height: 1.2;
-        min-height: 2.4em;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-        overflow: hidden;
+        margin: 0 0 16px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #2c2824;
+        line-height: 1.35;
+        text-align: center;
+        letter-spacing: 0.01em;
+        min-height: auto;
+        display: block;
+        overflow: visible;
+        -webkit-line-clamp: unset;
       }
 
       .extra-order-card__img {
         width: 100%;
-        max-width: 225px;
+        max-width: 220px;
         display: block;
-        margin: 0 auto 12px;
+        margin: 0 auto;
         border: 0;
-        background: #fff;
+        border-radius: 12px;
+        background: #f3f0ec;
       }
 
       .extra-order-card__media {
         position: relative;
         display: flex;
+        align-items: center;
         justify-content: center;
-        margin-bottom: 12px;
+        margin-bottom: 20px;
+        padding: 16px 44px;
+        background: #f3f0ec;
+        border-radius: 16px;
       }
 
       .extra-order-card__media-nav {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        width: 36px;
-        height: 36px;
-        border: 1px solid rgba(177, 114, 86, 0.55);
-        background: linear-gradient(135deg, #cf9a80 0%, #b17256 100%);
-        color: #fffdf9;
-        font-size: 20px;
+        width: 32px;
+        height: 32px;
+        border: 1px solid rgba(44, 40, 36, 0.12);
+        border-radius: 50%;
+        background: #fff;
+        color: #6e6760;
+        font-size: 14px;
+        font-weight: 400;
         line-height: 1;
         cursor: pointer;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        box-shadow: 0 8px 18px rgba(88, 52, 38, 0.18);
+        box-shadow: 0 2px 8px rgba(28, 24, 20, 0.06);
         transition:
-          transform 0.2s ease,
-          box-shadow 0.2s ease,
-          filter 0.2s ease;
+          border-color 0.2s ease,
+          color 0.2s ease,
+          box-shadow 0.2s ease;
       }
 
-      .extra-order-card__media-nav:hover {
-        transform: translateY(calc(-50% - 1px));
-        box-shadow: 0 12px 20px rgba(88, 52, 38, 0.24);
-        filter: brightness(1.03);
+      .extra-order-card__media-nav:hover:not(:disabled) {
+        border-color: rgba(166, 124, 99, 0.45);
+        color: #a67c63;
+        box-shadow: 0 4px 12px rgba(28, 24, 20, 0.08);
       }
 
       .extra-order-card__media-nav[hidden] {
@@ -573,125 +614,120 @@
       }
 
       .extra-order-card__media-nav[disabled]:not([hidden]) {
-        opacity: 0.38;
+        opacity: 0.35;
         box-shadow: none;
         cursor: default;
       }
 
       .extra-order-card__media-nav#extra-order-image-prev {
-        left: -56px;
+        left: 10px;
       }
 
       .extra-order-card__media-nav#extra-order-image-next {
-        right: -56px;
+        right: 10px;
       }
 
       @media (max-width: 767px) {
         .extra-order-modal.is-open {
           display: flex;
-          align-items: flex-start;
+          align-items: center;
           justify-content: center;
-          padding: 0;
+          padding: 16px;
         }
 
         .extra-order-modal__dialog {
           width: 100%;
           max-width: 100%;
-          min-height: 100dvh;
-          max-height: none;
+          min-height: auto;
+          max-height: calc(100dvh - 32px);
           margin: 0;
-          padding: 52px 16px calc(20px + env(safe-area-inset-bottom, 0px));
-          border-left: 0;
-          border-right: 0;
+          padding: 24px 20px calc(20px + env(safe-area-inset-bottom, 0px));
+          border-radius: 20px;
         }
 
         .extra-order-modal__close {
           top: 12px;
           right: 12px;
-          width: 40px;
-          height: 40px;
-          font-size: 26px;
+          width: 36px;
+          height: 36px;
+          font-size: 22px;
           z-index: 2;
         }
 
         .extra-order-modal__title {
-          font-size: 12px;
-          margin-bottom: 12px;
+          font-size: 10px;
+          margin-bottom: 16px;
           padding-right: 36px;
         }
 
         .extra-order-card {
           max-width: none;
           width: 100%;
-          padding: 12px 10px;
+          padding: 0;
         }
 
         .extra-order-card__name {
-          font-size: clamp(1.25rem, 5.5vw, 1.65rem);
-          margin-bottom: 10px;
-          padding-right: 8px;
+          font-size: 1.35rem;
+          margin-bottom: 14px;
+          padding-right: 0;
           word-break: break-word;
-          min-height: 2.6em;
         }
 
         .extra-order-card__desc-slot {
-          min-height: 4.2em;
+          min-height: 3.2em;
         }
 
         .extra-order-card__desc {
-          max-height: 4.2em;
+          max-height: 4em;
+          font-size: 13px;
         }
 
         .extra-order-card__media {
-          padding: 0 48px;
-          margin-bottom: 14px;
+          padding: 12px 40px;
+          margin-bottom: 16px;
           box-sizing: border-box;
         }
 
         .extra-order-card__media-nav {
-          width: 40px;
-          height: 40px;
-          font-size: 18px;
+          width: 32px;
+          height: 32px;
+          font-size: 14px;
         }
 
         .extra-order-card__media-nav#extra-order-image-prev {
-          left: 0;
+          left: 8px;
         }
 
         .extra-order-card__media-nav#extra-order-image-next {
-          right: 0;
+          right: 8px;
         }
 
         .extra-order-card__img {
-          max-width: 100%;
+          max-width: 200px;
           width: 100%;
           height: auto;
         }
 
         .extra-order-card__row {
-          flex-wrap: wrap;
+          flex-wrap: nowrap;
           gap: 12px;
           align-items: center;
+          padding: 12px 14px;
         }
 
         .extra-order-card__price {
-          font-size: clamp(1.75rem, 9vw, 2.35rem);
+          font-size: 1.5rem;
         }
 
         .extra-order-qty__btn {
-          width: 44px;
-          height: 44px;
-          font-size: 22px;
+          width: 36px;
+          height: 36px;
+          font-size: 18px;
         }
 
         .extra-order-qty__value {
-          min-width: 48px;
-          font-size: 17px;
-        }
-
-        .extra-order-card__desc {
+          min-width: 40px;
           font-size: 15px;
-          line-height: 1.5;
         }
 
         .extra-order-form {
@@ -721,14 +757,18 @@
 
         .extra-order-form__total {
           text-align: left;
-          font-size: 15px;
+          font-size: 14px;
           margin-top: 14px;
         }
 
         .extra-order-form__total strong {
-          display: block;
-          margin: 6px 0 0;
-          font-size: clamp(1.75rem, 9vw, 2.35rem);
+          display: inline;
+          margin: 0;
+          font-size: 1.35rem;
+        }
+
+        .extra-order-modal__actions .extra-order-form__total strong {
+          font-size: 1.35rem;
         }
 
         .extra-order-form__submit {
@@ -748,44 +788,63 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 8px;
-        margin-bottom: 8px;
+        gap: 16px;
+        margin-bottom: 16px;
+        padding: 14px 16px;
+        background: #fff;
+        border-radius: 12px;
+        border: 1px solid rgba(44, 40, 36, 0.06);
       }
 
       .extra-order-card__price {
-        font-size: 38px;
+        font-size: 1.75rem;
+        font-weight: 500;
         line-height: 1;
-        color: #3a3a3a;
+        color: #2c2824;
+        letter-spacing: -0.02em;
       }
 
       .extra-order-qty {
         display: inline-flex;
         align-items: center;
-        border: 1px solid #bfbfbf;
-        background: #fff;
+        gap: 2px;
+        padding: 4px;
+        border-radius: 999px;
+        border: 1px solid rgba(44, 40, 36, 0.1);
+        background: #faf9f7;
       }
 
       .extra-order-qty__btn {
-        width: 34px;
-        height: 34px;
+        width: 32px;
+        height: 32px;
         border: 0;
-        background: #b17256;
-        color: #fff;
-        font-size: 22px;
+        border-radius: 50%;
+        background: transparent;
+        color: #6e6760;
+        font-size: 18px;
         line-height: 1;
         cursor: pointer;
+        transition:
+          background 0.2s ease,
+          color 0.2s ease;
+      }
+
+      .extra-order-qty__btn:hover {
+        background: rgba(166, 124, 99, 0.12);
+        color: #a67c63;
       }
 
       .extra-order-qty__value {
-        min-width: 42px;
+        min-width: 36px;
         text-align: center;
-        color: #4a4a4a;
-        font-size: 16px;
+        color: #2c2824;
+        font-size: 15px;
+        font-weight: 500;
       }
 
       .extra-order-card__desc-slot {
-        min-height: 4.5em;
-        margin: 0 0 4px;
+        min-height: 3.5em;
+        margin: 0;
         display: flex;
         align-items: flex-start;
         flex-shrink: 0;
@@ -793,11 +852,12 @@
 
       .extra-order-card__desc {
         margin: 0;
-        font-size: 16px;
-        color: #5f5f5f;
-        line-height: 1.5;
+        font-size: 14px;
+        color: #6e6760;
+        line-height: 1.6;
+        text-align: center;
         width: 100%;
-        max-height: 4.5em;
+        max-height: 4.8em;
         overflow-y: auto;
         overflow-x: hidden;
       }
@@ -878,62 +938,64 @@
       .extra-order-form__total {
         margin-top: 8px;
         text-align: right;
-        color: #4f4f4f;
-        font-size: 16px;
+        color: #6e6760;
+        font-size: 14px;
       }
 
       .extra-order-form__total strong {
-        font-size: 38px;
+        font-size: 1.5rem;
+        font-weight: 500;
         margin-left: 6px;
-        color: #3b3b3b;
+        color: #2c2824;
         line-height: 1;
       }
 
       @media (max-height: 900px) {
         .extra-order-modal__dialog {
-          padding: 10px 10px 10px;
+          padding: 20px 20px 18px;
         }
 
         .extra-order-modal__title {
-          margin-bottom: 6px;
-          font-size: 12px;
-        }
-
-        .extra-order-card {
-          padding: 8px;
+          margin-bottom: 12px;
+          font-size: 10px;
         }
 
         .extra-order-card__name {
-          margin-bottom: 6px;
-          font-size: 24px;
+          margin-bottom: 10px;
+          font-size: 1.25rem;
         }
 
         .extra-order-card__img {
-          max-width: 178px;
-          margin-bottom: 8px;
+          max-width: 160px;
+        }
+
+        .extra-order-card__media {
+          margin-bottom: 12px;
+          padding: 12px 40px;
         }
 
         .extra-order-card__row {
-          margin-bottom: 6px;
+          margin-bottom: 12px;
+          padding: 10px 12px;
         }
 
         .extra-order-card__price {
-          font-size: 28px;
+          font-size: 1.35rem;
         }
 
         .extra-order-qty__btn {
-          width: 30px;
-          height: 30px;
+          width: 28px;
+          height: 28px;
         }
 
         .extra-order-qty__value {
-          min-width: 36px;
+          min-width: 32px;
           font-size: 14px;
         }
 
         .extra-order-card__desc {
-          font-size: 14px;
-          line-height: 1.35;
+          font-size: 13px;
+          line-height: 1.45;
         }
 
         .extra-order-form {
@@ -1001,35 +1063,52 @@
       }
 
       .extra-order-modal__actions {
-        margin-top: 18px;
-        padding-top: 16px;
-        border-top: 1px solid rgba(177, 114, 86, 0.22);
+        margin-top: 24px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(44, 40, 36, 0.08);
       }
 
       .extra-order-modal__actions .extra-order-form__total {
-        margin-bottom: 14px;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 16px;
+        text-align: left;
+        font-size: 13px;
+        color: #6e6760;
+        letter-spacing: 0.02em;
+      }
+
+      .extra-order-modal__actions .extra-order-form__total strong {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #2c2824;
+        margin-left: 0;
       }
 
       .extra-btn-cart-add {
         width: 100%;
         border: 0;
+        border-radius: 10px;
         cursor: pointer;
-        background: linear-gradient(135deg, #c68d70 0%, #9f5f45 100%);
+        background: #b27256;
         color: #fff;
-        text-transform: uppercase;
-        letter-spacing: 0.14em;
-        padding: 14px 16px;
-        font-size: 12px;
+        text-transform: none;
+        letter-spacing: 0.04em;
+        padding: 15px 20px;
+        font-size: 15px;
+        font-weight: 500;
         font-family: "Noto Serif", serif;
-        box-shadow: 0 10px 22px rgba(121, 76, 56, 0.24);
+        box-shadow: none;
         transition:
-          transform 0.2s ease,
-          box-shadow 0.2s ease;
+          background 0.2s ease,
+          transform 0.2s ease;
       }
 
       .extra-btn-cart-add:hover {
+        background: #9d6349;
         transform: translateY(-1px);
-        box-shadow: 0 14px 28px rgba(121, 76, 56, 0.3);
       }
 
       .extra-order-flower-picker {
@@ -1037,8 +1116,8 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 8px;
-        margin: 0 auto 14px;
-        max-width: 320px;
+        margin: 0 auto 16px;
+        max-width: 100%;
       }
 
       .extra-order-flower-picker.is-visible {
@@ -1047,26 +1126,28 @@
 
       .extra-order-flower-picker__btn {
         flex: 1 1 auto;
-        min-width: 64px;
-        padding: 8px 12px;
-        border: 1px solid #b17256;
+        min-width: 72px;
+        padding: 9px 14px;
+        border: 1px solid rgba(44, 40, 36, 0.12);
+        border-radius: 999px;
         background: #fff;
-        color: #5a514b;
+        color: #6e6760;
         font-family: "Noto Serif", serif;
-        font-size: 10px;
-        font-weight: 600;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        text-transform: none;
         cursor: pointer;
         transition:
           background 0.2s ease,
-          color 0.2s ease;
+          color 0.2s ease,
+          border-color 0.2s ease;
       }
 
       .extra-order-flower-picker__btn.is-active {
-        background: #b17256;
-        color: #fff;
-        border-color: #b17256;
+        background: #2c2824;
+        color: #faf9f7;
+        border-color: #2c2824;
       }
 
       .extra-order-card__media--flower-picker .extra-order-card__media-nav {
@@ -1091,14 +1172,14 @@
 
       .extra-cart-widget__toggle {
         position: relative;
-        width: 58px;
-        height: 58px;
+        width: 54px;
+        height: 54px;
         border-radius: 50%;
         border: 0;
         cursor: pointer;
-        background: linear-gradient(145deg, #cf9a80 0%, #9f5f45 100%);
+        background: #b27256;
         color: #fff;
-        box-shadow: 0 12px 28px rgba(88, 52, 38, 0.35);
+        box-shadow: 0 10px 24px rgba(178, 114, 86, 0.35);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1108,6 +1189,7 @@
       }
 
       .extra-cart-widget__toggle:hover {
+        background: #9d6349;
         transform: translateY(-2px) scale(1.03);
       }
 
@@ -1125,7 +1207,7 @@
         height: 22px;
         padding: 0 6px;
         border-radius: 999px;
-        background: #2b2521;
+        background: #8f523f;
         color: #fff;
         font-size: 11px;
         font-weight: 700;
@@ -1159,7 +1241,8 @@
       .extra-cart-drawer__backdrop {
         position: absolute;
         inset: 0;
-        background: rgba(30, 24, 20, 0.45);
+        background: rgba(32, 28, 24, 0.42);
+        backdrop-filter: blur(2px);
         opacity: 0;
         transition: opacity 0.3s ease;
       }
@@ -1172,11 +1255,11 @@
         position: absolute;
         top: 0;
         right: 0;
-        width: min(420px, 100%);
+        width: min(400px, 100%);
         height: 100%;
-        background: #fffdf9;
-        border-left: 1px solid rgba(177, 114, 86, 0.25);
-        box-shadow: -12px 0 40px rgba(43, 37, 33, 0.12);
+        background: #faf9f7;
+        border: none;
+        box-shadow: -20px 0 48px rgba(28, 24, 20, 0.12);
         display: flex;
         flex-direction: column;
         transform: translateX(100%);
@@ -1188,188 +1271,449 @@
       }
 
       .extra-cart-drawer__header {
+        flex-shrink: 0;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
-        padding: 20px 20px 12px;
-        border-bottom: 1px solid rgba(177, 114, 86, 0.18);
+        gap: 12px;
+        padding: 22px 22px 16px;
+        background: #fff;
+      }
+
+      .extra-cart-drawer__header-text {
+        min-width: 0;
+      }
+
+      .extra-cart-drawer__kicker {
+        display: block;
+        margin: 0 0 6px;
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #b17256;
       }
 
       .extra-cart-drawer__header h2 {
         margin: 0;
         font-family: "Noto Serif", serif;
-        font-size: 1.35rem;
-        color: #2b2521;
-        font-weight: 600;
+        font-size: 1.45rem;
+        font-weight: 500;
+        color: #2c2824;
+        line-height: 1.2;
       }
 
       .extra-cart-drawer__close {
-        width: 40px;
-        height: 40px;
+        flex-shrink: 0;
+        width: 36px;
+        height: 36px;
         border: 0;
-        background: transparent;
-        font-size: 28px;
+        border-radius: 50%;
+        background: #f3f0ec;
+        font-size: 22px;
         line-height: 1;
-        color: #5a514b;
+        color: #6e6760;
         cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition:
+          background 0.2s ease,
+          color 0.2s ease;
       }
 
-      .extra-cart-drawer__body {
-        flex: 1;
+      .extra-cart-drawer__close:hover {
+        background: #ebe6e0;
+        color: #2c2824;
+      }
+
+      .extra-cart-drawer__main {
+        flex: 1 1 auto;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        background: #faf9f7;
+      }
+
+      .extra-cart-drawer__items-block {
+        flex: 1 1 auto;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+
+      .extra-cart-drawer__section-label {
+        margin: 0;
+        padding: 12px 22px 6px;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #9a8f85;
+      }
+
+      .extra-cart-drawer__items-wrap {
+        flex: 1 1 auto;
+        min-height: 80px;
+        max-height: none;
+        margin: 0 16px 12px;
+        padding: 4px 6px;
+        overflow-x: hidden;
         overflow-y: auto;
-        padding: 12px 16px;
+        background: #fff;
+        border-radius: 12px;
+        border: 1px solid rgba(44, 40, 36, 0.06);
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .extra-cart-drawer__items-wrap::-webkit-scrollbar {
+        width: 5px;
+      }
+
+      .extra-cart-drawer__items-wrap::-webkit-scrollbar-thumb {
+        background: rgba(177, 114, 86, 0.28);
+        border-radius: 999px;
       }
 
       .extra-cart-empty {
         text-align: center;
-        padding: 48px 20px;
-        color: #7a726c;
+        padding: 40px 20px;
+        color: #6e6760;
         font-family: "Noto Serif", serif;
+        font-size: 14px;
+        line-height: 1.55;
       }
 
       .extra-cart-empty__icon {
-        font-size: 48px;
-        opacity: 0.35;
-        margin-bottom: 12px;
+        display: block;
+        font-size: 32px;
+        opacity: 0.4;
+        margin-bottom: 10px;
       }
 
       .extra-cart-item {
-        display: grid;
-        grid-template-columns: 72px 1fr auto;
+        display: flex;
         gap: 12px;
-        align-items: start;
-        padding: 14px 0;
-        border-bottom: 1px solid rgba(177, 114, 86, 0.12);
+        align-items: flex-start;
+        padding: 14px 12px;
+        border-bottom: 1px solid rgba(44, 40, 36, 0.06);
+      }
+
+      .extra-cart-item:last-child {
+        border-bottom: 0;
       }
 
       .extra-cart-item__img {
-        width: 72px;
-        height: 72px;
+        flex-shrink: 0;
+        width: 56px;
+        height: 56px;
         object-fit: cover;
-        background: #fff;
-        border: 1px solid rgba(177, 114, 86, 0.15);
+        border-radius: 10px;
+        background: #f3f0ec;
+      }
+
+      .extra-cart-item__body {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .extra-cart-item__top {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 8px;
       }
 
       .extra-cart-item__name {
-        margin: 0 0 4px;
+        margin: 0;
         font-family: "Noto Serif", serif;
         font-size: 14px;
-        font-weight: 600;
-        color: #2b2521;
-        line-height: 1.3;
+        font-weight: 500;
+        color: #2c2824;
+        line-height: 1.35;
+      }
+
+      .extra-cart-item__line-total {
+        flex-shrink: 0;
+        font-size: 14px;
+        font-weight: 500;
+        color: #2c2824;
+        font-family: "Noto Serif", serif;
+      }
+
+      .extra-cart-item__meta {
+        margin: 0 0 10px;
+        font-size: 12px;
+        color: #9a8f85;
       }
 
       .extra-cart-item__variant {
-        margin: 0 0 8px;
-        font-size: 12px;
-        color: #b17256;
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
+        display: none;
       }
 
-      .extra-cart-item__price {
-        font-size: 13px;
-        color: #5a514b;
-      }
-
-      .extra-cart-item__controls {
+      .extra-cart-item__bottom {
         display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 8px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
       }
 
       .extra-cart-item__qty {
-        display: flex;
+        display: inline-flex;
         align-items: center;
-        gap: 6px;
-        border: 1px solid rgba(177, 114, 86, 0.35);
+        padding: 3px;
+        border-radius: 999px;
+        border: 1px solid rgba(44, 40, 36, 0.1);
+        background: #faf9f7;
       }
 
       .extra-cart-item__qty button {
-        width: 32px;
-        height: 32px;
+        width: 28px;
+        height: 28px;
         border: 0;
-        background: #faf6f2;
-        color: #5a514b;
-        font-size: 18px;
+        border-radius: 50%;
+        background: transparent;
+        color: #6e6760;
+        font-size: 16px;
+        line-height: 1;
         cursor: pointer;
         font-family: inherit;
+        transition:
+          background 0.2s ease,
+          color 0.2s ease;
+      }
+
+      .extra-cart-item__qty button:hover {
+        background: rgba(177, 114, 86, 0.12);
+        color: #b17256;
       }
 
       .extra-cart-item__qty span {
-        min-width: 24px;
+        min-width: 28px;
         text-align: center;
-        font-size: 14px;
-        font-weight: 600;
+        font-size: 13px;
+        font-weight: 500;
+        color: #2c2824;
       }
 
       .extra-cart-item__remove {
         border: 0;
         background: none;
-        color: #9a6b58;
-        font-size: 11px;
-        text-decoration: underline;
+        color: #9a8f85;
+        font-size: 12px;
         cursor: pointer;
         font-family: "Noto Serif", serif;
         padding: 0;
+        text-decoration: none;
+        transition: color 0.2s ease;
       }
 
-      .extra-cart-item__line-total {
-        font-size: 14px;
-        font-weight: 600;
-        color: #2b2521;
+      .extra-cart-item__remove:hover {
+        color: #b17256;
+      }
+
+      .extra-cart-drawer__bottom {
+        flex-shrink: 0;
+        padding: 0 16px calc(12px + env(safe-area-inset-bottom, 0px));
+        background: #faf9f7;
+      }
+
+      .extra-cart-drawer__bottom[hidden] {
+        display: none;
+      }
+
+      .extra-cart-drawer__checkout-panel {
+        padding: 0 4px 2px;
+      }
+
+      .extra-delivery {
+        padding: 10px 11px 10px;
+        background: linear-gradient(180deg, #fdfcfa 0%, #f7f4f0 100%);
+        border-radius: 10px;
+        border: 1px solid rgba(177, 114, 86, 0.08);
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9) inset;
+      }
+
+      .extra-delivery__title {
+        margin: 0;
         font-family: "Noto Serif", serif;
+        font-size: 13px;
+        font-weight: 500;
+        color: #3d3834;
+        letter-spacing: 0.01em;
+      }
+
+      .extra-delivery__hint {
+        margin: 2px 0 9px;
+        font-size: 10px;
+        line-height: 1.35;
+        color: #a39a92;
+        font-weight: 400;
+      }
+
+      .extra-delivery__form {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .extra-delivery__row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+
+      .extra-delivery__field {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .extra-delivery__field label {
+        font-size: 10px;
+        color: #8a8178;
+        font-weight: 400;
+        letter-spacing: 0.02em;
+      }
+
+      .extra-delivery__optional {
+        font-size: 9px;
+        color: #c4bbb3;
+        font-weight: 400;
+      }
+
+      .extra-delivery__field input,
+      .extra-delivery__field textarea {
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid rgba(61, 56, 52, 0.08);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.72);
+        font-family: "Noto Serif", serif;
+        font-size: 12px;
+        color: #3d3834;
+        transition:
+          border-color 0.2s ease,
+          background 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      .extra-delivery__field input {
+        height: 34px;
+        padding: 0 10px;
+      }
+
+      .extra-delivery__field input::placeholder,
+      .extra-delivery__field textarea::placeholder {
+        color: #c8c0b8;
+      }
+
+      .extra-delivery__field input[type="date"],
+      .extra-delivery__field input[type="time"] {
+        color: #8a8178;
+      }
+
+      .extra-delivery__field input[type="date"]:valid,
+      .extra-delivery__field input[type="time"]:valid,
+      .extra-delivery__field input[type="date"]:focus,
+      .extra-delivery__field input[type="time"]:focus {
+        color: #3d3834;
+      }
+
+      .extra-delivery__field textarea {
+        min-height: 40px;
+        padding: 6px 10px;
+        resize: vertical;
+        line-height: 1.35;
+      }
+
+      .extra-delivery__field input:focus,
+      .extra-delivery__field textarea:focus {
+        outline: none;
+        border-color: rgba(177, 114, 86, 0.35);
+        background: #fff;
+        box-shadow: 0 0 0 2px rgba(177, 114, 86, 0.07);
+      }
+
+      .extra-delivery__field--notes textarea {
+        min-height: 36px;
+      }
+
+      .extra-cart-drawer__form-status.is-error {
+        color: #9a5f47;
       }
 
       .extra-cart-drawer__footer {
-        padding: 16px 20px calc(20px + env(safe-area-inset-bottom, 0px));
-        border-top: 1px solid rgba(177, 114, 86, 0.22);
-        background: #faf6f2;
+        flex-shrink: 0;
+        margin-top: 10px;
+        padding: 14px 16px 12px;
+        background: linear-gradient(180deg, #fdfcfa 0%, #f7f4f0 100%);
+        border-radius: 14px;
+        border: 1px solid rgba(177, 114, 86, 0.08);
+        box-shadow: none;
       }
 
       .extra-cart-drawer__row {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
-        margin-bottom: 14px;
+        margin-bottom: 10px;
         font-family: "Noto Serif", serif;
       }
 
       .extra-cart-drawer__row span {
-        font-size: 13px;
-        color: #5a514b;
+        font-size: 11px;
+        color: #9a8f85;
+        letter-spacing: 0.1em;
         text-transform: uppercase;
-        letter-spacing: 0.08em;
       }
 
       .extra-cart-drawer__row strong {
-        font-size: 1.5rem;
-        color: #2b2521;
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: #2c2824;
       }
 
-      .extra-cart-drawer__checkout {
+      .extra-cart-drawer__pay {
         width: 100%;
         border: 0;
+        border-radius: 10px;
         cursor: pointer;
-        padding: 15px 16px;
-        background: linear-gradient(135deg, #2b2521 0%, #4a4038 100%);
+        padding: 15px 18px;
+        background: #b17256;
         color: #fff;
         font-family: "Noto Serif", serif;
-        font-size: 12px;
-        font-weight: 600;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        transition: opacity 0.2s ease;
+        font-size: 15px;
+        font-weight: 500;
+        transition:
+          background 0.2s ease,
+          transform 0.15s ease;
       }
 
-      .extra-cart-drawer__checkout:disabled {
-        opacity: 0.45;
+      .extra-cart-drawer__pay:disabled {
+        opacity: 0.4;
         cursor: not-allowed;
       }
 
-      .extra-cart-drawer__checkout:not(:disabled):hover {
-        opacity: 0.92;
+      .extra-cart-drawer__pay:not(:disabled):hover {
+        background: #9a5f47;
+        transform: translateY(-1px);
+      }
+
+      .extra-cart-drawer__form-status {
+        margin: 12px 0 0;
+        font-size: 12px;
+        color: #6e6760;
+        text-align: center;
+        min-height: 1.2em;
+        line-height: 1.45;
+      }
+
+      .extra-cart-drawer__form-status:empty {
+        display: none;
       }
 
       .extra-cart-toast {
@@ -1395,85 +1739,6 @@
       .extra-cart-toast.is-visible {
         opacity: 1;
         transform: translateX(-50%) translateY(0);
-      }
-
-      .extra-checkout-modal {
-        position: fixed;
-        inset: 0;
-        z-index: 10055;
-        display: none;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-      }
-
-      .extra-checkout-modal.is-open {
-        display: flex;
-      }
-
-      .extra-checkout-modal__backdrop {
-        position: absolute;
-        inset: 0;
-        background: rgba(30, 24, 20, 0.55);
-      }
-
-      .extra-checkout-modal__dialog {
-        position: relative;
-        width: min(520px, 100%);
-        max-height: min(92vh, 720px);
-        overflow-y: auto;
-        background: #fffdf9;
-        padding: 28px 24px 24px;
-        border: 1px solid rgba(177, 114, 86, 0.3);
-        box-shadow: 0 24px 48px rgba(43, 37, 33, 0.18);
-      }
-
-      .extra-checkout-modal__close {
-        position: absolute;
-        top: 12px;
-        right: 14px;
-        border: 0;
-        background: transparent;
-        font-size: 28px;
-        cursor: pointer;
-        color: #5a514b;
-      }
-
-      .extra-checkout-modal__title {
-        margin: 0 0 6px;
-        font-family: "Noto Serif", serif;
-        font-size: 1.5rem;
-        color: #2b2521;
-      }
-
-      .extra-checkout-modal__subtitle {
-        margin: 0 0 18px;
-        font-size: 13px;
-        color: #7a726c;
-      }
-
-      .extra-checkout-summary {
-        background: #faf6f2;
-        border: 1px solid rgba(177, 114, 86, 0.15);
-        padding: 12px 14px;
-        margin-bottom: 18px;
-        max-height: 160px;
-        overflow-y: auto;
-        font-size: 13px;
-        line-height: 1.5;
-        color: #3f3f3f;
-      }
-
-      .extra-checkout-summary__line {
-        display: flex;
-        justify-content: space-between;
-        gap: 12px;
-        padding: 4px 0;
-        border-bottom: 1px dashed rgba(177, 114, 86, 0.2);
-      }
-
-      .extra-checkout-summary__line:last-child {
-        border-bottom: 0;
       }
 
       @media (max-width: 767px) {
@@ -2178,7 +2443,7 @@
     </style>
   </head>
 
-  <body class="sacher-home">
+  <body class="sacher-home derand-no-tidio">
     <div id="preloder">
       <div class="loader"></div>
     </div>
@@ -2315,9 +2580,9 @@
 
                 <div class="header__nav__widget">
                   <a
-                    href="https://derand-hotel.hotelrunner.com/bv3/search"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="book.html"
+                   
+                   
                   >
                     <span data-i18n="book-now">BOOK NOW</span>
                   </a>
@@ -2378,11 +2643,11 @@
               type="button"
               class="extra-btn js-extra-order"
               data-product="Single Red Roses"
-              data-price="1.3"
+              data-price="3"
               data-image="img/flower.jpg"
-              data-images="img/flower.jpg,img/whiteflower.png,img/redrose.jpg,img/rose.jpg,img/flower5.png,img/flower1.jpg,img/flower2.jpg,img/flower3.jpg"
-              data-products="Single Red Roses,Single White Rose,Single Pink Rose"
-              data-prices="1.3,1.3,1.3,0.7,0,0,0,0"
+              data-images="img/flower.jpg,img/whiteflower.png,img/redrose.jpg,img/rose.jpg,img/whiteflowers.png,img/flower5.png,img/lilypink.png,img/flower1.jpg,img/flower2.jpg,img/flower3.jpg,img/flowers1.png"
+              data-products="Single Red Roses,Single White Rose,Single Pink Rose,Single Pink Dianthus,Single White Dianthus,Single White Lily,Single Pink Lily,Lily Bouquet,A Bouquet of Red Roses,A Bouquet of Yellow Tulips,Mixed Flower Bouquet"
+              data-prices="3,3,3,2,2,8,8,50,60,55,50"
               data-description="Fresh seasonal flowers wrapped in decorative paper for a romantic in-room surprise."
             >
               Choose Your Flowers
@@ -2748,7 +3013,7 @@
           &times;
         </button>
         <p class="extra-order-modal__title" id="extra-order-title">
-          Add to your cart
+          Add to cart
         </p>
         <div class="extra-order-card">
           <h3 class="extra-order-card__name" id="extra-order-product">
@@ -2848,7 +3113,10 @@
       <div class="extra-cart-drawer__backdrop" data-cart-close></div>
       <div class="extra-cart-drawer__panel">
         <header class="extra-cart-drawer__header">
-          <h2>Your cart</h2>
+          <div class="extra-cart-drawer__header-text">
+            <span class="extra-cart-drawer__kicker">Room delivery</span>
+            <h2>Your order</h2>
+          </div>
           <button
             type="button"
             class="extra-cart-drawer__close"
@@ -2858,138 +3126,101 @@
             &times;
           </button>
         </header>
-        <div class="extra-cart-drawer__body" id="extra-cart-items"></div>
-        <footer class="extra-cart-drawer__footer">
-          <div class="extra-cart-drawer__row">
-            <span>Subtotal</span>
-            <strong id="extra-cart-subtotal">0&euro;</strong>
+        <div class="extra-cart-drawer__main">
+          <div class="extra-cart-drawer__items-block">
+            <p class="extra-cart-drawer__section-label" id="extra-cart-items-label">
+              Items
+            </p>
+            <div class="extra-cart-drawer__items-wrap">
+              <div id="extra-cart-items"></div>
+            </div>
           </div>
-          <button
-            type="button"
-            class="extra-cart-drawer__checkout"
-            id="extra-cart-checkout-btn"
-            disabled
+        </div>
+        <div class="extra-cart-drawer__bottom" id="extra-cart-bottom" hidden>
+          <div
+            class="extra-cart-drawer__checkout-panel"
+            id="extra-cart-checkout-panel"
           >
-            Pay &amp; deliver to room
-          </button>
-        </footer>
+            <div class="extra-delivery">
+              <p class="extra-delivery__title">Delivery details</p>
+              <p class="extra-delivery__hint">
+                Tell us when to bring your order to your room.
+              </p>
+              <form
+                class="extra-delivery__form"
+                id="extra-checkout-form"
+                data-contact-email="info@derandhotel.com"
+              >
+                <div class="extra-delivery__field">
+                  <label for="extra-checkout-reservation-name"
+                    >Name on reservation</label
+                  >
+                  <input
+                    id="extra-checkout-reservation-name"
+                    type="text"
+                    name="lastName"
+                    placeholder="As on your booking"
+                    autocomplete="name"
+                    required
+                  />
+                </div>
+                <div class="extra-delivery__row">
+                  <div class="extra-delivery__field">
+                    <label for="extra-checkout-date">Date</label>
+                    <input
+                      id="extra-checkout-date"
+                      type="date"
+                      name="deliveryDate"
+                      required
+                    />
+                  </div>
+                  <div class="extra-delivery__field">
+                    <label for="extra-checkout-time">Time</label>
+                    <input
+                      id="extra-checkout-time"
+                      type="time"
+                      name="deliveryTime"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="extra-delivery__field extra-delivery__field--notes">
+                  <label for="extra-checkout-message"
+                    >Notes <span class="extra-delivery__optional">optional</span></label
+                  >
+                  <textarea
+                    id="extra-checkout-message"
+                    name="message"
+                    placeholder="Card message or special request"
+                  ></textarea>
+                </div>
+              </form>
+            </div>
+          </div>
+          <footer class="extra-cart-drawer__footer">
+            <div class="extra-cart-drawer__row">
+              <span>Order total</span>
+              <strong id="extra-cart-subtotal">0&euro;</strong>
+            </div>
+            <button
+              type="submit"
+              form="extra-checkout-form"
+              class="extra-cart-drawer__pay"
+              id="extra-cart-pay-btn"
+              disabled
+            >
+              Pay now
+            </button>
+            <p
+              class="extra-cart-drawer__form-status"
+              id="extra-checkout-status"
+              role="status"
+              aria-live="polite"
+            ></p>
+          </footer>
+        </div>
       </div>
     </aside>
-
-    <div
-      class="extra-checkout-modal"
-      id="extra-checkout-modal"
-      aria-hidden="true"
-    >
-      <div class="extra-checkout-modal__backdrop" data-checkout-close></div>
-      <div
-        class="extra-checkout-modal__dialog"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="extra-checkout-title"
-      >
-        <button
-          type="button"
-          class="extra-checkout-modal__close"
-          data-checkout-close
-          aria-label="Close checkout"
-        >
-          &times;
-        </button>
-        <h2 class="extra-checkout-modal__title" id="extra-checkout-title">
-          Checkout
-        </h2>
-        <p class="extra-checkout-modal__subtitle">
-          Complete your details. We will prepare everything for delivery to your
-          room.
-        </p>
-        <div
-          class="extra-checkout-summary"
-          id="extra-checkout-summary"
-          aria-live="polite"
-        ></div>
-        <form
-          class="extra-order-form"
-          id="extra-checkout-form"
-          data-contact-email="info@derandhotel.com"
-        >
-          <div class="extra-order-form__grid">
-            <div class="extra-order-form__field">
-              <label class="extra-order-form__label" for="extra-checkout-room"
-                >Room Number</label
-              >
-              <input
-                id="extra-checkout-room"
-                type="text"
-                name="roomNumber"
-                placeholder="e.g. 1401"
-                required
-              />
-            </div>
-            <div class="extra-order-form__field">
-              <label
-                class="extra-order-form__label"
-                for="extra-checkout-lastname"
-                >Last Name</label
-              >
-              <input
-                id="extra-checkout-lastname"
-                type="text"
-                name="lastName"
-                placeholder="e.g. Smith"
-                required
-              />
-            </div>
-          </div>
-          <div class="extra-order-form__grid">
-            <div class="extra-order-form__field">
-              <label class="extra-order-form__label" for="extra-checkout-date"
-                >Delivery Date</label
-              >
-              <input
-                id="extra-checkout-date"
-                type="date"
-                name="deliveryDate"
-                required
-              />
-            </div>
-            <div class="extra-order-form__field">
-              <label class="extra-order-form__label" for="extra-checkout-time"
-                >Delivery Time</label
-              >
-              <input
-                id="extra-checkout-time"
-                type="time"
-                name="deliveryTime"
-                required
-              />
-            </div>
-          </div>
-          <div class="extra-order-form__field">
-            <label class="extra-order-form__label" for="extra-checkout-message"
-              >Message (optional)</label
-            >
-            <textarea
-              id="extra-checkout-message"
-              name="message"
-              placeholder="Add card note, occasion, or any delivery preference"
-            ></textarea>
-          </div>
-          <div class="extra-order-form__total">
-            Order total: <strong id="extra-checkout-total">0&euro;</strong>
-          </div>
-          <button type="submit" class="extra-order-form__submit">
-            Pay now
-          </button>
-          <p
-            class="extra-order-form__status"
-            id="extra-checkout-status"
-            role="status"
-            aria-live="polite"
-          ></p>
-        </form>
-      </div>
-    </div>
 
     <div class="extra-cart-toast" id="extra-cart-toast" role="status" aria-live="polite"></div>
 
@@ -3239,10 +3470,9 @@
     <script src="js/jquery-3.3.1.min.js" defer></script>
     <script src="js/bootstrap.min.js" defer></script>
     <script src="js/jquery.slicknav.js" defer></script>
-    <script src="js/site-onboarding-sequence.js?v=8" defer></script>
+    <script src="js/site-onboarding-sequence.js?v=9" defer></script>
     <script src="js/main.js?v=20260416-2" defer></script>
         <script src="js/site-whatsapp.js?v=8" defer></script>
-    <script src="js/tidio-left-position.js?v=2" defer></script>
     <script>
       (function () {
         var CART_STORAGE_KEY = "derandExtraCart";
@@ -3270,14 +3500,13 @@
         var cartSubtotalEl = document.getElementById("extra-cart-subtotal");
         var cartBadgeEl = document.getElementById("extra-cart-badge");
         var cartToggleBtn = document.getElementById("extra-cart-toggle");
-        var cartCheckoutBtn = document.getElementById("extra-cart-checkout-btn");
         var cartToast = document.getElementById("extra-cart-toast");
 
-        var checkoutModal = document.getElementById("extra-checkout-modal");
+        var cartBottom = document.getElementById("extra-cart-bottom");
+        var cartItemsLabel = document.getElementById("extra-cart-items-label");
         var checkoutForm = document.getElementById("extra-checkout-form");
-        var checkoutSummaryEl = document.getElementById("extra-checkout-summary");
-        var checkoutTotalEl = document.getElementById("extra-checkout-total");
         var checkoutStatusEl = document.getElementById("extra-checkout-status");
+        var cartPayBtn = document.getElementById("extra-cart-pay-btn");
 
         if (
           !modal ||
@@ -3297,7 +3526,7 @@
         var WEB3FORMS_ACCESS_KEY = "761d8dce-87b2-4534-bc76-77ec2305d4ec";
         var ORDER_TO_EMAIL = "info@derandhotel.com";
         var CARD_CHECKOUT_URL =
-          "https://derand-hotel.hotelrunner.com/bv3/search";
+          "book.html";
 
         var cart = [];
         var currentPrice = 0;
@@ -3675,10 +3904,7 @@
         function closeModal() {
           modal.classList.remove("is-open");
           modal.setAttribute("aria-hidden", "true");
-          if (
-            !cartDrawer.classList.contains("is-open") &&
-            !checkoutModal.classList.contains("is-open")
-          ) {
+          if (!cartDrawer.classList.contains("is-open")) {
             document.body.style.overflow = "";
           }
           setFlowerPickerVisible(false);
@@ -3694,32 +3920,44 @@
         function closeCart() {
           cartDrawer.classList.remove("is-open");
           cartDrawer.setAttribute("aria-hidden", "true");
-          if (
-            !modal.classList.contains("is-open") &&
-            !checkoutModal.classList.contains("is-open")
-          ) {
+          if (!modal.classList.contains("is-open")) {
             document.body.style.overflow = "";
           }
         }
 
-        function openCheckout() {
-          if (!cart.length) return;
-          renderCheckoutSummary();
-          checkoutTotalEl.textContent = formatEuro(getCartSubtotal());
-          checkoutForm.reset();
-          if (checkoutStatusEl) checkoutStatusEl.textContent = "";
-          closeCart();
-          checkoutModal.classList.add("is-open");
-          checkoutModal.setAttribute("aria-hidden", "false");
-          document.body.style.overflow = "hidden";
+        function isCheckoutFormComplete() {
+          if (!checkoutForm || !cart.length) return false;
+          return !!(
+            (checkoutForm.lastName.value || "").trim() &&
+            (checkoutForm.deliveryDate.value || "").trim() &&
+            (checkoutForm.deliveryTime.value || "").trim()
+          );
         }
 
-        function closeCheckout() {
-          checkoutModal.classList.remove("is-open");
-          checkoutModal.setAttribute("aria-hidden", "true");
-          if (!modal.classList.contains("is-open") && !cartDrawer.classList.contains("is-open")) {
-            document.body.style.overflow = "";
+        function focusFirstEmptyCheckoutField() {
+          if (!checkoutForm) return;
+          var names = ["lastName", "deliveryDate", "deliveryTime"];
+          for (var i = 0; i < names.length; i++) {
+            var el = checkoutForm[names[i]];
+            if (!el || (el.value || "").trim()) continue;
+            el.focus();
+            return;
           }
+        }
+
+        function showCheckoutIncompleteMessage() {
+          if (checkoutStatusEl) {
+            checkoutStatusEl.textContent =
+              "Please fill in the name on your reservation, delivery date, and time before paying.";
+            checkoutStatusEl.classList.add("is-error");
+          }
+          focusFirstEmptyCheckoutField();
+        }
+
+        function clearCheckoutStatus() {
+          if (!checkoutStatusEl) return;
+          checkoutStatusEl.textContent = "";
+          checkoutStatusEl.classList.remove("is-error");
         }
 
         function renderCart() {
@@ -3731,14 +3969,18 @@
             cartBadgeEl.classList.toggle("is-visible", count > 0);
           }
           if (cartSubtotalEl) cartSubtotalEl.textContent = formatEuro(subtotal);
-          if (cartCheckoutBtn) cartCheckoutBtn.disabled = count === 0;
+          if (cartPayBtn) cartPayBtn.disabled = count === 0;
+          if (cartBottom) cartBottom.hidden = count === 0;
+          if (cartItemsLabel) cartItemsLabel.hidden = count === 0;
 
           if (!cart.length) {
+            if (checkoutForm) checkoutForm.reset();
+            clearCheckoutStatus();
             cartItemsEl.innerHTML =
               '<div class="extra-cart-empty">' +
-              '<div class="extra-cart-empty__icon" aria-hidden="true">&#128722;</div>' +
+              '<span class="extra-cart-empty__icon" aria-hidden="true">&#128722;</span>' +
               "<p>Your cart is empty</p>" +
-              '<p style="font-size:13px;margin-top:8px;">Add flowers, champagne, or wine from our extras below.</p>' +
+              "<p>Add something from our extras below.</p>" +
               "</div>";
             return;
           }
@@ -3755,61 +3997,41 @@
               '">' +
               '<img class="extra-cart-item__img" src="' +
               item.image +
-              '" alt="" />' +
-              "<div>" +
+              '" alt="" loading="lazy" />' +
+              '<div class="extra-cart-item__body">' +
+              '<div class="extra-cart-item__top">' +
               '<h3 class="extra-cart-item__name">' +
               title +
               "</h3>" +
-              (item.variantLabel
-                ? '<p class="extra-cart-item__variant">' +
-                  item.variantLabel +
-                  "</p>"
-                : "") +
-              '<p class="extra-cart-item__price">' +
-              formatEuro(item.price) +
-              " each</p>" +
-              "</div>" +
-              '<div class="extra-cart-item__controls">' +
               '<span class="extra-cart-item__line-total">' +
               formatEuro(lineTotal) +
               "</span>" +
+              "</div>" +
+              '<p class="extra-cart-item__meta">' +
+              item.qty +
+              " \u00d7 " +
+              formatEuro(item.price) +
+              "</p>" +
+              '<div class="extra-cart-item__bottom">' +
               '<div class="extra-cart-item__qty">' +
               '<button type="button" data-cart-qty="-1" data-cart-id="' +
               item.id +
-              '" aria-label="Decrease">-</button>' +
+              '" aria-label="Decrease quantity">\u2212</button>' +
               "<span>" +
               item.qty +
               "</span>" +
               '<button type="button" data-cart-qty="1" data-cart-id="' +
               item.id +
-              '" aria-label="Increase">+</button>' +
+              '" aria-label="Increase quantity">+</button>' +
               "</div>" +
               '<button type="button" class="extra-cart-item__remove" data-cart-remove="' +
               item.id +
               '">Remove</button>' +
               "</div>" +
+              "</div>" +
               "</article>";
           }
           cartItemsEl.innerHTML = html;
-        }
-
-        function renderCheckoutSummary() {
-          if (!checkoutSummaryEl) return;
-          var html = "";
-          for (var i = 0; i < cart.length; i++) {
-            var item = cart[i];
-            var title = item.productBase || "Item";
-            if (item.variantLabel) title += " (" + item.variantLabel + ")";
-            html +=
-              '<div class="extra-checkout-summary__line"><span>' +
-              title +
-              " \u00d7 " +
-              item.qty +
-              '</span><span>' +
-              formatEuro(item.price * item.qty) +
-              "</span></div>";
-          }
-          checkoutSummaryEl.innerHTML = html;
         }
 
         function addCurrentSelectionToCart() {
@@ -3884,6 +4106,17 @@
         cart = loadCart();
         renderCart();
 
+        if (checkoutForm) {
+          checkoutForm.addEventListener("input", function () {
+            if (
+              checkoutStatusEl &&
+              checkoutStatusEl.classList.contains("is-error")
+            ) {
+              clearCheckoutStatus();
+            }
+          });
+        }
+
         document.addEventListener("click", function (event) {
           var orderBtn = event.target.closest(".js-extra-order");
           if (orderBtn) {
@@ -3896,10 +4129,6 @@
           }
           if (event.target.closest("[data-cart-close]")) {
             closeCart();
-            return;
-          }
-          if (event.target.closest("[data-checkout-close]")) {
-            closeCheckout();
             return;
           }
           if (event.target.closest("#extra-cart-toggle")) {
@@ -3921,10 +4150,6 @@
 
         if (addToCartBtn) {
           addToCartBtn.addEventListener("click", addCurrentSelectionToCart);
-        }
-
-        if (cartCheckoutBtn) {
-          cartCheckoutBtn.addEventListener("click", openCheckout);
         }
 
         minusBtn.addEventListener("click", function (event) {
@@ -3970,8 +4195,7 @@
 
         document.addEventListener("keydown", function (event) {
           if (event.key !== "Escape") return;
-          if (checkoutModal.classList.contains("is-open")) closeCheckout();
-          else if (cartDrawer.classList.contains("is-open")) closeCart();
+          if (cartDrawer.classList.contains("is-open")) closeCart();
           else if (modal.classList.contains("is-open")) closeModal();
         });
 
@@ -3984,27 +4208,17 @@
             return;
           }
 
-          var roomNumber = (checkoutForm.roomNumber.value || "").trim();
+          if (!isCheckoutFormComplete()) {
+            showCheckoutIncompleteMessage();
+            return;
+          }
+
+          clearCheckoutStatus();
           var lastName = (checkoutForm.lastName.value || "").trim();
           var deliveryDate = (checkoutForm.deliveryDate.value || "").trim();
           var deliveryTime = (checkoutForm.deliveryTime.value || "").trim();
           var message = (checkoutForm.message.value || "").trim();
           var grandTotal = getCartSubtotal();
-
-          if (!roomNumber || !lastName) {
-            if (checkoutStatusEl) {
-              checkoutStatusEl.textContent =
-                "Please enter room number and last name.";
-            }
-            return;
-          }
-          if (!deliveryDate || !deliveryTime) {
-            if (checkoutStatusEl) {
-              checkoutStatusEl.textContent =
-                "Please select delivery date and time.";
-            }
-            return;
-          }
 
           var orderLines = [];
           for (var k = 0; k < cart.length; k++) {
@@ -4030,8 +4244,7 @@
             "",
             "Guest details",
             "-------------",
-            "Room number: " + roomNumber,
-            "Last name: " + lastName,
+            "Name on reservation: " + lastName,
             "Delivery date: " + deliveryDate,
             "Delivery time: " + deliveryTime,
             "",
@@ -4052,9 +4265,7 @@
           var payload = {
             access_key: WEB3FORMS_ACCESS_KEY,
             subject:
-              "[Extra Cart] Room " +
-              roomNumber +
-              " \u2014 " +
+              "[Extra Cart] " +
               lastName +
               " \u2014 " +
               cart.length +
@@ -4062,7 +4273,6 @@
             from_name: "Derand Hotel \u2014 Extra Cart",
             to_email: toEmail,
             name: lastName,
-            room_number: roomNumber,
             delivery_date: deliveryDate,
             delivery_time: deliveryTime,
             order_items: orderLines.join("\n"),
@@ -4072,11 +4282,9 @@
             message: fullMessage,
           };
 
-          var submitBtn = checkoutForm.querySelector(
-            ".extra-order-form__submit",
-          );
-          if (submitBtn) submitBtn.disabled = true;
+          if (cartPayBtn) cartPayBtn.disabled = true;
           if (checkoutStatusEl) {
+            checkoutStatusEl.classList.remove("is-error");
             checkoutStatusEl.textContent = "Processing your order...";
           }
 
@@ -4105,7 +4313,7 @@
               renderCart();
               window.setTimeout(function () {
                 window.open(CARD_CHECKOUT_URL, "_blank", "noopener,noreferrer");
-                closeCheckout();
+                closeCart();
               }, 900);
             })
             .catch(function () {
@@ -4117,7 +4325,7 @@
               }
             })
             .finally(function () {
-              if (submitBtn) submitBtn.disabled = false;
+              if (cartPayBtn) cartPayBtn.disabled = cart.length === 0;
             });
         });
       })();
