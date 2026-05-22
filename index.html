@@ -1748,8 +1748,10 @@
     <script src="js/jquery-ui.min.js" defer></script>
     <script src="js/jquery.slicknav.js" defer></script>
     <script src="js/owl.carousel.min.js" defer></script>
+    <script src="js/site-onboarding-sequence.js?v=8" defer></script>
     <script src="js/main.js?v=20260515-1" defer></script>
-    <script src="js/site-whatsapp.js?v=4" defer></script>
+        <script src="js/site-whatsapp.js?v=8" defer></script>
+    <script src="js/tidio-left-position.js?v=2" defer></script>
     <script>
       (function initIndexHeroI18n() {
         var heroCopy = {
@@ -1832,27 +1834,6 @@
           }
         });
       })();
-    </script>
-    <script>
-      window.addEventListener("load", function () {
-        var tidioLoaded = false;
-        function loadTidioOnce() {
-          if (tidioLoaded) return;
-          tidioLoaded = true;
-          try {
-            var s = document.createElement("script");
-            s.src = "https://code.tidio.co/bnuc9odotvfbltnpijihm3enhpjj0ovy.js";
-            s.defer = true;
-            document.body.appendChild(s);
-          } catch (e) {}
-          window.removeEventListener("scroll", onFirstScroll, { passive: true });
-        }
-        function onFirstScroll() {
-          loadTidioOnce();
-        }
-        window.addEventListener("scroll", onFirstScroll, { passive: true, once: true });
-        window.setTimeout(loadTidioOnce, 7000);
-      });
     </script>
     <script>
       (function () {

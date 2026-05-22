@@ -1,7 +1,9 @@
 (function () {
   var WA_URL = "https://wa.me/38343727272";
-  var START_DELAY_MS = 1000;
+  var START_DELAY_MS = 400;
   var LETTER_DELAY_MS = 65;
+  var HOLD_BEFORE_CLOSE_MS = 1800;
+  var labelClosed = false;
 
   var LABELS = {
     en: "Chat us on WhatsApp",
@@ -11,16 +13,25 @@
 
   var typewriterTimer = null;
   var labelEl = null;
+  var labelTextEl = null;
   var anchorEl = null;
 
-  function logoSrc() {
+  function assetSrc(filename) {
     var link = document.querySelector('link[rel="stylesheet"][href*="css/style"]');
     if (link && link.href) {
       try {
-        return new URL("../img/logowhatsapp.png", link.href).href;
+        return new URL("../img/" + filename, link.href).href;
       } catch (e) {}
     }
-    return "img/logowhatsapp.png";
+    return "img/" + filename;
+  }
+
+  function logoSrc() {
+    return assetSrc("logowhatsapp.png");
+  }
+
+  function labelMarkSrc() {
+    return assetSrc("whts.png");
   }
 
   function getLang() {
@@ -68,33 +79,65 @@
   }
 
   function setLabelTextInstant(text) {
-    if (!labelEl) return;
+    if (!labelEl || !labelTextEl) return;
     clearTypewriterTimer();
-    labelEl.textContent = text;
+    labelTextEl.textContent = text;
     labelEl.classList.add("is-visible", "is-complete");
-    labelEl.classList.remove("is-typing");
+    labelEl.classList.remove("is-typing", "is-closing");
     updateAccessibleName();
   }
 
+  function showTidioAfterWhatsAppLabel() {
+    if (typeof window.derandOnWhatsAppLabelClosing === "function") {
+      window.derandOnWhatsAppLabelClosing();
+    } else if (typeof window.derandLoadTidioChat === "function") {
+      window.derandLoadTidioChat();
+    }
+  }
+
+  function closeLabelSlowly() {
+    if (!labelEl || labelClosed) return;
+    labelClosed = true;
+    clearTypewriterTimer();
+    labelEl.classList.remove("is-typing");
+    labelEl.classList.add("is-closing");
+    showTidioAfterWhatsAppLabel();
+
+    function finishClose() {
+      if (!labelEl) return;
+      labelEl.classList.remove("is-visible", "is-complete", "is-closing");
+      if (labelTextEl) labelTextEl.textContent = "";
+    }
+
+    labelEl.addEventListener("transitionend", finishClose, { once: true });
+    window.setTimeout(finishClose, 950);
+  }
+
+  function scheduleLabelClose() {
+    if (labelClosed || !window.__derandUseOnboardingSequence) return;
+    window.setTimeout(closeLabelSlowly, HOLD_BEFORE_CLOSE_MS);
+  }
+
   function startTypewriter() {
-    if (!labelEl) return;
+    if (!labelEl || !labelTextEl) return;
     clearTypewriterTimer();
     var text = getLabelText();
     var index = 0;
-    labelEl.textContent = "";
+    labelTextEl.textContent = "";
     labelEl.classList.add("is-visible", "is-typing");
     labelEl.classList.remove("is-complete");
 
     function typeNextLetter() {
-      if (!labelEl) return;
+      if (!labelEl || !labelTextEl) return;
       if (index > text.length) {
         labelEl.classList.remove("is-typing");
         labelEl.classList.add("is-complete");
         typewriterTimer = null;
         updateAccessibleName();
+        scheduleLabelClose();
         return;
       }
-      labelEl.textContent = text.slice(0, index);
+      labelTextEl.textContent = text.slice(0, index);
       index += 1;
       typewriterTimer = window.setTimeout(typeNextLetter, LETTER_DELAY_MS);
     }
@@ -103,7 +146,7 @@
   }
 
   function onLanguageChange() {
-    if (!labelEl) return;
+    if (!labelEl || labelClosed) return;
     if (labelEl.classList.contains("is-complete")) {
       setLabelTextInstant(getLabelText());
       return;
@@ -158,6 +201,21 @@
     labelEl.className = "site-whatsapp-fab__label";
     labelEl.setAttribute("data-i18n", "whatsapp-chat-label");
 
+    labelTextEl = document.createElement("span");
+    labelTextEl.className = "site-whatsapp-fab__label-text";
+
+    var labelMark = document.createElement("img");
+    labelMark.className = "site-whatsapp-fab__label-mark";
+    labelMark.src = labelMarkSrc();
+    labelMark.alt = "";
+    labelMark.width = 16;
+    labelMark.height = 16;
+    labelMark.decoding = "async";
+    labelMark.loading = "lazy";
+
+    labelEl.appendChild(labelTextEl);
+    labelEl.appendChild(labelMark);
+
     anchorEl.appendChild(icon);
     anchorEl.appendChild(labelEl);
     wrap.appendChild(anchorEl);
@@ -166,6 +224,14 @@
     updateAccessibleName();
     bindLanguageListeners();
     startTypewriter();
+
+    function syncFabAlignment() {
+      if (typeof window.derandAlignFloatingFabs === "function") {
+        window.derandAlignFloatingFabs();
+      }
+    }
+    requestAnimationFrame(syncFabAlignment);
+    window.setTimeout(syncFabAlignment, 400);
   }
 
   if (document.readyState === "loading") {
