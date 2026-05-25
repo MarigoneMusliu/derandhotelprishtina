@@ -1,517 +1,714 @@
-/* Sunny Hill Festival — ticket carousel */
 body.sunnyhill-page {
-  background: #0a0a0a;
+  background: #050505;
   padding-top: 78px;
 }
 
-body.sunnyhill-page .sunnyhill-tickets,
-body.sunnyhill-page .sunnyhill-tickets *,
-body.sunnyhill-page .sh-page-header,
-body.sunnyhill-page .sh-page-header * {
-  font-family: "Noto Serif", serif !important;
+body.sunnyhill-page .footer {
+  background: #050505;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-/* Page header — festival hero */
-.sh-page-header {
-  position: relative;
+.sunnyhill-festival,
+.sunnyhill-festival * {
+  font-family: "Inter", Arial, sans-serif !important;
+}
+
+.sunnyhill-festival {
+  padding: 0 0 88px;
+  color: #fff;
+  background:
+    radial-gradient(circle at top, rgba(86, 41, 158, 0.28), transparent 34%),
+    linear-gradient(180deg, #090909 0%, #050505 100%);
+}
+
+.sunnyhill-festival__shell {
   width: 100%;
-  min-height: clamp(240px, 38vw, 460px);
+  max-width: none;
+  margin: 0;
+}
+
+.sunnyhill-lineup__sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
   overflow: hidden;
-  background: #0a0a0a;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
-.sh-page-header__media {
-  position: absolute;
-  inset: 0;
+.sunnyhill-passes {
+  padding: 62px 0 26px;
 }
 
-.sh-page-header__media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 42%;
-  display: block;
-}
-
-.sh-page-header__overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(10, 10, 10, 0.35) 0%,
-    rgba(10, 10, 10, 0.2) 40%,
-    rgba(10, 10, 10, 0.75) 78%,
-    #0a0a0a 100%
-  );
-}
-
-.sh-page-header__content {
-  position: relative;
-  z-index: 1;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: clamp(48px, 10vw, 88px) 24px clamp(36px, 6vw, 56px);
+.sunnyhill-passes__intro {
+  margin-bottom: 34px;
   text-align: center;
 }
 
-.sh-page-header__eyebrow {
-  margin: 0 0 12px;
+.sunnyhill-passes__eyebrow {
+  margin: 0 0 10px;
+  color: #ff9a52;
   font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.22em;
+  font-weight: 700;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: #fff;
 }
 
-.sh-page-header__title {
-  margin: 0 0 14px;
-  font-size: clamp(2rem, 5vw, 3.25rem);
-  font-weight: 600;
-  line-height: 1.1;
-  letter-spacing: 0.02em;
-  color: #fff;
-  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.45);
-}
-
-.sh-page-header__subtitle {
+.sunnyhill-passes__title {
   margin: 0;
-  max-width: 520px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: clamp(0.95rem, 2vw, 1.125rem);
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.88);
-  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-family: "Noto Serif", serif !important;
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  font-style: italic;
+  font-weight: 700;
 }
 
-.sh-tickets {
-  background: #0a0a0a;
-  color: #e8e8e8;
-  padding: 40px 20px 64px;
-  min-height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.sh-tickets__wrap {
-  width: 100%;
-  max-width: 1280px;
+.sunnyhill-passes__grid {
+  width: min(100%, 1120px);
   margin: 0 auto;
-  position: relative;
-}
-
-.sh-tickets__carousel {
-  position: relative;
-  padding: 0;
-}
-
-.sh-tickets__content {
-  width: 100%;
-  min-width: 0;
-}
-
-.sh-tickets__viewport {
-  overflow: visible;
-  width: 100%;
-}
-
-.sh-tickets__track {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
-  transform: none !important;
-}
-
-.sh-tickets__track .sh-card {
-  min-width: 0;
-}
-
-.sh-slides {
-  position: relative;
-  min-height: 520px;
-}
-
-.sh-slide {
-  display: none;
-  animation: shFadeIn 0.35s ease;
-}
-
-.sh-slide.is-active {
-  display: block;
-}
-
-@keyframes shFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.sh-slide__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 18px;
   align-items: stretch;
 }
 
-.sh-slide__grid--two {
-  grid-template-columns: repeat(2, 1fr);
-  max-width: 780px;
-  margin: 0 auto;
-}
-
-.sh-card {
-  background: #141414;
-  border: 1px solid #b17256;
-  box-shadow: 0 0 0 1px #b17256;
-  border-radius: 6px;
-  padding: 28px 22px 24px;
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-}
-
-.sh-card--featured {
-  border-color: #b17256;
-  box-shadow: 0 0 0 1px #b17256;
-}
-
-.sh-card--muted {
-  opacity: 0.72;
-}
-
-.sh-card--muted .sh-card__label,
-.sh-card--muted .sh-card__price,
-.sh-card--muted .sh-card__price span {
-  color: #8a8a8a;
-}
-
-.sh-card__label {
-  margin: 0 0 12px;
-  font-size: 13px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #f0f0f0;
-  font-weight: 500;
-}
-
-.sh-card__price {
-  margin: 0;
-  font-size: 15px;
-  color: #fff;
-  line-height: 1;
-}
-
-.sh-card__price span {
-  font-size: clamp(42px, 5vw, 56px);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-.sh-card__access {
-  margin: 10px 0 0;
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #9a9a9a;
-}
-
-.sh-card__status {
-  margin: 22px 0 18px;
+.pass-card {
   position: relative;
-}
-
-.sh-card__bar {
-  height: 3px;
-  border-radius: 2px;
-  background: #2e2e2e;
-  position: relative;
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  min-height: 430px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%),
+    #181818;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   overflow: hidden;
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.3);
 }
 
-.sh-card__bar::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: var(--fill, 0%);
-  background: var(--bar-color, #b17256);
-  border-radius: 2px;
-}
-
-.sh-card__bar--sold::after {
-  width: 100%;
-  background: #e53935;
-}
-
-.sh-card__bar--ending::after {
-  width: 72%;
-  background: #b17256;
-}
-
-.sh-card__ending {
-  position: absolute;
-  right: 0;
-  top: -18px;
-  font-size: 10px;
-  letter-spacing: 0.06em;
-  color: #b17256;
-  text-transform: uppercase;
-}
-
-.sh-card__badge-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 4px;
-}
-
-.sh-card__badge {
-  flex-shrink: 0;
-  font-size: 10px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  padding: 4px 8px;
-  border: 1px solid #4a4a4a;
-  color: #b17256;
-  border-radius: 2px;
-}
-
-.sh-card__badge--sold {
-  border-color: #e53935;
-  color: #e53935;
-  margin-top: 8px;
-  display: inline-block;
-}
-
-.sh-card__desc {
-  margin: 0 0 auto;
-  padding-bottom: 24px;
-  font-size: 12px;
-  line-height: 1.55;
-  color: #8a8a8a;
-}
-
-.sh-card--featured .sh-card__desc {
-  color: #b0b0b0;
-}
-
-.sh-card__desc--bullet {
-  display: flex;
-  gap: 8px;
-  align-items: flex-start;
-}
-
-.sh-card__dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #4caf50;
-  flex-shrink: 0;
-  margin-top: 4px;
-}
-
-/* Ticket cards — mockup layout (all offers) */
-.sh-card--package .sh-card__tag {
-  margin: 0 0 8px;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #b17256;
-}
-
-.sh-card--package .sh-card__title {
-  margin: 0 0 18px;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  line-height: 1.4;
-  text-transform: uppercase;
-  color: #f5f2ef;
-}
-
-.sh-card--package .sh-card__head {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 6px;
-}
-
-.sh-card--package .sh-card__head-text {
-  flex: 1;
-  min-width: 0;
-}
-
-.sh-card--package .sh-card__head .sh-card__price {
-  margin: 0;
-}
-
-.sh-card--package .sh-card__head .sh-card__access {
-  margin-top: 10px;
-}
-
-.sh-card--hotel .sh-card__logo {
-  flex-shrink: 0;
+.pass-card__side-label {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 64px;
-  padding-top: 4px;
+  padding: 20px 0;
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
 }
 
-.sh-card--hotel .sh-card__logo img {
-  display: block;
-  width: auto;
-  max-width: 64px;
-  max-height: 64px;
-  height: auto;
-  object-fit: contain;
-}
-
-.sh-card--package .sh-card__status {
-  margin: 16px 0 0;
-}
-
-.sh-card--package .sh-card__divider {
-  height: 1px;
-  margin: 20px 0 18px;
-  background: rgba(255, 255, 255, 0.12);
-  border: none;
-}
-
-.sh-card--package .sh-card__copy {
-  margin-top: 4px;
-  flex: 1;
+.pass-card__body {
+  position: relative;
+  padding: 30px 20px 20px;
   display: flex;
   flex-direction: column;
 }
 
-.sh-card--package .sh-card__detail-line {
-  margin: 0 0 16px;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  line-height: 1.45;
+.pass-card__badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 18px;
+  padding: 0 8px;
+  background: #d7a5ff;
+  color: #362244;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #f0ece8;
 }
 
-.sh-card--package .sh-card__desc--bullet {
-  gap: 10px;
+.pass-card__title {
   margin: 0;
-  padding-bottom: 28px;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.65;
-  color: #b5b0aa;
+  font-family: "Noto Serif", serif !important;
+  font-size: clamp(2rem, 3.2vw, 2.55rem);
+  font-weight: 700;
+  line-height: 1;
 }
 
-.sh-card--package .sh-card__desc--bullet > span:last-child {
-  flex: 1;
-  min-width: 0;
+.pass-card__subtitle {
+  margin: 8px 0 0;
+  color: #d8a772;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  max-width: 150px;
+  line-height: 1.45;
 }
 
-.sh-card--package .sh-card__dot {
-  width: 7px;
-  height: 7px;
-  margin-top: 7px;
-  background: #3ecf6e;
-  box-shadow: 0 0 0 2px rgba(62, 207, 110, 0.2);
+.pass-card__features {
+  margin: 34px 0 0;
+  padding: 0;
+  list-style: none;
 }
 
-.sh-card__btn {
-  display: block;
-  width: 100%;
-  padding: 16px 12px;
-  text-align: center;
-  font-size: 12px;
+.pass-card__features li {
+  position: relative;
+  margin-bottom: 18px;
+  padding-left: 14px;
+  color: #f3e0cb;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.pass-card__features li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #b5814c;
+}
+
+.pass-card__price {
+  margin: auto 0 18px;
+  color: #f4f0ea;
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.pass-card__price span {
+  margin-left: 6px;
+  color: #ff8d42;
+  font-size: 0.34em;
+  font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  border-radius: 4px;
-  border: 1px solid #3a3a3a;
+}
+
+.pass-card__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  border: 1px solid rgba(255, 140, 66, 0.36);
+  color: #ff8d42;
   background: transparent;
-  color: #6a6a6a;
   text-decoration: none;
-  cursor: pointer;
-  font-family: "Noto Serif", serif !important;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
   transition:
-    background 0.2s ease,
-    color 0.2s ease;
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
 }
 
-.sh-card__btn--primary {
-  background: #b17256;
-  border-color: #b17256;
-  color: #0a0a0a;
+.pass-card__button:hover,
+.pass-card__button:focus-visible {
+  background: rgba(255, 141, 66, 0.12);
+  color: #ffb17e;
+  border-color: rgba(255, 141, 66, 0.5);
+}
+
+.pass-card--standard .pass-card__title {
+  color: #f2a14f;
+}
+
+.pass-card--featured {
+  background:
+    linear-gradient(180deg, rgba(214, 169, 255, 0.18) 0%, rgba(214, 169, 255, 0.06) 100%),
+    #26212a;
+  border-color: rgba(214, 169, 255, 0.32);
+  transform: translateY(-8px);
+}
+
+.pass-card--featured .pass-card__side-label {
+  background: rgba(214, 169, 255, 0.09);
+  color: rgba(214, 169, 255, 0.56);
+}
+
+.pass-card--featured .pass-card__title {
+  color: #f4e9ff;
+}
+
+.pass-card--featured .pass-card__subtitle,
+.pass-card--featured .pass-card__price span {
+  color: #d7a5ff;
+}
+
+.pass-card__button--featured {
+  background: #d7a5ff;
+  border-color: #d7a5ff;
+  color: #24182d;
+}
+
+.pass-card__button--featured:hover,
+.pass-card__button--featured:focus-visible {
+  background: #dfb9ff;
+  border-color: #dfb9ff;
+  color: #24182d;
+}
+
+.pass-card--ultra .pass-card__title {
+  color: #ff6f2e;
+}
+
+.sunnyhill-hero {
+  position: relative;
+  min-height: clamp(420px, 54vw, 620px);
+  border-radius: 28px;
+  overflow: hidden;
+  isolation: isolate;
+  background: #0e0e0e;
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.45),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.sunnyhill-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(180deg, rgba(6, 6, 6, 0.2) 0%, rgba(6, 6, 6, 0.5) 56%, rgba(6, 6, 6, 0.96) 100%),
+    linear-gradient(90deg, rgba(7, 7, 7, 0.9) 0%, rgba(7, 7, 7, 0.2) 48%, rgba(7, 7, 7, 0.84) 100%),
+    url("../img/sunnyhillheader.jpg");
+  background-position: center 18%;
+  background-size: cover;
+  transform: scale(1.04);
+  filter: brightness(0.64) contrast(1.08) saturate(0.76);
+}
+
+.sunnyhill-hero::after {
+  content: "";
+  position: absolute;
+  left: -8%;
+  right: -8%;
+  bottom: -12%;
+  height: 48%;
+  background:
+    radial-gradient(circle at 20% 28%, rgba(255, 255, 255, 0.18), transparent 34%),
+    radial-gradient(circle at 50% 38%, rgba(255, 255, 255, 0.15), transparent 28%),
+    radial-gradient(circle at 80% 18%, rgba(255, 255, 255, 0.14), transparent 24%);
+  filter: blur(12px);
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.sunnyhill-hero__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: inherit;
+  padding: clamp(64px, 10vw, 92px) 20px 112px;
+  text-align: center;
+}
+
+.sunnyhill-hero__eyebrow {
+  margin: 0 0 12px;
+  font-size: 11px;
   font-weight: 700;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: #b27256;
 }
 
-.sh-card__btn--primary:hover {
-  background: #c88a6e;
-  border-color: #c88a6e;
-  color: #0a0a0a;
+.sunnyhill-hero__title {
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 0.9;
 }
 
-.sh-card__btn--disabled,
-.sh-card__btn:disabled {
-  cursor: not-allowed;
-  color: #4a4a4a;
-  border-color: #2a2a2a;
+.sunnyhill-hero__title span {
+  display: block;
+  font-family: "Archivo Black", Impact, sans-serif !important;
+  font-size: clamp(3.2rem, 8vw, 6.6rem);
+  letter-spacing: -0.05em;
+  color: #fff;
+  text-shadow: 0 10px 36px rgba(0, 0, 0, 0.38);
 }
 
-.sh-card__btn--soon {
-  color: #b17256;
-  border-color: #4a4a4a;
+.sunnyhill-hero__title span:last-child {
+  color: #b27256;
 }
 
-body.sunnyhill-page .footer {
-  background: #0a0a0a;
-  border-top: 1px solid #1f1f1f;
+.sunnyhill-hero__cta {
+  margin-top: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 192px;
+  padding: 14px 24px;
+  border-radius: 12px;
+  background: #b27256;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 11px;
+  font-weight: 800;
+  box-shadow: 0 10px 30px rgba(178, 114, 86, 0.28);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.sunnyhill-hero__cta:hover,
+.sunnyhill-hero__cta:focus-visible {
+  transform: translateY(-2px);
+  background: #c18165;
+  color: #fff;
+  box-shadow: 0 16px 36px rgba(178, 114, 86, 0.34);
+}
+
+.sunnyhill-lineup {
+  margin-top: 22px;
+}
+
+.sunnyhill-lineup__tabs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: #161616;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.sunnyhill-lineup__tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.sunnyhill-lineup__tab {
+  flex: 0 0 auto;
+  min-width: 112px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.sunnyhill-lineup__tab:hover,
+.sunnyhill-lineup__tab:focus-visible {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.sunnyhill-lineup__tab.is-active {
+  background: #d6a9ff;
+  color: #160f1d;
+  box-shadow: 0 6px 18px rgba(214, 169, 255, 0.24);
+}
+
+.sunnyhill-lineup__grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr 1fr;
+  grid-auto-rows: 182px;
+  gap: 16px;
+}
+
+.sunnyhill-lineup__grid[data-view="filtered"] {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-auto-rows: minmax(280px, auto);
+}
+
+.lineup-card {
+  --card-glow: rgba(255, 154, 95, 0.28);
+  position: relative;
+  display: flex;
+  min-height: 182px;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #111;
+  isolation: isolate;
+  box-shadow:
+    0 24px 50px rgba(0, 0, 0, 0.34),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.lineup-card[hidden] {
+  display: none !important;
+}
+
+.lineup-card::before {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: -16%;
+  height: 52%;
+  background: radial-gradient(circle, var(--card-glow) 0%, rgba(0, 0, 0, 0) 72%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.lineup-card[data-tone="violet"] {
+  --card-glow: rgba(232, 82, 255, 0.35);
+}
+
+.lineup-card[data-tone="cyan"] {
+  --card-glow: rgba(39, 240, 255, 0.34);
+}
+
+.lineup-card[data-tone="amber"] {
+  --card-glow: rgba(255, 173, 64, 0.28);
+}
+
+.lineup-card--feature {
+  grid-row: span 2;
+  min-height: 380px;
+}
+
+.lineup-card--wide {
+  grid-column: span 2;
+}
+
+.sunnyhill-lineup__grid[data-view="filtered"] .lineup-card,
+.sunnyhill-lineup__grid[data-view="filtered"] .lineup-card--feature,
+.sunnyhill-lineup__grid[data-view="filtered"] .lineup-card--wide {
+  grid-column: auto;
+  grid-row: auto;
+  min-height: 280px;
+}
+
+.lineup-card__image {
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.02);
+  transition: transform 0.4s ease;
+}
+
+.lineup-card:hover .lineup-card__image {
+  transform: scale(1.06);
+}
+
+.lineup-card__image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(5, 5, 5, 0.08) 0%, rgba(5, 5, 5, 0.92) 100%);
+}
+
+.lineup-card__image--dua {
+  background-image:
+    linear-gradient(180deg, rgba(16, 10, 8, 0.1), rgba(16, 10, 8, 0.78)),
+    radial-gradient(circle at 48% 22%, rgba(255, 171, 82, 0.75), transparent 18%),
+    linear-gradient(135deg, rgba(255, 122, 53, 0.48) 0%, rgba(255, 122, 53, 0.08) 38%, rgba(0, 0, 0, 0.2) 100%),
+    url("../img/extraheader.png");
+  background-position: center 18%;
+  filter: saturate(0.94) brightness(0.92) contrast(1.08);
+}
+
+.lineup-card__image--balvin {
+  background-image:
+    linear-gradient(180deg, rgba(14, 3, 18, 0.18), rgba(14, 3, 18, 0.76)),
+    radial-gradient(circle at 50% 0%, rgba(255, 74, 232, 0.42), transparent 38%),
+    url("../img/sunnyhillheader.jpg");
+  background-position: center 44%;
+  filter: saturate(1.12) brightness(0.72) contrast(1.06);
+}
+
+.lineup-card__image--balvin::before,
+.lineup-card__image--diplo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.lineup-card__image--balvin::before {
+  background:
+    linear-gradient(90deg, transparent 18%, rgba(255, 120, 244, 0.92) 18%, rgba(255, 120, 244, 0.92) 20%, transparent 20%, transparent 44%, rgba(255, 120, 244, 0.92) 44%, rgba(255, 120, 244, 0.92) 46%, transparent 46%, transparent 70%, rgba(255, 120, 244, 0.92) 70%, rgba(255, 120, 244, 0.92) 72%, transparent 72%);
+  opacity: 0.66;
+  mix-blend-mode: screen;
+}
+
+.lineup-card__image--burna {
+  background-image:
+    linear-gradient(180deg, rgba(28, 12, 0, 0.08), rgba(9, 7, 7, 0.86)),
+    radial-gradient(circle at 50% 4%, rgba(255, 160, 64, 0.42), transparent 28%),
+    url("../img/legs.JPG");
+  background-position: center 64%;
+  filter: saturate(0.72) brightness(0.5) contrast(1.08);
+}
+
+.lineup-card__image--diplo {
+  background-image:
+    linear-gradient(180deg, rgba(1, 14, 20, 0.14), rgba(1, 14, 20, 0.84)),
+    radial-gradient(circle at 50% 8%, rgba(79, 245, 255, 0.42), transparent 34%),
+    url("../img/sunnyhillheader.jpg");
+  background-position: center 58%;
+  filter: hue-rotate(125deg) saturate(1.45) brightness(0.58);
+}
+
+.lineup-card__image--diplo::before {
+  background:
+    linear-gradient(90deg, transparent 14%, rgba(75, 255, 255, 0.95) 14%, rgba(75, 255, 255, 0.95) 16%, transparent 16%, transparent 34%, rgba(75, 255, 255, 0.95) 34%, rgba(75, 255, 255, 0.95) 36%, transparent 36%, transparent 64%, rgba(75, 255, 255, 0.95) 64%, rgba(75, 255, 255, 0.95) 66%, transparent 66%, transparent 84%, rgba(75, 255, 255, 0.95) 84%, rgba(75, 255, 255, 0.95) 86%, transparent 86%);
+  opacity: 0.58;
+  mix-blend-mode: screen;
+}
+
+.lineup-card__content {
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: 2;
+  padding: 18px 20px 20px;
+}
+
+.lineup-card__meta,
+.lineup-card__stage {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 10px;
+  font-weight: 700;
+  color: rgba(255, 241, 228, 0.9);
+}
+
+.lineup-card__title {
+  margin: 8px 0 6px;
+  font-family: "Archivo Black", Impact, sans-serif !important;
+  font-size: clamp(1.45rem, 3vw, 2.4rem);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.42);
+}
+
+.lineup-card--feature .lineup-card__content {
+  padding: 22px 22px 24px;
+}
+
+.lineup-card--feature .lineup-card__title {
+  font-size: clamp(2.2rem, 4vw, 3.75rem);
+}
+
+.lineup-card--wide .lineup-card__title {
+  font-size: clamp(1.8rem, 3.2vw, 3rem);
 }
 
 @media (max-width: 991.98px) {
-  .sh-tickets__track {
+  .sunnyhill-passes__grid {
     grid-template-columns: 1fr;
+    gap: 16px;
+    width: min(100%, 560px);
   }
 
-  .sh-slide__grid {
-    grid-template-columns: 1fr;
-    max-width: 400px;
-    margin: 0 auto;
+  .pass-card,
+  .pass-card--featured {
+    transform: none;
   }
 
-  .sh-slides {
-    min-height: auto;
+  .sunnyhill-hero__content {
+    padding-bottom: 92px;
+  }
+
+  .sunnyhill-lineup__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 190px;
+  }
+
+  .lineup-card--wide {
+    grid-column: span 1;
   }
 }
 
-@media (max-width: 575.98px) {
-  .sh-page-header {
-    min-height: clamp(200px, 52vw, 320px);
+@media (max-width: 680px) {
+  .sunnyhill-passes {
+    padding-top: 48px;
   }
 
-  .sh-page-header__content {
-    padding: 40px 16px 28px;
+  .sunnyhill-passes__grid {
+    width: 100%;
   }
 
-  .sh-page-header__eyebrow {
+  .pass-card {
+    grid-template-columns: 34px 1fr;
+    min-height: 390px;
+  }
+
+  .pass-card__body {
+    padding: 24px 16px 16px;
+  }
+
+  .pass-card__features li {
+    font-size: 13px;
+  }
+
+  .sunnyhill-festival {
+    padding: 0 0 56px;
+  }
+
+  .sunnyhill-hero {
+    min-height: 470px;
+    border-radius: 24px;
+  }
+
+  .sunnyhill-hero__content {
+    padding: 54px 18px 82px;
+  }
+
+  .sunnyhill-hero__eyebrow {
     font-size: 10px;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.22em;
   }
 
-  .sh-tickets {
-    padding: 20px 8px 48px;
+  .sunnyhill-hero__cta {
+    width: 100%;
+    max-width: 240px;
   }
 
-  .sh-tickets__track {
-    gap: 16px;
+  .sunnyhill-lineup__tabs {
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .sunnyhill-lineup__tab {
+    min-width: 122px;
+    padding: 9px 14px;
+  }
+
+  .sunnyhill-lineup__grid,
+  .sunnyhill-lineup__grid[data-view="filtered"] {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .lineup-card,
+  .lineup-card--feature,
+  .lineup-card--wide,
+  .sunnyhill-lineup__grid[data-view="filtered"] .lineup-card {
+    grid-column: auto;
+    grid-row: auto;
+    min-height: 260px;
+  }
+
+  .lineup-card--feature {
+    min-height: 360px;
   }
 }
