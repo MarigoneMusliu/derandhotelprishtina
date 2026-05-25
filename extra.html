@@ -855,7 +855,8 @@
         font-size: 14px;
         color: #6e6760;
         line-height: 1.6;
-        text-align: center;
+        text-align: left;
+        font-family: "Noto Serif", serif;
         width: 100%;
         max-height: 4.8em;
         overflow-y: auto;
@@ -3916,7 +3917,52 @@
             while (parsedSpiritImages.length < spiritsProducts.length) {
               parsedSpiritImages.push("img/champ.jpg");
             }
-            spiritsDescriptions = spiritsProducts.map(function () {
+            spiritsDescriptions = spiritsProducts.map(function (item) {
+              if (item === "Moët & Chandon — Brut") {
+                return "An iconic house champagne with bright fruitiness, a seductive palate, and an elegant, balanced finish.";
+              }
+              if (item === "Moët & Chandon — Ice") {
+                return "The first champagne made to be served over ice, featuring powerful tropical fruit aromas and a refreshing finish.";
+              }
+              if (item === "Moët & Chandon — Rosé") {
+                return "A radiant rosé champagne with lively red berry aromas, a vibrant palate, and a romantic character.";
+              }
+              if (item === "Moët & Chandon — Ice Rosé") {
+                return "A fresh rosé champagne designed for ice, blending sweet red berries, cherries, and a touch of cranberry.";
+              }
+              if (item === "Dom Pérignon — Brut") {
+                return "A prestigious vintage champagne offering exceptional depth, with notes of dried fruits, toasted brioche, and a silky finish.";
+              }
+              if (item === "Dom Pérignon — Brut Luminous") {
+                return "The legendary vintage Dom Pérignon in a striking, light-up bottle, combining luxury taste with a vibrant visual presence.";
+              }
+              if (item === "Don Julio — Añejo") {
+                return "Aged 18 months in oak barrels, featuring a rich flavor profile with citrus notes and a hint of caramel.";
+              }
+              if (item === "Don Julio — Reposado") {
+                return "Aged 8 months, offering an exceptionally smooth finish with inviting aromas of lemon, honey, and light spice.";
+              }
+              if (item === "Don Julio — Blanco") {
+                return "A crisp, agave-forward tequila with fresh citrus notes and a clean finish, ideal for premium cocktails.";
+              }
+              if (item === "Don Julio — 1942") {
+                return "An iconic, ultra-premium tequila that is exceptionally smooth with rich notes of oak, vanilla, and roasted agave.";
+              }
+              if (item === "Cîroc Vodka") {
+                return "A modern, ultra-premium vodka distilled five times from fine French grapes for a smooth, subtly sweet taste.";
+              }
+              if (item === "Grey Goose Vodka") {
+                return "A world-class French vodka made from winter wheat and spring water, renowned for its crisp, clean, and smooth texture.";
+              }
+              if (item === "Belvedere Vodka") {
+                return "A luxury Polish rye vodka offering a structured, velvety texture with subtle hints of almond and vanilla.";
+              }
+              if (item === "Tanqueray — Ten") {
+                return "A super-premium gin distilled with whole citrus fruits, bursting with bright notes of grapefruit, lime, and orange.";
+              }
+              if (item === "Hendrick's Gin") {
+                return "A uniquely refreshing gin infused with cucumber and rose petals, offering a distinct floral and smooth flavor profile.";
+              }
               return "Served chilled in your room with premium glassware.";
             });
             currentImages = parsedSpiritImages.slice(

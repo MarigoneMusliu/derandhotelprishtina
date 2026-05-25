@@ -262,18 +262,7 @@
 
     <main class="sh-tickets sunnyhill-tickets" id="sh-tickets">
       <div class="sh-tickets__wrap">
-        <div class="sh-tickets__carousel" aria-label="Ticket offers navigation">
-          <button
-            type="button"
-            class="sh-nav-btn sh-nav-btn--prev"
-            id="sh-prev"
-            aria-label="Previous offers"
-            disabled
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M15 6l-6 6 6 6" />
-            </svg>
-          </button>
+        <div class="sh-tickets__carousel" aria-label="Ticket offers">
           <div class="sh-tickets__content">
             <div class="sh-tickets__viewport">
               <div class="sh-tickets__track" id="sh-track">
@@ -282,33 +271,7 @@
                   <p class="sh-card__title">REGULAR PACKAGE</p>
                   <div class="sh-card__head">
                     <div class="sh-card__head-text">
-                      <p class="sh-card__price"><span>195</span> EUR</p>
-                      <p class="sh-card__access">3 DAY ACCESS</p>
-                    </div>
-                    <div class="sh-card__logo">
-                      <img src="img/logosunny.png" alt="Hotel Derand" width="64" height="64" loading="lazy" decoding="async" />
-                    </div>
-                  </div>
-                  <div class="sh-card__status">
-                    <span class="sh-card__ending">ENDING SOON</span>
-                    <div class="sh-card__bar sh-card__bar--ending"></div>
-                  </div>
-                  <div class="sh-card__divider" aria-hidden="true"></div>
-                  <div class="sh-card__copy">
-                    <p class="sh-card__detail-line">3 DAY FESTIVAL ACCESS + 3 NIGHTS AT HOTEL DERAND (Standard Room)</p>
-                    <p class="sh-card__desc sh-card__desc--bullet">
-                      <span class="sh-card__dot" aria-hidden="true"></span>
-                      <span>Seize the opportunity to secure your total festival experience. Access to all general stages and comfortable hotel stay at a discounted package price.</span>
-                    </p>
-                  </div>
-                  <a href="https://www.sunnyhillfestival.com/" class="sh-card__btn sh-card__btn--primary" target="_blank" rel="noopener noreferrer">BUY PACKAGE</a>
-                </article>
-                <article class="sh-card sh-card--featured sh-card--package sh-card--hotel">
-                
-                  <p class="sh-card__title">VIP TICKET </p>
-                  <div class="sh-card__head">
-                    <div class="sh-card__head-text">
-                      <p class="sh-card__price"><span>500</span> EUR</p>
+                      <p class="sh-card__price"><span>585</span> EUR</p>
                       <p class="sh-card__access">3 DAY ACCESS</p>
                     </div>
                     <div class="sh-card__logo">
@@ -334,7 +297,7 @@
                   <p class="sh-card__title">VIP TICKET  </p>
                   <div class="sh-card__head">
                     <div class="sh-card__head-text">
-                      <p class="sh-card__price"><span>400</span> EUR</p>
+                      <p class="sh-card__price"><span>790</span> EUR</p>
                       <p class="sh-card__access">3 DAY ACCESS</p>
                     </div>
                     <div class="sh-card__logo">
@@ -360,7 +323,7 @@
                   <p class="sh-card__title">VIP TICKET </p>
                   <div class="sh-card__head">
                     <div class="sh-card__head-text">
-                      <p class="sh-card__price"><span>800</span> EUR</p>
+                      <p class="sh-card__price"><span>1190</span> EUR</p>
                       <p class="sh-card__access">3 DAY ACCESS</p>
                     </div>
                     <div class="sh-card__logo">
@@ -382,20 +345,8 @@
                   <a href="https://www.sunnyhillfestival.com/" class="sh-card__btn sh-card__btn--primary" target="_blank" rel="noopener noreferrer">BUY PACKAGE</a>
                 </article>
               </div>
-              </div>
             </div>
           </div>
-
-          <button
-            type="button"
-            class="sh-nav-btn sh-nav-btn--next sh-nav-btn--active"
-            id="sh-next"
-            aria-label="Next offers"
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M9 6l6 6-6 6" />
-            </svg>
-          </button>
         </div>
       </div>
     </main>
@@ -634,61 +585,5 @@
         <script src="js/site-whatsapp.js?v=8" defer></script>
     <script src="js/tidio-left-position.js?v=2" defer></script>
 
-    <script>
-      (function () {
-        var track = document.getElementById("sh-track");
-        var prevBtn = document.getElementById("sh-prev");
-        var nextBtn = document.getElementById("sh-next");
-        if (!track || !prevBtn || !nextBtn) return;
-
-        var cards = track.querySelectorAll(".sh-card");
-        var index = 0;
-
-        function visibleCount() {
-          if (window.innerWidth <= 575) return 1;
-          if (window.innerWidth <= 991) return 1;
-          return 3;
-        }
-
-        function maxIndex() {
-          return Math.max(0, cards.length - visibleCount());
-        }
-
-        function stepSize() {
-          if (!cards[0]) return 0;
-          var gap = parseFloat(getComputedStyle(track).gap) || 20;
-          return cards[0].offsetWidth + gap;
-        }
-
-        function update() {
-          if (index > maxIndex()) index = maxIndex();
-          track.style.transform = "translateX(" + -index * stepSize() + "px)";
-          prevBtn.disabled = index === 0;
-          nextBtn.disabled = index >= maxIndex();
-          prevBtn.classList.toggle("sh-nav-btn--active", index > 0);
-          nextBtn.classList.toggle("sh-nav-btn--active", index < maxIndex());
-        }
-
-        prevBtn.addEventListener("click", function () {
-          if (index > 0) {
-            index--;
-            update();
-          }
-        });
-
-        nextBtn.addEventListener("click", function () {
-          if (index < maxIndex()) {
-            index++;
-            update();
-          }
-        });
-
-        window.addEventListener("resize", function () {
-          window.requestAnimationFrame(update);
-        });
-
-        update();
-      })();
-    </script>
   </body>
 </html>
