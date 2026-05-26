@@ -1,27 +1,26 @@
 (function () {
   var HOTELRUNNER_BASE = "https://derand-hotel.hotelrunner.com/bv3/search";
-  var WEB3FORMS_URL = "https://api.web3forms.com/submit";
-  var WEB3FORMS_ACCESS_KEY = "761d8dce-87b2-4534-bc76-77ec2305d4ec";
-  var NOTIFY_EMAIL = "info@derandhotel.com";
+  var BOOKING_DETAILS_PAGE = "booking-details.html";
 
   var form = document.getElementById("book-form");
   if (!form) return;
 
-  var roomEl = document.getElementById("book-room");
   var checkInEl = document.getElementById("book-check-in");
   var checkOutEl = document.getElementById("book-check-out");
   var adultsEl = document.getElementById("book-adults");
   var childrenEl = document.getElementById("book-children");
-  var firstNameEl = document.getElementById("book-first-name");
-  var lastNameEl = document.getElementById("book-last-name");
-  var emailEl = document.getElementById("book-email");
-  var phoneEl = document.getElementById("book-phone");
-  var notesEl = document.getElementById("book-notes");
-  var submitBtn = document.getElementById("book-submit");
   var statusEl = document.getElementById("book-status");
-  var summaryRoom = document.getElementById("book-summary-room");
-  var summaryStay = document.getElementById("book-summary-stay");
-  var summaryGuests = document.getElementById("book-summary-guests");
+  var summaryEl = document.getElementById("book-summary");
+  var cards = Array.prototype.slice.call(
+    document.querySelectorAll(".booking-room-card"),
+  );
+  var reserveLinks = Array.prototype.slice.call(
+    document.querySelectorAll(".booking-room-card__reserve"),
+  );
+
+  if (!cards.length) return;
+
+  var selectedRoom = cards[0].dataset.room || "junior-suite";
 
   function todayIso() {
     var d = new Date();
@@ -30,247 +29,227 @@
     return d.getFullYear() + "-" + m + "-" + day;
   }
 
-  function parseIso(s) {
-    if (!s) return null;
-    var p = s.split("-");
-    if (p.length !== 3) return null;
-    return new Date(+p[0], +p[1] - 1, +p[2]);
+  function parseIso(value) {
+    if (!value) return null;
+    var parts = value.split("-");
+    if (parts.length !== 3) return null;
+    return new Date(+parts[0], +parts[1] - 1, +parts[2]);
   }
 
-  function dayDiff(start, end) {
+  function formatDate(iso) {
+    var date = parseIso(iso);
+    if (!date) return "—";
+    return date.toLocaleDateString("en-GB", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+    });
+  }
+
+  function getNightCount() {
+    var start = parseIso(checkInEl.value);
+    var end = parseIso(checkOutEl.value);
+    if (!start || !end) return 0;
     return Math.round((end - start) / 86400000);
-  }
-
-  function setMinDates() {
-    var t = todayIso();
-    checkInEl.min = t;
-    if (!checkInEl.value || checkInEl.value < t) {
-      checkInEl.value = t;
-    }
-    updateCheckOutMin();
-  }
-
-  function updateCheckOutMin() {
-    var inDate = parseIso(checkInEl.value);
-    if (!inDate) return;
-    var next = new Date(inDate);
-    next.setDate(next.getDate() + 1);
-    var m = String(next.getMonth() + 1).padStart(2, "0");
-    var d = String(next.getDate()).padStart(2, "0");
-    var minOut = next.getFullYear() + "-" + m + "-" + d;
-    checkOutEl.min = minOut;
-    if (!checkOutEl.value || checkOutEl.value <= checkInEl.value) {
-      checkOutEl.value = minOut;
-    }
-  }
-
-  function getRoomLabel() {
-    var opt = roomEl.options[roomEl.selectedIndex];
-    return opt ? opt.textContent.trim() : "—";
-  }
-
-  function getNights() {
-    var a = parseIso(checkInEl.value);
-    var b = parseIso(checkOutEl.value);
-    if (!a || !b) return 0;
-    var n = dayDiff(a, b);
-    return n > 0 ? n : 0;
   }
 
   function getGuestSummary() {
     var adults = parseInt(adultsEl.value, 10) || 0;
     var children = parseInt(childrenEl.value, 10) || 0;
-    var total = adults + children;
-    if (total <= 0) return "—";
     var parts = [];
+
     if (adults > 0) {
       parts.push(adults + (adults === 1 ? " adult" : " adults"));
     }
     if (children > 0) {
       parts.push(children + (children === 1 ? " child" : " children"));
     }
-    return parts.join(", ");
+
+    return parts.length ? parts.join(", ") : "No guests selected";
+  }
+
+  function setMinDates() {
+    var today = todayIso();
+    checkInEl.min = today;
+    if (!checkInEl.value || checkInEl.value < today) {
+      checkInEl.value = today;
+    }
+    updateCheckOutMin();
+  }
+
+  function updateCheckOutMin() {
+    var start = parseIso(checkInEl.value);
+    if (!start) return;
+
+    var next = new Date(start);
+    next.setDate(next.getDate() + 1);
+
+    var month = String(next.getMonth() + 1).padStart(2, "0");
+    var day = String(next.getDate()).padStart(2, "0");
+    var minOut = next.getFullYear() + "-" + month + "-" + day;
+
+    checkOutEl.min = minOut;
+    if (!checkOutEl.value || checkOutEl.value <= checkInEl.value) {
+      checkOutEl.value = minOut;
+    }
+  }
+
+  function getSelectedRoomLabel() {
+    var selectedCard = cards.find(function (card) {
+      return card.dataset.room === selectedRoom;
+    });
+    return selectedCard ? selectedCard.dataset.roomLabel || "Selected room" : "Selected room";
+  }
+
+  function buildSearchParams(room) {
+    var adults = parseInt(adultsEl.value, 10) || 2;
+    var children = parseInt(childrenEl.value, 10) || 0;
+    var params = new URLSearchParams();
+
+    params.set("checkin", checkInEl.value);
+    params.set("checkout", checkOutEl.value);
+    params.set("adults", String(adults));
+    params.set("children", String(children));
+    params.set("room", room || selectedRoom);
+
+    return params;
+  }
+
+  function buildHotelRunnerUrl(room) {
+    var params = buildSearchParams(room);
+    var adults = parseInt(params.get("adults"), 10) || 2;
+    var children = parseInt(params.get("children"), 10) || 0;
+    var searchParams = new URLSearchParams();
+
+    searchParams.set("check_in", params.get("checkin") || "");
+    searchParams.set("check_out", params.get("checkout") || "");
+    searchParams.set("adults", String(adults));
+    searchParams.set("children", String(children));
+    searchParams.set("guests", String(adults + children));
+    searchParams.set("room", params.get("room") || selectedRoom);
+
+    return HOTELRUNNER_BASE + "?" + searchParams.toString();
+  }
+
+  function buildDetailsUrl(room) {
+    return BOOKING_DETAILS_PAGE + "?" + buildSearchParams(room).toString();
+  }
+
+  function syncReserveLinks() {
+    reserveLinks.forEach(function (link) {
+      link.href = buildDetailsUrl(link.dataset.room || selectedRoom);
+    });
   }
 
   function updateSummary() {
-    summaryRoom.textContent = getRoomLabel();
-    var nights = getNights();
-    summaryStay.textContent =
-      nights === 1 ? "1 night" : nights > 0 ? nights + " nights" : "—";
-    summaryGuests.textContent = getGuestSummary();
+    var nights = getNightCount();
+    var stayText =
+      nights === 1 ? "1 night" : nights > 1 ? nights + " nights" : "Choose valid dates";
+
+    summaryEl.textContent =
+      getSelectedRoomLabel() +
+      " · " +
+      formatDate(checkInEl.value) +
+      " to " +
+      formatDate(checkOutEl.value) +
+      " · " +
+      stayText +
+      " · " +
+      getGuestSummary();
   }
 
-  function clearErrors() {
-    var fields = form.querySelectorAll(".book__field");
-    for (var i = 0; i < fields.length; i++) {
-      fields[i].classList.remove("has-error");
-    }
-    var inputs = form.querySelectorAll(".is-invalid");
-    for (var j = 0; j < inputs.length; j++) {
-      inputs[j].classList.remove("is-invalid");
-    }
+  function setStatus(message, state) {
+    statusEl.textContent = message || "";
+    statusEl.className = "booking-search__status" + (state ? " is-" + state : "");
   }
 
-  function markError(el, message) {
-    var wrap = el.closest(".book__field");
-    if (wrap) {
-      wrap.classList.add("has-error");
-      var err = wrap.querySelector(".book__error");
-      if (err && message) err.textContent = message;
+  function validateFilters() {
+    var nights = getNightCount();
+    if (!checkInEl.value || !checkOutEl.value || nights < 1) {
+      setStatus("Please choose a valid check-in and check-out date.", "error");
+      return false;
     }
-    el.classList.add("is-invalid");
+    return true;
   }
 
-  function validate() {
-    clearErrors();
-    var ok = true;
-
-    if (!roomEl.value) {
-      markError(roomEl, "Please select a room.");
-      ok = false;
-    }
-    if (!checkInEl.value) {
-      markError(checkInEl, "Check-in is required.");
-      ok = false;
-    }
-    if (!checkOutEl.value) {
-      markError(checkOutEl, "Check-out is required.");
-      ok = false;
-    }
-    if (getNights() < 1) {
-      markError(checkOutEl, "Check-out must be after check-in.");
-      ok = false;
-    }
-    if (!firstNameEl.value.trim()) {
-      markError(firstNameEl, "First name is required.");
-      ok = false;
-    }
-    if (!lastNameEl.value.trim()) {
-      markError(lastNameEl, "Last name is required.");
-      ok = false;
-    }
-    var email = emailEl.value.trim();
-    if (!email || email.indexOf("@") < 1) {
-      markError(emailEl, "A valid email is required.");
-      ok = false;
-    }
-    if (!phoneEl.value.trim()) {
-      markError(phoneEl, "Phone number is required.");
-      ok = false;
-    }
-
-    return ok;
-  }
-
-  function buildHotelRunnerUrl() {
+  function updateQueryString() {
     var params = new URLSearchParams();
-    params.set("check_in", checkInEl.value);
-    params.set("check_out", checkOutEl.value);
-    params.set("adults", String(parseInt(adultsEl.value, 10) || 2));
-    params.set("children", String(parseInt(childrenEl.value, 10) || 0));
-    params.set("guests", String(
-      (parseInt(adultsEl.value, 10) || 0) + (parseInt(childrenEl.value, 10) || 0),
-    ));
-    return HOTELRUNNER_BASE + "?" + params.toString();
+    params.set("checkin", checkInEl.value);
+    params.set("checkout", checkOutEl.value);
+    params.set("adults", adultsEl.value);
+    params.set("children", childrenEl.value);
+    params.set("room", selectedRoom);
+    window.history.replaceState(null, "", window.location.pathname + "?" + params.toString());
   }
 
-  function buildNotificationBody() {
-    return [
-      "New online booking request — Derand Hotel",
-      "",
-      "Room: " + getRoomLabel(),
-      "Check-in: " + checkInEl.value,
-      "Check-out: " + checkOutEl.value,
-      "Stay: " + summaryStay.textContent,
-      "Guests: " + getGuestSummary(),
-      "",
-      "Guest: " + firstNameEl.value.trim() + " " + lastNameEl.value.trim(),
-      "Email: " + emailEl.value.trim(),
-      "Phone: " + phoneEl.value.trim(),
-      "",
-      "Notes:",
-      notesEl.value.trim() || "(none)",
-    ].join("\n");
+  function selectRoom(room) {
+    selectedRoom = room;
+    cards.forEach(function (card) {
+      card.classList.toggle("is-selected", card.dataset.room === room);
+    });
+    updateSummary();
+    syncReserveLinks();
+    updateQueryString();
   }
 
   function applyQueryParams() {
-    var q = new URLSearchParams(window.location.search);
-    var room = q.get("room");
-    if (room) {
-      for (var i = 0; i < roomEl.options.length; i++) {
-        if (roomEl.options[i].value === room) {
-          roomEl.selectedIndex = i;
-          break;
-        }
-      }
-    }
-    if (q.get("checkin")) checkInEl.value = q.get("checkin");
-    if (q.get("checkout")) checkOutEl.value = q.get("checkout");
-    if (q.get("adults")) adultsEl.value = q.get("adults");
-    if (q.get("children")) childrenEl.value = q.get("children");
+    var params = new URLSearchParams(window.location.search);
+    var room = params.get("room");
+
+    if (params.get("checkin")) checkInEl.value = params.get("checkin");
+    if (params.get("checkout")) checkOutEl.value = params.get("checkout");
+    if (params.get("adults")) adultsEl.value = params.get("adults");
+    if (params.get("children")) childrenEl.value = params.get("children");
+
     setMinDates();
-    updateSummary();
-  }
 
-  function notifyHotel() {
-    var payload = {
-      access_key: WEB3FORMS_ACCESS_KEY,
-      subject: "Booking request — " + getRoomLabel() + " — " + checkInEl.value,
-      from_name: "Derand Hotel Booking",
-      email: NOTIFY_EMAIL,
-      replyto: emailEl.value.trim(),
-      message: buildNotificationBody(),
-    };
-    return fetch(WEB3FORMS_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json", Accept: "application/json" },
-      body: JSON.stringify(payload),
-    }).catch(function () {
-      return null;
-    });
-  }
-
-  function onSubmit(event) {
-    event.preventDefault();
-    updateSummary();
-    if (!validate()) {
-      statusEl.textContent = "Please complete the highlighted fields.";
-      statusEl.className = "book__status is-error";
-      return;
+    if (room && cards.some(function (card) { return card.dataset.room === room; })) {
+      selectedRoom = room;
     }
-
-    submitBtn.disabled = true;
-    statusEl.textContent = "Preparing secure payment…";
-    statusEl.className = "book__status";
-
-    var paymentUrl = buildHotelRunnerUrl();
-
-    notifyHotel().finally(function () {
-      statusEl.textContent = "Redirecting to secure card payment…";
-      statusEl.className = "book__status is-success";
-      window.setTimeout(function () {
-        window.location.href = paymentUrl;
-      }, 600);
-    });
   }
 
-  [
-    roomEl,
-    checkInEl,
-    checkOutEl,
-    adultsEl,
-    childrenEl,
-  ].forEach(function (el) {
-    el.addEventListener("change", updateSummary);
-    el.addEventListener("input", updateSummary);
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    updateCheckOutMin();
+    if (!validateFilters()) return;
+
+    updateSummary();
+    syncReserveLinks();
+    updateQueryString();
+    setStatus("Dates and guests updated. Choose any room below to continue.", "success");
   });
 
-  checkInEl.addEventListener("change", updateCheckOutMin);
-  checkInEl.addEventListener("input", updateCheckOutMin);
+  [checkInEl, checkOutEl, adultsEl, childrenEl].forEach(function (element) {
+    element.addEventListener("change", function () {
+      if (element === checkInEl) updateCheckOutMin();
+      updateSummary();
+      syncReserveLinks();
+      updateQueryString();
+    });
+  });
 
-  form.addEventListener("submit", onSubmit);
+  cards.forEach(function (card) {
+    card.addEventListener("click", function (event) {
+      if (event.target.closest("a")) return;
+      selectRoom(card.dataset.room);
+    });
+  });
 
-  setMinDates();
+  reserveLinks.forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      var room = link.dataset.room || selectedRoom;
+      selectRoom(room);
+      if (!validateFilters()) {
+        event.preventDefault();
+        return;
+      }
+      link.href = buildDetailsUrl(room);
+      setStatus("Opening booking details for " + getSelectedRoomLabel() + "...", "success");
+    });
+  });
+
   applyQueryParams();
+  selectRoom(selectedRoom);
   updateSummary();
+  syncReserveLinks();
 })();
