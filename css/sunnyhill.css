@@ -10,7 +10,10 @@ body.sunnyhill-page .footer {
 
 .sunnyhill-festival,
 .sunnyhill-festival * {
-  font-family: "Inter", Arial, sans-serif !important;
+  font-family: "Noto Serif", serif !important;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 .sunnyhill-festival {
@@ -51,9 +54,9 @@ body.sunnyhill-page .footer {
 .sunnyhill-passes__eyebrow {
   margin: 0 0 10px;
   color: #ff9a52;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.28em;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
 }
 
@@ -61,9 +64,10 @@ body.sunnyhill-page .footer {
   margin: 0;
   color: #fff;
   font-family: "Noto Serif", serif !important;
-  font-size: clamp(2rem, 3.6vw, 3rem);
+  font-size: clamp(1.85rem, 3.2vw, 2.65rem);
   font-style: italic;
-  font-weight: 700;
+  font-weight: 600;
+  line-height: 1.15;
 }
 
 .sunnyhill-passes__grid {
@@ -72,7 +76,7 @@ body.sunnyhill-page .footer {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
-  align-items: stretch;
+  align-items: end;
 }
 
 .pass-card {
@@ -95,9 +99,9 @@ body.sunnyhill-page .footer {
   padding: 20px 0;
   background: rgba(255, 255, 255, 0.03);
   color: rgba(255, 255, 255, 0.25);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
@@ -121,29 +125,37 @@ body.sunnyhill-page .footer {
   padding: 0 8px;
   background: #d7a5ff;
   color: #362244;
-  font-size: 9px;
-  font-weight: 800;
-  letter-spacing: 0.12em;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .pass-card__title {
   margin: 0;
   font-family: "Noto Serif", serif !important;
-  font-size: clamp(2rem, 3.2vw, 2.55rem);
-  font-weight: 700;
-  line-height: 1;
+  font-size: clamp(1.75rem, 2.8vw, 2.3rem);
+  font-weight: 600;
+  line-height: 1.12;
 }
 
 .pass-card__subtitle {
   margin: 8px 0 0;
   color: #d8a772;
   font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  max-width: 150px;
-  line-height: 1.45;
+  max-width: 180px;
+  line-height: 1.55;
+}
+
+.pass-card__detail {
+  margin: 16px 0 -4px;
+  color: rgba(255, 232, 214, 0.86);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.6;
 }
 
 .pass-card__features {
@@ -156,9 +168,9 @@ body.sunnyhill-page .footer {
   position: relative;
   margin-bottom: 18px;
   padding-left: 14px;
-  color: #f3e0cb;
+  color: rgba(247, 231, 214, 0.92);
   font-size: 14px;
-  line-height: 1.45;
+  line-height: 1.7;
 }
 
 .pass-card__features li::before {
@@ -175,17 +187,17 @@ body.sunnyhill-page .footer {
 .pass-card__price {
   margin: auto 0 18px;
   color: #f4f0ea;
-  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  font-size: clamp(2.15rem, 3.6vw, 3rem);
   font-weight: 500;
-  line-height: 1;
+  line-height: 1.05;
 }
 
 .pass-card__price span {
   margin-left: 6px;
   color: #ff8d42;
   font-size: 0.34em;
-  font-weight: 800;
-  letter-spacing: 0.1em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
@@ -199,9 +211,9 @@ body.sunnyhill-page .footer {
   background: transparent;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.16em;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   transition:
     background-color 0.2s ease,
     color 0.2s ease,
@@ -224,7 +236,7 @@ body.sunnyhill-page .footer {
     linear-gradient(180deg, rgba(214, 169, 255, 0.18) 0%, rgba(214, 169, 255, 0.06) 100%),
     #26212a;
   border-color: rgba(214, 169, 255, 0.32);
-  transform: translateY(-8px);
+  min-height: 462px;
 }
 
 .pass-card--featured .pass-card__side-label {
@@ -314,9 +326,9 @@ body.sunnyhill-page .footer {
 
 .sunnyhill-hero__eyebrow {
   margin: 0 0 12px;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.26em;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: #b27256;
 }
@@ -324,16 +336,17 @@ body.sunnyhill-page .footer {
 .sunnyhill-hero__title {
   margin: 0;
   text-transform: uppercase;
-  line-height: 0.9;
+  line-height: 0.98;
 }
 
 .sunnyhill-hero__title span {
   display: block;
-  font-family: "Archivo Black", Impact, sans-serif !important;
-  font-size: clamp(3.2rem, 8vw, 6.6rem);
-  letter-spacing: -0.05em;
+  font-family: "Noto Serif", serif !important;
+  font-size: clamp(2.85rem, 7vw, 5.8rem);
+  letter-spacing: -0.02em;
   color: #fff;
   text-shadow: 0 10px 36px rgba(0, 0, 0, 0.38);
+  font-weight: 600;
 }
 
 .sunnyhill-hero__title span:last-child {
@@ -352,9 +365,9 @@ body.sunnyhill-page .footer {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 0.16em;
-  font-size: 11px;
-  font-weight: 800;
+  letter-spacing: 0.1em;
+  font-size: 10px;
+  font-weight: 700;
   box-shadow: 0 10px 30px rgba(178, 114, 86, 0.28);
   transition:
     transform 0.2s ease,
@@ -372,6 +385,19 @@ body.sunnyhill-page .footer {
 
 .sunnyhill-lineup {
   margin-top: 22px;
+}
+
+.sunnyhill-lineup__intro {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.sunnyhill-lineup__heading {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.8rem, 2.8vw, 2.45rem);
+  font-weight: 600;
+  line-height: 1.18;
 }
 
 .sunnyhill-lineup__tabs {
@@ -397,10 +423,10 @@ body.sunnyhill-page .footer {
   border: 0;
   border-radius: 10px;
   background: transparent;
-  color: rgba(255, 255, 255, 0.76);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
   cursor: pointer;
   transition:
     background-color 0.2s ease,
@@ -424,20 +450,20 @@ body.sunnyhill-page .footer {
   margin-top: 24px;
   display: grid;
   grid-template-columns: 1.15fr 1fr 1fr;
-  grid-auto-rows: 182px;
+  grid-auto-rows: 320px;
   gap: 16px;
 }
 
 .sunnyhill-lineup__grid[data-view="filtered"] {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  grid-auto-rows: minmax(280px, auto);
+  grid-auto-rows: minmax(480px, auto);
 }
 
 .lineup-card {
   --card-glow: rgba(255, 154, 95, 0.28);
   position: relative;
   display: flex;
-  min-height: 182px;
+  min-height: 320px;
   border-radius: 22px;
   overflow: hidden;
   background: #111;
@@ -477,7 +503,7 @@ body.sunnyhill-page .footer {
 
 .lineup-card--feature {
   grid-row: span 2;
-  min-height: 380px;
+  min-height: 656px;
 }
 
 .lineup-card--wide {
@@ -489,7 +515,7 @@ body.sunnyhill-page .footer {
 .sunnyhill-lineup__grid[data-view="filtered"] .lineup-card--wide {
   grid-column: auto;
   grid-row: auto;
-  min-height: 280px;
+  min-height: 480px;
 }
 
 .lineup-card__image {
@@ -499,7 +525,9 @@ body.sunnyhill-page .footer {
   background-size: cover;
   background-position: center;
   transform: scale(1.02);
-  transition: transform 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    filter 0.35s ease;
 }
 
 .lineup-card:hover .lineup-card__image {
@@ -518,22 +546,22 @@ body.sunnyhill-page .footer {
     linear-gradient(180deg, rgba(16, 10, 8, 0.1), rgba(16, 10, 8, 0.78)),
     radial-gradient(circle at 48% 22%, rgba(255, 171, 82, 0.75), transparent 18%),
     linear-gradient(135deg, rgba(255, 122, 53, 0.48) 0%, rgba(255, 122, 53, 0.08) 38%, rgba(0, 0, 0, 0.2) 100%),
-    url("../img/extraheader.png");
-  background-position: center 18%;
-  filter: saturate(0.94) brightness(0.92) contrast(1.08);
+    url("../img/seth.jpg");
+  background-position: center 26%;
+  filter: saturate(0.88) brightness(0.72) contrast(1.04);
 }
 
 .lineup-card__image--balvin {
   background-image:
     linear-gradient(180deg, rgba(14, 3, 18, 0.18), rgba(14, 3, 18, 0.76)),
     radial-gradient(circle at 50% 0%, rgba(255, 74, 232, 0.42), transparent 38%),
-    url("../img/sunnyhillheader.jpg");
-  background-position: center 44%;
-  filter: saturate(1.12) brightness(0.72) contrast(1.06);
+    url("../img/keinemusik.png");
+  background-position: center 34%;
+  filter: saturate(1.02) brightness(0.62) contrast(1.06);
 }
 
 .lineup-card__image--balvin::before,
-.lineup-card__image--diplo::before {
+.lineup-card__image--manifest::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -551,24 +579,28 @@ body.sunnyhill-page .footer {
   background-image:
     linear-gradient(180deg, rgba(28, 12, 0, 0.08), rgba(9, 7, 7, 0.86)),
     radial-gradient(circle at 50% 4%, rgba(255, 160, 64, 0.42), transparent 28%),
-    url("../img/legs.JPG");
-  background-position: center 64%;
-  filter: saturate(0.72) brightness(0.5) contrast(1.08);
+    url("../img/carlita.jpg");
+  background-position: center 24%;
+  filter: saturate(0.92) brightness(0.58) contrast(1.08);
 }
 
-.lineup-card__image--diplo {
+.lineup-card__image--manifest {
   background-image:
-    linear-gradient(180deg, rgba(1, 14, 20, 0.14), rgba(1, 14, 20, 0.84)),
-    radial-gradient(circle at 50% 8%, rgba(79, 245, 255, 0.42), transparent 34%),
-    url("../img/sunnyhillheader.jpg");
-  background-position: center 58%;
-  filter: hue-rotate(125deg) saturate(1.45) brightness(0.58);
+    linear-gradient(180deg, rgba(36, 3, 3, 0.16), rgba(17, 3, 5, 0.86)),
+    radial-gradient(circle at 50% 0%, rgba(255, 118, 118, 0.4), transparent 34%),
+    url("../img/manifest.jpg");
+  background-position: center 24%;
+  filter: saturate(1.02) brightness(0.62) contrast(1.04);
 }
 
-.lineup-card__image--diplo::before {
-  background:
-    linear-gradient(90deg, transparent 14%, rgba(75, 255, 255, 0.95) 14%, rgba(75, 255, 255, 0.95) 16%, transparent 16%, transparent 34%, rgba(75, 255, 255, 0.95) 34%, rgba(75, 255, 255, 0.95) 36%, transparent 36%, transparent 64%, rgba(75, 255, 255, 0.95) 64%, rgba(75, 255, 255, 0.95) 66%, transparent 66%, transparent 84%, rgba(75, 255, 255, 0.95) 84%, rgba(75, 255, 255, 0.95) 86%, transparent 86%);
-  opacity: 0.58;
+.lineup-card__image--manifest::before {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 120, 120, 0.08) 0%,
+    rgba(255, 120, 120, 0.22) 48%,
+    rgba(255, 120, 120, 0.08) 100%
+  );
+  opacity: 0.72;
   mix-blend-mode: screen;
 }
 
@@ -576,28 +608,29 @@ body.sunnyhill-page .footer {
   position: absolute;
   inset: auto 0 0 0;
   z-index: 2;
-  padding: 18px 20px 20px;
+  padding: 20px 22px 22px;
 }
 
 .lineup-card__meta,
 .lineup-card__stage {
   margin: 0;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   font-size: 10px;
-  font-weight: 700;
-  color: rgba(255, 241, 228, 0.9);
+  font-weight: 600;
+  color: rgba(255, 241, 228, 0.84);
 }
 
 .lineup-card__title {
   margin: 8px 0 6px;
-  font-family: "Archivo Black", Impact, sans-serif !important;
-  font-size: clamp(1.45rem, 3vw, 2.4rem);
-  line-height: 0.98;
-  letter-spacing: -0.04em;
+  font-family: "Noto Serif", serif !important;
+  font-size: clamp(1.35rem, 2.8vw, 2.1rem);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
   text-transform: uppercase;
   color: #fff;
   text-shadow: 0 10px 30px rgba(0, 0, 0, 0.42);
+  font-weight: 600;
 }
 
 .lineup-card--feature .lineup-card__content {
@@ -605,11 +638,293 @@ body.sunnyhill-page .footer {
 }
 
 .lineup-card--feature .lineup-card__title {
-  font-size: clamp(2.2rem, 4vw, 3.75rem);
+  font-size: clamp(1.95rem, 3.6vw, 3.1rem);
 }
 
 .lineup-card--wide .lineup-card__title {
-  font-size: clamp(1.8rem, 3.2vw, 3rem);
+  font-size: clamp(1.6rem, 3vw, 2.45rem);
+}
+
+.lineup-card__discover {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 24px;
+  background: rgba(8, 6, 10, 0.26);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+
+.lineup-card__discover-copy {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.1rem, 1.8vw, 1.45rem);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.lineup-card__discover-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.lineup-card__discover-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 22px;
+  text-decoration: none;
+  pointer-events: auto;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.lineup-card__discover-link:hover,
+.lineup-card__discover-link:focus-visible {
+  transform: translateY(-2px);
+  background: rgba(178, 114, 86, 0.86);
+  border-color: rgba(178, 114, 86, 0.9);
+  color: #fff;
+}
+
+.lineup-card--discover:hover .lineup-card__discover,
+.lineup-card--discover:focus-within .lineup-card__discover {
+  opacity: 1;
+}
+
+.lineup-card--discover:hover .lineup-card__image,
+.lineup-card--discover:focus-within .lineup-card__image {
+  transform: scale(1.08);
+  filter: blur(5px) saturate(0.92) brightness(0.48) contrast(1.02);
+}
+
+.lineup-card--discover:hover .lineup-card__content,
+.lineup-card--discover:focus-within .lineup-card__content {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.sunnyhill-advantage {
+  width: 100%;
+  max-width: none;
+  margin: 72px 0 0;
+  padding: 0 14px;
+}
+
+.sunnyhill-advantage__header {
+  display: grid;
+  grid-template-columns: minmax(0, 420px) minmax(0, 1fr);
+  gap: 56px;
+  align-items: start;
+  margin-bottom: 38px;
+}
+
+.sunnyhill-advantage__title {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.8rem, 2.7vw, 2.45rem);
+  font-weight: 600;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.sunnyhill-advantage__copy {
+  margin: 18px 0 0;
+  color: rgba(255, 227, 197, 0.82);
+  font-size: 0.98rem;
+  line-height: 1.75;
+  max-width: 320px;
+}
+
+.sunnyhill-advantage__rule {
+  align-self: start;
+  margin-top: 22px;
+  height: 1px;
+  background: rgba(178, 114, 86, 0.26);
+}
+
+.sunnyhill-advantage__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.advantage-card {
+  min-height: 356px;
+  padding: 36px 30px 30px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025) 0%, rgba(255, 255, 255, 0.015) 100%),
+    #191919;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+}
+
+.advantage-card__icon {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(178, 114, 86, 0.36);
+  border-radius: 10px;
+  color: #b27256;
+  font-size: 20px;
+}
+
+.advantage-card__title {
+  margin: 26px 0 14px;
+  color: #fff;
+  font-size: clamp(1.28rem, 1.8vw, 1.65rem);
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.advantage-card__copy {
+  margin: 0;
+  color: rgba(255, 227, 197, 0.82);
+  font-size: 0.96rem;
+  line-height: 1.75;
+}
+
+.advantage-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 28px;
+  color: #b27256;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.advantage-card__link span {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.advantage-card__link:hover,
+.advantage-card__link:focus-visible {
+  color: #cf9479;
+}
+
+.advantage-card__link--static {
+  cursor: default;
+}
+
+.advantage-card__link--static:hover,
+.advantage-card__link--static:focus-visible {
+  color: #b27256;
+}
+
+.sunnyhill-location {
+  width: 100%;
+  margin: 64px 0 0;
+  padding: 0 0 10px;
+  text-align: center;
+}
+
+.sunnyhill-location__panel {
+  position: relative;
+  min-height: 580px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: url("../img/map.png");
+  background-position: center;
+  background-size: 112% auto;
+}
+
+.sunnyhill-location__panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(9, 9, 9, 0.54) 0%, rgba(9, 9, 9, 0.54) 100%),
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.035), transparent 52%);
+  pointer-events: none;
+}
+
+.sunnyhill-location__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 560px;
+  padding: 0 20px;
+}
+
+.sunnyhill-location__eyebrow {
+  margin: 0 0 12px;
+  color: #b27256;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.sunnyhill-location__title {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.55rem, 2.7vw, 2.35rem);
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.16;
+  text-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
+}
+
+.sunnyhill-location__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 188px;
+  margin-top: 24px;
+  padding: 14px 24px;
+  background: #f2b27d;
+  color: #20140f;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.sunnyhill-location__button:hover,
+.sunnyhill-location__button:focus-visible {
+  transform: translateY(-2px);
+  background: #f7be90;
+  color: #20140f;
+}
+
+.sunnyhill-location__footer {
+  margin: 26px 0 0;
+  color: #f2a060;
+  font-size: clamp(1.15rem, 1.8vw, 1.5rem);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 @media (max-width: 991.98px) {
@@ -619,22 +934,38 @@ body.sunnyhill-page .footer {
     width: min(100%, 560px);
   }
 
-  .pass-card,
-  .pass-card--featured {
-    transform: none;
-  }
-
   .sunnyhill-hero__content {
     padding-bottom: 92px;
   }
 
   .sunnyhill-lineup__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-auto-rows: 190px;
+    grid-auto-rows: 280px;
   }
 
   .lineup-card--wide {
     grid-column: span 1;
+  }
+
+  .sunnyhill-advantage__header {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .sunnyhill-advantage__copy {
+    max-width: none;
+  }
+
+  .sunnyhill-advantage__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .advantage-card {
+    min-height: auto;
+  }
+
+  .sunnyhill-location__panel {
+    min-height: 500px;
   }
 }
 
@@ -688,6 +1019,10 @@ body.sunnyhill-page .footer {
     padding: 8px;
   }
 
+  .sunnyhill-lineup__intro {
+    margin-bottom: 22px;
+  }
+
   .sunnyhill-lineup__tab {
     min-width: 122px;
     padding: 9px 14px;
@@ -705,10 +1040,56 @@ body.sunnyhill-page .footer {
   .sunnyhill-lineup__grid[data-view="filtered"] .lineup-card {
     grid-column: auto;
     grid-row: auto;
-    min-height: 260px;
+    min-height: 400px;
   }
 
   .lineup-card--feature {
-    min-height: 360px;
+    min-height: 520px;
+  }
+
+  .lineup-card__discover {
+    gap: 14px;
+  }
+
+  .lineup-card__discover-link {
+    width: 48px;
+    height: 48px;
+  }
+
+  .sunnyhill-advantage {
+    margin-top: 56px;
+  }
+
+  .sunnyhill-advantage__header {
+    margin-bottom: 28px;
+  }
+
+  .advantage-card {
+    padding: 28px 22px 24px;
+  }
+
+  .sunnyhill-location {
+    margin-top: 52px;
+  }
+
+  .sunnyhill-location__panel {
+    min-height: 420px;
+    background: url("../img/map.png");
+    background-position: center;
+    background-size: 140% auto;
+  }
+
+  .sunnyhill-location__panel::after {
+    inset: 0;
+  }
+
+  .sunnyhill-location__button {
+    min-width: 190px;
+    padding: 14px 24px;
+  }
+
+  .sunnyhill-location__footer {
+    margin-top: 20px;
+    font-size: 1.15rem;
   }
 }
