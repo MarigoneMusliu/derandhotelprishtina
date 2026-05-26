@@ -49,21 +49,21 @@
   var checkoutEl = document.getElementById("booking-summary-checkout");
   var guestsEl = document.getElementById("booking-summary-guests");
   var nightsEl = document.getElementById("booking-summary-nights");
+  var dateRangeEl = document.getElementById("booking-summary-date-range");
+  var stayCountEl = document.getElementById("booking-summary-stay-count");
   var roomTotalLabelEl = document.getElementById("booking-price-room-label");
   var roomTotalEl = document.getElementById("booking-price-room-total");
   var feesEl = document.getElementById("booking-price-fees");
+  var discountEl = document.getElementById("booking-price-discount");
   var totalEl = document.getElementById("booking-price-total");
+  var cancelDeadlineEl = document.getElementById("booking-cancel-deadline");
   var statusEl = document.getElementById("booking-details-status");
   var backLinkEl = document.getElementById("booking-back-link");
   var fullNameEl = document.getElementById("booking-full-name");
   var emailEl = document.getElementById("booking-email");
   var phoneEl = document.getElementById("booking-phone");
   var notesEl = document.getElementById("booking-notes");
-  var methodButtons = Array.prototype.slice.call(
-    document.querySelectorAll(".booking-method"),
-  );
-
-  var selectedMethod = "card";
+  var selectedMethod = "hotelrunner";
 
   function parseIso(value) {
     if (!value) return null;
@@ -94,6 +94,21 @@
       currency: "EUR",
       minimumFractionDigits: 2,
     }).format(amount);
+  }
+
+  function shortDateRange(startIso, endIso) {
+    var start = parseIso(startIso);
+    var end = parseIso(endIso);
+    if (!start || !end) return "—";
+
+    var startMonth = start.toLocaleDateString("en-GB", { month: "short" });
+    var startDay = start.toLocaleDateString("en-GB", { day: "numeric" });
+    var endDay = end.toLocaleDateString("en-GB", { day: "numeric" });
+    var month = end.toLocaleDateString("en-GB", { month: "short" });
+    var year = end.toLocaleDateString("en-GB", { year: "numeric" });
+    return startMonth === month
+      ? startDay + "-" + endDay + " " + month + ", " + year
+      : formatDate(startIso) + " - " + formatDate(endIso);
   }
 
   function guestSummary(adults, children) {
@@ -253,7 +268,13 @@
     var nights = getNightCount(state);
     var roomTotal = room.price * nights;
     var fees = roomTotal * TAX_RATE;
+    var discount = 0;
     var total = roomTotal + fees;
+    var cancelDeadline = parseIso(state.checkin);
+
+    if (cancelDeadline) {
+      cancelDeadline.setDate(cancelDeadline.getDate() - 4);
+    }
 
     roomTitleEl.textContent = room.label;
     roomMetaEl.textContent = room.meta;
@@ -264,39 +285,29 @@
     checkoutEl.textContent = formatDate(state.checkout);
     guestsEl.textContent = guestSummary(state.adults, state.children);
     nightsEl.textContent = nights + " " + (nights === 1 ? "night" : "nights");
+    dateRangeEl.textContent = shortDateRange(state.checkin, state.checkout);
+    stayCountEl.textContent = nights + " " + (nights === 1 ? "Night" : "Nights");
     roomTotalLabelEl.textContent =
-      "Room total (" + nights + " " + (nights === 1 ? "night" : "nights") + ")";
+      room.label + " (" + nights + " " + (nights === 1 ? "night" : "nights") + ")";
     roomTotalEl.textContent = currency(roomTotal);
     feesEl.textContent = currency(fees);
+    discountEl.textContent = "-" + currency(discount);
     totalEl.textContent = currency(total);
+    cancelDeadlineEl.textContent = cancelDeadline ? formatDate(formatIso(cancelDeadline)) : "—";
     backLinkEl.href = buildBackUrl(state);
 
     return {
       roomTotal: roomTotal,
       fees: fees,
+      discount: discount,
       total: total,
       nights: nights,
       room: room,
     };
   }
 
-  function setMethod(method) {
-    selectedMethod = method;
-    methodButtons.forEach(function (button) {
-      var active = button.dataset.method === method;
-      button.classList.toggle("is-active", active);
-      button.setAttribute("aria-pressed", String(active));
-    });
-  }
-
   var state = loadState();
   var renderState = render(state);
-
-  methodButtons.forEach(function (button) {
-    button.addEventListener("click", function () {
-      setMethod(button.dataset.method || "card");
-    });
-  });
 
   form.addEventListener("submit", function (event) {
     event.preventDefault();

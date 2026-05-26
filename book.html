@@ -44,6 +44,20 @@
       body.book-page.sacher-home [class*=" icon_"] {
         font-family: FontAwesome !important;
       }
+
+      @media (min-width: 901px) {
+        body.book-page.sacher-home.policy-font-noto-serif {
+          padding-top: 0 !important;
+        }
+
+        body.book-page .header,
+        body.book-page .footer,
+        body.book-page .offcanvas-menu-wrapper,
+        body.book-page .offcanvas-menu-overlay {
+          display: none !important;
+        }
+      }
+
     </style>
 
   </head>
@@ -237,22 +251,38 @@
     </header>
 
     <main class="booking-ui">
+      <section class="booking-desktop-header" aria-label="Booking page navigation">
+        <a href="index.html" class="booking-desktop-header__brand">Derand Hotel</a>
+        <nav class="booking-desktop-header__nav">
+          <a href="rooms.html">Explore</a>
+          <a href="book.html" class="is-active">Bookings</a>
+          <a href="extra.html">Favorites</a>
+          <a href="contact.html">Profile</a>
+        </nav>
+        <a href="book.html" class="booking-desktop-header__cta">Book Now</a>
+      </section>
+
       <section class="booking-ui__shell">
-        <section class="booking-search" aria-labelledby="booking-search-title">
-          <div class="booking-search__header">
-            <div>
-              <p class="booking-search__eyebrow">Reserve Your Stay</p>
-              <h1 class="booking-search__title" id="booking-search-title">
-                Select Your Room
-              </h1>
-              <p class="booking-search__lead">
-                Choose your travel dates and guests, then reserve directly from
-                the room cards below.
-              </p>
-            </div>
+        <section
+          class="booking-hero hero hero--left spad set-bg"
+          aria-labelledby="booking-hero-title"
+          data-setbg="img/s1.webp"
+          data-hero-rotate="img/s1.webp,img/deluxeroom.webp,img/p1.webp,img/t1.webp,img/j.webp"
+        >
+          <div class="booking-hero__slides" aria-hidden="true"></div>
+          <div class="booking-hero__shade" aria-hidden="true"></div>
+
+          <div class="booking-hero__content">
+            <h1 class="booking-hero__title" id="booking-hero-title">
+              Select Your Experience
+            </h1>
+            <p class="booking-hero__lead">
+              Discover a sanctuary of calm, elegance and curated comfort, where
+              every room tells a story of heritage luxury.
+            </p>
           </div>
 
-          <form class="booking-search__form" id="book-form" novalidate>
+          <form class="booking-search booking-search--hidden" id="book-form" novalidate>
             <label class="booking-search__field">
               <span class="booking-search__label">Check-in</span>
               <input
@@ -276,49 +306,206 @@
             </label>
 
             <label class="booking-search__field">
-              <span class="booking-search__label">Adults</span>
-              <select class="booking-search__select" id="book-adults" name="adults">
-                <option value="1">1 Adult</option>
-                <option value="2" selected>2 Adults</option>
-                <option value="3">3 Adults</option>
-                <option value="4">4 Adults</option>
+              <span class="booking-search__label">Guests</span>
+              <select class="booking-search__select" id="book-guests" name="guests">
+                <option value="1-0">1 Guest</option>
+                <option value="2-0" selected>2 Guests</option>
+                <option value="3-0">3 Guests</option>
+                <option value="4-0">4 Guests</option>
+                <option value="2-1">2 Adults, 1 Child</option>
+                <option value="2-2">2 Adults, 2 Children</option>
+                <option value="3-1">3 Adults, 1 Child</option>
               </select>
             </label>
 
-            <label class="booking-search__field">
-              <span class="booking-search__label">Children</span>
-              <select class="booking-search__select" id="book-children" name="children">
-                <option value="0" selected>0 Child</option>
-                <option value="1">1 Child</option>
-                <option value="2">2 Children</option>
-                <option value="3">3 Children</option>
-              </select>
-            </label>
+            <select
+              class="booking-search__hidden-control"
+              id="book-adults"
+              name="adults"
+              aria-hidden="true"
+              tabindex="-1"
+            >
+              <option value="1">1</option>
+              <option value="2" selected>2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+
+            <select
+              class="booking-search__hidden-control"
+              id="book-children"
+              name="children"
+              aria-hidden="true"
+              tabindex="-1"
+            >
+              <option value="0" selected>0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
 
             <button type="submit" class="booking-search__button" id="book-update">
-              Update
+              Search
             </button>
+            <p class="booking-search__summary" id="book-summary" aria-live="polite">
+              Choose your dates and guests, then reserve a room below.
+            </p>
+            <p
+              class="booking-search__status"
+              id="book-status"
+              role="status"
+              aria-live="polite"
+            ></p>
           </form>
-
-          <p class="booking-search__summary" id="book-summary" aria-live="polite">
-            Choose your dates and guests, then reserve a room below.
-          </p>
-          <p class="booking-search__status" id="book-status" role="status" aria-live="polite"></p>
         </section>
 
         <section class="booking-room-list" aria-labelledby="booking-room-list-title">
           <div class="booking-room-list__header">
             <h2 class="booking-room-list__title" id="booking-room-list-title">
-              Select Your Room
+              Curated Room Collection
             </h2>
             <p class="booking-room-list__copy">
-              Experience refined city comfort with our five signature room types.
+              Crafted stays for quiet luxury, business travel, and indulgent city
+              escapes.
             </p>
           </div>
 
           <div class="booking-room-list__grid">
             <article
-              class="booking-room-card is-selected"
+              class="booking-room-card booking-room-card--feature is-selected"
+              data-room="superior-double"
+              data-room-label="Superior Suite"
+            >
+              <div class="booking-room-card__media">
+                <span class="booking-room-card__ribbon">Master Selection</span>
+                <img
+                  src="img/s1.webp"
+                  alt="Superior Suite at Derand Hotel"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="booking-room-card__body">
+                <div class="booking-room-card__kicker-row">
+                  <span class="booking-room-card__kicker">Flagship Experience</span>
+                  <span class="booking-room-card__kicker booking-room-card__kicker--price"
+                    >Starting at</span
+                  >
+                </div>
+                <div class="booking-room-card__feature-head">
+                  <h3 class="booking-room-card__title">Superior Suite (Master)</h3>
+                  <p class="booking-room-card__feature-price">&euro;390/night</p>
+                </div>
+                <p class="booking-room-card__copy">
+                  Our most spacious accommodation featuring an intimate fireplace,
+                  marble bath, and panoramic room views designed for serene luxury.
+                </p>
+                <div class="booking-room-card__actions">
+                  <a
+                    class="booking-room-card__reserve"
+                    data-room="superior-double"
+                    href="booking-details.html"
+                    >Reserve This Room</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="booking-room-card booking-room-card--compact"
+              data-room="deluxe-double"
+              data-room-label="Deluxe King Room"
+            >
+              <div class="booking-room-card__media">
+                <img
+                  src="img/deluxeroom.webp"
+                  alt="Deluxe King Room at Derand Hotel"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="booking-room-card__body">
+                <h3 class="booking-room-card__title">Deluxe King Room</h3>
+                <p class="booking-room-card__copy">
+                  A refined modern efficiency and classic aesthetics, perfect for
+                  the discerning city traveler.
+                </p>
+                <div class="booking-room-card__footer-row">
+                  <p class="booking-room-card__inline-price">&euro;320/night</p>
+                  <a
+                    class="booking-room-card__reserve"
+                    data-room="deluxe-double"
+                    href="booking-details.html"
+                    >Reserve</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="booking-room-card booking-room-card--compact"
+              data-room="premium-double"
+              data-room-label="Premium Room"
+            >
+              <div class="booking-room-card__media">
+                <img
+                  src="img/p1.webp"
+                  alt="Premium Room at Derand Hotel"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="booking-room-card__body">
+                <h3 class="booking-room-card__title">Premium Room</h3>
+                <p class="booking-room-card__copy">
+                  Enhanced space with dedicated dining nook and premium amenities
+                  for an extended stay.
+                </p>
+                <div class="booking-room-card__footer-row">
+                  <p class="booking-room-card__inline-price">&euro;450/night</p>
+                  <a
+                    class="booking-room-card__reserve"
+                    data-room="premium-double"
+                    href="booking-details.html"
+                    >Reserve</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="booking-room-card booking-room-card--compact"
+              data-room="superior-twin"
+              data-room-label="Twin Room"
+            >
+              <div class="booking-room-card__media">
+                <img
+                  src="img/t1.webp"
+                  alt="Twin Room at Derand Hotel"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="booking-room-card__body">
+                <h3 class="booking-room-card__title">Twin Room</h3>
+                <p class="booking-room-card__copy">
+                  Designed for serene comfort without compromising on the
+                  signature Derand service.
+                </p>
+                <div class="booking-room-card__footer-row">
+                  <p class="booking-room-card__inline-price">&euro;350/night</p>
+                  <a
+                    class="booking-room-card__reserve"
+                    data-room="superior-twin"
+                    href="booking-details.html"
+                    >Reserve</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="booking-room-card booking-room-card--compact"
               data-room="junior-suite"
               data-room-label="Junior Suite"
             >
@@ -331,199 +518,78 @@
                 />
               </div>
               <div class="booking-room-card__body">
-                <div class="booking-room-card__head">
-                  <div>
-                    <h3 class="booking-room-card__title">Junior Suite</h3>
-                    <p class="booking-room-card__meta">37 m2 &middot; King bed</p>
-                  </div>
-                  <p class="booking-room-card__price">
-                    <span>&euro;280</span>
-                    <small>per night</small>
-                  </p>
-                </div>
-                <div class="booking-room-card__tags">
-                  <span>Suite lounge</span>
-                  <span>Marble bath</span>
-                  <span>Concierge</span>
-                </div>
-                <div class="booking-room-card__actions">
-                  <a class="booking-room-card__details" href="junior.html">View room</a>
+                <h3 class="booking-room-card__title">Junior Suite</h3>
+                <p class="booking-room-card__copy">
+                  A compact yet lavish suite offering a restful balcony and warm
+                  architectural details.
+                </p>
+                <div class="booking-room-card__footer-row">
+                  <p class="booking-room-card__inline-price">&euro;280/night</p>
                   <a
                     class="booking-room-card__reserve"
                     data-room="junior-suite"
                     href="booking-details.html"
-                    >Reserve this room</a
-                  >
-                </div>
-              </div>
-            </article>
-
-            <article
-              class="booking-room-card"
-              data-room="deluxe-double"
-              data-room-label="Deluxe Double Room"
-            >
-              <div class="booking-room-card__media">
-                <span class="booking-room-card__badge">Most popular</span>
-                <img
-                  src="img/deluxeroom.webp"
-                  alt="Deluxe Double Room at Derand Hotel"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <div class="booking-room-card__body">
-                <div class="booking-room-card__head">
-                  <div>
-                    <h3 class="booking-room-card__title">Deluxe Double Room</h3>
-                    <p class="booking-room-card__meta">30 m2 &middot; King bed</p>
-                  </div>
-                  <p class="booking-room-card__price">
-                    <span>&euro;320</span>
-                    <small>per night</small>
-                  </p>
-                </div>
-                <div class="booking-room-card__tags">
-                  <span>Elegant workspace</span>
-                  <span>Extra bed option</span>
-                  <span>Late checkout</span>
-                </div>
-                <div class="booking-room-card__actions">
-                  <a class="booking-room-card__details" href="deluxe-double.html">View room</a>
-                  <a
-                    class="booking-room-card__reserve"
-                    data-room="deluxe-double"
-                    href="booking-details.html"
-                    >Reserve this room</a
-                  >
-                </div>
-              </div>
-            </article>
-
-            <article
-              class="booking-room-card"
-              data-room="premium-double"
-              data-room-label="Premium Double Room"
-            >
-              <div class="booking-room-card__media">
-                <img
-                  src="img/p1.webp"
-                  alt="Premium Double Room at Derand Hotel"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <div class="booking-room-card__body">
-                <div class="booking-room-card__head">
-                  <div>
-                    <h3 class="booking-room-card__title">Premium Double Room</h3>
-                    <p class="booking-room-card__meta">28 m2 &middot; King bed</p>
-                  </div>
-                  <p class="booking-room-card__price">
-                    <span>&euro;450</span>
-                    <small>per night</small>
-                  </p>
-                </div>
-                <div class="booking-room-card__tags">
-                  <span>Quiet floor</span>
-                  <span>Premium finish</span>
-                  <span>Relax lounge</span>
-                </div>
-                <div class="booking-room-card__actions">
-                  <a class="booking-room-card__details" href="premium-double.html">View room</a>
-                  <a
-                    class="booking-room-card__reserve"
-                    data-room="premium-double"
-                    href="booking-details.html"
-                    >Reserve this room</a
-                  >
-                </div>
-              </div>
-            </article>
-
-            <article
-              class="booking-room-card"
-              data-room="superior-twin"
-              data-room-label="Superior Twin Room"
-            >
-              <div class="booking-room-card__media">
-                <img
-                  src="img/t1.webp"
-                  alt="Superior Twin Room at Derand Hotel"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <div class="booking-room-card__body">
-                <div class="booking-room-card__head">
-                  <div>
-                    <h3 class="booking-room-card__title">Superior Twin Room</h3>
-                    <p class="booking-room-card__meta">23 m2 &middot; Twin beds</p>
-                  </div>
-                  <p class="booking-room-card__price">
-                    <span>&euro;350</span>
-                    <small>per night</small>
-                  </p>
-                </div>
-                <div class="booking-room-card__tags">
-                  <span>Work desk</span>
-                  <span>City stay</span>
-                  <span>Fast Wi-Fi</span>
-                </div>
-                <div class="booking-room-card__actions">
-                  <a class="booking-room-card__details" href="superior-twin.html">View room</a>
-                  <a
-                    class="booking-room-card__reserve"
-                    data-room="superior-twin"
-                    href="booking-details.html"
-                    >Reserve this room</a
-                  >
-                </div>
-              </div>
-            </article>
-
-            <article
-              class="booking-room-card"
-              data-room="superior-double"
-              data-room-label="Superior Double Room"
-            >
-              <div class="booking-room-card__media">
-                <img
-                  src="img/s1.webp"
-                  alt="Superior Double Room at Derand Hotel"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <div class="booking-room-card__body">
-                <div class="booking-room-card__head">
-                  <div>
-                    <h3 class="booking-room-card__title">Superior Double Room</h3>
-                    <p class="booking-room-card__meta">22 m2 &middot; King bed</p>
-                  </div>
-                  <p class="booking-room-card__price">
-                    <span>&euro;390</span>
-                    <small>per night</small>
-                  </p>
-                </div>
-                <div class="booking-room-card__tags">
-                  <span>High-class comfort</span>
-                  <span>Smart TV</span>
-                  <span>Tea station</span>
-                </div>
-                <div class="booking-room-card__actions">
-                  <a class="booking-room-card__details" href="superior-double.html">View room</a>
-                  <a
-                    class="booking-room-card__reserve"
-                    data-room="superior-double"
-                    href="booking-details.html"
-                    >Reserve this room</a
+                    >Reserve</a
                   >
                 </div>
               </div>
             </article>
           </div>
         </section>
+
+        <section class="booking-editorial" aria-labelledby="booking-editorial-title">
+          <div class="booking-editorial__content">
+            <p class="booking-editorial__eyebrow">The Art of Stay</p>
+            <h2 class="booking-editorial__title" id="booking-editorial-title">
+              Every room is a curated gallery of quiet luxury.
+            </h2>
+            <p class="booking-editorial__copy">
+              At Derand Hotel, we believe every detail should elevate the guest
+              narrative, from the softness of bedding to the light that enters
+              each room at dawn.
+            </p>
+            <div class="booking-editorial__stats">
+              <div>
+                <strong>4.9</strong>
+                <span>Guest Satisfaction</span>
+              </div>
+              <div>
+                <strong>15+</strong>
+                <span>Years of Heritage</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="booking-editorial__media">
+            <img
+              src="img/j.webp"
+              alt="Curated luxury room at Derand Hotel"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="booking-editorial__badge">
+              <i class="fa fa-certificate" aria-hidden="true"></i>
+              <span>Heritage Certified</span>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="booking-micro-footer">
+        <div class="booking-micro-footer__shell">
+          <div class="booking-micro-footer__brand">
+            <a href="index.html" class="booking-micro-footer__logo">Derand Hotel</a>
+            <p>&copy; 2026 Derand Hotel. All rights reserved.</p>
+          </div>
+          <div class="booking-micro-footer__links">
+            <a href="index.html">About Us</a>
+            <a href="rooms.html">Suites</a>
+            <a href="termsofservices.html">Legal</a>
+            <a href="contact.html" aria-label="Contact">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
       </section>
     </main>
 

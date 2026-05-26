@@ -7,6 +7,7 @@
 
   var checkInEl = document.getElementById("book-check-in");
   var checkOutEl = document.getElementById("book-check-out");
+  var guestsSelectEl = document.getElementById("book-guests");
   var adultsEl = document.getElementById("book-adults");
   var childrenEl = document.getElementById("book-children");
   var statusEl = document.getElementById("book-status");
@@ -21,6 +22,42 @@
   if (!cards.length) return;
 
   var selectedRoom = cards[0].dataset.room || "junior-suite";
+
+  function initHeroRotation() {
+    var hero = document.querySelector(".booking-hero[data-hero-rotate]");
+    if (!hero) return;
+
+    var slidesHost = hero.querySelector(".booking-hero__slides");
+    if (!slidesHost) return;
+
+    var sources = String(hero.getAttribute("data-hero-rotate") || "")
+      .split(",")
+      .map(function (value) {
+        return value.trim();
+      })
+      .filter(Boolean);
+
+    if (!sources.length) return;
+
+    slidesHost.innerHTML = "";
+
+    var layers = sources.map(function (src, index) {
+      var layer = document.createElement("div");
+      layer.className = "booking-hero__layer" + (index === 0 ? " is-visible" : "");
+      layer.style.backgroundImage = 'url("' + src + '")';
+      slidesHost.appendChild(layer);
+      return layer;
+    });
+
+    if (layers.length < 2) return;
+
+    var currentIndex = 0;
+    window.setInterval(function () {
+      layers[currentIndex].classList.remove("is-visible");
+      currentIndex = (currentIndex + 1) % layers.length;
+      layers[currentIndex].classList.add("is-visible");
+    }, 4200);
+  }
 
   function todayIso() {
     var d = new Date();
@@ -66,6 +103,28 @@
     }
 
     return parts.length ? parts.join(", ") : "No guests selected";
+  }
+
+  function syncCountsFromGuestSelect() {
+    if (!guestsSelectEl) return;
+    var parts = (guestsSelectEl.value || "2-0").split("-");
+    adultsEl.value = parts[0] || "2";
+    childrenEl.value = parts[1] || "0";
+  }
+
+  function syncGuestSelectFromCounts() {
+    if (!guestsSelectEl) return;
+    var combined = (adultsEl.value || "2") + "-" + (childrenEl.value || "0");
+    var hasExactOption = Array.prototype.some.call(guestsSelectEl.options, function (option) {
+      return option.value === combined;
+    });
+
+    if (hasExactOption) {
+      guestsSelectEl.value = combined;
+    } else {
+      guestsSelectEl.value = (adultsEl.value || "2") + "-0";
+      childrenEl.value = "0";
+    }
   }
 
   function setMinDates() {
@@ -200,6 +259,7 @@
     if (params.get("checkout")) checkOutEl.value = params.get("checkout");
     if (params.get("adults")) adultsEl.value = params.get("adults");
     if (params.get("children")) childrenEl.value = params.get("children");
+    syncGuestSelectFromCounts();
 
     setMinDates();
 
@@ -210,6 +270,7 @@
 
   form.addEventListener("submit", function (event) {
     event.preventDefault();
+    syncCountsFromGuestSelect();
     updateCheckOutMin();
     if (!validateFilters()) return;
 
@@ -219,7 +280,7 @@
     setStatus("Dates and guests updated. Choose any room below to continue.", "success");
   });
 
-  [checkInEl, checkOutEl, adultsEl, childrenEl].forEach(function (element) {
+  [checkInEl, checkOutEl].forEach(function (element) {
     element.addEventListener("change", function () {
       if (element === checkInEl) updateCheckOutMin();
       updateSummary();
@@ -227,6 +288,15 @@
       updateQueryString();
     });
   });
+
+  if (guestsSelectEl) {
+    guestsSelectEl.addEventListener("change", function () {
+      syncCountsFromGuestSelect();
+      updateSummary();
+      syncReserveLinks();
+      updateQueryString();
+    });
+  }
 
   cards.forEach(function (card) {
     card.addEventListener("click", function (event) {
@@ -248,6 +318,8 @@
     });
   });
 
+  initHeroRotation();
+  syncCountsFromGuestSelect();
   applyQueryParams();
   selectRoom(selectedRoom);
   updateSummary();

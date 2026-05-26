@@ -3078,7 +3078,7 @@
         </div>
         <div class="extra-order-modal__actions">
           <div class="extra-order-form__total">
-            Item total: <strong id="extra-modal-line-total">0&euro;</strong>
+            Selected total: <strong id="extra-modal-line-total">0&euro;</strong>
           </div>
           <button type="button" class="extra-btn-cart-add" id="extra-add-to-cart-btn">
             Add to cart
@@ -3637,6 +3637,34 @@
           modalQtyByIndex[currentImageIndex] = Math.max(0, value | 0);
         }
 
+        function getModalSelectionTotal() {
+          var total = 0;
+          for (var i = 0; i < modalQtyByIndex.length; i++) {
+            var qty =
+              typeof modalQtyByIndex[i] === "number" && !isNaN(modalQtyByIndex[i])
+                ? modalQtyByIndex[i]
+                : 0;
+            if (qty < 1) continue;
+            var price = isSpiritsOrder
+              ? spiritsPrices[i] || 0
+              : linePriceAt(i);
+            total += price * qty;
+          }
+          return total;
+        }
+
+        function getModalSelectionCount() {
+          var count = 0;
+          for (var i = 0; i < modalQtyByIndex.length; i++) {
+            var qty =
+              typeof modalQtyByIndex[i] === "number" && !isNaN(modalQtyByIndex[i])
+                ? modalQtyByIndex[i]
+                : 0;
+            count += qty > 0 ? qty : 0;
+          }
+          return count;
+        }
+
         function syncPricesToImages() {
           var fallback = currentPrice;
           if (!currentPrices.length) currentPrices = [fallback];
@@ -3770,6 +3798,7 @@
 
         function updateModalView() {
           var qty = getModalQty();
+          var selectionTotal = getModalSelectionTotal();
           if (isSpiritsOrder) {
             currentPrice = spiritsPrices[currentImageIndex] || 0;
             imageEl.src =
@@ -3785,7 +3814,7 @@
             }
             unitPriceEl.textContent = formatEuro(currentPrice);
             qtyEl.textContent = String(qty);
-            modalLineTotalEl.textContent = formatEuro(currentPrice * qty);
+            modalLineTotalEl.textContent = formatEuro(selectionTotal);
             var spiritsNavOff = spiritsProducts.length <= 1;
             imagePrevBtn.disabled = spiritsNavOff;
             imageNextBtn.disabled = spiritsNavOff;
@@ -3801,7 +3830,7 @@
           imageEl.src = image;
           unitPriceEl.textContent = formatEuro(currentPrice);
           qtyEl.textContent = String(qty);
-          modalLineTotalEl.textContent = formatEuro(currentPrice * qty);
+          modalLineTotalEl.textContent = formatEuro(selectionTotal);
           var disableNav = currentImages.length <= 1;
           imagePrevBtn.disabled = disableNav;
           imageNextBtn.disabled = disableNav;
@@ -4140,20 +4169,22 @@
           saveCart();
           renderCart();
           if (options.closeModal) closeModal();
-          showToast(
-            options.toastMessage ||
-              (merged
-                ? "Updated quantity in your cart"
-                : "Added to your cart"),
-          );
+          if (options.skipToast !== true) {
+            showToast(
+              options.toastMessage ||
+                (merged
+                  ? "Updated quantity in your cart"
+                  : "Added to your cart"),
+            );
+          }
           if (options.openCart !== false) openCart();
           return true;
         }
 
         function addCurrentSelectionToCart() {
           if (!isSpiritsOrder) syncPricesToImages();
-          var addQty = getModalQty();
-          if (addQty < 1) {
+          var selectedCount = getModalSelectionCount();
+          if (selectedCount < 1) {
             if (modalStatusEl) {
               modalStatusEl.textContent =
                 "Please press + to choose how many you want (at least 1).";
@@ -4161,25 +4192,44 @@
             return;
           }
           if (modalStatusEl) modalStatusEl.textContent = "";
-          var image = isSpiritsOrder
-            ? currentImages[currentImageIndex] || "img/champ.jpg"
-            : currentImages[currentImageIndex];
-          var price = isSpiritsOrder
-            ? spiritsPrices[currentImageIndex] || 0
-            : linePriceAt(currentImageIndex);
-          var variantLabel = getVariantLabel(currentImageIndex);
-          addLineToCart(
-            {
-              productBase: getSlideProductName(currentImageIndex),
-              variantLabel: isSpiritsOrder ? "" : variantLabel,
-              image: image,
-              price: price,
-              qty: addQty,
-              description: isSpiritsOrder
-                ? spiritsDescriptions[currentImageIndex] || productDescription
-                : productDescription,
-            },
-            { closeModal: true },
+          var addedLines = 0;
+          for (var i = 0; i < modalQtyByIndex.length; i++) {
+            var addQty = modalQtyByIndex[i];
+            if (typeof addQty !== "number" || isNaN(addQty) || addQty < 1) continue;
+
+            var image = isSpiritsOrder
+              ? currentImages[i] || "img/champ.jpg"
+              : currentImages[i];
+            var price = isSpiritsOrder ? spiritsPrices[i] || 0 : linePriceAt(i);
+            var variantLabel = getVariantLabel(i);
+
+            if (
+              addLineToCart(
+                {
+                  productBase: getSlideProductName(i),
+                  variantLabel: isSpiritsOrder ? "" : variantLabel,
+                  image: image,
+                  price: price,
+                  qty: addQty,
+                  description: isSpiritsOrder
+                    ? spiritsDescriptions[i] || productDescription
+                    : productDescription,
+                },
+                { closeModal: false, openCart: false, skipToast: true },
+              )
+            ) {
+              addedLines += 1;
+            }
+          }
+
+          if (!addedLines) return;
+
+          closeModal();
+          openCart();
+          showToast(
+            addedLines > 1
+              ? "Added your selections to the cart"
+              : "Added to your cart",
           );
         }
 

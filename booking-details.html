@@ -44,6 +44,19 @@
       body.booking-details-page.sacher-home [class*=" icon_"] {
         font-family: FontAwesome !important;
       }
+
+      @media (min-width: 981px) {
+        body.booking-details-page.sacher-home.policy-font-noto-serif {
+          padding-top: 0 !important;
+        }
+
+        body.booking-details-page .header,
+        body.booking-details-page .footer,
+        body.booking-details-page .offcanvas-menu-wrapper,
+        body.booking-details-page .offcanvas-menu-overlay {
+          display: none !important;
+        }
+      }
     </style>
   </head>
 
@@ -195,6 +208,19 @@
       </div>
     </header>
 
+    <section class="booking-details-desktop-header" aria-label="Booking navigation">
+      <div class="booking-details-desktop-header__shell">
+        <a href="index.html" class="booking-details-desktop-header__brand">Derand Hotel</a>
+        <nav class="booking-details-desktop-header__nav">
+          <a href="rooms.html">Explore</a>
+          <a href="book.html" class="is-active">Bookings</a>
+          <a href="extra.html">Favorites</a>
+          <a href="contact.html">Profile</a>
+        </nav>
+        <a href="book.html" class="booking-details-desktop-header__cta">Book Now</a>
+      </div>
+    </section>
+
     <main class="booking-details">
       <section class="booking-details__shell">
         <div class="booking-details__topbar">
@@ -207,71 +233,31 @@
           </button>
         </div>
 
-        <section class="booking-progress" aria-label="Booking progress">
-          <div class="booking-progress__meta">
-            <span>Step 2 of 3 &middot; Booking Details</span>
-            <strong>66%</strong>
-          </div>
-          <div class="booking-progress__bar">
-            <span></span>
-          </div>
-        </section>
-
-        <form class="booking-details__form" id="booking-details-form" novalidate>
-          <section class="booking-card booking-card--summary">
-            <h2 class="booking-card__title">Booking Summary</h2>
-            <div class="booking-summary">
-              <div class="booking-summary__image-wrap">
-                <img
-                  id="booking-summary-image"
-                  src="img/s1.webp"
-                  alt="Selected room at Derand Hotel"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-
-              <div class="booking-summary__content">
-                <div class="booking-summary__head">
-                  <div>
-                    <h3 id="booking-summary-room">Superior Double Room</h3>
-                    <p id="booking-summary-meta">22 m2 &middot; King bed</p>
-                  </div>
-                  <p class="booking-summary__rate" id="booking-summary-rate">&euro;390 / night</p>
-                </div>
-
-                <div class="booking-summary__grid">
-                  <div>
-                    <span>Check-in</span>
-                    <strong id="booking-summary-checkin">28 Oct 2023</strong>
-                  </div>
-                  <div>
-                    <span>Guests</span>
-                    <strong id="booking-summary-guests">2 Adults, 1 Child</strong>
-                  </div>
-                  <div>
-                    <span>Check-out</span>
-                    <strong id="booking-summary-checkout">02 Nov 2023</strong>
-                  </div>
-                  <div>
-                    <span>Stay</span>
-                    <strong id="booking-summary-nights">4 nights</strong>
-                  </div>
-                </div>
-              </div>
+        <div class="booking-checkout__intro">
+          <section class="booking-progress" aria-label="Booking progress">
+            <div class="booking-progress__track">
+              <span class="booking-progress__pill">Step 2 of 3</span>
+              <span class="booking-progress__line" aria-hidden="true"></span>
             </div>
           </section>
+          <h1 class="booking-checkout__title">Guest &amp; Payment Details</h1>
+        </div>
 
-          <section class="booking-card">
-            <h2 class="booking-card__title">Guest Information</h2>
-            <div class="booking-fields">
+        <form class="booking-checkout__grid" id="booking-details-form" novalidate>
+          <section class="booking-panel booking-panel--guest">
+            <div class="booking-panel__header">
+              <i class="fa fa-user-o" aria-hidden="true"></i>
+              <h2>Guest Information</h2>
+            </div>
+
+            <div class="booking-fields booking-fields--grid">
               <label class="booking-field">
                 <span>Full Name</span>
                 <input
                   type="text"
                   id="booking-full-name"
                   name="full_name"
-                  placeholder="e.g. Julianne Moore"
+                  placeholder="e.g., Julian Alexander"
                   autocomplete="name"
                   required
                 />
@@ -283,122 +269,160 @@
                   type="email"
                   id="booking-email"
                   name="email"
-                  placeholder="julianne@heritage.com"
+                  placeholder="julian@derandhotel.com"
                   autocomplete="email"
                   required
                 />
               </label>
 
-              <label class="booking-field">
+              <label class="booking-field booking-field--half">
                 <span>Phone Number</span>
                 <input
                   type="tel"
                   id="booking-phone"
                   name="phone"
-                  placeholder="+1 (555) 000-0000"
+                  placeholder="+44 (0) 20 7946 0000"
                   autocomplete="tel"
                   required
                 />
               </label>
 
-              <label class="booking-field">
-                <span>Special Requests</span>
+              <label class="booking-field booking-field--full">
+                <span>Special Requests (Optional)</span>
                 <textarea
                   id="booking-notes"
                   name="notes"
-                  placeholder="Allergies, high floor preference, late arrival, etc."
+                  placeholder="Dietary requirements, accessibility needs, or preferred floor..."
                 ></textarea>
               </label>
             </div>
           </section>
 
-          <section class="booking-card">
-            <h2 class="booking-card__title">Payment Details</h2>
-            <div class="booking-methods" role="tablist" aria-label="Payment method">
-              <button
-                class="booking-method is-active"
-                type="button"
-                data-method="card"
-                aria-pressed="true"
-              >
-                <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
-                <span>Card</span>
-              </button>
-              <button class="booking-method" type="button" data-method="apple" aria-pressed="false">
-                <i class="fa fa-apple" aria-hidden="true"></i>
-                <span>Apple Pay</span>
-              </button>
-              <button class="booking-method" type="button" data-method="paypal" aria-pressed="false">
-                <i class="fa fa-paypal" aria-hidden="true"></i>
-                <span>PayPal</span>
-              </button>
-            </div>
-
-            <div class="booking-payment-fields">
-              <label class="booking-field booking-field--disabled">
-                <span>Card Number</span>
-                <input type="text" value="Secure entry on HotelRunner" readonly />
-              </label>
-
-              <div class="booking-field-row">
-                <label class="booking-field booking-field--disabled">
-                  <span>Expiry Date</span>
-                  <input type="text" value="MM / YY" readonly />
-                </label>
-                <label class="booking-field booking-field--disabled">
-                  <span>CVV</span>
-                  <input type="text" value="***" readonly />
-                </label>
+          <aside class="booking-side">
+            <section class="booking-summary-card" aria-labelledby="booking-summary-room">
+              <div class="booking-summary-card__image-wrap">
+                <img
+                  id="booking-summary-image"
+                  src="img/s1.webp"
+                  alt="Selected room at Derand Hotel"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="booking-summary-card__overlay">
+                  <h2 id="booking-summary-room">Superior Double Room</h2>
+                  <p id="booking-summary-meta">22 m2 / King bed</p>
+                </div>
               </div>
-            </div>
 
-            <p class="booking-payment-note">
-              Card details are completed securely on HotelRunner after you confirm this
-              booking.
+              <div class="booking-summary-card__dates">
+                <div>
+                  <span>Dates</span>
+                  <strong id="booking-summary-date-range">Oct 24-28, 2023</strong>
+                </div>
+                <div class="booking-summary-card__stay">
+                  <span>Stay</span>
+                  <strong id="booking-summary-stay-count">4 Nights</strong>
+                </div>
+              </div>
+
+              <div class="booking-summary-card__rows">
+                <div class="booking-summary-card__row">
+                  <span id="booking-price-room-label">Superior Suite (4 nights)</span>
+                  <strong id="booking-price-room-total">&euro;390.00</strong>
+                </div>
+                <div class="booking-summary-card__row">
+                  <span>Taxes &amp; Fees</span>
+                  <strong id="booking-price-fees">&euro;58.50</strong>
+                </div>
+                <div class="booking-summary-card__row">
+                  <span>Heritage Member Discount</span>
+                  <strong id="booking-price-discount">-&euro;0.00</strong>
+                </div>
+              </div>
+
+              <div class="booking-summary-card__total">
+                <span>Total</span>
+                <strong id="booking-price-total">&euro;448.50</strong>
+              </div>
+
+              <button class="booking-confirm" id="booking-confirm" type="submit">
+                Confirm Booking
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+              </button>
+              <p class="booking-summary-card__note">
+                Free cancellation until <span id="booking-cancel-deadline">Oct 20, 2023</span>.
+              </p>
+            </section>
+
+            <div class="booking-side__benefits">
+              <section class="booking-benefit-card" aria-label="Best rate guarantee">
+                <div class="booking-benefit-card__icon">
+                  <i class="fa fa-certificate" aria-hidden="true"></i>
+                </div>
+                <strong>Best Rate Guarantee</strong>
+              </section>
+
+              <section class="booking-benefit-card" aria-label="24/7 concierge">
+                <div class="booking-benefit-card__icon">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                </div>
+                <strong>24/7 Concierge</strong>
+              </section>
+            </div>
+          </aside>
+
+          <section class="booking-checkout__security" aria-label="Secure payment note">
+            <div class="booking-checkout__security-icon">
+              <i class="fa fa-shield" aria-hidden="true"></i>
+            </div>
+            <p>
+              Your payment information is encrypted and processed securely by our
+              global financial partners.
             </p>
           </section>
 
-          <section class="booking-price-card" aria-labelledby="booking-price-title">
-            <div class="booking-price-card__header">
-              <h2 id="booking-price-title">Price Summary</h2>
-              <p>Secure checkout</p>
-            </div>
-
-            <div class="booking-price-card__rows">
-              <div class="booking-price-card__row">
-                <span id="booking-price-room-label">Room total (1 night)</span>
-                <strong id="booking-price-room-total">&euro;390.00</strong>
-              </div>
-              <div class="booking-price-card__row">
-                <span>Taxes &amp; fees</span>
-                <strong id="booking-price-fees">&euro;58.50</strong>
-              </div>
-            </div>
-
-            <div class="booking-price-card__total">
-              <span>Total Price</span>
-              <strong id="booking-price-total">&euro;448.50</strong>
-            </div>
-          </section>
-
-          <section class="booking-guarantee" aria-label="Price guarantee">
-            <div class="booking-guarantee__icon">
-              <i class="fa fa-certificate" aria-hidden="true"></i>
-            </div>
-            <div>
-              <strong>Best Price Guarantee</strong>
-              <p>We match the best direct rate available on your selected stay.</p>
-            </div>
-          </section>
-
-          <button class="booking-confirm" id="booking-confirm" type="submit">
-            Pay &amp; Confirm Booking
-            <i class="fa fa-angle-right" aria-hidden="true"></i>
-          </button>
           <p class="booking-details__status" id="booking-details-status" role="status" aria-live="polite"></p>
+
+          <div class="booking-summary-hidden" aria-hidden="true">
+            <span id="booking-summary-checkin"></span>
+            <span id="booking-summary-checkout"></span>
+            <span id="booking-summary-guests"></span>
+            <span id="booking-summary-nights"></span>
+            <span id="booking-summary-rate"></span>
+          </div>
         </form>
       </section>
     </main>
+
+    <section class="booking-details-desktop-footer">
+      <div class="booking-details-desktop-footer__shell">
+        <div class="booking-details-desktop-footer__brand">
+          <a href="index.html" class="booking-details-desktop-footer__logo">Derand Hotel</a>
+          <p>
+            &copy;2026 Derand Hotel. Excellence in hospitality since 1990. Providing
+            curated luxury experiences across Kosovo.
+          </p>
+        </div>
+
+        <div class="booking-details-desktop-footer__links">
+          <div>
+            <span>Discover</span>
+            <a href="index.html">About Us</a>
+            <a href="rooms.html">Rooms &amp; Suites</a>
+          </div>
+          <div>
+            <span>Support</span>
+            <a href="contact.html">Contact</a>
+            <a href="termsofservices.html">Terms of Service</a>
+          </div>
+          <div>
+            <span>Legal</span>
+            <a href="privacypolicy.html">Privacy Policy</a>
+            <a href="termsofservices.html">Payments</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer class="footer">
       <div class="container">
