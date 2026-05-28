@@ -49,13 +49,6 @@
         body.book-page.sacher-home.policy-font-noto-serif {
           padding-top: 0 !important;
         }
-
-        body.book-page .header,
-        body.book-page .footer,
-        body.book-page .offcanvas-menu-wrapper,
-        body.book-page .offcanvas-menu-overlay {
-          display: none !important;
-        }
       }
 
     </style>
@@ -270,16 +263,21 @@
           data-hero-rotate="img/50.webp,img/51.webp,img/52.webp,img/53.webp,img/54.webp"
         >
           <div class="booking-hero__slides" aria-hidden="true"></div>
-          <div class="booking-hero__shade" aria-hidden="true"></div>
-
           <div class="booking-hero__content">
+            <p class="booking-hero__kicker">Exquisite Sanctuary</p>
             <h1 class="booking-hero__title" id="booking-hero-title">
-              Select Your Experience
+              The Art of Refined Living
             </h1>
             <p class="booking-hero__lead">
-              Discover a sanctuary of calm, elegance and curated comfort, where
-              every room tells a story of heritage luxury.
+              Step into a world where heritage meets modern sophistication. At
+              Derand Hotel, every detail is a curated masterpiece of comfort and
+              prestige.
             </p>
+            <div class="booking-hero__actions">
+              <a class="booking-hero__btn booking-hero__btn--light" href="rooms.html"
+                >Explore Rooms</a
+              >
+            </div>
           </div>
 
           <form class="booking-search booking-search--hidden" id="book-form" novalidate>
@@ -373,40 +371,42 @@
           <div class="booking-room-list__grid">
             <article
               class="booking-room-card booking-room-card--feature is-selected"
-              data-room="superior-double"
-              data-room-label="Superior Suite"
+              data-room="junior-suite"
+              data-room-label="Junior Suite"
             >
               <div class="booking-room-card__media">
                 <span class="booking-room-card__ribbon">Master Selection</span>
                 <img
-                  src="img/s1.webp"
-                  alt="Superior Suite at Derand Hotel"
+                  src="img/1111.webp"
+                  alt="Junior Suite at Derand Hotel"
                   loading="lazy"
                   decoding="async"
                 />
               </div>
-              <div class="booking-room-card__body">
-                <div class="booking-room-card__kicker-row">
-                  <span class="booking-room-card__kicker">Flagship Experience</span>
-                  <span class="booking-room-card__kicker booking-room-card__kicker--price"
-                    >Starting at</span
-                  >
-                </div>
-                <div class="booking-room-card__feature-head">
-                  <h3 class="booking-room-card__title">Superior Suite (Master)</h3>
-                  <p class="booking-room-card__feature-price">&euro;390/night</p>
-                </div>
-                <p class="booking-room-card__copy">
-                  Our most prestigious accommodation, featuring a private
-                  fireplace, marble bath, and panoramic garden views.
-                </p>
-                <div class="booking-room-card__actions">
-                  <a
-                    class="booking-room-card__reserve"
-                    data-room="superior-double"
-                    href="booking-details.html"
-                    >Reserve This Room</a
-                  >
+              <div class="booking-room-card__body booking-room-card__body--feature">
+                <div class="booking-room-card__feature-layout">
+                  <div class="booking-room-card__feature-copy">
+                    <span class="booking-room-card__kicker">Flagship Experience</span>
+                    <h3 class="booking-room-card__title">Junior Suite</h3>
+                    <p class="booking-room-card__copy">
+                      Our most prestigious accommodation, featuring a private
+                      fireplace, marble bath, and panoramic garden views.
+                    </p>
+                  </div>
+                  <div class="booking-room-card__feature-side">
+                    <span class="booking-room-card__price-label">Starting at</span>
+                    <p class="booking-room-card__feature-price">
+                      &euro;119<span>/night</span>
+                    </p>
+                    <div class="booking-room-card__actions">
+                      <a
+                        class="booking-room-card__reserve"
+                        data-room="junior-suite"
+                        href="booking-details.html"
+                        >Reserve This Room</a
+                      >
+                    </div>
+                  </div>
                 </div>
               </div>
             </article>
@@ -414,30 +414,32 @@
             <article
               class="booking-room-card booking-room-card--compact"
               data-room="deluxe-double"
-              data-room-label="Deluxe King Room"
+              data-room-label="Deluxe Double Room"
             >
               <div class="booking-room-card__media">
                 <img
-                  src="img/deluxeroom.webp"
-                  alt="Deluxe King Room at Derand Hotel"
+                  src="img/deluxeroom4.webp"
+                  alt="Deluxe Double Room at Derand Hotel"
                   loading="lazy"
                   decoding="async"
                 />
               </div>
               <div class="booking-room-card__body">
-                <h3 class="booking-room-card__title">Deluxe King Room</h3>
+                <h3 class="booking-room-card__title">Deluxe Double Room</h3>
                 <p class="booking-room-card__copy">
                   A blend of modern efficiency and classic aesthetics, perfect for
                   the discerning solo traveler.
                 </p>
                 <div class="booking-room-card__footer-row">
-                  <p class="booking-room-card__inline-price">&euro;320/night</p>
-                  <a
-                    class="booking-room-card__reserve"
-                    data-room="deluxe-double"
-                    href="booking-details.html"
-                    >Reserve</a
-                  >
+                  <p class="booking-room-card__inline-price">&euro;88/night</p>
+                  <div class="booking-room-card__mini-actions">
+                    <a
+                      class="booking-room-card__reserve"
+                      data-room="deluxe-double"
+                      href="booking-details.html"
+                      >Reserve</a
+                    >
+                  </div>
                 </div>
               </div>
             </article>
@@ -449,7 +451,7 @@
             >
               <div class="booking-room-card__media">
                 <img
-                  src="img/p1.webp"
+                  src="img/premium1.webp"
                   alt="Premium Room at Derand Hotel"
                   loading="lazy"
                   decoding="async"
@@ -462,13 +464,15 @@
                   amenities for an extended stay.
                 </p>
                 <div class="booking-room-card__footer-row">
-                  <p class="booking-room-card__inline-price">&euro;450/night</p>
-                  <a
-                    class="booking-room-card__reserve"
-                    data-room="premium-double"
-                    href="booking-details.html"
-                    >Reserve</a
-                  >
+                  <p class="booking-room-card__inline-price">&euro;99/night</p>
+                  <div class="booking-room-card__mini-actions">
+                    <a
+                      class="booking-room-card__reserve"
+                      data-room="premium-double"
+                      href="booking-details.html"
+                      >Reserve</a
+                    >
+                  </div>
                 </div>
               </div>
             </article>
@@ -480,7 +484,7 @@
             >
               <div class="booking-room-card__media">
                 <img
-                  src="img/t1.webp"
+                  src="img/twinbook.jpg"
                   alt="Twin Room at Derand Hotel"
                   loading="lazy"
                   decoding="async"
@@ -493,44 +497,48 @@
                   signature Heritage Suite luxury.
                 </p>
                 <div class="booking-room-card__footer-row">
-                  <p class="booking-room-card__inline-price">&euro;350/night</p>
-                  <a
-                    class="booking-room-card__reserve"
-                    data-room="superior-twin"
-                    href="booking-details.html"
-                    >Reserve</a
-                  >
+                  <p class="booking-room-card__inline-price">&euro;72/night</p>
+                  <div class="booking-room-card__mini-actions">
+                    <a
+                      class="booking-room-card__reserve"
+                      data-room="superior-twin"
+                      href="booking-details.html"
+                      >Reserve</a
+                    >
+                  </div>
                 </div>
               </div>
             </article>
 
             <article
               class="booking-room-card booking-room-card--compact"
-              data-room="junior-suite"
-              data-room-label="Junior Suite"
+              data-room="superior-double"
+              data-room-label="Superior Double Room"
             >
               <div class="booking-room-card__media">
                 <img
-                  src="img/j.webp"
-                  alt="Junior Suite at Derand Hotel"
+                  src="img/superiorroom3.webp"
+                  alt="Superior Double Room at Derand Hotel"
                   loading="lazy"
                   decoding="async"
                 />
               </div>
               <div class="booking-room-card__body">
-                <h3 class="booking-room-card__title">Junior Suite</h3>
+                <h3 class="booking-room-card__title">Superior Double Room</h3>
                 <p class="booking-room-card__copy">
-                  A compact yet lavish suite offering a taste of nobility with
-                  its historical architectural details.
+                  Refined comfort with elegant detailing and a serene atmosphere
+                  designed for effortless city stays.
                 </p>
                 <div class="booking-room-card__footer-row">
-                  <p class="booking-room-card__inline-price">&euro;280/night</p>
-                  <a
-                    class="booking-room-card__reserve"
-                    data-room="junior-suite"
-                    href="booking-details.html"
-                    >Reserve</a
-                  >
+                  <p class="booking-room-card__inline-price">&euro;84/night</p>
+                  <div class="booking-room-card__mini-actions">
+                    <a
+                      class="booking-room-card__reserve"
+                      data-room="superior-double"
+                      href="booking-details.html"
+                      >Reserve</a
+                    >
+                  </div>
                 </div>
               </div>
             </article>

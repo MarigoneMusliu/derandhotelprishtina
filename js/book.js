@@ -56,7 +56,7 @@
       layers[currentIndex].classList.remove("is-visible");
       currentIndex = (currentIndex + 1) % layers.length;
       layers[currentIndex].classList.add("is-visible");
-    }, 4200);
+    }, 1000);
   }
 
   function todayIso() {

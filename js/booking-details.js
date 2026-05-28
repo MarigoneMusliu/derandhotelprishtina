@@ -8,32 +8,32 @@
   var ROOM_DATA = {
     "junior-suite": {
       label: "Junior Suite",
-      image: "img/j.webp",
-      price: 280,
+      image: "img/1111.webp",
+      price: 119,
       meta: "37 m2 / King bed",
     },
     "deluxe-double": {
       label: "Deluxe Double Room",
-      image: "img/deluxeroom.webp",
-      price: 320,
+      image: "img/deluxeroom4.webp",
+      price: 88,
       meta: "30 m2 / King bed",
     },
     "premium-double": {
       label: "Premium Double Room",
-      image: "img/p1.webp",
-      price: 450,
+      image: "img/premium1.webp",
+      price: 99,
       meta: "28 m2 / King bed",
     },
     "superior-twin": {
       label: "Superior Twin Room",
-      image: "img/t1.webp",
-      price: 350,
+      image: "img/twinbook.jpg",
+      price: 72,
       meta: "23 m2 / Twin beds",
     },
     "superior-double": {
       label: "Superior Double Room",
-      image: "img/s1.webp",
-      price: 390,
+      image: "img/superiorroom3.webp",
+      price: 84,
       meta: "22 m2 / King bed",
     },
   };
@@ -53,8 +53,6 @@
   var stayCountEl = document.getElementById("booking-summary-stay-count");
   var roomTotalLabelEl = document.getElementById("booking-price-room-label");
   var roomTotalEl = document.getElementById("booking-price-room-total");
-  var feesEl = document.getElementById("booking-price-fees");
-  var discountEl = document.getElementById("booking-price-discount");
   var totalEl = document.getElementById("booking-price-total");
   var cancelDeadlineEl = document.getElementById("booking-cancel-deadline");
   var statusEl = document.getElementById("booking-details-status");
@@ -62,6 +60,11 @@
   var fullNameEl = document.getElementById("booking-full-name");
   var emailEl = document.getElementById("booking-email");
   var phoneEl = document.getElementById("booking-phone");
+  var roomInputEl = document.getElementById("booking-room");
+  var checkinInputEl = document.getElementById("booking-checkin");
+  var checkoutInputEl = document.getElementById("booking-checkout");
+  var adultsInputEl = document.getElementById("booking-adults");
+  var childrenInputEl = document.getElementById("booking-children");
   var notesEl = document.getElementById("booking-notes");
   var selectedMethod = "hotelrunner";
 
@@ -132,7 +135,7 @@
     var room = ROOM_DATA[roomKey] ? roomKey : "junior-suite";
     var checkin = params.get("checkin") || formatIso(today);
     var checkout = params.get("checkout") || formatIso(tomorrow);
-    var adults = parseInt(params.get("adults"), 10) || 2;
+    var adults = parseInt(params.get("adults"), 10) === 2 ? 2 : 1;
     var children = parseInt(params.get("children"), 10) || 0;
 
     var start = parseIso(checkin);
@@ -180,6 +183,59 @@
     return HOTELRUNNER_BASE + "?" + params.toString();
   }
 
+  function syncGuestStateFromInputs() {
+    if (roomInputEl && ROOM_DATA[roomInputEl.value]) {
+      state.room = roomInputEl.value;
+    }
+    if (checkinInputEl && checkinInputEl.value) {
+      state.checkin = checkinInputEl.value;
+    }
+    if (checkoutInputEl && checkoutInputEl.value) {
+      state.checkout = checkoutInputEl.value;
+    }
+    if (adultsInputEl) {
+      var typedAdults = parseInt(adultsInputEl.value, 10);
+      if (isNaN(typedAdults)) typedAdults = 1;
+      state.adults = Math.min(2, Math.max(1, typedAdults));
+      adultsInputEl.value = String(state.adults);
+    }
+    if (childrenInputEl) {
+      var typedChildren = parseInt(childrenInputEl.value, 10);
+      if (isNaN(typedChildren)) typedChildren = 0;
+      state.children = Math.min(2, Math.max(0, typedChildren));
+      childrenInputEl.value = String(state.children);
+    }
+  }
+
+  function forceNativeSelect(selectEl) {
+    if (!selectEl) return;
+    selectEl.classList.add("booking-native-select");
+    selectEl.disabled = false;
+    selectEl.style.display = "block";
+    selectEl.style.opacity = "1";
+    selectEl.style.visibility = "visible";
+    selectEl.style.pointerEvents = "auto";
+    selectEl.style.position = "relative";
+    selectEl.style.zIndex = "3";
+    var sibling = selectEl.nextElementSibling;
+    if (sibling && sibling.classList && sibling.classList.contains("nice-select")) {
+      sibling.parentNode.removeChild(sibling);
+    }
+  }
+
+  function lockSelectToNative(selectEl) {
+    if (!selectEl || !selectEl.parentNode) return;
+    forceNativeSelect(selectEl);
+    var observer = new MutationObserver(function () {
+      forceNativeSelect(selectEl);
+      var next = selectEl.nextElementSibling;
+      if (next && next.classList && next.classList.contains("nice-select")) {
+        next.parentNode.removeChild(next);
+      }
+    });
+    observer.observe(selectEl.parentNode, { childList: true, subtree: false });
+  }
+
   function setStatus(message, type) {
     statusEl.textContent = message || "";
     statusEl.className = "booking-details__status" + (type ? " is-" + type : "");
@@ -202,6 +258,8 @@
   function validate() {
     clearErrors();
     var valid = true;
+    var start = parseIso(state.checkin);
+    var end = parseIso(state.checkout);
 
     if (!fullNameEl.value.trim()) {
       markError(fullNameEl);
@@ -218,6 +276,22 @@
       valid = false;
     }
 
+    if (!adultsInputEl || (parseInt(adultsInputEl.value, 10) || 0) < 1) {
+      if (adultsInputEl) markError(adultsInputEl);
+      valid = false;
+    }
+
+    if (!ROOM_DATA[state.room]) {
+      if (roomInputEl) markError(roomInputEl);
+      valid = false;
+    }
+
+    if (!start || !end || end <= start) {
+      if (checkinInputEl) markError(checkinInputEl);
+      if (checkoutInputEl) markError(checkoutInputEl);
+      valid = false;
+    }
+
     if (!valid) {
       setStatus("Please complete the highlighted guest details.", "error");
     }
@@ -230,14 +304,19 @@
       access_key: WEB3FORMS_ACCESS_KEY,
       subject: "Booking details — " + room.label + " — " + state.checkin,
       from_name: "Derand Hotel Booking Details",
+      to_email: NOTIFY_EMAIL,
       email: NOTIFY_EMAIL,
       replyto: emailEl.value.trim(),
       message: [
         "New booking details submission — Derand Hotel",
         "",
-        "Room: " + room.label,
+        "Room type: " + room.label,
+        "Check-in: " + formatDate(state.checkin),
+        "Check-out: " + formatDate(state.checkout),
+        "Adults: " + state.adults,
+        "Children: " + state.children,
         "Stay: " + formatDate(state.checkin) + " to " + formatDate(state.checkout),
-        "Guests: " + guestSummary(state.adults, state.children),
+        "Guests summary: " + guestSummary(state.adults, state.children),
         "Nights: " + nights,
         "Payment preference: " + selectedMethod,
         "",
@@ -266,10 +345,10 @@
   function render(state) {
     var room = ROOM_DATA[state.room];
     var nights = getNightCount(state);
-    var roomTotal = room.price * nights;
-    var fees = roomTotal * TAX_RATE;
+    var roomTotal = room.price;
+    var fees = 0;
     var discount = 0;
-    var total = roomTotal + fees;
+    var total = room.price;
     var cancelDeadline = parseIso(state.checkin);
 
     if (cancelDeadline) {
@@ -287,14 +366,17 @@
     nightsEl.textContent = nights + " " + (nights === 1 ? "night" : "nights");
     dateRangeEl.textContent = shortDateRange(state.checkin, state.checkout);
     stayCountEl.textContent = nights + " " + (nights === 1 ? "Night" : "Nights");
-    roomTotalLabelEl.textContent =
-      room.label + " (" + nights + " " + (nights === 1 ? "night" : "nights") + ")";
+    roomTotalLabelEl.textContent = room.label + " (per night)";
     roomTotalEl.textContent = currency(roomTotal);
-    feesEl.textContent = currency(fees);
-    discountEl.textContent = "-" + currency(discount);
     totalEl.textContent = currency(total);
     cancelDeadlineEl.textContent = cancelDeadline ? formatDate(formatIso(cancelDeadline)) : "—";
     backLinkEl.href = buildBackUrl(state);
+
+    if (roomInputEl) roomInputEl.value = state.room;
+    if (checkinInputEl) checkinInputEl.value = state.checkin;
+    if (checkoutInputEl) checkoutInputEl.value = state.checkout;
+    if (adultsInputEl) adultsInputEl.value = String(state.adults);
+    if (childrenInputEl) childrenInputEl.value = String(state.children);
 
     return {
       roomTotal: roomTotal,
@@ -309,8 +391,53 @@
   var state = loadState();
   var renderState = render(state);
 
+  lockSelectToNative(roomInputEl);
+  window.setTimeout(function () {
+    forceNativeSelect(roomInputEl);
+  }, 120);
+  window.addEventListener("load", function () {
+    forceNativeSelect(roomInputEl);
+  });
+
+  if (roomInputEl) {
+    roomInputEl.addEventListener("change", function () {
+      syncGuestStateFromInputs();
+      renderState = render(state);
+    });
+  }
+
+  if (checkinInputEl) {
+    checkinInputEl.addEventListener("change", function () {
+      syncGuestStateFromInputs();
+      renderState = render(state);
+    });
+  }
+
+  if (checkoutInputEl) {
+    checkoutInputEl.addEventListener("change", function () {
+      syncGuestStateFromInputs();
+      renderState = render(state);
+    });
+  }
+
+  if (adultsInputEl) {
+    adultsInputEl.addEventListener("change", function () {
+      syncGuestStateFromInputs();
+      renderState = render(state);
+    });
+  }
+
+  if (childrenInputEl) {
+    childrenInputEl.addEventListener("change", function () {
+      syncGuestStateFromInputs();
+      renderState = render(state);
+    });
+  }
+
   form.addEventListener("submit", function (event) {
     event.preventDefault();
+    syncGuestStateFromInputs();
+    renderState = render(state);
     if (!validate()) return;
 
     setStatus("Preparing secure payment...", "");

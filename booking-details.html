@@ -45,18 +45,6 @@
         font-family: FontAwesome !important;
       }
 
-      @media (min-width: 981px) {
-        body.booking-details-page.sacher-home.policy-font-noto-serif {
-          padding-top: 0 !important;
-        }
-
-        body.booking-details-page .header,
-        body.booking-details-page .footer,
-        body.booking-details-page .offcanvas-menu-wrapper,
-        body.booking-details-page .offcanvas-menu-overlay {
-          display: none !important;
-        }
-      }
     </style>
   </head>
 
@@ -251,13 +239,33 @@
             </div>
 
             <div class="booking-fields booking-fields--grid">
+              <label class="booking-field booking-field--full">
+                <span>Room</span>
+                <select id="booking-room" name="room" required>
+                  <option value="junior-suite">Junior Suite</option>
+                  <option value="deluxe-double">Deluxe Double Room</option>
+                  <option value="premium-double">Premium Room</option>
+                  <option value="superior-twin">Superior Twin Room</option>
+                  <option value="superior-double">Superior Double Room</option>
+                </select>
+              </label>
+
+              <label class="booking-field booking-field--half">
+                <span>Check-in</span>
+                <input type="date" id="booking-checkin" name="checkin" required />
+              </label>
+
+              <label class="booking-field booking-field--half">
+                <span>Check-out</span>
+                <input type="date" id="booking-checkout" name="checkout" required />
+              </label>
+
               <label class="booking-field">
                 <span>Full Name</span>
                 <input
                   type="text"
                   id="booking-full-name"
                   name="full_name"
-                  placeholder="e.g., Julian Alexander"
                   autocomplete="name"
                   required
                 />
@@ -269,7 +277,6 @@
                   type="email"
                   id="booking-email"
                   name="email"
-                  placeholder="julian@derandhotel.com"
                   autocomplete="email"
                   required
                 />
@@ -281,9 +288,35 @@
                   type="tel"
                   id="booking-phone"
                   name="phone"
-                  placeholder="+44 (0) 20 7946 0000"
                   autocomplete="tel"
                   required
+                />
+              </label>
+
+              <label class="booking-field booking-field--half">
+                <span>Adults</span>
+                <input
+                  type="number"
+                  id="booking-adults"
+                  name="adults"
+                  min="1"
+                  max="2"
+                  step="1"
+                  value="1"
+                  required
+                />
+              </label>
+
+              <label class="booking-field booking-field--half">
+                <span>Children</span>
+                <input
+                  type="number"
+                  id="booking-children"
+                  name="children"
+                  min="0"
+                  max="2"
+                  step="1"
+                  value="0"
                 />
               </label>
 
@@ -292,7 +325,6 @@
                 <textarea
                   id="booking-notes"
                   name="notes"
-                  placeholder="Dietary requirements, accessibility needs, or preferred floor..."
                 ></textarea>
               </label>
             </div>
@@ -330,14 +362,6 @@
                   <span id="booking-price-room-label">Superior Suite (4 nights)</span>
                   <strong id="booking-price-room-total">&euro;390.00</strong>
                 </div>
-                <div class="booking-summary-card__row">
-                  <span>Taxes &amp; Fees</span>
-                  <strong id="booking-price-fees">&euro;58.50</strong>
-                </div>
-                <div class="booking-summary-card__row">
-                  <span>Heritage Member Discount</span>
-                  <strong id="booking-price-discount">-&euro;0.00</strong>
-                </div>
               </div>
 
               <div class="booking-summary-card__total">
@@ -349,9 +373,6 @@
                 Confirm Booking
                 <i class="fa fa-arrow-right" aria-hidden="true"></i>
               </button>
-              <p class="booking-summary-card__note">
-                Free cancellation until <span id="booking-cancel-deadline">Oct 20, 2023</span>.
-              </p>
             </section>
 
             <div class="booking-side__benefits">
@@ -489,23 +510,17 @@
                     <input
                       type="text"
                       name="firstName"
-                      placeholder="FIRST NAME"
-                      data-i18n-placeholder="newsletter-first-name"
                       autocomplete="given-name"
                     />
                     <input
                       type="text"
                       name="lastName"
-                      placeholder="LAST NAME"
-                      data-i18n-placeholder="newsletter-last-name"
                       autocomplete="family-name"
                     />
                   </div>
                   <input
                     type="email"
                     name="email"
-                    placeholder="EMAIL ADDRESS"
-                    data-i18n-placeholder="newsletter-email"
                     autocomplete="email"
                   />
                   <label class="footer__newslatter__check">
