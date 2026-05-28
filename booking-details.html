@@ -360,6 +360,14 @@
                 </div>
               </label>
 
+              <div class="booking-field booking-field--full booking-child-ages" id="booking-child-ages">
+                <span>Children Years</span>
+                <p class="booking-child-ages__note">
+                  Premium Room policy: children up to 3 years are free, 4+ years add &euro;20 per child.
+                </p>
+                <div class="booking-child-ages__inputs" id="booking-child-ages-inputs"></div>
+              </div>
+
               <label class="booking-field booking-field--full">
                 <span>Special Requests (Optional)</span>
                 <textarea
@@ -550,17 +558,23 @@
                     <input
                       type="text"
                       name="firstName"
+                      placeholder="FIRST NAME"
+                      data-i18n-placeholder="newsletter-first-name"
                       autocomplete="given-name"
                     />
                     <input
                       type="text"
                       name="lastName"
+                      placeholder="SURNAME"
+                      data-i18n-placeholder="newsletter-last-name"
                       autocomplete="family-name"
                     />
                   </div>
                   <input
                     type="email"
                     name="email"
+                    placeholder="EMAIL ADDRESS"
+                    data-i18n-placeholder="newsletter-email"
                     autocomplete="email"
                   />
                   <label class="footer__newslatter__check">
@@ -651,6 +665,6 @@
     <script src="js/main.js?v=20260515-1" defer></script>
     <script src="js/site-whatsapp.js?v=8" defer></script>
     <script src="js/tidio-left-position.js?v=2" defer></script>
-    <script src="js/booking-details.js?v=4" defer></script>
+    <script src="js/booking-details.js?v=6" defer></script>
   </body>
 </html>

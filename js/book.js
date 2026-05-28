@@ -115,14 +115,14 @@
 
   function syncCountsFromGuestSelect() {
     if (!guestsSelectEl) return;
-    var parts = (guestsSelectEl.value || "2-0").split("-");
-    adultsEl.value = parts[0] || "2";
+    var parts = (guestsSelectEl.value || "1-0").split("-");
+    adultsEl.value = parts[0] || "1";
     childrenEl.value = parts[1] || "0";
   }
 
   function syncGuestSelectFromCounts() {
     if (!guestsSelectEl) return;
-    var combined = (adultsEl.value || "2") + "-" + (childrenEl.value || "0");
+    var combined = (adultsEl.value || "1") + "-" + (childrenEl.value || "0");
     var hasExactOption = Array.prototype.some.call(guestsSelectEl.options, function (option) {
       return option.value === combined;
     });
@@ -130,7 +130,7 @@
     if (hasExactOption) {
       guestsSelectEl.value = combined;
     } else {
-      guestsSelectEl.value = (adultsEl.value || "2") + "-0";
+      guestsSelectEl.value = (adultsEl.value || "1") + "-0";
       childrenEl.value = "0";
     }
   }
@@ -178,7 +178,7 @@
   }
 
   function buildSearchParams(room) {
-    var adults = parseInt(adultsEl.value, 10) || 2;
+    var adults = parseInt(adultsEl.value, 10) || 1;
     var children = parseInt(childrenEl.value, 10) || 0;
     var params = new URLSearchParams();
 

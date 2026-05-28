@@ -65,6 +65,8 @@
   var checkoutInputEl = document.getElementById("booking-checkout");
   var adultsInputEl = document.getElementById("booking-adults");
   var childrenInputEl = document.getElementById("booking-children");
+  var childAgesWrapEl = document.getElementById("booking-child-ages");
+  var childAgesInputsEl = document.getElementById("booking-child-ages-inputs");
   var notesEl = document.getElementById("booking-notes");
   var confirmBtnEl = document.getElementById("booking-confirm");
   var selectedMethod = "hotelrunner";
@@ -135,6 +137,10 @@
     return roomKey === "premium-double" ? 3 : 2;
   }
 
+  function isPremiumRoom(roomKey) {
+    return roomKey === "premium-double";
+  }
+
   function getRoomBasePrice(roomKey, adults) {
     if (roomKey === "junior-suite") {
       return adults >= 2 ? 125 : 119;
@@ -162,10 +168,9 @@
     var room = ROOM_DATA[roomKey] ? roomKey : "junior-suite";
     var checkin = params.get("checkin") || formatIso(today);
     var checkout = params.get("checkout") || formatIso(tomorrow);
-    var parsedAdults = parseInt(params.get("adults"), 10);
-    if (isNaN(parsedAdults)) parsedAdults = 1;
-    var adults = Math.max(1, Math.min(getAdultsMaxForRoom(room), parsedAdults));
+    var adults = 1;
     var children = parseInt(params.get("children"), 10) || 0;
+    if (!isPremiumRoom(room)) children = 0;
 
     var start = parseIso(checkin);
     var end = parseIso(checkout);
@@ -180,6 +185,7 @@
       checkout: checkout,
       adults: adults,
       children: children,
+      childAges: [],
     };
   }
 
@@ -212,6 +218,76 @@
     return HOTELRUNNER_BASE + "?" + params.toString();
   }
 
+  function getChildrenSurcharge(roomKey, childAges) {
+    if (!isPremiumRoom(roomKey)) return 0;
+    return (childAges || []).reduce(function (sum, age) {
+      var n = parseInt(age, 10);
+      if (isNaN(n)) return sum;
+      return sum + (n > 3 ? 20 : 0);
+    }, 0);
+  }
+
+  function syncChildAgesLength() {
+    if (!state.childAges || !Array.isArray(state.childAges)) {
+      state.childAges = [];
+    }
+    var needed = Math.max(0, state.children || 0);
+    while (state.childAges.length < needed) {
+      state.childAges.push("");
+    }
+    if (state.childAges.length > needed) {
+      state.childAges = state.childAges.slice(0, needed);
+    }
+  }
+
+  function renderChildAgeInputs() {
+    if (!childAgesWrapEl || !childAgesInputsEl) return;
+    var visible = isPremiumRoom(state.room) && state.children > 0;
+    childAgesWrapEl.classList.toggle("is-visible", visible);
+    childAgesInputsEl.innerHTML = "";
+    if (!visible) return;
+
+    syncChildAgesLength();
+    state.childAges.forEach(function (value, index) {
+      var row = document.createElement("div");
+      row.className = "booking-child-ages__row";
+
+      var label = document.createElement("label");
+      label.className = "booking-child-ages__label";
+      label.setAttribute("for", "booking-child-age-" + index);
+      label.textContent = "Child " + (index + 1) + " age";
+
+      var input = document.createElement("input");
+      input.type = "number";
+      input.min = "0";
+      input.max = "17";
+      input.step = "1";
+      input.id = "booking-child-age-" + index;
+      input.value = value === "" ? "" : String(value);
+      input.placeholder = "Years";
+      input.required = true;
+      input.addEventListener("input", function () {
+        state.childAges[index] = input.value;
+        renderState = render(state);
+      });
+
+      row.appendChild(label);
+      row.appendChild(input);
+      childAgesInputsEl.appendChild(row);
+    });
+  }
+
+  function enforceChildrenPolicy(showAlert) {
+    if (!isPremiumRoom(state.room) && state.children > 0) {
+      state.children = 0;
+      state.childAges = [];
+      if (childrenInputEl) childrenInputEl.value = "0";
+      if (showAlert) {
+        window.alert("Children are available only for Premium Room due to space limits.");
+      }
+    }
+  }
+
   function syncGuestStateFromInputs() {
     if (roomInputEl && ROOM_DATA[roomInputEl.value]) {
       state.room = roomInputEl.value;
@@ -234,6 +310,8 @@
       state.children = Math.min(2, Math.max(0, typedChildren));
       childrenInputEl.value = String(state.children);
     }
+    enforceChildrenPolicy(false);
+    syncChildAgesLength();
   }
 
   function forceNativeSelect(selectEl) {
@@ -323,6 +401,22 @@
       valid = false;
     }
 
+    if (isPremiumRoom(state.room) && state.children > 0) {
+      syncChildAgesLength();
+      var hasInvalidChildAge = state.childAges.some(function (age) {
+        var n = parseInt(age, 10);
+        return isNaN(n) || n < 0;
+      });
+      if (hasInvalidChildAge) {
+        if (childAgesWrapEl) childAgesWrapEl.classList.add("is-invalid");
+        valid = false;
+      } else if (childAgesWrapEl) {
+        childAgesWrapEl.classList.remove("is-invalid");
+      }
+    } else if (childAgesWrapEl) {
+      childAgesWrapEl.classList.remove("is-invalid");
+    }
+
     if (!valid) {
       setStatus("Please complete the highlighted guest details.", "error");
     }
@@ -356,6 +450,7 @@
       booking_nights: String(nights),
       booking_adults: String(state.adults),
       booking_children: String(state.children),
+      booking_child_ages: (state.childAges || []).join(", "),
       booking_total: currency(totals.total),
       submitted_at: submittedAt,
       message: [
@@ -369,6 +464,8 @@
         "Check-out: " + checkOutFormatted + " (" + state.checkout + ")",
         "Adults: " + state.adults,
         "Children: " + state.children,
+        "Children ages: " + ((state.childAges && state.childAges.length) ? state.childAges.join(", ") : "(none)"),
+        "Children surcharge: " + currency(totals.childSurcharge || 0),
         "Stay: " + checkInFormatted + " to " + checkOutFormatted,
         "Guests summary: " + guestSummary(state.adults, state.children),
         "Nights: " + nights,
@@ -437,10 +534,14 @@
   function render(state) {
     var room = ROOM_DATA[state.room];
     var nights = getNightCount(state);
+    enforceChildrenPolicy(false);
+    syncChildAgesLength();
+    renderChildAgeInputs();
     var roomTotal = getRoomBasePrice(state.room, state.adults);
+    var childSurcharge = getChildrenSurcharge(state.room, state.childAges);
     var fees = 0;
     var discount = 0;
-    var total = roomTotal;
+    var total = roomTotal + childSurcharge;
     var cancelDeadline = parseIso(state.checkin);
 
     if (cancelDeadline) {
@@ -480,6 +581,7 @@
     if (childrenInputEl) childrenInputEl.value = String(state.children);
     return {
       roomTotal: roomTotal,
+      childSurcharge: childSurcharge,
       fees: fees,
       discount: discount,
       total: total,
@@ -548,6 +650,18 @@
 
         var min = targetId === "booking-adults" ? 1 : 0;
         var max = targetId === "booking-adults" ? getAdultsMaxForRoom(state.room) : 2;
+        if (
+          targetId === "booking-children" &&
+          action === "increment" &&
+          !isPremiumRoom(state.room)
+        ) {
+          window.alert("Children are available only for Premium Room due to space limits.");
+          state.children = 0;
+          input.value = "0";
+          syncGuestStateFromInputs();
+          renderState = render(state);
+          return;
+        }
         var next = action === "increment" ? current + 1 : current - 1;
         next = Math.min(max, Math.max(min, next));
         input.value = String(next);
