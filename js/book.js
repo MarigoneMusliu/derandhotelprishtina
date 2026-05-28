@@ -41,22 +41,30 @@
 
     slidesHost.innerHTML = "";
 
+    function ensureLayerImage(layer) {
+      if (!layer || layer.dataset.loaded === "1") return;
+      var src = layer.getAttribute("data-src");
+      if (!src) return;
+      layer.style.backgroundImage = 'url("' + src + '")';
+      layer.dataset.loaded = "1";
+    }
+
     var layers = sources.map(function (src, index) {
       var layer = document.createElement("div");
       layer.className = "booking-hero__layer" + (index === 0 ? " is-visible" : "");
-      layer.style.backgroundImage = 'url("' + src + '")';
+      layer.setAttribute("data-src", src);
+      if (index === 0) {
+        ensureLayerImage(layer);
+      }
       slidesHost.appendChild(layer);
       return layer;
     });
 
     if (layers.length < 2) return;
 
-    var currentIndex = 0;
-    window.setInterval(function () {
-      layers[currentIndex].classList.remove("is-visible");
-      currentIndex = (currentIndex + 1) % layers.length;
-      layers[currentIndex].classList.add("is-visible");
-    }, 1000);
+    // Keep the hero static for smoother scrolling and better stability.
+    // Rotating large background layers was causing jank on this page.
+    return;
   }
 
   function todayIso() {
@@ -130,15 +138,24 @@
   function setMinDates() {
     var today = todayIso();
     checkInEl.min = today;
-    if (!checkInEl.value || checkInEl.value < today) {
-      checkInEl.value = today;
+    if (checkInEl.value && checkInEl.value < today) {
+      checkInEl.value = "";
+    }
+    if (!checkInEl.value) {
+      checkOutEl.min = "";
+      checkOutEl.value = "";
+      return;
     }
     updateCheckOutMin();
   }
 
   function updateCheckOutMin() {
     var start = parseIso(checkInEl.value);
-    if (!start) return;
+    if (!start) {
+      checkOutEl.min = "";
+      checkOutEl.value = "";
+      return;
+    }
 
     var next = new Date(start);
     next.setDate(next.getDate() + 1);
@@ -231,10 +248,18 @@
     return true;
   }
 
+  function ensureValidDatesForReserve() {
+    var today = todayIso();
+    if (!checkInEl.value || checkInEl.value < today) {
+      checkInEl.value = today;
+    }
+    updateCheckOutMin();
+  }
+
   function updateQueryString() {
     var params = new URLSearchParams();
-    params.set("checkin", checkInEl.value);
-    params.set("checkout", checkOutEl.value);
+    if (checkInEl.value) params.set("checkin", checkInEl.value);
+    if (checkOutEl.value) params.set("checkout", checkOutEl.value);
     params.set("adults", adultsEl.value);
     params.set("children", childrenEl.value);
     params.set("room", selectedRoom);
@@ -252,11 +277,19 @@
   }
 
   function applyQueryParams() {
+    var navEntries =
+      window.performance && typeof window.performance.getEntriesByType === "function"
+        ? window.performance.getEntriesByType("navigation")
+        : [];
+    var navType = navEntries.length ? navEntries[0].type : "";
+    var isReload = navType === "reload";
     var params = new URLSearchParams(window.location.search);
     var room = params.get("room");
 
-    if (params.get("checkin")) checkInEl.value = params.get("checkin");
-    if (params.get("checkout")) checkOutEl.value = params.get("checkout");
+    if (!isReload) {
+      if (params.get("checkin")) checkInEl.value = params.get("checkin");
+      if (params.get("checkout")) checkOutEl.value = params.get("checkout");
+    }
     if (params.get("adults")) adultsEl.value = params.get("adults");
     if (params.get("children")) childrenEl.value = params.get("children");
     syncGuestSelectFromCounts();
@@ -265,6 +298,10 @@
 
     if (room && cards.some(function (card) { return card.dataset.room === room; })) {
       selectedRoom = room;
+    }
+
+    if (isReload) {
+      updateQueryString();
     }
   }
 
@@ -309,6 +346,7 @@
     link.addEventListener("click", function (event) {
       var room = link.dataset.room || selectedRoom;
       selectRoom(room);
+      ensureValidDatesForReserve();
       if (!validateFilters()) {
         event.preventDefault();
         return;

@@ -66,7 +66,13 @@
   var adultsInputEl = document.getElementById("booking-adults");
   var childrenInputEl = document.getElementById("booking-children");
   var notesEl = document.getElementById("booking-notes");
+  var confirmBtnEl = document.getElementById("booking-confirm");
   var selectedMethod = "hotelrunner";
+
+  function setText(el, value) {
+    if (!el) return;
+    el.textContent = value;
+  }
 
   function parseIso(value) {
     if (!value) return null;
@@ -125,6 +131,27 @@
     return parts.join(", ") || "No guests";
   }
 
+  function getAdultsMaxForRoom(roomKey) {
+    return roomKey === "premium-double" ? 3 : 2;
+  }
+
+  function getRoomBasePrice(roomKey, adults) {
+    if (roomKey === "junior-suite") {
+      return adults >= 2 ? 125 : 119;
+    }
+    if (roomKey === "premium-double") {
+      return adults >= 3 ? 140 : 104;
+    }
+    if (roomKey === "deluxe-double") {
+      return adults >= 2 ? 93 : 88;
+    }
+    if (roomKey === "superior-twin") {
+      return adults >= 2 ? 84 : 72;
+    }
+    var room = ROOM_DATA[roomKey];
+    return room ? room.price : 0;
+  }
+
   function loadState() {
     var params = new URLSearchParams(window.location.search);
     var roomKey = params.get("room");
@@ -135,7 +162,9 @@
     var room = ROOM_DATA[roomKey] ? roomKey : "junior-suite";
     var checkin = params.get("checkin") || formatIso(today);
     var checkout = params.get("checkout") || formatIso(tomorrow);
-    var adults = parseInt(params.get("adults"), 10) === 2 ? 2 : 1;
+    var parsedAdults = parseInt(params.get("adults"), 10);
+    if (isNaN(parsedAdults)) parsedAdults = 1;
+    var adults = Math.max(1, Math.min(getAdultsMaxForRoom(room), parsedAdults));
     var children = parseInt(params.get("children"), 10) || 0;
 
     var start = parseIso(checkin);
@@ -196,7 +225,7 @@
     if (adultsInputEl) {
       var typedAdults = parseInt(adultsInputEl.value, 10);
       if (isNaN(typedAdults)) typedAdults = 1;
-      state.adults = Math.min(2, Math.max(1, typedAdults));
+      state.adults = Math.min(getAdultsMaxForRoom(state.room), Math.max(1, typedAdults));
       adultsInputEl.value = String(state.adults);
     }
     if (childrenInputEl) {
@@ -276,7 +305,9 @@
       valid = false;
     }
 
-    if (!adultsInputEl || (parseInt(adultsInputEl.value, 10) || 0) < 1) {
+    var adultsCount = parseInt(adultsInputEl && adultsInputEl.value, 10) || 0;
+    var adultsMax = getAdultsMaxForRoom(state.room);
+    if (!adultsInputEl || adultsCount < 1 || adultsCount > adultsMax) {
       if (adultsInputEl) markError(adultsInputEl);
       valid = false;
     }
@@ -300,29 +331,52 @@
   }
 
   function notifyHotel(state, room, nights, totals) {
+    var submittedAt = new Date().toISOString();
+    var checkInFormatted = formatDate(state.checkin);
+    var checkOutFormatted = formatDate(state.checkout);
+    var guestEmail = emailEl.value.trim();
+    var guestName = fullNameEl.value.trim();
+    var guestPhone = phoneEl.value.trim();
     var payload = {
       access_key: WEB3FORMS_ACCESS_KEY,
       subject: "Booking details — " + room.label + " — " + state.checkin,
       from_name: "Derand Hotel Booking Details",
-      to_email: NOTIFY_EMAIL,
       email: NOTIFY_EMAIL,
-      replyto: emailEl.value.trim(),
+      replyto: guestEmail,
+      to_email: NOTIFY_EMAIL,
+      recipient: NOTIFY_EMAIL,
+      notify_email: NOTIFY_EMAIL,
+      name: guestName,
+      guest_email: guestEmail,
+      guest_phone: guestPhone,
+      guest_name: guestName,
+      booking_room: room.label,
+      booking_checkin: state.checkin,
+      booking_checkout: state.checkout,
+      booking_nights: String(nights),
+      booking_adults: String(state.adults),
+      booking_children: String(state.children),
+      booking_total: currency(totals.total),
+      submitted_at: submittedAt,
       message: [
+        "Recipient: " + NOTIFY_EMAIL,
+        "",
         "New booking details submission — Derand Hotel",
         "",
+        "Submitted at: " + submittedAt,
         "Room type: " + room.label,
-        "Check-in: " + formatDate(state.checkin),
-        "Check-out: " + formatDate(state.checkout),
+        "Check-in: " + checkInFormatted + " (" + state.checkin + ")",
+        "Check-out: " + checkOutFormatted + " (" + state.checkout + ")",
         "Adults: " + state.adults,
         "Children: " + state.children,
-        "Stay: " + formatDate(state.checkin) + " to " + formatDate(state.checkout),
+        "Stay: " + checkInFormatted + " to " + checkOutFormatted,
         "Guests summary: " + guestSummary(state.adults, state.children),
         "Nights: " + nights,
         "Payment preference: " + selectedMethod,
         "",
-        "Guest name: " + fullNameEl.value.trim(),
-        "Email: " + emailEl.value.trim(),
-        "Phone: " + phoneEl.value.trim(),
+        "Guest name: " + guestName,
+        "Email: " + guestEmail,
+        "Phone: " + guestPhone,
         "",
         "Special requests:",
         notesEl.value.trim() || "(none)",
@@ -335,49 +389,95 @@
 
     return fetch(WEB3FORMS_URL, {
       method: "POST",
-      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
       body: JSON.stringify(payload),
-    }).catch(function () {
-      return null;
+    }).then(function (response) {
+      return response.json().then(function (data) {
+        return { ok: response.ok, json: data };
+      });
     });
+  }
+
+  function buildEmailMessage(state, room, nights, totals) {
+    return [
+      "New booking details submission — Derand Hotel",
+      "",
+      "Room type: " + room.label,
+      "Check-in: " + formatDate(state.checkin),
+      "Check-out: " + formatDate(state.checkout),
+      "Adults: " + state.adults,
+      "Children: " + state.children,
+      "Stay: " + formatDate(state.checkin) + " to " + formatDate(state.checkout),
+      "Guests summary: " + guestSummary(state.adults, state.children),
+      "Nights: " + nights,
+      "",
+      "Guest name: " + fullNameEl.value.trim(),
+      "Email: " + emailEl.value.trim(),
+      "Phone: " + phoneEl.value.trim(),
+      "",
+      "Special requests:",
+      notesEl.value.trim() || "(none)",
+      "",
+      "Room total: " + currency(totals.roomTotal),
+      "Final total: " + currency(totals.total),
+    ].join("\n");
+  }
+
+  function openEmailDraft(state, room, nights, totals) {
+    var subject = encodeURIComponent(
+      "Booking details — " + room.label + " — " + state.checkin,
+    );
+    var body = encodeURIComponent(buildEmailMessage(state, room, nights, totals));
+    window.location.href = "mailto:" + NOTIFY_EMAIL + "?subject=" + subject + "&body=" + body;
   }
 
   function render(state) {
     var room = ROOM_DATA[state.room];
     var nights = getNightCount(state);
-    var roomTotal = room.price;
+    var roomTotal = getRoomBasePrice(state.room, state.adults);
     var fees = 0;
     var discount = 0;
-    var total = room.price;
+    var total = roomTotal;
     var cancelDeadline = parseIso(state.checkin);
 
     if (cancelDeadline) {
       cancelDeadline.setDate(cancelDeadline.getDate() - 4);
     }
 
-    roomTitleEl.textContent = room.label;
-    roomMetaEl.textContent = room.meta;
-    roomImageEl.src = room.image;
-    roomImageEl.alt = room.label + " at Derand Hotel";
-    roomRateEl.textContent = currency(room.price) + " / night";
-    checkinEl.textContent = formatDate(state.checkin);
-    checkoutEl.textContent = formatDate(state.checkout);
-    guestsEl.textContent = guestSummary(state.adults, state.children);
-    nightsEl.textContent = nights + " " + (nights === 1 ? "night" : "nights");
-    dateRangeEl.textContent = shortDateRange(state.checkin, state.checkout);
-    stayCountEl.textContent = nights + " " + (nights === 1 ? "Night" : "Nights");
-    roomTotalLabelEl.textContent = room.label + " (per night)";
-    roomTotalEl.textContent = currency(roomTotal);
-    totalEl.textContent = currency(total);
-    cancelDeadlineEl.textContent = cancelDeadline ? formatDate(formatIso(cancelDeadline)) : "—";
-    backLinkEl.href = buildBackUrl(state);
+    setText(roomTitleEl, room.label);
+    setText(roomMetaEl, room.meta);
+    if (roomImageEl) {
+      roomImageEl.src = room.image;
+      roomImageEl.alt = room.label + " at Derand Hotel";
+    }
+    if (state.room === "premium-double") {
+      setText(roomRateEl, currency(roomTotal) + " / room");
+      setText(roomTotalLabelEl, room.label + " (per room)");
+    } else {
+      setText(roomRateEl, currency(roomTotal) + " / night");
+      setText(roomTotalLabelEl, room.label + " (per night)");
+    }
+    setText(checkinEl, formatDate(state.checkin));
+    setText(checkoutEl, formatDate(state.checkout));
+    setText(guestsEl, guestSummary(state.adults, state.children));
+    setText(nightsEl, nights + " " + (nights === 1 ? "night" : "nights"));
+    setText(dateRangeEl, shortDateRange(state.checkin, state.checkout));
+    setText(stayCountEl, nights + " " + (nights === 1 ? "Night" : "Nights"));
+    setText(roomTotalEl, currency(roomTotal));
+    setText(totalEl, currency(total));
+    setText(cancelDeadlineEl, cancelDeadline ? formatDate(formatIso(cancelDeadline)) : "—");
+    if (backLinkEl) {
+      backLinkEl.href = buildBackUrl(state);
+    }
 
     if (roomInputEl) roomInputEl.value = state.room;
     if (checkinInputEl) checkinInputEl.value = state.checkin;
     if (checkoutInputEl) checkoutInputEl.value = state.checkout;
     if (adultsInputEl) adultsInputEl.value = String(state.adults);
     if (childrenInputEl) childrenInputEl.value = String(state.children);
-
     return {
       roomTotal: roomTotal,
       fees: fees,
@@ -434,18 +534,65 @@
     });
   }
 
+  Array.prototype.forEach.call(
+    document.querySelectorAll(".booking-stepper__btn"),
+    function (btn) {
+      btn.addEventListener("click", function () {
+        var targetId = btn.getAttribute("data-stepper-target");
+        var action = btn.getAttribute("data-stepper-action");
+        var input = document.getElementById(targetId);
+        if (!input) return;
+
+        var current = parseInt(input.value, 10);
+        if (isNaN(current)) current = targetId === "booking-adults" ? 1 : 0;
+
+        var min = targetId === "booking-adults" ? 1 : 0;
+        var max = targetId === "booking-adults" ? getAdultsMaxForRoom(state.room) : 2;
+        var next = action === "increment" ? current + 1 : current - 1;
+        next = Math.min(max, Math.max(min, next));
+        input.value = String(next);
+
+        syncGuestStateFromInputs();
+        renderState = render(state);
+      });
+    },
+  );
+
   form.addEventListener("submit", function (event) {
     event.preventDefault();
     syncGuestStateFromInputs();
     renderState = render(state);
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      window.alert("Please fill all fields except Children and Special Requests before confirming your booking.");
+      return;
+    }
     if (!validate()) return;
 
-    setStatus("Preparing secure payment...", "");
-    notifyHotel(state, renderState.room, renderState.nights, renderState).finally(function () {
-      setStatus("Redirecting to HotelRunner secure checkout...", "success");
-      window.setTimeout(function () {
-        window.location.href = buildHotelRunnerUrl(state);
-      }, 650);
-    });
+    setStatus("Sending…", "success");
+    notifyHotel(state, renderState.room, renderState.nights, renderState)
+      .then(function (result) {
+        if (!result || !result.ok || !result.json || !result.json.success) {
+          throw new Error(
+            (result && result.json && result.json.message) || "Submit failed",
+          );
+        }
+        setStatus("Thank you — we received your message.", "success");
+        form.reset();
+        syncGuestStateFromInputs();
+        renderState = render(state);
+        clearErrors();
+      })
+      .catch(function (error) {
+        setStatus(
+          "Something went wrong (" +
+            (error && error.message ? error.message : "send failed") +
+            "). Please email info@derandhotel.com.",
+          "error",
+        );
+      })
+      .finally(function () {
+        if (confirmBtnEl) confirmBtnEl.disabled = false;
+      });
   });
 })();

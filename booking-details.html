@@ -231,7 +231,7 @@
           <h1 class="booking-checkout__title">Guest &amp; Payment Details</h1>
         </div>
 
-        <form class="booking-checkout__grid" id="booking-details-form" novalidate>
+        <form class="booking-checkout__grid" id="booking-details-form">
           <section class="booking-panel booking-panel--guest">
             <div class="booking-panel__header">
               <i class="fa fa-user-o" aria-hidden="true"></i>
@@ -295,29 +295,69 @@
 
               <label class="booking-field booking-field--half">
                 <span>Adults</span>
-                <input
-                  type="number"
-                  id="booking-adults"
-                  name="adults"
-                  min="1"
-                  max="2"
-                  step="1"
-                  value="1"
-                  required
-                />
+                <div class="booking-stepper" data-stepper>
+                  <button
+                    type="button"
+                    class="booking-stepper__btn"
+                    data-stepper-action="decrement"
+                    data-stepper-target="booking-adults"
+                    aria-label="Decrease adults"
+                  >
+                    -
+                  </button>
+                  <input
+                    type="text"
+                    id="booking-adults"
+                    name="adults"
+                    value="1"
+                    readonly
+                    inputmode="none"
+                    aria-label="Adults"
+                    required
+                  />
+                  <button
+                    type="button"
+                    class="booking-stepper__btn"
+                    data-stepper-action="increment"
+                    data-stepper-target="booking-adults"
+                    aria-label="Increase adults"
+                  >
+                    +
+                  </button>
+                </div>
               </label>
 
               <label class="booking-field booking-field--half">
                 <span>Children</span>
-                <input
-                  type="number"
-                  id="booking-children"
-                  name="children"
-                  min="0"
-                  max="2"
-                  step="1"
-                  value="0"
-                />
+                <div class="booking-stepper" data-stepper>
+                  <button
+                    type="button"
+                    class="booking-stepper__btn"
+                    data-stepper-action="decrement"
+                    data-stepper-target="booking-children"
+                    aria-label="Decrease children"
+                  >
+                    -
+                  </button>
+                  <input
+                    type="text"
+                    id="booking-children"
+                    name="children"
+                    value="0"
+                    readonly
+                    inputmode="none"
+                    aria-label="Children"
+                  />
+                  <button
+                    type="button"
+                    class="booking-stepper__btn"
+                    data-stepper-action="increment"
+                    data-stepper-target="booking-children"
+                    aria-label="Increase children"
+                  >
+                    +
+                  </button>
+                </div>
               </label>
 
               <label class="booking-field booking-field--full">
@@ -370,7 +410,7 @@
               </div>
 
               <button class="booking-confirm" id="booking-confirm" type="submit">
-                Confirm Booking
+                Proceed to Payment
                 <i class="fa fa-arrow-right" aria-hidden="true"></i>
               </button>
             </section>
@@ -611,6 +651,6 @@
     <script src="js/main.js?v=20260515-1" defer></script>
     <script src="js/site-whatsapp.js?v=8" defer></script>
     <script src="js/tidio-left-position.js?v=2" defer></script>
-    <script src="js/booking-details.js?v=1" defer></script>
+    <script src="js/booking-details.js?v=4" defer></script>
   </body>
 </html>
