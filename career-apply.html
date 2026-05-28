@@ -393,7 +393,6 @@
             class="career-apply__form"
             action="https://api.web3forms.com/submit"
             method="POST"
-            enctype="multipart/form-data"
           >
             <input
               type="hidden"
@@ -462,86 +461,6 @@
                   autocomplete="tel"
                 />
               </div>
-              <div class="career-apply__field career-apply__field--full">
-                <label for="career-position" data-i18n-career="career-apply-label-position"
-                  >Position</label
-                >
-                <input id="career-position" name="position" type="text" />
-              </div>
-              <div class="career-apply__field career-apply__field--full">
-                <label for="career-department" data-i18n-career="career-apply-label-department"
-                  >Department</label
-                >
-                <input id="career-department" name="department" type="text" />
-              </div>
-              <div class="career-apply__field career-apply__field--full">
-                <label for="career-cv" data-i18n-career="career-apply-label-cv"
-                  >CV / resume</label
-                >
-                <input
-                  id="career-cv"
-                  name="attachment"
-                  type="file"
-                  accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                />
-                <p class="career-apply__file-hint" data-i18n-career="career-apply-cv-hint">
-                  Optional. PDF or Word. Typical limit is 5 MB.
-                </p>
-              </div>
-              <div class="career-apply__field career-apply__field--full">
-                <label for="career-message" data-i18n-career="career-apply-label-message"
-                  >Cover letter / message *</label
-                >
-                <textarea
-                  id="career-message"
-                  name="message"
-                  rows="6"
-                  required
-                  data-i18n-placeholder-career="career-apply-placeholder-message"
-                  placeholder="Tell us about your experience and why you would like to join Derand Hotel."
-                ></textarea>
-              </div>
-            </div>
-
-            <div class="career-apply__consents">
-              <label class="career-apply__check" for="career-consent-accuracy">
-                <input
-                  id="career-consent-accuracy"
-                  type="checkbox"
-                  name="consent_accuracy"
-                  value="yes"
-                  required
-                />
-                <span data-i18n-career="career-apply-consent-accuracy"
-                  >I confirm that the details I have provided are accurate and
-                  complete to the best of my knowledge.</span
-                >
-              </label>
-              <label class="career-apply__check" for="career-consent-privacy">
-                <input
-                  id="career-consent-privacy"
-                  type="checkbox"
-                  name="consent_privacy"
-                  value="yes"
-                  required
-                />
-                <span class="career-apply__privacy-text">
-                  <span data-i18n-career="career-apply-consent-privacy-before"
-                    >I have read and agree to the</span
-                  >
-                  <a
-                    href="privacypolicy.html"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    data-i18n-career="career-apply-privacy-link"
-                    >Privacy Policy</a
-                  >
-                  <span data-i18n-career="career-apply-consent-privacy-after"
-                    >and I consent to Derand Hotel processing my personal data for
-                    recruitment and related communication.</span
-                  >
-                </span>
-              </label>
             </div>
 
             <button type="submit" class="career-apply__submit" data-i18n-career="career-apply-submit">

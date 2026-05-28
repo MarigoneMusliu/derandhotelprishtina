@@ -3541,6 +3541,7 @@
         var WEB3FORMS_ACCESS_KEY = "761d8dce-87b2-4534-bc76-77ec2305d4ec";
         var ORDER_TO_EMAIL = "info@derandhotel.com";
         var CARD_CHECKOUT_URL = "book.html";
+        var PENDING_EXTRA_ORDER_KEY = "derand_extra_pending_order_v1";
 
         function sendToHotelInbox(payload) {
           var body = Object.assign(
@@ -3567,6 +3568,102 @@
             },
             body: JSON.stringify(body),
           });
+        }
+
+        function savePendingOrder(data) {
+          try {
+            localStorage.setItem(PENDING_EXTRA_ORDER_KEY, JSON.stringify(data));
+          } catch (e) {
+            /* ignore */
+          }
+        }
+
+        function getPendingOrder() {
+          try {
+            var raw = localStorage.getItem(PENDING_EXTRA_ORDER_KEY);
+            if (!raw) return null;
+            var parsed = JSON.parse(raw);
+            return parsed && parsed.payload ? parsed : null;
+          } catch (e) {
+            return null;
+          }
+        }
+
+        function clearPendingOrder() {
+          try {
+            localStorage.removeItem(PENDING_EXTRA_ORDER_KEY);
+          } catch (e) {
+            /* ignore */
+          }
+        }
+
+        function paymentMarkedSuccessful() {
+          var params = new URLSearchParams(window.location.search);
+          var values = [
+            params.get("payment"),
+            params.get("status"),
+            params.get("rbko_status"),
+            params.get("result"),
+            params.get("success"),
+            params.get("paid"),
+          ]
+            .map(function (value) {
+              return (value || "").toLowerCase();
+            })
+            .filter(Boolean);
+          for (var i = 0; i < values.length; i++) {
+            if (
+              values[i] === "success" ||
+              values[i] === "paid" ||
+              values[i] === "ok" ||
+              values[i] === "1" ||
+              values[i] === "true"
+            ) {
+              return true;
+            }
+          }
+          return false;
+        }
+
+        function trySendPendingOrderAfterPayment() {
+          var pending = getPendingOrder();
+          if (!pending || pending.sent === true) return;
+          if (!paymentMarkedSuccessful()) return;
+
+          if (checkoutStatusEl) {
+            checkoutStatusEl.classList.remove("is-error");
+            checkoutStatusEl.textContent = "Payment confirmed. Sending your order...";
+          }
+
+          sendToHotelInbox(pending.payload)
+            .then(function (response) {
+              if (!response.ok) throw new Error("Submit failed");
+              return response.json();
+            })
+            .then(function (data) {
+              if (!data || !data.success) {
+                throw new Error((data && data.message) || "Submit failed");
+              }
+              pending.sent = true;
+              savePendingOrder(pending);
+              cart = [];
+              saveCart();
+              renderCart();
+              clearPendingOrder();
+              if (checkoutStatusEl) {
+                checkoutStatusEl.textContent =
+                  "Payment completed. Your order details were sent to hotel reception.";
+              }
+            })
+            .catch(function () {
+              if (checkoutStatusEl) {
+                checkoutStatusEl.textContent =
+                  "Payment completed, but we could not send order details automatically. Please email " +
+                  ORDER_TO_EMAIL +
+                  ".";
+                checkoutStatusEl.classList.add("is-error");
+              }
+            });
         }
 
         var cart = [];
@@ -4258,6 +4355,7 @@
 
         cart = loadCart();
         renderCart();
+        window.setTimeout(trySendPendingOrderAfterPayment, 120);
 
         if (checkoutForm) {
           checkoutForm.addEventListener("input", function () {
@@ -4436,44 +4534,24 @@
             message: fullMessage,
           };
 
+          savePendingOrder({
+            createdAt: new Date().toISOString(),
+            payload: payload,
+            sent: false,
+          });
+
           if (cartPayBtn) cartPayBtn.disabled = true;
           if (checkoutStatusEl) {
             checkoutStatusEl.classList.remove("is-error");
-            checkoutStatusEl.textContent = "Processing your order...";
+            checkoutStatusEl.textContent =
+              "Opening secure payment... Order email will be sent after successful payment.";
           }
 
-          sendToHotelInbox(payload)
-            .then(function (response) {
-              if (!response.ok) throw new Error("Submit failed");
-              return response.json();
-            })
-            .then(function (data) {
-              if (!data || !data.success) {
-                throw new Error((data && data.message) || "Submit failed");
-              }
-              if (checkoutStatusEl) {
-                checkoutStatusEl.textContent =
-                  "Order sent. Opening secure payment...";
-              }
-              cart = [];
-              saveCart();
-              renderCart();
-              window.setTimeout(function () {
-                window.open(CARD_CHECKOUT_URL, "_blank", "noopener,noreferrer");
-                closeCart();
-              }, 900);
-            })
-            .catch(function () {
-              if (checkoutStatusEl) {
-                checkoutStatusEl.textContent =
-                  "We could not complete checkout. Please try again or email " +
-                  ORDER_TO_EMAIL +
-                  ".";
-              }
-            })
-            .finally(function () {
-              if (cartPayBtn) cartPayBtn.disabled = cart.length === 0;
-            });
+          window.setTimeout(function () {
+            window.open(CARD_CHECKOUT_URL, "_blank", "noopener,noreferrer");
+            closeCart();
+            if (cartPayBtn) cartPayBtn.disabled = cart.length === 0;
+          }, 600);
         });
       })();
 
