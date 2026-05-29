@@ -75,33 +75,85 @@ body.sunnyhill-page .footer {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  gap: 22px;
   align-items: end;
 }
 
 .pass-card {
   position: relative;
   display: grid;
-  grid-template-columns: 42px 1fr;
+  grid-template-columns: 36px 1fr;
   min-height: 430px;
+  border-radius: 22px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%),
-    #181818;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+    linear-gradient(
+      145deg,
+      rgba(255, 248, 240, 0.07) 0%,
+      rgba(255, 255, 255, 0.02) 42%,
+      rgba(12, 12, 12, 0.4) 100%
+    ),
+    linear-gradient(180deg, #1e1a18 0%, #141210 100%);
+  border: 1px solid rgba(255, 236, 220, 0.1);
   overflow: hidden;
-  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.3);
+  box-shadow:
+    0 28px 56px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.pass-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse 90% 55% at 50% -10%,
+    rgba(255, 180, 120, 0.12),
+    transparent 58%
+  );
+}
+
+.pass-card::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  bottom: 18px;
+  left: 35px;
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(255, 220, 190, 0.22) 20%,
+    rgba(255, 220, 190, 0.22) 80%,
+    transparent
+  );
+  pointer-events: none;
+}
+
+.pass-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 220, 190, 0.18);
+  box-shadow:
+    0 34px 64px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .pass-card__side-label {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px 0;
-  background: rgba(255, 255, 255, 0.03);
-  color: rgba(255, 255, 255, 0.25);
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+  background: transparent;
+  color: rgba(255, 232, 210, 0.38);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
@@ -109,26 +161,29 @@ body.sunnyhill-page .footer {
 
 .pass-card__body {
   position: relative;
-  padding: 30px 20px 20px;
+  z-index: 1;
+  padding: 32px 24px 22px;
   display: flex;
   flex-direction: column;
 }
 
 .pass-card__badge {
   position: absolute;
-  top: 14px;
-  right: 14px;
+  top: 18px;
+  right: 18px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 18px;
-  padding: 0 8px;
-  background: #d7a5ff;
-  color: #362244;
+  min-height: 22px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ead4ff 0%, #d7a5ff 100%);
+  color: #3d2848;
   font-size: 8px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
+  box-shadow: 0 6px 18px rgba(215, 165, 255, 0.28);
 }
 
 .pass-card__title {
@@ -141,10 +196,10 @@ body.sunnyhill-page .footer {
 
 .pass-card__subtitle {
   margin: 8px 0 0;
-  color: #d8a772;
+  color: rgba(216, 167, 114, 0.92);
   font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
+  font-weight: 500;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   max-width: 180px;
   line-height: 1.55;
@@ -152,10 +207,12 @@ body.sunnyhill-page .footer {
 
 .pass-card__detail {
   margin: 16px 0 -4px;
-  color: rgba(255, 232, 214, 0.86);
+  padding-bottom: 14px;
+  color: rgba(255, 236, 220, 0.78);
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.6;
+  border-bottom: 1px solid rgba(255, 220, 190, 0.08);
 }
 
 .pass-card__features {
@@ -177,11 +234,12 @@ body.sunnyhill-page .footer {
   content: "";
   position: absolute;
   left: 0;
-  top: 8px;
-  width: 5px;
-  height: 5px;
+  top: 9px;
+  width: 4px;
+  height: 4px;
   border-radius: 50%;
-  background: #b5814c;
+  background: linear-gradient(135deg, #e8c9a0, #c9955f);
+  box-shadow: 0 0 8px rgba(201, 149, 95, 0.45);
 }
 
 .pass-card__price {
@@ -205,73 +263,151 @@ body.sunnyhill-page .footer {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 40px;
-  padding: 0 18px;
-  border: 1px solid rgba(255, 140, 66, 0.36);
-  color: #ff8d42;
-  background: transparent;
+  width: 100%;
+  min-height: 44px;
+  padding: 0 20px;
+  border: 1px solid rgba(255, 190, 140, 0.22);
+  border-radius: 999px;
+  color: rgba(255, 198, 150, 0.95);
+  background: rgba(255, 180, 120, 0.06);
   text-decoration: none;
   font-family: inherit;
   text-transform: uppercase;
   font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   cursor: pointer;
   appearance: none;
   transition:
-    background-color 0.2s ease,
-    color 0.2s ease,
-    border-color 0.2s ease;
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .pass-card__button:hover,
 .pass-card__button:focus-visible {
-  background: rgba(255, 141, 66, 0.12);
-  color: #ffb17e;
-  border-color: rgba(255, 141, 66, 0.5);
+  background: rgba(255, 180, 120, 0.14);
+  color: #ffd9b8;
+  border-color: rgba(255, 200, 150, 0.38);
+  box-shadow: 0 8px 24px rgba(255, 140, 80, 0.12);
+}
+
+.pass-card--standard {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 200, 140, 0.1) 0%,
+      rgba(255, 255, 255, 0.02) 45%,
+      rgba(10, 10, 10, 0.35) 100%
+    ),
+    linear-gradient(180deg, #1f1a17 0%, #13100e 100%);
 }
 
 .pass-card--standard .pass-card__title {
-  color: #f2a14f;
+  color: #f0b872;
+}
+
+.pass-card--standard::before {
+  background: radial-gradient(
+    ellipse 90% 55% at 50% -10%,
+    rgba(255, 170, 90, 0.14),
+    transparent 58%
+  );
 }
 
 .pass-card--featured {
-  background:
-    linear-gradient(180deg, rgba(214, 169, 255, 0.18) 0%, rgba(214, 169, 255, 0.06) 100%),
-    #26212a;
-  border-color: rgba(214, 169, 255, 0.32);
   min-height: 462px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(230, 200, 255, 0.14) 0%,
+      rgba(255, 255, 255, 0.03) 40%,
+      rgba(20, 16, 24, 0.5) 100%
+    ),
+    linear-gradient(180deg, #2a2430 0%, #17141c 100%);
+  border-color: rgba(215, 165, 255, 0.16);
+  box-shadow:
+    0 32px 68px rgba(36, 20, 52, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.pass-card--featured::before {
+  background: radial-gradient(
+    ellipse 95% 60% at 50% -8%,
+    rgba(215, 165, 255, 0.2),
+    transparent 62%
+  );
+}
+
+.pass-card--featured::after {
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(215, 165, 255, 0.24) 20%,
+    rgba(215, 165, 255, 0.24) 80%,
+    transparent
+  );
 }
 
 .pass-card--featured .pass-card__side-label {
-  background: rgba(214, 169, 255, 0.09);
-  color: rgba(214, 169, 255, 0.56);
+  color: rgba(228, 200, 255, 0.5);
 }
 
 .pass-card--featured .pass-card__title {
-  color: #f4e9ff;
+  color: #f8f0ff;
 }
 
 .pass-card--featured .pass-card__subtitle,
 .pass-card--featured .pass-card__price span {
-  color: #d7a5ff;
+  color: rgba(215, 165, 255, 0.95);
+}
+
+.pass-card--featured .pass-card__detail {
+  border-bottom-color: rgba(215, 165, 255, 0.12);
 }
 
 .pass-card__button--featured {
-  background: #d7a5ff;
-  border-color: #d7a5ff;
-  color: #24182d;
+  background: linear-gradient(135deg, #ead4ff 0%, #d7a5ff 100%);
+  border-color: transparent;
+  color: #2f1f38;
+  box-shadow: 0 10px 28px rgba(215, 165, 255, 0.28);
 }
 
 .pass-card__button--featured:hover,
 .pass-card__button--featured:focus-visible {
-  background: #dfb9ff;
-  border-color: #dfb9ff;
-  color: #24182d;
+  background: linear-gradient(135deg, #f0e2ff 0%, #e0b8ff 100%);
+  border-color: transparent;
+  color: #2f1f38;
+  box-shadow: 0 12px 32px rgba(215, 165, 255, 0.36);
+}
+
+.pass-card--ultra {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 150, 90, 0.12) 0%,
+      rgba(255, 255, 255, 0.02) 42%,
+      rgba(12, 10, 10, 0.45) 100%
+    ),
+    linear-gradient(180deg, #221a16 0%, #120e0c 100%);
+  border-color: rgba(255, 160, 100, 0.14);
+}
+
+.pass-card--ultra::before {
+  background: radial-gradient(
+    ellipse 90% 55% at 50% -10%,
+    rgba(255, 120, 60, 0.14),
+    transparent 58%
+  );
 }
 
 .pass-card--ultra .pass-card__title {
-  color: #ff6f2e;
+  color: #ff9a62;
+}
+
+.pass-card--ultra .pass-card__subtitle {
+  color: rgba(255, 170, 110, 0.9);
 }
 
 .sunnyhill-hero {
@@ -983,12 +1119,17 @@ body.sunnyhill-page .footer {
   }
 
   .pass-card {
-    grid-template-columns: 34px 1fr;
+    grid-template-columns: 30px 1fr;
     min-height: 390px;
+    border-radius: 18px;
+  }
+
+  .pass-card::after {
+    left: 29px;
   }
 
   .pass-card__body {
-    padding: 24px 16px 16px;
+    padding: 26px 18px 18px;
   }
 
   .pass-card__features li {
