@@ -469,6 +469,7 @@
         "Stay: " + checkInFormatted + " to " + checkOutFormatted,
         "Guests summary: " + guestSummary(state.adults, state.children),
         "Nights: " + nights,
+        "Rate per night: " + currency(totals.pricePerNight || 0),
         "Payment preference: " + selectedMethod,
         "",
         "Guest name: " + guestName,
@@ -537,8 +538,10 @@
     enforceChildrenPolicy(false);
     syncChildAgesLength();
     renderChildAgeInputs();
-    var roomTotal = getRoomBasePrice(state.room, state.adults);
-    var childSurcharge = getChildrenSurcharge(state.room, state.childAges);
+    var pricePerNight = getRoomBasePrice(state.room, state.adults);
+    var childSurchargePerNight = getChildrenSurcharge(state.room, state.childAges);
+    var roomTotal = pricePerNight * nights;
+    var childSurcharge = childSurchargePerNight * nights;
     var fees = 0;
     var discount = 0;
     var total = roomTotal + childSurcharge;
@@ -554,12 +557,13 @@
       roomImageEl.src = room.image;
       roomImageEl.alt = room.label + " at Derand Hotel";
     }
+    var nightsLabel = nights + " " + (nights === 1 ? "night" : "nights");
     if (state.room === "premium-double") {
-      setText(roomRateEl, currency(roomTotal) + " / room");
-      setText(roomTotalLabelEl, room.label + " (per room)");
+      setText(roomRateEl, currency(pricePerNight) + " / night (room rate)");
+      setText(roomTotalLabelEl, room.label + " (" + nightsLabel + ")");
     } else {
-      setText(roomRateEl, currency(roomTotal) + " / night");
-      setText(roomTotalLabelEl, room.label + " (per night)");
+      setText(roomRateEl, currency(pricePerNight) + " / night");
+      setText(roomTotalLabelEl, room.label + " (" + nightsLabel + ")");
     }
     setText(checkinEl, formatDate(state.checkin));
     setText(checkoutEl, formatDate(state.checkout));
@@ -580,6 +584,7 @@
     if (adultsInputEl) adultsInputEl.value = String(state.adults);
     if (childrenInputEl) childrenInputEl.value = String(state.children);
     return {
+      pricePerNight: pricePerNight,
       roomTotal: roomTotal,
       childSurcharge: childSurcharge,
       fees: fees,

@@ -383,7 +383,7 @@
             Apply online
           </h1>
           <p class="career-apply__lead" id="career-apply-summary">
-            Complete the form below. Fields marked with * are required.
+            Enter your first name, last name, email, and phone number. Fields marked with * are required.
           </p>
         </div>
 
@@ -411,6 +411,8 @@
               name="redirect"
               value="https://www.derandhotel.com/careers.html?applied=1"
             />
+            <input type="hidden" name="position" id="career-position" value="" />
+            <input type="hidden" name="department" id="career-department" value="" />
 
             <div class="career-apply__grid">
               <div class="career-apply__field">
@@ -698,7 +700,7 @@
           en: {
             "career-apply-title": "Apply online",
             "career-apply-summary-default":
-              "Complete the form below. Fields marked with * are required.",
+              "Enter your first name, last name, email, and phone number. Fields marked with * are required.",
             "career-apply-sum-1": "You are applying",
             "career-apply-sum-for": " for ",
             "career-apply-sum-end":
@@ -733,7 +735,7 @@
           de: {
             "career-apply-title": "Online bewerben",
             "career-apply-summary-default":
-              "Bitte füllen Sie das Formular aus. Mit * markierte Felder sind Pflichtfelder.",
+              "Geben Sie Vorname, Nachname, E-Mail und Telefonnummer ein. Mit * markierte Felder sind Pflichtfelder.",
             "career-apply-sum-1": "Sie bewerben sich",
             "career-apply-sum-for": " für ",
             "career-apply-sum-end":
@@ -768,7 +770,7 @@
           al: {
             "career-apply-title": "Aplikoni online",
             "career-apply-summary-default":
-              "Plotësoni formularin më poshtë. Fushat me * janë të detyrueshme.",
+              "Shkruani emrin, mbiemrin, email-in dhe numrin e telefonit. Fushat me * janë të detyrueshme.",
             "career-apply-sum-1": "Ju po aplikoni",
             "career-apply-sum-for": " për ",
             "career-apply-sum-end":
@@ -928,15 +930,6 @@
         if (posEl) posEl.value = posVal;
         if (depEl) depEl.value = depVal;
 
-        if (posVal && posEl) {
-          posEl.readOnly = true;
-          posEl.setAttribute("readonly", "readonly");
-        }
-        if (depVal && depEl) {
-          depEl.readOnly = true;
-          depEl.setAttribute("readonly", "readonly");
-        }
-
         if (typeof window.applyCareerApplyTranslations === "function") {
           window.applyCareerApplyTranslations();
         }
@@ -948,27 +941,6 @@
             (depVal ? " — " + depVal : "");
         }
 
-        var applyForm = document.getElementById("career-apply-form");
-        var consentAcc = document.getElementById("career-consent-accuracy");
-        var consentPriv = document.getElementById("career-consent-privacy");
-        if (applyForm && consentAcc && consentPriv) {
-          consentAcc.addEventListener("change", function () {
-            consentAcc.setCustomValidity("");
-          });
-          consentPriv.addEventListener("change", function () {
-            consentPriv.setCustomValidity("");
-          });
-          applyForm.addEventListener("submit", function (e) {
-            if (typeof window.refreshCareerApplyConsentValidity === "function") {
-              window.refreshCareerApplyConsentValidity();
-            }
-            if (!applyForm.checkValidity()) {
-              e.preventDefault();
-              e.stopPropagation();
-              applyForm.reportValidity();
-            }
-          });
-        }
       });
     </script>
     <script>

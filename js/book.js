@@ -217,21 +217,56 @@
     });
   }
 
+  function updateRoomCardPrices() {
+    var nights = getNightCount();
+    cards.forEach(function (card) {
+      var nightly = parseFloat(card.getAttribute("data-price-night"), 10);
+      if (!nightly) return;
+
+      var priceEls = card.querySelectorAll(
+        ".booking-room-card__feature-price, .booking-room-card__inline-price",
+      );
+      priceEls.forEach(function (el) {
+        if (!el.dataset.defaultHtml) {
+          el.dataset.defaultHtml = el.innerHTML;
+        }
+        if (nights > 1) {
+          var total = nightly * nights;
+          el.innerHTML =
+            "&euro;" +
+            total +
+            '<span> total</span> <span class="booking-room-card__price-note">(' +
+            nights +
+            " &times; &euro;" +
+            nightly +
+            "/night)</span>";
+        } else if (nights === 1) {
+          el.innerHTML = "&euro;" + nightly + "<span>/night</span>";
+        } else {
+          el.innerHTML = el.dataset.defaultHtml;
+        }
+      });
+    });
+  }
+
   function updateSummary() {
     var nights = getNightCount();
     var stayText =
       nights === 1 ? "1 night" : nights > 1 ? nights + " nights" : "Choose valid dates";
 
-    summaryEl.textContent =
-      getSelectedRoomLabel() +
-      " · " +
-      formatDate(checkInEl.value) +
-      " to " +
-      formatDate(checkOutEl.value) +
-      " · " +
-      stayText +
-      " · " +
-      getGuestSummary();
+    if (summaryEl) {
+      summaryEl.textContent =
+        getSelectedRoomLabel() +
+        " · " +
+        formatDate(checkInEl.value) +
+        " to " +
+        formatDate(checkOutEl.value) +
+        " · " +
+        stayText +
+        " · " +
+        getGuestSummary();
+    }
+    updateRoomCardPrices();
   }
 
   function setStatus(message, state) {
