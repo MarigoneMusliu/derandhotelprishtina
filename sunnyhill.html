@@ -269,82 +269,147 @@
             <h2 class="sunnyhill-passes__title" id="sunnyhill-passes-title">
               Claim Your Pass
             </h2>
+            <div
+              class="sunnyhill-passes__mode"
+              role="group"
+              aria-label="Solo or couple ticket pricing"
+            >
+              <button
+                type="button"
+                class="sunnyhill-passes__mode-btn is-active"
+                data-pass-mode="solo"
+                aria-pressed="true"
+              >
+                Solo ticket
+              </button>
+              <button
+                type="button"
+                class="sunnyhill-passes__mode-btn"
+                data-pass-mode="couple"
+                aria-pressed="false"
+              >
+                Couple ticket
+              </button>
+            </div>
           </div>
 
-          <div class="sunnyhill-passes__grid">
-            <article class="pass-card pass-card--standard">
-              <div class="pass-card__side-label">Regular Pass</div>
+          <div class="sunnyhill-passes__grid" data-pass-pricing="solo">
+            <article
+              class="pass-card pass-card--standard"
+              data-pass-id="standard"
+              data-pass-title="Standard"
+              data-pass-detail="3-Day Access"
+            >
               <div class="pass-card__body">
                 <h3 class="pass-card__title">Standard</h3>
                 <p class="pass-card__subtitle">The essential entry</p>
-                <p class="pass-card__detail">3-Day Access</p>
+                <p class="pass-card__detail" data-pass-detail>3-Day Access</p>
                 <ul class="pass-card__features">
                   <li>3-Day General Admission</li>
-                  <li>Superior Standard Room</li>
-                  <li>Hotel Shuttle Service</li>
+                  <li
+                    data-room-solo="Superior Standard Room (Solo)"
+                    data-room-couple="Superior Standard Room (Couple)"
+                  >
+                    Superior Standard Room (Solo)
+                  </li>
+                  <li>Round-trip Hotel Shuttle</li>
                 </ul>
-                <p class="pass-card__price">585 <span>EUR</span></p>
-                <button type="button" class="pass-card__button">
+                <p
+                  class="pass-card__price"
+                  data-price-solo="585"
+                  data-price-couple="754"
+                >
+                  <span class="pass-card__price-value">585</span>
+                  <span class="pass-card__price-currency">EUR</span>
+                </p>
+                <button
+                  type="button"
+                  class="pass-card__button"
+                  data-pass-action="checkout"
+                >
                   Claim Pass
                 </button>
               </div>
             </article>
 
-            <article class="pass-card pass-card--featured">
-              <div class="pass-card__side-label">VIP Experience</div>
+            <article
+              class="pass-card pass-card--featured"
+              data-pass-id="vip"
+              data-pass-title="VIP Pass"
+              data-pass-detail="3-Day Access · C4 Stage"
+            >
               <div class="pass-card__body">
-                <span class="pass-card__badge">Most Popular</span>
+                <span class="pass-card__badge">Recommended</span>
                 <h3 class="pass-card__title">VIP Pass</h3>
                 <p class="pass-card__subtitle">Premium festival access</p>
-                <p class="pass-card__detail">3-Day Access &middot; C4 Stage</p>
+                <p class="pass-card__detail" data-pass-detail>
+                  3-Day Access &middot; C4 Stage
+                </p>
                 <ul class="pass-card__features">
-                  <li>3-Day VIP Festival Access</li>
-                  <li>Deluxe Suite &amp; Spa Access</li>
-                  <li>Private Express Transport</li>
+                  <li>Full VIP Stage Access</li>
+                  <li>Premium Suite Upgrade</li>
+                  <li>Fast-track Lane Access</li>
                 </ul>
-                <p class="pass-card__price">790 <span>EUR</span></p>
+                <p
+                  class="pass-card__price"
+                  data-price-solo="790"
+                  data-price-couple="1190"
+                >
+                  <span class="pass-card__price-value">790</span>
+                  <span class="pass-card__price-currency">EUR</span>
+                </p>
                 <button
                   type="button"
                   class="pass-card__button pass-card__button--featured"
+                  data-pass-action="checkout"
                 >
-                  Secure VIP Pass
+                  Secure VIP
                 </button>
               </div>
             </article>
 
-            <article class="pass-card pass-card--ultra">
-              <div class="pass-card__side-label">Ultra Limited</div>
+            <article
+              class="pass-card pass-card--ultra"
+              data-pass-id="ultra"
+              data-pass-title="Ultra VIP"
+              data-pass-detail="3-Day Access · Sunny Hill + C4 Stage"
+            >
               <div class="pass-card__body">
                 <h3 class="pass-card__title">Ultra VIP</h3>
                 <p class="pass-card__subtitle">The pinnacle package</p>
-                <p class="pass-card__detail">
-                  3-Day Access &middot; BUNDLE (Sunny Hill + C4 Stage)
+                <p class="pass-card__detail" data-pass-detail>
+                  3-Day Access &middot; BUNDLE
                 </p>
                 <ul class="pass-card__features">
                   <li>Full Backstage &amp; Ultra Access</li>
                   <li>Presidential Suite at Derand</li>
                   <li>24/7 Personal Chauffeur</li>
                 </ul>
-                <p class="pass-card__price">1190 <span>EUR</span></p>
-                <button type="button" class="pass-card__button">
+                <p
+                  class="pass-card__price"
+                  data-price-solo="1190"
+                  data-price-couple="1990"
+                >
+                  <span class="pass-card__price-value">1190</span>
+                  <span class="pass-card__price-currency">EUR</span>
+                </p>
+                <button
+                  type="button"
+                  class="pass-card__button"
+                  data-pass-action="checkout"
+                >
                   Apply for Ultra
                 </button>
               </div>
             </article>
           </div>
         </section>
-<br>
-<Br>
-<br>
-<Br>
 
         <section class="sunnyhill-lineup" aria-labelledby="sunnyhill-lineup-label">
           <div class="sunnyhill-lineup__intro">
             <h2 class="sunnyhill-lineup__heading">The Artists</h2>
           </div>
-          <br>
-          <Br>
-      
+
           <h2 class="sunnyhill-lineup__sr-only" id="sunnyhill-lineup-label">
             Sunny Hill lineup preview
           </h2>
@@ -796,6 +861,124 @@
       </div>
     </footer>
 
+    <div
+      class="sunnyhill-checkout"
+      id="sunnyhill-checkout"
+      aria-hidden="true"
+    >
+      <div
+        class="sunnyhill-checkout__backdrop"
+        data-checkout-close
+        tabindex="-1"
+      ></div>
+      <div
+        class="sunnyhill-checkout__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="sunnyhill-checkout-title"
+      >
+        <header class="sunnyhill-checkout__header">
+          <div class="sunnyhill-checkout__header-text">
+            <p class="sunnyhill-checkout__eyebrow">Secure checkout</p>
+            <h2 class="sunnyhill-checkout__title" id="sunnyhill-checkout-title">
+              Complete your pass
+            </h2>
+          </div>
+          <button
+            type="button"
+            class="sunnyhill-checkout__close"
+            data-checkout-close
+            aria-label="Close checkout"
+          >
+            &times;
+          </button>
+        </header>
+
+        <div class="sunnyhill-checkout__summary pass-card" id="sunnyhill-checkout-summary">
+          <div class="pass-card__body">
+            <p class="sunnyhill-checkout__summary-label">Your selection</p>
+            <h3 class="pass-card__title" id="sunnyhill-checkout-pass-name">Standard</h3>
+            <p class="pass-card__subtitle" id="sunnyhill-checkout-pass-mode">Solo pass</p>
+            <p class="pass-card__detail" id="sunnyhill-checkout-pass-detail">3-Day Access</p>
+            <p class="pass-card__price sunnyhill-checkout__price">
+              <span class="pass-card__price-value" id="sunnyhill-checkout-pass-price">585</span>
+              <span class="pass-card__price-currency">EUR</span>
+            </p>
+          </div>
+        </div>
+
+        <form class="sunnyhill-checkout__form" id="sunnyhill-checkout-form">
+          <p class="sunnyhill-checkout__form-title">Guest details</p>
+          <p class="sunnyhill-checkout__form-hint">
+            We will use these details for your festival pass and confirmation.
+          </p>
+          <div class="sunnyhill-checkout__row">
+            <div class="sunnyhill-checkout__field">
+              <label for="sunnyhill-first-name">First name</label>
+              <input
+                id="sunnyhill-first-name"
+                type="text"
+                name="firstName"
+                autocomplete="given-name"
+                required
+              />
+            </div>
+            <div class="sunnyhill-checkout__field">
+              <label for="sunnyhill-last-name">Surname</label>
+              <input
+                id="sunnyhill-last-name"
+                type="text"
+                name="lastName"
+                autocomplete="family-name"
+                required
+              />
+            </div>
+          </div>
+          <div class="sunnyhill-checkout__field">
+            <label for="sunnyhill-phone">Phone number</label>
+            <input
+              id="sunnyhill-phone"
+              type="tel"
+              name="phone"
+              autocomplete="tel"
+              required
+            />
+          </div>
+          <div class="sunnyhill-checkout__field">
+            <label for="sunnyhill-email">Email</label>
+            <input
+              id="sunnyhill-email"
+              type="email"
+              name="email"
+              autocomplete="email"
+              required
+            />
+          </div>
+        </form>
+
+        <footer class="sunnyhill-checkout__footer">
+          <div class="sunnyhill-checkout__total-row">
+            <span>Total due</span>
+            <strong id="sunnyhill-checkout-total">585 EUR</strong>
+          </div>
+          <button
+            type="submit"
+            form="sunnyhill-checkout-form"
+            class="sunnyhill-checkout__pay"
+            id="sunnyhill-checkout-pay-btn"
+          >
+            Pay securely
+          </button>
+          <p
+            class="sunnyhill-checkout__status"
+            id="sunnyhill-checkout-status"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </footer>
+      </div>
+    </div>
+
     <script src="js/jquery-3.3.1.min.js" defer></script>
     <script src="js/bootstrap.min.js" defer></script>
     <script src="js/jquery.nice-select.min.js" defer></script>
@@ -806,16 +989,16 @@
     <script src="js/main.js?v=20260515-1" defer></script>
         <script src="js/site-whatsapp.js?v=8" defer></script>
     <script src="js/tidio-left-position.js?v=2" defer></script>
+    <script src="js/sunnyhill-checkout.js?v=3" defer></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        const grid = document.getElementById("sunnyhill-grid");
-        const tabs = Array.from(document.querySelectorAll(".sunnyhill-lineup__tab"));
-
+        var grid = document.getElementById("sunnyhill-grid");
+        var tabs = Array.from(document.querySelectorAll(".sunnyhill-lineup__tab"));
         if (!grid || !tabs.length) {
           return;
         }
 
-        const cards = Array.from(grid.querySelectorAll(".lineup-card"));
+        var cards = Array.from(grid.querySelectorAll(".lineup-card"));
 
         function applyFilter(filter) {
           grid.dataset.view = filter === "all" ? "all" : "filtered";
@@ -825,7 +1008,7 @@
           });
 
           tabs.forEach(function (tab) {
-            const isActive = tab.dataset.filter === filter;
+            var isActive = tab.dataset.filter === filter;
             tab.classList.toggle("is-active", isActive);
             tab.setAttribute("aria-pressed", String(isActive));
           });

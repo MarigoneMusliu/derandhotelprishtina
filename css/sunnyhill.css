@@ -1,6 +1,7 @@
 body.sunnyhill-page {
   background: #050505;
   padding-top: 78px;
+  overflow-x: clip;
 }
 
 body.sunnyhill-page .footer {
@@ -43,7 +44,7 @@ body.sunnyhill-page .footer {
 }
 
 .sunnyhill-passes {
-  padding: 62px 0 26px;
+  padding: clamp(40px, 8vw, 62px) 0 clamp(20px, 4vw, 26px);
 }
 
 .sunnyhill-passes__intro {
@@ -70,20 +71,92 @@ body.sunnyhill-page .footer {
   line-height: 1.15;
 }
 
+.sunnyhill-passes__mode {
+  position: relative;
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 22px;
+  padding: 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 220, 190, 0.1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  pointer-events: auto;
+}
+
+.sunnyhill-passes__mode-btn {
+  position: relative;
+  z-index: 1;
+  min-width: 88px;
+  min-height: 38px;
+  padding: 0 22px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: rgba(255, 236, 220, 0.55);
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  pointer-events: auto;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.sunnyhill-passes__mode-btn.is-active {
+  background: linear-gradient(135deg, #e8c07a 0%, #d4a054 100%);
+  color: #1a120c;
+  box-shadow: 0 6px 20px rgba(212, 160, 84, 0.28);
+}
+
+.sunnyhill-passes__mode-btn:hover:not(.is-active),
+.sunnyhill-passes__mode-btn:focus-visible:not(.is-active) {
+  color: rgba(255, 236, 220, 0.88);
+}
+
+.sunnyhill-passes__section {
+  margin-bottom: clamp(40px, 7vw, 56px);
+}
+
+.sunnyhill-passes__section:last-child {
+  margin-bottom: 0;
+}
+
+.sunnyhill-passes__section-title {
+  margin: 0 0 22px;
+  text-align: center;
+  color: rgba(255, 236, 220, 0.88);
+  font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 .sunnyhill-passes__grid {
   width: min(100%, 1120px);
   margin: 0 auto;
+  padding-inline: clamp(20px, 3vw, 40px);
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
+  gap: clamp(14px, 2.5vw, 22px);
   align-items: end;
 }
 
 .pass-card {
   position: relative;
   display: grid;
-  grid-template-columns: 36px 1fr;
-  min-height: 430px;
+  grid-template-columns: 1fr;
+  min-height: 0;
+  height: auto;
+  align-self: end;
   border-radius: 22px;
   background:
     linear-gradient(
@@ -117,46 +190,14 @@ body.sunnyhill-page .footer {
   );
 }
 
-.pass-card::after {
-  content: "";
-  position: absolute;
-  top: 18px;
-  bottom: 18px;
-  left: 35px;
-  width: 1px;
-  background: linear-gradient(
-    180deg,
-    transparent,
-    rgba(255, 220, 190, 0.22) 20%,
-    rgba(255, 220, 190, 0.22) 80%,
-    transparent
-  );
-  pointer-events: none;
-}
-
-.pass-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(255, 220, 190, 0.18);
-  box-shadow:
-    0 34px 64px rgba(0, 0, 0, 0.28),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
-}
-
-.pass-card__side-label {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 0;
-  background: transparent;
-  color: rgba(255, 232, 210, 0.38);
-  font-size: 9px;
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
+@media (hover: hover) and (pointer: fine) {
+  .pass-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 220, 190, 0.18);
+    box-shadow:
+      0 34px 64px rgba(0, 0, 0, 0.28),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
 }
 
 .pass-card__body {
@@ -250,13 +291,17 @@ body.sunnyhill-page .footer {
   line-height: 1.05;
 }
 
-.pass-card__price span {
+.pass-card__price-currency {
   margin-left: 6px;
   color: #ff8d42;
   font-size: 0.34em;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+.pass-card--featured .pass-card__price-currency {
+  color: rgba(215, 165, 255, 0.95);
 }
 
 .pass-card__button {
@@ -317,7 +362,6 @@ body.sunnyhill-page .footer {
 }
 
 .pass-card--featured {
-  min-height: 462px;
   background:
     linear-gradient(
       145deg,
@@ -340,26 +384,11 @@ body.sunnyhill-page .footer {
   );
 }
 
-.pass-card--featured::after {
-  background: linear-gradient(
-    180deg,
-    transparent,
-    rgba(215, 165, 255, 0.24) 20%,
-    rgba(215, 165, 255, 0.24) 80%,
-    transparent
-  );
-}
-
-.pass-card--featured .pass-card__side-label {
-  color: rgba(228, 200, 255, 0.5);
-}
-
 .pass-card--featured .pass-card__title {
   color: #f8f0ff;
 }
 
-.pass-card--featured .pass-card__subtitle,
-.pass-card--featured .pass-card__price span {
+.pass-card--featured .pass-card__subtitle {
   color: rgba(215, 165, 255, 0.95);
 }
 
@@ -524,7 +553,8 @@ body.sunnyhill-page .footer {
 }
 
 .sunnyhill-lineup {
-  margin-top: 22px;
+  margin-top: clamp(28px, 6vw, 48px);
+  padding-bottom: 8px;
 }
 
 .sunnyhill-lineup__intro {
@@ -590,8 +620,8 @@ body.sunnyhill-page .footer {
   margin-top: 24px;
   display: grid;
   grid-template-columns: 1.15fr 1fr 1fr;
-  grid-auto-rows: 320px;
-  gap: 16px;
+  grid-auto-rows: minmax(280px, auto);
+  gap: clamp(12px, 2vw, 16px);
 }
 
 .sunnyhill-lineup__grid[data-view="filtered"] {
@@ -643,7 +673,7 @@ body.sunnyhill-page .footer {
 
 .lineup-card--feature {
   grid-row: span 2;
-  min-height: 656px;
+  min-height: clamp(480px, 52vw, 656px);
 }
 
 .lineup-card--wide {
@@ -864,8 +894,8 @@ body.sunnyhill-page .footer {
 .sunnyhill-advantage {
   width: 100%;
   max-width: none;
-  margin: 72px 0 0;
-  padding: 0 14px;
+  margin: clamp(48px, 8vw, 72px) 0 0;
+  padding: 0;
 }
 
 .sunnyhill-advantage__header {
@@ -882,7 +912,6 @@ body.sunnyhill-page .footer {
   font-size: clamp(1.8rem, 2.7vw, 2.45rem);
   font-weight: 600;
   line-height: 1.15;
-  white-space: nowrap;
 }
 
 .sunnyhill-advantage__copy {
@@ -978,7 +1007,7 @@ body.sunnyhill-page .footer {
 
 .sunnyhill-location {
   width: 100%;
-  margin: 64px 0 0;
+  margin: clamp(44px, 8vw, 64px) 0 0;
   padding: 0 0 10px;
   text-align: center;
 }
@@ -1067,11 +1096,66 @@ body.sunnyhill-page .footer {
   text-transform: uppercase;
 }
 
+@media (min-width: 992px) {
+  .pass-card--featured {
+    min-height: 462px;
+  }
+
+  .pass-card--standard,
+  .pass-card--ultra {
+    min-height: 408px;
+  }
+
+  .pass-card--standard .pass-card__body,
+  .pass-card--ultra .pass-card__body {
+    padding-top: 26px;
+  }
+
+  .pass-card--standard .pass-card__features,
+  .pass-card--ultra .pass-card__features {
+    margin-top: 26px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .sunnyhill-passes__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 760px;
+    margin-inline: auto;
+    padding-inline: clamp(16px, 3vw, 28px);
+    align-items: stretch;
+  }
+
+  .sunnyhill-lineup__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lineup-card--feature {
+    grid-row: span 1;
+    min-height: 420px;
+  }
+
+  .lineup-card--wide {
+    grid-column: span 2;
+  }
+
+  .sunnyhill-advantage__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 991.98px) {
+  body.sunnyhill-page {
+    padding-top: 72px;
+  }
+
   .sunnyhill-passes__grid {
     grid-template-columns: 1fr;
     gap: 16px;
-    width: min(100%, 560px);
+    max-width: 520px;
+    padding-inline: clamp(12px, 4vw, 18px);
+    box-sizing: border-box;
+    align-items: stretch;
   }
 
   .sunnyhill-hero__content {
@@ -1080,7 +1164,7 @@ body.sunnyhill-page .footer {
 
   .sunnyhill-lineup__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-auto-rows: 280px;
+    grid-auto-rows: minmax(260px, auto);
   }
 
   .lineup-card--wide {
@@ -1110,67 +1194,114 @@ body.sunnyhill-page .footer {
 }
 
 @media (max-width: 680px) {
+  body.sunnyhill-page {
+    padding-top: 64px;
+  }
+
   .sunnyhill-passes {
-    padding-top: 48px;
+    padding-top: 36px;
+  }
+
+  .sunnyhill-passes__intro {
+    margin-bottom: 26px;
+  }
+
+  .sunnyhill-passes__mode {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+
+  .sunnyhill-passes__mode-btn {
+    flex: 1 1 0;
+    min-width: 0;
+    padding-inline: 16px;
   }
 
   .sunnyhill-passes__grid {
     width: 100%;
+    max-width: none;
+    padding-inline: clamp(14px, 5vw, 20px);
+    box-sizing: border-box;
   }
 
   .pass-card {
-    grid-template-columns: 30px 1fr;
-    min-height: 390px;
     border-radius: 18px;
   }
 
-  .pass-card::after {
-    left: 29px;
+  .pass-card__body {
+    padding: 24px 18px 18px;
   }
 
-  .pass-card__body {
-    padding: 26px 18px 18px;
+  .pass-card__title {
+    font-size: clamp(1.5rem, 7vw, 1.85rem);
+  }
+
+  .pass-card__price {
+    font-size: clamp(1.85rem, 9vw, 2.35rem);
+  }
+
+  .pass-card__features {
+    margin-top: 24px;
   }
 
   .pass-card__features li {
     font-size: 13px;
+    margin-bottom: 12px;
   }
 
   .sunnyhill-festival {
-    padding: 0 0 56px;
+    padding: 0 0 48px;
   }
 
   .sunnyhill-hero {
-    min-height: 470px;
-    border-radius: 24px;
+    min-height: clamp(360px, 72vw, 470px);
+    border-radius: 20px;
+  }
+
+  .sunnyhill-hero::before {
+    background-position: center 22%;
   }
 
   .sunnyhill-hero__content {
-    padding: 54px 18px 82px;
+    padding: 48px 16px 72px;
+  }
+
+  .sunnyhill-hero__title span {
+    font-size: clamp(2.2rem, 11vw, 3.2rem);
   }
 
   .sunnyhill-hero__eyebrow {
-    font-size: 10px;
-    letter-spacing: 0.22em;
+    font-size: 9px;
+    letter-spacing: 0.16em;
   }
 
   .sunnyhill-hero__cta {
     width: 100%;
-    max-width: 240px;
+    max-width: min(100%, 280px);
+    min-width: 0;
+    padding-inline: 18px;
+    font-size: 9px;
+  }
+
+  .sunnyhill-lineup__heading {
+    font-size: clamp(1.5rem, 7vw, 1.85rem);
   }
 
   .sunnyhill-lineup__tabs {
     gap: 8px;
     padding: 8px;
+    margin-inline: 0;
   }
 
   .sunnyhill-lineup__intro {
-    margin-bottom: 22px;
+    margin-bottom: 18px;
   }
 
   .sunnyhill-lineup__tab {
-    min-width: 122px;
-    padding: 9px 14px;
+    min-width: 108px;
+    padding: 9px 12px;
+    font-size: 9px;
   }
 
   .sunnyhill-lineup__grid,
@@ -1185,56 +1316,412 @@ body.sunnyhill-page .footer {
   .sunnyhill-lineup__grid[data-view="filtered"] .lineup-card {
     grid-column: auto;
     grid-row: auto;
-    min-height: 400px;
+    min-height: min(72vw, 380px);
   }
 
   .lineup-card--feature {
-    min-height: 520px;
+    min-height: min(88vw, 440px);
+  }
+
+  .lineup-card__content {
+    padding: 16px 18px 18px;
+  }
+
+  .lineup-card__title {
+    font-size: clamp(1.2rem, 5.5vw, 1.5rem);
+    word-break: break-word;
+  }
+
+  .lineup-card--feature .lineup-card__title {
+    font-size: clamp(1.45rem, 7vw, 2rem);
   }
 
   .lineup-card__discover {
     gap: 14px;
+    padding: 18px;
   }
 
   .lineup-card__discover-link {
     width: 48px;
     height: 48px;
+    font-size: 20px;
   }
 
   .sunnyhill-advantage {
-    margin-top: 56px;
+    margin-top: 48px;
+    padding-inline: 0;
   }
 
   .sunnyhill-advantage__header {
-    margin-bottom: 28px;
+    margin-bottom: 24px;
+  }
+
+  .sunnyhill-advantage__title {
+    font-size: clamp(1.45rem, 6.5vw, 1.8rem);
   }
 
   .advantage-card {
-    padding: 28px 22px 24px;
+    padding: 26px 20px 22px;
+    min-height: 0;
   }
 
   .sunnyhill-location {
-    margin-top: 52px;
+    margin-top: 44px;
   }
 
   .sunnyhill-location__panel {
-    min-height: 420px;
+    min-height: clamp(340px, 85vw, 420px);
     background: url("../img/map.png");
     background-position: center;
-    background-size: 140% auto;
+    background-size: cover;
   }
 
   .sunnyhill-location__panel::after {
     inset: 0;
   }
 
+  .sunnyhill-location__content {
+    padding-inline: 16px;
+  }
+
+  .sunnyhill-location__title {
+    font-size: clamp(1.35rem, 6vw, 1.75rem);
+  }
+
   .sunnyhill-location__button {
-    min-width: 190px;
-    padding: 14px 24px;
+    width: 100%;
+    max-width: 280px;
+    min-width: 0;
+    padding: 14px 20px;
   }
 
   .sunnyhill-location__footer {
-    margin-top: 20px;
-    font-size: 1.15rem;
+    margin-top: 18px;
+    font-size: clamp(0.95rem, 4vw, 1.15rem);
+    letter-spacing: 0.1em;
+  }
+}
+
+@media (max-width: 380px) {
+  .sunnyhill-hero__title span {
+    font-size: 2rem;
+  }
+
+  .pass-card__badge {
+    top: 12px;
+    right: 12px;
+    font-size: 7px;
+    padding-inline: 10px;
+  }
+}
+
+/* Checkout panel (extra-style flow, Sunny Hill look) */
+.sunnyhill-checkout {
+  position: fixed;
+  inset: 0;
+  z-index: 10050;
+  pointer-events: none;
+}
+
+.sunnyhill-checkout.is-open {
+  pointer-events: auto;
+}
+
+.sunnyhill-checkout__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 4, 4, 0.72);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sunnyhill-checkout.is-open .sunnyhill-checkout__backdrop {
+  opacity: 1;
+}
+
+.sunnyhill-checkout__panel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(440px, calc(100% - 32px));
+  max-height: min(92vh, 720px);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 22px 20px 20px;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 220, 190, 0.12);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 248, 240, 0.06) 0%,
+      rgba(255, 255, 255, 0.02) 42%,
+      rgba(12, 12, 12, 0.55) 100%
+    ),
+    linear-gradient(180deg, #1c1816 0%, #10100f 100%);
+  box-shadow:
+    0 32px 80px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transform: translate(-50%, -48%) scale(0.96);
+  opacity: 0;
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.3s ease;
+}
+
+.sunnyhill-checkout.is-open .sunnyhill-checkout__panel {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.sunnyhill-checkout__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.sunnyhill-checkout__eyebrow {
+  margin: 0 0 6px;
+  color: #ff9a52;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.sunnyhill-checkout__title {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.35rem, 4vw, 1.65rem);
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.sunnyhill-checkout__close {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255, 220, 190, 0.14);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 236, 220, 0.8);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.sunnyhill-checkout__close:hover,
+.sunnyhill-checkout__close:focus-visible {
+  background: rgba(255, 180, 120, 0.12);
+  border-color: rgba(255, 200, 150, 0.28);
+}
+
+.sunnyhill-checkout__summary {
+  min-height: 0;
+  box-shadow: none;
+}
+
+.sunnyhill-checkout__summary .pass-card__body {
+  padding: 20px 18px 16px;
+}
+
+.sunnyhill-checkout__summary-label {
+  margin: 0 0 8px;
+  color: rgba(255, 220, 190, 0.55);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.sunnyhill-checkout__price {
+  margin: 12px 0 0 !important;
+}
+
+.sunnyhill-checkout__form {
+  padding: 14px 14px 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 220, 190, 0.1);
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.sunnyhill-checkout__form-title {
+  margin: 0;
+  color: #f4ebe3;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sunnyhill-checkout__form-hint {
+  margin: 6px 0 14px;
+  color: rgba(255, 236, 220, 0.55);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.sunnyhill-checkout__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.sunnyhill-checkout__field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.sunnyhill-checkout__field label {
+  font-size: 10px;
+  color: rgba(255, 220, 190, 0.55);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sunnyhill-checkout__field input {
+  width: 100%;
+  box-sizing: border-box;
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid rgba(255, 220, 190, 0.14);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  font-family: inherit;
+  font-size: 14px;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.sunnyhill-checkout__field input::placeholder {
+  color: rgba(255, 236, 220, 0.32);
+}
+
+.sunnyhill-checkout__field input:focus {
+  outline: none;
+  border-color: rgba(255, 180, 120, 0.4);
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 0 0 2px rgba(255, 160, 90, 0.12);
+}
+
+.sunnyhill-checkout__footer {
+  padding-top: 2px;
+}
+
+.sunnyhill-checkout__total-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  color: rgba(255, 236, 220, 0.7);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.sunnyhill-checkout__total-row strong {
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.sunnyhill-checkout__pay {
+  width: 100%;
+  min-height: 46px;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #e8c07a 0%, #d4a054 100%);
+  color: #1a120c;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.sunnyhill-checkout__pay:hover:not(:disabled),
+.sunnyhill-checkout__pay:focus-visible:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(212, 160, 84, 0.28);
+}
+
+.sunnyhill-checkout__pay:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.sunnyhill-checkout__status {
+  margin: 12px 0 0;
+  min-height: 1.2em;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.45;
+  color: rgba(255, 236, 220, 0.65);
+}
+
+.sunnyhill-checkout__status.is-error {
+  color: #ff9a7a;
+}
+
+.sunnyhill-checkout__summary--vip .pass-card__title {
+  color: #f8f0ff;
+}
+
+.sunnyhill-checkout__summary--vip .pass-card__subtitle {
+  color: rgba(215, 165, 255, 0.95);
+}
+
+.sunnyhill-checkout__summary--ultra .pass-card__title {
+  color: #ff9a62;
+}
+
+@media (max-width: 680px) {
+  .sunnyhill-checkout__panel {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-height: 94vh;
+    border-radius: 22px 22px 0 0;
+    transform: translateY(100%);
+  }
+
+  .sunnyhill-checkout.is-open .sunnyhill-checkout__panel {
+    transform: translateY(0);
+  }
+
+  .sunnyhill-checkout__row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .lineup-card--discover .lineup-card__discover {
+    opacity: 1;
+    pointer-events: auto;
+    background: linear-gradient(
+      180deg,
+      rgba(8, 6, 10, 0.15) 0%,
+      rgba(8, 6, 10, 0.72) 100%
+    );
+  }
+
+  .lineup-card--discover .lineup-card__image {
+    filter: saturate(0.88) brightness(0.55) contrast(1.04);
   }
 }

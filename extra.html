@@ -169,9 +169,13 @@
 
       #extra-flowers .extra-copy,
       #extra-champagne .extra-copy,
+      #extra-perfumes .extra-copy,
+      #extra-chocolates .extra-copy,
       #extra-vine .extra-copy,
       #extra-flowers .extra-media,
       #extra-champagne .extra-media,
+      #extra-perfumes .extra-media,
+      #extra-chocolates .extra-media,
       #extra-vine .extra-media {
         justify-self: center;
         width: 100%;
@@ -633,6 +637,12 @@
           align-items: center;
           justify-content: center;
           padding: 16px;
+        }
+
+        .extra-order-modal--perfume.is-open,
+        .extra-order-modal--chocolate.is-open {
+          align-items: flex-start;
+          padding-top: max(16px, env(safe-area-inset-top, 0px));
         }
 
         .extra-order-modal__dialog {
@@ -1158,6 +1168,242 @@
       .extra-order-flower-picker.is-visible {
         min-height: 40px;
         flex-shrink: 0;
+      }
+
+      .extra-order-perfume-sizes {
+        display: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin: 0 0 14px;
+      }
+
+      .extra-order-perfume-sizes.is-visible {
+        display: flex;
+        min-height: 40px;
+        flex-shrink: 0;
+      }
+
+      .extra-order-perfume-sizes__btn {
+        flex: 1 1 auto;
+        min-width: 64px;
+        padding: 9px 14px;
+        border: 1px solid #d8d2cb;
+        background: #faf9f7;
+        color: #4a433d;
+        font-family: "Noto Serif", serif;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition:
+          background-color 0.2s ease,
+          border-color 0.2s ease,
+          color 0.2s ease;
+      }
+
+      .extra-order-perfume-sizes__btn.is-active {
+        background: #2c2824;
+        color: #faf9f7;
+        border-color: #2c2824;
+      }
+
+      .extra-order-perfume-sizes__btn:disabled {
+        opacity: 0.42;
+        cursor: not-allowed;
+      }
+
+      .extra-order-modal--perfume.is-open {
+        align-items: flex-start;
+      }
+
+      .extra-order-modal--perfume .extra-order-modal__dialog {
+        margin-top: 16px;
+        margin-bottom: 16px;
+      }
+
+      .extra-order-card--perfume .extra-order-card__name {
+        flex-shrink: 0;
+        min-height: 3.6em;
+        max-height: 3.6em;
+        margin-bottom: 12px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+
+      .extra-order-card--perfume .extra-order-card__media {
+        flex-shrink: 0;
+        height: 252px;
+        min-height: 252px;
+        max-height: 252px;
+        margin-bottom: 12px;
+        box-sizing: border-box;
+      }
+
+      .extra-order-card--perfume .extra-order-card__img {
+        width: auto;
+        max-width: min(220px, 100%);
+        max-height: 210px;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .extra-order-card--perfume .extra-order-perfume-sizes.is-visible {
+        flex-shrink: 0;
+        min-height: 100px;
+        height: 100px;
+        max-height: 100px;
+        margin: 0 0 14px;
+        box-sizing: border-box;
+        align-content: center;
+        overflow: hidden;
+      }
+
+      .extra-order-card--perfume .extra-order-card__desc-slot {
+        flex-shrink: 0;
+        min-height: 4.2em;
+      }
+
+      .extra-order-card--perfume .extra-order-card__desc {
+        max-height: 4.2em;
+        overflow: hidden;
+      }
+
+      .extra-order-modal--chocolate.is-open {
+        align-items: flex-start;
+      }
+
+      .extra-order-modal--chocolate .extra-order-modal__dialog {
+        margin-top: 16px;
+        margin-bottom: 16px;
+      }
+
+      .extra-order-card--chocolate .extra-order-card__name {
+        flex-shrink: 0;
+        min-height: 4.5em;
+        max-height: 4.5em;
+        margin-bottom: 12px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+      }
+
+      .extra-order-card--chocolate .extra-order-card__media {
+        flex-shrink: 0;
+        height: 252px;
+        min-height: 252px;
+        max-height: 252px;
+        margin-bottom: 12px;
+        box-sizing: border-box;
+      }
+
+      .extra-order-card--chocolate .extra-order-card__img {
+        width: auto;
+        max-width: min(220px, 100%);
+        max-height: 210px;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .extra-order-card--chocolate .extra-order-card__desc-slot {
+        flex-shrink: 0;
+        min-height: 4.2em;
+      }
+
+      .extra-order-card--chocolate .extra-order-card__desc {
+        max-height: 4.2em;
+        overflow: hidden;
+      }
+
+      .extra-order-discover {
+        display: none;
+        margin: 18px 0 4px;
+        padding: 16px 14px 14px;
+        border-radius: 14px;
+        background: linear-gradient(
+          145deg,
+          rgba(255, 252, 248, 0.98) 0%,
+          rgba(243, 232, 222, 0.55) 100%
+        );
+        border: 1px solid rgba(198, 141, 112, 0.22);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65);
+      }
+
+      .extra-order-discover.is-visible {
+        display: block;
+      }
+
+      .extra-order-discover__eyebrow {
+        margin: 0 0 14px;
+        font-size: 9px;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #a67c63;
+        font-family: "Noto Serif", serif;
+        text-align: center;
+      }
+
+      .extra-order-discover__grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .extra-order-discover__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 8px 10px;
+        border: 1px solid rgba(216, 210, 203, 0.9);
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.72);
+        cursor: pointer;
+        transition:
+          transform 0.22s ease,
+          border-color 0.22s ease,
+          box-shadow 0.22s ease;
+      }
+
+      .extra-order-discover__item:hover,
+      .extra-order-discover__item:focus-visible {
+        transform: translateY(-2px);
+        border-color: rgba(166, 124, 99, 0.45);
+        box-shadow: 0 8px 18px rgba(121, 76, 56, 0.12);
+      }
+
+      .extra-order-discover__thumb {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 76px;
+        height: 76px;
+        border-radius: 50%;
+        overflow: hidden;
+        background: #f3f0ec;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+      }
+
+      .extra-order-discover__thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .extra-order-discover__name {
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #4a433d;
+        font-family: "Noto Serif", serif;
+        text-align: center;
+        line-height: 1.25;
       }
 
       .extra-order-card__row {
@@ -2705,6 +2951,73 @@
           </div>
         </article>
 
+        <article class="extra-row" id="extra-perfumes">
+          <div class="extra-copy">
+            <p class="extra-copy-kicker">Signature scent in your room</p>
+            <h2 class="extra-copy-title">Perfumes</h2>
+            <p class="extra-copy-text">
+              Arrive to a fragrance waiting at your bedside. Browse our
+              in-room perfume collection, choose your bottle size, and we will
+              deliver it to your room.
+            </p>
+            <button
+              type="button"
+              class="extra-btn js-extra-order"
+              data-perfume-menu="true"
+              data-product="Giorgio Armani"
+              data-price="51.7"
+              data-image="img/armani.png"
+              data-images="img/armani.png,img/diesel.png,img/dkny.png,img/juliet.png,img/prada.png,img/roberto.png,img/valentino.png,img/thierry.png,img/ralph.png,img/montale.png,img/viktor.png,img/yves.png"
+              data-products="Giorgio Armani,DIESEL LOVERDOSE,DKNY BE DELICIOUS,JULIET HAS A GUN,Prada Candy,Roberto Cavalli Just Cavalli For Her,Valentino Born In Roma,Thierry Mugler MU ANG NOVA,Ralph Lauren Polo Blue,MONTALE AOUD LIME,FLBB EDP SPRAY,YVES SAINT LAURENT"
+              data-prices="51.7,55.3,49,140,92.1,28.4,101.3,118.5,77.6,150,87.9,122.4"
+              data-description="Fragrance delivered to your room in the selected bottle size."
+            >
+              Choose Your Perfume
+            </button>
+          </div>
+          <div class="extra-media">
+            <img
+              src="img/armani.png"
+              alt="In-room perfume selection"
+              width="1080"
+              height="1080"
+            />
+          </div>
+        </article>
+
+        <article class="extra-row extra-row--reverse" id="extra-chocolates">
+          <div class="extra-copy">
+            <p class="extra-copy-kicker">Sweet treats from Kosovo</p>
+            <h2 class="extra-copy-title">Tog chocolates</h2>
+            <p class="extra-copy-text">
+              Indulge in premium Tog chocolate, crafted with care and delivered
+              to your room — a thoughtful taste of Kosovo for your stay.
+            </p>
+            <button
+              type="button"
+              class="extra-btn js-extra-order"
+              data-chocolate-menu="true"
+              data-product='Tog Chocolate Box "With love from Kosova"'
+              data-price="5.7"
+              data-image="img/tog.png"
+              data-images="img/tog.png,img/tog1.png,img/tog2.png,img/tog3.png,img/tog4.png,img/tog5.png,img/tog6.png"
+              data-products='Tog Chocolate Box "With love from Kosova",Tog Chocolate Box "With love from Prishtina",Tog Chocolate Box "With love from Prizreni",Tog Chocolate Box "Me dashni pÎr ty",Tog Chocolate bar "With love from Kosova" Cranberry Dark Chocolate,Tog Spicy Chocolate bar "FlakÎ e ÀmbÎl",Tog Tablet "ASAJ" Cranberry Dark Chocolate'
+              data-prices="5.7,5.7,5.7,6.65,2.5,2.5,2.5"
+              data-description="Premium Tog chocolate delivered to your room."
+            >
+              Choose Your Chocolates
+            </button>
+          </div>
+          <div class="extra-media">
+            <img
+              src="img/tog.png"
+              alt="Tog chocolate box"
+              width="1080"
+              height="1080"
+            />
+          </div>
+        </article>
+
         <!-- <article class="extra-row" id="extra-vine">
           <div class="extra-copy">
             <p class="extra-copy-kicker">Exclusive Wines in our menu</p>
@@ -3048,6 +3361,13 @@
               &gt;
             </button>
           </div>
+          <div
+            id="extra-order-perfume-sizes"
+            class="extra-order-perfume-sizes"
+            hidden
+            role="group"
+            aria-label="Perfume bottle size"
+          ></div>
           <div class="extra-order-card__row">
             <span class="extra-order-card__price" id="extra-order-unit-price"
               >0&euro;</span
@@ -3076,6 +3396,18 @@
             <p class="extra-order-card__desc" id="extra-order-description"></p>
           </div>
         </div>
+        <aside
+          class="extra-order-discover"
+          id="extra-order-discover"
+          hidden
+          aria-label="More in-room extras"
+        >
+          <p class="extra-order-discover__eyebrow">While you are here</p>
+          <div
+            class="extra-order-discover__grid"
+            id="extra-order-discover-grid"
+          ></div>
+        </aside>
         <div class="extra-order-modal__actions">
           <div class="extra-order-form__total">
             Selected total: <strong id="extra-modal-line-total">0&euro;</strong>
@@ -3493,6 +3825,230 @@
         var CART_STORAGE_KEY = "derandExtraCart";
         var FLOWER_VARIANT_COUNT = 3;
         var FLOWER_VARIANT_LABELS = ["Red", "White", "Rose"];
+        var EXTRA_DISCOVER_ITEMS = {
+          flowers: {
+            id: "flowers",
+            label: "Flowers",
+            image: "img/flowers.png",
+            selector: "#extra-flowers .js-extra-order",
+          },
+          champagne: {
+            id: "champagne",
+            label: "Champagne",
+            image: "img/champaignee.png",
+            selector: "#extra-champagne .js-extra-order",
+          },
+          perfumes: {
+            id: "perfumes",
+            label: "Perfumes",
+            image: "img/armani.png",
+            selector: "#extra-perfumes .js-extra-order",
+          },
+          chocolates: {
+            id: "chocolates",
+            label: "Tog chocolates",
+            image: "img/tog.png",
+            selector: "#extra-chocolates .js-extra-order",
+          },
+        };
+        var EXTRA_DISCOVER_FOR = {
+          flowers: ["champagne", "perfumes", "chocolates"],
+          champagne: ["flowers", "perfumes", "chocolates"],
+          perfumes: ["flowers", "champagne", "chocolates"],
+          chocolates: ["flowers", "perfumes", "champagne"],
+        };
+        var CHOCOLATE_CATALOG_IDS = [
+          "tog",
+          "tog1",
+          "tog2",
+          "tog3",
+          "tog4",
+          "tog5",
+          "tog6",
+        ];
+        var CHOCOLATE_CATALOG = {
+          tog: {
+            name: 'Tog Chocolate Box "With love from Kosova"',
+            image: "img/tog.png",
+            price: 5.7,
+            description:
+              'Premium Tog chocolate box — "With love from Kosova" — delivered to your room.',
+          },
+          tog1: {
+            name: 'Tog Chocolate Box "With love from Prishtina"',
+            image: "img/tog1.png",
+            price: 5.7,
+            description:
+              'Premium Tog chocolate box — "With love from Prishtina" — delivered to your room.',
+          },
+          tog2: {
+            name: 'Tog Chocolate Box "With love from Prizreni"',
+            image: "img/tog2.png",
+            price: 5.7,
+            description:
+              'Premium Tog chocolate box — "With love from Prizreni" — delivered to your room.',
+          },
+          tog3: {
+            name: 'Tog Chocolate Box "Me dashni pÎr ty"',
+            image: "img/tog3.png",
+            price: 6.65,
+            description:
+              'Premium Tog chocolate box — "Me dashni pÎr ty" — delivered to your room.',
+          },
+          tog4: {
+            name: 'Tog Chocolate bar "With love from Kosova" Cranberry Dark Chocolate',
+            image: "img/tog4.png",
+            price: 2.5,
+            description:
+              'Tog chocolate bar — "With love from Kosova" Cranberry Dark Chocolate — delivered to your room.',
+          },
+          tog5: {
+            name: 'Tog Spicy Chocolate bar "FlakÎ e ÀmbÎl"',
+            image: "img/tog5.png",
+            price: 2.5,
+            description:
+              'Tog spicy chocolate bar — "FlakÎ e ÀmbÎl" — delivered to your room.',
+          },
+          tog6: {
+            name: 'Tog Tablet "ASAJ" Cranberry Dark Chocolate',
+            image: "img/tog6.png",
+            price: 2.5,
+            description:
+              'Tog tablet — "ASAJ" Cranberry Dark Chocolate — delivered to your room.',
+          },
+        };
+        var PERFUME_CATALOG_IDS = [
+          "armani",
+          "diesel",
+          "dkny",
+          "juliet",
+          "prada",
+          "roberto",
+          "valentino",
+          "thierry",
+          "ralph",
+          "montale",
+          "viktor",
+          "yves",
+        ];
+        var PERFUME_CATALOG = {
+          armani: {
+            name: "Giorgio Armani",
+            image: "img/armani.png",
+            description:
+              "Giorgio Armani fragrance delivered to your room in the selected bottle size.",
+            sizes: [
+              { ml: 50, disabled: true },
+              { ml: 75, price: 51.7, default: true },
+              { ml: 100, disabled: true },
+            ],
+          },
+          diesel: {
+            name: "DIESEL LOVERDOSE",
+            image: "img/diesel.png",
+            description:
+              "DIESEL LOVERDOSE fragrance delivered to your room in the selected bottle size.",
+            sizes: [
+              { ml: 30, price: 55.3, default: true },
+              { ml: 50, price: 75.4 },
+              { ml: 75, price: 90.4 },
+            ],
+          },
+          dkny: {
+            name: "DKNY BE DELICIOUS",
+            image: "img/dkny.png",
+            description:
+              "DKNY BE DELICIOUS fragrance delivered to your room in the selected bottle size.",
+            sizes: [
+              { ml: 30, price: 49, default: true },
+              { ml: 50, price: 64.3 },
+            ],
+          },
+          juliet: {
+            name: "JULIET HAS A GUN",
+            image: "img/juliet.png",
+            description:
+              "JULIET HAS A GUN fragrance delivered to your room in the selected bottle size.",
+            sizes: [{ ml: 100, price: 140, default: true }],
+          },
+          prada: {
+            name: "Prada Candy",
+            image: "img/prada.png",
+            description:
+              "Prada Candy fragrance delivered to your room in the selected bottle size.",
+            sizes: [
+              { ml: 30, price: 92.1, default: true },
+              { ml: 50, price: 122.7 },
+              { ml: 80, price: 157.2 },
+            ],
+          },
+          roberto: {
+            name: "Roberto Cavalli Just Cavalli For Her",
+            image: "img/roberto.png",
+            description:
+              "Roberto Cavalli Just Cavalli For Her fragrance delivered to your room in the selected bottle size.",
+            sizes: [
+              { ml: 30, price: 28.4, default: true },
+              { ml: 50, price: 36.5 },
+              { ml: 90, price: 45.7 },
+            ],
+          },
+          valentino: {
+            name: "Valentino Born In Roma",
+            image: "img/valentino.png",
+            description:
+              "Valentino Born In Roma fragrance delivered to your room in the selected bottle size.",
+            sizes: [
+              { ml: 30, price: 101.3, default: true },
+              { ml: 50, price: 145.8 },
+              { ml: 100, price: 192.6 },
+            ],
+          },
+          thierry: {
+            name: "Thierry Mugler MU ANG NOVA",
+            image: "img/thierry.png",
+            description:
+              "Thierry Mugler MU ANG NOVA fragrance delivered to your room in the selected bottle size.",
+            sizes: [
+              { ml: 50, price: 118.5, default: true },
+              { ml: 100, price: 156.9 },
+            ],
+          },
+          ralph: {
+            name: "Ralph Lauren Polo Blue",
+            image: "img/ralph.png",
+            description:
+              "Ralph Lauren Polo Blue fragrance delivered to your room in the selected bottle size.",
+            sizes: [
+              { ml: 75, price: 77.6, default: true },
+              { ml: 125, price: 87.9 },
+            ],
+          },
+          montale: {
+            name: "MONTALE AOUD LIME",
+            image: "img/montale.png",
+            description:
+              "MONTALE AOUD LIME fragrance delivered to your room in the selected bottle size.",
+            sizes: [{ ml: 100, price: 150, default: true }],
+          },
+          viktor: {
+            name: "FLBB EDP SPRAY",
+            image: "img/viktor.png",
+            description:
+              "FLBB EDP SPRAY fragrance delivered to your room in the selected bottle size.",
+            sizes: [{ ml: 30, price: 87.9, default: true }],
+          },
+          yves: {
+            name: "YVES SAINT LAURENT",
+            image: "img/yves.png",
+            description:
+              "YVES SAINT LAURENT fragrance delivered to your room in the selected bottle size.",
+            sizes: [
+              { ml: 60, price: 122.4, default: true },
+              { ml: 100, price: 157 },
+            ],
+          },
+        };
 
         var modal = document.getElementById("extra-order-modal");
         var productEl = document.getElementById("extra-order-product");
@@ -3508,6 +4064,9 @@
         var addToCartBtn = document.getElementById("extra-add-to-cart-btn");
         var modalStatusEl = document.getElementById("extra-modal-status");
         var flowerPicker = document.getElementById("extra-order-flower-picker");
+        var perfumeSizesPicker = document.getElementById("extra-order-perfume-sizes");
+        var orderDiscover = document.getElementById("extra-order-discover");
+        var orderDiscoverGrid = document.getElementById("extra-order-discover-grid");
         var orderCardMedia = document.getElementById("extra-order-card-media");
 
         var cartDrawer = document.getElementById("extra-cart-drawer");
@@ -3674,6 +4233,9 @@
         var modalQtyByIndex = [];
         var isFlowerOrder = false;
         var isSpiritsOrder = false;
+        var isPerfumeOrder = false;
+        var isChocolateOrder = false;
+        var perfumeMlByIndex = [];
         var spiritsProducts = [];
         var spiritsCategories = [];
         var spiritsPrices = [];
@@ -3782,6 +4344,145 @@
           return currentPrice;
         }
 
+        function getPerfumeDefaultSize(product) {
+          if (!product || !product.sizes) return null;
+          for (var i = 0; i < product.sizes.length; i++) {
+            var size = product.sizes[i];
+            if (!size.disabled && typeof size.price === "number") {
+              return size;
+            }
+          }
+          return null;
+        }
+
+        function getPerfumeCatalogEntry(index) {
+          var id = PERFUME_CATALOG_IDS[index];
+          return id ? PERFUME_CATALOG[id] : null;
+        }
+
+        function getChocolateCatalogEntry(index) {
+          var id = CHOCOLATE_CATALOG_IDS[index];
+          return id ? CHOCOLATE_CATALOG[id] : null;
+        }
+
+        function setChocolateModalLayout(visible) {
+          if (visible) {
+            setFlowerPickerVisible(false);
+            setSpiritsPickerVisible(false);
+            setPerfumeSizesPickerVisible(false);
+          }
+          if (modal) {
+            modal.classList.toggle("extra-order-modal--chocolate", !!visible);
+            if (visible) {
+              modal.classList.remove("extra-order-modal--perfume");
+            }
+          }
+          var orderCard = document.querySelector(".extra-order-card");
+          if (orderCard) {
+            orderCard.classList.toggle("extra-order-card--chocolate", !!visible);
+            if (visible) {
+              orderCard.classList.remove("extra-order-card--perfume");
+            }
+          }
+        }
+
+        function setPerfumeSizesPickerVisible(visible) {
+          if (visible) {
+            setFlowerPickerVisible(false);
+            setSpiritsPickerVisible(false);
+            setChocolateModalLayout(false);
+          }
+          if (modal) {
+            modal.classList.toggle("extra-order-modal--perfume", !!visible);
+            if (visible) {
+              modal.classList.remove("extra-order-modal--chocolate");
+            }
+          }
+          var orderCard = perfumeSizesPicker
+            ? perfumeSizesPicker.closest(".extra-order-card")
+            : document.querySelector(".extra-order-card");
+          if (orderCard) {
+            orderCard.classList.toggle("extra-order-card--perfume", !!visible);
+            if (visible) {
+              orderCard.classList.remove("extra-order-card--chocolate");
+            }
+          }
+          if (!perfumeSizesPicker) return;
+          if (visible) {
+            perfumeSizesPicker.removeAttribute("hidden");
+            perfumeSizesPicker.classList.add("is-visible");
+          } else {
+            perfumeSizesPicker.setAttribute("hidden", "");
+            perfumeSizesPicker.classList.remove("is-visible");
+            perfumeSizesPicker.innerHTML = "";
+          }
+        }
+
+        function selectPerfumeSize(ml, price) {
+          if (!isPerfumeOrder) return;
+          perfumeMlByIndex[currentImageIndex] = String(ml);
+          currentPrices[currentImageIndex] = price;
+          currentPrice = price;
+          syncPerfumeSizeButtons();
+          var slideName = getSlideProductName(currentImageIndex);
+          if (perfumeMlByIndex[currentImageIndex]) {
+            slideName =
+              slideName + " \u2014 " + perfumeMlByIndex[currentImageIndex] + " ml";
+          }
+          productEl.textContent = slideName;
+          imageEl.alt = slideName;
+          unitPriceEl.textContent = formatEuro(currentPrice);
+          var qty = getModalQty();
+          modalLineTotalEl.textContent = formatEuro(getModalSelectionTotal());
+          qtyEl.textContent = String(qty);
+        }
+
+        function syncPerfumeSizeButtons() {
+          if (!perfumeSizesPicker || !isPerfumeOrder) return;
+          var activeMl = perfumeMlByIndex[currentImageIndex] || "";
+          var btns = perfumeSizesPicker.querySelectorAll(
+            ".extra-order-perfume-sizes__btn",
+          );
+          for (var i = 0; i < btns.length; i++) {
+            btns[i].classList.toggle(
+              "is-active",
+              btns[i].getAttribute("data-ml") === activeMl,
+            );
+          }
+        }
+
+        function renderModalPerfumeSizes() {
+          if (!perfumeSizesPicker || !isPerfumeOrder) return;
+          var product = getPerfumeCatalogEntry(currentImageIndex);
+          if (!product) return;
+
+          perfumeSizesPicker.innerHTML = "";
+          var activeMl = perfumeMlByIndex[currentImageIndex] || "";
+
+          product.sizes.forEach(function (size) {
+            var btn = document.createElement("button");
+            btn.type = "button";
+            btn.className = "extra-order-perfume-sizes__btn";
+            btn.textContent = size.ml + " ml";
+            btn.setAttribute("data-ml", String(size.ml));
+
+            if (size.disabled || typeof size.price !== "number") {
+              btn.disabled = true;
+              btn.title = "Not available for this fragrance";
+            } else {
+              btn.setAttribute("data-price", String(size.price));
+              if (String(size.ml) === activeMl) {
+                btn.classList.add("is-active");
+              }
+              btn.addEventListener("click", function () {
+                selectPerfumeSize(size.ml, size.price);
+              });
+            }
+
+            perfumeSizesPicker.appendChild(btn);
+          });
+        }
+
         function cartItemKey(item) {
           return (
             (item.productBase || "") +
@@ -3803,6 +4504,9 @@
         }
 
         function getVariantLabel(index) {
+          if (isPerfumeOrder && perfumeMlByIndex[index]) {
+            return perfumeMlByIndex[index] + " ml";
+          }
           if (isSpiritsOrder && spiritsProducts[index]) {
             return spiritsProducts[index];
           }
@@ -3844,9 +4548,70 @@
           }, 2600);
         }
 
+        function setDiscoverVisible(visible) {
+          if (!orderDiscover) return;
+          if (visible) {
+            orderDiscover.removeAttribute("hidden");
+            orderDiscover.classList.add("is-visible");
+          } else {
+            orderDiscover.setAttribute("hidden", "");
+            orderDiscover.classList.remove("is-visible");
+          }
+        }
+
+        function getExtraCategoryFromButton(btn) {
+          if (!btn) return null;
+          if (btn.getAttribute("data-perfume-menu") === "true") return "perfumes";
+          if (btn.getAttribute("data-chocolate-menu") === "true") return "chocolates";
+          if (btn.closest("#extra-champagne")) return "champagne";
+          if (btn.closest("#extra-flowers")) return "flowers";
+          return null;
+        }
+
+        function renderOrderDiscover(categoryId) {
+          var keys = EXTRA_DISCOVER_FOR[categoryId];
+          if (!orderDiscover || !orderDiscoverGrid || !keys || !keys.length) {
+            setDiscoverVisible(false);
+            return;
+          }
+
+          orderDiscoverGrid.innerHTML = "";
+          keys.forEach(function (key) {
+            var item = EXTRA_DISCOVER_ITEMS[key];
+            if (!item) return;
+
+            var btn = document.createElement("button");
+            btn.type = "button";
+            btn.className = "extra-order-discover__item";
+            btn.setAttribute("data-extra-discover", item.id);
+
+            var thumb = document.createElement("span");
+            thumb.className = "extra-order-discover__thumb";
+            var img = document.createElement("img");
+            img.src = item.image;
+            img.alt = "";
+            img.width = 76;
+            img.height = 76;
+            thumb.appendChild(img);
+
+            var label = document.createElement("span");
+            label.className = "extra-order-discover__name";
+            label.textContent = item.label;
+
+            btn.appendChild(thumb);
+            btn.appendChild(label);
+            orderDiscoverGrid.appendChild(btn);
+          });
+
+          setDiscoverVisible(true);
+        }
+
         function setFlowerPickerVisible(visible) {
           isFlowerOrder = visible;
-          if (visible) setSpiritsPickerVisible(false);
+          if (visible) {
+            setSpiritsPickerVisible(false);
+            setPerfumeSizesPickerVisible(false);
+          }
           if (flowerPicker) {
             if (visible) {
               flowerPicker.removeAttribute("hidden");
@@ -3866,7 +4631,10 @@
 
         function setSpiritsPickerVisible(visible) {
           isSpiritsOrder = visible;
-          if (visible) setFlowerPickerVisible(false);
+          if (visible) {
+            setFlowerPickerVisible(false);
+            setPerfumeSizesPickerVisible(false);
+          }
         }
 
         function syncOrderFlowerPicker() {
@@ -3924,7 +4692,9 @@
           syncPricesToImages();
           var image = currentImages[currentImageIndex] || "img/flowers.png";
           currentPrice = linePriceAt(currentImageIndex);
-          imageEl.src = image;
+          if (imageEl.getAttribute("src") !== image) {
+            imageEl.src = image;
+          }
           unitPriceEl.textContent = formatEuro(currentPrice);
           qtyEl.textContent = String(qty);
           modalLineTotalEl.textContent = formatEuro(selectionTotal);
@@ -3935,8 +4705,33 @@
           imageNextBtn.hidden = disableNav;
           minusBtn.disabled = qty <= 0;
           var slideName = getSlideProductName(currentImageIndex);
+          if (isPerfumeOrder && perfumeMlByIndex[currentImageIndex]) {
+            slideName =
+              slideName +
+              " \u2014 " +
+              perfumeMlByIndex[currentImageIndex] +
+              " ml";
+          }
           productEl.textContent = slideName;
           imageEl.alt = slideName;
+          if (descriptionEl && isPerfumeOrder) {
+            var perfumeEntry = getPerfumeCatalogEntry(currentImageIndex);
+            descriptionEl.textContent =
+              (perfumeEntry && perfumeEntry.description) ||
+              productDescription ||
+              "";
+          } else if (descriptionEl && isChocolateOrder) {
+            var chocolateEntry = getChocolateCatalogEntry(currentImageIndex);
+            descriptionEl.textContent =
+              (chocolateEntry && chocolateEntry.description) ||
+              productDescription ||
+              "";
+          }
+          if (isPerfumeOrder) {
+            currentPrice = linePriceAt(currentImageIndex);
+            unitPriceEl.textContent = formatEuro(currentPrice);
+            renderModalPerfumeSizes();
+          }
         }
 
         function syncExtraSlideProducts(btn, fallbackName) {
@@ -4003,8 +4798,54 @@
           syncPricesToImages();
 
           var isSpirits = btn.getAttribute("data-spirits-menu") === "true";
+          var isPerfumeMenu = btn.getAttribute("data-perfume-menu") === "true";
+          var isChocolateMenu = btn.getAttribute("data-chocolate-menu") === "true";
+          isPerfumeOrder = isPerfumeMenu;
+          isChocolateOrder = isChocolateMenu;
+          perfumeMlByIndex = [];
 
-          if (isSpirits) {
+          if (isChocolateMenu) {
+            isSpirits = false;
+            isPerfumeOrder = false;
+            perfumeMlByIndex = [];
+            currentImages = CHOCOLATE_CATALOG_IDS.map(function (id) {
+              return CHOCOLATE_CATALOG[id].image;
+            });
+            extraSlideProducts = CHOCOLATE_CATALOG_IDS.map(function (id) {
+              return CHOCOLATE_CATALOG[id].name;
+            });
+            currentPrices = CHOCOLATE_CATALOG_IDS.map(function (id) {
+              return CHOCOLATE_CATALOG[id].price;
+            });
+            productBaseName = product;
+            productDescription = desc;
+            currentImageIndex = 0;
+            currentPrice = currentPrices[0] || price;
+            syncPricesToImages();
+          } else if (isPerfumeMenu) {
+            isChocolateOrder = false;
+            isSpirits = false;
+            currentImages = PERFUME_CATALOG_IDS.map(function (id) {
+              return PERFUME_CATALOG[id].image;
+            });
+            extraSlideProducts = PERFUME_CATALOG_IDS.map(function (id) {
+              return PERFUME_CATALOG[id].name;
+            });
+            currentPrices = [];
+            perfumeMlByIndex = [];
+            PERFUME_CATALOG_IDS.forEach(function (id) {
+              var entry = PERFUME_CATALOG[id];
+              var def = getPerfumeDefaultSize(entry);
+              currentPrices.push(def ? def.price : 0);
+              perfumeMlByIndex.push(def ? String(def.ml) : "");
+            });
+            productBaseName = product;
+            currentImageIndex = 0;
+            currentPrice = currentPrices[0] || price;
+            syncPricesToImages();
+          } else if (isSpirits) {
+            isPerfumeOrder = false;
+            perfumeMlByIndex = [];
             var productsRaw = btn.getAttribute("data-products") || product;
             var categoriesRaw = btn.getAttribute("data-categories") || "";
             var pricesRawSpirits = btn.getAttribute("data-prices") || "";
@@ -4103,10 +4944,24 @@
           resetModalQuantities(
             isSpirits ? spiritsProducts.length : currentImages.length,
           );
-          if (descriptionEl && !isSpirits) descriptionEl.textContent = desc;
+          if (descriptionEl && !isSpirits && !isPerfumeMenu && !isChocolateMenu) {
+            descriptionEl.textContent = desc;
+          }
           if (modalStatusEl) modalStatusEl.textContent = "";
           setFlowerPickerVisible(false);
           setSpiritsPickerVisible(isSpirits);
+          setPerfumeSizesPickerVisible(isPerfumeMenu);
+          setChocolateModalLayout(isChocolateMenu);
+          if (!isSpirits) {
+            var discoverCategory = getExtraCategoryFromButton(btn);
+            if (discoverCategory) {
+              renderOrderDiscover(discoverCategory);
+            } else {
+              setDiscoverVisible(false);
+            }
+          } else {
+            setDiscoverVisible(false);
+          }
           updateModalView();
           modal.classList.add("is-open");
           modal.setAttribute("aria-hidden", "false");
@@ -4121,6 +4976,12 @@
           }
           setFlowerPickerVisible(false);
           setSpiritsPickerVisible(false);
+          setPerfumeSizesPickerVisible(false);
+          setChocolateModalLayout(false);
+          setDiscoverVisible(false);
+          isPerfumeOrder = false;
+          isChocolateOrder = false;
+          perfumeMlByIndex = [];
         }
 
         function openCart() {
@@ -4310,7 +5171,13 @@
                   qty: addQty,
                   description: isSpiritsOrder
                     ? spiritsDescriptions[i] || productDescription
-                    : productDescription,
+                    : isPerfumeOrder
+                      ? (getPerfumeCatalogEntry(i) || {}).description ||
+                        productDescription
+                      : isChocolateOrder
+                        ? (getChocolateCatalogEntry(i) || {}).description ||
+                          productDescription
+                        : productDescription,
                 },
                 { closeModal: false, openCart: false, skipToast: true },
               )
@@ -4369,6 +5236,26 @@
         }
 
         document.addEventListener("click", function (event) {
+          var discoverBtn = event.target.closest("[data-extra-discover]");
+          if (discoverBtn) {
+            var discoverKey = discoverBtn.getAttribute("data-extra-discover");
+            var discoverMeta =
+              discoverKey && EXTRA_DISCOVER_ITEMS[discoverKey]
+                ? EXTRA_DISCOVER_ITEMS[discoverKey]
+                : null;
+            var discoverTrigger = discoverMeta
+              ? document.querySelector(discoverMeta.selector)
+              : null;
+            if (discoverTrigger) {
+              event.preventDefault();
+              closeModal();
+              window.setTimeout(function () {
+                discoverTrigger.click();
+              }, 280);
+            }
+            return;
+          }
+
           var orderBtn = event.target.closest(".js-extra-order");
           if (orderBtn) {
             openModal(orderBtn);

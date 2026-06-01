@@ -168,11 +168,14 @@ function raiaccept_return_url(string $baseUrl, string $returnPath, string $payme
 
 function raiaccept_build_order_payload(array $input, array $config, string $merchantOrderReference): array
 {
-    $lastName = trim((string) ($input['lastName'] ?? 'Guest'));
+    $firstName = trim((string) ($input['firstName'] ?? ''));
+    $lastName = trim((string) ($input['lastName'] ?? $input['surname'] ?? 'Guest'));
     if ($lastName === '') {
         $lastName = 'Guest';
     }
 
+    $email = trim((string) ($input['email'] ?? ''));
+    $phone = trim((string) ($input['phone'] ?? $input['mobilePhone'] ?? ''));
     $deliveryDate = trim((string) ($input['deliveryDate'] ?? ''));
     $deliveryTime = trim((string) ($input['deliveryTime'] ?? ''));
     $message = trim((string) ($input['message'] ?? ''));
@@ -219,14 +222,34 @@ function raiaccept_build_order_payload(array $input, array $config, string $merc
 
     $baseUrl = $config['site_base_url'];
     $description = $productName;
+    if ($firstName !== '') {
+        $description .= ' — ' . $firstName . ' ' . $lastName;
+    }
+    if ($email !== '') {
+        $description .= ' — ' . $email;
+    }
+    if ($phone !== '') {
+        $description .= ' — ' . $phone;
+    }
     if ($deliveryDate !== '' || $deliveryTime !== '') {
         $description .= ' — delivery ' . trim($deliveryDate . ' ' . $deliveryTime);
     }
 
+    $consumer = [
+        'lastName' => substr($lastName, 0, 32),
+    ];
+    if ($firstName !== '') {
+        $consumer['firstName'] = substr($firstName, 0, 32);
+    }
+    if ($email !== '') {
+        $consumer['email'] = substr($email, 0, 64);
+    }
+    if ($phone !== '') {
+        $consumer['mobilePhone'] = substr($phone, 0, 32);
+    }
+
     return [
-        'consumer' => [
-            'lastName' => substr($lastName, 0, 32),
-        ],
+        'consumer' => $consumer,
         'invoice' => [
             'merchantOrderReference' => $merchantOrderReference,
             'amount' => $amount,
@@ -248,7 +271,12 @@ function raiaccept_create_checkout(array $input): array
     $config = raiaccept_load_config();
     $token = raiaccept_get_token($config);
 
-    $merchantOrderReference = 'EXTRA-' . gmdate('YmdHis') . '-' . bin2hex(random_bytes(4));
+    $returnPath = trim((string) ($input['returnPath'] ?? '/extra.html'));
+    $orderPrefix = 'EXTRA';
+    if (stripos($returnPath, 'sunnyhill') !== false) {
+        $orderPrefix = 'SUNNYHILL';
+    }
+    $merchantOrderReference = $orderPrefix . '-' . gmdate('YmdHis') . '-' . bin2hex(random_bytes(4));
     $orderBody = raiaccept_build_order_payload($input, $config, $merchantOrderReference);
 
     $authHeader = ['Authorization: Bearer ' . $token];
