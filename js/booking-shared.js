@@ -45,18 +45,18 @@
   ];
 
   var PERFUME_ITEMS = [
-    { id: "perfume-armani", label: "Giorgio Armani", image: "img/armani.png", price: 51.7, category: "perfume" },
-    { id: "perfume-diesel", label: "DIESEL LOVERDOSE", image: "img/diesel.png", price: 55.3, category: "perfume" },
-    { id: "perfume-dkny", label: "DKNY BE DELICIOUS", image: "img/dkny.png", price: 49, category: "perfume" },
-    { id: "perfume-juliet", label: "JULIET HAS A GUN", image: "img/juliet.png", price: 140, category: "perfume" },
-    { id: "perfume-prada", label: "Prada Candy", image: "img/prada.png", price: 92.1, category: "perfume" },
-    { id: "perfume-roberto", label: "Roberto Cavalli Just Cavalli For Her", image: "img/roberto.png", price: 28.4, category: "perfume" },
-    { id: "perfume-valentino", label: "Valentino Born In Roma", image: "img/valentino.png", price: 101.3, category: "perfume" },
-    { id: "perfume-thierry", label: "Thierry Mugler MU ANG NOVA", image: "img/thierry.png", price: 118.5, category: "perfume" },
-    { id: "perfume-ralph", label: "Ralph Lauren Polo Blue", image: "img/ralph.png", price: 77.6, category: "perfume" },
-    { id: "perfume-montale", label: "MONTALE AOUD LIME", image: "img/montale.png", price: 150, category: "perfume" },
-    { id: "perfume-viktor", label: "FLBB EDP SPRAY", image: "img/viktor.png", price: 87.9, category: "perfume" },
-    { id: "perfume-yves", label: "YVES SAINT LAURENT", image: "img/yves.png", price: 122.4, category: "perfume" },
+    { id: "perfume-armani", label: "Giorgio Armani", image: "img/armani.png", price: 33.12, category: "perfume" },
+    { id: "perfume-diesel", label: "DIESEL LOVERDOSE", image: "img/diesel.png", price: 44.24, category: "perfume" },
+    { id: "perfume-dkny", label: "DKNY BE DELICIOUS", image: "img/dkny.png", price: 39.2, category: "perfume" },
+    { id: "perfume-juliet", label: "JULIET HAS A GUN", image: "img/juliet.png", price: 112, category: "perfume" },
+    { id: "perfume-prada", label: "Prada Candy", image: "img/prada.png", price: 73.68, category: "perfume" },
+    { id: "perfume-roberto", label: "Roberto Cavalli Just Cavalli For Her", image: "img/roberto.png", price: 22.72, category: "perfume" },
+    { id: "perfume-valentino", label: "Valentino Born In Roma", image: "img/valentino.png", price: 81.04, category: "perfume" },
+    { id: "perfume-thierry", label: "Thierry Mugler MU ANG NOVA", image: "img/thierry.png", price: 94.8, category: "perfume" },
+    { id: "perfume-ralph", label: "Ralph Lauren Polo Blue", image: "img/ralph.png", price: 62.08, category: "perfume" },
+    { id: "perfume-montale", label: "MONTALE AOUD LIME", image: "img/montale.png", price: 120, category: "perfume" },
+    { id: "perfume-viktor", label: "FLBB EDP SPRAY", image: "img/viktor.png", price: 70.32, category: "perfume" },
+    { id: "perfume-yves", label: "YVES SAINT LAURENT", image: "img/yves.png", price: 97.92, category: "perfume" },
   ];
 
   var CATEGORIES = {
@@ -173,15 +173,20 @@
 
   function categoryHasExtras(idsOrLines, categoryId) {
     if (!categoryId) return false;
+    function lineMatchesCategory(line) {
+      if (!line) return false;
+      if (line.category === categoryId) return true;
+      if (categoryId === "decor") {
+        var text = String(line.label || line.productBase || "").toLowerCase();
+        return text.indexOf("decor") !== -1;
+      }
+      return false;
+    }
     if (Array.isArray(idsOrLines) && idsOrLines.length && typeof idsOrLines[0] === "object") {
-      return idsOrLines.some(function (line) {
-        return line && line.category === categoryId;
-      });
+      return idsOrLines.some(lineMatchesCategory);
     }
     var lines = linesFromLegacyIds(idsOrLines || []);
-    return lines.some(function (line) {
-      return line.category === categoryId;
-    });
+    return lines.some(lineMatchesCategory);
   }
 
   function getItemById(id) {

@@ -104,19 +104,27 @@
 }
 
 .booking-concierge-prompt__choices {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  padding-bottom: 2px;
 }
 
 .booking-concierge-prompt__chip {
   display: flex;
+  flex: 1 1 0;
+  min-width: 88px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 8px;
   min-height: 108px;
-  padding: 14px 8px 12px;
+  padding: 14px 6px 12px;
   border-radius: 14px;
   border: 2px solid rgba(31, 27, 22, 0.12);
   background: #fffdfa;
@@ -135,9 +143,14 @@
 }
 
 .booking-concierge-prompt__chip img {
-  width: 52px;
-  height: 52px;
+  width: 44px;
+  height: 44px;
   object-fit: contain;
+}
+
+.booking-concierge-prompt__chip span {
+  text-align: center;
+  line-height: 1.2;
 }
 
 .booking-concierge-prompt__chip:hover,
@@ -197,17 +210,19 @@
 
 @media (max-width: 480px) {
   .booking-concierge-prompt__choices {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
+    gap: 8px;
   }
 
   .booking-concierge-prompt__chip {
-    min-height: 118px;
+    min-width: 82px;
+    min-height: 104px;
+    padding: 12px 4px 10px;
+    font-size: 0.68rem;
   }
 
   .booking-concierge-prompt__chip img {
-    width: 56px;
-    height: 56px;
+    width: 40px;
+    height: 40px;
   }
 }
 

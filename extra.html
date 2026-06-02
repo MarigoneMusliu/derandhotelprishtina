@@ -1309,6 +1309,10 @@
         transform: translateY(-1px);
       }
 
+      #extra-add-to-cart-btn {
+        display: none !important;
+      }
+
       .extra-order-flower-picker {
         display: none;
         flex-wrap: wrap;
@@ -3396,11 +3400,11 @@
               class="extra-btn js-extra-order"
               data-perfume-menu="true"
               data-product="Giorgio Armani"
-              data-price="51.7"
+              data-price="33.12"
               data-image="img/armani.png"
               data-images="img/armani.png,img/diesel.png,img/dkny.png,img/juliet.png,img/prada.png,img/roberto.png,img/valentino.png,img/thierry.png,img/ralph.png,img/montale.png,img/viktor.png,img/yves.png"
               data-products="Giorgio Armani,DIESEL LOVERDOSE,DKNY BE DELICIOUS,JULIET HAS A GUN,Prada Candy,Roberto Cavalli Just Cavalli For Her,Valentino Born In Roma,Thierry Mugler MU ANG NOVA,Ralph Lauren Polo Blue,MONTALE AOUD LIME,FLBB EDP SPRAY,YVES SAINT LAURENT"
-              data-prices="51.7,55.3,49,140,92.1,28.4,101.3,118.5,77.6,150,87.9,122.4"
+              data-prices="33.12,44.24,39.2,112,73.68,22.72,81.04,94.8,62.08,120,70.32,97.92"
               data-description="Fragrance delivered to your room in the selected bottle size."
             >
               Choose Your Perfume
@@ -4349,13 +4353,21 @@
             selector: "#extra-laundry .js-extra-order",
           },
         };
-        var EXTRA_DISCOVER_FOR = {
-          flowers: ["perfumes", "chocolates", "decor", "laundry", "champagne"],
-          champagne: ["flowers", "perfumes", "chocolates"],
-          perfumes: ["flowers", "champagne", "chocolates", "decor", "laundry"],
-          chocolates: ["flowers", "perfumes", "champagne"],
-          laundry: ["flowers", "chocolates", "perfumes"],
-        };
+        var EXTRA_DISCOVER_CATEGORY_ORDER = [
+          "flowers",
+          "champagne",
+          "perfumes",
+          "chocolates",
+          "decor",
+          "laundry",
+        ];
+
+        function getDiscoverKeysForCategory(categoryId) {
+          if (!categoryId) return EXTRA_DISCOVER_CATEGORY_ORDER.slice();
+          return EXTRA_DISCOVER_CATEGORY_ORDER.filter(function (key) {
+            return key !== categoryId;
+          });
+        }
         var CHOCOLATE_CATALOG_IDS = [
           "tog",
           "tog1",
@@ -4534,7 +4546,7 @@
               "Giorgio Armani fragrance delivered to your room in the selected bottle size.",
             sizes: [
               { ml: 50, disabled: true },
-              { ml: 75, price: 51.7, default: true },
+              { ml: 75, price: 33.12, default: true },
               { ml: 100, disabled: true },
             ],
           },
@@ -4544,9 +4556,9 @@
             description:
               "DIESEL LOVERDOSE fragrance delivered to your room in the selected bottle size.",
             sizes: [
-              { ml: 30, price: 55.3, default: true },
-              { ml: 50, price: 75.4 },
-              { ml: 75, price: 90.4 },
+              { ml: 30, price: 44.24, default: true },
+              { ml: 50, price: 60.32 },
+              { ml: 75, price: 72.32 },
             ],
           },
           dkny: {
@@ -4555,8 +4567,8 @@
             description:
               "DKNY BE DELICIOUS fragrance delivered to your room in the selected bottle size.",
             sizes: [
-              { ml: 30, price: 49, default: true },
-              { ml: 50, price: 64.3 },
+              { ml: 30, price: 39.2, default: true },
+              { ml: 50, price: 51.44 },
             ],
           },
           juliet: {
@@ -4564,7 +4576,7 @@
             image: "img/juliet.png",
             description:
               "JULIET HAS A GUN fragrance delivered to your room in the selected bottle size.",
-            sizes: [{ ml: 100, price: 140, default: true }],
+            sizes: [{ ml: 100, price: 112, default: true }],
           },
           prada: {
             name: "Prada Candy",
@@ -4572,9 +4584,9 @@
             description:
               "Prada Candy fragrance delivered to your room in the selected bottle size.",
             sizes: [
-              { ml: 30, price: 92.1, default: true },
-              { ml: 50, price: 122.7 },
-              { ml: 80, price: 157.2 },
+              { ml: 30, price: 73.68, default: true },
+              { ml: 50, price: 98.16 },
+              { ml: 80, price: 125.76 },
             ],
           },
           roberto: {
@@ -4583,9 +4595,9 @@
             description:
               "Roberto Cavalli Just Cavalli For Her fragrance delivered to your room in the selected bottle size.",
             sizes: [
-              { ml: 30, price: 28.4, default: true },
-              { ml: 50, price: 36.5 },
-              { ml: 90, price: 45.7 },
+              { ml: 30, price: 22.72, default: true },
+              { ml: 50, price: 29.2 },
+              { ml: 90, price: 36.56 },
             ],
           },
           valentino: {
@@ -4594,9 +4606,9 @@
             description:
               "Valentino Born In Roma fragrance delivered to your room in the selected bottle size.",
             sizes: [
-              { ml: 30, price: 101.3, default: true },
-              { ml: 50, price: 145.8 },
-              { ml: 100, price: 192.6 },
+              { ml: 30, price: 81.04, default: true },
+              { ml: 50, price: 116.64 },
+              { ml: 100, price: 154.08 },
             ],
           },
           thierry: {
@@ -4605,8 +4617,8 @@
             description:
               "Thierry Mugler MU ANG NOVA fragrance delivered to your room in the selected bottle size.",
             sizes: [
-              { ml: 50, price: 118.5, default: true },
-              { ml: 100, price: 156.9 },
+              { ml: 50, price: 94.8, default: true },
+              { ml: 100, price: 125.52 },
             ],
           },
           ralph: {
@@ -4615,8 +4627,8 @@
             description:
               "Ralph Lauren Polo Blue fragrance delivered to your room in the selected bottle size.",
             sizes: [
-              { ml: 75, price: 77.6, default: true },
-              { ml: 125, price: 87.9 },
+              { ml: 75, price: 62.08, default: true },
+              { ml: 125, price: 70.32 },
             ],
           },
           montale: {
@@ -4624,14 +4636,14 @@
             image: "img/montale.png",
             description:
               "MONTALE AOUD LIME fragrance delivered to your room in the selected bottle size.",
-            sizes: [{ ml: 100, price: 150, default: true }],
+            sizes: [{ ml: 100, price: 120, default: true }],
           },
           viktor: {
             name: "FLBB EDP SPRAY",
             image: "img/viktor.png",
             description:
               "FLBB EDP SPRAY fragrance delivered to your room in the selected bottle size.",
-            sizes: [{ ml: 30, price: 87.9, default: true }],
+            sizes: [{ ml: 30, price: 70.32, default: true }],
           },
           yves: {
             name: "YVES SAINT LAURENT",
@@ -4639,8 +4651,8 @@
             description:
               "YVES SAINT LAURENT fragrance delivered to your room in the selected bottle size.",
             sizes: [
-              { ml: 60, price: 122.4, default: true },
-              { ml: 100, price: 157 },
+              { ml: 60, price: 97.92, default: true },
+              { ml: 100, price: 125.6 },
             ],
           },
         };
@@ -5310,14 +5322,21 @@
           if (btn.getAttribute("data-perfume-menu") === "true") return "perfumes";
           if (btn.getAttribute("data-chocolate-menu") === "true") return "chocolates";
           if (btn.getAttribute("data-laundry-menu") === "true") return "laundry";
-          if (btn.closest("#extra-champagne")) return "champagne";
+          if (
+            btn.getAttribute("data-spirits-menu") === "true" ||
+            btn.closest("#extra-champagne")
+          ) {
+            return "champagne";
+          }
+          if (btn.closest("#extra-perfumes")) return "perfumes";
+          if (btn.closest("#extra-chocolates")) return "chocolates";
           if (btn.closest("#extra-flowers")) return "flowers";
           if (btn.closest("#extra-laundry")) return "laundry";
           return null;
         }
 
         function renderOrderDiscover(categoryId) {
-          var keys = EXTRA_DISCOVER_FOR[categoryId];
+          var keys = getDiscoverKeysForCategory(categoryId);
           if (!orderDiscover || !orderDiscoverGrid || !keys || !keys.length) {
             setDiscoverVisible(false);
             return;
@@ -5391,7 +5410,7 @@
             !isChocolateOrder &&
             !isLaundryOrder
           ) {
-            var serviceKeys = EXTRA_DISCOVER_FOR.flowers || [];
+            var serviceKeys = getDiscoverKeysForCategory("flowers");
             variantWrap.hidden = !serviceKeys.length;
             variantStrip.innerHTML = "";
             for (var s = 0; s < serviceKeys.length; s++) {
@@ -5793,15 +5812,13 @@
           setLaundryModalLayout(isLaundryMenu);
           if (isBookingFlow) {
             setDiscoverVisible(false);
-          } else if (!isSpirits) {
+          } else {
             var discoverCategory = getExtraCategoryFromButton(btn);
             if (discoverCategory) {
               renderOrderDiscover(discoverCategory);
             } else {
               setDiscoverVisible(false);
             }
-          } else {
-            setDiscoverVisible(false);
           }
           updateModalView();
           if (isBookingFlow) {
@@ -6127,6 +6144,17 @@
           if (preloder) preloder.style.display = "none";
 
           function openBookingCategoryModal() {
+            if (focus === "decor") {
+              var decorSection = document.querySelector(".extra-continue");
+              if (decorSection && typeof decorSection.scrollIntoView === "function") {
+                decorSection.scrollIntoView({ behavior: "smooth", block: "start" });
+              }
+              var decorAddButton = document.getElementById("extra-decor-add-cart");
+              if (decorAddButton && typeof decorAddButton.focus === "function") {
+                decorAddButton.focus({ preventScroll: true });
+              }
+              return;
+            }
             var trigger = document.querySelector(triggerSelector);
             if (trigger) {
               openModal(trigger);
@@ -6199,6 +6227,82 @@
               ? "Added your selections to the cart"
               : "Added to your cart",
           );
+        }
+
+        function addCurrentVariantToCartInstantly() {
+          if (isBookingFlow) return false;
+          if (!isSpiritsOrder) syncPricesToImages();
+
+          var i = currentImageIndex;
+          var image = isSpiritsOrder
+            ? currentImages[i] || "img/champ.jpg"
+            : currentImages[i];
+          var price = isSpiritsOrder ? spiritsPrices[i] || 0 : linePriceAt(i);
+          var variantLabel = getVariantLabel(i);
+          var added = addLineToCart(
+            {
+              productBase: getSlideProductName(i),
+              variantLabel: isSpiritsOrder ? "" : variantLabel,
+              image: image,
+              price: price,
+              qty: 1,
+              description: isSpiritsOrder
+                ? spiritsDescriptions[i] || productDescription
+                : isPerfumeOrder
+                  ? (getPerfumeCatalogEntry(i) || {}).description ||
+                    productDescription
+                  : isChocolateOrder
+                    ? (getChocolateCatalogEntry(i) || {}).description ||
+                      productDescription
+                    : isLaundryOrder
+                      ? (getLaundryCatalogEntry(i) || {}).description ||
+                        productDescription
+                      : productDescription,
+            },
+            {
+              closeModal: false,
+              openCart: false,
+              skipToast: false,
+              toastMessage: "Added to cart",
+            },
+          );
+
+          if (added) {
+            if (modalStatusEl) modalStatusEl.textContent = "Added to cart.";
+            setModalQty(getModalQty() + 1);
+            updateModalView();
+          }
+          return added;
+        }
+
+        function removeCurrentVariantFromCartInstantly() {
+          if (isBookingFlow) return false;
+          if (!isSpiritsOrder) syncPricesToImages();
+
+          var i = currentImageIndex;
+          var image = isSpiritsOrder
+            ? currentImages[i] || "img/champ.jpg"
+            : currentImages[i];
+          var variantLabel = getVariantLabel(i);
+          var key = cartItemKey({
+            productBase: getSlideProductName(i),
+            image: image,
+            variantLabel: isSpiritsOrder ? "" : variantLabel,
+          });
+
+          for (var c = 0; c < cart.length; c++) {
+            if (cartItemKey(cart[c]) !== key) continue;
+            cart[c].qty = Math.max(0, (cart[c].qty || 0) - 1);
+            if (cart[c].qty === 0) {
+              cart.splice(c, 1);
+            }
+            saveCart();
+            renderCart();
+            if (modalStatusEl) modalStatusEl.textContent = "Removed from cart.";
+            showToast("Removed from cart");
+            return true;
+          }
+          return false;
         }
 
         window.derandAddToCart = function (lineItem) {
@@ -6315,12 +6419,16 @@
 
         minusBtn.addEventListener("click", function (event) {
           event.preventDefault();
+          if (getModalQty() > 0) {
+            removeCurrentVariantFromCartInstantly();
+          }
           setModalQty(getModalQty() - 1);
           updateModalView();
         });
 
         plusBtn.addEventListener("click", function (event) {
           event.preventDefault();
+          if (addCurrentVariantToCartInstantly()) return;
           setModalQty(getModalQty() + 1);
           updateModalView();
         });
