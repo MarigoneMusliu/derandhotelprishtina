@@ -31,17 +31,17 @@
     { id: "bottle-12", label: "Belvedere Vodka", image: "img/vodka2.png", price: 120, category: "bottle" },
     { id: "bottle-13", label: "Tanqueray — Ten", image: "img/vodka3.png", price: 120, category: "bottle" },
     { id: "bottle-14", label: "Hendrick's Gin", image: "img/vodka4.png", price: 140, category: "bottle" },
-    { id: "bottle-15", label: "Jägermeister", image: "img/jager.png", price: 0, category: "bottle" },
+    { id: "bottle-15", label: "Jägermeister", image: "img/jager.png", price: 140, category: "bottle" },
   ];
 
   var CHOCOLATE_ITEMS = [
-    { id: "chocolate-tog", label: 'Tog Chocolate Box "With love from Kosova"', image: "img/tog.png", price: 5.7, category: "chocolate" },
-    { id: "chocolate-tog1", label: 'Tog Chocolate Box "With love from Prishtina"', image: "img/tog1.png", price: 5.7, category: "chocolate" },
-    { id: "chocolate-tog2", label: 'Tog Chocolate Box "With love from Prizreni"', image: "img/tog2.png", price: 5.7, category: "chocolate" },
-    { id: "chocolate-tog3", label: 'Tog Chocolate Box "Me dashni për ty"', image: "img/tog3.png", price: 6.65, category: "chocolate" },
-    { id: "chocolate-tog4", label: "Tog Cranberry Dark Chocolate bar", image: "img/tog4.png", price: 2.5, category: "chocolate" },
-    { id: "chocolate-tog5", label: 'Tog Spicy Chocolate bar "Flakë e ëmbël"', image: "img/tog5.png", price: 2.5, category: "chocolate" },
-    { id: "chocolate-tog6", label: 'Tog Tablet "ASAJ" Cranberry Dark Chocolate', image: "img/tog6.png", price: 2.5, category: "chocolate" },
+    { id: "chocolate-tog", label: 'Tog Chocolate Box "With love from Kosova"', image: "img/tog.png", price: 14.25, category: "chocolate" },
+    { id: "chocolate-tog1", label: 'Tog Chocolate Box "With love from Prishtina"', image: "img/tog1.png", price: 14.25, category: "chocolate" },
+    { id: "chocolate-tog2", label: 'Tog Chocolate Box "With love from Prizreni"', image: "img/tog2.png", price: 14.25, category: "chocolate" },
+    { id: "chocolate-tog3", label: 'Tog Chocolate Box "Me dashni për ty"', image: "img/tog3.png", price: 16.63, category: "chocolate" },
+    { id: "chocolate-tog4", label: "Tog Cranberry Dark Chocolate bar", image: "img/tog4.png", price: 6.25, category: "chocolate" },
+    { id: "chocolate-tog5", label: 'Tog Spicy Chocolate bar "Flakë e ëmbël"', image: "img/tog5.png", price: 6.25, category: "chocolate" },
+    { id: "chocolate-tog6", label: 'Tog Tablet "ASAJ" Cranberry Dark Chocolate', image: "img/tog6.png", price: 6.25, category: "chocolate" },
   ];
 
   var PERFUME_ITEMS = [

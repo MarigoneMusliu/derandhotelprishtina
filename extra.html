@@ -255,9 +255,22 @@
         font-size: 10px;
       }
 
+      #extra-champagne .extra-media {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: clamp(280px, 36vw, 420px);
+      }
+
       #extra-champagne .extra-slider,
       #extra-champagne .extra-media img {
         max-width: 420px;
+        width: 100%;
+        height: auto;
+        max-height: 420px;
+        object-fit: contain;
+        object-position: center;
+        display: block;
       }
 
       #extra-vine {
@@ -806,12 +819,20 @@
           max-height: 252px;
         }
 
-        .extra-order-card--laundry .extra-order-card__img {
+        .extra-order-card--laundry .extra-order-card__img,
+        .extra-order-card--spirits .extra-order-card__img {
           height: 210px;
           min-height: 210px;
           max-height: 210px;
+          width: auto;
           object-fit: contain;
           object-position: center;
+        }
+
+        .extra-order-card--spirits .extra-order-card__media {
+          height: 252px;
+          min-height: 252px;
+          max-height: 252px;
         }
 
         .extra-order-card__row {
@@ -1084,11 +1105,18 @@
           padding: 12px 40px;
         }
 
-        .extra-order-card--laundry .extra-order-card__img {
+        .extra-order-card--laundry .extra-order-card__img,
+        .extra-order-card--spirits .extra-order-card__img {
           max-width: 160px;
           height: 180px;
           min-height: 180px;
           max-height: 180px;
+        }
+
+        .extra-order-card--spirits .extra-order-card__media {
+          height: 220px;
+          min-height: 220px;
+          max-height: 220px;
         }
 
         .extra-order-card__media {
@@ -1547,6 +1575,55 @@
       }
 
       .extra-order-card--chocolate .extra-order-card__desc {
+        max-height: 4.2em;
+        overflow: hidden;
+      }
+
+      .extra-order-modal--spirits.is-open {
+        align-items: flex-start;
+      }
+
+      .extra-order-modal--spirits .extra-order-modal__dialog {
+        margin-top: 16px;
+        margin-bottom: 16px;
+      }
+
+      .extra-order-card--spirits .extra-order-card__name {
+        flex-shrink: 0;
+        min-height: 3.6em;
+        max-height: 3.6em;
+        margin-bottom: 12px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+
+      .extra-order-card--spirits .extra-order-card__media {
+        flex-shrink: 0;
+        height: 252px;
+        min-height: 252px;
+        max-height: 252px;
+        margin-bottom: 12px;
+        box-sizing: border-box;
+      }
+
+      .extra-order-card--spirits .extra-order-card__img {
+        width: auto;
+        max-width: min(220px, 100%);
+        max-height: 210px;
+        height: auto;
+        min-height: 210px;
+        object-fit: contain;
+        object-position: center;
+      }
+
+      .extra-order-card--spirits .extra-order-card__desc-slot {
+        flex-shrink: 0;
+        min-height: 4.2em;
+      }
+
+      .extra-order-card--spirits .extra-order-card__desc {
         max-height: 4.2em;
         overflow: hidden;
       }
@@ -3369,7 +3446,7 @@
               data-image="img/champ.jpg"
               data-images="img/champ.jpg,img/champ3.png,img/champ4.png,img/champ5.png,img/champ6.png,img/champ7.png,img/tequila.png,img/tequila1.png,img/tequila2.png,img/tequila3.png,img/vodka.png,img/vodka1.png,img/vodka2.png,img/vodka3.png,img/vodka4.png,img/jager.png"
               data-products="Moët &amp; Chandon — Brut,Moët &amp; Chandon — Ice,Moët &amp; Chandon — Rosé,Moët &amp; Chandon — Ice Rosé,Dom Pérignon — Brut,Dom Pérignon — Brut Luminous,Don Julio — Añejo,Don Julio — Reposado,Don Julio — Blanco,Don Julio — 1942,Cîroc Vodka,Grey Goose Vodka,Belvedere Vodka,Tanqueray — Ten,Hendrick's Gin,Jägermeister"
-              data-prices="128,208,160,256,400,440,200,228,228,664,120,120,120,120,140,0"
+              data-prices="128,208,160,256,400,440,200,228,228,664,120,120,120,120,140,140"
               data-categories="Champagne,Champagne,Champagne,Champagne,Champagne,Champagne,Tequila,Tequila,Tequila,Tequila,Vodka,Vodka,Vodka,Gin,Gin,Liqueur"
               data-description="Premium spirit served chilled in your room."
             >
@@ -3433,11 +3510,11 @@
               class="extra-btn js-extra-order"
               data-chocolate-menu="true"
               data-product='Tog Chocolate Box "With love from Kosova"'
-              data-price="5.7"
+              data-price="14.25"
               data-image="img/tog.png"
               data-images="img/tog.png,img/tog1.png,img/tog2.png,img/tog3.png,img/tog4.png,img/tog5.png,img/tog6.png"
               data-products='Tog Chocolate Box "With love from Kosova",Tog Chocolate Box "With love from Prishtina",Tog Chocolate Box "With love from Prizreni",Tog Chocolate Box "Me dashni pÎr ty",Tog Chocolate bar "With love from Kosova" Cranberry Dark Chocolate,Tog Spicy Chocolate bar "FlakÎ e ÀmbÎl",Tog Tablet "ASAJ" Cranberry Dark Chocolate'
-              data-prices="5.7,5.7,5.7,6.65,2.5,2.5,2.5"
+              data-prices="14.25,14.25,14.25,16.63,6.25,6.25,6.25"
               data-description="Premium Tog chocolate delivered to your room."
             >
               Choose Your Chocolates
@@ -4477,49 +4554,49 @@
           tog: {
             name: 'Tog Chocolate Box "With love from Kosova"',
             image: "img/tog.png",
-            price: 5.7,
+            price: 14.25,
             description:
               'Premium Tog chocolate box — "With love from Kosova" — delivered to your room.',
           },
           tog1: {
             name: 'Tog Chocolate Box "With love from Prishtina"',
             image: "img/tog1.png",
-            price: 5.7,
+            price: 14.25,
             description:
               'Premium Tog chocolate box — "With love from Prishtina" — delivered to your room.',
           },
           tog2: {
             name: 'Tog Chocolate Box "With love from Prizreni"',
             image: "img/tog2.png",
-            price: 5.7,
+            price: 14.25,
             description:
               'Premium Tog chocolate box — "With love from Prizreni" — delivered to your room.',
           },
           tog3: {
             name: 'Tog Chocolate Box "Me dashni pÎr ty"',
             image: "img/tog3.png",
-            price: 6.65,
+            price: 16.63,
             description:
               'Premium Tog chocolate box — "Me dashni pÎr ty" — delivered to your room.',
           },
           tog4: {
             name: 'Tog Chocolate bar "With love from Kosova" Cranberry Dark Chocolate',
             image: "img/tog4.png",
-            price: 2.5,
+            price: 6.25,
             description:
               'Tog chocolate bar — "With love from Kosova" Cranberry Dark Chocolate — delivered to your room.',
           },
           tog5: {
             name: 'Tog Spicy Chocolate bar "FlakÎ e ÀmbÎl"',
             image: "img/tog5.png",
-            price: 2.5,
+            price: 6.25,
             description:
               'Tog spicy chocolate bar — "FlakÎ e ÀmbÎl" — delivered to your room.',
           },
           tog6: {
             name: 'Tog Tablet "ASAJ" Cranberry Dark Chocolate',
             image: "img/tog6.png",
-            price: 2.5,
+            price: 6.25,
             description:
               'Tog tablet — "ASAJ" Cranberry Dark Chocolate — delivered to your room.',
           },
@@ -5088,7 +5165,7 @@
         function setLaundryModalLayout(visible) {
           if (visible) {
             setFlowerPickerVisible(false);
-            setSpiritsPickerVisible(false);
+            setSpiritsModalLayout(false);
             setPerfumeSizesPickerVisible(false);
             setChocolateModalLayout(false);
           }
@@ -5097,6 +5174,7 @@
             if (visible) {
               modal.classList.remove("extra-order-modal--perfume");
               modal.classList.remove("extra-order-modal--chocolate");
+              modal.classList.remove("extra-order-modal--spirits");
             }
           }
           var orderCard = laundryServicesPicker
@@ -5107,6 +5185,7 @@
             if (visible) {
               orderCard.classList.remove("extra-order-card--perfume");
               orderCard.classList.remove("extra-order-card--chocolate");
+              orderCard.classList.remove("extra-order-card--spirits");
             }
           }
           setLaundryServicesPickerVisible(visible);
@@ -5115,7 +5194,7 @@
         function setChocolateModalLayout(visible) {
           if (visible) {
             setFlowerPickerVisible(false);
-            setSpiritsPickerVisible(false);
+            setSpiritsModalLayout(false);
             setPerfumeSizesPickerVisible(false);
             setLaundryModalLayout(false);
           }
@@ -5124,6 +5203,7 @@
             if (visible) {
               modal.classList.remove("extra-order-modal--perfume");
               modal.classList.remove("extra-order-modal--laundry");
+              modal.classList.remove("extra-order-modal--spirits");
             }
           }
           var orderCard = document.querySelector(".extra-order-card");
@@ -5132,6 +5212,7 @@
             if (visible) {
               orderCard.classList.remove("extra-order-card--perfume");
               orderCard.classList.remove("extra-order-card--laundry");
+              orderCard.classList.remove("extra-order-card--spirits");
             }
           }
         }
@@ -5139,7 +5220,7 @@
         function setPerfumeSizesPickerVisible(visible) {
           if (visible) {
             setFlowerPickerVisible(false);
-            setSpiritsPickerVisible(false);
+            setSpiritsModalLayout(false);
             setChocolateModalLayout(false);
             setLaundryModalLayout(false);
           }
@@ -5148,6 +5229,7 @@
             if (visible) {
               modal.classList.remove("extra-order-modal--chocolate");
               modal.classList.remove("extra-order-modal--laundry");
+              modal.classList.remove("extra-order-modal--spirits");
             }
           }
           var orderCard = perfumeSizesPicker
@@ -5158,6 +5240,7 @@
             if (visible) {
               orderCard.classList.remove("extra-order-card--chocolate");
               orderCard.classList.remove("extra-order-card--laundry");
+              orderCard.classList.remove("extra-order-card--spirits");
             }
           }
           if (!perfumeSizesPicker) return;
@@ -5382,10 +5465,33 @@
         }
 
         function setSpiritsPickerVisible(visible) {
-          isSpiritsOrder = visible;
+          setSpiritsModalLayout(visible);
+        }
+
+        function setSpiritsModalLayout(visible) {
+          isSpiritsOrder = !!visible;
           if (visible) {
             setFlowerPickerVisible(false);
             setPerfumeSizesPickerVisible(false);
+            setChocolateModalLayout(false);
+            setLaundryModalLayout(false);
+          }
+          if (modal) {
+            modal.classList.toggle("extra-order-modal--spirits", !!visible);
+            if (visible) {
+              modal.classList.remove("extra-order-modal--perfume");
+              modal.classList.remove("extra-order-modal--chocolate");
+              modal.classList.remove("extra-order-modal--laundry");
+            }
+          }
+          var orderCard = document.querySelector(".extra-order-card");
+          if (orderCard) {
+            orderCard.classList.toggle("extra-order-card--spirits", !!visible);
+            if (visible) {
+              orderCard.classList.remove("extra-order-card--perfume");
+              orderCard.classList.remove("extra-order-card--chocolate");
+              orderCard.classList.remove("extra-order-card--laundry");
+            }
           }
         }
 
@@ -5778,7 +5884,7 @@
                 return "A uniquely refreshing gin infused with cucumber and rose petals, offering a distinct floral and smooth flavor profile.";
               }
               if (item === "Jägermeister") {
-                return "Herbal liqueur served chilled in your room with premium glassware — complimentary for our guests.";
+                return "Herbal liqueur served chilled in your room with premium glassware.";
               }
               return "Served chilled in your room with premium glassware.";
             });
@@ -5812,7 +5918,7 @@
           }
           if (modalStatusEl) modalStatusEl.textContent = "";
           setFlowerPickerVisible(false);
-          setSpiritsPickerVisible(isSpirits);
+          setSpiritsModalLayout(isSpirits);
           setPerfumeSizesPickerVisible(isPerfumeMenu);
           setChocolateModalLayout(isChocolateMenu);
           setLaundryModalLayout(isLaundryMenu);
@@ -5851,7 +5957,7 @@
             document.body.style.overflow = "";
           }
           setFlowerPickerVisible(false);
-          setSpiritsPickerVisible(false);
+          setSpiritsModalLayout(false);
           setPerfumeSizesPickerVisible(false);
           setChocolateModalLayout(false);
           setLaundryModalLayout(false);
