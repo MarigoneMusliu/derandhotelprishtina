@@ -5500,6 +5500,9 @@
           }
 
           syncPricesToImages();
+          if (isBookingFlow) {
+            syncModalQtyFromBookingLines();
+          }
           var image = currentImages[currentImageIndex] || "img/flowers.png";
           currentPrice = linePriceAt(currentImageIndex);
           if (imageEl.getAttribute("src") !== image) {
@@ -5795,6 +5798,9 @@
           resetModalQuantities(
             isSpirits ? spiritsProducts.length : currentImages.length,
           );
+          if (isBookingFlow) {
+            syncModalQtyFromBookingLines();
+          }
           if (
             descriptionEl &&
             !isSpirits &&
@@ -6047,55 +6053,107 @@
           }
         }
 
+        function buildBookingLineForIndex(index) {
+          var label = getSlideProductName(index);
+          var variant = getVariantLabel(index);
+          if (variant && !isSpiritsOrder && !isMlOnlyVariantLabel(variant)) {
+            label = label + " \u2014 " + variant;
+          }
+
+          var price = isSpiritsOrder ? spiritsPrices[index] || 0 : linePriceAt(index);
+          var image = isSpiritsOrder
+            ? currentImages[index] || "img/champ.jpg"
+            : currentImages[index];
+          var category = bookingFlowCategory || "flowers";
+          var id;
+
+          if (isChocolateOrder) {
+            id = "chocolate-" + CHOCOLATE_CATALOG_IDS[index];
+            category = "chocolate";
+          } else if (isPerfumeOrder) {
+            id = "perfume-" + PERFUME_CATALOG_IDS[index];
+            category = "perfume";
+          } else if (isLaundryOrder) {
+            id =
+              "laundry-" +
+              LAUNDRY_CATALOG_IDS[index] +
+              "-" +
+              (laundryServiceByIndex[index] || "wash-iron");
+            category = "laundry";
+          } else if (isSpiritsOrder) {
+            id = "bottle-" + index;
+            category = "bottle";
+          } else {
+            id = "flowers-" + index;
+            category = "flowers";
+          }
+
+          return {
+            id: id,
+            catalogId: id,
+            category: category,
+            label: label,
+            price: price,
+            image: image,
+            qty: 1,
+          };
+        }
+
+        function getStoredBookingLineQty(lineId) {
+          var lines = loadStoredBookingLines();
+          for (var j = 0; j < lines.length; j++) {
+            if (lines[j].id === lineId) {
+              return lines[j].qty || 0;
+            }
+          }
+          return 0;
+        }
+
+        function syncModalQtyFromBookingLines() {
+          if (!isBookingFlow) return;
+          for (var i = 0; i < modalQtyByIndex.length; i++) {
+            modalQtyByIndex[i] = getStoredBookingLineQty(
+              buildBookingLineForIndex(i).id,
+            );
+          }
+        }
+
+        function upsertBookingLine(line) {
+          var lines = loadStoredBookingLines();
+          var addQty = line.qty || 1;
+          for (var j = 0; j < lines.length; j++) {
+            if (lines[j].id !== line.id) continue;
+            lines[j].qty = (lines[j].qty || 0) + addQty;
+            saveStoredBookingLines(lines);
+            return true;
+          }
+          lines.push(line);
+          saveStoredBookingLines(lines);
+          return true;
+        }
+
+        function decrementBookingLine(lineId) {
+          var lines = loadStoredBookingLines();
+          for (var j = 0; j < lines.length; j++) {
+            if (lines[j].id !== lineId) continue;
+            lines[j].qty = Math.max(0, (lines[j].qty || 0) - 1);
+            if (lines[j].qty === 0) {
+              lines.splice(j, 1);
+            }
+            saveStoredBookingLines(lines);
+            return true;
+          }
+          return false;
+        }
+
         function mapModalSelectionToBookingLines() {
           var lines = [];
           for (var i = 0; i < modalQtyByIndex.length; i++) {
             var addQty = modalQtyByIndex[i];
             if (typeof addQty !== "number" || isNaN(addQty) || addQty < 1) continue;
-
-            var label = getSlideProductName(i);
-            var variant = getVariantLabel(i);
-            if (variant && !isSpiritsOrder && !isMlOnlyVariantLabel(variant)) {
-              label = label + " \u2014 " + variant;
-            }
-
-            var price = isSpiritsOrder ? spiritsPrices[i] || 0 : linePriceAt(i);
-            var image = isSpiritsOrder
-              ? currentImages[i] || "img/champ.jpg"
-              : currentImages[i];
-            var category = bookingFlowCategory || "flowers";
-            var id;
-
-            if (isChocolateOrder) {
-              id = "chocolate-" + CHOCOLATE_CATALOG_IDS[i];
-              category = "chocolate";
-            } else if (isPerfumeOrder) {
-              id = "perfume-" + PERFUME_CATALOG_IDS[i];
-              category = "perfume";
-            } else if (isLaundryOrder) {
-              id =
-                "laundry-" +
-                LAUNDRY_CATALOG_IDS[i] +
-                "-" +
-                (laundryServiceByIndex[i] || "wash-iron");
-              category = "laundry";
-            } else if (isSpiritsOrder) {
-              id = "bottle-" + i;
-              category = "bottle";
-            } else {
-              id = "flowers-" + i;
-              category = "flowers";
-            }
-
-            lines.push({
-              id: id,
-              catalogId: id,
-              category: category,
-              label: label,
-              price: price,
-              image: image,
-              qty: addQty,
-            });
+            var line = buildBookingLineForIndex(i);
+            line.qty = addQty;
+            lines.push(line);
           }
           return lines;
         }
@@ -6229,8 +6287,37 @@
           );
         }
 
+        function addCurrentVariantToBookingInstantly() {
+          if (!isSpiritsOrder) syncPricesToImages();
+          var line = buildBookingLineForIndex(currentImageIndex);
+          line.qty = 1;
+          if (!upsertBookingLine(line)) return false;
+          syncModalQtyFromBookingLines();
+          if (modalStatusEl) {
+            modalStatusEl.textContent = "Added to your booking.";
+          }
+          showToast("Added to your booking");
+          updateModalView();
+          return true;
+        }
+
+        function removeCurrentVariantFromBookingInstantly() {
+          if (!isSpiritsOrder) syncPricesToImages();
+          var lineId = buildBookingLineForIndex(currentImageIndex).id;
+          if (!decrementBookingLine(lineId)) return false;
+          syncModalQtyFromBookingLines();
+          if (modalStatusEl) {
+            modalStatusEl.textContent = "Removed from your booking.";
+          }
+          showToast("Removed from your booking");
+          updateModalView();
+          return true;
+        }
+
         function addCurrentVariantToCartInstantly() {
-          if (isBookingFlow) return false;
+          if (isBookingFlow) {
+            return addCurrentVariantToBookingInstantly();
+          }
           if (!isSpiritsOrder) syncPricesToImages();
 
           var i = currentImageIndex;
@@ -6276,7 +6363,9 @@
         }
 
         function removeCurrentVariantFromCartInstantly() {
-          if (isBookingFlow) return false;
+          if (isBookingFlow) {
+            return removeCurrentVariantFromBookingInstantly();
+          }
           if (!isSpiritsOrder) syncPricesToImages();
 
           var i = currentImageIndex;
@@ -6419,6 +6508,12 @@
 
         minusBtn.addEventListener("click", function (event) {
           event.preventDefault();
+          if (isBookingFlow) {
+            if (getModalQty() > 0) {
+              removeCurrentVariantFromBookingInstantly();
+            }
+            return;
+          }
           if (getModalQty() > 0) {
             removeCurrentVariantFromCartInstantly();
           }
