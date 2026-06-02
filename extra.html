@@ -1634,9 +1634,12 @@
 
       .extra-order-discover__grid {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
         gap: 10px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
       }
 
       .extra-order-discover__item {
@@ -3892,19 +3895,6 @@
           ></div>
         </aside>
         <div class="extra-order-modal__actions">
-          <div
-            class="extra-order-variant-wrap"
-            id="extra-order-variant-wrap"
-            hidden
-          >
-            <p class="extra-order-variant-wrap__label">Explore more services</p>
-            <div
-              class="extra-order-variant-strip"
-              id="extra-order-variant-strip"
-              role="listbox"
-              aria-label="Product options"
-            ></div>
-          </div>
           <div class="extra-order-form__total">
             Selected total: <strong id="extra-modal-line-total">0&euro;</strong>
           </div>
@@ -4328,12 +4318,6 @@
             image: "img/flowers.png",
             selector: "#extra-flowers .js-extra-order",
           },
-          decor: {
-            id: "decor",
-            label: "Decor",
-            image: "img/valentineday.png",
-            selector: "#extra-flowers .js-extra-order",
-          },
           champagne: {
             id: "champagne",
             label: "Champagne",
@@ -4352,6 +4336,12 @@
             image: "img/tog.png",
             selector: "#extra-chocolates .js-extra-order",
           },
+          decor: {
+            id: "decor",
+            label: "Decor",
+            image: "img/valentineday.png",
+            selector: "#extra-flowers .js-extra-order",
+          },
           laundry: {
             id: "laundry",
             label: "Laundry",
@@ -4362,7 +4352,7 @@
         var EXTRA_DISCOVER_FOR = {
           flowers: ["perfumes", "chocolates", "decor", "laundry", "champagne"],
           champagne: ["flowers", "perfumes", "chocolates"],
-          perfumes: ["flowers", "champagne", "chocolates"],
+          perfumes: ["flowers", "champagne", "chocolates", "decor", "laundry"],
           chocolates: ["flowers", "perfumes", "champagne"],
           laundry: ["flowers", "chocolates", "perfumes"],
         };
@@ -5176,10 +5166,6 @@
           currentPrice = price;
           syncPerfumeSizeButtons();
           var slideName = getSlideProductName(currentImageIndex);
-          if (perfumeMlByIndex[currentImageIndex]) {
-            slideName =
-              slideName + " \u2014 " + perfumeMlByIndex[currentImageIndex] + " ml";
-          }
           productEl.textContent = slideName;
           imageEl.alt = slideName;
           unitPriceEl.textContent = formatEuro(currentPrice);
@@ -5242,6 +5228,10 @@
             "|" +
             (item.variantLabel || "")
           );
+        }
+
+        function isMlOnlyVariantLabel(label) {
+          return /^\s*\d+(\.\d+)?\s*ml\s*$/i.test(String(label || ""));
         }
 
         function getSlideProductName(index) {
@@ -5506,13 +5496,6 @@
           imageNextBtn.hidden = disableNav;
           minusBtn.disabled = qty <= 0;
           var slideName = getSlideProductName(currentImageIndex);
-          if (isPerfumeOrder && perfumeMlByIndex[currentImageIndex]) {
-            slideName =
-              slideName +
-              " \u2014 " +
-              perfumeMlByIndex[currentImageIndex] +
-              " ml";
-          }
           productEl.textContent = slideName;
           imageEl.alt = slideName;
           if (descriptionEl && isPerfumeOrder) {
@@ -5936,7 +5919,9 @@
             var item = cart[i];
             var lineTotal = (item.price || 0) * (item.qty || 0);
             var title = item.productBase || "Extra";
-            if (item.variantLabel) title += " \u2014 " + item.variantLabel;
+            if (item.variantLabel && !isMlOnlyVariantLabel(item.variantLabel)) {
+              title += " \u2014 " + item.variantLabel;
+            }
             html +=
               '<article class="extra-cart-item" data-cart-id="' +
               item.id +
@@ -6053,7 +6038,7 @@
 
             var label = getSlideProductName(i);
             var variant = getVariantLabel(i);
-            if (variant && !isSpiritsOrder) {
+            if (variant && !isSpiritsOrder && !isMlOnlyVariantLabel(variant)) {
               label = label + " \u2014 " + variant;
             }
 
@@ -6259,6 +6244,24 @@
           var discoverBtn = event.target.closest("[data-extra-discover]");
           if (discoverBtn) {
             var discoverKey = discoverBtn.getAttribute("data-extra-discover");
+            if (discoverKey === "decor") {
+              event.preventDefault();
+              closeModal();
+              window.setTimeout(function () {
+                var decorSection = document.querySelector(".extra-continue");
+                if (decorSection && typeof decorSection.scrollIntoView === "function") {
+                  decorSection.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                }
+                var decorAddButton = document.getElementById("extra-decor-add-cart");
+                if (decorAddButton && typeof decorAddButton.focus === "function") {
+                  decorAddButton.focus({ preventScroll: true });
+                }
+              }, 280);
+              return;
+            }
             var discoverMeta =
               discoverKey && EXTRA_DISCOVER_ITEMS[discoverKey]
                 ? EXTRA_DISCOVER_ITEMS[discoverKey]
@@ -6270,7 +6273,7 @@
               event.preventDefault();
               closeModal();
               window.setTimeout(function () {
-                discoverTrigger.click();
+                openModal(discoverTrigger);
               }, 280);
             }
             return;
@@ -6395,7 +6398,9 @@
           for (var k = 0; k < cart.length; k++) {
             var c = cart[k];
             var title = c.productBase;
-            if (c.variantLabel) title += " (" + c.variantLabel + ")";
+            if (c.variantLabel && !isMlOnlyVariantLabel(c.variantLabel)) {
+              title += " (" + c.variantLabel + ")";
+            }
             orderLines.push(
               title +
                 ": " +
