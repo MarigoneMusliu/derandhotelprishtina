@@ -387,7 +387,7 @@
         return;
       }
       link.href = buildDetailsUrl(room);
-      setStatus("Opening booking details for " + getSelectedRoomLabel() + "...", "success");
+      setStatus("Opening guest details for " + getSelectedRoomLabel() + "...", "success");
     });
   });
 

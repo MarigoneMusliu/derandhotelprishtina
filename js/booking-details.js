@@ -53,6 +53,7 @@
   var stayCountEl = document.getElementById("booking-summary-stay-count");
   var roomTotalLabelEl = document.getElementById("booking-price-room-label");
   var roomTotalEl = document.getElementById("booking-price-room-total");
+  var summaryRowsEl = document.getElementById("booking-summary-rows");
   var totalEl = document.getElementById("booking-price-total");
   var cancelDeadlineEl = document.getElementById("booking-cancel-deadline");
   var statusEl = document.getElementById("booking-details-status");
@@ -68,6 +69,10 @@
   var childAgesWrapEl = document.getElementById("booking-child-ages");
   var childAgesInputsEl = document.getElementById("booking-child-ages-inputs");
   var notesEl = document.getElementById("booking-notes");
+  var extrasDeliveryPanelEl = document.getElementById("booking-extras-delivery");
+  var extrasDeliveryDateEl = document.getElementById("booking-extras-delivery-date");
+  var extrasDeliveryTimeEl = document.getElementById("booking-extras-delivery-time");
+  var extrasDeliveryNotesEl = document.getElementById("booking-extras-delivery-notes");
   var confirmBtnEl = document.getElementById("booking-confirm");
   var selectedMethod = "hotelrunner";
 
@@ -168,7 +173,7 @@
     var room = ROOM_DATA[roomKey] ? roomKey : "junior-suite";
     var checkin = params.get("checkin") || formatIso(today);
     var checkout = params.get("checkout") || formatIso(tomorrow);
-    var adults = 1;
+    var adults = parseInt(params.get("adults"), 10) || 1;
     var children = parseInt(params.get("children"), 10) || 0;
     if (!isPremiumRoom(room)) children = 0;
 
@@ -179,6 +184,11 @@
       checkout = formatIso(tomorrow);
     }
 
+    var legacyExtras = [];
+    if (window.DerandBooking) {
+      legacyExtras = window.DerandBooking.parseExtrasParam(params.get("extras"));
+    }
+
     return {
       room: room,
       checkin: checkin,
@@ -186,6 +196,9 @@
       adults: adults,
       children: children,
       childAges: [],
+      extraLines: window.DerandBooking
+        ? window.DerandBooking.getBookingLinesForState(legacyExtras)
+        : [],
     };
   }
 
@@ -205,6 +218,165 @@
     params.set("adults", String(state.adults));
     params.set("children", String(state.children));
     return "book.html?" + params.toString();
+  }
+
+  function buildExtrasPickerUrl(state, focusId) {
+    var params = new URLSearchParams();
+    params.set("from", "booking");
+    params.set("room", state.room);
+    params.set("checkin", state.checkin);
+    params.set("checkout", state.checkout);
+    params.set("adults", String(state.adults));
+    params.set("children", String(state.children));
+    if (focusId) params.set("focus", focusId);
+    return "extra.html?" + params.toString();
+  }
+
+  function updateConciergePrompt(state) {
+    var choicesEl = document.getElementById("booking-concierge-choices");
+    if (!choicesEl) return;
+
+    Array.prototype.forEach.call(
+      choicesEl.querySelectorAll("[data-extra-focus]"),
+      function (chip) {
+        var id = chip.getAttribute("data-extra-focus");
+        chip.href = buildExtrasPickerUrl(state, id);
+        var isOn =
+          window.DerandBooking &&
+          window.DerandBooking.categoryHasExtras(state.extraLines || [], id);
+        chip.classList.toggle("is-added", isOn);
+      },
+    );
+  }
+
+  function getExtraLineTotal(item) {
+    if (!item) return 0;
+    return window.DerandBooking
+      ? window.DerandBooking.lineTotal(item)
+      : (item.price || 0) * (item.qty || 1);
+  }
+
+  function removeExtraAtIndex(index) {
+    if (!state.extraLines || index < 0 || index >= state.extraLines.length) return;
+    state.extraLines.splice(index, 1);
+    if (window.DerandBooking) {
+      window.DerandBooking.saveBookingLines(state.extraLines);
+    }
+    renderState = render(state);
+  }
+
+  function buildExtraRemoveButton(index, label) {
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "booking-extra-remove";
+    btn.setAttribute("data-extra-index", String(index));
+    btn.setAttribute("aria-label", "Remove " + label);
+    btn.innerHTML = '<i class="fa fa-times" aria-hidden="true"></i>';
+    return btn;
+  }
+
+  function getExtrasTotal(state) {
+    if (!window.DerandBooking) return 0;
+    return window.DerandBooking.getBookingLinesTotal(state.extraLines || []);
+  }
+
+  function hasBookingExtras(state) {
+    return !!(state.extraLines && state.extraLines.length);
+  }
+
+  function getExtrasDeliveryFromForm() {
+    return {
+      date: extrasDeliveryDateEl ? extrasDeliveryDateEl.value.trim() : "",
+      time: extrasDeliveryTimeEl ? extrasDeliveryTimeEl.value.trim() : "",
+      notes: extrasDeliveryNotesEl ? extrasDeliveryNotesEl.value.trim() : "",
+    };
+  }
+
+  function isDeliveryDateWithinStay(deliveryIso, checkinIso, checkoutIso) {
+    var delivery = parseIso(deliveryIso);
+    var checkin = parseIso(checkinIso);
+    var checkout = parseIso(checkoutIso);
+    if (!delivery || !checkin || !checkout) return false;
+    return delivery >= checkin && delivery <= checkout;
+  }
+
+  function updateExtrasDeliveryPanel(state) {
+    if (!extrasDeliveryPanelEl) return;
+    var show = hasBookingExtras(state);
+    extrasDeliveryPanelEl.hidden = !show;
+
+    if (!show) {
+      if (extrasDeliveryDateEl) extrasDeliveryDateEl.value = "";
+      if (extrasDeliveryTimeEl) extrasDeliveryTimeEl.value = "";
+      if (extrasDeliveryNotesEl) extrasDeliveryNotesEl.value = "";
+      return;
+    }
+
+    if (extrasDeliveryDateEl) {
+      extrasDeliveryDateEl.min = state.checkin;
+      extrasDeliveryDateEl.max = state.checkout;
+      extrasDeliveryDateEl.required = true;
+      if (
+        !extrasDeliveryDateEl.value ||
+        !isDeliveryDateWithinStay(
+          extrasDeliveryDateEl.value,
+          state.checkin,
+          state.checkout,
+        )
+      ) {
+        extrasDeliveryDateEl.value = state.checkin;
+      }
+    }
+    if (extrasDeliveryTimeEl) {
+      extrasDeliveryTimeEl.required = true;
+    }
+  }
+
+  function formatExtrasList(extraLines) {
+    if (!extraLines || !extraLines.length) return "(none)";
+    return extraLines
+      .map(function (item) {
+        var qty = item.qty && item.qty > 1 ? " × " + item.qty : "";
+        var total = window.DerandBooking
+          ? window.DerandBooking.lineTotal(item)
+          : (item.price || 0) * (item.qty || 1);
+        return item.label + qty + " (" + currency(total) + ")";
+      })
+      .join("; ");
+  }
+
+  function renderExtrasRows(state) {
+    if (!summaryRowsEl) return;
+    Array.prototype.forEach.call(
+      summaryRowsEl.querySelectorAll(".booking-summary-card__row--extra"),
+      function (row) {
+        row.parentNode.removeChild(row);
+      },
+    );
+    if (!state.extraLines || !state.extraLines.length) return;
+
+    state.extraLines.forEach(function (item, index) {
+      var row = document.createElement("div");
+      row.className = "booking-summary-card__row booking-summary-card__row--extra";
+      var qtyLabel = item.qty && item.qty > 1 ? " (" + item.qty + "×)" : "";
+
+      var labelSpan = document.createElement("span");
+      labelSpan.className = "booking-summary-card__extra-label";
+      labelSpan.textContent = item.label + qtyLabel;
+
+      var end = document.createElement("span");
+      end.className = "booking-summary-card__extra-end";
+
+      var priceStrong = document.createElement("strong");
+      priceStrong.textContent = currency(getExtraLineTotal(item));
+
+      end.appendChild(priceStrong);
+      end.appendChild(buildExtraRemoveButton(index, item.label));
+
+      row.appendChild(labelSpan);
+      row.appendChild(end);
+      summaryRowsEl.appendChild(row);
+    });
   }
 
   function buildHotelRunnerUrl(state) {
@@ -417,8 +589,31 @@
       childAgesWrapEl.classList.remove("is-invalid");
     }
 
+    if (hasBookingExtras(state)) {
+      var delivery = getExtrasDeliveryFromForm();
+      if (!delivery.date) {
+        if (extrasDeliveryDateEl) markError(extrasDeliveryDateEl);
+        valid = false;
+      } else if (!isDeliveryDateWithinStay(delivery.date, state.checkin, state.checkout)) {
+        if (extrasDeliveryDateEl) markError(extrasDeliveryDateEl);
+        valid = false;
+      }
+      if (!delivery.time) {
+        if (extrasDeliveryTimeEl) markError(extrasDeliveryTimeEl);
+        valid = false;
+      }
+    }
+
     if (!valid) {
-      setStatus("Please complete the highlighted guest details.", "error");
+      var deliveryMissing =
+        hasBookingExtras(state) &&
+        (!getExtrasDeliveryFromForm().date || !getExtrasDeliveryFromForm().time);
+      setStatus(
+        deliveryMissing
+          ? "Please choose when to deliver your extras to your room."
+          : "Please complete the highlighted guest details.",
+        "error",
+      );
     }
 
     return valid;
@@ -431,6 +626,7 @@
     var guestEmail = emailEl.value.trim();
     var guestName = fullNameEl.value.trim();
     var guestPhone = phoneEl.value.trim();
+    var extrasDelivery = hasBookingExtras(state) ? getExtrasDeliveryFromForm() : null;
     var payload = {
       access_key: WEB3FORMS_ACCESS_KEY,
       subject: "Booking details — " + room.label + " — " + state.checkin,
@@ -466,6 +662,17 @@
         "Children: " + state.children,
         "Children ages: " + ((state.childAges && state.childAges.length) ? state.childAges.join(", ") : "(none)"),
         "Children surcharge: " + currency(totals.childSurcharge || 0),
+        "Concierge extras: " + formatExtrasList(state.extraLines),
+        "Extras total: " + currency(totals.extrasTotal || 0),
+        extrasDelivery
+          ? "Extras delivery date: " + formatDate(extrasDelivery.date) + " (" + extrasDelivery.date + ")"
+          : "Extras delivery date: (not applicable)",
+        extrasDelivery
+          ? "Extras delivery time: " + extrasDelivery.time
+          : "Extras delivery time: (not applicable)",
+        extrasDelivery
+          ? "Extras delivery notes: " + (extrasDelivery.notes || "(none)")
+          : "Extras delivery notes: (not applicable)",
         "Stay: " + checkInFormatted + " to " + checkOutFormatted,
         "Guests summary: " + guestSummary(state.adults, state.children),
         "Nights: " + nights,
@@ -480,8 +687,9 @@
         notesEl.value.trim() || "(none)",
         "",
         "Room total: " + currency(totals.roomTotal),
+        "Extras total: " + currency(totals.extrasTotal || 0),
         "Taxes & fees: " + currency(totals.fees),
-        "Final total: " + currency(totals.total),
+        "Final total (one payment): " + currency(totals.total),
       ].join("\n"),
     };
 
@@ -500,7 +708,7 @@
   }
 
   function buildEmailMessage(state, room, nights, totals) {
-    return [
+    var lines = [
       "New booking details submission — Derand Hotel",
       "",
       "Room type: " + room.label,
@@ -519,9 +727,23 @@
       "Special requests:",
       notesEl.value.trim() || "(none)",
       "",
+      "Concierge extras: " + formatExtrasList(state.extraLines),
+    ];
+    if (hasBookingExtras(state)) {
+      var delivery = getExtrasDeliveryFromForm();
+      lines.push(
+        "Extras delivery: " + formatDate(delivery.date) + " at " + delivery.time,
+      );
+      if (delivery.notes) {
+        lines.push("Extras delivery notes: " + delivery.notes);
+      }
+    }
+    lines.push(
       "Room total: " + currency(totals.roomTotal),
-      "Final total: " + currency(totals.total),
-    ].join("\n");
+      "Extras total: " + currency(totals.extrasTotal || 0),
+      "Final total (one payment): " + currency(totals.total),
+    );
+    return lines.join("\n");
   }
 
   function openEmailDraft(state, room, nights, totals) {
@@ -544,7 +766,8 @@
     var childSurcharge = childSurchargePerNight * nights;
     var fees = 0;
     var discount = 0;
-    var total = roomTotal + childSurcharge;
+    var extrasTotal = getExtrasTotal(state);
+    var total = roomTotal + childSurcharge + extrasTotal;
     var cancelDeadline = parseIso(state.checkin);
 
     if (cancelDeadline) {
@@ -572,11 +795,14 @@
     setText(dateRangeEl, shortDateRange(state.checkin, state.checkout));
     setText(stayCountEl, nights + " " + (nights === 1 ? "Night" : "Nights"));
     setText(roomTotalEl, currency(roomTotal));
+    renderExtrasRows(state);
+    updateExtrasDeliveryPanel(state);
     setText(totalEl, currency(total));
     setText(cancelDeadlineEl, cancelDeadline ? formatDate(formatIso(cancelDeadline)) : "—");
     if (backLinkEl) {
       backLinkEl.href = buildBackUrl(state);
     }
+    updateConciergePrompt(state);
 
     if (roomInputEl) roomInputEl.value = state.room;
     if (checkinInputEl) checkinInputEl.value = state.checkin;
@@ -587,6 +813,7 @@
       pricePerNight: pricePerNight,
       roomTotal: roomTotal,
       childSurcharge: childSurcharge,
+      extrasTotal: extrasTotal,
       fees: fees,
       discount: discount,
       total: total,
@@ -597,6 +824,15 @@
 
   var state = loadState();
   var renderState = render(state);
+
+  document.addEventListener("click", function (event) {
+    var removeBtn = event.target.closest(".booking-extra-remove");
+    if (!removeBtn) return;
+    event.preventDefault();
+    var index = parseInt(removeBtn.getAttribute("data-extra-index"), 10);
+    if (isNaN(index)) return;
+    removeExtraAtIndex(index);
+  });
 
   lockSelectToNative(roomInputEl);
   window.setTimeout(function () {

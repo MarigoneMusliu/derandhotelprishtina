@@ -214,7 +214,7 @@
         <div class="booking-details__topbar">
           <a class="booking-details__back" id="booking-back-link" href="book.html">
             <i class="fa fa-angle-left" aria-hidden="true"></i>
-            <span>Guest Details</span>
+            <span>Rooms</span>
           </a>
           <button class="booking-details__menu" type="button" aria-label="More options">
             <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
@@ -224,12 +224,39 @@
         <div class="booking-checkout__intro">
           <section class="booking-progress" aria-label="Booking progress">
             <div class="booking-progress__track">
-              <span class="booking-progress__pill">Step 2 of 3</span>
+              <span class="booking-progress__pill">Guest details</span>
               <span class="booking-progress__line" aria-hidden="true"></span>
             </div>
           </section>
           <h1 class="booking-checkout__title">Guest &amp; Payment Details</h1>
         </div>
+
+        <section class="booking-concierge-prompt" aria-labelledby="booking-concierge-title">
+          <div class="booking-concierge-prompt__inner">
+            <p class="booking-concierge-prompt__kicker">Room extras</p>
+            <h2 class="booking-concierge-prompt__title" id="booking-concierge-title">
+              Would you like something special in your room?
+            </h2>
+            <div class="booking-concierge-prompt__choices" id="booking-concierge-choices">
+              <a class="booking-concierge-prompt__chip" href="#" data-extra-focus="flowers">
+                <img src="img/flowers.png" alt="" width="48" height="48" loading="lazy" />
+                <span>Flowers</span>
+              </a>
+              <a class="booking-concierge-prompt__chip" href="#" data-extra-focus="bottle">
+                <img src="img/champaignee.png" alt="" width="48" height="48" loading="lazy" />
+                <span>Bottle</span>
+              </a>
+              <a class="booking-concierge-prompt__chip" href="#" data-extra-focus="chocolate">
+                <img src="img/tog.png" alt="" width="48" height="48" loading="lazy" />
+                <span>Chocolate</span>
+              </a>
+              <a class="booking-concierge-prompt__chip" href="#" data-extra-focus="perfume">
+                <img src="img/armani.png" alt="" width="48" height="48" loading="lazy" />
+                <span>Perfume</span>
+              </a>
+            </div>
+          </div>
+        </section>
 
         <form class="booking-checkout__grid" id="booking-details-form">
           <section class="booking-panel booking-panel--guest">
@@ -368,6 +395,50 @@
                 <div class="booking-child-ages__inputs" id="booking-child-ages-inputs"></div>
               </div>
 
+              <div
+                class="booking-extras-delivery"
+                id="booking-extras-delivery"
+                hidden
+                aria-labelledby="booking-extras-delivery-title"
+              >
+                <div class="booking-extras-delivery__head">
+                  <i class="fa fa-clock-o" aria-hidden="true"></i>
+                  <div>
+                    <h3 id="booking-extras-delivery-title">When should we deliver your extras?</h3>
+                    <p class="booking-extras-delivery__lead">
+                      Choose a date and time during your stay. We will bring your order to your room.
+                    </p>
+                  </div>
+                </div>
+                <div class="booking-fields booking-fields--grid booking-extras-delivery__fields">
+                  <label class="booking-field booking-field--half">
+                    <span>Delivery date</span>
+                    <input
+                      type="date"
+                      id="booking-extras-delivery-date"
+                      name="extras_delivery_date"
+                    />
+                  </label>
+                  <label class="booking-field booking-field--half">
+                    <span>Delivery time</span>
+                    <input
+                      type="time"
+                      id="booking-extras-delivery-time"
+                      name="extras_delivery_time"
+                    />
+                  </label>
+                  <label class="booking-field booking-field--full">
+                    <span>Delivery notes (optional)</span>
+                    <textarea
+                      id="booking-extras-delivery-notes"
+                      name="extras_delivery_notes"
+                      placeholder="Card message, surprise timing, or other instructions"
+                      rows="3"
+                    ></textarea>
+                  </label>
+                </div>
+              </div>
+
               <label class="booking-field booking-field--full">
                 <span>Special Requests (Optional)</span>
                 <textarea
@@ -405,20 +476,24 @@
                 </div>
               </div>
 
-              <div class="booking-summary-card__rows">
+              <div class="booking-summary-card__rows" id="booking-summary-rows">
                 <div class="booking-summary-card__row">
                   <span id="booking-price-room-label">Superior Suite (4 nights)</span>
                   <strong id="booking-price-room-total">&euro;390.00</strong>
                 </div>
               </div>
 
+              <p class="booking-summary-card__unified" id="booking-unified-note">
+                Room and selected extras are paid together in one secure checkout.
+              </p>
+
               <div class="booking-summary-card__total">
-                <span>Total</span>
+                <span>Total due</span>
                 <strong id="booking-price-total">&euro;448.50</strong>
               </div>
 
               <button class="booking-confirm" id="booking-confirm" type="submit">
-                Proceed to Payment
+                Pay once — room &amp; extras
                 <i class="fa fa-arrow-right" aria-hidden="true"></i>
               </button>
             </section>
@@ -665,6 +740,7 @@
     <script src="js/main.js?v=20260515-1" defer></script>
     <script src="js/site-whatsapp.js?v=8" defer></script>
     <script src="js/tidio-left-position.js?v=2" defer></script>
-    <script src="js/booking-details.js?v=7" defer></script>
+    <script src="js/booking-shared.js?v=3" defer></script>
+    <script src="js/booking-details.js?v=14" defer></script>
   </body>
 </html>

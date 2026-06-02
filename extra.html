@@ -171,15 +171,56 @@
       #extra-champagne .extra-copy,
       #extra-perfumes .extra-copy,
       #extra-chocolates .extra-copy,
+      #extra-laundry .extra-copy,
       #extra-vine .extra-copy,
       #extra-flowers .extra-media,
       #extra-champagne .extra-media,
       #extra-perfumes .extra-media,
       #extra-chocolates .extra-media,
+      #extra-laundry .extra-media,
       #extra-vine .extra-media {
         justify-self: center;
         width: 100%;
         max-width: 420px;
+      }
+
+      #extra-laundry {
+        gap: clamp(20px, 3vw, 40px);
+        margin-bottom: 130px;
+      }
+
+      #extra-laundry .extra-copy-kicker {
+        font-size: 11px;
+        margin-bottom: 6px;
+      }
+
+      #extra-laundry .extra-copy-title {
+        font-size: clamp(28px, 2.8vw, 44px);
+        margin-bottom: 10px;
+      }
+
+      #extra-laundry .extra-copy-text {
+        font-size: clamp(14px, 1.02vw, 17px);
+        line-height: 1.68;
+        max-width: 420px;
+      }
+
+      #extra-laundry .extra-copy-text::first-letter {
+        font-size: 3.25em;
+        line-height: 0.78;
+        margin-top: 0.16em;
+      }
+
+      #extra-laundry .extra-btn {
+        padding: 9px 16px;
+        font-size: 10px;
+      }
+
+      #extra-laundry .extra-media img {
+        max-width: 420px;
+        width: 100%;
+        height: auto;
+        display: block;
       }
 
       #extra-champagne {
@@ -434,6 +475,44 @@
         order: 1;
       }
 
+      body.extra-booking-mode #preloder,
+      body.extra-booking-mode .header,
+      body.extra-booking-mode .extra-hero,
+      body.extra-booking-mode .extra-section,
+      body.extra-booking-mode .extra-continue,
+      body.extra-booking-mode footer,
+      body.extra-booking-mode .extra-cart-widget,
+      body.extra-booking-mode .extra-cart-drawer,
+      body.extra-booking-mode .extra-booking-bar {
+        display: none !important;
+      }
+
+      body.extra-booking-mode {
+        background: #faf9f7;
+        overflow: hidden;
+      }
+
+      body.extra-booking-mode .extra-order-modal:not(.is-open) {
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      body.extra-booking-mode .extra-order-modal__backdrop {
+        background: #faf9f7;
+        backdrop-filter: none;
+      }
+
+      body.extra-booking-mode .extra-order-modal.is-open {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        overflow-y: auto;
+      }
+
+      body.extra-booking-mode .extra-order-modal.is-open .extra-order-modal__dialog {
+        margin-top: max(16px, env(safe-area-inset-top, 0px));
+      }
+
       @media (max-width: 991px) {
         .extra-row,
         .extra-row--reverse {
@@ -565,11 +644,14 @@
       .extra-order-card__img {
         width: 100%;
         max-width: 220px;
+        height: 220px;
         display: block;
         margin: 0 auto;
         border: 0;
         border-radius: 12px;
         background: #f3f0ec;
+        object-fit: contain;
+        object-position: center;
       }
 
       .extra-order-card__media {
@@ -1073,6 +1155,82 @@
         color: #3f3f3f;
       }
 
+      .extra-order-variant-wrap {
+        margin-bottom: 16px;
+      }
+
+      .extra-order-variant-wrap[hidden] {
+        display: none;
+      }
+
+      .extra-order-variant-wrap__label {
+        margin: 0 0 10px;
+        text-align: center;
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #a39a92;
+      }
+
+      .extra-order-variant-strip {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 8px;
+        padding: 4px 2px 8px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+      }
+
+      .extra-order-variant-strip::-webkit-scrollbar {
+        height: 5px;
+      }
+
+      .extra-order-variant-strip::-webkit-scrollbar-thumb {
+        background: rgba(177, 114, 86, 0.35);
+        border-radius: 999px;
+      }
+
+      .extra-order-variant-strip__btn {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 64px;
+        height: 64px;
+        padding: 5px;
+        border: 2px solid rgba(177, 114, 86, 0.28);
+        border-radius: 12px;
+        background: #fff;
+        cursor: pointer;
+        transition:
+          border-color 0.2s ease,
+          background 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      .extra-order-variant-strip__btn:hover {
+        border-color: #b17256;
+        box-shadow: 0 6px 16px rgba(177, 114, 86, 0.12);
+      }
+
+      .extra-order-variant-strip__btn.is-active {
+        border-color: #b17256;
+        background: #faf3ed;
+        box-shadow: 0 8px 20px rgba(177, 114, 86, 0.15);
+      }
+
+      .extra-order-variant-strip__btn img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 8px;
+        pointer-events: none;
+        display: block;
+      }
+
       .extra-order-modal__actions {
         margin-top: 24px;
         padding-top: 20px;
@@ -1214,6 +1372,47 @@
         cursor: not-allowed;
       }
 
+      .extra-order-laundry-services {
+        display: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin: 0 0 14px;
+      }
+
+      .extra-order-laundry-services.is-visible {
+        display: flex;
+        min-height: 40px;
+        flex-shrink: 0;
+      }
+
+      .extra-order-laundry-services__btn {
+        flex: 1 1 auto;
+        min-width: 140px;
+        max-width: 100%;
+        padding: 10px 14px;
+        border: 1px solid #d8d2cb;
+        background: #faf9f7;
+        color: #4a433d;
+        font-family: "Noto Serif", serif;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: none;
+        cursor: pointer;
+        border-radius: 8px;
+        transition:
+          background-color 0.2s ease,
+          border-color 0.2s ease,
+          color 0.2s ease;
+      }
+
+      .extra-order-laundry-services__btn.is-active {
+        background: #2c2824;
+        color: #faf9f7;
+        border-color: #2c2824;
+      }
+
       .extra-order-modal--perfume.is-open {
         align-items: flex-start;
       }
@@ -1349,8 +1548,9 @@
       }
 
       .extra-order-discover__grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 10px;
       }
 
@@ -1358,47 +1558,47 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
-        padding: 12px 8px 10px;
-        border: 1px solid rgba(216, 210, 203, 0.9);
+        gap: 8px;
+        width: 88px;
+        padding: 10px 8px 8px;
+        border: 2px solid rgba(177, 114, 86, 0.28);
         border-radius: 12px;
-        background: rgba(255, 255, 255, 0.72);
+        background: #fff;
         cursor: pointer;
         transition:
-          transform 0.22s ease,
-          border-color 0.22s ease,
-          box-shadow 0.22s ease;
+          border-color 0.2s ease,
+          background 0.2s ease,
+          box-shadow 0.2s ease;
       }
 
       .extra-order-discover__item:hover,
       .extra-order-discover__item:focus-visible {
-        transform: translateY(-2px);
-        border-color: rgba(166, 124, 99, 0.45);
-        box-shadow: 0 8px 18px rgba(121, 76, 56, 0.12);
+        border-color: #b17256;
+        box-shadow: 0 6px 16px rgba(177, 114, 86, 0.12);
       }
 
       .extra-order-discover__thumb {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 76px;
-        height: 76px;
-        border-radius: 50%;
+        width: 56px;
+        height: 56px;
+        border-radius: 10px;
         overflow: hidden;
-        background: #f3f0ec;
-        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+        background: #f5f0ea;
       }
 
       .extra-order-discover__thumb img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
+        pointer-events: none;
       }
 
       .extra-order-discover__name {
-        font-size: 10px;
+        font-size: 9px;
         font-weight: 600;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.06em;
         text-transform: uppercase;
         color: #4a433d;
         font-family: "Noto Serif", serif;
@@ -2253,15 +2453,190 @@
         right: -84px;
       }
 
-      .extra-continue__decor-picker {
+      .extra-continue__options {
+        max-width: 400px;
+        margin: 12px auto 24px;
+        padding: 0 16px;
+        text-align: center;
+      }
+
+      .extra-continue__options[hidden] {
         display: none;
+      }
+
+      .extra-continue__price-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: left;
+      }
+
+      .extra-continue__price-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 12px 14px;
+        border-radius: 14px;
+        border: 1px solid rgba(177, 114, 86, 0.2);
+        background: rgba(255, 255, 255, 0.9);
+      }
+
+      .extra-continue__price-row--base {
+        background: #fffdfa;
+      }
+
+      .extra-continue__price-row-label {
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: #3d3834;
+      }
+
+      .extra-continue__price-row-amount {
+        font-family: "Noto Serif", serif;
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: #b17256;
+      }
+
+      .extra-continue__bouquet-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 10px 10px 10px 12px;
+        border-radius: 14px;
+        border: 2px solid rgba(177, 114, 86, 0.3);
+        background: #fff;
+        transition:
+          border-color 0.2s ease,
+          background 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      .extra-continue__bouquet-row.is-selected {
+        border-color: #b17256;
+        background: #faf3ed;
+        box-shadow: 0 8px 22px rgba(177, 114, 86, 0.1);
+      }
+
+      .extra-continue__bouquet-row-main {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex: 1;
+        min-width: 0;
+      }
+
+      .extra-continue__bouquet-row-thumb {
+        width: 56px;
+        height: 56px;
+        flex-shrink: 0;
+        border-radius: 12px;
+        overflow: hidden;
+        background: #f5f0ea;
+      }
+
+      .extra-continue__bouquet-row-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+      }
+
+      .extra-continue__bouquet-row-copy {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        min-width: 0;
+      }
+
+      .extra-continue__bouquet-row-copy strong {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #3d3834;
+        line-height: 1.3;
+      }
+
+      .extra-continue__bouquet-row-copy span {
+        font-size: 0.82rem;
+        color: #b17256;
+        font-weight: 600;
+      }
+
+      .extra-continue__bouquet-add {
+        flex-shrink: 0;
+        width: 46px;
+        height: 46px;
+        padding: 0;
+        border: 2px solid #b27256;
+        border-radius: 50%;
+        background: #fff;
+        color: #b27256;
+        font-size: 20px;
+        line-height: 1;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition:
+          background 0.2s ease,
+          color 0.2s ease,
+          transform 0.15s ease;
+      }
+
+      .extra-continue__bouquet-add:hover {
+        transform: scale(1.05);
+        background: #faf3ed;
+      }
+
+      .extra-continue__bouquet-add:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(177, 114, 86, 0.35);
+      }
+
+      .extra-continue__bouquet-add.is-selected {
+        background: #b27256;
+        color: #fff;
+        border-color: #b27256;
+      }
+
+      .extra-continue__bouquet-add:disabled {
+        opacity: 0.45;
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      .extra-continue__options-total {
+        margin: 16px 0 0;
+        font-size: 0.88rem;
+        color: #6e6760;
+        text-align: center;
+      }
+
+      .extra-continue__options-total strong {
+        font-family: "Noto Serif", serif;
+        font-size: 1.35rem;
+        font-weight: 600;
+        color: #3d3834;
+      }
+
+      .extra-continue__decor-price__note {
+        display: block;
+        margin-top: 4px;
+        font-size: 9px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #b8aea4;
+        font-weight: 500;
+        line-height: 1.35;
       }
 
       .extra-continue__special {
         text-align: center;
-        margin-top: 58px;
+        margin-top: 24px;
         margin-bottom: 34px;
-        max-width: 320px;
+        max-width: 360px;
         margin-left: auto;
         margin-right: auto;
       }
@@ -2629,45 +3004,19 @@
           font-size: 18px;
         }
 
-        .extra-continue__decor-picker {
-          display: flex;
-          justify-content: center;
-          flex-wrap: wrap;
-          gap: 8px;
-          margin-top: 18px;
-          padding: 0 4px;
+        .extra-continue__bouquet-row-thumb {
+          width: 48px;
+          height: 48px;
         }
 
-        .extra-continue__decor-picker-btn {
-          flex: 1 1 28%;
-          min-width: 0;
-          max-width: 200px;
-          padding: 12px 10px;
-          border: 1px solid rgba(177, 114, 86, 0.5);
-          background: #fffdfb;
-          color: #5c4f47;
-          font-family: "Noto Serif", serif;
-          font-size: 11px;
-          font-weight: 500;
-          letter-spacing: 0.1em;
-          text-transform: uppercase;
-          cursor: pointer;
-          border-radius: 8px;
-          transition:
-            background 0.2s ease,
-            color 0.2s ease,
-            border-color 0.2s ease;
+        .extra-continue__bouquet-add {
+          width: 42px;
+          height: 42px;
+          font-size: 18px;
         }
 
-        .extra-continue__decor-picker-btn:focus-visible {
-          outline: none;
-          box-shadow: 0 0 0 3px rgba(177, 114, 86, 0.35);
-        }
-
-        .extra-continue__decor-picker-btn.is-active {
-          background: #b17256;
-          color: #fffdfb;
-          border-color: #b17256;
+        .extra-continue__options-total strong {
+          font-size: 1.2rem;
         }
 
         .extra-continue__special {
@@ -2689,12 +3038,6 @@
           width: 40px;
           height: 40px;
           font-size: 20px;
-        }
-
-        .extra-continue__decor-picker-btn {
-          font-size: 10px;
-          letter-spacing: 0.08em;
-          padding: 11px 8px;
         }
       }
     </style>
@@ -3018,6 +3361,38 @@
           </div>
         </article>
 
+        <article class="extra-row" id="extra-laundry">
+          <div class="extra-copy">
+            <p class="extra-copy-kicker">In-room laundry</p>
+            <h2 class="extra-copy-title">Pressed &amp; fresh for your stay</h2>
+            <p class="extra-copy-text">
+              Send shirts and tees for professional care. Choose wash with ironing
+              or ironing only — we collect from your room and return everything
+              crisp and ready to wear.
+            </p>
+            <button
+              type="button"
+              class="extra-btn js-extra-order"
+              data-laundry-menu="true"
+              data-product="Shirt"
+              data-price="3"
+              data-image="img/shirt.png"
+              data-images="img/shirt.png,img/tshirt.png,img/dress.png,img/pijamas.png,img/underwear.png,img/trousers.png,img/skirt.png,img/suit.png,img/socks.png,img/sweater.png,img/jacket.png"
+              data-description="In-room laundry — choose wash &amp; ironing or ironing only per item."
+            >
+              Choose Laundry Service
+            </button>
+          </div>
+          <div class="extra-media">
+            <img
+              src="img/shirt.png"
+              alt="Shirt laundry service"
+              width="1080"
+              height="1080"
+            />
+          </div>
+        </article>
+
         <!-- <article class="extra-row" id="extra-vine">
           <div class="extra-copy">
             <p class="extra-copy-kicker">Exclusive Wines in our menu</p>
@@ -3167,6 +3542,11 @@
                   id="extra-continue-price-amount"
                   >60&euro;</span
                 >
+                <span
+                  class="extra-continue__decor-price__note"
+                  id="extra-continue-price-note"
+                  >Decor 60&euro; · bouquet +60&euro; below</span
+                >
               </div>
               <figcaption
                 class="extra-continue__decor-label"
@@ -3193,41 +3573,6 @@
             </figure>
           </div>
 
-          <div
-            class="extra-continue__decor-picker"
-            id="extra-continue-picker"
-            role="tablist"
-            aria-label="Occasion decor"
-          >
-            <button
-              type="button"
-              role="tab"
-              class="extra-continue__decor-picker-btn"
-              data-extra-go="0"
-              aria-selected="false"
-            >
-              Valentine
-            </button>
-            <button
-              type="button"
-              role="tab"
-              class="extra-continue__decor-picker-btn is-active"
-              data-extra-go="1"
-              aria-selected="true"
-            >
-              Birthday
-            </button>
-            <button
-              type="button"
-              role="tab"
-              class="extra-continue__decor-picker-btn"
-              data-extra-go="2"
-              aria-selected="false"
-            >
-              Custom
-            </button>
-          </div>
-
           <button
             class="extra-continue__decor-arrow extra-continue__decor-arrow--next"
             type="button"
@@ -3236,6 +3581,52 @@
           >
             <i class="fa fa-angle-right" aria-hidden="true"></i>
           </button>
+        </div>
+
+        <div
+          class="extra-continue__options"
+          id="extra-continue-choices"
+          hidden
+          aria-label="Optional flower bouquet"
+        >
+          <div class="extra-continue__price-stack">
+            <div class="extra-continue__price-row extra-continue__price-row--base">
+              <span class="extra-continue__price-row-label">Room decor (included)</span>
+              <strong class="extra-continue__price-row-amount" id="extra-decor-base-price"
+                >60&euro;</strong
+              >
+            </div>
+            <div class="extra-continue__bouquet-row" id="extra-bouquet-row">
+              <div class="extra-continue__bouquet-row-main">
+                <div class="extra-continue__bouquet-row-thumb">
+                  <img
+                    id="extra-choice-flower-thumb"
+                    src="img/flower1.jpg"
+                    alt=""
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="extra-continue__bouquet-row-copy">
+                  <strong>Flower bouquet</strong>
+                  <span>+60&euro;</span>
+                </div>
+              </div>
+              <button
+                type="button"
+                class="extra-continue__bouquet-add"
+                id="extra-bouquet-toggle"
+                aria-pressed="false"
+                aria-label="Add flower bouquet for 60 euros"
+              >
+                <i class="fa fa-plus" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+          <p class="extra-continue__options-total" aria-live="polite">
+            Total <strong id="extra-choices-total">60&euro;</strong>
+          </p>
         </div>
 
         <div class="extra-continue__special">
@@ -3368,6 +3759,13 @@
             role="group"
             aria-label="Perfume bottle size"
           ></div>
+          <div
+            id="extra-order-laundry-services"
+            class="extra-order-laundry-services"
+            hidden
+            role="group"
+            aria-label="Laundry service type"
+          ></div>
           <div class="extra-order-card__row">
             <span class="extra-order-card__price" id="extra-order-unit-price"
               >0&euro;</span
@@ -3409,6 +3807,19 @@
           ></div>
         </aside>
         <div class="extra-order-modal__actions">
+          <div
+            class="extra-order-variant-wrap"
+            id="extra-order-variant-wrap"
+            hidden
+          >
+            <p class="extra-order-variant-wrap__label">Explore more services</p>
+            <div
+              class="extra-order-variant-strip"
+              id="extra-order-variant-strip"
+              role="listbox"
+              aria-label="Product options"
+            ></div>
+          </div>
           <div class="extra-order-form__total">
             Selected total: <strong id="extra-modal-line-total">0&euro;</strong>
           </div>
@@ -3832,6 +4243,12 @@
             image: "img/flowers.png",
             selector: "#extra-flowers .js-extra-order",
           },
+          decor: {
+            id: "decor",
+            label: "Decor",
+            image: "img/valentineday.png",
+            selector: "#extra-flowers .js-extra-order",
+          },
           champagne: {
             id: "champagne",
             label: "Champagne",
@@ -3850,12 +4267,19 @@
             image: "img/tog.png",
             selector: "#extra-chocolates .js-extra-order",
           },
+          laundry: {
+            id: "laundry",
+            label: "Laundry",
+            image: "img/shirt.png",
+            selector: "#extra-laundry .js-extra-order",
+          },
         };
         var EXTRA_DISCOVER_FOR = {
-          flowers: ["champagne", "perfumes", "chocolates"],
+          flowers: ["perfumes", "chocolates", "decor", "laundry", "champagne"],
           champagne: ["flowers", "perfumes", "chocolates"],
           perfumes: ["flowers", "champagne", "chocolates"],
           chocolates: ["flowers", "perfumes", "champagne"],
+          laundry: ["flowers", "chocolates", "perfumes"],
         };
         var CHOCOLATE_CATALOG_IDS = [
           "tog",
@@ -3866,6 +4290,102 @@
           "tog5",
           "tog6",
         ];
+        var LAUNDRY_SERVICES = [
+          {
+            id: "wash-iron",
+            label: "Wash & ironing",
+          },
+          {
+            id: "iron-only",
+            label: "Ironing only",
+          },
+        ];
+
+        var LAUNDRY_CATALOG_IDS = ["shirt", "tshirt", "dress", "pijamas", "underwear", "trousers", "skirt", "suit", "socks", "sweater", "jacket"];
+
+        var LAUNDRY_CATALOG = {
+          shirt: {
+            name: "Shirt",
+            image: "img/shirt.png",
+            description:
+              "Shirt — professional wash and press, or ironing only, returned to your room.",
+          },
+          tshirt: {
+            name: "Cotton T-Shirt",
+            image: "img/tshirt.png",
+            description:
+              "Cotton T-shirt — professional wash and press, or ironing only, returned to your room.",
+          },
+          dress: {
+            name: "Dress",
+            image: "img/dress.png",
+            description:
+              "Dress — professional wash and press, or ironing only, returned to your room.",
+          },
+          pijamas: {
+            name: "Pijamas",
+            image: "img/pijamas.png",
+            description:
+              "Pijamas — professional wash and press, or ironing only, returned to your room.",
+          },
+          underwear: {
+            name: "Underwear",
+            image: "img/underwear.png",
+            description:
+              "Underwear — professional wash and press, or ironing only, returned to your room.",
+          },
+          trousers: {
+            name: "Trousers",
+            image: "img/trousers.png",
+            description:
+              "Trousers — professional wash and press, or ironing only, returned to your room.",
+          },
+          skirt: {
+            name: "Skirt",
+            image: "img/skirt.png",
+            description:
+              "Skirt — professional wash and press, or ironing only, returned to your room.",
+          },
+          suit: {
+            name: "Suit",
+            image: "img/suit.png",
+            description:
+              "Suit — professional wash and press, or ironing only, returned to your room.",
+          },
+          socks: {
+            name: "Socks",
+            image: "img/socks.png",
+            description:
+              "Socks — professional wash and press, or ironing only, returned to your room.",
+          },
+          sweater: {
+            name: "Sweater",
+            image: "img/sweater.png",
+            description:
+              "Sweater — professional wash and press, or ironing only, returned to your room.",
+          },
+          jacket: {
+            name: "Jacket",
+            image: "img/jacket.png",
+            description:
+              "Jacket — professional wash and press, or ironing only, returned to your room.",
+          },
+        };
+
+        var LAUNDRY_PRICING = {
+          shirt: { "wash-iron": 3, "iron-only": 2 },
+          tshirt: { "wash-iron": 3, "iron-only": 2 },
+          dress: { "wash-iron": 10, "iron-only": 7 },
+          pijamas: { "wash-iron": 5, "iron-only": 2 },
+          underwear: { "wash-iron": 1, "iron-only": 2 },
+          trousers: { "wash-iron": 5, "iron-only": 3 },
+          skirt: { "wash-iron": 6, "iron-only": 3 },
+          suit: { "wash-iron": 13, "iron-only": 8 },
+          socks: { "wash-iron": 0.5, "iron-only": 0.5 },
+          sweater: { "wash-iron": 6, "iron-only": 3 },
+          jacket: { "wash-iron": 10, "iron-only": 7 },
+        };
+
         var CHOCOLATE_CATALOG = {
           tog: {
             name: 'Tog Chocolate Box "With love from Kosova"',
@@ -4063,11 +4583,15 @@
         var plusBtn = document.getElementById("extra-order-plus");
         var addToCartBtn = document.getElementById("extra-add-to-cart-btn");
         var modalStatusEl = document.getElementById("extra-modal-status");
-        var flowerPicker = document.getElementById("extra-order-flower-picker");
         var perfumeSizesPicker = document.getElementById("extra-order-perfume-sizes");
+        var laundryServicesPicker = document.getElementById(
+          "extra-order-laundry-services",
+        );
         var orderDiscover = document.getElementById("extra-order-discover");
         var orderDiscoverGrid = document.getElementById("extra-order-discover-grid");
         var orderCardMedia = document.getElementById("extra-order-card-media");
+        var variantWrap = document.getElementById("extra-order-variant-wrap");
+        var variantStrip = document.getElementById("extra-order-variant-strip");
 
         var cartDrawer = document.getElementById("extra-cart-drawer");
         var cartItemsEl = document.getElementById("extra-cart-items");
@@ -4232,9 +4756,15 @@
         var currentImageIndex = 0;
         var modalQtyByIndex = [];
         var isFlowerOrder = false;
+        var isBookingFlow = false;
+        var bookingFlowCategory = null;
+        var currentModalCategoryId = null;
+        var bookingUrlParams = null;
         var isSpiritsOrder = false;
         var isPerfumeOrder = false;
         var isChocolateOrder = false;
+        var isLaundryOrder = false;
+        var laundryServiceByIndex = [];
         var perfumeMlByIndex = [];
         var spiritsProducts = [];
         var spiritsCategories = [];
@@ -4365,11 +4895,115 @@
           return id ? CHOCOLATE_CATALOG[id] : null;
         }
 
+        function getLaundryCatalogEntry(index) {
+          var id = LAUNDRY_CATALOG_IDS[index];
+          return id ? LAUNDRY_CATALOG[id] : null;
+        }
+
+        function getLaundryServiceById(serviceId) {
+          for (var i = 0; i < LAUNDRY_SERVICES.length; i++) {
+            if (LAUNDRY_SERVICES[i].id === serviceId) {
+              return LAUNDRY_SERVICES[i];
+            }
+          }
+          return LAUNDRY_SERVICES[0];
+        }
+
+        function getLaundryPrice(index, serviceId) {
+          var itemId = LAUNDRY_CATALOG_IDS[index] || LAUNDRY_CATALOG_IDS[0];
+          var selectedService = serviceId || laundryServiceByIndex[index] || "wash-iron";
+          var itemPrices = LAUNDRY_PRICING[itemId] || {};
+          var price = itemPrices[selectedService];
+          return typeof price === "number" ? price : 0;
+        }
+
+        function getLaundryPriceForIndex(index) {
+          return getLaundryPrice(index);
+        }
+
+        function setLaundryServicesPickerVisible(visible) {
+          if (visible) {
+            setFlowerPickerVisible(false);
+            setSpiritsPickerVisible(false);
+            setPerfumeSizesPickerVisible(false);
+            setChocolateModalLayout(false);
+          }
+          if (!laundryServicesPicker) return;
+          if (visible) {
+            laundryServicesPicker.removeAttribute("hidden");
+            laundryServicesPicker.classList.add("is-visible");
+          } else {
+            laundryServicesPicker.setAttribute("hidden", "");
+            laundryServicesPicker.classList.remove("is-visible");
+            laundryServicesPicker.innerHTML = "";
+          }
+        }
+
+        function selectLaundryService(serviceId) {
+          if (!isLaundryOrder) return;
+          laundryServiceByIndex[currentImageIndex] = serviceId;
+          currentPrices[currentImageIndex] = getLaundryPriceForIndex(
+            currentImageIndex,
+          );
+          currentPrice = currentPrices[currentImageIndex];
+          syncLaundryServiceButtons();
+          var entry = getLaundryCatalogEntry(currentImageIndex);
+          var service = getLaundryServiceById(serviceId);
+          var slideName =
+            (entry ? entry.name : getSlideProductName(currentImageIndex)) +
+            " \u2014 " +
+            service.label;
+          productEl.textContent = slideName;
+          imageEl.alt = slideName;
+          unitPriceEl.textContent = formatEuro(currentPrice);
+          var qty = getModalQty();
+          modalLineTotalEl.textContent = formatEuro(getModalSelectionTotal());
+          qtyEl.textContent = String(qty);
+        }
+
+        function syncLaundryServiceButtons() {
+          if (!laundryServicesPicker || !isLaundryOrder) return;
+          var activeId = laundryServiceByIndex[currentImageIndex] || "wash-iron";
+          var btns = laundryServicesPicker.querySelectorAll(
+            ".extra-order-laundry-services__btn",
+          );
+          for (var i = 0; i < btns.length; i++) {
+            btns[i].classList.toggle(
+              "is-active",
+              btns[i].getAttribute("data-service-id") === activeId,
+            );
+          }
+        }
+
+        function renderModalLaundryServices() {
+          if (!laundryServicesPicker || !isLaundryOrder) return;
+          var activeId = laundryServiceByIndex[currentImageIndex] || "wash-iron";
+
+          laundryServicesPicker.innerHTML = "";
+
+          LAUNDRY_SERVICES.forEach(function (service) {
+            var btn = document.createElement("button");
+            btn.type = "button";
+            btn.className = "extra-order-laundry-services__btn";
+            var servicePrice = getLaundryPrice(currentImageIndex, service.id);
+            btn.textContent = service.label + " \u2014 " + formatEuro(servicePrice);
+            btn.setAttribute("data-service-id", service.id);
+            if (service.id === activeId) {
+              btn.classList.add("is-active");
+            }
+            btn.addEventListener("click", function () {
+              selectLaundryService(service.id);
+            });
+            laundryServicesPicker.appendChild(btn);
+          });
+        }
+
         function setChocolateModalLayout(visible) {
           if (visible) {
             setFlowerPickerVisible(false);
             setSpiritsPickerVisible(false);
             setPerfumeSizesPickerVisible(false);
+            setLaundryServicesPickerVisible(false);
           }
           if (modal) {
             modal.classList.toggle("extra-order-modal--chocolate", !!visible);
@@ -4391,6 +5025,7 @@
             setFlowerPickerVisible(false);
             setSpiritsPickerVisible(false);
             setChocolateModalLayout(false);
+            setLaundryServicesPickerVisible(false);
           }
           if (modal) {
             modal.classList.toggle("extra-order-modal--perfume", !!visible);
@@ -4504,6 +5139,11 @@
         }
 
         function getVariantLabel(index) {
+          if (isLaundryOrder) {
+            return getLaundryServiceById(
+              laundryServiceByIndex[index] || "wash-iron",
+            ).label;
+          }
           if (isPerfumeOrder && perfumeMlByIndex[index]) {
             return perfumeMlByIndex[index] + " ml";
           }
@@ -4563,8 +5203,10 @@
           if (!btn) return null;
           if (btn.getAttribute("data-perfume-menu") === "true") return "perfumes";
           if (btn.getAttribute("data-chocolate-menu") === "true") return "chocolates";
+          if (btn.getAttribute("data-laundry-menu") === "true") return "laundry";
           if (btn.closest("#extra-champagne")) return "champagne";
           if (btn.closest("#extra-flowers")) return "flowers";
+          if (btn.closest("#extra-laundry")) return "laundry";
           return null;
         }
 
@@ -4590,8 +5232,8 @@
             var img = document.createElement("img");
             img.src = item.image;
             img.alt = "";
-            img.width = 76;
-            img.height = 76;
+            img.width = 56;
+            img.height = 56;
             thumb.appendChild(img);
 
             var label = document.createElement("span");
@@ -4612,21 +5254,6 @@
             setSpiritsPickerVisible(false);
             setPerfumeSizesPickerVisible(false);
           }
-          if (flowerPicker) {
-            if (visible) {
-              flowerPicker.removeAttribute("hidden");
-              flowerPicker.classList.add("is-visible");
-            } else {
-              flowerPicker.setAttribute("hidden", "");
-              flowerPicker.classList.remove("is-visible");
-            }
-          }
-          if (orderCardMedia) {
-            orderCardMedia.classList.toggle(
-              "extra-order-card__media--flower-picker",
-              visible,
-            );
-          }
         }
 
         function setSpiritsPickerVisible(visible) {
@@ -4637,28 +5264,85 @@
           }
         }
 
-        function syncOrderFlowerPicker() {
-          if (!flowerPicker || !isFlowerOrder) return;
-          var btns = flowerPicker.querySelectorAll(
-            ".extra-order-flower-picker__btn",
-          );
-          for (var i = 0; i < btns.length; i++) {
-            var idx = parseInt(btns[i].getAttribute("data-flower-index"), 10);
-            btns[i].classList.toggle("is-active", idx === currentImageIndex);
-          }
+        function getVariantCount() {
+          if (isSpiritsOrder) return spiritsProducts.length;
+          return currentImages.length;
         }
 
-        function selectFlowerVariant(index) {
-          if (
-            !isFlowerOrder ||
-            isNaN(index) ||
-            index < 0 ||
-            index >= FLOWER_VARIANT_COUNT
-          ) {
-            return;
-          }
+        function selectVariantIndex(index) {
+          var max = getVariantCount();
+          if (isNaN(index) || index < 0 || index >= max) return;
           currentImageIndex = index;
           updateModalView();
+        }
+
+        function renderVariantStrip() {
+          if (!variantStrip || !variantWrap) return;
+          if (
+            currentModalCategoryId === "flowers" &&
+            !isSpiritsOrder &&
+            !isPerfumeOrder &&
+            !isChocolateOrder &&
+            !isLaundryOrder
+          ) {
+            var serviceKeys = EXTRA_DISCOVER_FOR.flowers || [];
+            variantWrap.hidden = !serviceKeys.length;
+            variantStrip.innerHTML = "";
+            for (var s = 0; s < serviceKeys.length; s++) {
+              var service = EXTRA_DISCOVER_ITEMS[serviceKeys[s]];
+              if (!service) continue;
+              var serviceBtn = document.createElement("button");
+              serviceBtn.type = "button";
+              serviceBtn.className = "extra-order-variant-strip__btn";
+              serviceBtn.setAttribute("data-extra-discover", service.id);
+              serviceBtn.setAttribute("aria-label", service.label);
+
+              var serviceImg = document.createElement("img");
+              serviceImg.src = service.image;
+              serviceImg.alt = "";
+              serviceBtn.appendChild(serviceImg);
+              variantStrip.appendChild(serviceBtn);
+            }
+            return;
+          }
+
+          var count = getVariantCount();
+          if (count <= 1) {
+            variantWrap.hidden = true;
+            variantStrip.innerHTML = "";
+            return;
+          }
+
+          variantWrap.hidden = false;
+          variantStrip.innerHTML = "";
+
+          for (var i = 0; i < count; i++) {
+            var src = isSpiritsOrder
+              ? currentImages[i] || "img/champ.jpg"
+              : currentImages[i] || "img/flowers.png";
+            var label = isSpiritsOrder
+              ? spiritsProducts[i] || "Option " + (i + 1)
+              : getSlideProductName(i) || "Option " + (i + 1);
+
+            var btn = document.createElement("button");
+            btn.type = "button";
+            btn.className =
+              "extra-order-variant-strip__btn" +
+              (i === currentImageIndex ? " is-active" : "");
+            btn.setAttribute("data-variant-index", String(i));
+            btn.setAttribute("role", "option");
+            btn.setAttribute(
+              "aria-selected",
+              i === currentImageIndex ? "true" : "false",
+            );
+            btn.setAttribute("aria-label", label);
+
+            var img = document.createElement("img");
+            img.src = src;
+            img.alt = "";
+            btn.appendChild(img);
+            variantStrip.appendChild(btn);
+          }
         }
 
         function updateModalView() {
@@ -4686,6 +5370,7 @@
             imagePrevBtn.hidden = spiritsNavOff;
             imageNextBtn.hidden = spiritsNavOff;
             minusBtn.disabled = qty <= 0;
+            renderVariantStrip();
             return;
           }
 
@@ -4712,6 +5397,14 @@
               perfumeMlByIndex[currentImageIndex] +
               " ml";
           }
+          if (isLaundryOrder) {
+            slideName =
+              slideName +
+              " \u2014 " +
+              getLaundryServiceById(
+                laundryServiceByIndex[currentImageIndex] || "wash-iron",
+              ).label;
+          }
           productEl.textContent = slideName;
           imageEl.alt = slideName;
           if (descriptionEl && isPerfumeOrder) {
@@ -4726,12 +5419,24 @@
               (chocolateEntry && chocolateEntry.description) ||
               productDescription ||
               "";
+          } else if (descriptionEl && isLaundryOrder) {
+            var laundryEntry = getLaundryCatalogEntry(currentImageIndex);
+            descriptionEl.textContent =
+              (laundryEntry && laundryEntry.description) ||
+              productDescription ||
+              "";
           }
           if (isPerfumeOrder) {
             currentPrice = linePriceAt(currentImageIndex);
             unitPriceEl.textContent = formatEuro(currentPrice);
             renderModalPerfumeSizes();
           }
+          if (isLaundryOrder) {
+            currentPrice = linePriceAt(currentImageIndex);
+            unitPriceEl.textContent = formatEuro(currentPrice);
+            renderModalLaundryServices();
+          }
+          renderVariantStrip();
         }
 
         function syncExtraSlideProducts(btn, fallbackName) {
@@ -4765,6 +5470,13 @@
         }
 
         function openModal(btn) {
+          currentModalCategoryId = getExtraCategoryFromButton(btn);
+          if (isBookingFlow) {
+            bookingFlowCategory = currentModalCategoryId;
+            if (bookingFlowCategory === "champagne") {
+              bookingFlowCategory = "bottle";
+            }
+          }
           var product = btn.getAttribute("data-product") || "Extra Product";
           var img = btn.getAttribute("data-image") || "img/flowers.png";
           var imagesRaw = btn.getAttribute("data-images") || img;
@@ -4800,13 +5512,38 @@
           var isSpirits = btn.getAttribute("data-spirits-menu") === "true";
           var isPerfumeMenu = btn.getAttribute("data-perfume-menu") === "true";
           var isChocolateMenu = btn.getAttribute("data-chocolate-menu") === "true";
+          var isLaundryMenu = btn.getAttribute("data-laundry-menu") === "true";
           isPerfumeOrder = isPerfumeMenu;
           isChocolateOrder = isChocolateMenu;
+          isLaundryOrder = isLaundryMenu;
           perfumeMlByIndex = [];
 
-          if (isChocolateMenu) {
+          if (isLaundryMenu) {
             isSpirits = false;
             isPerfumeOrder = false;
+            isChocolateOrder = false;
+            perfumeMlByIndex = [];
+            currentImages = LAUNDRY_CATALOG_IDS.map(function (id) {
+              return LAUNDRY_CATALOG[id].image;
+            });
+            extraSlideProducts = LAUNDRY_CATALOG_IDS.map(function (id) {
+              return LAUNDRY_CATALOG[id].name;
+            });
+            laundryServiceByIndex = LAUNDRY_CATALOG_IDS.map(function () {
+              return "wash-iron";
+            });
+            currentPrices = LAUNDRY_CATALOG_IDS.map(function (_id, index) {
+              return getLaundryPriceForIndex(index);
+            });
+            productBaseName = product;
+            productDescription = desc;
+            currentImageIndex = 0;
+            currentPrice = currentPrices[0] || 3;
+            syncPricesToImages();
+          } else if (isChocolateMenu) {
+            isSpirits = false;
+            isPerfumeOrder = false;
+            isLaundryOrder = false;
             perfumeMlByIndex = [];
             currentImages = CHOCOLATE_CATALOG_IDS.map(function (id) {
               return CHOCOLATE_CATALOG[id].image;
@@ -4824,6 +5561,7 @@
             syncPricesToImages();
           } else if (isPerfumeMenu) {
             isChocolateOrder = false;
+            isLaundryOrder = false;
             isSpirits = false;
             currentImages = PERFUME_CATALOG_IDS.map(function (id) {
               return PERFUME_CATALOG[id].image;
@@ -4947,7 +5685,13 @@
           resetModalQuantities(
             isSpirits ? spiritsProducts.length : currentImages.length,
           );
-          if (descriptionEl && !isSpirits && !isPerfumeMenu && !isChocolateMenu) {
+          if (
+            descriptionEl &&
+            !isSpirits &&
+            !isPerfumeMenu &&
+            !isChocolateMenu &&
+            !isLaundryMenu
+          ) {
             descriptionEl.textContent = desc;
           }
           if (modalStatusEl) modalStatusEl.textContent = "";
@@ -4955,7 +5699,10 @@
           setSpiritsPickerVisible(isSpirits);
           setPerfumeSizesPickerVisible(isPerfumeMenu);
           setChocolateModalLayout(isChocolateMenu);
-          if (!isSpirits) {
+          setLaundryServicesPickerVisible(isLaundryMenu);
+          if (isBookingFlow) {
+            setDiscoverVisible(false);
+          } else if (!isSpirits) {
             var discoverCategory = getExtraCategoryFromButton(btn);
             if (discoverCategory) {
               renderOrderDiscover(discoverCategory);
@@ -4966,13 +5713,25 @@
             setDiscoverVisible(false);
           }
           updateModalView();
+          if (isBookingFlow) {
+            modal.classList.add("extra-order-modal--booking");
+          }
           modal.classList.add("is-open");
           modal.setAttribute("aria-hidden", "false");
           document.body.style.overflow = "hidden";
         }
 
+        function goBackToBookingDetails() {
+          window.location.href = getBookingDetailsUrl();
+        }
+
         function closeModal() {
+          if (isBookingFlow) {
+            goBackToBookingDetails();
+            return;
+          }
           modal.classList.remove("is-open");
+          modal.classList.remove("extra-order-modal--booking");
           modal.setAttribute("aria-hidden", "true");
           if (!cartDrawer.classList.contains("is-open")) {
             document.body.style.overflow = "";
@@ -4981,10 +5740,13 @@
           setSpiritsPickerVisible(false);
           setPerfumeSizesPickerVisible(false);
           setChocolateModalLayout(false);
+          setLaundryServicesPickerVisible(false);
           setDiscoverVisible(false);
           isPerfumeOrder = false;
           isChocolateOrder = false;
+          isLaundryOrder = false;
           perfumeMlByIndex = [];
+          laundryServiceByIndex = [];
         }
 
         function openCart() {
@@ -5142,7 +5904,150 @@
           return true;
         }
 
+        function getBookingDetailsUrl() {
+          if (!bookingUrlParams) return "booking-details.html";
+          var params = new URLSearchParams();
+          params.set("room", bookingUrlParams.get("room") || "junior-suite");
+          params.set("checkin", bookingUrlParams.get("checkin") || "");
+          params.set("checkout", bookingUrlParams.get("checkout") || "");
+          params.set("adults", bookingUrlParams.get("adults") || "1");
+          params.set("children", bookingUrlParams.get("children") || "0");
+          return "booking-details.html?" + params.toString();
+        }
+
+        function loadStoredBookingLines() {
+          try {
+            var raw = sessionStorage.getItem("derandBookingExtraLines");
+            if (!raw) return [];
+            var parsed = JSON.parse(raw);
+            return Array.isArray(parsed) ? parsed : [];
+          } catch (e) {
+            return [];
+          }
+        }
+
+        function saveStoredBookingLines(lines) {
+          try {
+            sessionStorage.setItem(
+              "derandBookingExtraLines",
+              JSON.stringify(lines || []),
+            );
+          } catch (e) {
+            /* ignore */
+          }
+        }
+
+        function mapModalSelectionToBookingLines() {
+          var lines = [];
+          for (var i = 0; i < modalQtyByIndex.length; i++) {
+            var addQty = modalQtyByIndex[i];
+            if (typeof addQty !== "number" || isNaN(addQty) || addQty < 1) continue;
+
+            var label = getSlideProductName(i);
+            var variant = getVariantLabel(i);
+            if (variant && !isSpiritsOrder) {
+              label = label + " \u2014 " + variant;
+            }
+
+            var price = isSpiritsOrder ? spiritsPrices[i] || 0 : linePriceAt(i);
+            var image = isSpiritsOrder
+              ? currentImages[i] || "img/champ.jpg"
+              : currentImages[i];
+            var category = bookingFlowCategory || "flowers";
+            var id;
+
+            if (isChocolateOrder) {
+              id = "chocolate-" + CHOCOLATE_CATALOG_IDS[i];
+              category = "chocolate";
+            } else if (isPerfumeOrder) {
+              id = "perfume-" + PERFUME_CATALOG_IDS[i];
+              category = "perfume";
+            } else if (isLaundryOrder) {
+              id =
+                "laundry-" +
+                LAUNDRY_CATALOG_IDS[i] +
+                "-" +
+                (laundryServiceByIndex[i] || "wash-iron");
+              category = "laundry";
+            } else if (isSpiritsOrder) {
+              id = "bottle-" + i;
+              category = "bottle";
+            } else {
+              id = "flowers-" + i;
+              category = "flowers";
+            }
+
+            lines.push({
+              id: id,
+              catalogId: id,
+              category: category,
+              label: label,
+              price: price,
+              image: image,
+              qty: addQty,
+            });
+          }
+          return lines;
+        }
+
+        function addCurrentSelectionToBooking() {
+          if (!isSpiritsOrder) syncPricesToImages();
+          var selectedCount = getModalSelectionCount();
+          if (selectedCount < 1) {
+            if (modalStatusEl) {
+              modalStatusEl.textContent =
+                "Please press + to choose how many you want (at least 1).";
+            }
+            return;
+          }
+          if (modalStatusEl) modalStatusEl.textContent = "";
+
+          var existing = loadStoredBookingLines();
+          var added = mapModalSelectionToBookingLines();
+          saveStoredBookingLines(existing.concat(added));
+          goBackToBookingDetails();
+        }
+
+        function initBookingFlow() {
+          bookingUrlParams = new URLSearchParams(window.location.search);
+          if (bookingUrlParams.get("from") !== "booking") return;
+
+          isBookingFlow = true;
+          document.body.classList.add("extra-booking-mode");
+
+          var focusMap = {
+            flowers: "#extra-flowers .js-extra-order",
+            bottle: "#extra-champagne .js-extra-order",
+            chocolate: "#extra-chocolates .js-extra-order",
+            perfume: "#extra-perfumes .js-extra-order",
+            laundry: "#extra-laundry .js-extra-order",
+          };
+
+          var focus = bookingUrlParams.get("focus") || "flowers";
+          var triggerSelector = focusMap[focus] || focusMap.flowers;
+
+          var orderTitle = document.getElementById("extra-order-title");
+          if (orderTitle) orderTitle.textContent = "Add to cart";
+          if (addToCartBtn) addToCartBtn.textContent = "Add to cart";
+
+          var preloder = document.getElementById("preloder");
+          if (preloder) preloder.style.display = "none";
+
+          function openBookingCategoryModal() {
+            var trigger = document.querySelector(triggerSelector);
+            if (trigger) {
+              openModal(trigger);
+            }
+          }
+
+          window.setTimeout(openBookingCategoryModal, 60);
+        }
+
         function addCurrentSelectionToCart() {
+          if (isBookingFlow) {
+            addCurrentSelectionToBooking();
+            return;
+          }
           if (!isSpiritsOrder) syncPricesToImages();
           var selectedCount = getModalSelectionCount();
           if (selectedCount < 1) {
@@ -5180,7 +6085,10 @@
                       : isChocolateOrder
                         ? (getChocolateCatalogEntry(i) || {}).description ||
                           productDescription
-                        : productDescription,
+                        : isLaundryOrder
+                          ? (getLaundryCatalogEntry(i) || {}).description ||
+                            productDescription
+                          : productDescription,
                 },
                 { closeModal: false, openCart: false, skipToast: true },
               )
@@ -5225,6 +6133,7 @@
 
         cart = loadCart();
         renderCart();
+        initBookingFlow();
         window.setTimeout(trySendPendingOrderAfterPayment, 120);
 
         if (checkoutForm) {
@@ -5334,8 +6243,21 @@
           updateModalView();
         });
 
+        if (variantStrip) {
+          variantStrip.addEventListener("click", function (event) {
+            var btn = event.target.closest(".extra-order-variant-strip__btn");
+            if (!btn) return;
+            var idx = parseInt(btn.getAttribute("data-variant-index"), 10);
+            selectVariantIndex(idx);
+          });
+        }
+
         document.addEventListener("keydown", function (event) {
           if (event.key !== "Escape") return;
+          if (isBookingFlow && modal.classList.contains("is-open")) {
+            goBackToBookingDetails();
+            return;
+          }
           if (cartDrawer.classList.contains("is-open")) closeCart();
           else if (modal.classList.contains("is-open")) closeModal();
         });
@@ -5574,7 +6496,16 @@
         var priceAmount = document.getElementById("extra-continue-price-amount");
         var decorAddBtn = document.getElementById("extra-decor-add-cart");
         var decorAddHint = document.getElementById("extra-decor-add-hint");
-        var picker = document.getElementById("extra-continue-picker");
+        var choicesPanel = document.getElementById("extra-continue-choices");
+        var bouquetToggle = document.getElementById("extra-bouquet-toggle");
+        var bouquetRowEl = document.getElementById("extra-bouquet-row");
+        var decorBasePriceEl = document.getElementById("extra-decor-base-price");
+        var choiceFlowerThumb = document.getElementById("extra-choice-flower-thumb");
+        var choicesTotalEl = document.getElementById("extra-choices-total");
+        var priceNoteEl = document.getElementById("extra-continue-price-note");
+
+        var BOUQUET_SURCHARGE = 60;
+        var bouquetSelected = false;
 
         if (
           !prevBtn ||
@@ -5601,6 +6532,8 @@
             priceLabel: "Valentine decor",
             showPrice: true,
             canAddToCart: true,
+            bouquetFlower: "flower2",
+            bouquetImage: "img/flower2.jpg",
             description:
               "Valentine's room decor — in-room styling with romantic touches.",
           },
@@ -5615,6 +6548,8 @@
             priceLabel: "Birthday decor",
             showPrice: true,
             canAddToCart: true,
+            bouquetFlower: "flower1",
+            bouquetImage: "img/flower1.jpg",
             storyTitle: "A birthday they will remember",
             storyCopy:
               "We dress your room with balloons, soft lighting, and refined touches so the celebration feels personal and warm — quiet luxury, not loud party decor.",
@@ -5631,6 +6566,8 @@
             priceLabel: "Custom decor",
             showPrice: false,
             canAddToCart: false,
+            bouquetFlower: null,
+            bouquetImage: null,
             description: "Custom room decor — price on request.",
           },
         ];
@@ -5642,6 +6579,97 @@
           imgNode.src = item.src;
           imgNode.alt = item.alt;
           labelNode.textContent = item.label;
+        }
+
+        function getDecorTotal(item) {
+          if (!item || !item.priceAmount) return 0;
+          var total = item.priceAmount;
+          if (bouquetSelected && item.bouquetFlower) {
+            total += BOUQUET_SURCHARGE;
+          }
+          return total;
+        }
+
+        function formatDecorEuro(amount) {
+          return amount + "\u20ac";
+        }
+
+        function syncBouquetUi() {
+          var current = items[centerIndex];
+          var hasBouquetOption =
+            current.canAddToCart && current.bouquetFlower && current.bouquetImage;
+
+          if (!hasBouquetOption) {
+            bouquetSelected = false;
+          }
+
+          if (choicesPanel) {
+            if (hasBouquetOption) {
+              choicesPanel.removeAttribute("hidden");
+            } else {
+              choicesPanel.setAttribute("hidden", "");
+            }
+          }
+
+          if (bouquetRowEl) {
+            bouquetRowEl.classList.toggle("is-selected", bouquetSelected);
+          }
+          if (bouquetToggle) {
+            bouquetToggle.disabled = !hasBouquetOption;
+            bouquetToggle.classList.toggle("is-selected", bouquetSelected);
+            bouquetToggle.setAttribute(
+              "aria-pressed",
+              bouquetSelected ? "true" : "false",
+            );
+            bouquetToggle.setAttribute(
+              "aria-label",
+              bouquetSelected
+                ? "Remove flower bouquet"
+                : "Add flower bouquet for 60 euros",
+            );
+            bouquetToggle.innerHTML = bouquetSelected
+              ? '<i class="fa fa-check" aria-hidden="true"></i>'
+              : '<i class="fa fa-plus" aria-hidden="true"></i>';
+          }
+          if (choiceFlowerThumb && hasBouquetOption) {
+            choiceFlowerThumb.src = current.bouquetImage;
+            choiceFlowerThumb.alt = "Flower bouquet";
+          }
+          if (decorBasePriceEl && current.priceAmount) {
+            decorBasePriceEl.textContent = formatDecorEuro(current.priceAmount);
+          }
+
+          var total = getDecorTotal(current);
+          var base = current.priceAmount || 0;
+
+          if (choicesTotalEl) {
+            choicesTotalEl.textContent = formatDecorEuro(
+              hasBouquetOption ? total : base,
+            );
+          }
+          if (priceAmount && current.showPrice) {
+            priceAmount.textContent = formatDecorEuro(
+              hasBouquetOption ? total : base,
+            );
+          }
+          if (priceNoteEl && current.showPrice && hasBouquetOption) {
+            priceNoteEl.textContent = bouquetSelected
+              ? "60\u20ac decor + 60\u20ac bouquet"
+              : "Decor 60\u20ac \u00b7 bouquet +60\u20ac below";
+          }
+          if (decorAddBtn && current.canAddToCart) {
+            decorAddBtn.textContent = "Add to cart";
+          }
+        }
+
+        function setBouquetSelected(on) {
+          var current = items[centerIndex];
+          if (!current.bouquetFlower) {
+            bouquetSelected = false;
+          } else {
+            bouquetSelected = !!on;
+          }
+          syncBouquetUi();
         }
 
         function render() {
@@ -5658,16 +6686,16 @@
               if (priceLabel) {
                 priceLabel.textContent = items[centerIndex].priceLabel;
               }
-              if (priceAmount) {
-                priceAmount.textContent = items[centerIndex].price;
-              }
             } else {
               centerPrice.setAttribute("hidden", "");
             }
           }
 
+          syncBouquetUi();
+
           if (decorAddBtn) {
             var canAdd = items[centerIndex].canAddToCart;
+            var itemTotal = getDecorTotal(items[centerIndex]);
             decorAddBtn.disabled = !canAdd;
             decorAddBtn.textContent = canAdd ? "Add to cart" : "Price on request";
           }
@@ -5677,15 +6705,6 @@
               : "For custom decor, please contact reception or info@derandhotel.com.";
           }
 
-          if (picker) {
-            var btns = picker.querySelectorAll(".extra-continue__decor-picker-btn[data-extra-go]");
-            for (var p = 0; p < btns.length; p++) {
-              var idx = parseInt(btns[p].getAttribute("data-extra-go"), 10);
-              var on = idx === centerIndex;
-              btns[p].classList.toggle("is-active", on);
-              btns[p].setAttribute("aria-selected", on ? "true" : "false");
-            }
-          }
         }
 
         function animateTo(nextIndex) {
@@ -5700,6 +6719,7 @@
 
           window.setTimeout(function () {
             centerIndex = target;
+            bouquetSelected = false;
             render();
 
             requestAnimationFrame(function () {
@@ -5722,13 +6742,11 @@
           animateTo(centerIndex + 1);
         });
 
-        if (picker) {
-          picker.addEventListener("click", function (ev) {
-            var btn = ev.target.closest(".extra-continue__decor-picker-btn[data-extra-go]");
-            if (!btn) return;
-            var idx = parseInt(btn.getAttribute("data-extra-go"), 10);
-            if (isNaN(idx)) return;
-            animateTo(idx);
+        if (bouquetToggle) {
+          bouquetToggle.addEventListener("click", function () {
+            var current = items[centerIndex];
+            if (!current.bouquetFlower) return;
+            setBouquetSelected(!bouquetSelected);
           });
         }
 
@@ -5744,14 +6762,30 @@
             }
             if (typeof window.derandAddToCart !== "function") return;
             if (decorAddHint) decorAddHint.textContent = "";
+
             window.derandAddToCart({
               productBase: current.cartName,
-              variantLabel: "",
+              variantLabel: "Decor only",
               image: current.src,
               price: current.priceAmount,
               qty: 1,
               description: current.description || "",
             });
+
+            if (bouquetSelected && current.bouquetFlower && current.bouquetImage) {
+              window.derandAddToCart({
+                productBase: "Extra bouquet",
+                variantLabel: current.bouquetFlower,
+                image: current.bouquetImage,
+                price: BOUQUET_SURCHARGE,
+                qty: 1,
+                description:
+                  "Extra bouquet (" +
+                  current.bouquetFlower +
+                  ") with " +
+                  current.cartName,
+              });
+            }
           });
         }
 

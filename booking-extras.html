@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0;url=extra.html" />
+    <title>Redirecting… | Derand Hotel</title>
+    <script>
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        params.set("from", "booking");
+        window.location.replace("extra.html?" + params.toString());
+      })();
+    </script>
+  </head>
+  <body>
+    <p><a href="extra.html">Continue to Concierge extras</a></p>
+  </body>
+</html>
