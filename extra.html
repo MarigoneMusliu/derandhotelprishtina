@@ -527,6 +527,22 @@
       }
 
       @media (max-width: 991px) {
+        .extra-section {
+          padding: 40px 0 56px;
+        }
+
+        .extra-row {
+          margin-bottom: 72px;
+        }
+
+        #extra-flowers,
+        #extra-champagne,
+        #extra-perfumes,
+        #extra-chocolates,
+        #extra-laundry {
+          margin-bottom: 64px;
+        }
+
         .extra-row,
         .extra-row--reverse {
           grid-template-columns: 1fr;
@@ -535,6 +551,11 @@
         .extra-row--reverse .extra-copy,
         .extra-row--reverse .extra-media {
           order: unset;
+        }
+
+        .extra-copy,
+        .extra-media {
+          max-width: none;
         }
 
         .extra-copy-text {
@@ -552,6 +573,180 @@
 
         .extra-slider__arrow--next {
           right: 8px;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .extra-hero {
+          min-height: 0;
+        }
+
+        .extra-hero__content {
+          padding: clamp(140px, 32vh, 220px) 20px 28px;
+        }
+
+        .extra-hero__content h1 {
+          white-space: normal;
+          transform: none;
+          font-size: clamp(28px, 8vw, 40px);
+        }
+
+        .extra-hero__content p {
+          font-size: clamp(16px, 4.5vw, 20px);
+        }
+
+        .extra-section {
+          padding: 40px 0 56px;
+        }
+
+        .extra-section > .container {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+
+        .extra-row {
+          margin-bottom: 0;
+          gap: 24px;
+        }
+
+        .extra-row:not(:last-child) {
+          margin-bottom: 72px;
+          padding-bottom: 72px;
+          border-bottom: 1px solid rgba(177, 114, 86, 0.14);
+        }
+
+        .extra-copy-kicker {
+          font-size: 10px;
+          letter-spacing: 0.18em;
+          margin-bottom: 10px;
+        }
+
+        .extra-copy-title {
+          font-size: clamp(26px, 6.5vw, 34px);
+          line-height: 1.2;
+          margin-bottom: 12px;
+        }
+
+        .extra-copy-text {
+          font-size: 15px;
+          line-height: 1.65;
+          margin-bottom: 18px;
+          font-weight: 400;
+        }
+
+        .extra-copy-text::first-letter {
+          font-size: 2.15em;
+          line-height: 0.8;
+          padding-right: 0.1em;
+        }
+
+        .extra-btn {
+          display: block;
+          width: 100%;
+          max-width: 100%;
+          box-sizing: border-box;
+          text-align: center;
+          padding: 14px 18px;
+          font-size: 11px;
+          letter-spacing: 0.12em;
+        }
+
+        .extra-row .extra-copy {
+          order: 1;
+        }
+
+        .extra-row .extra-media {
+          order: 2;
+          padding: 16px 0 0;
+        }
+
+        .extra-row .extra-copy,
+        .extra-row .extra-media {
+          max-width: none;
+          justify-self: stretch;
+          width: 100%;
+        }
+
+        .extra-row .extra-copy-text {
+          margin-bottom: 20px;
+        }
+
+        .extra-row .extra-copy-text::first-letter {
+          font-size: 2em;
+          margin-top: 0.04em;
+        }
+
+        .extra-row .extra-btn {
+          padding: 15px 18px;
+        }
+
+        .extra-row .extra-media img {
+          max-width: 100%;
+          max-height: min(46vh, 280px);
+          width: 100%;
+          object-fit: contain;
+          object-position: center;
+          border-radius: 14px;
+          background: linear-gradient(180deg, #fdfcfa 0%, #f5f0ea 100%);
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        #extra-flowers,
+        #extra-champagne,
+        #extra-perfumes,
+        #extra-chocolates,
+        #extra-laundry {
+          gap: 24px;
+          scroll-margin-top: 88px;
+        }
+
+        #extra-flowers:not(:last-child),
+        #extra-champagne:not(:last-child),
+        #extra-perfumes:not(:last-child),
+        #extra-chocolates:not(:last-child),
+        #extra-laundry:not(:last-child) {
+          margin-bottom: 72px;
+          padding-bottom: 72px;
+        }
+
+        #extra-champagne .extra-media {
+          min-height: 0;
+          display: block;
+        }
+
+        #extra-champagne .extra-slider,
+        #extra-champagne .extra-media img {
+          max-height: min(46vh, 280px);
+        }
+      }
+
+      @media (max-width: 399px) {
+        .extra-section > .container {
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+
+        .extra-row:not(:last-child) {
+          margin-bottom: 64px;
+          padding-bottom: 64px;
+        }
+
+        #extra-flowers:not(:last-child),
+        #extra-champagne:not(:last-child),
+        #extra-perfumes:not(:last-child),
+        #extra-chocolates:not(:last-child),
+        #extra-laundry:not(:last-child) {
+          margin-bottom: 64px;
+          padding-bottom: 64px;
+        }
+
+        .extra-row .extra-copy-title {
+          font-size: 24px;
+        }
+
+        .extra-row .extra-media img {
+          max-height: min(42vh, 240px);
         }
       }
 
@@ -931,6 +1126,132 @@
           font-size: 14px;
           line-height: 1.45;
         }
+
+        .extra-order-modal__dialog {
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+        }
+
+        .extra-order-card {
+          flex: 1 1 auto;
+          min-height: 0;
+          overflow-x: hidden;
+          overflow-y: auto;
+          -webkit-overflow-scrolling: touch;
+          padding-bottom: 4px;
+        }
+
+        .extra-order-modal__actions {
+          flex-shrink: 0;
+          margin-top: 12px;
+          padding-top: 16px;
+          background: #faf9f7;
+        }
+
+        .extra-order-card__desc {
+          max-height: none;
+          overflow: visible;
+          line-height: 1.5;
+        }
+
+        .extra-order-card__desc-slot {
+          min-height: 0;
+        }
+
+        .extra-order-card--perfume .extra-order-card__media,
+        .extra-order-card--chocolate .extra-order-card__media,
+        .extra-order-card--spirits .extra-order-card__media,
+        .extra-order-card--laundry .extra-order-card__media {
+          height: auto;
+          min-height: 0;
+          max-height: none;
+          margin-bottom: 12px;
+          padding: 10px 36px;
+        }
+
+        .extra-order-card--perfume .extra-order-card__img,
+        .extra-order-card--chocolate .extra-order-card__img,
+        .extra-order-card--spirits .extra-order-card__img,
+        .extra-order-card--laundry .extra-order-card__img {
+          width: auto;
+          max-width: min(180px, 72vw);
+          height: auto;
+          max-height: min(160px, 38vh);
+          min-height: 0;
+          object-fit: contain;
+        }
+
+        .extra-order-card--perfume .extra-order-card__name,
+        .extra-order-card--chocolate .extra-order-card__name {
+          min-height: 0;
+          max-height: none;
+          -webkit-line-clamp: unset;
+          display: block;
+          overflow: visible;
+        }
+
+        .extra-order-card--perfume .extra-order-perfume-sizes.is-visible {
+          min-height: 0;
+          height: auto;
+          max-height: none;
+          margin-bottom: 10px;
+        }
+
+        .extra-order-flower-picker.is-visible {
+          margin: 10px 0 6px;
+          gap: 6px;
+        }
+
+        .extra-order-flower-picker__btn {
+          flex: 1 1 0;
+          min-width: 0;
+          padding: 10px 8px;
+        }
+
+        .extra-order-variant-wrap {
+          margin: 8px 0 10px;
+        }
+
+        .extra-order-variant-wrap__label {
+          font-size: 0.68rem;
+          margin-bottom: 8px;
+        }
+
+        .extra-order-variant-strip {
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 6px;
+          max-height: 132px;
+          overflow-y: auto;
+          overflow-x: hidden;
+          padding: 2px;
+        }
+
+        .extra-order-variant-strip__btn {
+          width: 52px;
+          height: 52px;
+          padding: 4px;
+        }
+
+        .extra-order-discover {
+          margin: 12px 0 0;
+          padding: 12px 10px 10px;
+        }
+
+        .extra-order-discover__item {
+          width: 76px;
+          padding: 8px 6px 6px;
+        }
+
+        .extra-order-discover__thumb {
+          width: 48px;
+          height: 48px;
+        }
+
+        .extra-order-discover__name {
+          font-size: 8px;
+        }
       }
 
       .extra-order-card__row {
@@ -1235,7 +1556,11 @@
       }
 
       .extra-order-variant-wrap {
-        margin-bottom: 16px;
+        margin: 12px 0 16px;
+      }
+
+      .extra-order-modal--booking .extra-order-variant-wrap:not([hidden]) {
+        margin-bottom: 12px;
       }
 
       .extra-order-variant-wrap[hidden] {
@@ -1368,7 +1693,7 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 8px;
-        margin: 0 auto 16px;
+        margin: 12px auto 4px;
         max-width: 100%;
       }
 
@@ -2055,7 +2380,8 @@
         flex-shrink: 0;
         width: 56px;
         height: 56px;
-        object-fit: cover;
+        object-fit: contain;
+        object-position: center;
         border-radius: 10px;
         background: #f3f0ec;
       }
@@ -2067,13 +2393,26 @@
 
       .extra-cart-item__top {
         display: flex;
+        flex-wrap: wrap;
         align-items: flex-start;
         justify-content: space-between;
-        gap: 10px;
+        gap: 6px 10px;
         margin-bottom: 8px;
       }
 
+      .extra-cart-item__variant {
+        flex: 1 1 100%;
+        order: 3;
+      }
+
+      .extra-cart-item__line-total {
+        order: 2;
+      }
+
       .extra-cart-item__name {
+        order: 1;
+        flex: 1 1 auto;
+        min-width: 0;
         margin: 0;
         font-family: "Noto Serif", serif;
         font-size: 14px;
@@ -2083,6 +2422,7 @@
       }
 
       .extra-cart-item__line-total {
+        order: 2;
         flex-shrink: 0;
         font-size: 14px;
         font-weight: 500;
@@ -2097,7 +2437,12 @@
       }
 
       .extra-cart-item__variant {
-        display: none;
+        order: 3;
+        flex: 1 1 100%;
+        margin: 0;
+        font-size: 12px;
+        line-height: 1.35;
+        color: #a67c63;
       }
 
       .extra-cart-item__bottom {
@@ -2390,11 +2735,115 @@
       @media (max-width: 767px) {
         .extra-cart-widget {
           right: 14px;
-          bottom: 16px;
+          bottom: max(16px, env(safe-area-inset-bottom, 0px));
         }
 
         .extra-cart-drawer__panel {
           width: 100%;
+          max-width: 100%;
+        }
+
+        .extra-cart-drawer__header {
+          padding: 18px 16px 12px;
+        }
+
+        .extra-cart-drawer__header h2 {
+          font-size: 1.25rem;
+        }
+
+        .extra-cart-drawer__section-label {
+          padding: 10px 16px 6px;
+        }
+
+        .extra-cart-drawer__items-wrap {
+          margin: 0 12px 10px;
+          padding: 2px 4px;
+        }
+
+        .extra-cart-item {
+          gap: 10px;
+          padding: 12px 10px;
+        }
+
+        .extra-cart-item__img {
+          width: 64px;
+          height: 64px;
+          object-fit: contain;
+          object-position: center;
+        }
+
+        .extra-cart-item__top {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 4px;
+          margin-bottom: 6px;
+        }
+
+        .extra-cart-item__name,
+        .extra-cart-item__line-total,
+        .extra-cart-item__variant {
+          order: unset;
+        }
+
+        .extra-cart-item__name {
+          font-size: 15px;
+          line-height: 1.3;
+          word-break: break-word;
+        }
+
+        .extra-cart-item__line-total {
+          font-size: 15px;
+        }
+
+        .extra-order-card--flowers .extra-order-variant-wrap {
+          display: none;
+        }
+
+        .extra-cart-item__meta {
+          margin-bottom: 8px;
+          font-size: 13px;
+        }
+
+        .extra-cart-item__bottom {
+          flex-wrap: wrap;
+          gap: 8px;
+        }
+
+        .extra-cart-item__qty button {
+          width: 32px;
+          height: 32px;
+        }
+
+        .extra-cart-item__remove {
+          font-size: 13px;
+          padding: 6px 0;
+          min-height: 32px;
+        }
+
+        .extra-cart-drawer__bottom {
+          padding: 0 12px calc(10px + env(safe-area-inset-bottom, 0px));
+        }
+
+        .extra-cart-drawer__footer {
+          padding: 12px 14px 10px;
+        }
+
+        .extra-delivery__row {
+          grid-template-columns: 1fr;
+        }
+
+        .extra-cart-toast {
+          left: 16px;
+          right: 16px;
+          bottom: max(88px, calc(72px + env(safe-area-inset-bottom, 0px)));
+          transform: translateX(0) translateY(20px);
+          width: auto;
+          max-width: none;
+          text-align: center;
+        }
+
+        .extra-cart-toast.is-visible {
+          transform: translateX(0) translateY(0);
         }
       }
 
@@ -3704,10 +4153,6 @@
         </div>
       </div>
     </section>
-<br>
-<br>
-<br>
-<br>
 
     <section class="extra-section">
       <div class="container">
@@ -3717,14 +4162,11 @@
             <h2 class="extra-copy-title">
               Fresh, fragrant, and waiting for you.
             </h2>
-            <br>
             <p class="extra-copy-text">
               Add a touch of nature to your stay. Whether it’s a special
               occasion or a simple gesture, we curate fresh seasonal bouquets
               from local artisans to welcome you the moment you arrive.
             </p>
-            
-            <br>
             <button
               type="button"
               class="extra-btn js-extra-order"
@@ -4325,6 +4767,23 @@
           </div>
           <div class="extra-order-card__desc-slot">
             <p class="extra-order-card__desc" id="extra-order-description"></p>
+          </div>
+          <div
+            class="extra-order-flower-picker"
+            id="extra-order-flower-picker"
+            role="group"
+            aria-label="Rose colour"
+          ></div>
+          <div class="extra-order-variant-wrap" id="extra-order-variant-wrap" hidden>
+            <p class="extra-order-variant-wrap__label" id="extra-order-variant-label">
+              Choose your flowers
+            </p>
+            <div
+              class="extra-order-variant-strip"
+              id="extra-order-variant-strip"
+              role="listbox"
+              aria-labelledby="extra-order-variant-label"
+            ></div>
           </div>
         </div>
         <aside
@@ -5120,6 +5579,8 @@
         var orderCardMedia = document.getElementById("extra-order-card-media");
         var variantWrap = document.getElementById("extra-order-variant-wrap");
         var variantStrip = document.getElementById("extra-order-variant-strip");
+        var variantLabelEl = document.getElementById("extra-order-variant-label");
+        var flowerPickerEl = document.getElementById("extra-order-flower-picker");
 
         var cartDrawer = document.getElementById("extra-cart-drawer");
         var cartItemsEl = document.getElementById("extra-cart-items");
@@ -5820,12 +6281,52 @@
           setDiscoverVisible(true);
         }
 
+        function isFlowersModalCategory() {
+          return (
+            currentModalCategoryId === "flowers" &&
+            !isSpiritsOrder &&
+            !isPerfumeOrder &&
+            !isChocolateOrder &&
+            !isLaundryOrder
+          );
+        }
+
+        function renderFlowerPicker() {
+          if (!flowerPickerEl) return;
+          var showPicker =
+            isFlowersModalCategory() &&
+            currentImageIndex < FLOWER_VARIANT_COUNT;
+          flowerPickerEl.classList.toggle("is-visible", showPicker);
+          if (orderCardMedia) {
+            orderCardMedia.classList.toggle(
+              "extra-order-card__media--flower-picker",
+              showPicker,
+            );
+          }
+          if (!showPicker) {
+            flowerPickerEl.innerHTML = "";
+            return;
+          }
+          flowerPickerEl.innerHTML = "";
+          for (var v = 0; v < FLOWER_VARIANT_COUNT; v++) {
+            var colorBtn = document.createElement("button");
+            colorBtn.type = "button";
+            colorBtn.className =
+              "extra-order-flower-picker__btn" +
+              (v === currentImageIndex ? " is-active" : "");
+            colorBtn.textContent = FLOWER_VARIANT_LABELS[v];
+            colorBtn.setAttribute("data-variant-index", String(v));
+            flowerPickerEl.appendChild(colorBtn);
+          }
+        }
+
         function setFlowerPickerVisible(visible) {
           isFlowerOrder = visible;
           if (visible) {
             setSpiritsPickerVisible(false);
             setPerfumeSizesPickerVisible(false);
           }
+          renderFlowerPicker();
         }
 
         function setSpiritsPickerVisible(visible) {
@@ -5855,7 +6356,21 @@
               orderCard.classList.remove("extra-order-card--perfume");
               orderCard.classList.remove("extra-order-card--chocolate");
               orderCard.classList.remove("extra-order-card--laundry");
+              orderCard.classList.remove("extra-order-card--flowers");
             }
+          }
+        }
+
+        function syncFlowersModalLayout() {
+          var orderCard = document.querySelector(".extra-order-card");
+          if (!orderCard) return;
+          var isFlowers = isFlowersModalCategory();
+          orderCard.classList.toggle("extra-order-card--flowers", isFlowers);
+          if (isFlowers) {
+            orderCard.classList.remove("extra-order-card--perfume");
+            orderCard.classList.remove("extra-order-card--chocolate");
+            orderCard.classList.remove("extra-order-card--spirits");
+            orderCard.classList.remove("extra-order-card--laundry");
           }
         }
 
@@ -5873,33 +6388,6 @@
 
         function renderVariantStrip() {
           if (!variantStrip || !variantWrap) return;
-          if (
-            currentModalCategoryId === "flowers" &&
-            !isSpiritsOrder &&
-            !isPerfumeOrder &&
-            !isChocolateOrder &&
-            !isLaundryOrder
-          ) {
-            var serviceKeys = getDiscoverKeysForCategory("flowers");
-            variantWrap.hidden = !serviceKeys.length;
-            variantStrip.innerHTML = "";
-            for (var s = 0; s < serviceKeys.length; s++) {
-              var service = EXTRA_DISCOVER_ITEMS[serviceKeys[s]];
-              if (!service) continue;
-              var serviceBtn = document.createElement("button");
-              serviceBtn.type = "button";
-              serviceBtn.className = "extra-order-variant-strip__btn";
-              serviceBtn.setAttribute("data-extra-discover", service.id);
-              serviceBtn.setAttribute("aria-label", service.label);
-
-              var serviceImg = document.createElement("img");
-              serviceImg.src = service.image;
-              serviceImg.alt = "";
-              serviceBtn.appendChild(serviceImg);
-              variantStrip.appendChild(serviceBtn);
-            }
-            return;
-          }
 
           var count = getVariantCount();
           if (count <= 1) {
@@ -5910,6 +6398,11 @@
 
           variantWrap.hidden = false;
           variantStrip.innerHTML = "";
+          if (variantLabelEl) {
+            variantLabelEl.textContent = isFlowersModalCategory()
+              ? "Choose your flowers"
+              : "More options";
+          }
 
           for (var i = 0; i < count; i++) {
             var src = isSpiritsOrder
@@ -6019,6 +6512,8 @@
             unitPriceEl.textContent = formatEuro(currentPrice);
             renderModalLaundryServices();
           }
+          syncFlowersModalLayout();
+          renderFlowerPicker();
           renderVariantStrip();
         }
 
@@ -6281,7 +6776,13 @@
             descriptionEl.textContent = desc;
           }
           if (modalStatusEl) modalStatusEl.textContent = "";
-          setFlowerPickerVisible(false);
+          setFlowerPickerVisible(
+            getExtraCategoryFromButton(btn) === "flowers" &&
+              !isSpirits &&
+              !isPerfumeMenu &&
+              !isChocolateMenu &&
+              !isLaundryMenu,
+          );
           setSpiritsModalLayout(isSpirits);
           setPerfumeSizesPickerVisible(isPerfumeMenu);
           setChocolateModalLayout(isChocolateMenu);
@@ -6325,7 +6826,12 @@
           setPerfumeSizesPickerVisible(false);
           setChocolateModalLayout(false);
           setLaundryModalLayout(false);
+          syncFlowersModalLayout();
           setDiscoverVisible(false);
+          var orderCardOnClose = document.querySelector(".extra-order-card");
+          if (orderCardOnClose) {
+            orderCardOnClose.classList.remove("extra-order-card--flowers");
+          }
           isPerfumeOrder = false;
           isChocolateOrder = false;
           isLaundryOrder = false;
@@ -6412,9 +6918,10 @@
             var item = cart[i];
             var lineTotal = (item.price || 0) * (item.qty || 0);
             var title = item.productBase || "Extra";
-            if (item.variantLabel && !isMlOnlyVariantLabel(item.variantLabel)) {
-              title += " \u2014 " + item.variantLabel;
-            }
+            var variantText =
+              item.variantLabel && !isMlOnlyVariantLabel(item.variantLabel)
+                ? item.variantLabel
+                : "";
             html +=
               '<article class="extra-cart-item" data-cart-id="' +
               item.id +
@@ -6427,6 +6934,9 @@
               '<h3 class="extra-cart-item__name">' +
               title +
               "</h3>" +
+              (variantText
+                ? '<p class="extra-cart-item__variant">' + variantText + "</p>"
+                : "") +
               '<span class="extra-cart-item__line-total">' +
               formatEuro(lineTotal) +
               "</span>" +
@@ -7030,6 +7540,15 @@
         if (variantStrip) {
           variantStrip.addEventListener("click", function (event) {
             var btn = event.target.closest(".extra-order-variant-strip__btn");
+            if (!btn) return;
+            var idx = parseInt(btn.getAttribute("data-variant-index"), 10);
+            selectVariantIndex(idx);
+          });
+        }
+
+        if (flowerPickerEl) {
+          flowerPickerEl.addEventListener("click", function (event) {
+            var btn = event.target.closest(".extra-order-flower-picker__btn");
             if (!btn) return;
             var idx = parseInt(btn.getAttribute("data-variant-index"), 10);
             selectVariantIndex(idx);
