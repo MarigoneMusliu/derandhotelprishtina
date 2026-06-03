@@ -2623,7 +2623,7 @@
       }
 
       .extra-continue__options {
-        max-width: min(960px, 100%);
+        max-width: 400px;
         margin: 12px auto 24px;
         padding: 0 16px;
         text-align: center;
@@ -2648,6 +2648,10 @@
         padding: 12px 14px;
         border-radius: 14px;
         border: 1px solid rgba(177, 114, 86, 0.2);
+        background: rgba(255, 255, 255, 0.9);
+      }
+
+      .extra-continue__price-row--base {
         background: #fffdfa;
       }
 
@@ -2664,251 +2668,87 @@
         color: #b17256;
       }
 
-      .extra-continue__addons-line-wrap {
-        position: relative;
-        display: flex;
-        align-items: center;
-        gap: 4px;
-        margin: 4px 0 0;
-      }
-
-      .extra-continue__addons-line-nav {
-        flex-shrink: 0;
-        width: 32px;
-        height: 32px;
-        padding: 0;
-        border: 1px solid rgba(177, 114, 86, 0.3);
-        border-radius: 50%;
-        background: #fff;
-        color: #b17256;
-        font-size: 18px;
-        line-height: 1;
-        cursor: pointer;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        transition:
-          background 0.2s ease,
-          border-color 0.2s ease;
-      }
-
-      .extra-continue__addons-line-nav:hover {
-        background: #faf3ed;
-        border-color: #b17256;
-      }
-
-      .extra-continue__addons-line-nav[hidden] {
-        display: none;
-      }
-
-      .extra-continue__addons-line {
-        display: flex;
-        flex: 1;
-        gap: 10px;
-        overflow-x: auto;
-        overflow-y: hidden;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch;
-        padding: 0 4px 4px;
-        scrollbar-width: none;
-      }
-
-      .extra-continue__addons-line::-webkit-scrollbar {
-        display: none;
-      }
-
-      .extra-continue__addons-slide {
-        flex: 0 0 calc(33.333% - 7px);
-        min-width: 240px;
-        scroll-snap-align: start;
-      }
-
-      .extra-continue__addons-slide[hidden] {
-        display: none;
-      }
-
-      .extra-continue__addons-slide-label {
-        flex: 0 0 3.2em;
-        margin: 0;
-        padding: 0 2px;
-        font-size: 0.58rem;
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        line-height: 1.1;
-        text-transform: uppercase;
-        color: #b17256;
-        text-align: center;
-        align-self: center;
-      }
-
-      .extra-continue__bouquet-row,
-      .extra-continue__addon-row {
+      .extra-continue__bouquet-row {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 6px;
-        padding: 6px 8px;
-        min-height: 0;
-        border-radius: 12px;
-        border: 1px solid rgba(177, 114, 86, 0.28);
+        gap: 12px;
+        min-height: 76px;
+        padding: 10px 10px 10px 12px;
+        border-radius: 14px;
+        box-sizing: border-box;
+        border: 2px solid rgba(177, 114, 86, 0.3);
         background: #fff;
         transition:
           border-color 0.2s ease,
           background 0.2s ease,
           box-shadow 0.2s ease;
-        box-sizing: border-box;
       }
 
-      .extra-continue__bouquet-row.is-selected,
-      .extra-continue__addon-row.is-selected {
+      .extra-continue__bouquet-row.is-selected {
         border-color: #b17256;
         background: #faf3ed;
-        box-shadow: 0 4px 12px rgba(177, 114, 86, 0.1);
+        box-shadow: 0 8px 22px rgba(177, 114, 86, 0.1);
       }
 
-      .extra-continue__bouquet-row.is-selected .extra-continue__addon-tag,
-      .extra-continue__addon-row.is-selected .extra-continue__addon-tag {
-        display: none;
-      }
-
-      .extra-continue__bouquet-row-main,
-      .extra-continue__addon-row-main {
+      .extra-continue__bouquet-row-main {
         display: flex;
         align-items: center;
-        gap: 6px;
+        gap: 12px;
         flex: 1;
         min-width: 0;
       }
 
-      .extra-continue__addon-swipe-group {
-        display: flex;
-        align-items: center;
-        gap: 2px;
+      .extra-continue__bouquet-row-thumb {
+        width: 56px;
+        height: 56px;
         flex-shrink: 0;
-      }
-
-      .extra-continue__addon-swipe {
-        width: 22px;
-        height: 22px;
-        padding: 0;
-        border: 1px solid rgba(177, 114, 86, 0.35);
-        border-radius: 50%;
-        background: #fffdfa;
-        color: #b17256;
-        font-size: 14px;
-        line-height: 1;
-        cursor: pointer;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-        transition:
-          background 0.2s ease,
-          border-color 0.2s ease;
-      }
-
-      .extra-continue__addon-swipe:hover {
-        background: #faf3ed;
-        border-color: #b17256;
-      }
-
-      .extra-continue__addon-swipe:focus-visible {
-        outline: none;
-        box-shadow: 0 0 0 3px rgba(177, 114, 86, 0.35);
-      }
-
-      .extra-continue__addon-swipe:disabled {
-        opacity: 0.4;
-        cursor: not-allowed;
-      }
-
-      .extra-continue__bouquet-row-thumb,
-      .extra-continue__addon-row-thumb {
-        width: 40px;
-        height: 40px;
-        flex-shrink: 0;
-        border-radius: 8px;
+        border-radius: 12px;
         overflow: hidden;
         background: #f5f0ea;
       }
 
-      .extra-continue__bouquet-row-thumb img,
-      .extra-continue__addon-row-thumb img {
+      .extra-continue__bouquet-row-thumb img {
         width: 100%;
         height: 100%;
         object-fit: contain;
         display: block;
       }
 
-      .extra-continue__bouquet-row-copy,
-      .extra-continue__addon-row-copy {
+      .extra-continue__bouquet-row-copy {
         display: flex;
         flex-direction: column;
-        gap: 0;
+        gap: 2px;
         min-width: 0;
-        justify-content: center;
       }
 
-      .extra-continue__bouquet-row-copy strong,
-      .extra-continue__addon-row-copy strong {
-        font-size: 0.76rem;
+      .extra-continue__bouquet-row-copy strong {
+        font-size: 0.9rem;
         font-weight: 600;
         color: #3d3834;
-        line-height: 1.2;
+        line-height: 1.3;
         display: -webkit-box;
         -webkit-box-orient: vertical;
-        -webkit-line-clamp: 1;
+        -webkit-line-clamp: 2;
         overflow: hidden;
       }
 
-      .extra-continue__bouquet-row-copy span,
-      .extra-continue__addon-row-copy span {
-        font-size: 0.72rem;
+      .extra-continue__bouquet-row-copy span {
+        font-size: 0.82rem;
         color: #b17256;
         font-weight: 600;
-        line-height: 1.2;
       }
 
-      .extra-continue__addon-actions {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: flex-end;
-        gap: 4px;
+      .extra-continue__bouquet-add {
         flex-shrink: 0;
-        width: auto;
-        max-width: 76px;
-      }
-
-      .extra-continue__addon-tag {
-        font-size: 0.55rem;
-        font-weight: 700;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-        color: #2f6f48;
-        background: #e6f2ea;
-        padding: 2px 5px;
-        border-radius: 999px;
-        line-height: 1.1;
-        white-space: nowrap;
-      }
-
-      .extra-continue__addon-tag[hidden] {
-        display: none;
-      }
-
-      .extra-continue__bouquet-add,
-      .extra-continue__addon-add-btn {
-        width: 34px;
-        height: 34px;
+        width: 46px;
+        height: 46px;
         padding: 0;
         border: 2px solid #b27256;
         border-radius: 50%;
         background: #fff;
         color: #b27256;
-        font-size: 15px;
+        font-size: 20px;
         line-height: 1;
         cursor: pointer;
         display: inline-flex;
@@ -2920,46 +2760,83 @@
           transform 0.15s ease;
       }
 
-      .extra-continue__bouquet-add[hidden],
-      .extra-continue__addon-add-btn[hidden] {
-        display: none;
-      }
-
-      .extra-continue__bouquet-add:hover,
-      .extra-continue__addon-add-btn:hover {
+      .extra-continue__bouquet-add:hover {
         transform: scale(1.05);
         background: #faf3ed;
       }
 
-      .extra-continue__bouquet-add:focus-visible,
-      .extra-continue__addon-add-btn:focus-visible {
+      .extra-continue__bouquet-add:focus-visible {
         outline: none;
         box-shadow: 0 0 0 3px rgba(177, 114, 86, 0.35);
       }
 
-      .extra-continue__addon-remove {
-        width: auto;
-        min-width: 0;
+      .extra-continue__bouquet-add.is-selected {
+        background: #b27256;
+        color: #fff;
+        border-color: #b27256;
+      }
+
+      .extra-continue__bouquet-add:disabled {
+        opacity: 0.45;
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      .extra-continue__extra-picker {
+        position: relative;
+        display: block;
+        min-height: 76px;
+        padding: 0 40px;
+        box-sizing: border-box;
+      }
+
+      .extra-continue__extra-picker-nav {
+        position: absolute;
+        top: 50%;
+        left: auto;
+        right: auto;
+        transform: translateY(-50%);
+        z-index: 2;
+        width: 32px;
+        height: 32px;
         padding: 0;
-        border: none;
-        background: transparent;
-        color: #9a5f47;
-        font-size: 0.65rem;
-        font-weight: 600;
-        font-family: inherit;
-        line-height: 1.1;
-        text-decoration: underline;
-        text-underline-offset: 2px;
+        border: 1px solid rgba(177, 114, 86, 0.35);
+        border-radius: 50%;
+        background: #fff;
+        color: #b17256;
+        font-size: 18px;
+        line-height: 1;
         cursor: pointer;
-        white-space: nowrap;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        touch-action: manipulation;
+        transition:
+          background 0.2s ease,
+          border-color 0.2s ease;
       }
 
-      .extra-continue__addon-remove:hover {
-        color: #7a4a38;
+      .extra-continue__extra-picker #extra-extra-prev {
+        left: 0;
       }
 
-      .extra-continue__addon-remove[hidden] {
+      .extra-continue__extra-picker #extra-extra-next {
+        right: 0;
+      }
+
+      .extra-continue__extra-picker-nav:hover {
+        background: #faf3ed;
+        border-color: #b17256;
+      }
+
+      .extra-continue__extra-picker-nav[hidden] {
         display: none;
+      }
+
+      .extra-continue__extra-picker-view {
+        width: 100%;
+        min-width: 0;
+        touch-action: pan-y;
       }
 
       .extra-continue__options-total {
@@ -3346,7 +3223,7 @@
           letter-spacing: 0.18em;
           font-size: 11px;
           white-space: normal;
-          line-height: 1.35;
+          line-height: 1.2;
         }
 
         .extra-continue__decor-price {
@@ -3359,32 +3236,10 @@
           font-size: 18px;
         }
 
-        .extra-continue__addons-slide {
-          flex: 0 0 85%;
-          min-width: 0;
-        }
-
-        .extra-continue__addons-line-nav {
+        .extra-continue__extra-picker-nav {
           width: 28px;
           height: 28px;
           font-size: 16px;
-        }
-
-        .extra-continue__bouquet-row-thumb,
-        .extra-continue__addon-row-thumb {
-          width: 36px;
-          height: 36px;
-        }
-
-        .extra-continue__bouquet-add {
-          width: 32px;
-          height: 32px;
-          font-size: 14px;
-        }
-
-        .extra-continue__bouquet-row,
-        .extra-continue__addon-row {
-          padding: 5px 6px;
         }
 
         .extra-continue__options-total strong {
@@ -3917,7 +3772,7 @@
                 <span
                   class="extra-continue__decor-price__note"
                   id="extra-continue-price-note"
-                  >Decor 60&euro; · bouquet +60&euro; below</span
+                  >Decor 60&euro; &middot; bouquet +60&euro; below</span
                 >
               </div>
               <figcaption
@@ -3959,221 +3814,59 @@
           class="extra-continue__options"
           id="extra-continue-choices"
           hidden
-          aria-label="Optional decor add-ons"
+          aria-label="Optional decor extras"
         >
           <div class="extra-continue__price-stack">
-            <div class="extra-continue__price-row">
+            <div class="extra-continue__price-row extra-continue__price-row--base">
               <span class="extra-continue__price-row-label">Room decor (included)</span>
               <strong class="extra-continue__price-row-amount" id="extra-decor-base-price"
                 >60&euro;</strong
               >
             </div>
-
-            <div class="extra-continue__addons-line-wrap">
+            <div class="extra-continue__extra-picker" id="extra-extra-picker">
               <button
                 type="button"
-                class="extra-continue__addons-line-nav"
-                id="extra-addons-line-prev"
-                aria-label="Scroll extras left"
+                class="extra-continue__extra-picker-nav"
+                id="extra-extra-prev"
+                aria-label="Previous extra"
                 hidden
               >
                 &#8249;
               </button>
-              <div
-                class="extra-continue__addons-line"
-                id="extra-addons-line"
-                aria-label="Swipe between flowers, chocolate, and perfume"
-              >
-                <div class="extra-continue__addons-slide" id="extra-addons-slide-flower" hidden>
-                  <div class="extra-continue__bouquet-row" id="extra-bouquet-row">
-                    <span class="extra-continue__addons-slide-label">Flowers</span>
-                    <div class="extra-continue__bouquet-row-main">
-                <div class="extra-continue__addon-swipe-group" aria-label="Browse flowers">
-                  <button
-                    type="button"
-                    class="extra-continue__addon-swipe"
-                    id="extra-flower-addon-prev"
-                    aria-label="Previous flower"
-                  >
-                    &#8249;
-                  </button>
-                  <div class="extra-continue__bouquet-row-thumb">
-                    <img
-                      id="extra-flower-addon-thumb"
-                      src="img/flower.jpg"
-                      alt=""
-                      width="52"
-                      height="52"
-                      loading="lazy"
-                    />
+              <div class="extra-continue__extra-picker-view" id="extra-extra-picker-view">
+                <div class="extra-continue__bouquet-row" id="extra-bouquet-row">
+                  <div class="extra-continue__bouquet-row-main">
+                    <div class="extra-continue__bouquet-row-thumb">
+                      <img
+                        id="extra-extra-thumb"
+                        src="img/flower1.jpg"
+                        alt=""
+                        width="56"
+                        height="56"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="extra-continue__bouquet-row-copy">
+                      <strong id="extra-extra-name">Flower bouquet</strong>
+                      <span id="extra-extra-price">+60&euro;</span>
+                    </div>
                   </div>
                   <button
                     type="button"
-                    class="extra-continue__addon-swipe"
-                    id="extra-flower-addon-next"
-                    aria-label="Next flower"
+                    class="extra-continue__bouquet-add"
+                    id="extra-bouquet-toggle"
+                    aria-pressed="false"
+                    aria-label="Add flower bouquet for 60 euros"
                   >
-                    &#8250;
+                    <i class="fa fa-plus" aria-hidden="true"></i>
                   </button>
-                </div>
-                <div class="extra-continue__bouquet-row-copy">
-                  <strong id="extra-flower-addon-name">Single Red Roses</strong>
-                  <span id="extra-flower-addon-price">+3&euro;</span>
-                </div>
-              </div>
-              <div class="extra-continue__addon-actions">
-                <span class="extra-continue__addon-tag" id="extra-flower-addon-status" hidden
-                  >Added</span
-                >
-                <button
-                  type="button"
-                  class="extra-continue__bouquet-add"
-                  id="extra-bouquet-toggle"
-                  aria-label="Add flower to order"
-                >
-                  <i class="fa fa-plus" aria-hidden="true"></i>
-                </button>
-                <button
-                  type="button"
-                  class="extra-continue__addon-remove"
-                  id="extra-flower-addon-remove"
-                  hidden
-                >
-                  Remove
-                </button>
-              </div>
-                  </div>
-                </div>
-
-                <div class="extra-continue__addons-slide" id="extra-addons-slide-chocolate" hidden>
-                  <div class="extra-continue__addon-row" id="extra-chocolate-addon-row">
-                    <span class="extra-continue__addons-slide-label">Choco</span>
-                    <div class="extra-continue__addon-row-main">
-                <div class="extra-continue__addon-swipe-group" aria-label="Browse chocolates">
-                  <button
-                    type="button"
-                    class="extra-continue__addon-swipe"
-                    id="extra-chocolate-addon-prev"
-                    aria-label="Previous chocolate"
-                  >
-                    &#8249;
-                  </button>
-                  <div class="extra-continue__addon-row-thumb">
-                    <img
-                      id="extra-chocolate-addon-thumb"
-                      src="img/tog6.png"
-                      alt=""
-                      width="52"
-                      height="52"
-                      loading="lazy"
-                    />
-                  </div>
-                  <button
-                    type="button"
-                    class="extra-continue__addon-swipe"
-                    id="extra-chocolate-addon-next"
-                    aria-label="Next chocolate"
-                  >
-                    &#8250;
-                  </button>
-                </div>
-                <div class="extra-continue__addon-row-copy">
-                  <strong id="extra-chocolate-addon-name"
-                    >Tog Tablet &quot;ASAJ&quot; Cranberry Dark Chocolate</strong
-                  >
-                  <span id="extra-chocolate-addon-price">+6.25&euro;</span>
-                </div>
-              </div>
-              <div class="extra-continue__addon-actions">
-                <span class="extra-continue__addon-tag" id="extra-chocolate-addon-status" hidden
-                  >Added</span
-                >
-                <button
-                  type="button"
-                  class="extra-continue__bouquet-add"
-                  id="extra-chocolate-addon-toggle"
-                  aria-label="Add chocolate to order"
-                >
-                  <i class="fa fa-plus" aria-hidden="true"></i>
-                </button>
-                <button
-                  type="button"
-                  class="extra-continue__addon-remove"
-                  id="extra-chocolate-addon-remove"
-                  hidden
-                >
-                  Remove
-                </button>
-              </div>
-                  </div>
-                </div>
-
-                <div class="extra-continue__addons-slide" id="extra-addons-slide-perfume" hidden>
-                  <div class="extra-continue__addon-row" id="extra-perfume-addon-row">
-                    <span class="extra-continue__addons-slide-label">Perfume</span>
-                    <div class="extra-continue__addon-row-main">
-                <div class="extra-continue__addon-swipe-group" aria-label="Browse perfumes">
-                  <button
-                    type="button"
-                    class="extra-continue__addon-swipe"
-                    id="extra-perfume-addon-prev"
-                    aria-label="Previous perfume"
-                  >
-                    &#8249;
-                  </button>
-                  <div class="extra-continue__addon-row-thumb">
-                    <img
-                      id="extra-perfume-addon-thumb"
-                      src="img/armani.png"
-                      alt=""
-                      width="52"
-                      height="52"
-                      loading="lazy"
-                    />
-                  </div>
-                  <button
-                    type="button"
-                    class="extra-continue__addon-swipe"
-                    id="extra-perfume-addon-next"
-                    aria-label="Next perfume"
-                  >
-                    &#8250;
-                  </button>
-                </div>
-                <div class="extra-continue__addon-row-copy">
-                  <strong id="extra-perfume-addon-name">Giorgio Armani</strong>
-                  <span id="extra-perfume-addon-price">+33.12&euro;</span>
-                </div>
-              </div>
-              <div class="extra-continue__addon-actions">
-                <span class="extra-continue__addon-tag" id="extra-perfume-addon-status" hidden
-                  >Added</span
-                >
-                <button
-                  type="button"
-                  class="extra-continue__bouquet-add"
-                  id="extra-perfume-addon-toggle"
-                  aria-label="Add perfume to order"
-                >
-                  <i class="fa fa-plus" aria-hidden="true"></i>
-                </button>
-                <button
-                  type="button"
-                  class="extra-continue__addon-remove"
-                  id="extra-perfume-addon-remove"
-                  hidden
-                >
-                  Remove
-                </button>
-              </div>
-                  </div>
                 </div>
               </div>
               <button
                 type="button"
-                class="extra-continue__addons-line-nav"
-                id="extra-addons-line-next"
-                aria-label="Scroll extras right"
+                class="extra-continue__extra-picker-nav"
+                id="extra-extra-next"
+                aria-label="Next extra"
                 hidden
               >
                 &#8250;
@@ -7307,121 +7000,77 @@
         var decorAddHint = document.getElementById("extra-decor-add-hint");
         var choicesPanel = document.getElementById("extra-continue-choices");
         var bouquetToggle = document.getElementById("extra-bouquet-toggle");
-        var flowerRemoveBtn = document.getElementById("extra-flower-addon-remove");
-        var flowerStatusEl = document.getElementById("extra-flower-addon-status");
-        var flowerSlideEl = document.getElementById("extra-addons-slide-flower");
-        var chocolateSlideEl = document.getElementById("extra-addons-slide-chocolate");
-        var perfumeSlideEl = document.getElementById("extra-addons-slide-perfume");
-        var addonsLine = document.getElementById("extra-addons-line");
-        var addonsLinePrev = document.getElementById("extra-addons-line-prev");
-        var addonsLineNext = document.getElementById("extra-addons-line-next");
         var bouquetRowEl = document.getElementById("extra-bouquet-row");
-        var flowerPrevBtn = document.getElementById("extra-flower-addon-prev");
-        var flowerNextBtn = document.getElementById("extra-flower-addon-next");
-        var flowerThumbEl = document.getElementById("extra-flower-addon-thumb");
-        var flowerNameEl = document.getElementById("extra-flower-addon-name");
-        var flowerPriceEl = document.getElementById("extra-flower-addon-price");
-        var chocolateRowEl = document.getElementById("extra-chocolate-addon-row");
-        var chocolateToggle = document.getElementById("extra-chocolate-addon-toggle");
-        var chocolateRemoveBtn = document.getElementById("extra-chocolate-addon-remove");
-        var chocolateStatusEl = document.getElementById("extra-chocolate-addon-status");
-        var chocolatePrevBtn = document.getElementById("extra-chocolate-addon-prev");
-        var chocolateNextBtn = document.getElementById("extra-chocolate-addon-next");
-        var chocolateThumbEl = document.getElementById("extra-chocolate-addon-thumb");
-        var chocolateNameEl = document.getElementById("extra-chocolate-addon-name");
-        var chocolatePriceEl = document.getElementById("extra-chocolate-addon-price");
-        var perfumeRowEl = document.getElementById("extra-perfume-addon-row");
-        var perfumeToggle = document.getElementById("extra-perfume-addon-toggle");
-        var perfumeRemoveBtn = document.getElementById("extra-perfume-addon-remove");
-        var perfumeStatusEl = document.getElementById("extra-perfume-addon-status");
-        var perfumePrevBtn = document.getElementById("extra-perfume-addon-prev");
-        var perfumeNextBtn = document.getElementById("extra-perfume-addon-next");
-        var perfumeThumbEl = document.getElementById("extra-perfume-addon-thumb");
-        var perfumeNameEl = document.getElementById("extra-perfume-addon-name");
-        var perfumePriceEl = document.getElementById("extra-perfume-addon-price");
         var decorBasePriceEl = document.getElementById("extra-decor-base-price");
+        var extraThumbEl = document.getElementById("extra-extra-thumb");
+        var extraNameEl = document.getElementById("extra-extra-name");
+        var extraPriceEl = document.getElementById("extra-extra-price");
+        var extraPrevBtn = document.getElementById("extra-extra-prev");
+        var extraNextBtn = document.getElementById("extra-extra-next");
+        var extraPickerView = document.getElementById("extra-extra-picker-view");
         var choicesTotalEl = document.getElementById("extra-choices-total");
         var priceNoteEl = document.getElementById("extra-continue-price-note");
 
-        var flowerSelected = false;
-        var flowerIndex = 0;
-        var chocolateSelected = false;
-        var chocolateIndex = 0;
-        var perfumeSelected = false;
-        var perfumeIndex = 0;
-
-        var DECOR_FLOWERS = [
-          { id: "flowers-0", name: "Single Red Roses", image: "img/flower.jpg", price: 3 },
-          { id: "flowers-1", name: "Single White Rose", image: "img/whiteflower.png", price: 3 },
-          { id: "flowers-2", name: "Single Pink Rose", image: "img/redrose.jpg", price: 3 },
-          { id: "flowers-3", name: "Single Pink Dianthus", image: "img/rose.jpg", price: 2 },
-          { id: "flowers-4", name: "Single White Dianthus", image: "img/whiteflowers.png", price: 2 },
-          { id: "flowers-5", name: "Single White Lily", image: "img/flower5.png", price: 8 },
-          { id: "flowers-6", name: "Single Pink Lily", image: "img/lilypink.png", price: 8 },
-          { id: "flowers-7", name: "Lily Bouquet", image: "img/flower1.jpg", price: 50 },
-          { id: "flowers-8", name: "A Bouquet of Red Roses", image: "img/flower2.jpg", price: 60 },
-          { id: "flowers-9", name: "A Bouquet of Yellow Tulips", image: "img/flower3.jpg", price: 55 },
-          { id: "flowers-10", name: "Mixed Flower Bouquet", image: "img/flowers1.png", price: 50 },
-        ];
-
-        var DECOR_PERFUMES = [
-          { id: "perfume-armani", name: "Giorgio Armani", image: "img/armani.png", price: 33.12, ml: 75 },
-          { id: "perfume-diesel", name: "DIESEL LOVERDOSE", image: "img/diesel.png", price: 44.24, ml: 30 },
-          { id: "perfume-dkny", name: "DKNY BE DELICIOUS", image: "img/dkny.png", price: 39.2, ml: 30 },
-          { id: "perfume-juliet", name: "JULIET HAS A GUN", image: "img/juliet.png", price: 112, ml: 100 },
-          { id: "perfume-prada", name: "Prada Candy", image: "img/prada.png", price: 73.68, ml: 30 },
-          { id: "perfume-roberto", name: "Roberto Cavalli Just Cavalli For Her", image: "img/roberto.png", price: 22.72, ml: 30 },
-          { id: "perfume-valentino", name: "Valentino Born In Roma", image: "img/valentino.png", price: 81.04, ml: 30 },
-          { id: "perfume-thierry", name: "Thierry Mugler MU ANG NOVA", image: "img/thierry.png", price: 94.8, ml: 50 },
-          { id: "perfume-ralph", name: "Ralph Lauren Polo Blue", image: "img/ralph.png", price: 62.08, ml: 75 },
-          { id: "perfume-montale", name: "MONTALE AOUD LIME", image: "img/montale.png", price: 120, ml: 100 },
-          { id: "perfume-viktor", name: "FLBB EDP SPRAY", image: "img/viktor.png", price: 70.32, ml: 30 },
-          { id: "perfume-yves", name: "YVES SAINT LAURENT", image: "img/yves.png", price: 97.92, ml: 60 },
-        ];
+        var BOUQUET_SURCHARGE = 60;
+        var EXTRA_TYPES = ["flower", "chocolate", "perfume"];
+        var extraTypeIndex = 0;
+        var selectedExtras = {
+          flower: false,
+          chocolate: false,
+          perfume: false,
+        };
 
         var DECOR_CHOCOLATES = [
           {
-            id: "chocolate-tog",
             name: 'Tog Chocolate Box "With love from Kosova"',
             image: "img/tog.png",
             price: 14.25,
           },
           {
-            id: "chocolate-tog1",
             name: 'Tog Chocolate Box "With love from Prishtina"',
             image: "img/tog1.png",
             price: 14.25,
           },
           {
-            id: "chocolate-tog2",
             name: 'Tog Chocolate Box "With love from Prizreni"',
             image: "img/tog2.png",
             price: 14.25,
           },
           {
-            id: "chocolate-tog3",
             name: 'Tog Chocolate Box "Me dashni për ty"',
             image: "img/tog3.png",
             price: 16.63,
           },
           {
-            id: "chocolate-tog4",
             name: "Tog Cranberry Dark Chocolate bar",
             image: "img/tog4.png",
             price: 6.25,
           },
           {
-            id: "chocolate-tog5",
             name: 'Tog Spicy Chocolate bar "Flakë e ëmbël"',
             image: "img/tog5.png",
             price: 6.25,
           },
           {
-            id: "chocolate-tog6",
             name: 'Tog Tablet "ASAJ" Cranberry Dark Chocolate',
             image: "img/tog6.png",
             price: 6.25,
           },
+        ];
+
+        var DECOR_PERFUMES = [
+          { name: "Giorgio Armani", image: "img/armani.png", price: 33.12 },
+          { name: "DIESEL LOVERDOSE", image: "img/diesel.png", price: 44.24 },
+          { name: "DKNY BE DELICIOUS", image: "img/dkny.png", price: 39.2 },
+          { name: "JULIET HAS A GUN", image: "img/juliet.png", price: 112 },
+          { name: "Prada Candy", image: "img/prada.png", price: 73.68 },
+          { name: "Roberto Cavalli Just Cavalli For Her", image: "img/roberto.png", price: 22.72 },
+          { name: "Valentino Born In Roma", image: "img/valentino.png", price: 81.04 },
+          { name: "Thierry Mugler MU ANG NOVA", image: "img/thierry.png", price: 94.8 },
+          { name: "Ralph Lauren Polo Blue", image: "img/ralph.png", price: 62.08 },
+          { name: "MONTALE AOUD LIME", image: "img/montale.png", price: 120 },
+          { name: "FLBB EDP SPRAY", image: "img/viktor.png", price: 70.32 },
+          { name: "YVES SAINT LAURENT", image: "img/yves.png", price: 97.92 },
         ];
 
         if (
@@ -7449,12 +7098,11 @@
             priceLabel: "Valentine decor",
             showPrice: true,
             canAddToCart: true,
-            showFlowerAddon: true,
-            flowerStartIndex: 8,
-            showChocolateAddon: true,
-            chocolateStartIndex: 6,
-            showPerfumeAddon: true,
-            perfumeStartIndex: 0,
+            showExtras: true,
+            bouquetFlower: "flower2",
+            bouquetImage: "img/flower2.jpg",
+            chocolateIndex: 6,
+            perfumeIndex: 0,
             description:
               "Valentine's room decor — in-room styling with romantic touches.",
           },
@@ -7469,12 +7117,11 @@
             priceLabel: "Birthday decor",
             showPrice: true,
             canAddToCart: true,
-            showFlowerAddon: true,
-            flowerStartIndex: 7,
-            showChocolateAddon: true,
-            chocolateStartIndex: 0,
-            showPerfumeAddon: true,
-            perfumeStartIndex: 0,
+            showExtras: true,
+            bouquetFlower: "flower1",
+            bouquetImage: "img/flower1.jpg",
+            chocolateIndex: 0,
+            perfumeIndex: 0,
             storyTitle: "A birthday they will remember",
             storyCopy:
               "We dress your room with balloons, soft lighting, and refined touches so the celebration feels personal and warm — quiet luxury, not loud party decor.",
@@ -7491,9 +7138,9 @@
             priceLabel: "Custom decor",
             showPrice: false,
             canAddToCart: false,
-            showFlowerAddon: false,
-            showChocolateAddon: false,
-            showPerfumeAddon: false,
+            showExtras: false,
+            bouquetFlower: null,
+            bouquetImage: null,
             description: "Custom room decor — price on request.",
           },
         ];
@@ -7505,18 +7152,6 @@
           imgNode.src = item.src;
           imgNode.alt = item.alt;
           labelNode.textContent = item.label;
-        }
-
-        function getCurrentFlower() {
-          return DECOR_FLOWERS[flowerIndex] || DECOR_FLOWERS[0];
-        }
-
-        function getCurrentChocolate() {
-          return DECOR_CHOCOLATES[chocolateIndex] || DECOR_CHOCOLATES[0];
-        }
-
-        function getCurrentPerfume() {
-          return DECOR_PERFUMES[perfumeIndex] || DECOR_PERFUMES[0];
         }
 
         function formatDecorEuro(amount) {
@@ -7532,223 +7167,166 @@
           return "+" + formatDecorEuro(amount);
         }
 
-        function formatPickPrice(amount, ml) {
-          var text = formatDecorEuro(amount);
-          if (ml) {
-            text += " · " + ml + " ml";
+        function getVisibleExtraTypes(item) {
+          if (!item || !item.showExtras) return [];
+          return EXTRA_TYPES.slice();
+        }
+
+        function getCurrentExtraType() {
+          var visible = getVisibleExtraTypes(items[centerIndex]);
+          if (!visible.length) return "flower";
+          if (extraTypeIndex < 0 || extraTypeIndex >= visible.length) {
+            extraTypeIndex = 0;
           }
-          return text;
+          return visible[extraTypeIndex];
+        }
+
+        function getChocolateForItem(item) {
+          var idx =
+            typeof item.chocolateIndex === "number" ? item.chocolateIndex : 0;
+          return DECOR_CHOCOLATES[idx] || DECOR_CHOCOLATES[0];
+        }
+
+        function getPerfumeForItem(item) {
+          var idx = typeof item.perfumeIndex === "number" ? item.perfumeIndex : 0;
+          return DECOR_PERFUMES[idx] || DECOR_PERFUMES[0];
+        }
+
+        function getExtraDisplay(item, type) {
+          if (type === "flower") {
+            return {
+              name: "Flower bouquet",
+              image: item.bouquetImage,
+              price: BOUQUET_SURCHARGE,
+              priceText: formatDecorEuroPlus(BOUQUET_SURCHARGE),
+            };
+          }
+          if (type === "chocolate") {
+            var chocolate = getChocolateForItem(item);
+            return {
+              name: chocolate.name,
+              image: chocolate.image,
+              price: chocolate.price,
+              priceText: formatDecorEuroPlus(chocolate.price),
+            };
+          }
+          var perfume = getPerfumeForItem(item);
+          return {
+            name: perfume.name,
+            image: perfume.image,
+            price: perfume.price,
+            priceText: formatDecorEuroPlus(perfume.price),
+          };
+        }
+
+        function isExtraSelected(type) {
+          return !!selectedExtras[type];
         }
 
         function getDecorTotal(item) {
           if (!item || !item.priceAmount) return 0;
           var total = item.priceAmount;
-          if (flowerSelected && item.showFlowerAddon) {
-            total += getCurrentFlower().price || 0;
-          }
-          if (chocolateSelected && item.showChocolateAddon) {
-            total += getCurrentChocolate().price || 0;
-          }
-          if (perfumeSelected && item.showPerfumeAddon) {
-            total += getCurrentPerfume().price || 0;
+          if (item.showExtras) {
+            if (selectedExtras.flower && item.bouquetImage) {
+              total += BOUQUET_SURCHARGE;
+            }
+            if (selectedExtras.chocolate) {
+              total += getChocolateForItem(item).price || 0;
+            }
+            if (selectedExtras.perfume) {
+              total += getPerfumeForItem(item).price || 0;
+            }
           }
           return total;
         }
 
-        function setAddonActionUi(
-          addBtn,
-          removeBtn,
-          statusEl,
-          rowEl,
-          selected,
-          itemName,
-          enabled,
-        ) {
-          if (rowEl) {
-            rowEl.classList.toggle("is-selected", !!(selected && enabled));
-          }
-          if (statusEl) {
-            if (selected && enabled) {
-              statusEl.removeAttribute("hidden");
+        function syncExtraPickerNav() {
+          var visible = getVisibleExtraTypes(items[centerIndex]);
+          var showNav = visible.length > 1;
+          if (extraPrevBtn) {
+            if (showNav) {
+              extraPrevBtn.removeAttribute("hidden");
             } else {
-              statusEl.setAttribute("hidden", "");
+              extraPrevBtn.setAttribute("hidden", "");
             }
           }
-          if (addBtn) {
-            addBtn.disabled = !enabled;
-            addBtn.setAttribute("aria-label", "Add " + itemName + " to order");
-            if (selected) {
-              addBtn.setAttribute("hidden", "");
+          if (extraNextBtn) {
+            if (showNav) {
+              extraNextBtn.removeAttribute("hidden");
             } else {
-              addBtn.removeAttribute("hidden");
-            }
-          }
-          if (removeBtn) {
-            removeBtn.disabled = !enabled;
-            removeBtn.setAttribute(
-              "aria-label",
-              "Remove " + itemName + " from order",
-            );
-            if (selected && enabled) {
-              removeBtn.removeAttribute("hidden");
-            } else {
-              removeBtn.setAttribute("hidden", "");
+              extraNextBtn.setAttribute("hidden", "");
             }
           }
         }
 
-        function syncFlowerAddonUi() {
+        function syncExtrasUi() {
           var current = items[centerIndex];
-          var hasFlower = current.canAddToCart && current.showFlowerAddon;
+          var visible = getVisibleExtraTypes(current);
+          var hasExtras = visible.length > 0;
 
-          if (!hasFlower) {
-            flowerSelected = false;
+          if (!hasExtras) {
+            selectedExtras.flower = false;
+            selectedExtras.chocolate = false;
+            selectedExtras.perfume = false;
           }
 
-          if (flowerSlideEl) {
-            if (hasFlower) {
-              flowerSlideEl.removeAttribute("hidden");
-            } else {
-              flowerSlideEl.setAttribute("hidden", "");
-            }
+          if (extraTypeIndex >= visible.length) {
+            extraTypeIndex = 0;
           }
-
-          var flower = getCurrentFlower();
-          if (hasFlower) {
-            if (flowerThumbEl) {
-              flowerThumbEl.src = flower.image;
-              flowerThumbEl.alt = flower.name;
-            }
-            if (flowerNameEl) {
-              flowerNameEl.textContent = flower.name;
-            }
-            if (flowerPriceEl) {
-              flowerPriceEl.textContent = formatDecorEuroPlus(flower.price);
-            }
+          if (extraTypeIndex < 0) {
+            extraTypeIndex = 0;
           }
-
-          setAddonActionUi(
-            bouquetToggle,
-            flowerRemoveBtn,
-            flowerStatusEl,
-            bouquetRowEl,
-            flowerSelected,
-            flower.name,
-            hasFlower,
-          );
-          if (flowerPrevBtn) flowerPrevBtn.disabled = !hasFlower;
-          if (flowerNextBtn) flowerNextBtn.disabled = !hasFlower;
-        }
-
-        function syncPerfumeAddonUi() {
-          var current = items[centerIndex];
-          var hasPerfume = current.canAddToCart && current.showPerfumeAddon;
-
-          if (!hasPerfume) {
-            perfumeSelected = false;
-          }
-
-          if (perfumeSlideEl) {
-            if (hasPerfume) {
-              perfumeSlideEl.removeAttribute("hidden");
-            } else {
-              perfumeSlideEl.setAttribute("hidden", "");
-            }
-          }
-
-          var perfume = getCurrentPerfume();
-          if (hasPerfume) {
-            if (perfumeThumbEl) {
-              perfumeThumbEl.src = perfume.image;
-              perfumeThumbEl.alt = perfume.name;
-            }
-            if (perfumeNameEl) {
-              perfumeNameEl.textContent = perfume.name;
-            }
-            if (perfumePriceEl) {
-              var perfumePriceText = formatDecorEuroPlus(perfume.price);
-              if (perfume.ml) {
-                perfumePriceText += " · " + perfume.ml + " ml";
-              }
-              perfumePriceEl.textContent = perfumePriceText;
-            }
-          }
-
-          setAddonActionUi(
-            perfumeToggle,
-            perfumeRemoveBtn,
-            perfumeStatusEl,
-            perfumeRowEl,
-            perfumeSelected,
-            perfume.name,
-            hasPerfume,
-          );
-          if (perfumePrevBtn) perfumePrevBtn.disabled = !hasPerfume;
-          if (perfumeNextBtn) perfumeNextBtn.disabled = !hasPerfume;
-        }
-
-        function syncChocolateAddonUi() {
-          var current = items[centerIndex];
-          var hasChocolate =
-            current.canAddToCart && current.showChocolateAddon;
-
-          if (!hasChocolate) {
-            chocolateSelected = false;
-          }
-
-          if (chocolateSlideEl) {
-            if (hasChocolate) {
-              chocolateSlideEl.removeAttribute("hidden");
-            } else {
-              chocolateSlideEl.setAttribute("hidden", "");
-            }
-          }
-
-          var chocolate = getCurrentChocolate();
-          if (hasChocolate) {
-            if (chocolateThumbEl) {
-              chocolateThumbEl.src = chocolate.image;
-              chocolateThumbEl.alt = chocolate.name;
-            }
-            if (chocolateNameEl) {
-              chocolateNameEl.textContent = chocolate.name;
-            }
-            if (chocolatePriceEl) {
-              chocolatePriceEl.textContent = formatDecorEuroPlus(chocolate.price);
-            }
-          }
-
-          setAddonActionUi(
-            chocolateToggle,
-            chocolateRemoveBtn,
-            chocolateStatusEl,
-            chocolateRowEl,
-            chocolateSelected,
-            chocolate.name,
-            hasChocolate,
-          );
-          if (chocolatePrevBtn) chocolatePrevBtn.disabled = !hasChocolate;
-          if (chocolateNextBtn) chocolateNextBtn.disabled = !hasChocolate;
-        }
-
-        function syncAddonsUi() {
-          var current = items[centerIndex];
-          var hasFlower = current.canAddToCart && current.showFlowerAddon;
-          var hasChocolate = current.canAddToCart && current.showChocolateAddon;
-          var hasPerfume = current.canAddToCart && current.showPerfumeAddon;
-          var hasAnyAddon = hasFlower || hasChocolate || hasPerfume;
 
           if (choicesPanel) {
-            if (hasAnyAddon) {
+            if (hasExtras) {
               choicesPanel.removeAttribute("hidden");
             } else {
               choicesPanel.setAttribute("hidden", "");
             }
           }
 
-          syncFlowerAddonUi();
-          syncChocolateAddonUi();
-          syncPerfumeAddonUi();
+          syncExtraPickerNav();
+
+          var type = getCurrentExtraType();
+          var display = hasExtras ? getExtraDisplay(current, type) : null;
+          var isSelected = hasExtras && isExtraSelected(type);
+
+          if (bouquetRowEl) {
+            bouquetRowEl.classList.toggle("is-selected", isSelected);
+          }
+
+          if (bouquetToggle) {
+            bouquetToggle.disabled = !hasExtras;
+            bouquetToggle.classList.toggle("is-selected", isSelected);
+            bouquetToggle.setAttribute(
+              "aria-pressed",
+              isSelected ? "true" : "false",
+            );
+            if (display) {
+              bouquetToggle.setAttribute(
+                "aria-label",
+                isSelected
+                  ? "Remove " + display.name + " from order"
+                  : "Add " + display.name + " to order",
+              );
+            }
+            bouquetToggle.innerHTML = isSelected
+              ? '<i class="fa fa-check" aria-hidden="true"></i>'
+              : '<i class="fa fa-plus" aria-hidden="true"></i>';
+          }
+
+          if (display) {
+            if (extraThumbEl) {
+              extraThumbEl.src = display.image;
+              extraThumbEl.alt = display.name;
+            }
+            if (extraNameEl) {
+              extraNameEl.textContent = display.name;
+            }
+            if (extraPriceEl) {
+              extraPriceEl.textContent = display.priceText;
+            }
+          }
 
           if (decorBasePriceEl && current.priceAmount) {
             decorBasePriceEl.textContent = formatDecorEuro(current.priceAmount);
@@ -7759,152 +7337,51 @@
 
           if (choicesTotalEl) {
             choicesTotalEl.textContent = formatDecorEuro(
-              hasAnyAddon ? total : base,
+              hasExtras ? total : base,
             );
           }
           if (priceAmount && current.showPrice) {
             priceAmount.textContent = formatDecorEuro(
-              hasAnyAddon ? total : base,
+              hasExtras ? total : base,
             );
           }
-          if (priceNoteEl && current.showPrice && hasAnyAddon) {
+          if (priceNoteEl && current.showPrice && hasExtras) {
             priceNoteEl.textContent =
-              "Swipe extras sideways \u00b7 + to add, Remove to undo";
+              "Use \u2039 \u203a for flowers, chocolate, or perfume";
           }
           if (decorAddBtn && current.canAddToCart) {
             decorAddBtn.textContent = "Add to cart";
           }
-
-          syncAddonsLineNav();
         }
 
-        function getVisibleAddonSlides() {
-          var slides = [flowerSlideEl, chocolateSlideEl, perfumeSlideEl];
-          var visible = [];
-          for (var i = 0; i < slides.length; i++) {
-            if (slides[i] && !slides[i].hasAttribute("hidden")) {
-              visible.push(slides[i]);
-            }
-          }
-          return visible;
-        }
-
-        function syncAddonsLineNav() {
-          var visible = getVisibleAddonSlides();
-          var showNav = visible.length > 1;
-          if (addonsLinePrev) {
-            if (showNav) {
-              addonsLinePrev.removeAttribute("hidden");
-            } else {
-              addonsLinePrev.setAttribute("hidden", "");
-            }
-          }
-          if (addonsLineNext) {
-            if (showNav) {
-              addonsLineNext.removeAttribute("hidden");
-            } else {
-              addonsLineNext.setAttribute("hidden", "");
-            }
-          }
-        }
-
-        function scrollAddonsLine(direction) {
-          if (!addonsLine) return;
-          var visible = getVisibleAddonSlides();
-          if (!visible.length) return;
-          var gap = 10;
-          var slideWidth = visible[0].offsetWidth + gap;
-          addonsLine.scrollBy({
-            left: direction * slideWidth,
-            behavior: "smooth",
-          });
-        }
-
-        function resetAddonsLineScroll() {
-          if (addonsLine) {
-            addonsLine.scrollLeft = 0;
-          }
-        }
-
-        function setFlowerSelected(on) {
+        function setExtraSelected(type, on) {
           var current = items[centerIndex];
-          if (!current.showFlowerAddon) {
-            flowerSelected = false;
+          if (!current.showExtras) {
+            selectedExtras[type] = false;
           } else {
-            flowerSelected = !!on;
+            selectedExtras[type] = !!on;
           }
-          syncAddonsUi();
+          syncExtrasUi();
         }
 
-        function setChocolateSelected(on) {
-          var current = items[centerIndex];
-          if (!current.showChocolateAddon) {
-            chocolateSelected = false;
-          } else {
-            chocolateSelected = !!on;
-          }
-          syncAddonsUi();
+        function toggleCurrentExtra() {
+          var type = getCurrentExtraType();
+          setExtraSelected(type, !isExtraSelected(type));
         }
 
-        function setChocolateIndex(index) {
-          var len = DECOR_CHOCOLATES.length;
-          if (!len) return;
-          chocolateIndex = ((index % len) + len) % len;
-          syncChocolateAddonUi();
-          if (chocolateSelected) {
-            syncAddonsUi();
-          }
+        function stepExtraType(direction) {
+          var visible = getVisibleExtraTypes(items[centerIndex]);
+          if (visible.length <= 1) return;
+          extraTypeIndex =
+            (extraTypeIndex + direction + visible.length) % visible.length;
+          syncExtrasUi();
         }
 
-        function setPerfumeSelected(on) {
-          var current = items[centerIndex];
-          if (!current.showPerfumeAddon) {
-            perfumeSelected = false;
-          } else {
-            perfumeSelected = !!on;
-          }
-          syncAddonsUi();
-        }
-
-        function setFlowerIndex(index) {
-          var len = DECOR_FLOWERS.length;
-          if (!len) return;
-          flowerIndex = ((index % len) + len) % len;
-          syncFlowerAddonUi();
-          if (flowerSelected) {
-            syncAddonsUi();
-          }
-        }
-
-        function setPerfumeIndex(index) {
-          var len = DECOR_PERFUMES.length;
-          if (!len) return;
-          perfumeIndex = ((index % len) + len) % len;
-          syncPerfumeAddonUi();
-          if (perfumeSelected) {
-            syncAddonsUi();
-          }
-        }
-
-        function resetAddonsForDecor(item) {
-          flowerSelected = false;
-          chocolateSelected = false;
-          perfumeSelected = false;
-          if (item && typeof item.flowerStartIndex === "number") {
-            flowerIndex = item.flowerStartIndex;
-          } else {
-            flowerIndex = 0;
-          }
-          if (item && typeof item.chocolateStartIndex === "number") {
-            chocolateIndex = item.chocolateStartIndex;
-          } else {
-            chocolateIndex = 0;
-          }
-          if (item && typeof item.perfumeStartIndex === "number") {
-            perfumeIndex = item.perfumeStartIndex;
-          } else {
-            perfumeIndex = 0;
-          }
+        function resetExtrasForDecor() {
+          selectedExtras.flower = false;
+          selectedExtras.chocolate = false;
+          selectedExtras.perfume = false;
+          extraTypeIndex = 0;
         }
 
         function render() {
@@ -7926,11 +7403,10 @@
             }
           }
 
-          syncAddonsUi();
+          syncExtrasUi();
 
           if (decorAddBtn) {
             var canAdd = items[centerIndex].canAddToCart;
-            var itemTotal = getDecorTotal(items[centerIndex]);
             decorAddBtn.disabled = !canAdd;
             decorAddBtn.textContent = canAdd ? "Add to cart" : "Price on request";
           }
@@ -7939,7 +7415,6 @@
               ? ""
               : "For custom decor, please contact reception or info@derandhotel.com.";
           }
-
         }
 
         function animateTo(nextIndex) {
@@ -7954,8 +7429,7 @@
 
           window.setTimeout(function () {
             centerIndex = target;
-            resetAddonsForDecor(items[centerIndex]);
-            resetAddonsLineScroll();
+            resetExtrasForDecor();
             render();
 
             requestAnimationFrame(function () {
@@ -7981,103 +7455,47 @@
         if (bouquetToggle) {
           bouquetToggle.addEventListener("click", function () {
             var current = items[centerIndex];
-            if (!current.showFlowerAddon || flowerSelected) return;
-            setFlowerSelected(true);
+            if (!current.showExtras) return;
+            toggleCurrentExtra();
           });
         }
 
-        if (flowerRemoveBtn) {
-          flowerRemoveBtn.addEventListener("click", function () {
-            setFlowerSelected(false);
+        if (extraPrevBtn) {
+          extraPrevBtn.addEventListener("click", function () {
+            stepExtraType(-1);
           });
         }
 
-        if (flowerPrevBtn) {
-          flowerPrevBtn.addEventListener("click", function (event) {
-            event.preventDefault();
-            event.stopPropagation();
-            setFlowerIndex(flowerIndex - 1);
+        if (extraNextBtn) {
+          extraNextBtn.addEventListener("click", function () {
+            stepExtraType(1);
           });
         }
 
-        if (flowerNextBtn) {
-          flowerNextBtn.addEventListener("click", function (event) {
-            event.preventDefault();
-            event.stopPropagation();
-            setFlowerIndex(flowerIndex + 1);
-          });
-        }
-
-        if (addonsLinePrev) {
-          addonsLinePrev.addEventListener("click", function () {
-            scrollAddonsLine(-1);
-          });
-        }
-
-        if (addonsLineNext) {
-          addonsLineNext.addEventListener("click", function () {
-            scrollAddonsLine(1);
-          });
-        }
-
-        if (chocolateToggle) {
-          chocolateToggle.addEventListener("click", function () {
-            var current = items[centerIndex];
-            if (!current.showChocolateAddon || chocolateSelected) return;
-            setChocolateSelected(true);
-          });
-        }
-
-        if (chocolateRemoveBtn) {
-          chocolateRemoveBtn.addEventListener("click", function () {
-            setChocolateSelected(false);
-          });
-        }
-
-        if (chocolatePrevBtn) {
-          chocolatePrevBtn.addEventListener("click", function (event) {
-            event.preventDefault();
-            event.stopPropagation();
-            setChocolateIndex(chocolateIndex - 1);
-          });
-        }
-
-        if (chocolateNextBtn) {
-          chocolateNextBtn.addEventListener("click", function (event) {
-            event.preventDefault();
-            event.stopPropagation();
-            setChocolateIndex(chocolateIndex + 1);
-          });
-        }
-
-        if (perfumeToggle) {
-          perfumeToggle.addEventListener("click", function () {
-            var current = items[centerIndex];
-            if (!current.showPerfumeAddon || perfumeSelected) return;
-            setPerfumeSelected(true);
-          });
-        }
-
-        if (perfumeRemoveBtn) {
-          perfumeRemoveBtn.addEventListener("click", function () {
-            setPerfumeSelected(false);
-          });
-        }
-
-        if (perfumePrevBtn) {
-          perfumePrevBtn.addEventListener("click", function (event) {
-            event.preventDefault();
-            event.stopPropagation();
-            setPerfumeIndex(perfumeIndex - 1);
-          });
-        }
-
-        if (perfumeNextBtn) {
-          perfumeNextBtn.addEventListener("click", function (event) {
-            event.preventDefault();
-            event.stopPropagation();
-            setPerfumeIndex(perfumeIndex + 1);
-          });
+        if (extraPickerView) {
+          var touchStartX = 0;
+          var touchStartY = 0;
+          extraPickerView.addEventListener(
+            "touchstart",
+            function (event) {
+              if (!event.touches || !event.touches.length) return;
+              touchStartX = event.touches[0].clientX;
+              touchStartY = event.touches[0].clientY;
+            },
+            { passive: true },
+          );
+          extraPickerView.addEventListener(
+            "touchend",
+            function (event) {
+              if (!event.changedTouches || !event.changedTouches.length) return;
+              var deltaX = event.changedTouches[0].clientX - touchStartX;
+              var deltaY = event.changedTouches[0].clientY - touchStartY;
+              if (Math.abs(deltaX) < 40) return;
+              if (Math.abs(deltaX) <= Math.abs(deltaY)) return;
+              stepExtraType(deltaX < 0 ? 1 : -1);
+            },
+            { passive: true },
+          );
         }
 
         if (decorAddBtn) {
@@ -8102,49 +7520,45 @@
               description: current.description || "",
             });
 
-            if (flowerSelected && current.showFlowerAddon) {
-              var flower = getCurrentFlower();
-              window.derandAddToCart({
-                productBase: flower.name,
-                variantLabel: "",
-                image: flower.image,
-                price: flower.price,
-                qty: 1,
-                description: flower.name + " with " + current.cartName,
-              });
-            }
-
-            if (chocolateSelected && current.showChocolateAddon) {
-              var chocolate = getCurrentChocolate();
-              window.derandAddToCart({
-                productBase: chocolate.name,
-                variantLabel: "",
-                image: chocolate.image,
-                price: chocolate.price,
-                qty: 1,
-                description: chocolate.name + " with " + current.cartName,
-              });
-            }
-
-            if (perfumeSelected && current.showPerfumeAddon) {
-              var perfume = getCurrentPerfume();
-              window.derandAddToCart({
-                productBase: perfume.name,
-                variantLabel: perfume.ml ? perfume.ml + " ml" : "",
-                image: perfume.image,
-                price: perfume.price,
-                qty: 1,
-                description:
-                  perfume.name +
-                  (perfume.ml ? " (" + perfume.ml + " ml)" : "") +
-                  " with " +
-                  current.cartName,
-              });
+            if (current.showExtras) {
+              if (selectedExtras.flower && current.bouquetImage) {
+                window.derandAddToCart({
+                  productBase: "Flower bouquet",
+                  variantLabel: current.bouquetFlower || "",
+                  image: current.bouquetImage,
+                  price: BOUQUET_SURCHARGE,
+                  qty: 1,
+                  description: "Flower bouquet with " + current.cartName,
+                });
+              }
+              if (selectedExtras.chocolate) {
+                var chocolate = getChocolateForItem(current);
+                window.derandAddToCart({
+                  productBase: chocolate.name,
+                  variantLabel: "",
+                  image: chocolate.image,
+                  price: chocolate.price,
+                  qty: 1,
+                  description: chocolate.name + " with " + current.cartName,
+                });
+              }
+              if (selectedExtras.perfume) {
+                var perfume = getPerfumeForItem(current);
+                window.derandAddToCart({
+                  productBase: perfume.name,
+                  variantLabel: "",
+                  image: perfume.image,
+                  price: perfume.price,
+                  qty: 1,
+                  description: perfume.name + " with " + current.cartName,
+                });
+              }
             }
           });
         }
 
-        resetAddonsForDecor(items[centerIndex]);
+        resetExtrasForDecor();
+
         render();
       })();
     </script>
