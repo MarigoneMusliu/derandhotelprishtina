@@ -128,53 +128,353 @@
         margin-bottom: 0;
       }
 
-      #extra-flowers {
-        gap: clamp(20px, 3vw, 40px);
+      .extra-row.extra-signature {
+        display: block;
+        max-width: 560px;
+        margin-left: auto;
+        margin-right: auto;
         margin-bottom: 130px;
       }
 
-      #extra-flowers .extra-copy-kicker {
-        font-size: 11px;
-        margin-bottom: 6px;
+      .extra-signature__head {
+        margin: 0 0 clamp(24px, 4vw, 36px);
+        text-align: left;
       }
 
-      #extra-flowers .extra-copy-title {
-        font-size: clamp(28px, 2.8vw, 44px);
+      .extra-signature__title {
+        margin: 0;
+        font-family: "Noto Serif", serif;
+        font-size: clamp(30px, 4.8vw, 46px);
+        font-weight: 500;
+        line-height: 1.12;
+        color: #1c1917;
+        letter-spacing: 0.01em;
+      }
+
+      .extra-signature__title-lead {
+        display: inline-block;
+        padding-bottom: 6px;
+        border-bottom: 2px solid #c4a574;
+        margin-right: 0.2em;
+      }
+
+      .extra-signature__layout {
+        display: flex;
+        flex-direction: column;
+        background: #ffffff;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow:
+          0 12px 40px rgba(28, 24, 20, 0.08),
+          0 2px 8px rgba(28, 24, 20, 0.04);
+      }
+
+      .extra-signature__layout .extra-signature__media {
+        order: 0;
+      }
+
+      .extra-signature__layout .extra-signature__body {
+        order: 1;
+      }
+
+      .extra-signature__media {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        background: #f3f0ec;
+        overflow: hidden;
+      }
+
+      .extra-signature__video,
+      .extra-signature__photo {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+        border: 0;
+        vertical-align: middle;
+      }
+
+      .extra-signature__body {
+        padding: clamp(18px, 3vw, 24px) clamp(18px, 3vw, 22px)
+          clamp(20px, 3vw, 26px);
+      }
+
+      .extra-signature__card-title {
+        margin: 0 0 10px;
+        font-family: "Noto Serif", serif;
+        font-size: clamp(18px, 2.2vw, 22px);
+        font-weight: 600;
+        line-height: 1.25;
+        color: #1c1917;
+      }
+
+      .extra-signature__card-text {
+        margin: 0 0 clamp(18px, 3vw, 22px);
+        font-family: "Noto Serif", serif;
+        font-size: clamp(14px, 1.6vw, 16px);
+        font-weight: 400;
+        line-height: 1.55;
+        color: #5c5650;
+      }
+
+      .extra-signature__btn {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 14px 20px;
+        border: 0;
+        border-radius: 10px;
+        background: #1c1917;
+        color: #ffffff;
+        font-family: "Noto Serif", serif;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        text-align: center;
+        cursor: pointer;
+        transition:
+          background 0.2s ease,
+          transform 0.15s ease;
+      }
+
+      .extra-signature__btn:hover,
+      .extra-signature__btn:focus-visible {
+        background: #000000;
+        color: #ffffff;
+        transform: translateY(-1px);
+      }
+
+      #extra-champagne .extra-signature__layout {
+        overflow: hidden;
+      }
+
+      #extra-champagne .extra-signature__card-title {
+        font-weight: 600;
+        font-size: clamp(17px, 2vw, 20px);
         margin-bottom: 10px;
       }
 
-      #extra-flowers .extra-copy-text {
-        font-size: clamp(14px, 1.02vw, 17px);
-        line-height: 1.68;
-        max-width: 420px;
+      #extra-champagne .extra-signature__card-text {
+        font-family:
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          sans-serif;
+        font-size: clamp(13px, 1.4vw, 15px);
+        line-height: 1.55;
+        color: #5c5650;
+        margin-bottom: clamp(16px, 2.5vw, 20px);
       }
 
-      #extra-flowers .extra-copy-text::first-letter {
-        font-size: 3.25em;
-        line-height: 0.78;
-        margin-top: 0.16em;
+      #extra-laundry.extra-signature {
+        max-width: min(360px, 88vw);
       }
 
-      #extra-flowers .extra-btn {
-        padding: 9px 16px;
-        font-size: 10px;
+      .extra-signature--laundry .extra-signature__layout {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        background: #1a1512;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 20px;
+        box-shadow:
+          0 10px 36px rgba(26, 21, 18, 0.12),
+          0 2px 6px rgba(26, 21, 18, 0.05);
+        padding: 18px 20px 20px;
+        text-align: center;
       }
 
-      #extra-flowers .extra-media img {
-        max-width: 420px;
+      .extra-signature--laundry .extra-signature__media {
         width: 100%;
         height: auto;
-        display: block;
+        min-height: 0;
+        aspect-ratio: auto;
+        border-radius: 14px;
+        overflow: hidden;
+        margin-bottom: 12px;
+        background: transparent;
+        line-height: 0;
       }
 
-      #extra-flowers .extra-copy,
-      #extra-champagne .extra-copy,
-      #extra-perfumes .extra-copy,
+      .extra-signature--laundry .extra-signature__photo {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        display: block;
+        aspect-ratio: 1;
+        object-fit: cover;
+        border-radius: 14px;
+        vertical-align: top;
+      }
+
+      .extra-signature--laundry .extra-signature__intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 4px;
+      }
+
+      .extra-signature--laundry .extra-signature__icon {
+        display: block;
+        width: 32px;
+        height: 32px;
+        margin: 0 auto 10px;
+        color: #c9a962;
+      }
+
+      .extra-signature--laundry .extra-signature__card-title {
+        margin: 0 0 10px;
+        color: #faf8f5;
+        font-family: "Noto Serif", serif;
+        font-size: 1.35rem;
+        font-weight: 400;
+        letter-spacing: 0.02em;
+        line-height: 1.3;
+      }
+
+      .extra-signature--laundry .extra-signature__card-text {
+        margin: 0 0 16px;
+        max-width: 26em;
+        font-family:
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          sans-serif;
+        font-size: 0.8125rem;
+        font-weight: 400;
+        line-height: 1.62;
+        color: rgba(250, 248, 245, 0.7);
+      }
+
+      .extra-signature--laundry .extra-signature__actions {
+        width: 100%;
+      }
+
+      .extra-signature--laundry .extra-signature__btn {
+        background: #ffffff;
+        color: #1a1512;
+        border-radius: 12px;
+        padding: 11px 16px;
+        font-family: "Noto Serif", serif;
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        text-transform: none;
+        transition:
+          background 0.25s ease,
+          transform 0.2s ease,
+          box-shadow 0.25s ease;
+      }
+
+      .extra-signature--laundry .extra-signature__btn:hover,
+      .extra-signature--laundry .extra-signature__btn:focus-visible {
+        background: #f7f4f0;
+        color: #1a1512;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 14px rgba(26, 21, 18, 0.12);
+      }
+
+      @media (min-width: 768px) {
+        .extra-row.extra-signature {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          max-width: none;
+          margin-left: 0;
+          margin-right: 0;
+          gap: clamp(28px, 4vw, 64px);
+          align-items: center;
+        }
+
+        .extra-row.extra-signature .extra-signature__head {
+          grid-column: 1 / -1;
+          margin-bottom: clamp(20px, 3vw, 32px);
+        }
+
+        .extra-row.extra-signature .extra-signature__layout {
+          display: contents;
+        }
+
+        .extra-row.extra-signature .extra-signature__body {
+          order: unset;
+          padding: 0;
+          max-width: 420px;
+          justify-self: center;
+          width: 100%;
+          align-self: center;
+        }
+
+        .extra-row.extra-signature .extra-signature__card-text {
+          max-width: 420px;
+        }
+
+        .extra-row.extra-signature .extra-signature__btn {
+          width: auto;
+          min-width: 220px;
+          display: inline-block;
+        }
+
+        .extra-row.extra-signature .extra-signature__media {
+          order: unset;
+          aspect-ratio: auto;
+          min-height: clamp(280px, 36vw, 420px);
+          max-width: 420px;
+          width: 100%;
+          justify-self: center;
+          border-radius: 14px;
+        }
+
+        .extra-row.extra-signature .extra-signature__video,
+        .extra-row.extra-signature .extra-signature__photo {
+          border-radius: 14px;
+          min-height: clamp(280px, 36vw, 420px);
+          object-fit: cover;
+        }
+
+        #extra-laundry.extra-signature {
+          display: block;
+          max-width: 400px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        #extra-laundry.extra-signature .extra-signature__layout {
+          display: flex;
+          flex-direction: column;
+          padding: 20px 22px 22px;
+        }
+
+        #extra-laundry .extra-signature__media,
+        .extra-signature--laundry .extra-signature__media {
+          min-height: 0;
+          height: auto;
+          aspect-ratio: auto;
+          max-width: none;
+        }
+
+        #extra-laundry .extra-signature__photo,
+        .extra-row.extra-signature.extra-signature--laundry .extra-signature__photo {
+          min-height: 0;
+          height: auto;
+          border-radius: 14px;
+        }
+
+        .extra-signature--laundry .extra-signature__btn {
+          display: block;
+          width: 100%;
+          min-width: 0;
+        }
+      }
+
+      .extra-row.extra-signature .extra-signature__body,
       #extra-chocolates .extra-copy,
       #extra-laundry .extra-copy,
       #extra-vine .extra-copy,
-      #extra-flowers .extra-media,
-      #extra-champagne .extra-media,
+      .extra-row.extra-signature .extra-signature__media,
       #extra-perfumes .extra-media,
       #extra-chocolates .extra-media,
       #extra-laundry .extra-media,
@@ -224,53 +524,7 @@
       }
 
       #extra-champagne {
-        gap: clamp(20px, 3vw, 40px);
         margin-bottom: 130px;
-      }
-
-      #extra-champagne .extra-copy-kicker {
-        font-size: 11px;
-        margin-bottom: 6px;
-      }
-
-      #extra-champagne .extra-copy-title {
-        font-size: clamp(28px, 2.8vw, 44px);
-        margin-bottom: 10px;
-      }
-
-      #extra-champagne .extra-copy-text {
-        font-size: clamp(14px, 1.02vw, 17px);
-        line-height: 1.68;
-        max-width: 420px;
-      }
-
-      #extra-champagne .extra-copy-text::first-letter {
-        font-size: 3.25em;
-        line-height: 0.78;
-        margin-top: 0.16em;
-      }
-
-      #extra-champagne .extra-btn {
-        padding: 9px 16px;
-        font-size: 10px;
-      }
-
-      #extra-champagne .extra-media {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: clamp(280px, 36vw, 420px);
-      }
-
-      #extra-champagne .extra-slider,
-      #extra-champagne .extra-media img {
-        max-width: 420px;
-        width: 100%;
-        height: auto;
-        max-height: 420px;
-        object-fit: contain;
-        object-position: center;
-        display: block;
       }
 
       #extra-vine {
@@ -692,12 +946,32 @@
           margin-right: auto;
         }
 
+        .extra-row.extra-signature {
+          max-width: 100%;
+        }
+
+        #extra-laundry.extra-signature {
+          max-width: min(360px, 88vw);
+        }
+
+        #extra-laundry .extra-signature__media,
+        .extra-signature--laundry .extra-signature__media {
+          aspect-ratio: auto;
+          min-height: 0;
+          height: auto;
+        }
+
+        #extra-laundry .extra-signature__photo,
+        .extra-row.extra-signature.extra-signature--laundry .extra-signature__photo {
+          min-height: 0;
+          height: auto;
+        }
+
         #extra-flowers,
         #extra-champagne,
         #extra-perfumes,
         #extra-chocolates,
         #extra-laundry {
-          gap: 24px;
           scroll-margin-top: 88px;
         }
 
@@ -710,14 +984,39 @@
           padding-bottom: 72px;
         }
 
-        #extra-champagne .extra-media {
-          min-height: 0;
-          display: block;
+        .extra-row.extra-signature .extra-signature__head {
+          margin-bottom: 20px;
         }
 
-        #extra-champagne .extra-slider,
-        #extra-champagne .extra-media img {
-          max-height: min(46vh, 280px);
+        .extra-row.extra-signature .extra-signature__media {
+          aspect-ratio: 4 / 3;
+        }
+
+        #extra-champagne .extra-signature__media {
+          aspect-ratio: auto;
+          min-height: 0;
+          height: auto;
+          line-height: 0;
+        }
+
+        #extra-champagne .extra-signature__photo {
+          min-height: 0;
+          height: auto;
+          aspect-ratio: 4 / 3;
+          object-fit: cover;
+          border-radius: 16px 16px 0 0;
+        }
+
+        #extra-champagne .extra-signature__body {
+          text-align: left;
+        }
+
+        .extra-row.extra-signature .extra-signature__body {
+          padding: 18px 16px 20px;
+        }
+
+        .extra-row.extra-signature .extra-signature__btn {
+          padding: 15px 18px;
         }
       }
 
@@ -4156,172 +4455,244 @@
 
     <section class="extra-section">
       <div class="container">
-        <article class="extra-row" id="extra-flowers">
-          <div class="extra-copy">
-            <p class="extra-copy-kicker">Fresh Flower Surprise</p>
-            <h2 class="extra-copy-title">
-              Fresh, fragrant, and waiting for you.
+        <article class="extra-row extra-signature" id="extra-flowers">
+          <header class="extra-signature__head">
+            <h2 class="extra-signature__title">
+              <span class="extra-signature__title-lead">The</span> Signature
+              Collection
             </h2>
-            <p class="extra-copy-text">
-              Add a touch of nature to your stay. Whether it’s a special
-              occasion or a simple gesture, we curate fresh seasonal bouquets
-              from local artisans to welcome you the moment you arrive.
-            </p>
-            <button
-              type="button"
-              class="extra-btn js-extra-order"
-              data-product="Single Red Roses"
-              data-price="3"
-              data-image="img/flower.jpg"
-              data-images="img/flower.jpg,img/whiteflower.png,img/redrose.jpg,img/rose.jpg,img/whiteflowers.png,img/flower5.png,img/lilypink.png,img/flower1.jpg,img/flower2.jpg,img/flower3.jpg,img/flowers1.png"
-              data-products="Single Red Roses,Single White Rose,Single Pink Rose,Single Pink Dianthus,Single White Dianthus,Single White Lily,Single Pink Lily,Lily Bouquet,A Bouquet of Red Roses,A Bouquet of Yellow Tulips,Mixed Flower Bouquet"
-              data-prices="3,3,3,2,2,8,8,50,60,55,50"
-              data-description="Fresh seasonal flowers wrapped in decorative paper for a romantic in-room surprise."
-            >
-              Choose Your Flowers
-            </button>
-          </div>
-          <div class="extra-media">
-            <img
-              src="img/flowers.png"
-              alt="Fresh flower bouquet"
-              width="1080"
-              height="1080"
-            />
-          </div>
-        </article>
-
-        <article class="extra-row extra-row--reverse" id="extra-champagne">
-          <div class="extra-copy">
-            <p class="extra-copy-kicker">Celebrate in your room</p>
-            <h2 class="extra-copy-title">Champagne &amp; premium spirits</h2>
-            <p class="extra-copy-text">
-              Start your stay in style. Choose from our curated champagne,
-              tequila, vodka, and gin selection — each bottle chilled and served
-              in your room with premium glassware.
-            </p>
-            <button
-              type="button"
-              class="extra-btn js-extra-order"
-              data-spirits-menu="true"
-              data-product="Champagne &amp; Premium Spirits"
-              data-price="128"
-              data-image="img/champ.jpg"
-              data-images="img/champ.jpg,img/champ3.png,img/champ4.png,img/champ5.png,img/champ6.png,img/champ7.png,img/tequila.png,img/tequila1.png,img/tequila2.png,img/tequila3.png,img/vodka.png,img/vodka1.png,img/vodka2.png,img/vodka3.png,img/vodka4.png,img/jager.png"
-              data-products="Moët &amp; Chandon — Brut,Moët &amp; Chandon — Ice,Moët &amp; Chandon — Rosé,Moët &amp; Chandon — Ice Rosé,Dom Pérignon — Brut,Dom Pérignon — Brut Luminous,Don Julio — Añejo,Don Julio — Reposado,Don Julio — Blanco,Don Julio — 1942,Cîroc Vodka,Grey Goose Vodka,Belvedere Vodka,Tanqueray — Ten,Hendrick's Gin,Jägermeister"
-              data-prices="128,208,160,256,400,440,200,228,228,664,120,120,120,120,140,140"
-              data-categories="Champagne,Champagne,Champagne,Champagne,Champagne,Champagne,Tequila,Tequila,Tequila,Tequila,Vodka,Vodka,Vodka,Gin,Gin,Liqueur"
-              data-description="Premium spirit served chilled in your room."
-            >
-              Choose Your Bottle
-            </button>
-          </div>
-          <div class="extra-media">
-            <img
-              src="img/champaignee.png"
-              alt="Champagne and premium spirits"
-              width="1080"
-              height="1080"
-            />
+          </header>
+          <div class="extra-signature__layout">
+            <div class="extra-signature__body">
+              <h3 class="extra-signature__card-title">Floral Artistry</h3>
+              <p class="extra-signature__card-text">
+                Seasonal arrangements curated by our master florists to bring
+                nature&rsquo;s most delicate scents into your sanctuary.
+              </p>
+              <button
+                type="button"
+                class="extra-signature__btn js-extra-order"
+                data-product="Single Red Roses"
+                data-price="3"
+                data-image="img/flower.jpg"
+                data-images="img/flower.jpg,img/whiteflower.png,img/redrose.jpg,img/rose.jpg,img/whiteflowers.png,img/flower5.png,img/lilypink.png,img/flower1.jpg,img/flower2.jpg,img/flower3.jpg,img/flowers1.png"
+                data-products="Single Red Roses,Single White Rose,Single Pink Rose,Single Pink Dianthus,Single White Dianthus,Single White Lily,Single Pink Lily,Lily Bouquet,A Bouquet of Red Roses,A Bouquet of Yellow Tulips,Mixed Flower Bouquet"
+                data-prices="3,3,3,2,2,8,8,50,60,55,50"
+                data-description="Fresh seasonal flowers wrapped in decorative paper for a romantic in-room surprise."
+              >
+                Choose Your Flower
+              </button>
+            </div>
+            <div class="extra-signature__media">
+              <video
+                class="extra-signature__video"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                poster="img/flowers.png"
+                aria-label="Seasonal floral arrangement in your room"
+              >
+                <source src="img/vid.mp4" type="video/mp4" />
+              </video>
+            </div>
           </div>
         </article>
 
-        <article class="extra-row" id="extra-perfumes">
-          <div class="extra-copy">
-            <p class="extra-copy-kicker">Signature scent in your room</p>
-            <h2 class="extra-copy-title">Perfumes</h2>
-            <p class="extra-copy-text">
-              Arrive to a fragrance waiting at your bedside. Browse our
-              in-room perfume collection, choose your bottle size, and we will
-              deliver it to your room.
-            </p>
-            <button
-              type="button"
-              class="extra-btn js-extra-order"
-              data-perfume-menu="true"
-              data-product="Giorgio Armani"
-              data-price="33.12"
-              data-image="img/armani.png"
-              data-images="img/armani.png,img/diesel.png,img/dkny.png,img/juliet.png,img/prada.png,img/roberto.png,img/valentino.png,img/thierry.png,img/ralph.png,img/montale.png,img/viktor.png,img/yves.png"
-              data-products="Giorgio Armani,DIESEL LOVERDOSE,DKNY BE DELICIOUS,JULIET HAS A GUN,Prada Candy,Roberto Cavalli Just Cavalli For Her,Valentino Born In Roma,Thierry Mugler MU ANG NOVA,Ralph Lauren Polo Blue,MONTALE AOUD LIME,FLBB EDP SPRAY,YVES SAINT LAURENT"
-              data-prices="33.12,44.24,39.2,112,73.68,22.72,81.04,94.8,62.08,120,70.32,97.92"
-              data-description="Fragrance delivered to your room in the selected bottle size."
-            >
-              Choose Your Perfume
-            </button>
-          </div>
-          <div class="extra-media">
-            <img
-              src="img/armani.png"
-              alt="In-room perfume selection"
-              width="1080"
-              height="1080"
-            />
-          </div>
-        </article>
-
-        <article class="extra-row extra-row--reverse" id="extra-chocolates">
-          <div class="extra-copy">
-            <p class="extra-copy-kicker">Sweet treats from Kosovo</p>
-            <h2 class="extra-copy-title">Tog chocolates</h2>
-            <p class="extra-copy-text">
-              Indulge in premium Tog chocolate, crafted with care and delivered
-              to your room — a thoughtful taste of Kosovo for your stay.
-            </p>
-            <button
-              type="button"
-              class="extra-btn js-extra-order"
-              data-chocolate-menu="true"
-              data-product='Tog Chocolate Box "With love from Kosova"'
-              data-price="14.25"
-              data-image="img/tog.png"
-              data-images="img/tog.png,img/tog1.png,img/tog2.png,img/tog3.png,img/tog4.png,img/tog5.png,img/tog6.png"
-              data-products='Tog Chocolate Box "With love from Kosova",Tog Chocolate Box "With love from Prishtina",Tog Chocolate Box "With love from Prizreni",Tog Chocolate Box "Me dashni pÎr ty",Tog Chocolate bar "With love from Kosova" Cranberry Dark Chocolate,Tog Spicy Chocolate bar "FlakÎ e ÀmbÎl",Tog Tablet "ASAJ" Cranberry Dark Chocolate'
-              data-prices="14.25,14.25,14.25,16.63,6.25,6.25,6.25"
-              data-description="Premium Tog chocolate delivered to your room."
-            >
-              Choose Your Chocolates
-            </button>
-          </div>
-          <div class="extra-media">
-            <img
-              src="img/tog.png"
-              alt="Tog chocolate box"
-              width="1080"
-              height="1080"
-            />
+        <article class="extra-row extra-signature" id="extra-champagne">
+          <div class="extra-signature__layout">
+            <div class="extra-signature__media">
+              <img
+                class="extra-signature__photo"
+                src="img/champi.png"
+                alt="Champagne in an ice bucket with flutes in your suite"
+                width="1080"
+                height="1080"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="extra-signature__body">
+              <h3 class="extra-signature__card-title">Champagne Collection</h3>
+              <p class="extra-signature__card-text">
+                Celebrate the moment with a chilled bottle of our finest vintage
+                champagne, delivered to your door.
+              </p>
+              <button
+                type="button"
+                class="extra-signature__btn js-extra-order"
+                data-spirits-menu="true"
+                data-product="Champagne &amp; Premium Spirits"
+                data-price="128"
+                data-image="img/champ.jpg"
+                data-images="img/champ.jpg,img/champ3.png,img/champ4.png,img/champ5.png,img/champ6.png,img/champ7.png,img/tequila.png,img/tequila1.png,img/tequila2.png,img/tequila3.png,img/vodka.png,img/vodka1.png,img/vodka2.png,img/vodka3.png,img/vodka4.png,img/jager.png"
+                data-products="Moët &amp; Chandon — Brut,Moët &amp; Chandon — Ice,Moët &amp; Chandon — Rosé,Moët &amp; Chandon — Ice Rosé,Dom Pérignon — Brut,Dom Pérignon — Brut Luminous,Don Julio — Añejo,Don Julio — Reposado,Don Julio — Blanco,Don Julio — 1942,Cîroc Vodka,Grey Goose Vodka,Belvedere Vodka,Tanqueray — Ten,Hendrick's Gin,Jägermeister"
+                data-prices="128,208,160,256,400,440,200,228,228,664,120,120,120,120,140,140"
+                data-categories="Champagne,Champagne,Champagne,Champagne,Champagne,Champagne,Tequila,Tequila,Tequila,Tequila,Vodka,Vodka,Vodka,Gin,Gin,Liqueur"
+                data-description="Premium spirit served chilled in your room."
+              >
+                Choose Your Bottle
+              </button>
+            </div>
           </div>
         </article>
 
-        <article class="extra-row" id="extra-laundry">
-          <div class="extra-copy">
-            <p class="extra-copy-kicker">In-room laundry</p>
-            <h2 class="extra-copy-title">Pressed &amp; fresh for your stay</h2>
-            <p class="extra-copy-text">
-              Send shirts and tees for professional care. Choose wash with ironing
-              or ironing only — we collect from your room and return everything
-              crisp and ready to wear.
-            </p>
-            <button
-              type="button"
-              class="extra-btn js-extra-order"
-              data-laundry-menu="true"
-              data-product="Shirt"
-              data-price="3"
-              data-image="img/shirt.png"
-              data-images="img/shirt.png,img/tshirt.png,img/dress.png,img/pijamas.png,img/underwear.png,img/trousers.png,img/skirt.png,img/suit.png,img/socks.png,img/sweater.png,img/jacket.png"
-              data-description="In-room laundry — choose wash &amp; ironing or ironing only per item."
-            >
-              Choose Laundry Service
-            </button>
+        <article class="extra-row extra-signature" id="extra-perfumes">
+          <div class="extra-signature__layout">
+            <div class="extra-signature__body">
+              <h3 class="extra-signature__card-title">Olfactory Signature</h3>
+              <p class="extra-signature__card-text">
+                Access our exclusive scent library, featuring artisanal
+                fragrances crafted specifically for the Aureate mood.
+              </p>
+              <button
+                type="button"
+                class="extra-signature__btn js-extra-order"
+                data-perfume-menu="true"
+                data-product="Giorgio Armani"
+                data-price="33.12"
+                data-image="img/armani.png"
+                data-images="img/armani.png,img/diesel.png,img/dkny.png,img/juliet.png,img/prada.png,img/roberto.png,img/valentino.png,img/thierry.png,img/ralph.png,img/montale.png,img/viktor.png,img/yves.png"
+                data-products="Giorgio Armani,DIESEL LOVERDOSE,DKNY BE DELICIOUS,JULIET HAS A GUN,Prada Candy,Roberto Cavalli Just Cavalli For Her,Valentino Born In Roma,Thierry Mugler MU ANG NOVA,Ralph Lauren Polo Blue,MONTALE AOUD LIME,FLBB EDP SPRAY,YVES SAINT LAURENT"
+                data-prices="33.12,44.24,39.2,112,73.68,22.72,81.04,94.8,62.08,120,70.32,97.92"
+                data-description="Fragrance delivered to your room in the selected bottle size."
+              >
+                Choose Your Perfume
+              </button>
+            </div>
+            <div class="extra-signature__media">
+              <img
+                class="extra-signature__photo"
+                src="img/parfum.png"
+                alt="In-room perfume and fragrance selection"
+                width="1080"
+                height="1080"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
           </div>
-          <div class="extra-media">
-            <img
-              src="img/shirt.png"
-              alt="Shirt laundry service"
-              width="1080"
-              height="1080"
-            />
+        </article>
+
+        <article class="extra-row extra-signature" id="extra-chocolates">
+          <div class="extra-signature__layout">
+            <div class="extra-signature__media">
+              <img
+                class="extra-signature__photo"
+                src="img/togi.png"
+                alt="Artisanal Tog chocolates in your suite"
+                width="1080"
+                height="1080"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="extra-signature__body">
+              <h3 class="extra-signature__card-title">Artisanal Delights</h3>
+              <p class="extra-signature__card-text">
+                Handcrafted truffles and pralines delivered to your suite,
+                offering a symphony of rare cacao and refined flavors.
+              </p>
+              <button
+                type="button"
+                class="extra-signature__btn js-extra-order"
+                data-chocolate-menu="true"
+                data-product='Tog Chocolate Box "With love from Kosova"'
+                data-price="14.25"
+                data-image="img/tog.png"
+                data-images="img/tog.png,img/tog1.png,img/tog2.png,img/tog3.png,img/tog4.png,img/tog5.png,img/tog6.png"
+                data-products='Tog Chocolate Box "With love from Kosova",Tog Chocolate Box "With love from Prishtina",Tog Chocolate Box "With love from Prizreni",Tog Chocolate Box "Me dashni pÎr ty",Tog Chocolate bar "With love from Kosova" Cranberry Dark Chocolate,Tog Spicy Chocolate bar "FlakÎ e ÀmbÎl",Tog Tablet "ASAJ" Cranberry Dark Chocolate'
+                data-prices="14.25,14.25,14.25,16.63,6.25,6.25,6.25"
+                data-description="Premium Tog chocolate delivered to your room."
+              >
+                Choose Your Selection
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="extra-row extra-signature extra-signature--laundry"
+          id="extra-laundry"
+        >
+          <div class="extra-signature__layout">
+            <div class="extra-signature__media">
+              <img
+                class="extra-signature__photo"
+                src="img/laundry.png"
+                alt="Premium in-room laundry service"
+                width="1080"
+                height="1080"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="extra-signature__intro">
+              <svg
+                class="extra-signature__icon"
+                viewBox="0 0 48 48"
+                width="32"
+                height="32"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <rect
+                  x="10"
+                  y="6"
+                  width="28"
+                  height="36"
+                  rx="4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.75"
+                />
+                <circle
+                  cx="24"
+                  cy="26"
+                  r="9"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.75"
+                />
+                <circle
+                  cx="24"
+                  cy="26"
+                  r="4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+                <rect
+                  x="18"
+                  y="10"
+                  width="12"
+                  height="4"
+                  rx="1"
+                  fill="currentColor"
+                  opacity="0.55"
+                />
+              </svg>
+              <h3 class="extra-signature__card-title">Pristine Care</h3>
+              <p class="extra-signature__card-text">
+                From delicate silks to bespoke tailoring, our garment care
+                specialists treat every thread with architectural precision.
+              </p>
+            </div>
+            <div class="extra-signature__actions">
+              <button
+                type="button"
+                class="extra-signature__btn js-extra-order"
+                data-laundry-menu="true"
+                data-product="Shirt"
+                data-price="3"
+                data-image="img/shirt.png"
+                data-images="img/shirt.png,img/tshirt.png,img/dress.png,img/pijamas.png,img/underwear.png,img/skirt.png,img/suit.png,img/socks.png,img/sweater.png,img/jacket.png"
+                data-description="In-room laundry — choose wash &amp; ironing or ironing only per item."
+              >
+                Choose Your Service
+              </button>
+            </div>
           </div>
         </article>
 
