@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
+      data-i18n="extra-meta-description"
       content="Derand Hotel Extra offers curated in-room surprises and premium add-ons in Pristina."
     />
-    <title> Concierge |Hotel in Prishtina</title>
+    <title data-i18n="extra-page-title">Concierge | Hotel in Prishtina</title>
     <link rel="canonical" href="https://www.derandhotel.com/extra.html" />
     <link rel="icon" href="favicon.ico?v=14" type="image/x-icon" />
 
@@ -4281,9 +4282,27 @@
     </style>
   </head>
 
-  <body class="sacher-home derand-no-tidio">
+  <body class="sacher-home policy-font-noto-serif derand-no-tidio">
     <div id="preloder">
       <div class="loader"></div>
+    </div>
+
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+      <div class="offcanvas__logo">
+        <a href="./index.html"><img src="img/logoo.webp" alt="Hotel in Prishtina"  loading="lazy" decoding="async" width="756" height="263"></a>
+      </div>
+      <div id="mobile-menu-wrap"></div>
+
+      <div class="offcanvas_btn_widget">
+        <a
+          href="book.html"
+         
+         
+          ><span data-i18n="book-now">BOOK NOW</span>
+          <span class="arrow_right"></span
+        ></a>
+      </div>
     </div>
 
     <header class="header">
@@ -4303,14 +4322,8 @@
             <div class="col-lg-2">
               <div class="header__logo">
                 <a href="./index.html"
-                  ><img
-                    src="img/logoo.webp"
-                    alt="Logo"
-                    loading="lazy"
-                    decoding="async"
-                    width="756"
-                    height="263"
-                /></a>
+                  ><img src="img/logoo.webp" alt="Hotels in Pristina"
+                 loading="lazy" decoding="async" width="756" height="263"></a>
               </div>
             </div>
             <div class="col-lg-10">
@@ -4356,12 +4369,16 @@
                       >
                       <ul class="dropdown">
                         <li>
-                          <a href="noya.html" data-i18n="nav-restaurant-1"
+                          <a
+                            href="noya.html"
+                            data-i18n="nav-restaurant-1"
                             >NOYA</a
                           >
                         </li>
                         <li>
-                          <a href="omma.html" data-i18n="nav-restaurant-2"
+                          <a
+                            href="omma.html"
+                            data-i18n="nav-restaurant-2"
                             >OMMA-Cafe & Buffet</a
                           >
                         </li>
@@ -4369,7 +4386,9 @@
                     </li>
 
                     <li>
-                      <a href="#" data-i18n="nav-activities">ACTIVITIES</a>
+                      <a href="#" data-i18n="nav-activities"
+                        >ACTIVITIES</a
+                      >
                       <ul class="dropdown">
                         <li>
                           <a href="rinu.html" data-i18n="nav-activity-2"
@@ -4380,27 +4399,41 @@
                       </ul>
                     </li>
 
+                    <!-- <li>
+                      <a href="#" data-i18n="nav-offers">OFFERS</a>
+                      <ul class="dropdown">
+                        <li>
+                          <a href="sunnyhill.html" data-i18n="nav-offer-1"
+                            >SUNNY HILL FESTIVAL</a
+                          >
+                        </li>
+                      </ul>
+                    </li> -->
+
                     <li>
                       <a href="extra.html">Concierge</a>
                     </li>
 
-                    <li class="has-dropdown">
-                      <a href="contact.html" data-i18n="nav-inquiry">CONTACT</a>
+                  <!-- <li>
+                      <a href="extra.html">EXTRA</a>
+                    </li>  -->
 
-                      <ul class="dropdown">
-                        <li>
-                          <a href="contact.html" data-i18n="nav-contact-us"
-                            >CONTACT US</a
-                          >
-                        </li>
-                        <li>
-                          <a href="careers.html" data-i18n="footer-link-5">Careers</a>
-                        </li>
-                        <li>
-                          <a href="faqs.html" data-i18n="nav-faqs">FAQS</a>
-                        </li>
-                      </ul>
-                    </li>
+                    <li class="has-dropdown">
+                      
+  <a href="contact.html" data-i18n="nav-inquiry">CONTACT</a>
+
+  <ul class="dropdown">
+    <li>
+      <a href="contact.html" data-i18n="nav-contact-us">CONTACT US</a>
+    </li>
+    <li>
+      <a href="careers.html" data-i18n="footer-link-5">Careers</a>
+    </li>
+    <li>
+      <a href="faqs.html" data-i18n="nav-faqs">FAQS</a>
+    </li>
+  </ul>
+</li>
                   </ul>
                 </nav>
 
@@ -4424,12 +4457,7 @@
               </div>
             </div>
           </div>
-          <div
-            class="canvas__open"
-            aria-label="Menu"
-            role="button"
-            tabindex="0"
-          >
+          <div class="canvas__open" aria-label="Menu" role="button" tabindex="0">
             <span class="fa fa-bars"></span>
           </div>
           <div class="mobile__lang__selector header__lang__selector">
@@ -4440,14 +4468,18 @@
         </div>
       </div>
     </header>
-
     <section class="extra-hero">
       <div class="container">
         <div class="extra-hero__content">
-          <h1 id="extra-heading-title">Explore our exclusive products</h1>
-          <p id="extra-heading-subtitle">available at your room</p>
+          <h1 id="extra-heading-title" data-i18n="extra-hero-title">
+            Explore our exclusive products
+          </h1>
+          <p id="extra-heading-subtitle" data-i18n="extra-hero-subtitle">
+            available at your room
+          </p>
           <a class="extra-hero__more" href="#extra-flowers"
-            >More <span class="extra-hero__more-arrow">↓</span></a
+            ><span data-i18n="extra-hero-more">More</span>
+            <span class="extra-hero__more-arrow">↓</span></a
           >
         </div>
       </div>
@@ -4458,20 +4490,25 @@
         <article class="extra-row extra-signature" id="extra-flowers">
           <header class="extra-signature__head">
             <h2 class="extra-signature__title">
-              <span class="extra-signature__title-lead">The</span> Signature
-              Collection
+              <span class="extra-signature__title-lead" data-i18n="extra-signature-the"
+                >The</span
+              >
+              <span data-i18n="extra-signature-collection">Signature Collection</span>
             </h2>
           </header>
           <div class="extra-signature__layout">
             <div class="extra-signature__body">
-              <h3 class="extra-signature__card-title">Floral Artistry</h3>
-              <p class="extra-signature__card-text">
+              <h3 class="extra-signature__card-title" data-i18n="extra-flowers-title">
+                Floral Artistry
+              </h3>
+              <p class="extra-signature__card-text" data-i18n="extra-flowers-text">
                 Seasonal arrangements curated by our master florists to bring
                 nature&rsquo;s most delicate scents into your sanctuary.
               </p>
               <button
                 type="button"
                 class="extra-signature__btn js-extra-order"
+                data-i18n-desc="extra-desc-flowers"
                 data-product="Single Red Roses"
                 data-price="3"
                 data-image="img/flower.jpg"
@@ -4480,7 +4517,7 @@
                 data-prices="3,3,3,2,2,8,8,50,60,55,50"
                 data-description="Fresh seasonal flowers wrapped in decorative paper for a romantic in-room surprise."
               >
-                Choose Your Flower
+                <span data-i18n="extra-flowers-btn">Choose Your Flower</span>
               </button>
             </div>
             <div class="extra-signature__media">
@@ -4492,6 +4529,7 @@
                 playsinline
                 preload="metadata"
                 poster="img/flowers.png"
+                data-i18n-aria-label="extra-flowers-title"
                 aria-label="Seasonal floral arrangement in your room"
               >
                 <source src="img/vid.mp4" type="video/mp4" />
@@ -4514,14 +4552,17 @@
               />
             </div>
             <div class="extra-signature__body">
-              <h3 class="extra-signature__card-title">Champagne Collection</h3>
-              <p class="extra-signature__card-text">
+              <h3 class="extra-signature__card-title" data-i18n="extra-champagne-title">
+                Champagne Collection
+              </h3>
+              <p class="extra-signature__card-text" data-i18n="extra-champagne-text">
                 Celebrate the moment with a chilled bottle of our finest vintage
                 champagne, delivered to your door.
               </p>
               <button
                 type="button"
                 class="extra-signature__btn js-extra-order"
+                data-i18n-desc="extra-desc-champagne"
                 data-spirits-menu="true"
                 data-product="Champagne &amp; Premium Spirits"
                 data-price="128"
@@ -4532,7 +4573,7 @@
                 data-categories="Champagne,Champagne,Champagne,Champagne,Champagne,Champagne,Tequila,Tequila,Tequila,Tequila,Vodka,Vodka,Vodka,Gin,Gin,Liqueur"
                 data-description="Premium spirit served chilled in your room."
               >
-                Choose Your Bottle
+                <span data-i18n="extra-champagne-btn">Choose Your Bottle</span>
               </button>
             </div>
           </div>
@@ -4541,14 +4582,17 @@
         <article class="extra-row extra-signature" id="extra-perfumes">
           <div class="extra-signature__layout">
             <div class="extra-signature__body">
-              <h3 class="extra-signature__card-title">Olfactory Signature</h3>
-              <p class="extra-signature__card-text">
+              <h3 class="extra-signature__card-title" data-i18n="extra-perfumes-title">
+                Olfactory Signature
+              </h3>
+              <p class="extra-signature__card-text" data-i18n="extra-perfumes-text">
                 Access our exclusive scent library, featuring artisanal
-                fragrances crafted specifically for the Aureate mood.
+                fragrances crafted specifically for the Derand mood.
               </p>
               <button
                 type="button"
                 class="extra-signature__btn js-extra-order"
+                data-i18n-desc="extra-desc-perfume"
                 data-perfume-menu="true"
                 data-product="Giorgio Armani"
                 data-price="33.12"
@@ -4558,7 +4602,7 @@
                 data-prices="33.12,44.24,39.2,112,73.68,22.72,81.04,94.8,62.08,120,70.32,97.92"
                 data-description="Fragrance delivered to your room in the selected bottle size."
               >
-                Choose Your Perfume
+                <span data-i18n="extra-perfumes-btn">Choose Your Perfume</span>
               </button>
             </div>
             <div class="extra-signature__media">
@@ -4589,14 +4633,17 @@
               />
             </div>
             <div class="extra-signature__body">
-              <h3 class="extra-signature__card-title">Artisanal Delights</h3>
-              <p class="extra-signature__card-text">
+              <h3 class="extra-signature__card-title" data-i18n="extra-chocolates-title">
+                Artisanal Delights
+              </h3>
+              <p class="extra-signature__card-text" data-i18n="extra-chocolates-text">
                 Handcrafted truffles and pralines delivered to your suite,
                 offering a symphony of rare cacao and refined flavors.
               </p>
               <button
                 type="button"
                 class="extra-signature__btn js-extra-order"
+                data-i18n-desc="extra-desc-chocolate"
                 data-chocolate-menu="true"
                 data-product='Tog Chocolate Box "With love from Kosova"'
                 data-price="14.25"
@@ -4606,7 +4653,7 @@
                 data-prices="14.25,14.25,14.25,16.63,6.25,6.25,6.25"
                 data-description="Premium Tog chocolate delivered to your room."
               >
-                Choose Your Selection
+                <span data-i18n="extra-chocolates-btn">Choose Your Selection</span>
               </button>
             </div>
           </div>
@@ -4673,8 +4720,10 @@
                   opacity="0.55"
                 />
               </svg>
-              <h3 class="extra-signature__card-title">Pristine Care</h3>
-              <p class="extra-signature__card-text">
+              <h3 class="extra-signature__card-title" data-i18n="extra-laundry-title">
+                Pristine Care
+              </h3>
+              <p class="extra-signature__card-text" data-i18n="extra-laundry-text">
                 From delicate silks to bespoke tailoring, our garment care
                 specialists treat every thread with architectural precision.
               </p>
@@ -4683,6 +4732,7 @@
               <button
                 type="button"
                 class="extra-signature__btn js-extra-order"
+                data-i18n-desc="extra-desc-laundry"
                 data-laundry-menu="true"
                 data-product="Shirt"
                 data-price="3"
@@ -4690,7 +4740,7 @@
                 data-images="img/shirt.png,img/tshirt.png,img/dress.png,img/pijamas.png,img/underwear.png,img/skirt.png,img/suit.png,img/socks.png,img/sweater.png,img/jacket.png"
                 data-description="In-room laundry — choose wash &amp; ironing or ironing only per item."
               >
-                Choose Your Service
+                <span data-i18n="extra-laundry-btn">Choose Your Service</span>
               </button>
             </div>
           </div>
@@ -4788,12 +4838,20 @@
         </article> -->
       </div>
     </section>
-    <section class="extra-continue" aria-label="Extra continue design">
+    <section
+      class="extra-continue"
+      data-i18n-aria-label="extra-continue-kicker"
+      aria-label="In-room celebration decor"
+    >
       <div class="container">
         <div class="extra-continue__hero-copy">
-          <p class="extra-continue__hero-kicker">In-room celebration decor</p>
-          <h2>Surprise your most beloved</h2>
-          <p class="extra-continue__hero-sub">And make them feel like home.</p>
+          <p class="extra-continue__hero-kicker" data-i18n="extra-continue-kicker">
+            In-room celebration decor
+          </p>
+          <h2 data-i18n="extra-continue-heading">Surprise your most beloved</h2>
+          <p class="extra-continue__hero-sub" data-i18n="extra-continue-sub">
+            And make them feel like home.
+          </p>
         </div>
 
         <div class="extra-continue__decor-wrap">
@@ -4801,6 +4859,7 @@
             class="extra-continue__decor-arrow extra-continue__decor-arrow--prev"
             type="button"
             id="extra-continue-prev"
+            data-i18n-aria-label="extra-decor-prev"
             aria-label="Previous decor"
           >
             <i class="fa fa-angle-left" aria-hidden="true"></i>
@@ -4838,6 +4897,7 @@
                 <span
                   class="extra-continue__decor-price__label"
                   id="extra-continue-price-label"
+                  data-i18n="decor-price-birthday"
                   >Birthday decor</span
                 >
                 <span
@@ -4848,6 +4908,7 @@
                 <span
                   class="extra-continue__decor-price__note"
                   id="extra-continue-price-note"
+                  data-i18n="extra-decor-price-note"
                   >Decor 60&euro; &middot; bouquet +60&euro; below</span
                 >
               </div>
@@ -4880,6 +4941,7 @@
             class="extra-continue__decor-arrow extra-continue__decor-arrow--next"
             type="button"
             id="extra-continue-next"
+            data-i18n-aria-label="extra-decor-next"
             aria-label="Next decor"
           >
             <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -4890,11 +4952,16 @@
           class="extra-continue__options"
           id="extra-continue-choices"
           hidden
+          data-i18n-aria-label="extra-decor-options"
           aria-label="Optional decor extras"
         >
           <div class="extra-continue__price-stack">
             <div class="extra-continue__price-row extra-continue__price-row--base">
-              <span class="extra-continue__price-row-label">Room decor (included)</span>
+              <span
+                class="extra-continue__price-row-label"
+                data-i18n="extra-decor-room-included"
+                >Room decor (included)</span
+              >
               <strong class="extra-continue__price-row-amount" id="extra-decor-base-price"
                 >60&euro;</strong
               >
@@ -4904,6 +4971,7 @@
                 type="button"
                 class="extra-continue__extra-picker-nav"
                 id="extra-extra-prev"
+                data-i18n-aria-label="extra-decor-prev-extra"
                 aria-label="Previous extra"
                 hidden
               >
@@ -4914,12 +4982,14 @@
                   <div class="extra-continue__bouquet-row-main">
                     <div
                       class="extra-continue__extra-product-swipe"
+                      data-i18n-aria-label="extra-decor-browse"
                       aria-label="Browse products in this category"
                     >
                       <button
                         type="button"
                         class="extra-continue__extra-product-nav"
                         id="extra-product-prev"
+                        data-i18n-aria-label="extra-decor-prev-product"
                         aria-label="Previous product"
                       >
                         &#8249;
@@ -4938,13 +5008,16 @@
                         type="button"
                         class="extra-continue__extra-product-nav"
                         id="extra-product-next"
+                        data-i18n-aria-label="extra-decor-next-product"
                         aria-label="Next product"
                       >
                         &#8250;
                       </button>
                     </div>
                     <div class="extra-continue__bouquet-row-copy">
-                      <strong id="extra-extra-name">Flower bouquet</strong>
+                      <strong id="extra-extra-name" data-i18n="extra-decor-flower-bouquet"
+                        >Flower bouquet</strong
+                      >
                       <span id="extra-extra-price">+60&euro;</span>
                     </div>
                   </div>
@@ -4953,6 +5026,7 @@
                     class="extra-continue__bouquet-add"
                     id="extra-bouquet-toggle"
                     aria-pressed="false"
+                    data-i18n-aria-label="extra-decor-add-bouquet"
                     aria-label="Add flower bouquet for 60 euros"
                   >
                     <i class="fa fa-plus" aria-hidden="true"></i>
@@ -4963,6 +5037,7 @@
                 type="button"
                 class="extra-continue__extra-picker-nav"
                 id="extra-extra-next"
+                data-i18n-aria-label="extra-decor-next-extra"
                 aria-label="Next extra"
                 hidden
               >
@@ -4971,7 +5046,8 @@
             </div>
           </div>
           <p class="extra-continue__options-total" aria-live="polite">
-            Total <strong id="extra-choices-total">60&euro;</strong>
+            <span data-i18n="extra-decor-total">Total</span>
+            <strong id="extra-choices-total">60&euro;</strong>
           </p>
         </div>
 
@@ -4980,9 +5056,10 @@
             type="button"
             class="extra-continue__special-btn extra-btn-cart-add"
             id="extra-decor-add-cart"
+            data-i18n-aria-label="extra-decor-add-cart"
             aria-label="Add decor to cart"
           >
-            Add to cart
+            <span data-i18n="extra-order-add-cart">Add to cart</span>
           </button>
           <p
             class="extra-continue__special-hint"
@@ -5063,11 +5140,16 @@
           type="button"
           class="extra-order-modal__close"
           data-modal-close
+          data-i18n-aria-label="extra-order-close"
           aria-label="Close order modal"
         >
           &times;
         </button>
-        <p class="extra-order-modal__title" id="extra-order-title">
+        <p
+          class="extra-order-modal__title"
+          id="extra-order-title"
+          data-i18n="extra-order-title"
+        >
           Add to cart
         </p>
         <div class="extra-order-card">
@@ -5079,6 +5161,7 @@
               type="button"
               class="extra-order-card__media-nav"
               id="extra-order-image-prev"
+              data-i18n-aria-label="extra-order-img-prev"
               aria-label="Previous product image"
             >
               &lt;
@@ -5093,6 +5176,7 @@
               type="button"
               class="extra-order-card__media-nav"
               id="extra-order-image-next"
+              data-i18n-aria-label="extra-order-img-next"
               aria-label="Next product image"
             >
               &gt;
@@ -5103,6 +5187,7 @@
             class="extra-order-perfume-sizes"
             hidden
             role="group"
+            data-i18n-aria-label="extra-order-perfume-size"
             aria-label="Perfume bottle size"
           ></div>
           <div
@@ -5110,6 +5195,7 @@
             class="extra-order-laundry-services"
             hidden
             role="group"
+            data-i18n-aria-label="extra-order-laundry-type"
             aria-label="Laundry service type"
           ></div>
           <div class="extra-order-card__row">
@@ -5121,6 +5207,7 @@
                 type="button"
                 class="extra-order-qty__btn"
                 id="extra-order-minus"
+                data-i18n-aria-label="extra-order-qty-minus"
                 aria-label="Decrease quantity"
               >
                 -
@@ -5130,6 +5217,7 @@
                 type="button"
                 class="extra-order-qty__btn"
                 id="extra-order-plus"
+                data-i18n-aria-label="extra-order-qty-plus"
                 aria-label="Increase quantity"
               >
                 +
@@ -5143,10 +5231,15 @@
             class="extra-order-flower-picker"
             id="extra-order-flower-picker"
             role="group"
+            data-i18n-aria-label="extra-order-flower-colour"
             aria-label="Rose colour"
           ></div>
           <div class="extra-order-variant-wrap" id="extra-order-variant-wrap" hidden>
-            <p class="extra-order-variant-wrap__label" id="extra-order-variant-label">
+            <p
+              class="extra-order-variant-wrap__label"
+              id="extra-order-variant-label"
+              data-i18n="extra-order-variant-flowers"
+            >
               Choose your flowers
             </p>
             <div
@@ -5161,9 +5254,12 @@
           class="extra-order-discover"
           id="extra-order-discover"
           hidden
+          data-i18n-aria-label="extra-order-discover-label"
           aria-label="More in-room extras"
         >
-          <p class="extra-order-discover__eyebrow">While you are here</p>
+          <p class="extra-order-discover__eyebrow" data-i18n="extra-order-discover-eyebrow">
+            While you are here
+          </p>
           <div
             class="extra-order-discover__grid"
             id="extra-order-discover-grid"
@@ -5171,10 +5267,11 @@
         </aside>
         <div class="extra-order-modal__actions">
           <div class="extra-order-form__total">
-            Selected total: <strong id="extra-modal-line-total">0&euro;</strong>
+            <span data-i18n="extra-order-selected-total">Selected total:</span>
+            <strong id="extra-modal-line-total">0&euro;</strong>
           </div>
           <button type="button" class="extra-btn-cart-add" id="extra-add-to-cart-btn">
-            Add to cart
+            <span data-i18n="extra-order-add-cart">Add to cart</span>
           </button>
           <p
             class="extra-order-form__status"
@@ -5191,6 +5288,7 @@
         type="button"
         class="extra-cart-widget__toggle"
         id="extra-cart-toggle"
+        data-i18n-aria-label="extra-cart-open"
         aria-label="Open shopping cart"
       >
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -5206,19 +5304,23 @@
       class="extra-cart-drawer"
       id="extra-cart-drawer"
       aria-hidden="true"
+      data-i18n-aria-label="extra-cart-label"
       aria-label="Shopping cart"
     >
       <div class="extra-cart-drawer__backdrop" data-cart-close></div>
       <div class="extra-cart-drawer__panel">
         <header class="extra-cart-drawer__header">
           <div class="extra-cart-drawer__header-text">
-            <span class="extra-cart-drawer__kicker">Room delivery</span>
-            <h2>Your order</h2>
+            <span class="extra-cart-drawer__kicker" data-i18n="extra-cart-kicker"
+              >Room delivery</span
+            >
+            <h2 data-i18n="extra-cart-heading">Your order</h2>
           </div>
           <button
             type="button"
             class="extra-cart-drawer__close"
             data-cart-close
+            data-i18n-aria-label="extra-cart-close"
             aria-label="Close cart"
           >
             &times;
@@ -5226,7 +5328,11 @@
         </header>
         <div class="extra-cart-drawer__main">
           <div class="extra-cart-drawer__items-block">
-            <p class="extra-cart-drawer__section-label" id="extra-cart-items-label">
+            <p
+              class="extra-cart-drawer__section-label"
+              id="extra-cart-items-label"
+              data-i18n="extra-cart-items"
+            >
               Items
             </p>
             <div class="extra-cart-drawer__items-wrap">
@@ -5240,8 +5346,10 @@
             id="extra-cart-checkout-panel"
           >
             <div class="extra-delivery">
-              <p class="extra-delivery__title">Delivery details</p>
-              <p class="extra-delivery__hint">
+              <p class="extra-delivery__title" data-i18n="extra-cart-delivery-title">
+                Delivery details
+              </p>
+              <p class="extra-delivery__hint" data-i18n="extra-cart-delivery-hint">
                 Tell us when to bring your order to your room.
               </p>
               <form
@@ -5260,13 +5368,16 @@
                   value="info@derandhotel.com"
                 />
                 <div class="extra-delivery__field">
-                  <label for="extra-checkout-reservation-name"
+                  <label
+                    for="extra-checkout-reservation-name"
+                    data-i18n="extra-cart-name-label"
                     >Name on reservation</label
                   >
                   <input
                     id="extra-checkout-reservation-name"
                     type="text"
                     name="lastName"
+                    data-i18n-placeholder="extra-cart-name-placeholder"
                     placeholder="As on your booking"
                     autocomplete="name"
                     required
@@ -5274,7 +5385,9 @@
                 </div>
                 <div class="extra-delivery__row">
                   <div class="extra-delivery__field">
-                    <label for="extra-checkout-date">Date</label>
+                    <label for="extra-checkout-date" data-i18n="extra-cart-date"
+                      >Date</label
+                    >
                     <input
                       id="extra-checkout-date"
                       type="date"
@@ -5283,7 +5396,9 @@
                     />
                   </div>
                   <div class="extra-delivery__field">
-                    <label for="extra-checkout-time">Time</label>
+                    <label for="extra-checkout-time" data-i18n="extra-cart-time"
+                      >Time</label
+                    >
                     <input
                       id="extra-checkout-time"
                       type="time"
@@ -5294,11 +5409,15 @@
                 </div>
                 <div class="extra-delivery__field extra-delivery__field--notes">
                   <label for="extra-checkout-message"
-                    >Notes <span class="extra-delivery__optional">optional</span></label
+                    ><span data-i18n="extra-cart-notes">Notes</span>
+                    <span class="extra-delivery__optional" data-i18n="extra-cart-optional"
+                      >optional</span
+                    ></label
                   >
                   <textarea
                     id="extra-checkout-message"
                     name="message"
+                    data-i18n-placeholder="extra-cart-notes-placeholder"
                     placeholder="Card message or special request"
                   ></textarea>
                 </div>
@@ -5307,7 +5426,7 @@
           </div>
           <footer class="extra-cart-drawer__footer">
             <div class="extra-cart-drawer__row">
-              <span>Order total</span>
+              <span data-i18n="extra-cart-order-total">Order total</span>
               <strong id="extra-cart-subtotal">0&euro;</strong>
             </div>
             <button
@@ -5317,7 +5436,7 @@
               id="extra-cart-pay-btn"
               disabled
             >
-              Pay now
+              <span data-i18n="extra-cart-pay">Pay now</span>
             </button>
             <p
               class="extra-cart-drawer__form-status"
@@ -5340,6 +5459,7 @@
         <button
           type="button"
           class="extra-image-zoom-modal__close"
+          data-i18n-aria-label="extra-zoom-close"
           aria-label="Close zoomed image"
           data-zoom-close
         >
@@ -5349,6 +5469,7 @@
           class="extra-image-zoom-modal__img"
           id="extra-image-zoom-modal-img"
           src=""
+          data-i18n-alt="extra-zoom-alt"
           alt="Zoomed image"
         />
       </div>
@@ -5357,22 +5478,12 @@
       <div class="container">
         <div class="footer__brandbar">
           <a href="index.html" class="footer__brandbar__logo">
-            <img
-              src="img/logo3.webp"
-              alt="Derand Crest"
-              loading="lazy"
-              decoding="async"
-            />
+            <img src="img/logo3.webp" alt="best hotel in pristina"  loading="lazy" decoding="async">
           </a>
           <span class="footer__brandbar__divider"></span>
           <a href="index.html" class="footer__brandbar__partner">
             <span data-i18n="footer-powered">Powered by</span>
-            <img
-              src="img/logo/logo-1.webp"
-              alt="Powered by partner logo"
-              loading="lazy"
-              decoding="async"
-            />
+            <img src="img/logo/logo-1.webp" alt="Best hotels in Prishtina"  loading="lazy" decoding="async">
           </a>
         </div>
 
@@ -5493,41 +5604,31 @@
                       >
                     </li>
                     <li>
-                      <a href="guestapp.html" data-i18n="footer-link-4"
-                        >Derand Magazine</a
-                      >
+                      <a href="guestapp.html" data-i18n="footer-link-4">Derand Magazine</a>
                     </li>
                   </ul>
                   <ul>
                     <li>
-                      <a href="careers.html" data-i18n="footer-link-5"
-                        >Careers</a
-                      >
+                      <a href="careers.html" data-i18n="footer-link-5">Careers</a>
                     </li>
                     <li>
-                      <a href="faqs.html" data-i18n="footer-link-6">FAQs</a>
+                      <a href="faqs.html" data-i18n="footer-link-6"
+                        >FAQs</a
+                      >
                     </li>
                     <li>
                       <a href="privacypolicy.html" data-i18n="footer-link-7"
                         >Privacy Policy</a
                       >
                     </li>
-                    <li>
-                      <a href="termsofservices.html" data-i18n="footer-link-8"
-                        >Payments</a
-                      >
-                    </li>
+                    <li><a href="termsofservices.html" data-i18n="footer-link-8">Payments</a></li>
                   </ul>
                   <ul>
                     <li>
-                      <a href="guestapp.html" data-i18n="footer-link-9"
-                        >Guest App
-                      </a>
+                      <a href="guestapp.html" data-i18n="footer-link-9">Guest App </a>
                     </li>
                     <li>
-                      <a href="our-location.html" data-i18n="footer-link-11"
-                        >Our Location</a
-                      >
+                      <a href="our-location.html" data-i18n="footer-link-11">Our Location</a>
                     </li>
                   </ul>
                 </div>
@@ -5573,52 +5674,76 @@
             ><i class="fa fa-music"></i
           ></a>
         </div>
+
       </div>
     </footer>
+    <script src="js/extra-i18n.js"></script>
     <script src="js/jquery-3.3.1.min.js" defer></script>
     <script src="js/bootstrap.min.js" defer></script>
+    <script src="js/jquery.nice-select.min.js" defer></script>
+    <script src="js/jquery-ui.min.js" defer></script>
     <script src="js/jquery.slicknav.js" defer></script>
-    <script src="js/site-onboarding-sequence.js?v=9" defer></script>
-    <script src="js/main.js?v=20260416-2" defer></script>
+    <script src="js/owl.carousel.min.js" defer></script>
+    <script src="js/site-onboarding-sequence.js?v=8" defer></script>
+    <script src="js/main.js?v=20260515-1" defer></script>
         <script src="js/site-whatsapp.js?v=8" defer></script>
     <script>
       (function () {
         var CART_STORAGE_KEY = "derandExtraCart";
         var FLOWER_VARIANT_COUNT = 3;
-        var FLOWER_VARIANT_LABELS = ["Red", "White", "Rose"];
+        function i18n(key, vars) {
+          return window.ExtraI18n
+            ? window.ExtraI18n.t(key, undefined, vars)
+            : key;
+        }
+
+        function getFlowerVariantLabels() {
+          return [
+            i18n("extra-flower-red"),
+            i18n("extra-flower-white"),
+            i18n("extra-flower-rose"),
+          ];
+        }
+
         var EXTRA_DISCOVER_ITEMS = {
           flowers: {
             id: "flowers",
+            labelKey: "extra-discover-flowers",
             label: "Flowers",
             image: "img/flowers.png",
             selector: "#extra-flowers .js-extra-order",
           },
           champagne: {
             id: "champagne",
+            labelKey: "extra-discover-champagne",
             label: "Champagne",
             image: "img/champaignee.png",
             selector: "#extra-champagne .js-extra-order",
           },
           perfumes: {
             id: "perfumes",
+            labelKey: "extra-discover-perfumes",
             label: "Perfumes",
             image: "img/armani.png",
             selector: "#extra-perfumes .js-extra-order",
           },
           chocolates: {
             id: "chocolates",
+            labelKey: "extra-discover-chocolates",
             label: "Tog chocolates",
             image: "img/tog.png",
             selector: "#extra-chocolates .js-extra-order",
           },
           decor: {
             id: "decor",
+            labelKey: "extra-discover-decor",
             label: "Decor",
             image: "img/valentineday.png",
             selector: "#extra-flowers .js-extra-order",
           },
           laundry: {
             id: "laundry",
+            labelKey: "extra-discover-laundry",
             label: "Laundry",
             image: "img/shirt.png",
             selector: "#extra-laundry .js-extra-order",
@@ -5651,13 +5776,33 @@
         var LAUNDRY_SERVICES = [
           {
             id: "wash-iron",
+            labelKey: "extra-laundry-wash-iron",
             label: "Wash & ironing",
           },
           {
             id: "iron-only",
+            labelKey: "extra-laundry-iron-only",
             label: "Ironing only",
           },
         ];
+
+        function getLaundryServiceLabel(service) {
+          return service && service.labelKey
+            ? i18n(service.labelKey)
+            : service.label || "";
+        }
+
+        function getPerfumeDescriptionByIndex(index) {
+          var id = PERFUME_CATALOG_IDS[index];
+          return id ? i18n("perfume-desc-" + id) : productDescription;
+        }
+
+        function getModalDescriptionForIndex(index) {
+          if (isPerfumeOrder) return getPerfumeDescriptionByIndex(index);
+          if (isChocolateOrder) return i18n("extra-desc-chocolate");
+          if (isLaundryOrder) return i18n("extra-desc-laundry");
+          return productDescription;
+        }
 
         var LAUNDRY_CATALOG_IDS = ["shirt", "tshirt", "dress", "pijamas", "underwear", "trousers", "skirt", "suit", "socks", "sweater", "jacket"];
 
@@ -6312,7 +6457,7 @@
           var slideName =
             (entry ? entry.name : getSlideProductName(currentImageIndex)) +
             " \u2014 " +
-            service.label;
+            getLaundryServiceLabel(service);
           productEl.textContent = slideName;
           imageEl.alt = slideName;
           unitPriceEl.textContent = formatEuro(currentPrice);
@@ -6346,7 +6491,8 @@
             btn.type = "button";
             btn.className = "extra-order-laundry-services__btn";
             var servicePrice = getLaundryPrice(currentImageIndex, service.id);
-            btn.textContent = service.label + " \u2014 " + formatEuro(servicePrice);
+            btn.textContent =
+              getLaundryServiceLabel(service) + " \u2014 " + formatEuro(servicePrice);
             btn.setAttribute("data-service-id", service.id);
             if (service.id === activeId) {
               btn.classList.add("is-active");
@@ -6551,8 +6697,9 @@
             return "";
           }
           var image = currentImages[index] || "";
-          if (isFlowerOrder && index < FLOWER_VARIANT_LABELS.length) {
-            return FLOWER_VARIANT_LABELS[index];
+          var flowerLabels = getFlowerVariantLabels();
+          if (isFlowerOrder && index < flowerLabels.length) {
+            return flowerLabels[index];
           }
           if (productBaseName.indexOf("Wine") !== -1) {
             return "Wine selection";
@@ -6642,7 +6789,7 @@
 
             var label = document.createElement("span");
             label.className = "extra-order-discover__name";
-            label.textContent = item.label;
+            label.textContent = item.labelKey ? i18n(item.labelKey) : item.label;
 
             btn.appendChild(thumb);
             btn.appendChild(label);
@@ -6685,7 +6832,7 @@
             colorBtn.className =
               "extra-order-flower-picker__btn" +
               (v === currentImageIndex ? " is-active" : "");
-            colorBtn.textContent = FLOWER_VARIANT_LABELS[v];
+            colorBtn.textContent = getFlowerVariantLabels()[v];
             colorBtn.setAttribute("data-variant-index", String(v));
             flowerPickerEl.appendChild(colorBtn);
           }
@@ -6771,8 +6918,8 @@
           variantStrip.innerHTML = "";
           if (variantLabelEl) {
             variantLabelEl.textContent = isFlowersModalCategory()
-              ? "Choose your flowers"
-              : "More options";
+              ? i18n("extra-order-variant-flowers")
+              : i18n("extra-order-variant-more");
           }
 
           for (var i = 0; i < count; i++) {
@@ -6854,24 +7001,10 @@
           var slideName = getSlideProductName(currentImageIndex);
           productEl.textContent = slideName;
           imageEl.alt = slideName;
-          if (descriptionEl && isPerfumeOrder) {
-            var perfumeEntry = getPerfumeCatalogEntry(currentImageIndex);
-            descriptionEl.textContent =
-              (perfumeEntry && perfumeEntry.description) ||
-              productDescription ||
-              "";
-          } else if (descriptionEl && isChocolateOrder) {
-            var chocolateEntry = getChocolateCatalogEntry(currentImageIndex);
-            descriptionEl.textContent =
-              (chocolateEntry && chocolateEntry.description) ||
-              productDescription ||
-              "";
-          } else if (descriptionEl && isLaundryOrder) {
-            var laundryEntry = getLaundryCatalogEntry(currentImageIndex);
-            descriptionEl.textContent =
-              (laundryEntry && laundryEntry.description) ||
-              productDescription ||
-              "";
+          if (descriptionEl && (isPerfumeOrder || isChocolateOrder || isLaundryOrder)) {
+            descriptionEl.textContent = getModalDescriptionForIndex(
+              currentImageIndex,
+            );
           }
           if (isPerfumeOrder) {
             currentPrice = linePriceAt(currentImageIndex);
@@ -6944,7 +7077,10 @@
               return parsePrice(item);
             });
           }
-          var desc = btn.getAttribute("data-description") || "";
+          var descKey = btn.getAttribute("data-i18n-desc");
+          var desc = descKey
+            ? i18n(descKey)
+            : btn.getAttribute("data-description") || "";
           var price = parsePrice(btn.getAttribute("data-price") || "0");
 
           productBaseName = product;
@@ -7068,55 +7204,9 @@
               parsedSpiritImages.push("img/champ.jpg");
             }
             spiritsDescriptions = spiritsProducts.map(function (item) {
-              if (item === "Moët & Chandon — Brut") {
-                return "An iconic house champagne with bright fruitiness, a seductive palate, and an elegant, balanced finish.";
-              }
-              if (item === "Moët & Chandon — Ice") {
-                return "The first champagne made to be served over ice, featuring powerful tropical fruit aromas and a refreshing finish.";
-              }
-              if (item === "Moët & Chandon — Rosé") {
-                return "A radiant rosé champagne with lively red berry aromas, a vibrant palate, and a romantic character.";
-              }
-              if (item === "Moët & Chandon — Ice Rosé") {
-                return "A fresh rosé champagne designed for ice, blending sweet red berries, cherries, and a touch of cranberry.";
-              }
-              if (item === "Dom Pérignon — Brut") {
-                return "A prestigious vintage champagne offering exceptional depth, with notes of dried fruits, toasted brioche, and a silky finish.";
-              }
-              if (item === "Dom Pérignon — Brut Luminous") {
-                return "The legendary vintage Dom Pérignon in a striking, light-up bottle, combining luxury taste with a vibrant visual presence.";
-              }
-              if (item === "Don Julio — Añejo") {
-                return "Aged 18 months in oak barrels, featuring a rich flavor profile with citrus notes and a hint of caramel.";
-              }
-              if (item === "Don Julio — Reposado") {
-                return "Aged 8 months, offering an exceptionally smooth finish with inviting aromas of lemon, honey, and light spice.";
-              }
-              if (item === "Don Julio — Blanco") {
-                return "A crisp, agave-forward tequila with fresh citrus notes and a clean finish, ideal for premium cocktails.";
-              }
-              if (item === "Don Julio — 1942") {
-                return "An iconic, ultra-premium tequila that is exceptionally smooth with rich notes of oak, vanilla, and roasted agave.";
-              }
-              if (item === "Cîroc Vodka") {
-                return "A modern, ultra-premium vodka distilled five times from fine French grapes for a smooth, subtly sweet taste.";
-              }
-              if (item === "Grey Goose Vodka") {
-                return "A world-class French vodka made from winter wheat and spring water, renowned for its crisp, clean, and smooth texture.";
-              }
-              if (item === "Belvedere Vodka") {
-                return "A luxury Polish rye vodka offering a structured, velvety texture with subtle hints of almond and vanilla.";
-              }
-              if (item === "Tanqueray — Ten") {
-                return "A super-premium gin distilled with whole citrus fruits, bursting with bright notes of grapefruit, lime, and orange.";
-              }
-              if (item === "Hendrick's Gin") {
-                return "A uniquely refreshing gin infused with cucumber and rose petals, offering a distinct floral and smooth flavor profile.";
-              }
-              if (item === "Jägermeister") {
-                return "Herbal liqueur served chilled in your room with premium glassware.";
-              }
-              return "Served chilled in your room with premium glassware.";
+              return window.ExtraI18n
+                ? window.ExtraI18n.spiritDescription(item)
+                : "";
             });
             currentImages = parsedSpiritImages.slice(
               0,
@@ -7278,8 +7368,12 @@
             cartItemsEl.innerHTML =
               '<div class="extra-cart-empty">' +
               '<span class="extra-cart-empty__icon" aria-hidden="true">&#128722;</span>' +
-              "<p>Your cart is empty</p>" +
-              "<p>Add something from our extras below.</p>" +
+              "<p>" +
+              i18n("extra-cart-empty") +
+              "</p>" +
+              "<p>" +
+              i18n("extra-cart-empty-hint") +
+              "</p>" +
               "</div>";
             return;
           }
@@ -7288,7 +7382,7 @@
           for (var i = 0; i < cart.length; i++) {
             var item = cart[i];
             var lineTotal = (item.price || 0) * (item.qty || 0);
-            var title = item.productBase || "Extra";
+            var title = item.productBase || i18n("extra-cart-extra-fallback");
             var variantText =
               item.variantLabel && !isMlOnlyVariantLabel(item.variantLabel)
                 ? item.variantLabel
@@ -7321,17 +7415,23 @@
               '<div class="extra-cart-item__qty">' +
               '<button type="button" data-cart-qty="-1" data-cart-id="' +
               item.id +
-              '" aria-label="Decrease quantity">\u2212</button>' +
+              '" aria-label="' +
+              i18n("extra-cart-decrease") +
+              '">\u2212</button>' +
               "<span>" +
               item.qty +
               "</span>" +
               '<button type="button" data-cart-qty="1" data-cart-id="' +
               item.id +
-              '" aria-label="Increase quantity">+</button>' +
+              '" aria-label="' +
+              i18n("extra-cart-increase") +
+              '">+</button>' +
               "</div>" +
               '<button type="button" class="extra-cart-item__remove" data-cart-remove="' +
               item.id +
-              '">Remove</button>' +
+              '">' +
+              i18n("extra-cart-remove") +
+              "</button>" +
               "</div>" +
               "</div>" +
               "</article>";
@@ -7362,9 +7462,7 @@
           if (options.skipToast !== true) {
             showToast(
               options.toastMessage ||
-                (merged
-                  ? "Updated quantity in your cart"
-                  : "Added to your cart"),
+                (merged ? i18n("extra-toast-updated") : i18n("extra-toast-added-cart")),
             );
           }
           if (options.openCart !== false) openCart();
@@ -7514,8 +7612,7 @@
           var selectedCount = getModalSelectionCount();
           if (selectedCount < 1) {
             if (modalStatusEl) {
-              modalStatusEl.textContent =
-                "Please press + to choose how many you want (at least 1).";
+              modalStatusEl.textContent = i18n("extra-modal-qty-hint");
             }
             return;
           }
@@ -7546,8 +7643,11 @@
           var triggerSelector = focusMap[focus] || focusMap.flowers;
 
           var orderTitle = document.getElementById("extra-order-title");
-          if (orderTitle) orderTitle.textContent = "Add to cart";
-          if (addToCartBtn) addToCartBtn.textContent = "Add to cart";
+          if (orderTitle) orderTitle.textContent = i18n("extra-order-title");
+          if (addToCartBtn) {
+            var addLabel = addToCartBtn.querySelector("[data-i18n]");
+            if (addLabel) addLabel.textContent = i18n("extra-order-add-cart");
+          }
 
           var preloder = document.getElementById("preloder");
           if (preloder) preloder.style.display = "none";
@@ -7582,8 +7682,7 @@
           var selectedCount = getModalSelectionCount();
           if (selectedCount < 1) {
             if (modalStatusEl) {
-              modalStatusEl.textContent =
-                "Please press + to choose how many you want (at least 1).";
+              modalStatusEl.textContent = i18n("extra-modal-qty-hint");
             }
             return;
           }
@@ -7609,16 +7708,7 @@
                   qty: addQty,
                   description: isSpiritsOrder
                     ? spiritsDescriptions[i] || productDescription
-                    : isPerfumeOrder
-                      ? (getPerfumeCatalogEntry(i) || {}).description ||
-                        productDescription
-                      : isChocolateOrder
-                        ? (getChocolateCatalogEntry(i) || {}).description ||
-                          productDescription
-                        : isLaundryOrder
-                          ? (getLaundryCatalogEntry(i) || {}).description ||
-                            productDescription
-                          : productDescription,
+                    : getModalDescriptionForIndex(i),
                 },
                 { closeModal: false, openCart: false, skipToast: true },
               )
@@ -7633,8 +7723,8 @@
           openCart();
           showToast(
             addedLines > 1
-              ? "Added your selections to the cart"
-              : "Added to your cart",
+              ? i18n("extra-toast-added-selections")
+              : i18n("extra-toast-added"),
           );
         }
 
@@ -7645,9 +7735,9 @@
           if (!upsertBookingLine(line)) return false;
           syncModalQtyFromBookingLines();
           if (modalStatusEl) {
-            modalStatusEl.textContent = "Added to your booking.";
+            modalStatusEl.textContent = i18n("extra-modal-added-booking");
           }
-          showToast("Added to your booking");
+          showToast(i18n("extra-toast-added-booking"));
           updateModalView();
           return true;
         }
@@ -7658,9 +7748,9 @@
           if (!decrementBookingLine(lineId)) return false;
           syncModalQtyFromBookingLines();
           if (modalStatusEl) {
-            modalStatusEl.textContent = "Removed from your booking.";
+            modalStatusEl.textContent = i18n("extra-modal-removed-booking");
           }
-          showToast("Removed from your booking");
+          showToast(i18n("extra-toast-removed-booking"));
           updateModalView();
           return true;
         }
@@ -7686,22 +7776,13 @@
               qty: 1,
               description: isSpiritsOrder
                 ? spiritsDescriptions[i] || productDescription
-                : isPerfumeOrder
-                  ? (getPerfumeCatalogEntry(i) || {}).description ||
-                    productDescription
-                  : isChocolateOrder
-                    ? (getChocolateCatalogEntry(i) || {}).description ||
-                      productDescription
-                    : isLaundryOrder
-                      ? (getLaundryCatalogEntry(i) || {}).description ||
-                        productDescription
-                      : productDescription,
+                : getModalDescriptionForIndex(i),
             },
             {
               closeModal: false,
               openCart: false,
               skipToast: false,
-              toastMessage: "Added to cart",
+              toastMessage: i18n("extra-toast-added"),
             },
           );
 
@@ -7940,7 +8021,7 @@
           event.preventDefault();
           if (!cart.length) {
             if (checkoutStatusEl) {
-              checkoutStatusEl.textContent = "Your cart is empty.";
+              checkoutStatusEl.textContent = i18n("extra-checkout-empty");
             }
             return;
           }
@@ -8031,8 +8112,7 @@
           if (cartPayBtn) cartPayBtn.disabled = true;
           if (checkoutStatusEl) {
             checkoutStatusEl.classList.remove("is-error");
-            checkoutStatusEl.textContent =
-              "Opening secure payment... Order email will be sent after successful payment.";
+            checkoutStatusEl.textContent = i18n("extra-checkout-opening");
           }
 
           window.setTimeout(function () {
@@ -8041,79 +8121,18 @@
             if (cartPayBtn) cartPayBtn.disabled = cart.length === 0;
           }, 600);
         });
-      })();
 
-    </script>
-    <script>
-      (function () {
-        var heading = document.getElementById("extra-heading-title");
-        if (!heading) return;
-
-        var titleTranslations = {
-          en: "Explore our exclusive products",
-          de: "Entdecken Sie unsere exklusiven Produkte",
-          al: "Zbuloni produktet tona ekskluzive",
-        };
-
-        var subtitle = document.getElementById("extra-heading-subtitle");
-        var subtitleTranslations = {
-          en: "available at your room",
-          de: "verfugbar in Ihrem Zimmer",
-          al: "e disponueshme ne dhomen tuaj",
-        };
-
-        function currentLang() {
-          var htmlLang = (
-            document.documentElement.getAttribute("lang") || ""
-          ).toLowerCase();
-          if (htmlLang === "de" || htmlLang === "al") return htmlLang;
-          var stored = (
-            localStorage.getItem("selectedLanguage") ||
-            localStorage.getItem("language") ||
-            localStorage.getItem("lang") ||
-            "en"
-          )
-            .toLowerCase()
-            .trim();
-          if (stored === "de" || stored === "al") return stored;
-          return "en";
-        }
-
-        function apply() {
-          var lang = currentLang();
-          document.documentElement.setAttribute("lang", lang);
-          heading.textContent = titleTranslations[lang] || titleTranslations.en;
-          if (subtitle) {
-            subtitle.textContent =
-              subtitleTranslations[lang] || subtitleTranslations.en;
+        document.addEventListener("derand:languagechange", function () {
+          renderCart();
+          renderOrderDiscover(currentModalCategoryId);
+          if (modal && modal.classList.contains("is-open")) {
+            updateModalView();
+            renderFlowerPicker();
+            renderVariantStrip();
           }
-          var allBtns = document.querySelectorAll(".lang-btn[data-lang]");
-          for (var i = 0; i < allBtns.length; i++) {
-            allBtns[i].classList.toggle(
-              "lang-active",
-              allBtns[i].getAttribute("data-lang") === lang,
-            );
-          }
-        }
-
-        function setLang(lang) {
-          localStorage.setItem("selectedLanguage", lang);
-          localStorage.setItem("language", lang);
-          localStorage.setItem("lang", lang);
-          document.documentElement.setAttribute("lang", lang);
-          apply();
-        }
-
-        document.addEventListener("DOMContentLoaded", apply);
-        window.addEventListener("load", apply);
-        document.addEventListener("click", function (event) {
-          var btn = event.target.closest(".lang-btn[data-lang]");
-          if (!btn) return;
-          var lang = (btn.getAttribute("data-lang") || "en").toLowerCase();
-          if (lang !== "en" && lang !== "de" && lang !== "al") lang = "en";
-          setLang(lang);
         });
       })();
+
     </script>
     <script>
       (function () {
@@ -8287,10 +8306,12 @@
             src: "img/valentineday.png",
             alt: "Valentine's room decor",
             label: "Valentine's",
+            labelKey: "decor-label-valentine",
             price: "60\u20ac",
             priceAmount: 60,
             cartName: "Valentine's room decor",
             priceLabel: "Valentine decor",
+            priceLabelKey: "decor-price-valentine",
             showPrice: true,
             canAddToCart: true,
             showExtras: true,
@@ -8305,10 +8326,12 @@
             src: "img/birthday.png",
             alt: "Birthday room decor",
             label: "Birthday",
+            labelKey: "decor-label-birthday",
             price: "60\u20ac",
             priceAmount: 60,
             cartName: "Birthday room decor",
             priceLabel: "Birthday decor",
+            priceLabelKey: "decor-price-birthday",
             showPrice: true,
             canAddToCart: true,
             showExtras: true,
@@ -8325,10 +8348,12 @@
             src: "img/custom.png",
             alt: "Custom room decor",
             label: "Custom",
+            labelKey: "decor-label-custom",
             price: "",
             priceAmount: 0,
             cartName: "Custom room decor",
             priceLabel: "Custom decor",
+            priceLabelKey: "decor-price-custom",
             showPrice: false,
             canAddToCart: false,
             showExtras: false,
@@ -8339,10 +8364,16 @@
         var centerIndex = 1; // initial state matches screenshot
         var isAnimating = false;
 
+        function decorT(key, vars) {
+          return window.ExtraI18n
+            ? window.ExtraI18n.t(key, undefined, vars)
+            : key;
+        }
+
         function setCard(imgNode, labelNode, item) {
           imgNode.src = item.src;
           imgNode.alt = item.alt;
-          labelNode.textContent = item.label;
+          labelNode.textContent = item.labelKey ? decorT(item.labelKey) : item.label;
         }
 
         function formatDecorEuro(amount) {
@@ -8520,8 +8551,12 @@
               bouquetToggle.setAttribute(
                 "aria-label",
                 isSelected
-                  ? "Remove " + display.name + " from order"
-                  : "Add " + display.name + " to order",
+                  ? decorT("extra-decor-remove-bouquet-named", {
+                      name: display.name,
+                    })
+                  : decorT("extra-decor-add-bouquet-named", {
+                      name: display.name,
+                    }),
               );
             }
             bouquetToggle.innerHTML = isSelected
@@ -8569,11 +8604,11 @@
           }
 
           if (priceNoteEl && current.showPrice && hasExtras) {
-            priceNoteEl.textContent =
-              "Outer arrows: category \u00b7 inner arrows: pick product";
+            priceNoteEl.textContent = decorT("extra-decor-arrows-hint");
           }
           if (decorAddBtn && current.canAddToCart) {
-            decorAddBtn.textContent = "Add to cart";
+            var addSpan = decorAddBtn.querySelector("[data-i18n]");
+            if (addSpan) addSpan.textContent = decorT("extra-order-add-cart");
           }
         }
 
@@ -8640,7 +8675,10 @@
             if (items[centerIndex].showPrice) {
               centerPrice.removeAttribute("hidden");
               if (priceLabel) {
-                priceLabel.textContent = items[centerIndex].priceLabel;
+                var currentItem = items[centerIndex];
+                priceLabel.textContent = currentItem.priceLabelKey
+                  ? decorT(currentItem.priceLabelKey)
+                  : currentItem.priceLabel;
               }
             } else {
               centerPrice.setAttribute("hidden", "");
@@ -8652,14 +8690,23 @@
           if (decorAddBtn) {
             var canAdd = items[centerIndex].canAddToCart;
             decorAddBtn.disabled = !canAdd;
-            decorAddBtn.textContent = canAdd ? "Add to cart" : "Price on request";
+            var addSpanBtn = decorAddBtn.querySelector("[data-i18n]");
+            if (addSpanBtn) {
+              addSpanBtn.textContent = canAdd
+                ? decorT("extra-order-add-cart")
+                : decorT("extra-decor-price-request");
+            }
           }
           if (decorAddHint) {
             decorAddHint.textContent = items[centerIndex].canAddToCart
               ? ""
-              : "For custom decor, please contact reception or info@derandhotel.com.";
+              : decorT("extra-decor-custom-hint");
           }
         }
+
+        document.addEventListener("derand:languagechange", function () {
+          render();
+        });
 
         function animateTo(nextIndex) {
           if (isAnimating) return;
