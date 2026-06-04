@@ -29,7 +29,7 @@
       "extra-chocolates-text":
         "Handcrafted truffles and pralines delivered to your suite, offering a symphony of rare cacao and refined flavors.",
       "extra-chocolates-btn": "Choose Your Selection",
-      "extra-laundry-title": "Pristine Care",
+      "extra-laundry-title": "Laundry Service",
       "extra-laundry-text":
         "From delicate silks to bespoke tailoring, our garment care specialists treat every thread with architectural precision.",
       "extra-laundry-btn": "Choose Your Service",
@@ -218,7 +218,7 @@
       "extra-chocolates-text":
         "Handgefertigte Tr\u00fcffel und Pralinen auf Ihr Zimmer \u2013 eine Symphonie aus seltenem Kakao und feinen Aromen.",
       "extra-chocolates-btn": "Auswahl w\u00e4hlen",
-      "extra-laundry-title": "Pristine Care",
+      "extra-laundry-title": "W\u00e4scheservice",
       "extra-laundry-text":
         "Von feiner Seide bis zur Ma\u00dfanfertigung \u2013 unsere Textilpflege-Experten behandeln jedes Detail mit h\u00f6chster Pr\u00e4zision.",
       "extra-laundry-btn": "Service w\u00e4hlen",
@@ -409,7 +409,7 @@
       "extra-chocolates-text":
         "Trufa dhe pralina t\u00eb punuara me dor\u00eb n\u00eb suit\u00ebn tuaj \u2013 simfoni e kakaos rrall\u00eb dhe shijesh t\u00eb rafinuara.",
       "extra-chocolates-btn": "Zgjidhni seleksionin",
-      "extra-laundry-title": "Pristine Care",
+      "extra-laundry-title": "Sh\u00ebrbim rroba lar\u00ebse",
       "extra-laundry-text":
         "Nga mëndafshi delikat deri te kostumet me porosi \u2013 specialistët tanë trajtojnë çdo fije me precizion arkitektural.",
       "extra-laundry-btn": "Zgjidhni shërbimin",
