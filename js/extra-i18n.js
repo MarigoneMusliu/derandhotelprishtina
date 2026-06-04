@@ -596,15 +596,23 @@
 
   function normalizeLang(lang) {
     lang = String(lang || "").toLowerCase().trim();
+    if (lang === "sq") lang = "al";
     return LANGS.indexOf(lang) >= 0 ? lang : "en";
   }
 
   function currentLang() {
+    var activeBtn = document.querySelector(".lang-btn.lang-active[data-lang]");
+    if (activeBtn) {
+      return normalizeLang(activeBtn.getAttribute("data-lang"));
+    }
+
     var htmlLang = normalizeLang(
       document.documentElement.getAttribute("lang") || "",
     );
     if (htmlLang !== "en") return htmlLang;
+
     var stored =
+      localStorage.getItem("derandLang") ||
       localStorage.getItem("selectedLanguage") ||
       localStorage.getItem("language") ||
       localStorage.getItem("lang") ||
@@ -626,8 +634,27 @@
     return text;
   }
 
+  var HEADER_FREEZE_ROOTS =
+    ".header, .offcanvas-menu-wrapper, #mobile-menu-wrap";
+
+  function freezeHeaderChrome() {
+    document.querySelectorAll(HEADER_FREEZE_ROOTS).forEach(function (root) {
+      root.querySelectorAll("[data-i18n]").forEach(function (node) {
+        if (!node.hasAttribute("data-i18n-chrome-frozen")) {
+          node.setAttribute("data-i18n-chrome-frozen", node.textContent);
+          node.removeAttribute("data-i18n");
+        }
+        node.textContent = node.getAttribute("data-i18n-chrome-frozen");
+      });
+    });
+  }
+
   function isExtraScopedNode(node) {
-    return !node.closest(".header") && !node.closest(".footer");
+    return (
+      !node.closest(".header") &&
+      !node.closest(".footer") &&
+      !node.closest(".site-whatsapp-wrap")
+    );
   }
 
   function applyNodes(selector, attr, applyFn, lang) {
@@ -676,13 +703,17 @@
   }
 
   function init() {
+    freezeHeaderChrome();
     applyPage(currentLang());
+    window.addEventListener("load", freezeHeaderChrome);
     document.addEventListener("click", function (event) {
       var btn = event.target.closest(".lang-btn[data-lang]");
       if (!btn) return;
+      var lang = normalizeLang(btn.getAttribute("data-lang"));
       window.setTimeout(function () {
-        applyPage(currentLang());
-      }, 60);
+        freezeHeaderChrome();
+        applyPage(lang);
+      }, 100);
     });
   }
 
@@ -693,6 +724,10 @@
     spiritDescription: spiritDescription,
     init: init,
   };
+
+  if (document.querySelector(".header")) {
+    freezeHeaderChrome();
+  }
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", init);

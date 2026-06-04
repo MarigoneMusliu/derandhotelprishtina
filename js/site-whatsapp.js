@@ -15,6 +15,7 @@
   var labelEl = null;
   var labelTextEl = null;
   var anchorEl = null;
+  var fabInitialized = false;
 
   function assetSrc(filename) {
     var link = document.querySelector('link[rel="stylesheet"][href*="css/style"]');
@@ -28,10 +29,6 @@
 
   function logoSrc() {
     return assetSrc("logowhatsapp.png");
-  }
-
-  function labelMarkSrc() {
-    return assetSrc("whts.png");
   }
 
   function getLang() {
@@ -76,6 +73,60 @@
       "aria-label",
       getLabelText() + " (+383 43 727 272)",
     );
+  }
+
+  function ensureFabIcon() {
+    if (!anchorEl) return;
+
+    var icon = anchorEl.querySelector(".site-whatsapp-fab__icon");
+    if (!icon) {
+      icon = document.createElement("span");
+      icon.className = "site-whatsapp-fab__icon";
+      anchorEl.insertBefore(icon, anchorEl.firstChild);
+    }
+
+    var img = icon.querySelector("img");
+    if (!img) {
+      img = document.createElement("img");
+      img.alt = "";
+      img.width = 52;
+      img.height = 52;
+      img.decoding = "async";
+      img.loading = "lazy";
+      icon.appendChild(img);
+    }
+
+    if (!img.getAttribute("src")) {
+      img.setAttribute("src", logoSrc());
+    }
+  }
+
+  function ensureLabelStructure() {
+    if (!labelEl) return;
+
+    labelEl.querySelectorAll(".site-whatsapp-fab__label-mark").forEach(function (mark) {
+      mark.remove();
+    });
+
+    if (labelTextEl && labelEl.contains(labelTextEl)) return;
+
+    labelTextEl = document.createElement("span");
+    labelTextEl.className = "site-whatsapp-fab__label-text";
+    labelEl.appendChild(labelTextEl);
+  }
+
+  function repairLabelAfterGlobalI18n() {
+    ensureFabIcon();
+    ensureLabelStructure();
+    if (!labelEl || !labelTextEl) return;
+    if (labelClosed) return;
+    if (labelEl.classList.contains("is-complete")) {
+      setLabelTextInstant(getLabelText());
+      return;
+    }
+    if (labelEl.classList.contains("is-visible")) {
+      startTypewriter();
+    }
   }
 
   function setLabelTextInstant(text) {
@@ -146,6 +197,7 @@
   }
 
   function onLanguageChange() {
+    ensureLabelStructure();
     if (!labelEl || labelClosed) return;
     if (labelEl.classList.contains("is-complete")) {
       setLabelTextInstant(getLabelText());
@@ -162,68 +214,63 @@
       var btn = event.target.closest(".lang-btn[data-lang]");
       if (!btn) return;
       window.setTimeout(onLanguageChange, 80);
+      window.setTimeout(repairLabelAfterGlobalI18n, 150);
     });
 
     if (window.jQuery) {
       window.jQuery(document).on("click", ".lang-btn[data-lang]", function () {
         window.setTimeout(onLanguageChange, 80);
+        window.setTimeout(repairLabelAfterGlobalI18n, 150);
       });
     }
+
+    document.addEventListener("derand:languagechange", function () {
+      window.setTimeout(repairLabelAfterGlobalI18n, 50);
+    });
   }
 
   function mountWhatsAppFab() {
-    if (document.getElementById("site-whatsapp-wrap")) return;
+    if (fabInitialized) return;
 
-    var wrap = document.createElement("div");
-    wrap.id = "site-whatsapp-wrap";
-    wrap.className = "site-whatsapp-wrap";
+    var wrap = document.getElementById("site-whatsapp-wrap");
+    if (!wrap) {
+      wrap = document.createElement("div");
+      wrap.id = "site-whatsapp-wrap";
+      wrap.className = "site-whatsapp-wrap";
+      document.body.appendChild(wrap);
+    }
 
-    anchorEl = document.createElement("a");
-    anchorEl.id = "site-whatsapp-fab";
-    anchorEl.className = "site-whatsapp-fab";
+    anchorEl =
+      wrap.querySelector("#site-whatsapp-fab") ||
+      wrap.querySelector(".site-whatsapp-fab");
+    if (!anchorEl) {
+      anchorEl = document.createElement("a");
+      anchorEl.id = "site-whatsapp-fab";
+      anchorEl.className = "site-whatsapp-fab";
+      wrap.appendChild(anchorEl);
+    }
+
     anchorEl.href = WA_URL;
     anchorEl.target = "_blank";
     anchorEl.rel = "noopener noreferrer";
 
-    var icon = document.createElement("span");
-    icon.className = "site-whatsapp-fab__icon";
+    labelEl = anchorEl.querySelector(".site-whatsapp-fab__label");
+    if (!labelEl) {
+      labelEl = document.createElement("span");
+      labelEl.className = "site-whatsapp-fab__label";
+      anchorEl.appendChild(labelEl);
+    }
 
-    var img = document.createElement("img");
-    img.src = logoSrc();
-    img.alt = "";
-    img.width = 52;
-    img.height = 52;
-    img.decoding = "async";
-    img.loading = "lazy";
-    icon.appendChild(img);
-
-    labelEl = document.createElement("span");
-    labelEl.className = "site-whatsapp-fab__label";
-    labelEl.setAttribute("data-i18n", "whatsapp-chat-label");
-
-    labelTextEl = document.createElement("span");
-    labelTextEl.className = "site-whatsapp-fab__label-text";
-
-    var labelMark = document.createElement("img");
-    labelMark.className = "site-whatsapp-fab__label-mark";
-    labelMark.src = labelMarkSrc();
-    labelMark.alt = "";
-    labelMark.width = 16;
-    labelMark.height = 16;
-    labelMark.decoding = "async";
-    labelMark.loading = "lazy";
-
-    labelEl.appendChild(labelTextEl);
-    labelEl.appendChild(labelMark);
-
-    anchorEl.appendChild(icon);
-    anchorEl.appendChild(labelEl);
-    wrap.appendChild(anchorEl);
-    document.body.appendChild(wrap);
+    labelTextEl = labelEl.querySelector(".site-whatsapp-fab__label-text");
+    ensureFabIcon();
+    ensureLabelStructure();
+    fabInitialized = true;
 
     updateAccessibleName();
     bindLanguageListeners();
     startTypewriter();
+    window.setTimeout(repairLabelAfterGlobalI18n, 120);
+    window.setTimeout(repairLabelAfterGlobalI18n, 320);
 
     function syncFabAlignment() {
       if (typeof window.derandAlignFloatingFabs === "function") {

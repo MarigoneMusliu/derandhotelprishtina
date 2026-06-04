@@ -30,6 +30,34 @@
         opacity: 0 !important;
       }
 
+      body.extra-page-static-header .header .lang-btn,
+      body.extra-page-static-header .mobile__lang__selector .lang-btn {
+        border-bottom: 2px solid transparent;
+        padding-bottom: 2px;
+      }
+
+      body.extra-page-static-header .header .lang-btn.lang-active,
+      body.extra-page-static-header .mobile__lang__selector .lang-btn.lang-active {
+        border-bottom-color: #b17256;
+      }
+
+      body.extra-page-static-header .header__menu > ul > li > a {
+        white-space: nowrap;
+      }
+
+      body.extra-page-static-header .site-whatsapp-wrap {
+        display: block;
+      }
+
+      body.extra-page-static-header .site-whatsapp-fab__icon {
+        display: flex;
+        visibility: visible;
+      }
+
+      body.extra-page-static-header .site-whatsapp-fab__icon img {
+        display: block;
+      }
+
       .extra-hero {
         min-height: 560px;
         background:
@@ -4282,7 +4310,7 @@
     </style>
   </head>
 
-  <body class="sacher-home policy-font-noto-serif derand-no-tidio">
+  <body class="sacher-home policy-font-noto-serif derand-no-tidio extra-page-static-header">
     <div id="preloder">
       <div class="loader"></div>
     </div>
@@ -5283,6 +5311,31 @@
       </div>
     </div>
 
+    <div id="site-whatsapp-wrap" class="site-whatsapp-wrap">
+      <a
+        id="site-whatsapp-fab"
+        class="site-whatsapp-fab"
+        href="https://wa.me/38343727272"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat us on WhatsApp (+383 43 727 272)"
+      >
+        <span class="site-whatsapp-fab__icon">
+          <img
+            src="img/logowhatsapp.png"
+            alt=""
+            width="52"
+            height="52"
+            loading="lazy"
+            decoding="async"
+          />
+        </span>
+        <span class="site-whatsapp-fab__label">
+          <span class="site-whatsapp-fab__label-text"></span>
+        </span>
+      </a>
+    </div>
+
     <div class="extra-cart-widget" id="extra-cart-widget">
       <button
         type="button"
@@ -5677,7 +5730,7 @@
 
       </div>
     </footer>
-    <script src="js/extra-i18n.js"></script>
+    <script src="js/extra-i18n.js?v=2"></script>
     <script src="js/jquery-3.3.1.min.js" defer></script>
     <script src="js/bootstrap.min.js" defer></script>
     <script src="js/jquery.nice-select.min.js" defer></script>
@@ -5686,7 +5739,7 @@
     <script src="js/owl.carousel.min.js" defer></script>
     <script src="js/site-onboarding-sequence.js?v=8" defer></script>
     <script src="js/main.js?v=20260515-1" defer></script>
-        <script src="js/site-whatsapp.js?v=8" defer></script>
+        <script src="js/site-whatsapp.js?v=11" defer></script>
     <script>
       (function () {
         var CART_STORAGE_KEY = "derandExtraCart";
