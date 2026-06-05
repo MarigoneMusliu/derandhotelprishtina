@@ -57,6 +57,8 @@
       "extra-decor-price-request": "Price on request",
       "extra-decor-custom-hint":
         "For custom decor, please contact reception or info@derandhotel.com.",
+      "extra-decor-booking-heading": "Choose your celebration decor",
+      "extra-decor-booking-request": "Request custom decor",
       "decor-label-valentine": "VALENTINE",
       "decor-label-birthday": "BIRTHDAY PARTY",
       "decor-label-custom": "CUSTOM",
@@ -247,6 +249,8 @@
       "extra-decor-price-request": "Preis auf Anfrage",
       "extra-decor-custom-hint":
         "F\u00fcr individuelle Dekoration kontaktieren Sie bitte die Rezeption oder info@derandhotel.com.",
+      "extra-decor-booking-heading": "W\u00e4hlen Sie Ihre Feier-Dekoration",
+      "extra-decor-booking-request": "Individuelle Dekoration anfragen",
       "decor-label-valentine": "VALENTINSTAG",
       "decor-label-birthday": "GEBURTSTAG",
       "decor-label-custom": "INDIVIDUELL",
@@ -437,6 +441,8 @@
       "extra-decor-price-request": "Çmimi sipas kërkesës",
       "extra-decor-custom-hint":
         "Për dekor të personalizuar, kontaktoni recepsionin ose info@derandhotel.com.",
+      "extra-decor-booking-heading": "Zgjidhni dekorin e festës",
+      "extra-decor-booking-request": "Kërko dekor personalizuar",
       "decor-label-valentine": "VALENTIN",
       "decor-label-birthday": "DITËLINDJE",
       "decor-label-custom": "PERSONALIZUAR",

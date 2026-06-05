@@ -829,6 +829,170 @@
         margin-top: max(16px, env(safe-area-inset-top, 0px));
       }
 
+      .extra-decor-booking-modal {
+        position: fixed;
+        inset: 0;
+        z-index: 12050;
+        display: none;
+      }
+
+      .extra-decor-booking-modal.is-open {
+        display: block;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      body.extra-booking-mode .extra-decor-booking-modal:not(.is-open) {
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      body.extra-booking-mode .extra-decor-booking-modal.is-open {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+      }
+
+      body.extra-booking-mode .extra-decor-booking-modal__backdrop {
+        background: #faf9f7;
+        backdrop-filter: none;
+      }
+
+      .extra-decor-booking-modal__backdrop {
+        position: absolute;
+        inset: 0;
+        background: rgba(32, 28, 24, 0.42);
+        backdrop-filter: blur(3px);
+      }
+
+      .extra-decor-booking-modal__dialog {
+        position: relative;
+        width: min(440px, calc(100vw - 32px));
+        max-height: calc(100dvh - 32px);
+        overflow-x: hidden;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: max(16px, env(safe-area-inset-top, 0px)) auto 16px;
+        background: #faf9f7;
+        border-radius: 20px;
+        padding: 28px 28px 24px;
+        box-sizing: border-box;
+        box-shadow:
+          0 28px 60px rgba(28, 24, 20, 0.14),
+          0 8px 20px rgba(28, 24, 20, 0.06);
+      }
+
+      .extra-decor-booking-modal__heading {
+        margin: 0 0 16px;
+        font-family: "Forum", serif;
+        font-size: 1.35rem;
+        font-weight: 500;
+        line-height: 1.35;
+        text-align: center;
+        color: #2c2824;
+      }
+
+      .extra-decor-booking-picker {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 10px;
+        margin: 0 0 18px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 2px;
+      }
+
+      .extra-decor-booking-picker__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        width: 104px;
+        flex: 0 0 auto;
+        padding: 10px 8px 8px;
+        border: 2px solid rgba(177, 114, 86, 0.28);
+        border-radius: 12px;
+        background: #fff;
+        cursor: pointer;
+        transition:
+          border-color 0.2s ease,
+          background 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      .extra-decor-booking-picker__item:hover,
+      .extra-decor-booking-picker__item:focus-visible {
+        border-color: #b17256;
+        box-shadow: 0 6px 16px rgba(177, 114, 86, 0.12);
+      }
+
+      .extra-decor-booking-picker__item.is-selected {
+        border-color: #b17256;
+        background: #faf3ed;
+        box-shadow: 0 8px 22px rgba(177, 114, 86, 0.1);
+      }
+
+      .extra-decor-booking-picker__thumb {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 72px;
+        height: 72px;
+        border-radius: 10px;
+        overflow: hidden;
+        background: #fff;
+      }
+
+      .extra-decor-booking-picker__thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        pointer-events: none;
+      }
+
+      .extra-decor-booking-picker__name {
+        font-size: 9px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #4a433d;
+        font-family: "Forum", serif;
+        text-align: center;
+        line-height: 1.25;
+      }
+
+      .extra-decor-booking-preview {
+        margin-bottom: 8px;
+      }
+
+      .extra-decor-booking-preview__media {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 14px;
+        padding: 16px 44px;
+        background: #fff;
+        border-radius: 16px;
+      }
+
+      .extra-decor-booking-preview__media img {
+        width: 100%;
+        max-width: 220px;
+        height: 180px;
+        object-fit: contain;
+        object-position: center;
+      }
+
+      .extra-decor-booking-preview__desc {
+        margin: 0;
+        font-size: 14px;
+        color: #6e6760;
+        line-height: 1.55;
+        text-align: left;
+        font-family: "Forum", serif;
+      }
+
       @media (max-width: 991px) {
         .extra-section {
           padding: 40px 0 56px;
@@ -5330,6 +5494,84 @@
       </div>
     </div>
 
+    <div
+      class="extra-decor-booking-modal"
+      id="extra-decor-booking-modal"
+      aria-hidden="true"
+    >
+      <div
+        class="extra-decor-booking-modal__backdrop"
+        data-decor-booking-close
+      ></div>
+      <div
+        class="extra-decor-booking-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="extra-decor-booking-title"
+      >
+        <button
+          type="button"
+          class="extra-order-modal__close"
+          data-decor-booking-close
+          data-i18n-aria-label="extra-order-close"
+          aria-label="Close decor picker"
+        >
+          &times;
+        </button>
+        <p
+          class="extra-order-modal__title"
+          id="extra-decor-booking-title"
+          data-i18n="extra-order-title"
+        >
+          Add to cart
+        </p>
+        <h3
+          class="extra-decor-booking-modal__heading"
+          data-i18n="extra-decor-booking-heading"
+        >
+          Choose your celebration decor
+        </h3>
+        <div
+          class="extra-decor-booking-picker"
+          id="extra-decor-booking-picker"
+          role="listbox"
+          aria-label="Decor themes"
+        ></div>
+        <div class="extra-decor-booking-preview">
+          <div class="extra-decor-booking-preview__media">
+            <img
+              id="extra-decor-booking-image"
+              src="img/birthday.png"
+              alt="Selected decor"
+            />
+          </div>
+          <p
+            class="extra-decor-booking-preview__desc"
+            id="extra-decor-booking-desc"
+          ></p>
+        </div>
+        <div class="extra-order-modal__actions">
+          <div class="extra-order-form__total">
+            <span data-i18n="extra-order-selected-total">Selected total:</span>
+            <strong id="extra-decor-booking-total">60&euro;</strong>
+          </div>
+          <button
+            type="button"
+            class="extra-btn-cart-add"
+            id="extra-decor-booking-confirm"
+          >
+            <span data-i18n="extra-order-add-cart">Add to cart</span>
+          </button>
+          <p
+            class="extra-order-form__status"
+            id="extra-decor-booking-status"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </div>
+      </div>
+    </div>
+
     <div id="site-whatsapp-wrap" class="site-whatsapp-wrap">
       <a
         id="site-whatsapp-fab"
@@ -5749,7 +5991,7 @@
 
       </div>
     </footer>
-    <script src="js/extra-i18n.js?v=2"></script>
+    <script src="js/extra-i18n.js?v=3"></script>
     <script src="js/jquery-3.3.1.min.js" defer></script>
     <script src="js/bootstrap.min.js" defer></script>
     <script src="js/jquery.nice-select.min.js" defer></script>
@@ -6192,6 +6434,13 @@
         );
         var orderDiscover = document.getElementById("extra-order-discover");
         var orderDiscoverGrid = document.getElementById("extra-order-discover-grid");
+        var decorBookingModal = document.getElementById("extra-decor-booking-modal");
+        var decorBookingPicker = document.getElementById("extra-decor-booking-picker");
+        var decorBookingImage = document.getElementById("extra-decor-booking-image");
+        var decorBookingDesc = document.getElementById("extra-decor-booking-desc");
+        var decorBookingTotal = document.getElementById("extra-decor-booking-total");
+        var decorBookingConfirm = document.getElementById("extra-decor-booking-confirm");
+        var decorBookingStatus = document.getElementById("extra-decor-booking-status");
         var orderCardMedia = document.getElementById("extra-order-card-media");
         var variantWrap = document.getElementById("extra-order-variant-wrap");
         var variantStrip = document.getElementById("extra-order-variant-strip");
@@ -6362,6 +6611,48 @@
         var bookingFlowCategory = null;
         var currentModalCategoryId = null;
         var bookingUrlParams = null;
+        var selectedDecorBookingKey = "birthday";
+        var BOOKING_DECOR_ITEMS = [
+          {
+            key: "valentines",
+            src: "img/valentineday.png",
+            alt: "Valentine's room decor",
+            label: "Valentine",
+            labelKey: "decor-label-valentine",
+            priceAmount: 60,
+            cartName: "Valentine's room decor",
+            priceLabelKey: "decor-price-valentine",
+            canAddToCart: true,
+            description:
+              "Valentine's room decor — in-room styling with romantic touches.",
+          },
+          {
+            key: "birthday",
+            src: "img/birthday.png",
+            alt: "Birthday room decor",
+            label: "Birthday",
+            labelKey: "decor-label-birthday",
+            priceAmount: 60,
+            cartName: "Birthday room decor",
+            priceLabelKey: "decor-price-birthday",
+            canAddToCart: true,
+            description:
+              "Birthday room decor — balloons, soft lighting, and refined in-room touches.",
+          },
+          {
+            key: "custom",
+            src: "img/custom.png",
+            alt: "Custom room decor",
+            label: "Custom",
+            labelKey: "decor-label-custom",
+            priceAmount: 0,
+            cartName: "Custom room decor",
+            priceLabelKey: "decor-price-custom",
+            canAddToCart: true,
+            description:
+              "Custom room decor — tell us your vision and our team will prepare a bespoke setup.",
+          },
+        ];
         var isSpiritsOrder = false;
         var isPerfumeOrder = false;
         var isChocolateOrder = false;
@@ -7685,6 +7976,151 @@
           goBackToBookingDetails();
         }
 
+        function getBookingDecorItem(key) {
+          for (var i = 0; i < BOOKING_DECOR_ITEMS.length; i++) {
+            if (BOOKING_DECOR_ITEMS[i].key === key) {
+              return BOOKING_DECOR_ITEMS[i];
+            }
+          }
+          return BOOKING_DECOR_ITEMS[1] || BOOKING_DECOR_ITEMS[0];
+        }
+
+        function getStoredDecorBookingKey() {
+          var lines = loadStoredBookingLines();
+          for (var i = 0; i < lines.length; i++) {
+            var line = lines[i];
+            if (!line || line.category !== "decor") continue;
+            if (line.id === "decor-valentines") return "valentines";
+            if (line.id === "decor-birthday") return "birthday";
+            if (line.id === "decor-custom") return "custom";
+          }
+          return "";
+        }
+
+        function renderDecorBookingPicker() {
+          if (!decorBookingPicker) return;
+          decorBookingPicker.innerHTML = "";
+          BOOKING_DECOR_ITEMS.forEach(function (item) {
+            var btn = document.createElement("button");
+            btn.type = "button";
+            btn.className =
+              "extra-decor-booking-picker__item" +
+              (item.key === selectedDecorBookingKey ? " is-selected" : "");
+            btn.setAttribute("data-decor-booking-key", item.key);
+            btn.setAttribute("role", "option");
+            btn.setAttribute(
+              "aria-selected",
+              item.key === selectedDecorBookingKey ? "true" : "false",
+            );
+
+            var thumb = document.createElement("span");
+            thumb.className = "extra-decor-booking-picker__thumb";
+            var img = document.createElement("img");
+            img.src = item.src;
+            img.alt = "";
+            img.width = 72;
+            img.height = 72;
+            thumb.appendChild(img);
+
+            var label = document.createElement("span");
+            label.className = "extra-decor-booking-picker__name";
+            label.textContent = item.labelKey ? i18n(item.labelKey) : item.label;
+
+            btn.appendChild(thumb);
+            btn.appendChild(label);
+            decorBookingPicker.appendChild(btn);
+          });
+        }
+
+        function updateDecorBookingPreview() {
+          var item = getBookingDecorItem(selectedDecorBookingKey);
+          if (!item) return;
+
+          if (decorBookingImage) {
+            decorBookingImage.src = item.src;
+            decorBookingImage.alt = item.alt;
+          }
+          if (decorBookingDesc) {
+            decorBookingDesc.textContent = item.description;
+          }
+          if (decorBookingTotal) {
+            decorBookingTotal.textContent =
+              item.key === "custom"
+                ? i18n("extra-decor-price-request")
+                : formatEuro(item.priceAmount);
+          }
+          if (decorBookingConfirm) {
+            var confirmLabel = decorBookingConfirm.querySelector("[data-i18n]");
+            if (confirmLabel) {
+              confirmLabel.textContent =
+                item.key === "custom"
+                  ? i18n("extra-decor-booking-request")
+                  : i18n("extra-order-add-cart");
+            }
+            decorBookingConfirm.disabled = false;
+          }
+          if (decorBookingStatus) {
+            decorBookingStatus.textContent =
+              item.key === "custom" ? i18n("extra-decor-custom-hint") : "";
+          }
+          renderDecorBookingPicker();
+        }
+
+        function selectDecorBookingKey(key) {
+          if (!key || key === selectedDecorBookingKey) {
+            updateDecorBookingPreview();
+            return;
+          }
+          selectedDecorBookingKey = key;
+          updateDecorBookingPreview();
+        }
+
+        function openDecorBookingModal() {
+          if (!decorBookingModal) return;
+          bookingFlowCategory = "decor";
+          selectedDecorBookingKey =
+            getStoredDecorBookingKey() || "birthday";
+          updateDecorBookingPreview();
+          decorBookingModal.classList.add("is-open");
+          decorBookingModal.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+        }
+
+        function closeDecorBookingModal() {
+          if (isBookingFlow) {
+            goBackToBookingDetails();
+            return;
+          }
+          if (!decorBookingModal) return;
+          decorBookingModal.classList.remove("is-open");
+          decorBookingModal.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "";
+        }
+
+        function buildDecorBookingLine(item) {
+          return {
+            id: "decor-" + item.key,
+            catalogId: "decor-" + item.key,
+            category: "decor",
+            label: item.cartName,
+            price: item.priceAmount || 0,
+            image: item.src,
+            qty: 1,
+          };
+        }
+
+        function addDecorSelectionToBooking() {
+          var item = getBookingDecorItem(selectedDecorBookingKey);
+          if (!item) return;
+
+          var existing = loadStoredBookingLines().filter(function (line) {
+            return line && line.category !== "decor";
+          });
+          existing.push(buildDecorBookingLine(item));
+          saveStoredBookingLines(existing);
+          goBackToBookingDetails();
+        }
+
         function initBookingFlow() {
           bookingUrlParams = new URLSearchParams(window.location.search);
           if (bookingUrlParams.get("from") !== "booking") return;
@@ -7705,6 +8141,10 @@
 
           var orderTitle = document.getElementById("extra-order-title");
           if (orderTitle) orderTitle.textContent = i18n("extra-order-title");
+          var decorBookingTitle = document.getElementById("extra-decor-booking-title");
+          if (decorBookingTitle) {
+            decorBookingTitle.textContent = i18n("extra-order-title");
+          }
           if (addToCartBtn) {
             var addLabel = addToCartBtn.querySelector("[data-i18n]");
             if (addLabel) addLabel.textContent = i18n("extra-order-add-cart");
@@ -7715,14 +8155,7 @@
 
           function openBookingCategoryModal() {
             if (focus === "decor") {
-              var decorSection = document.querySelector(".extra-continue");
-              if (decorSection && typeof decorSection.scrollIntoView === "function") {
-                decorSection.scrollIntoView({ behavior: "smooth", block: "start" });
-              }
-              var decorAddButton = document.getElementById("extra-decor-add-cart");
-              if (decorAddButton && typeof decorAddButton.focus === "function") {
-                decorAddButton.focus({ preventScroll: true });
-              }
+              openDecorBookingModal();
               return;
             }
             var trigger = document.querySelector(triggerSelector);
@@ -7932,20 +8365,30 @@
             var discoverKey = discoverBtn.getAttribute("data-extra-discover");
             if (discoverKey === "decor") {
               event.preventDefault();
-              closeModal();
-              window.setTimeout(function () {
-                var decorSection = document.querySelector(".extra-continue");
-                if (decorSection && typeof decorSection.scrollIntoView === "function") {
-                  decorSection.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                  });
-                }
-                var decorAddButton = document.getElementById("extra-decor-add-cart");
-                if (decorAddButton && typeof decorAddButton.focus === "function") {
-                  decorAddButton.focus({ preventScroll: true });
-                }
-              }, 280);
+              if (isBookingFlow) {
+                openDecorBookingModal();
+              } else {
+                closeModal();
+                window.setTimeout(function () {
+                  var decorSection = document.querySelector(".extra-continue");
+                  if (
+                    decorSection &&
+                    typeof decorSection.scrollIntoView === "function"
+                  ) {
+                    decorSection.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+                  }
+                  var decorAddButton = document.getElementById("extra-decor-add-cart");
+                  if (
+                    decorAddButton &&
+                    typeof decorAddButton.focus === "function"
+                  ) {
+                    decorAddButton.focus({ preventScroll: true });
+                  }
+                }, 280);
+              }
               return;
             }
             var discoverMeta =
@@ -7972,6 +8415,18 @@
           var orderBtn = event.target.closest(".js-extra-order");
           if (orderBtn) {
             openModal(orderBtn);
+            return;
+          }
+          if (event.target.closest("[data-decor-booking-close]")) {
+            closeDecorBookingModal();
+            return;
+          }
+          var decorBookingKeyBtn = event.target.closest("[data-decor-booking-key]");
+          if (decorBookingKeyBtn) {
+            event.preventDefault();
+            selectDecorBookingKey(
+              decorBookingKeyBtn.getAttribute("data-decor-booking-key"),
+            );
             return;
           }
           if (event.target.closest("[data-modal-close]")) {
@@ -8063,8 +8518,23 @@
           });
         }
 
+        if (decorBookingConfirm) {
+          decorBookingConfirm.addEventListener("click", function () {
+            if (!isBookingFlow) return;
+            addDecorSelectionToBooking();
+          });
+        }
+
         document.addEventListener("keydown", function (event) {
           if (event.key !== "Escape") return;
+          if (
+            isBookingFlow &&
+            decorBookingModal &&
+            decorBookingModal.classList.contains("is-open")
+          ) {
+            goBackToBookingDetails();
+            return;
+          }
           if (isBookingFlow && modal.classList.contains("is-open")) {
             goBackToBookingDetails();
             return;
@@ -8184,6 +8654,12 @@
           if (modal && modal.classList.contains("is-open")) {
             updateModalView();
             renderVariantStrip();
+          }
+          if (
+            decorBookingModal &&
+            decorBookingModal.classList.contains("is-open")
+          ) {
+            updateDecorBookingPreview();
           }
         });
       })();
