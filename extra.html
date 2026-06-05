@@ -1205,7 +1205,7 @@
         margin: 0 auto;
         border: 0;
         border-radius: 12px;
-        background: #f3f0ec;
+        background: #fff;
         object-fit: contain;
         object-position: center;
       }
@@ -1217,7 +1217,7 @@
         justify-content: center;
         margin-bottom: 20px;
         padding: 16px 44px;
-        background: #f3f0ec;
+        background: #fff;
         border-radius: 16px;
       }
 
@@ -2272,6 +2272,20 @@
       }
 
       .extra-order-card--chocolate .extra-order-card__desc {
+        max-height: none;
+        overflow: visible;
+        line-height: 1.55;
+        padding-bottom: 2px;
+      }
+
+      .extra-order-card--flowers .extra-order-card__desc-slot {
+        flex-shrink: 0;
+        min-height: 5.5em;
+        margin-bottom: 8px;
+        padding-bottom: 4px;
+      }
+
+      .extra-order-card--flowers .extra-order-card__desc {
         max-height: none;
         overflow: visible;
         line-height: 1.55;
@@ -4536,14 +4550,6 @@
     <section class="extra-section">
       <div class="container">
         <article class="extra-row extra-signature" id="extra-flowers">
-          <header class="extra-signature__head">
-            <h2 class="extra-signature__title">
-              <span class="extra-signature__title-lead" data-i18n="extra-signature-the"
-                >The</span
-              >
-              <span data-i18n="extra-signature-collection">Signature Collection</span>
-            </h2>
-          </header>
           <div class="extra-signature__layout">
             <div class="extra-signature__body">
               <h3 class="extra-signature__card-title" data-i18n="extra-flowers-title">
@@ -4693,15 +4699,15 @@
                 class="extra-signature__btn js-extra-order"
                 data-i18n-desc="extra-desc-chocolate"
                 data-chocolate-menu="true"
-                data-product='Tog Chocolate Box "With love from Kosova"'
+                data-product="With love from Kosova"
                 data-price="14.25"
                 data-image="img/tog.png"
                 data-images="img/tog.png,img/tog1.png,img/tog2.png,img/tog3.png,img/tog4.png,img/tog5.png,img/tog6.png"
-                data-products='Tog Chocolate Box "With love from Kosova",Tog Chocolate Box "With love from Prishtina",Tog Chocolate Box "With love from Prizreni",Tog Chocolate Box "Me dashni pÎr ty",Tog Chocolate bar "With love from Kosova" Cranberry Dark Chocolate,Tog Spicy Chocolate bar "FlakÎ e ÀmbÎl",Tog Tablet "ASAJ" Cranberry Dark Chocolate'
+                data-products='With love from Kosova,With love from Prishtina,With love from Prizreni,Me dashni per ty,With love from Kosova Cranberry Dark Chocolate,Tog Spicy Chocolate bar "FlakÎ e ÀmbÎl",Tog Tablet "ASAJ" Cranberry Dark Chocolate'
                 data-prices="14.25,14.25,14.25,16.63,6.25,6.25,6.25"
                 data-description="Premium Tog chocolate delivered to your room."
               >
-                <span data-i18n="extra-chocolates-btn">Choose Your Selection</span>
+                <span data-i18n="extra-chocolates-btn">Choose Your Chocolate</span>
               </button>
             </div>
           </div>
@@ -5816,10 +5822,17 @@
         ];
 
         function getDiscoverKeysForCategory(categoryId) {
-          if (!categoryId) return EXTRA_DISCOVER_CATEGORY_ORDER.slice();
-          return EXTRA_DISCOVER_CATEGORY_ORDER.filter(function (key) {
-            return key !== categoryId;
-          });
+          var keys = !categoryId
+            ? EXTRA_DISCOVER_CATEGORY_ORDER.slice()
+            : EXTRA_DISCOVER_CATEGORY_ORDER.filter(function (key) {
+                return key !== categoryId;
+              });
+          if (isBookingFlow) {
+            keys = keys.filter(function (key) {
+              return key !== "decor";
+            });
+          }
+          return keys;
         }
         var CHOCOLATE_CATALOG_IDS = [
           "tog",
@@ -5830,6 +5843,30 @@
           "tog5",
           "tog6",
         ];
+        var FLOWER_MODAL_DESCRIPTIONS = {
+          "Single Red Roses":
+            "A timeless single red rose, elegantly bloomed with a rich green stem.",
+          "Single White Rose":
+            "A classic, elegant single white rose. Pure and timeless.",
+          "Single Pink Rose":
+            "A classic, elegant single white rose. Pure and timeless.",
+          "Single Pink Dianthus":
+            "A charming, single pink dianthus. Delicate, vibrant, and perfectly timed.",
+          "Single White Dianthus":
+            "A fresh, single white dianthus. Crisp, delicate, and simple.",
+          "Single White Lily":
+            "An elegant white lily stem with a clean, modern silhouette and a naturally gentle fragrance.",
+          "Single Pink Lily":
+            "A striking, single pink lily. Vibrant, elegant, and timeless.",
+          "Lily Bouquet":
+            "A stunning bouquet of fresh lilies. Bold, elegant, and sophisticated.",
+          "A Bouquet of Red Roses":
+            "A breathtaking bouquet of rich red roses. Bold, romantic, and timeless.",
+          "A Bouquet of Yellow Tulips":
+            "A vibrant bouquet of fresh yellow tulips. Bright, cheerful, and elegant.",
+          "Mixed Flower Bouquet":
+            "A beautiful, hand-tied bouquet of seasonal flowers. Vibrant, fresh, and elegant.",
+        };
         var LAUNDRY_SERVICES = [
           {
             id: "wash-iron",
@@ -5858,6 +5895,12 @@
           if (isPerfumeOrder) return getPerfumeDescriptionByIndex(index);
           if (isChocolateOrder) return i18n("extra-desc-chocolate");
           if (isLaundryOrder) return i18n("extra-desc-laundry");
+          if (isFlowersModalCategory()) {
+            var name = getSlideProductName(index);
+            if (name && FLOWER_MODAL_DESCRIPTIONS[name]) {
+              return FLOWER_MODAL_DESCRIPTIONS[name];
+            }
+          }
           return productDescription;
         }
 
@@ -5948,28 +5991,28 @@
 
         var CHOCOLATE_CATALOG = {
           tog: {
-            name: 'Tog Chocolate Box "With love from Kosova"',
+            name: "With love from Kosova",
             image: "img/tog.png",
             price: 14.25,
             description:
               'Premium Tog chocolate box — "With love from Kosova" — delivered to your room.',
           },
           tog1: {
-            name: 'Tog Chocolate Box "With love from Prishtina"',
+            name: "With love from Prishtina",
             image: "img/tog1.png",
             price: 14.25,
             description:
               'Premium Tog chocolate box — "With love from Prishtina" — delivered to your room.',
           },
           tog2: {
-            name: 'Tog Chocolate Box "With love from Prizreni"',
+            name: "With love from Prizreni",
             image: "img/tog2.png",
             price: 14.25,
             description:
               'Premium Tog chocolate box — "With love from Prizreni" — delivered to your room.',
           },
           tog3: {
-            name: 'Tog Chocolate Box "Me dashni pÎr ty"',
+            name: "Me dashni per ty",
             image: "img/tog3.png",
             price: 16.63,
             description:
@@ -7024,7 +7067,13 @@
           var slideName = getSlideProductName(currentImageIndex);
           productEl.textContent = slideName;
           imageEl.alt = slideName;
-          if (descriptionEl && (isPerfumeOrder || isChocolateOrder || isLaundryOrder)) {
+          if (
+            descriptionEl &&
+            (isPerfumeOrder ||
+              isChocolateOrder ||
+              isLaundryOrder ||
+              isFlowersModalCategory())
+          ) {
             descriptionEl.textContent = getModalDescriptionForIndex(
               currentImageIndex,
             );
@@ -7256,22 +7305,20 @@
             !isChocolateMenu &&
             !isLaundryMenu
           ) {
-            descriptionEl.textContent = desc;
+            descriptionEl.textContent = getModalDescriptionForIndex(
+              currentImageIndex,
+            );
           }
           if (modalStatusEl) modalStatusEl.textContent = "";
           setSpiritsModalLayout(isSpirits);
           setPerfumeSizesPickerVisible(isPerfumeMenu);
           setChocolateModalLayout(isChocolateMenu);
           setLaundryModalLayout(isLaundryMenu);
-          if (isBookingFlow) {
-            setDiscoverVisible(false);
+          var discoverCategory = getExtraCategoryFromButton(btn);
+          if (discoverCategory) {
+            renderOrderDiscover(discoverCategory);
           } else {
-            var discoverCategory = getExtraCategoryFromButton(btn);
-            if (discoverCategory) {
-              renderOrderDiscover(discoverCategory);
-            } else {
-              setDiscoverVisible(false);
-            }
+            setDiscoverVisible(false);
           }
           updateModalView();
           if (isBookingFlow) {
@@ -7910,10 +7957,14 @@
               : null;
             if (discoverTrigger) {
               event.preventDefault();
-              closeModal();
-              window.setTimeout(function () {
+              if (isBookingFlow) {
                 openModal(discoverTrigger);
-              }, 280);
+              } else {
+                closeModal();
+                window.setTimeout(function () {
+                  openModal(discoverTrigger);
+                }, 280);
+              }
             }
             return;
           }
@@ -8240,22 +8291,22 @@
 
         var DECOR_CHOCOLATES = [
           {
-            name: 'Tog Chocolate Box "With love from Kosova"',
+            name: "With love from Kosova",
             image: "img/tog.png",
             price: 14.25,
           },
           {
-            name: 'Tog Chocolate Box "With love from Prishtina"',
+            name: "With love from Prishtina",
             image: "img/tog1.png",
             price: 14.25,
           },
           {
-            name: 'Tog Chocolate Box "With love from Prizreni"',
+            name: "With love from Prizreni",
             image: "img/tog2.png",
             price: 14.25,
           },
           {
-            name: 'Tog Chocolate Box "Me dashni për ty"',
+            name: "Me dashni per ty",
             image: "img/tog3.png",
             price: 16.63,
           },
