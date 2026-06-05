@@ -993,6 +993,69 @@
         font-family: "Forum", serif;
       }
 
+      .extra-decor-booking-modal .extra-continue__options {
+        max-width: none;
+        margin: 0 0 16px;
+        padding: 0;
+        text-align: left;
+      }
+
+      .extra-decor-booking-modal .extra-continue__options-total {
+        margin-top: 12px;
+      }
+
+      .extra-decor-booking-modal .extra-continue__extra-picker {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        min-height: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .extra-decor-booking-modal .extra-continue__extra-picker-nav {
+        position: static;
+        top: auto;
+        left: auto;
+        right: auto;
+        transform: none;
+        order: 0;
+        flex: 0 0 34px;
+        width: 34px;
+        height: 34px;
+        font-size: 20px;
+      }
+
+      .extra-decor-booking-modal .extra-continue__extra-picker-view {
+        flex: 1 1 auto;
+        order: 0;
+        width: auto;
+        min-width: 0;
+      }
+
+      .extra-decor-booking-modal .extra-continue__bouquet-row {
+        min-height: 0;
+      }
+
+      .extra-decor-booking-modal .extra-continue__bouquet-row-main {
+        min-width: 0;
+      }
+
+      .extra-decor-booking-modal .extra-continue__bouquet-row-copy {
+        min-width: 0;
+      }
+
+      .extra-decor-booking-modal .extra-continue__bouquet-row-copy strong {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .extra-decor-booking-modal .extra-continue__extra-picker-nav[hidden] {
+        display: none;
+      }
+
       @media (max-width: 991px) {
         .extra-section {
           padding: 40px 0 56px;
@@ -3859,11 +3922,13 @@
           border-color 0.2s ease;
       }
 
-      .extra-continue__extra-picker #extra-extra-prev {
+      .extra-continue__extra-picker #extra-extra-prev,
+      .extra-continue__extra-picker #extra-decor-booking-extra-prev {
         left: 0;
       }
 
-      .extra-continue__extra-picker #extra-extra-next {
+      .extra-continue__extra-picker #extra-extra-next,
+      .extra-continue__extra-picker #extra-decor-booking-extra-next {
         right: 0;
       }
 
@@ -4352,12 +4417,36 @@
           font-size: 18px;
         }
 
-        .extra-continue__extra-picker #extra-extra-prev {
+        .extra-continue__extra-picker #extra-extra-prev,
+        .extra-continue__extra-picker #extra-decor-booking-extra-prev {
           left: auto;
         }
 
-        .extra-continue__extra-picker #extra-extra-next {
+        .extra-continue__extra-picker #extra-extra-next,
+        .extra-continue__extra-picker #extra-decor-booking-extra-next {
           right: auto;
+        }
+
+        .extra-decor-booking-modal .extra-continue__extra-picker {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          padding: 0;
+        }
+
+        .extra-decor-booking-modal .extra-continue__extra-picker-nav {
+          position: static;
+          transform: none;
+          order: 0;
+          flex: 0 0 32px;
+          width: 32px;
+          height: 32px;
+        }
+
+        .extra-decor-booking-modal .extra-continue__extra-picker-view {
+          flex: 1 1 auto;
+          order: 0;
+          width: auto;
         }
 
         .extra-continue__bouquet-row {
@@ -5550,6 +5639,112 @@
             id="extra-decor-booking-desc"
           ></p>
         </div>
+        <div
+          class="extra-continue__options"
+          id="extra-decor-booking-choices"
+          hidden
+          data-i18n-aria-label="extra-decor-options"
+          aria-label="Optional decor extras"
+        >
+          <div class="extra-continue__price-stack">
+            <div class="extra-continue__price-row extra-continue__price-row--base">
+              <span
+                class="extra-continue__price-row-label"
+                data-i18n="extra-decor-room-included"
+                >Room decor (included)</span
+              >
+              <strong
+                class="extra-continue__price-row-amount"
+                id="extra-decor-booking-base-price"
+                >60&euro;</strong
+              >
+            </div>
+            <div class="extra-continue__extra-picker" id="extra-decor-booking-extra-picker">
+              <button
+                type="button"
+                class="extra-continue__extra-picker-nav"
+                id="extra-decor-booking-extra-prev"
+                data-i18n-aria-label="extra-decor-prev-extra"
+                aria-label="Previous extra"
+                hidden
+              >
+                &#8249;
+              </button>
+              <div
+                class="extra-continue__extra-picker-view"
+                id="extra-decor-booking-extra-picker-view"
+              >
+                <div class="extra-continue__bouquet-row" id="extra-decor-booking-bouquet-row">
+                  <div class="extra-continue__bouquet-row-main">
+                    <div
+                      class="extra-continue__extra-product-swipe"
+                      id="extra-decor-booking-product-swipe"
+                      data-i18n-aria-label="extra-decor-browse"
+                      aria-label="Browse products in this category"
+                    >
+                      <button
+                        type="button"
+                        class="extra-continue__extra-product-nav"
+                        id="extra-decor-booking-product-prev"
+                        data-i18n-aria-label="extra-decor-prev-product"
+                        aria-label="Previous product"
+                      >
+                        &#8249;
+                      </button>
+                      <div class="extra-continue__bouquet-row-thumb">
+                        <img
+                          id="extra-decor-booking-extra-thumb"
+                          src="img/flower1.jpg"
+                          alt=""
+                          width="56"
+                          height="56"
+                          loading="lazy"
+                        />
+                      </div>
+                      <button
+                        type="button"
+                        class="extra-continue__extra-product-nav"
+                        id="extra-decor-booking-product-next"
+                        data-i18n-aria-label="extra-decor-next-product"
+                        aria-label="Next product"
+                      >
+                        &#8250;
+                      </button>
+                    </div>
+                    <div class="extra-continue__bouquet-row-copy">
+                      <strong id="extra-decor-booking-extra-name">Flower bouquet</strong>
+                      <span id="extra-decor-booking-extra-price">+60&euro;</span>
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    class="extra-continue__bouquet-add"
+                    id="extra-decor-booking-bouquet-toggle"
+                    aria-pressed="false"
+                    data-i18n-aria-label="extra-decor-add-bouquet"
+                    aria-label="Add flower bouquet for 60 euros"
+                  >
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <button
+                type="button"
+                class="extra-continue__extra-picker-nav"
+                id="extra-decor-booking-extra-next"
+                data-i18n-aria-label="extra-decor-next-extra"
+                aria-label="Next extra"
+                hidden
+              >
+                &#8250;
+              </button>
+            </div>
+          </div>
+          <p class="extra-continue__options-total" aria-live="polite">
+            <span data-i18n="extra-decor-total">Total</span>
+            <strong id="extra-decor-booking-choices-total">60&euro;</strong>
+          </p>
+        </div>
         <div class="extra-order-modal__actions">
           <div class="extra-order-form__total">
             <span data-i18n="extra-order-selected-total">Selected total:</span>
@@ -6441,6 +6636,25 @@
         var decorBookingTotal = document.getElementById("extra-decor-booking-total");
         var decorBookingConfirm = document.getElementById("extra-decor-booking-confirm");
         var decorBookingStatus = document.getElementById("extra-decor-booking-status");
+        var decorBookingChoices = document.getElementById("extra-decor-booking-choices");
+        var decorBookingBasePrice = document.getElementById("extra-decor-booking-base-price");
+        var decorBookingBouquetRow = document.getElementById("extra-decor-booking-bouquet-row");
+        var decorBookingBouquetToggle = document.getElementById(
+          "extra-decor-booking-bouquet-toggle",
+        );
+        var decorBookingExtraThumb = document.getElementById("extra-decor-booking-extra-thumb");
+        var decorBookingExtraName = document.getElementById("extra-decor-booking-extra-name");
+        var decorBookingExtraPrice = document.getElementById("extra-decor-booking-extra-price");
+        var decorBookingExtraPrev = document.getElementById("extra-decor-booking-extra-prev");
+        var decorBookingExtraNext = document.getElementById("extra-decor-booking-extra-next");
+        var decorBookingProductPrev = document.getElementById("extra-decor-booking-product-prev");
+        var decorBookingProductNext = document.getElementById("extra-decor-booking-product-next");
+        var decorBookingChoicesTotal = document.getElementById(
+          "extra-decor-booking-choices-total",
+        );
+        var decorBookingProductSwipe = document.getElementById(
+          "extra-decor-booking-product-swipe",
+        );
         var orderCardMedia = document.getElementById("extra-order-card-media");
         var variantWrap = document.getElementById("extra-order-variant-wrap");
         var variantStrip = document.getElementById("extra-order-variant-strip");
@@ -6612,6 +6826,65 @@
         var currentModalCategoryId = null;
         var bookingUrlParams = null;
         var selectedDecorBookingKey = "birthday";
+        var DECOR_BOOKING_EXTRA_TYPES = ["flower", "chocolate", "perfume"];
+        var decorBookingExtraTypeIndex = 0;
+        var decorBookingFlowerIndex = 0;
+        var decorBookingChocolateIndex = 0;
+        var decorBookingPerfumeIndex = 0;
+        var decorBookingSelectedExtras = {
+          flower: false,
+          chocolate: false,
+          perfume: false,
+        };
+        var DECOR_FLOWER_ADDON_PRICE = 60;
+        var DECOR_BOOKING_FLOWERS = [
+          { name: "Single Red Roses", image: "img/flower.jpg" },
+          { name: "Single White Rose", image: "img/whiteflower.png" },
+          { name: "Single Pink Rose", image: "img/redrose.jpg" },
+          { name: "Single Pink Dianthus", image: "img/rose.jpg" },
+          { name: "Single White Dianthus", image: "img/whiteflowers.png" },
+          { name: "Single White Lily", image: "img/flower5.png" },
+          { name: "Single Pink Lily", image: "img/lilypink.png" },
+          { name: "Lily Bouquet", image: "img/flower1.jpg" },
+          { name: "A Bouquet of Red Roses", image: "img/flower2.jpg" },
+          { name: "A Bouquet of Yellow Tulips", image: "img/flower3.jpg" },
+          { name: "Mixed Flower Bouquet", image: "img/flowers1.png" },
+        ];
+        var DECOR_BOOKING_CHOCOLATES = [
+          { name: "With love from Kosova", image: "img/tog.png", price: 14.25 },
+          { name: "With love from Prishtina", image: "img/tog1.png", price: 14.25 },
+          { name: "With love from Prizreni", image: "img/tog2.png", price: 14.25 },
+          { name: "Me dashni per ty", image: "img/tog3.png", price: 16.63 },
+          { name: "Tog Cranberry Dark Chocolate bar", image: "img/tog4.png", price: 6.25 },
+          {
+            name: 'Tog Spicy Chocolate bar "Flakë e ëmbël"',
+            image: "img/tog5.png",
+            price: 6.25,
+          },
+          {
+            name: 'Tog Tablet "ASAJ" Cranberry Dark Chocolate',
+            image: "img/tog6.png",
+            price: 6.25,
+          },
+        ];
+        var DECOR_BOOKING_PERFUMES = [
+          { name: "Giorgio Armani", image: "img/armani.png", price: 33.12 },
+          { name: "DIESEL LOVERDOSE", image: "img/diesel.png", price: 44.24 },
+          { name: "DKNY BE DELICIOUS", image: "img/dkny.png", price: 39.2 },
+          { name: "JULIET HAS A GUN", image: "img/juliet.png", price: 112 },
+          { name: "Prada Candy", image: "img/prada.png", price: 73.68 },
+          {
+            name: "Roberto Cavalli Just Cavalli For Her",
+            image: "img/roberto.png",
+            price: 22.72,
+          },
+          { name: "Valentino Born In Roma", image: "img/valentino.png", price: 81.04 },
+          { name: "Thierry Mugler MU ANG NOVA", image: "img/thierry.png", price: 94.8 },
+          { name: "Ralph Lauren Polo Blue", image: "img/ralph.png", price: 62.08 },
+          { name: "MONTALE AOUD LIME", image: "img/montale.png", price: 120 },
+          { name: "FLBB EDP SPRAY", image: "img/viktor.png", price: 70.32 },
+          { name: "YVES SAINT LAURENT", image: "img/yves.png", price: 97.92 },
+        ];
         var BOOKING_DECOR_ITEMS = [
           {
             key: "valentines",
@@ -6623,6 +6896,10 @@
             cartName: "Valentine's room decor",
             priceLabelKey: "decor-price-valentine",
             canAddToCart: true,
+            showExtras: true,
+            flowerStartIndex: 8,
+            chocolateStartIndex: 6,
+            perfumeStartIndex: 0,
             description:
               "Valentine's room decor — in-room styling with romantic touches.",
           },
@@ -6636,6 +6913,10 @@
             cartName: "Birthday room decor",
             priceLabelKey: "decor-price-birthday",
             canAddToCart: true,
+            showExtras: true,
+            flowerStartIndex: 7,
+            chocolateStartIndex: 0,
+            perfumeStartIndex: 0,
             description:
               "Birthday room decor — balloons, soft lighting, and refined in-room touches.",
           },
@@ -6649,6 +6930,7 @@
             cartName: "Custom room decor",
             priceLabelKey: "decor-price-custom",
             canAddToCart: true,
+            showExtras: false,
             description:
               "Custom room decor — tell us your vision and our team will prepare a bespoke setup.",
           },
@@ -7997,6 +8279,265 @@
           return "";
         }
 
+        function getDecorBookingCatalog(type) {
+          if (type === "flower") return DECOR_BOOKING_FLOWERS;
+          if (type === "chocolate") return DECOR_BOOKING_CHOCOLATES;
+          return DECOR_BOOKING_PERFUMES;
+        }
+
+        function getDecorBookingIndex(type) {
+          if (type === "flower") return decorBookingFlowerIndex;
+          if (type === "chocolate") return decorBookingChocolateIndex;
+          return decorBookingPerfumeIndex;
+        }
+
+        function setDecorBookingIndex(type, index) {
+          var catalog = getDecorBookingCatalog(type);
+          if (!catalog.length) return;
+          var next = ((index % catalog.length) + catalog.length) % catalog.length;
+          if (type === "flower") decorBookingFlowerIndex = next;
+          else if (type === "chocolate") decorBookingChocolateIndex = next;
+          else decorBookingPerfumeIndex = next;
+        }
+
+        function getDecorBookingVisibleExtraTypes(item) {
+          if (!item || !item.showExtras) return [];
+          return DECOR_BOOKING_EXTRA_TYPES.slice();
+        }
+
+        function getDecorBookingCurrentExtraType(item) {
+          var visible = getDecorBookingVisibleExtraTypes(item);
+          if (!visible.length) return "flower";
+          if (
+            decorBookingExtraTypeIndex < 0 ||
+            decorBookingExtraTypeIndex >= visible.length
+          ) {
+            decorBookingExtraTypeIndex = 0;
+          }
+          return visible[decorBookingExtraTypeIndex];
+        }
+
+        function getDecorBookingFlowerPrice() {
+          return DECOR_FLOWER_ADDON_PRICE;
+        }
+
+        function getDecorBookingExtraDisplay(type) {
+          var catalog = getDecorBookingCatalog(type);
+          var index = getDecorBookingIndex(type);
+          var product = catalog[index] || catalog[0];
+          if (!product) {
+            return { name: "", image: "", price: 0, priceText: "" };
+          }
+          if (type === "flower") {
+            return {
+              name: product.name,
+              image: product.image,
+              price: getDecorBookingFlowerPrice(),
+              priceText: "+" + formatEuro(getDecorBookingFlowerPrice()),
+            };
+          }
+          return {
+            name: product.name,
+            image: product.image,
+            price: product.price,
+            priceText: "+" + formatEuro(product.price),
+          };
+        }
+
+        function getDecorBookingTotal(item) {
+          if (!item) return 0;
+          var total = item.priceAmount || 0;
+          if (!item.showExtras) return total;
+          if (decorBookingSelectedExtras.flower) {
+            total += getDecorBookingFlowerPrice();
+          }
+          if (decorBookingSelectedExtras.chocolate) {
+            total +=
+              (DECOR_BOOKING_CHOCOLATES[decorBookingChocolateIndex] || {}).price || 0;
+          }
+          if (decorBookingSelectedExtras.perfume) {
+            total +=
+              (DECOR_BOOKING_PERFUMES[decorBookingPerfumeIndex] || {}).price || 0;
+          }
+          return total;
+        }
+
+        function resetDecorBookingExtrasForDecor() {
+          var item = getBookingDecorItem(selectedDecorBookingKey);
+          decorBookingSelectedExtras.flower = false;
+          decorBookingSelectedExtras.chocolate = false;
+          decorBookingSelectedExtras.perfume = false;
+          decorBookingExtraTypeIndex = 0;
+          decorBookingFlowerIndex =
+            item && typeof item.flowerStartIndex === "number"
+              ? item.flowerStartIndex
+              : 0;
+          decorBookingChocolateIndex =
+            item && typeof item.chocolateStartIndex === "number"
+              ? item.chocolateStartIndex
+              : 0;
+          decorBookingPerfumeIndex =
+            item && typeof item.perfumeStartIndex === "number"
+              ? item.perfumeStartIndex
+              : 0;
+        }
+
+        function restoreDecorBookingExtrasFromLines(decorKey) {
+          if (!decorKey) return;
+          var lines = loadStoredBookingLines();
+          lines.forEach(function (line) {
+            if (!line || line.decorBundle !== decorKey) return;
+            if (line.decorExtraType === "flower") {
+              decorBookingSelectedExtras.flower = true;
+              var flowerMatch = line.id && line.id.match(/-(\d+)$/);
+              if (flowerMatch) {
+                decorBookingFlowerIndex = parseInt(flowerMatch[1], 10) || 0;
+              }
+            }
+            if (line.decorExtraType === "chocolate") {
+              decorBookingSelectedExtras.chocolate = true;
+              var chocolateMatch = line.id && line.id.match(/-(\d+)$/);
+              if (chocolateMatch) {
+                decorBookingChocolateIndex = parseInt(chocolateMatch[1], 10) || 0;
+              }
+            }
+            if (line.decorExtraType === "perfume") {
+              decorBookingSelectedExtras.perfume = true;
+              var perfumeMatch = line.id && line.id.match(/-(\d+)$/);
+              if (perfumeMatch) {
+                decorBookingPerfumeIndex = parseInt(perfumeMatch[1], 10) || 0;
+              }
+            }
+          });
+        }
+
+        function syncDecorBookingExtrasUi() {
+          var item = getBookingDecorItem(selectedDecorBookingKey);
+          var visible = getDecorBookingVisibleExtraTypes(item);
+          var hasExtras = visible.length > 0;
+
+          if (!hasExtras) {
+            decorBookingSelectedExtras.flower = false;
+            decorBookingSelectedExtras.chocolate = false;
+            decorBookingSelectedExtras.perfume = false;
+          }
+
+          if (decorBookingChoices) {
+            if (hasExtras) {
+              decorBookingChoices.removeAttribute("hidden");
+            } else {
+              decorBookingChoices.setAttribute("hidden", "");
+            }
+          }
+
+          if (decorBookingExtraPrev) {
+            if (visible.length > 1) {
+              decorBookingExtraPrev.removeAttribute("hidden");
+            } else {
+              decorBookingExtraPrev.setAttribute("hidden", "");
+            }
+          }
+          if (decorBookingExtraNext) {
+            if (visible.length > 1) {
+              decorBookingExtraNext.removeAttribute("hidden");
+            } else {
+              decorBookingExtraNext.setAttribute("hidden", "");
+            }
+          }
+
+          var type = getDecorBookingCurrentExtraType(item);
+          var display = hasExtras ? getDecorBookingExtraDisplay(type) : null;
+          var isSelected = hasExtras && !!decorBookingSelectedExtras[type];
+
+          if (decorBookingBouquetRow) {
+            decorBookingBouquetRow.classList.toggle("is-selected", isSelected);
+          }
+          if (decorBookingBouquetToggle) {
+            decorBookingBouquetToggle.disabled = !hasExtras;
+            decorBookingBouquetToggle.classList.toggle("is-selected", isSelected);
+            decorBookingBouquetToggle.setAttribute(
+              "aria-pressed",
+              isSelected ? "true" : "false",
+            );
+            if (display) {
+              decorBookingBouquetToggle.setAttribute(
+                "aria-label",
+                isSelected
+                  ? i18n("extra-decor-remove-bouquet-named", { name: display.name })
+                  : i18n("extra-decor-add-bouquet-named", { name: display.name }),
+              );
+            }
+            decorBookingBouquetToggle.innerHTML = isSelected
+              ? '<i class="fa fa-check" aria-hidden="true"></i>'
+              : '<i class="fa fa-plus" aria-hidden="true"></i>';
+          }
+
+          if (display) {
+            if (decorBookingExtraThumb) {
+              decorBookingExtraThumb.src = display.image;
+              decorBookingExtraThumb.alt = display.name;
+            }
+            if (decorBookingExtraName) {
+              decorBookingExtraName.textContent = display.name;
+            }
+            if (decorBookingExtraPrice) {
+              decorBookingExtraPrice.textContent = display.priceText;
+            }
+          }
+
+          if (decorBookingBasePrice && item.priceAmount) {
+            decorBookingBasePrice.textContent = formatEuro(item.priceAmount);
+          }
+
+          var total = getDecorBookingTotal(item);
+          if (decorBookingChoicesTotal) {
+            decorBookingChoicesTotal.textContent = formatEuro(total);
+          }
+          if (decorBookingTotal) {
+            decorBookingTotal.textContent =
+              item.key === "custom"
+                ? i18n("extra-decor-price-request")
+                : formatEuro(total);
+          }
+
+          var catalog = getDecorBookingCatalog(type);
+          var canBrowseProducts = catalog.length > 1;
+          if (decorBookingProductPrev) {
+            decorBookingProductPrev.disabled = !hasExtras || !canBrowseProducts;
+          }
+          if (decorBookingProductNext) {
+            decorBookingProductNext.disabled = !hasExtras || !canBrowseProducts;
+          }
+        }
+
+        function stepDecorBookingExtraType(direction) {
+          var item = getBookingDecorItem(selectedDecorBookingKey);
+          var visible = getDecorBookingVisibleExtraTypes(item);
+          if (visible.length <= 1) return;
+          decorBookingExtraTypeIndex =
+            (decorBookingExtraTypeIndex + direction + visible.length) %
+            visible.length;
+          syncDecorBookingExtrasUi();
+        }
+
+        function stepDecorBookingProductIndex(direction) {
+          var item = getBookingDecorItem(selectedDecorBookingKey);
+          if (!item.showExtras) return;
+          var type = getDecorBookingCurrentExtraType(item);
+          var catalog = getDecorBookingCatalog(type);
+          if (catalog.length <= 1) return;
+          setDecorBookingIndex(type, getDecorBookingIndex(type) + direction);
+          syncDecorBookingExtrasUi();
+        }
+
+        function toggleDecorBookingCurrentExtra() {
+          var item = getBookingDecorItem(selectedDecorBookingKey);
+          if (!item.showExtras) return;
+          var type = getDecorBookingCurrentExtraType(item);
+          decorBookingSelectedExtras[type] = !decorBookingSelectedExtras[type];
+          syncDecorBookingExtrasUi();
+        }
+
         function renderDecorBookingPicker() {
           if (!decorBookingPicker) return;
           decorBookingPicker.innerHTML = "";
@@ -8043,12 +8584,6 @@
           if (decorBookingDesc) {
             decorBookingDesc.textContent = item.description;
           }
-          if (decorBookingTotal) {
-            decorBookingTotal.textContent =
-              item.key === "custom"
-                ? i18n("extra-decor-price-request")
-                : formatEuro(item.priceAmount);
-          }
           if (decorBookingConfirm) {
             var confirmLabel = decorBookingConfirm.querySelector("[data-i18n]");
             if (confirmLabel) {
@@ -8064,22 +8599,30 @@
               item.key === "custom" ? i18n("extra-decor-custom-hint") : "";
           }
           renderDecorBookingPicker();
+          syncDecorBookingExtrasUi();
         }
 
         function selectDecorBookingKey(key) {
-          if (!key || key === selectedDecorBookingKey) {
+          if (!key) {
             updateDecorBookingPreview();
             return;
           }
-          selectedDecorBookingKey = key;
+          if (key !== selectedDecorBookingKey) {
+            selectedDecorBookingKey = key;
+            resetDecorBookingExtrasForDecor();
+          }
           updateDecorBookingPreview();
         }
 
         function openDecorBookingModal() {
           if (!decorBookingModal) return;
           bookingFlowCategory = "decor";
-          selectedDecorBookingKey =
-            getStoredDecorBookingKey() || "birthday";
+          var storedKey = getStoredDecorBookingKey();
+          selectedDecorBookingKey = storedKey || "birthday";
+          resetDecorBookingExtrasForDecor();
+          if (storedKey) {
+            restoreDecorBookingExtrasFromLines(storedKey);
+          }
           updateDecorBookingPreview();
           decorBookingModal.classList.add("is-open");
           decorBookingModal.setAttribute("aria-hidden", "false");
@@ -8106,17 +8649,79 @@
             price: item.priceAmount || 0,
             image: item.src,
             qty: 1,
+            decorBundle: item.key,
           };
+        }
+
+        function buildDecorBookingExtraLine(decorItem, type) {
+          var catalog = getDecorBookingCatalog(type);
+          var index = getDecorBookingIndex(type);
+          var product = catalog[index] || catalog[0];
+          if (!product) return null;
+          var category =
+            type === "flower"
+              ? "flowers"
+              : type === "chocolate"
+                ? "chocolate"
+                : "perfume";
+          var price =
+            type === "flower" ? getDecorBookingFlowerPrice() : product.price;
+          return {
+            id:
+              "decor-extra-" +
+              type +
+              "-" +
+              decorItem.key +
+              "-" +
+              index,
+            catalogId:
+              "decor-extra-" +
+              type +
+              "-" +
+              decorItem.key +
+              "-" +
+              index,
+            category: category,
+            label: product.name + " with " + decorItem.cartName,
+            price: price,
+            image: product.image,
+            qty: 1,
+            decorBundle: decorItem.key,
+            decorExtraType: type,
+          };
+        }
+
+        function filterNonDecorBundleLines(lines) {
+          return (lines || []).filter(function (line) {
+            if (!line) return false;
+            if (line.category === "decor") return false;
+            if (line.decorBundle) return false;
+            return true;
+          });
         }
 
         function addDecorSelectionToBooking() {
           var item = getBookingDecorItem(selectedDecorBookingKey);
           if (!item) return;
 
-          var existing = loadStoredBookingLines().filter(function (line) {
-            return line && line.category !== "decor";
-          });
+          var existing = filterNonDecorBundleLines(loadStoredBookingLines());
           existing.push(buildDecorBookingLine(item));
+
+          if (item.showExtras) {
+            if (decorBookingSelectedExtras.flower) {
+              var flowerLine = buildDecorBookingExtraLine(item, "flower");
+              if (flowerLine) existing.push(flowerLine);
+            }
+            if (decorBookingSelectedExtras.chocolate) {
+              var chocolateLine = buildDecorBookingExtraLine(item, "chocolate");
+              if (chocolateLine) existing.push(chocolateLine);
+            }
+            if (decorBookingSelectedExtras.perfume) {
+              var perfumeLine = buildDecorBookingExtraLine(item, "perfume");
+              if (perfumeLine) existing.push(perfumeLine);
+            }
+          }
+
           saveStoredBookingLines(existing);
           goBackToBookingDetails();
         }
@@ -8525,6 +9130,67 @@
           });
         }
 
+        if (decorBookingBouquetToggle) {
+          decorBookingBouquetToggle.addEventListener("click", function () {
+            toggleDecorBookingCurrentExtra();
+          });
+        }
+
+        if (decorBookingExtraPrev) {
+          decorBookingExtraPrev.addEventListener("click", function () {
+            stepDecorBookingExtraType(-1);
+          });
+        }
+
+        if (decorBookingExtraNext) {
+          decorBookingExtraNext.addEventListener("click", function () {
+            stepDecorBookingExtraType(1);
+          });
+        }
+
+        if (decorBookingProductPrev) {
+          decorBookingProductPrev.addEventListener("click", function (event) {
+            event.stopPropagation();
+            stepDecorBookingProductIndex(-1);
+          });
+        }
+
+        if (decorBookingProductNext) {
+          decorBookingProductNext.addEventListener("click", function (event) {
+            event.stopPropagation();
+            stepDecorBookingProductIndex(1);
+          });
+        }
+
+        if (decorBookingProductSwipe) {
+          var decorProductTouchStartX = 0;
+          var decorProductTouchStartY = 0;
+          decorBookingProductSwipe.addEventListener(
+            "touchstart",
+            function (event) {
+              if (!event.touches || !event.touches.length) return;
+              decorProductTouchStartX = event.touches[0].clientX;
+              decorProductTouchStartY = event.touches[0].clientY;
+            },
+            { passive: true },
+          );
+          decorBookingProductSwipe.addEventListener(
+            "touchend",
+            function (event) {
+              if (!event.changedTouches || !event.changedTouches.length) return;
+              var deltaX =
+                event.changedTouches[0].clientX - decorProductTouchStartX;
+              var deltaY =
+                event.changedTouches[0].clientY - decorProductTouchStartY;
+              if (Math.abs(deltaX) < 30) return;
+              if (Math.abs(deltaX) <= Math.abs(deltaY)) return;
+              event.stopPropagation();
+              stepDecorBookingProductIndex(deltaX < 0 ? 1 : -1);
+            },
+            { passive: true },
+          );
+        }
+
         document.addEventListener("keydown", function (event) {
           if (event.key !== "Escape") return;
           if (
@@ -8660,6 +9326,7 @@
             decorBookingModal.classList.contains("is-open")
           ) {
             updateDecorBookingPreview();
+            syncDecorBookingExtrasUi();
           }
         });
       })();
@@ -8751,18 +9418,19 @@
           perfume: false,
         };
 
+        var DECOR_FLOWER_ADDON_PRICE = 60;
         var DECOR_FLOWERS = [
-          { name: "Single Red Roses", image: "img/flower.jpg", price: 3 },
-          { name: "Single White Rose", image: "img/whiteflower.png", price: 3 },
-          { name: "Single Pink Rose", image: "img/redrose.jpg", price: 3 },
-          { name: "Single Pink Dianthus", image: "img/rose.jpg", price: 2 },
-          { name: "Single White Dianthus", image: "img/whiteflowers.png", price: 2 },
-          { name: "Single White Lily", image: "img/flower5.png", price: 8 },
-          { name: "Single Pink Lily", image: "img/lilypink.png", price: 8 },
-          { name: "Lily Bouquet", image: "img/flower1.jpg", price: 50 },
-          { name: "A Bouquet of Red Roses", image: "img/flower2.jpg", price: 60 },
-          { name: "A Bouquet of Yellow Tulips", image: "img/flower3.jpg", price: 55 },
-          { name: "Mixed Flower Bouquet", image: "img/flowers1.png", price: 50 },
+          { name: "Single Red Roses", image: "img/flower.jpg" },
+          { name: "Single White Rose", image: "img/whiteflower.png" },
+          { name: "Single Pink Rose", image: "img/redrose.jpg" },
+          { name: "Single Pink Dianthus", image: "img/rose.jpg" },
+          { name: "Single White Dianthus", image: "img/whiteflowers.png" },
+          { name: "Single White Lily", image: "img/flower5.png" },
+          { name: "Single Pink Lily", image: "img/lilypink.png" },
+          { name: "Lily Bouquet", image: "img/flower1.jpg" },
+          { name: "A Bouquet of Red Roses", image: "img/flower2.jpg" },
+          { name: "A Bouquet of Yellow Tulips", image: "img/flower3.jpg" },
+          { name: "Mixed Flower Bouquet", image: "img/flowers1.png" },
         ];
 
         var DECOR_CHOCOLATES = [
@@ -8967,14 +9635,18 @@
           else perfumeIndex = next;
         }
 
+        function getDecorFlowerAddonPrice() {
+          return DECOR_FLOWER_ADDON_PRICE;
+        }
+
         function getExtraDisplay(item, type) {
           if (type === "flower") {
             var flower = getFlower();
             return {
               name: flower.name,
               image: flower.image,
-              price: flower.price,
-              priceText: formatDecorEuroPlus(flower.price),
+              price: getDecorFlowerAddonPrice(),
+              priceText: formatDecorEuroPlus(getDecorFlowerAddonPrice()),
             };
           }
           if (type === "chocolate") {
@@ -9004,7 +9676,7 @@
           var total = item.priceAmount;
           if (item.showExtras) {
             if (selectedExtras.flower) {
-              total += getFlower().price || 0;
+              total += getDecorFlowerAddonPrice();
             }
             if (selectedExtras.chocolate) {
               total += getChocolate().price || 0;
@@ -9390,7 +10062,7 @@
                   productBase: flower.name,
                   variantLabel: "",
                   image: flower.image,
-                  price: flower.price,
+                  price: getDecorFlowerAddonPrice(),
                   qty: 1,
                   description: flower.name + " with " + current.cartName,
                 });
