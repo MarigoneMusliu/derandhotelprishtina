@@ -5,10 +5,11 @@
     <meta
       name="description"
       content="Complete your Derand Hotel booking details before secure payment."
+      data-i18n="bd-meta-description"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Booking Details | Derand Hotel</title>
+    <title data-i18n="bd-page-title">Booking Details | Derand Hotel</title>
     <link rel="icon" href="favicon.ico?v=14" type="image/x-icon" sizes="any" />
     <link rel="canonical" href="https://www.derandhotel.com/booking-details.html" />
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
@@ -196,16 +197,20 @@
       </div>
     </header>
 
-    <section class="booking-details-desktop-header" aria-label="Booking navigation">
+    <section
+      class="booking-details-desktop-header"
+      aria-label="Booking navigation"
+      data-i18n-aria-label="bd-desktop-header-aria"
+    >
       <div class="booking-details-desktop-header__shell">
         <a href="index.html" class="booking-details-desktop-header__brand">Derand Hotel</a>
         <nav class="booking-details-desktop-header__nav">
-          <a href="rooms.html">Explore</a>
-          <a href="book.html" class="is-active">Bookings</a>
-          <a href="extra.html">Favorites</a>
-          <a href="contact.html">Profile</a>
+          <a href="rooms.html" data-i18n="bd-nav-explore">Explore</a>
+          <a href="book.html" class="is-active" data-i18n="bd-nav-bookings">Bookings</a>
+          <a href="extra.html" data-i18n="bd-nav-favorites">Favorites</a>
+          <a href="contact.html" data-i18n="bd-nav-profile">Profile</a>
         </nav>
-        <a href="book.html" class="booking-details-desktop-header__cta">Book Now</a>
+        <a href="book.html" class="booking-details-desktop-header__cta" data-i18n="bd-nav-book-now">Book Now</a>
       </div>
     </section>
 
@@ -214,30 +219,39 @@
         <div class="booking-details__topbar">
           <a class="booking-details__back" id="booking-back-link" href="book.html">
             <i class="fa fa-angle-left" aria-hidden="true"></i>
-            <span>Rooms</span>
+            <span data-i18n="bd-back-rooms">Rooms</span>
           </a>
-          <button class="booking-details__menu" type="button" aria-label="More options">
+          <button
+            class="booking-details__menu"
+            type="button"
+            aria-label="More options"
+            data-i18n-aria-label="bd-menu-aria"
+          >
             <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
           </button>
         </div>
 
         <div class="booking-checkout__intro">
-          <section class="booking-progress" aria-label="Booking progress">
+          <section
+            class="booking-progress"
+            aria-label="Booking progress"
+            data-i18n-aria-label="bd-progress-aria"
+          >
             <div class="booking-progress__track">
-              <span class="booking-progress__pill">Guest details</span>
+              <span class="booking-progress__pill" data-i18n="bd-progress-guest-details">Guest details</span>
               <span class="booking-progress__line" aria-hidden="true"></span>
             </div>
           </section>
-          <h1 class="booking-checkout__title">Guest &amp; Payment Details</h1>
+          <h1 class="booking-checkout__title" data-i18n="bd-checkout-title">Guest &amp; Payment Details</h1>
         </div>
 
         <section class="booking-concierge-prompt" aria-labelledby="booking-concierge-title">
           <div class="booking-concierge-prompt__inner">
-            <p class="booking-concierge-prompt__kicker">Treat your stay</p>
-            <h2 class="booking-concierge-prompt__title" id="booking-concierge-title">
+            <p class="booking-concierge-prompt__kicker" data-i18n="bd-concierge-kicker">Treat your stay</p>
+            <h2 class="booking-concierge-prompt__title" id="booking-concierge-title" data-i18n="bd-concierge-title">
               What should we bring to your room?
             </h2>
-            <p class="booking-concierge-prompt__lead">
+            <p class="booking-concierge-prompt__lead" data-i18n="bd-concierge-lead">
               Tap a picture below — browse, pick your favourite, we deliver. Easy.
             </p>
             <div class="booking-concierge-prompt__choices" id="booking-concierge-choices">
@@ -245,37 +259,37 @@
                 <span class="booking-concierge-prompt__chip-thumb">
                   <img src="img/flowers.png" alt="" width="52" height="52" loading="lazy" />
                 </span>
-                <span class="booking-concierge-prompt__chip-label">Flowers</span>
+                <span class="booking-concierge-prompt__chip-label" data-i18n="bd-chip-flowers">Flowers</span>
               </a>
               <a class="booking-concierge-prompt__chip" href="#" data-extra-focus="bottle">
                 <span class="booking-concierge-prompt__chip-thumb">
                   <img src="img/champaignee.png" alt="" width="52" height="52" loading="lazy" />
                 </span>
-                <span class="booking-concierge-prompt__chip-label">Champagne</span>
+                <span class="booking-concierge-prompt__chip-label" data-i18n="bd-chip-champagne">Champagne</span>
               </a>
               <a class="booking-concierge-prompt__chip" href="#" data-extra-focus="chocolate">
                 <span class="booking-concierge-prompt__chip-thumb">
                   <img src="img/tog.png" alt="" width="52" height="52" loading="lazy" />
                 </span>
-                <span class="booking-concierge-prompt__chip-label">Chocolate</span>
+                <span class="booking-concierge-prompt__chip-label" data-i18n="bd-chip-chocolate">Chocolate</span>
               </a>
               <a class="booking-concierge-prompt__chip" href="#" data-extra-focus="perfume">
                 <span class="booking-concierge-prompt__chip-thumb">
                   <img src="img/armani.png" alt="" width="52" height="52" loading="lazy" />
                 </span>
-                <span class="booking-concierge-prompt__chip-label">Perfume</span>
+                <span class="booking-concierge-prompt__chip-label" data-i18n="bd-chip-perfume">Perfume</span>
               </a>
               <a class="booking-concierge-prompt__chip" href="#" data-extra-focus="decor">
                 <span class="booking-concierge-prompt__chip-thumb">
                   <img src="img/valentineday.png" alt="" width="52" height="52" loading="lazy" />
                 </span>
-                <span class="booking-concierge-prompt__chip-label">Decor</span>
+                <span class="booking-concierge-prompt__chip-label" data-i18n="bd-chip-decor">Decor</span>
               </a>
               <a class="booking-concierge-prompt__chip" href="#" data-extra-focus="laundry">
                 <span class="booking-concierge-prompt__chip-thumb">
                   <img src="img/shirt.png" alt="" width="52" height="52" loading="lazy" />
                 </span>
-                <span class="booking-concierge-prompt__chip-label">Laundry</span>
+                <span class="booking-concierge-prompt__chip-label" data-i18n="bd-chip-laundry">Laundry</span>
               </a>
             </div>
           </div>
@@ -285,33 +299,33 @@
           <section class="booking-panel booking-panel--guest">
             <div class="booking-panel__header">
               <i class="fa fa-user-o" aria-hidden="true"></i>
-              <h2>Guest Information</h2>
+              <h2 data-i18n="bd-guest-info-title">Guest Information</h2>
             </div>
 
             <div class="booking-fields booking-fields--grid">
               <label class="booking-field booking-field--full">
-                <span>Room</span>
+                <span data-i18n="bd-label-room">Room</span>
                 <select id="booking-room" name="room" required>
-                  <option value="junior-suite">Junior Suite</option>
-                  <option value="deluxe-double">Deluxe Double Room</option>
-                  <option value="premium-double">Premium Room</option>
-                  <option value="superior-twin">Superior Twin Room</option>
-                  <option value="superior-double">Superior Double Room</option>
+                  <option value="junior-suite" data-i18n="bd-room-junior-suite-label">Junior Suite</option>
+                  <option value="deluxe-double" data-i18n="bd-room-deluxe-double-label">Deluxe Double Room</option>
+                  <option value="premium-double" data-i18n="bd-room-premium-double-label">Premium Room</option>
+                  <option value="superior-twin" data-i18n="bd-room-superior-twin-label">Superior Twin Room</option>
+                  <option value="superior-double" data-i18n="bd-room-superior-double-label">Superior Double Room</option>
                 </select>
               </label>
 
               <label class="booking-field booking-field--half">
-                <span>Check-in</span>
+                <span data-i18n="bd-label-check-in">Check-in</span>
                 <input type="date" id="booking-checkin" name="checkin" required />
               </label>
 
               <label class="booking-field booking-field--half">
-                <span>Check-out</span>
+                <span data-i18n="bd-label-check-out">Check-out</span>
                 <input type="date" id="booking-checkout" name="checkout" required />
               </label>
 
               <label class="booking-field">
-                <span>Full Name</span>
+                <span data-i18n="bd-label-full-name">Full Name</span>
                 <input
                   type="text"
                   id="booking-full-name"
@@ -322,7 +336,7 @@
               </label>
 
               <label class="booking-field">
-                <span>Email Address</span>
+                <span data-i18n="bd-label-email">Email Address</span>
                 <input
                   type="email"
                   id="booking-email"
@@ -333,7 +347,7 @@
               </label>
 
               <label class="booking-field booking-field--half">
-                <span>Phone Number</span>
+                <span data-i18n="bd-label-phone">Phone Number</span>
                 <input
                   type="tel"
                   id="booking-phone"
@@ -344,7 +358,7 @@
               </label>
 
               <label class="booking-field booking-field--half">
-                <span>Adults</span>
+                <span data-i18n="bd-label-adults">Adults</span>
                 <div class="booking-stepper" data-stepper>
                   <button
                     type="button"
@@ -352,6 +366,7 @@
                     data-stepper-action="decrement"
                     data-stepper-target="booking-adults"
                     aria-label="Decrease adults"
+                    data-i18n-aria-label="bd-stepper-decrease-adults"
                   >
                     -
                   </button>
@@ -363,6 +378,7 @@
                     readonly
                     inputmode="none"
                     aria-label="Adults"
+                    data-i18n-aria-label="bd-aria-adults"
                     required
                   />
                   <button
@@ -371,6 +387,7 @@
                     data-stepper-action="increment"
                     data-stepper-target="booking-adults"
                     aria-label="Increase adults"
+                    data-i18n-aria-label="bd-stepper-increase-adults"
                   >
                     +
                   </button>
@@ -378,7 +395,7 @@
               </label>
 
               <label class="booking-field booking-field--half">
-                <span>Children</span>
+                <span data-i18n="bd-label-children">Children</span>
                 <div class="booking-stepper" data-stepper>
                   <button
                     type="button"
@@ -386,6 +403,7 @@
                     data-stepper-action="decrement"
                     data-stepper-target="booking-children"
                     aria-label="Decrease children"
+                    data-i18n-aria-label="bd-stepper-decrease-children"
                   >
                     -
                   </button>
@@ -397,6 +415,7 @@
                     readonly
                     inputmode="none"
                     aria-label="Children"
+                    data-i18n-aria-label="bd-aria-children"
                   />
                   <button
                     type="button"
@@ -404,6 +423,7 @@
                     data-stepper-action="increment"
                     data-stepper-target="booking-children"
                     aria-label="Increase children"
+                    data-i18n-aria-label="bd-stepper-increase-children"
                   >
                     +
                   </button>
@@ -411,8 +431,8 @@
               </label>
 
               <div class="booking-field booking-field--full booking-child-ages" id="booking-child-ages">
-                <span>Children Years</span>
-                <p class="booking-child-ages__note">
+                <span data-i18n="bd-child-years-title">Children Years</span>
+                <p class="booking-child-ages__note" data-i18n="bd-child-years-note">
                   Premium Room policy: children up to 3 years are free, 4+ years add &euro;20 per child.
                 </p>
                 <div class="booking-child-ages__inputs" id="booking-child-ages-inputs"></div>
@@ -427,15 +447,15 @@
                 <div class="booking-extras-delivery__head">
                   <i class="fa fa-clock-o" aria-hidden="true"></i>
                   <div>
-                    <h3 id="booking-extras-delivery-title">When should we deliver your extras?</h3>
-                    <p class="booking-extras-delivery__lead">
+                    <h3 id="booking-extras-delivery-title" data-i18n="bd-extras-delivery-title">When should we deliver your extras?</h3>
+                    <p class="booking-extras-delivery__lead" data-i18n="bd-extras-delivery-lead">
                       Choose a date and time during your stay. We will bring your order to your room.
                     </p>
                   </div>
                 </div>
                 <div class="booking-fields booking-fields--grid booking-extras-delivery__fields">
                   <label class="booking-field booking-field--half">
-                    <span>Delivery date</span>
+                    <span data-i18n="bd-label-delivery-date">Delivery date</span>
                     <input
                       type="date"
                       id="booking-extras-delivery-date"
@@ -443,7 +463,7 @@
                     />
                   </label>
                   <label class="booking-field booking-field--half">
-                    <span>Delivery time</span>
+                    <span data-i18n="bd-label-delivery-time">Delivery time</span>
                     <input
                       type="time"
                       id="booking-extras-delivery-time"
@@ -451,11 +471,12 @@
                     />
                   </label>
                   <label class="booking-field booking-field--full">
-                    <span>Delivery notes (optional)</span>
+                    <span data-i18n="bd-label-delivery-notes">Delivery notes (optional)</span>
                     <textarea
                       id="booking-extras-delivery-notes"
                       name="extras_delivery_notes"
                       placeholder="Card message, surprise timing, or other instructions"
+                      data-i18n-placeholder="bd-delivery-notes-placeholder"
                       rows="3"
                     ></textarea>
                   </label>
@@ -463,7 +484,7 @@
               </div>
 
               <label class="booking-field booking-field--full">
-                <span>Special Requests (Optional)</span>
+                <span data-i18n="bd-label-special-requests">Special Requests (Optional)</span>
                 <textarea
                   id="booking-notes"
                   name="notes"
@@ -490,11 +511,11 @@
 
               <div class="booking-summary-card__dates">
                 <div>
-                  <span>Dates</span>
+                  <span data-i18n="bd-summary-dates">Dates</span>
                   <strong id="booking-summary-date-range">Oct 24-28, 2023</strong>
                 </div>
                 <div class="booking-summary-card__stay">
-                  <span>Stay</span>
+                  <span data-i18n="bd-summary-stay">Stay</span>
                   <strong id="booking-summary-stay-count">4 Nights</strong>
                 </div>
               </div>
@@ -506,43 +527,55 @@
                 </div>
               </div>
 
-              <p class="booking-summary-card__unified" id="booking-unified-note">
+              <p class="booking-summary-card__unified" id="booking-unified-note" data-i18n="bd-summary-unified-note">
                 Your booking total is paid in one secure checkout.
               </p>
 
               <div class="booking-summary-card__total">
-                <span>Total due</span>
+                <span data-i18n="bd-summary-total-due">Total due</span>
                 <strong id="booking-price-total">&euro;448.50</strong>
               </div>
 
               <button class="booking-confirm" id="booking-confirm" type="submit">
-                Complete secure payment
+                <span data-i18n="bd-confirm-payment">Complete secure payment</span>
                 <i class="fa fa-arrow-right" aria-hidden="true"></i>
               </button>
             </section>
 
             <div class="booking-side__benefits">
-              <section class="booking-benefit-card" aria-label="Best rate guarantee">
+              <section
+                class="booking-benefit-card"
+                aria-label="Best rate guarantee"
+                data-i18n-aria-label="bd-benefit-rate-aria"
+              >
                 <div class="booking-benefit-card__icon">
                   <i class="fa fa-certificate" aria-hidden="true"></i>
                 </div>
-                <strong>Best Rate Guarantee</strong>
+                <strong data-i18n="bd-benefit-rate">Best Rate Guarantee</strong>
               </section>
 
-              <section class="booking-benefit-card" aria-label="24/7 concierge">
+              <section
+                class="booking-benefit-card"
+                aria-label="24/7 concierge"
+                data-i18n-aria-label="bd-benefit-concierge-aria"
+              >
                 <div class="booking-benefit-card__icon">
                   <i class="fa fa-headphones" aria-hidden="true"></i>
                 </div>
-                <strong>24/7 Concierge</strong>
+                <strong data-i18n="bd-benefit-concierge">24/7 Concierge</strong>
               </section>
             </div>
           </aside>
 
-          <section class="booking-checkout__security" aria-label="Secure payment note">
+          <section
+            class="booking-checkout__security"
+            aria-label="Secure payment note"
+            data-i18n-aria-label="bd-security-aria"
+          >
             <div class="booking-checkout__security-icon">
               <i class="fa fa-shield" aria-hidden="true"></i>
             </div>
-            <p>
+            <p data-i18n="bd-security-text">
               Your payment information is encrypted and processed securely by our
               global financial partners.
             </p>
@@ -565,7 +598,7 @@
       <div class="booking-details-desktop-footer__shell">
         <div class="booking-details-desktop-footer__brand">
           <a href="index.html" class="booking-details-desktop-footer__logo">Derand Hotel</a>
-          <p>
+          <p data-i18n="bd-footer-copyright">
             &copy;2026 Derand Hotel. Excellence in hospitality since 1990. Providing
             curated luxury experiences across Kosovo.
           </p>
@@ -573,19 +606,19 @@
 
         <div class="booking-details-desktop-footer__links">
           <div>
-            <span>Discover</span>
-            <a href="index.html">About Us</a>
-            <a href="rooms.html">Rooms &amp; Suites</a>
+            <span data-i18n="bd-footer-discover">Discover</span>
+            <a href="index.html" data-i18n="bd-footer-about">About Us</a>
+            <a href="rooms.html" data-i18n="bd-footer-rooms">Rooms &amp; Suites</a>
           </div>
           <div>
-            <span>Support</span>
-            <a href="contact.html">Contact</a>
-            <a href="termsofservices.html">Terms of Service</a>
+            <span data-i18n="bd-footer-support">Support</span>
+            <a href="contact.html" data-i18n="bd-footer-contact">Contact</a>
+            <a href="termsofservices.html" data-i18n="bd-footer-terms">Terms of Service</a>
           </div>
           <div>
-            <span>Legal</span>
-            <a href="privacypolicy.html">Privacy Policy</a>
-            <a href="termsofservices.html">Payments</a>
+            <span data-i18n="bd-footer-legal">Legal</span>
+            <a href="privacypolicy.html" data-i18n="bd-footer-privacy">Privacy Policy</a>
+            <a href="termsofservices.html" data-i18n="bd-footer-payments">Payments</a>
           </div>
         </div>
       </div>
@@ -764,6 +797,7 @@
     <script src="js/site-whatsapp.js?v=8" defer></script>
     <script src="js/tidio-left-position.js?v=2" defer></script>
     <script src="js/booking-shared.js?v=3" defer></script>
-    <script src="js/booking-details.js?v=14" defer></script>
+    <script src="js/booking-details-i18n.js" defer></script>
+    <script src="js/booking-details.js?v=16" defer></script>
   </body>
 </html>

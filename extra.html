@@ -7934,17 +7934,47 @@
           laundryServiceByIndex = [];
         }
 
+        var cartAutoCloseTimer = null;
+
+        function clearCartAutoCloseTimer() {
+          if (!cartAutoCloseTimer) return;
+          window.clearTimeout(cartAutoCloseTimer);
+          cartAutoCloseTimer = null;
+        }
+
         function openCart() {
           cartDrawer.classList.add("is-open");
           cartDrawer.setAttribute("aria-hidden", "false");
           document.body.style.overflow = "hidden";
         }
 
-        function closeCart() {
+        function closeCart(force) {
+          if (!force && cart.length > 0) return;
+          clearCartAutoCloseTimer();
           cartDrawer.classList.remove("is-open");
           cartDrawer.setAttribute("aria-hidden", "true");
           if (!modal.classList.contains("is-open")) {
             document.body.style.overflow = "";
+          }
+        }
+
+        function scheduleCartAutoClose() {
+          if (isBookingFlow) return;
+          clearCartAutoCloseTimer();
+          openCart();
+          cartAutoCloseTimer = window.setTimeout(function () {
+            cartAutoCloseTimer = null;
+            closeCart(true);
+          }, 1000);
+        }
+
+        function syncCartDrawerState() {
+          if (isBookingFlow) return;
+          if (!cart.length) {
+            clearCartAutoCloseTimer();
+            if (cartDrawer.classList.contains("is-open")) {
+              closeCart(true);
+            }
           }
         }
 
@@ -8009,6 +8039,7 @@
               i18n("extra-cart-empty-hint") +
               "</p>" +
               "</div>";
+            syncCartDrawerState();
             return;
           }
 
@@ -8099,7 +8130,11 @@
                 (merged ? i18n("extra-toast-updated") : i18n("extra-toast-added-cart")),
             );
           }
-          if (options.openCart !== false) openCart();
+          if (!isBookingFlow) {
+            scheduleCartAutoClose();
+          } else {
+            syncCartDrawerState();
+          }
           return true;
         }
 
@@ -8819,7 +8854,6 @@
           if (!addedLines) return;
 
           closeModal();
-          openCart();
           showToast(
             addedLines > 1
               ? i18n("extra-toast-added-selections")
@@ -8879,7 +8913,6 @@
             },
             {
               closeModal: false,
-              openCart: false,
               skipToast: false,
               toastMessage: i18n("extra-toast-added"),
             },
@@ -8950,6 +8983,7 @@
 
         cart = loadCart();
         renderCart();
+        syncCartDrawerState();
         initBookingFlow();
         window.setTimeout(trySendPendingOrderAfterPayment, 120);
 
@@ -9039,10 +9073,11 @@
             return;
           }
           if (event.target.closest("[data-cart-close]")) {
-            closeCart();
+            closeCart(true);
             return;
           }
           if (event.target.closest("#extra-cart-toggle")) {
+            clearCartAutoCloseTimer();
             openCart();
             return;
           }
@@ -9205,8 +9240,9 @@
             goBackToBookingDetails();
             return;
           }
-          if (cartDrawer.classList.contains("is-open")) closeCart();
-          else if (modal.classList.contains("is-open")) closeModal();
+          if (cartDrawer.classList.contains("is-open")) {
+            if (!cart.length) closeCart(true);
+          } else if (modal.classList.contains("is-open")) closeModal();
         });
 
         checkoutForm.addEventListener("submit", function (event) {
@@ -9309,7 +9345,6 @@
 
           window.setTimeout(function () {
             window.open(CARD_CHECKOUT_URL, "_blank", "noopener,noreferrer");
-            closeCart();
             if (cartPayBtn) cartPayBtn.disabled = cart.length === 0;
           }, 600);
         });

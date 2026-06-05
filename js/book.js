@@ -22,6 +22,24 @@
   if (!cards.length) return;
 
   var selectedRoom = cards[0].dataset.room || "junior-suite";
+  var lastStatus = { key: "", state: "" };
+
+  function t(key, vars) {
+    if (window.BookI18n && typeof window.BookI18n.t === "function") {
+      return window.BookI18n.t(key, null, vars);
+    }
+    return key;
+  }
+
+  function getDateLocale() {
+    var lang =
+      window.BookI18n && typeof window.BookI18n.currentLang === "function"
+        ? window.BookI18n.currentLang()
+        : "en";
+    if (lang === "de") return "de-DE";
+    if (lang === "al") return "sq-AL";
+    return "en-GB";
+  }
 
   function initHeroRotation() {
     var hero = document.querySelector(".booking-hero[data-hero-rotate]");
@@ -61,10 +79,6 @@
     });
 
     if (layers.length < 2) return;
-
-    // Keep the hero static for smoother scrolling and better stability.
-    // Rotating large background layers was causing jank on this page.
-    return;
   }
 
   function todayIso() {
@@ -83,8 +97,8 @@
 
   function formatDate(iso) {
     var date = parseIso(iso);
-    if (!date) return "—";
-    return date.toLocaleDateString("en-GB", {
+    if (!date) return "\u2014";
+    return date.toLocaleDateString(getDateLocale(), {
       day: "2-digit",
       month: "short",
       year: "numeric",
@@ -104,13 +118,21 @@
     var parts = [];
 
     if (adults > 0) {
-      parts.push(adults + (adults === 1 ? " adult" : " adults"));
+      parts.push(
+        adults +
+          " " +
+          t(adults === 1 ? "book-guest-adult" : "book-guest-adults"),
+      );
     }
     if (children > 0) {
-      parts.push(children + (children === 1 ? " child" : " children"));
+      parts.push(
+        children +
+          " " +
+          t(children === 1 ? "book-guest-child" : "book-guest-children"),
+      );
     }
 
-    return parts.length ? parts.join(", ") : "No guests selected";
+    return parts.length ? parts.join(", ") : t("book-no-guests");
   }
 
   function syncCountsFromGuestSelect() {
@@ -170,11 +192,29 @@
     }
   }
 
+  function roomLabelKey(room) {
+    return "book-room-" + room + "-label";
+  }
+
+  function syncRoomCardLabels() {
+    cards.forEach(function (card) {
+      var room = card.dataset.room;
+      if (!room) return;
+      card.dataset.roomLabel = t(roomLabelKey(room));
+    });
+  }
+
   function getSelectedRoomLabel() {
     var selectedCard = cards.find(function (card) {
       return card.dataset.room === selectedRoom;
     });
-    return selectedCard ? selectedCard.dataset.roomLabel || "Selected room" : "Selected room";
+    if (selectedCard && selectedCard.dataset.roomLabel) {
+      return selectedCard.dataset.roomLabel;
+    }
+    if (selectedRoom) {
+      return t(roomLabelKey(selectedRoom));
+    }
+    return t("book-selected-room");
   }
 
   function buildSearchParams(room) {
@@ -217,6 +257,53 @@
     });
   }
 
+  function isFeaturePriceEl(el) {
+    return el.classList.contains("booking-room-card__feature-price");
+  }
+
+  function buildDefaultPriceHtml(nightly, el) {
+    var perNight = t("book-price-per-night");
+    if (isFeaturePriceEl(el)) {
+      return "&euro;" + nightly + "<span>" + perNight + "</span>";
+    }
+    return "&euro;" + nightly + perNight;
+  }
+
+  function resetDefaultPriceHtml() {
+    cards.forEach(function (card) {
+      var nightly = parseFloat(card.getAttribute("data-price-night"), 10);
+      if (!nightly) return;
+
+      card
+        .querySelectorAll(
+          ".booking-room-card__feature-price, .booking-room-card__inline-price",
+        )
+        .forEach(function (el) {
+          delete el.dataset.defaultHtml;
+          el.innerHTML = buildDefaultPriceHtml(nightly, el);
+          el.dataset.defaultHtml = el.innerHTML;
+        });
+    });
+  }
+
+  function buildStayPriceHtml(nightly, nights) {
+    var perNight = t("book-price-per-night");
+    var total = nightly * nights;
+    return (
+      "&euro;" +
+      total +
+      "<span> " +
+      t("book-price-total") +
+      "</span> <span class=\"booking-room-card__price-note\">" +
+      t("book-price-multi", {
+        nights: nights,
+        nightly: nightly,
+        perNight: perNight,
+      }) +
+      "</span>"
+    );
+  }
+
   function updateRoomCardPrices() {
     var nights = getNightCount();
     cards.forEach(function (card) {
@@ -231,17 +318,9 @@
           el.dataset.defaultHtml = el.innerHTML;
         }
         if (nights > 1) {
-          var total = nightly * nights;
-          el.innerHTML =
-            "&euro;" +
-            total +
-            '<span> total</span> <span class="booking-room-card__price-note">(' +
-            nights +
-            " &times; &euro;" +
-            nightly +
-            "/night)</span>";
+          el.innerHTML = buildStayPriceHtml(nightly, nights);
         } else if (nights === 1) {
-          el.innerHTML = "&euro;" + nightly + "<span>/night</span>";
+          el.innerHTML = "&euro;" + nightly + "<span>" + t("book-price-per-night") + "</span>";
         } else {
           el.innerHTML = el.dataset.defaultHtml;
         }
@@ -249,35 +328,54 @@
     });
   }
 
+  function getStayText(nights) {
+    if (nights === 1) return t("book-night");
+    if (nights > 1) return t("book-nights", { count: nights });
+    return t("book-choose-valid-dates");
+  }
+
+  function hasCompleteStay() {
+    return getNightCount() >= 1 && checkInEl.value && checkOutEl.value;
+  }
+
   function updateSummary() {
     var nights = getNightCount();
-    var stayText =
-      nights === 1 ? "1 night" : nights > 1 ? nights + " nights" : "Choose valid dates";
+    var stayText = getStayText(nights);
 
     if (summaryEl) {
-      summaryEl.textContent =
-        getSelectedRoomLabel() +
-        " · " +
-        formatDate(checkInEl.value) +
-        " to " +
-        formatDate(checkOutEl.value) +
-        " · " +
-        stayText +
-        " · " +
-        getGuestSummary();
+      if (!hasCompleteStay()) {
+        summaryEl.textContent = t("book-summary-placeholder");
+      } else {
+        summaryEl.textContent =
+          getSelectedRoomLabel() +
+          t("book-summary-separator") +
+          formatDate(checkInEl.value) +
+          t("book-summary-to") +
+          formatDate(checkOutEl.value) +
+          t("book-summary-separator") +
+          stayText +
+          t("book-summary-separator") +
+          getGuestSummary();
+      }
     }
     updateRoomCardPrices();
   }
 
-  function setStatus(message, state) {
-    statusEl.textContent = message || "";
+  function setStatus(key, state, vars) {
+    lastStatus = { key: key || "", state: state || "", vars: vars || null };
+    statusEl.textContent = key ? t(key, vars) : "";
     statusEl.className = "booking-search__status" + (state ? " is-" + state : "");
+  }
+
+  function refreshStatusMessage() {
+    if (!lastStatus.key) return;
+    setStatus(lastStatus.key, lastStatus.state, lastStatus.vars);
   }
 
   function validateFilters() {
     var nights = getNightCount();
     if (!checkInEl.value || !checkOutEl.value || nights < 1) {
-      setStatus("Please choose a valid check-in and check-out date.", "error");
+      setStatus("book-status-invalid-dates", "error");
       return false;
     }
     return true;
@@ -340,6 +438,13 @@
     }
   }
 
+  function onLanguageChange() {
+    syncRoomCardLabels();
+    resetDefaultPriceHtml();
+    updateSummary();
+    refreshStatusMessage();
+  }
+
   form.addEventListener("submit", function (event) {
     event.preventDefault();
     syncCountsFromGuestSelect();
@@ -349,7 +454,7 @@
     updateSummary();
     syncReserveLinks();
     updateQueryString();
-    setStatus("Dates and guests updated. Choose any room below to continue.", "success");
+    setStatus("book-status-updated", "success");
   });
 
   [checkInEl, checkOutEl].forEach(function (element) {
@@ -387,11 +492,15 @@
         return;
       }
       link.href = buildDetailsUrl(room);
-      setStatus("Opening guest details for " + getSelectedRoomLabel() + "...", "success");
+      setStatus("book-status-opening", "success", { room: getSelectedRoomLabel() });
     });
   });
 
+  document.addEventListener("derand:languagechange", onLanguageChange);
+
   initHeroRotation();
+  syncRoomCardLabels();
+  resetDefaultPriceHtml();
   syncCountsFromGuestSelect();
   applyQueryParams();
   selectRoom(selectedRoom);

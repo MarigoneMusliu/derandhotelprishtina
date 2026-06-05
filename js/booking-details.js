@@ -7,36 +7,73 @@
 
   var ROOM_DATA = {
     "junior-suite": {
-      label: "Junior Suite",
+      labelKey: "bd-room-junior-suite-label",
+      metaKey: "bd-room-junior-suite-meta",
       image: "img/1111.webp",
       price: 119,
-      meta: "37 m2 / King bed",
     },
     "deluxe-double": {
-      label: "Deluxe Double Room",
+      labelKey: "bd-room-deluxe-double-label",
+      metaKey: "bd-room-deluxe-double-meta",
       image: "img/deluxeroom4.webp",
       price: 88,
-      meta: "30 m2 / King bed",
     },
     "premium-double": {
-      label: "Premium Double Room",
+      labelKey: "bd-room-premium-double-label",
+      metaKey: "bd-room-premium-double-meta",
       image: "img/premium1.webp",
       price: 99,
-      meta: "28 m2 / King bed",
     },
     "superior-twin": {
-      label: "Superior Twin Room",
+      labelKey: "bd-room-superior-twin-label",
+      metaKey: "bd-room-superior-twin-meta",
       image: "img/twinbook.jpg",
       price: 72,
-      meta: "23 m2 / Twin beds",
     },
     "superior-double": {
-      label: "Superior Double Room",
+      labelKey: "bd-room-superior-double-label",
+      metaKey: "bd-room-superior-double-meta",
       image: "img/superiorroom3.webp",
       price: 84,
-      meta: "22 m2 / King bed",
     },
   };
+
+  var lastStatus = { key: "", state: "", vars: null };
+
+  function t(key, vars) {
+    if (window.BookingDetailsI18n && typeof window.BookingDetailsI18n.t === "function") {
+      return window.BookingDetailsI18n.t(key, null, vars);
+    }
+    return key;
+  }
+
+  function getDateLocale() {
+    var lang =
+      window.BookingDetailsI18n &&
+      typeof window.BookingDetailsI18n.currentLang === "function"
+        ? window.BookingDetailsI18n.currentLang()
+        : "en";
+    if (lang === "de") return "de-DE";
+    if (lang === "al") return "sq-AL";
+    return "en-GB";
+  }
+
+  function getNumberLocale() {
+    return getDateLocale();
+  }
+
+  function getRoomInfo(roomKey) {
+    var data = ROOM_DATA[roomKey];
+    if (!data) {
+      return { label: "", meta: "", image: "", price: 0 };
+    }
+    return {
+      label: t(data.labelKey),
+      meta: t(data.metaKey),
+      image: data.image,
+      price: data.price,
+    };
+  }
 
   var form = document.getElementById("booking-details-form");
   if (!form) return;
@@ -96,8 +133,8 @@
 
   function formatDate(value) {
     var date = parseIso(value);
-    if (!date) return "—";
-    return date.toLocaleDateString("en-GB", {
+    if (!date) return "\u2014";
+    return date.toLocaleDateString(getDateLocale(), {
       day: "2-digit",
       month: "short",
       year: "numeric",
@@ -105,7 +142,7 @@
   }
 
   function currency(amount) {
-    return new Intl.NumberFormat("en-GB", {
+    return new Intl.NumberFormat(getNumberLocale(), {
       style: "currency",
       currency: "EUR",
       minimumFractionDigits: 2,
@@ -115,13 +152,14 @@
   function shortDateRange(startIso, endIso) {
     var start = parseIso(startIso);
     var end = parseIso(endIso);
-    if (!start || !end) return "—";
+    if (!start || !end) return "\u2014";
 
-    var startMonth = start.toLocaleDateString("en-GB", { month: "short" });
-    var startDay = start.toLocaleDateString("en-GB", { day: "numeric" });
-    var endDay = end.toLocaleDateString("en-GB", { day: "numeric" });
-    var month = end.toLocaleDateString("en-GB", { month: "short" });
-    var year = end.toLocaleDateString("en-GB", { year: "numeric" });
+    var locale = getDateLocale();
+    var startMonth = start.toLocaleDateString(locale, { month: "short" });
+    var startDay = start.toLocaleDateString(locale, { day: "numeric" });
+    var endDay = end.toLocaleDateString(locale, { day: "numeric" });
+    var month = end.toLocaleDateString(locale, { month: "short" });
+    var year = end.toLocaleDateString(locale, { year: "numeric" });
     return startMonth === month
       ? startDay + "-" + endDay + " " + month + ", " + year
       : formatDate(startIso) + " - " + formatDate(endIso);
@@ -130,12 +168,16 @@
   function guestSummary(adults, children) {
     var parts = [];
     if (adults > 0) {
-      parts.push(adults + " " + (adults === 1 ? "Adult" : "Adults"));
+      parts.push(
+        adults + " " + t(adults === 1 ? "bd-guest-adult" : "bd-guest-adults"),
+      );
     }
     if (children > 0) {
-      parts.push(children + " " + (children === 1 ? "Child" : "Children"));
+      parts.push(
+        children + " " + t(children === 1 ? "bd-guest-child" : "bd-guest-children"),
+      );
     }
-    return parts.join(", ") || "No guests";
+    return parts.join(", ") || t("bd-no-guests");
   }
 
   function getAdultsMaxForRoom(roomKey) {
@@ -270,7 +312,7 @@
     btn.type = "button";
     btn.className = "booking-extra-remove";
     btn.setAttribute("data-extra-index", String(index));
-    btn.setAttribute("aria-label", "Remove " + label);
+    btn.setAttribute("aria-label", t("bd-remove-extra", { label: label }));
     btn.innerHTML = '<i class="fa fa-times" aria-hidden="true"></i>';
     return btn;
   }
@@ -333,7 +375,7 @@
   }
 
   function formatExtrasList(extraLines) {
-    if (!extraLines || !extraLines.length) return "(none)";
+    if (!extraLines || !extraLines.length) return t("bd-extras-none");
     return extraLines
       .map(function (item) {
         var qty = item.qty && item.qty > 1 ? " × " + item.qty : "";
@@ -427,7 +469,7 @@
       var label = document.createElement("label");
       label.className = "booking-child-ages__label";
       label.setAttribute("for", "booking-child-age-" + index);
-      label.textContent = "Child " + (index + 1) + " age";
+      label.textContent = t("bd-child-age-label", { num: index + 1 });
 
       var input = document.createElement("input");
       input.type = "number";
@@ -436,7 +478,7 @@
       input.step = "1";
       input.id = "booking-child-age-" + index;
       input.value = value === "" ? "" : String(value);
-      input.placeholder = "Years";
+      input.placeholder = t("bd-child-age-placeholder");
       input.required = true;
       input.addEventListener("input", function () {
         state.childAges[index] = input.value;
@@ -455,7 +497,7 @@
       state.childAges = [];
       if (childrenInputEl) childrenInputEl.value = "0";
       if (showAlert) {
-        window.alert("Children are available only for Premium Room due to space limits.");
+        window.alert(t("bd-alert-children-premium"));
       }
     }
   }
@@ -515,9 +557,15 @@
     observer.observe(selectEl.parentNode, { childList: true, subtree: false });
   }
 
-  function setStatus(message, type) {
-    statusEl.textContent = message || "";
+  function setStatus(key, type, vars) {
+    lastStatus = { key: key || "", state: type || "", vars: vars || null };
+    statusEl.textContent = key ? t(key, vars) : "";
     statusEl.className = "booking-details__status" + (type ? " is-" + type : "");
+  }
+
+  function refreshStatusMessage() {
+    if (!lastStatus.key) return;
+    setStatus(lastStatus.key, lastStatus.state, lastStatus.vars);
   }
 
   function clearErrors() {
@@ -609,9 +657,7 @@
         hasBookingExtras(state) &&
         (!getExtrasDeliveryFromForm().date || !getExtrasDeliveryFromForm().time);
       setStatus(
-        deliveryMissing
-          ? "Please choose when to deliver your extras to your room."
-          : "Please complete the highlighted guest details.",
+        deliveryMissing ? "bd-status-delivery-required" : "bd-status-guest-required",
         "error",
       );
     }
@@ -755,7 +801,7 @@
   }
 
   function render(state) {
-    var room = ROOM_DATA[state.room];
+    var room = getRoomInfo(state.room);
     var nights = getNightCount(state);
     enforceChildrenPolicy(false);
     syncChildAgesLength();
@@ -778,22 +824,30 @@
     setText(roomMetaEl, room.meta);
     if (roomImageEl) {
       roomImageEl.src = room.image;
-      roomImageEl.alt = room.label + " at Derand Hotel";
+      roomImageEl.alt = t("bd-summary-room-alt", { room: room.label });
     }
-    var nightsLabel = nights + " " + (nights === 1 ? "night" : "nights");
+    var nightsLabel = nights + " " + t(nights === 1 ? "bd-night" : "bd-nights");
     if (state.room === "premium-double") {
-      setText(roomRateEl, currency(pricePerNight) + " / night (room rate)");
-      setText(roomTotalLabelEl, room.label + " (" + nightsLabel + ")");
+      setText(
+        roomRateEl,
+        t("bd-rate-per-night-room", { price: currency(pricePerNight) }),
+      );
     } else {
-      setText(roomRateEl, currency(pricePerNight) + " / night");
-      setText(roomTotalLabelEl, room.label + " (" + nightsLabel + ")");
+      setText(roomRateEl, t("bd-rate-per-night", { price: currency(pricePerNight) }));
     }
+    setText(
+      roomTotalLabelEl,
+      t("bd-room-total-label", { room: room.label, nights: nightsLabel }),
+    );
     setText(checkinEl, formatDate(state.checkin));
     setText(checkoutEl, formatDate(state.checkout));
     setText(guestsEl, guestSummary(state.adults, state.children));
-    setText(nightsEl, nights + " " + (nights === 1 ? "night" : "nights"));
+    setText(nightsEl, nights + " " + t(nights === 1 ? "bd-night" : "bd-nights"));
     setText(dateRangeEl, shortDateRange(state.checkin, state.checkout));
-    setText(stayCountEl, nights + " " + (nights === 1 ? "Night" : "Nights"));
+    setText(
+      stayCountEl,
+      nights + " " + t(nights === 1 ? "bd-night-cap" : "bd-nights-cap"),
+    );
     setText(roomTotalEl, currency(roomTotal));
     renderExtrasRows(state);
     updateExtrasDeliveryPanel(state);
@@ -822,8 +876,28 @@
     };
   }
 
-  var state = loadState();
-  var renderState = render(state);
+  var state;
+  var renderState;
+
+  function refreshBookingDetailsView() {
+    if (!state) {
+      state = loadState();
+    }
+    renderState = render(state);
+    refreshStatusMessage();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    refreshBookingDetailsView();
+  });
+
+  window.addEventListener("load", function () {
+    window.setTimeout(refreshBookingDetailsView, 150);
+  });
+
+  document.addEventListener("derand:languagechange", function () {
+    refreshBookingDetailsView();
+  });
 
   document.addEventListener("click", function (event) {
     var removeBtn = event.target.closest(".booking-extra-remove");
@@ -896,7 +970,7 @@
           action === "increment" &&
           !isPremiumRoom(state.room)
         ) {
-          window.alert("Children are available only for Premium Room due to space limits.");
+          window.alert(t("bd-alert-children-premium"));
           state.children = 0;
           input.value = "0";
           syncGuestStateFromInputs();
@@ -919,12 +993,12 @@
     renderState = render(state);
     if (!form.checkValidity()) {
       form.reportValidity();
-      window.alert("Please fill all fields except Children and Special Requests before confirming your booking.");
+      window.alert(t("bd-alert-form-incomplete"));
       return;
     }
     if (!validate()) return;
 
-    setStatus("Sending…", "success");
+    setStatus("bd-status-sending", "success");
     notifyHotel(state, renderState.room, renderState.nights, renderState)
       .then(function (result) {
         if (!result || !result.ok || !result.json || !result.json.success) {
@@ -932,19 +1006,16 @@
             (result && result.json && result.json.message) || "Submit failed",
           );
         }
-        setStatus("Thank you — we received your message.", "success");
+        setStatus("bd-status-thanks", "success");
         form.reset();
         syncGuestStateFromInputs();
         renderState = render(state);
         clearErrors();
       })
       .catch(function (error) {
-        setStatus(
-          "Something went wrong (" +
-            (error && error.message ? error.message : "send failed") +
-            "). Please email info@derandhotel.com.",
-          "error",
-        );
+        setStatus("bd-status-error", "error", {
+          message: (error && error.message) || "send failed",
+        });
       })
       .finally(function () {
         if (confirmBtnEl) confirmBtnEl.disabled = false;
