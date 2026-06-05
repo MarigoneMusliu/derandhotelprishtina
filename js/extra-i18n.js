@@ -607,6 +607,16 @@
   }
 
   function currentLang() {
+    var stored =
+      localStorage.getItem("derandLang") ||
+      localStorage.getItem("selectedLanguage") ||
+      localStorage.getItem("language") ||
+      localStorage.getItem("lang") ||
+      "";
+    if (stored) {
+      return normalizeLang(stored);
+    }
+
     var activeBtn = document.querySelector(".lang-btn.lang-active[data-lang]");
     if (activeBtn) {
       return normalizeLang(activeBtn.getAttribute("data-lang"));
@@ -615,15 +625,7 @@
     var htmlLang = normalizeLang(
       document.documentElement.getAttribute("lang") || "",
     );
-    if (htmlLang !== "en") return htmlLang;
-
-    var stored =
-      localStorage.getItem("derandLang") ||
-      localStorage.getItem("selectedLanguage") ||
-      localStorage.getItem("language") ||
-      localStorage.getItem("lang") ||
-      "en";
-    return normalizeLang(stored);
+    return htmlLang || "en";
   }
 
   function t(key, lang, vars) {
@@ -638,21 +640,6 @@
       });
     }
     return text;
-  }
-
-  var HEADER_FREEZE_ROOTS =
-    ".header, .offcanvas-menu-wrapper, #mobile-menu-wrap";
-
-  function freezeHeaderChrome() {
-    document.querySelectorAll(HEADER_FREEZE_ROOTS).forEach(function (root) {
-      root.querySelectorAll("[data-i18n]").forEach(function (node) {
-        if (!node.hasAttribute("data-i18n-chrome-frozen")) {
-          node.setAttribute("data-i18n-chrome-frozen", node.textContent);
-          node.removeAttribute("data-i18n");
-        }
-        node.textContent = node.getAttribute("data-i18n-chrome-frozen");
-      });
-    });
   }
 
   function isExtraScopedNode(node) {
@@ -675,6 +662,7 @@
   function applyPage(lang) {
     lang = normalizeLang(lang);
 
+    document.documentElement.setAttribute("lang", lang === "al" ? "sq" : lang);
     document.title = t("extra-page-title", lang);
 
     var metaDesc = document.querySelector('meta[name="description"][data-i18n]');
@@ -709,17 +697,19 @@
   }
 
   function init() {
-    freezeHeaderChrome();
     applyPage(currentLang());
-    window.addEventListener("load", freezeHeaderChrome);
+    window.addEventListener("load", function () {
+      window.setTimeout(function () {
+        applyPage(currentLang());
+      }, 50);
+    });
     document.addEventListener("click", function (event) {
       var btn = event.target.closest(".lang-btn[data-lang]");
       if (!btn) return;
       var lang = normalizeLang(btn.getAttribute("data-lang"));
       window.setTimeout(function () {
-        freezeHeaderChrome();
         applyPage(lang);
-      }, 100);
+      }, 150);
     });
   }
 
@@ -730,10 +720,6 @@
     spiritDescription: spiritDescription,
     init: init,
   };
-
-  if (document.querySelector(".header")) {
-    freezeHeaderChrome();
-  }
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", init);

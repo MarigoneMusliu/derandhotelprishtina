@@ -274,6 +274,290 @@
     return "extra.html?" + params.toString();
   }
 
+  var conciergeMarqueeMedia = window.matchMedia("(max-width: 767px)");
+  var conciergeReducedMotionMedia = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  );
+  var conciergeMarqueeResumeTimer = null;
+  var conciergeMarqueeRaf = null;
+  var conciergeMarqueePaused = false;
+  var conciergeMarqueeOffset = 0;
+  var conciergeMarqueeTouch = null;
+  var conciergeMarqueeSpeed = 0.42;
+
+  function stopConciergeMarqueeAuto() {
+    if (conciergeMarqueeRaf) {
+      window.cancelAnimationFrame(conciergeMarqueeRaf);
+      conciergeMarqueeRaf = null;
+    }
+  }
+
+  function pauseConciergeMarqueeAuto(resumeAfterMs) {
+    conciergeMarqueePaused = true;
+    if (conciergeMarqueeResumeTimer) {
+      window.clearTimeout(conciergeMarqueeResumeTimer);
+      conciergeMarqueeResumeTimer = null;
+    }
+    if (!resumeAfterMs) return;
+    conciergeMarqueeResumeTimer = window.setTimeout(function () {
+      conciergeMarqueePaused = false;
+      conciergeMarqueeResumeTimer = null;
+    }, resumeAfterMs);
+  }
+
+  function clearConciergeMarqueeClones(choicesEl) {
+    if (!choicesEl) return;
+    Array.prototype.forEach.call(
+      choicesEl.querySelectorAll(".booking-concierge-prompt__chip--marquee-clone"),
+      function (clone) {
+        clone.parentNode.removeChild(clone);
+      },
+    );
+    choicesEl.classList.remove("is-marquee-active");
+  }
+
+  function syncConciergeMarqueeCloneLabels(choicesEl) {
+    var originals = choicesEl.querySelectorAll(
+      ".booking-concierge-prompt__chip:not(.booking-concierge-prompt__chip--marquee-clone)",
+    );
+    var clones = choicesEl.querySelectorAll(
+      ".booking-concierge-prompt__chip--marquee-clone",
+    );
+    Array.prototype.forEach.call(clones, function (clone, index) {
+      var source = originals[index % originals.length];
+      if (!source) return;
+      var sourceLabel = source.querySelector(".booking-concierge-prompt__chip-label");
+      var cloneLabel = clone.querySelector(".booking-concierge-prompt__chip-label");
+      if (sourceLabel && cloneLabel) {
+        cloneLabel.textContent = sourceLabel.textContent;
+      }
+    });
+  }
+
+  function getConciergeMarqueeLoopHalf(choicesEl) {
+    if (!choicesEl) return 0;
+    return choicesEl.scrollWidth / 2;
+  }
+
+  function applyConciergeMarqueeTransform(choicesEl, offset) {
+    if (!choicesEl) return;
+    choicesEl.style.transform =
+      "translate3d(" + -offset.toFixed(2) + "px, 0, 0)";
+  }
+
+  function normalizeConciergeMarqueeOffset(offset, loopHalf) {
+    if (!loopHalf) return 0;
+    offset = offset % loopHalf;
+    if (offset < 0) offset += loopHalf;
+    return offset;
+  }
+
+  function tickConciergeMarquee(choicesEl) {
+    if (
+      choicesEl &&
+      conciergeMarqueeMedia.matches &&
+      !conciergeReducedMotionMedia.matches &&
+      !conciergeMarqueePaused
+    ) {
+      var loopHalf = getConciergeMarqueeLoopHalf(choicesEl);
+      if (loopHalf > 4) {
+        conciergeMarqueeOffset = normalizeConciergeMarqueeOffset(
+          conciergeMarqueeOffset + conciergeMarqueeSpeed,
+          loopHalf,
+        );
+        applyConciergeMarqueeTransform(choicesEl, conciergeMarqueeOffset);
+      }
+    }
+    conciergeMarqueeRaf = window.requestAnimationFrame(function () {
+      tickConciergeMarquee(choicesEl);
+    });
+  }
+
+  function startConciergeMarqueeAuto(choicesEl) {
+    stopConciergeMarqueeAuto();
+    if (
+      !choicesEl ||
+      !conciergeMarqueeMedia.matches ||
+      conciergeReducedMotionMedia.matches
+    ) {
+      return;
+    }
+    conciergeMarqueePaused = false;
+    conciergeMarqueeRaf = window.requestAnimationFrame(function () {
+      tickConciergeMarquee(choicesEl);
+    });
+  }
+
+  function setupConciergeMarquee() {
+    var choicesEl = document.getElementById("booking-concierge-choices");
+    var viewportEl = document.getElementById("booking-concierge-choices-viewport");
+    if (!choicesEl || !viewportEl) return;
+
+    stopConciergeMarqueeAuto();
+    clearConciergeMarqueeClones(choicesEl);
+    viewportEl.classList.remove("is-marquee-ready", "is-marquee-dragging");
+    viewportEl.scrollLeft = 0;
+    choicesEl.style.transform = "";
+    conciergeMarqueeOffset = 0;
+    conciergeMarqueeTouch = null;
+
+    if (!conciergeMarqueeMedia.matches) return;
+
+    var originals = choicesEl.querySelectorAll(
+      ".booking-concierge-prompt__chip:not(.booking-concierge-prompt__chip--marquee-clone)",
+    );
+    if (!originals.length) return;
+
+    if (!conciergeReducedMotionMedia.matches) {
+      Array.prototype.forEach.call(originals, function (chip) {
+        var clone = chip.cloneNode(true);
+        clone.classList.add("booking-concierge-prompt__chip--marquee-clone");
+        clone.setAttribute("aria-hidden", "true");
+        clone.setAttribute("tabindex", "-1");
+        choicesEl.appendChild(clone);
+      });
+      choicesEl.classList.add("is-marquee-active");
+    }
+
+    viewportEl.classList.add("is-marquee-ready");
+
+    if (!viewportEl.dataset.marqueeBound) {
+      viewportEl.dataset.marqueeBound = "1";
+
+      function beginConciergeMarqueeTouch(clientX) {
+        pauseConciergeMarqueeAuto(null);
+        conciergeMarqueeTouch = {
+          startX: clientX,
+          startOffset: conciergeMarqueeOffset,
+          moved: false,
+        };
+        viewportEl.classList.add("is-marquee-dragging");
+      }
+
+      function moveConciergeMarqueeTouch(clientX) {
+        if (!conciergeMarqueeTouch) return;
+        var deltaX = conciergeMarqueeTouch.startX - clientX;
+        if (Math.abs(deltaX) > 4) {
+          conciergeMarqueeTouch.moved = true;
+        }
+        var loopHalf = getConciergeMarqueeLoopHalf(choicesEl);
+        conciergeMarqueeOffset = normalizeConciergeMarqueeOffset(
+          conciergeMarqueeTouch.startOffset + deltaX,
+          loopHalf,
+        );
+        applyConciergeMarqueeTransform(choicesEl, conciergeMarqueeOffset);
+      }
+
+      function endConciergeMarqueeTouch(resumeAfterMs) {
+        if (!conciergeMarqueeTouch) return;
+        var moved = conciergeMarqueeTouch.moved;
+        conciergeMarqueeTouch = null;
+        viewportEl.classList.remove("is-marquee-dragging");
+        pauseConciergeMarqueeAuto(
+          resumeAfterMs || (moved ? 2800 : 1800),
+        );
+      }
+
+      viewportEl.addEventListener(
+        "touchstart",
+        function (event) {
+          if (!event.touches || !event.touches.length) return;
+          beginConciergeMarqueeTouch(event.touches[0].clientX);
+        },
+        { passive: true },
+      );
+
+      viewportEl.addEventListener(
+        "touchmove",
+        function (event) {
+          if (!event.touches || !event.touches.length) return;
+          moveConciergeMarqueeTouch(event.touches[0].clientX);
+        },
+        { passive: true },
+      );
+
+      viewportEl.addEventListener(
+        "touchend",
+        function () {
+          endConciergeMarqueeTouch(2200);
+        },
+        { passive: true },
+      );
+
+      viewportEl.addEventListener(
+        "touchcancel",
+        function () {
+          endConciergeMarqueeTouch(1800);
+        },
+        { passive: true },
+      );
+
+      viewportEl.addEventListener(
+        "pointerdown",
+        function (event) {
+          if (event.pointerType === "touch") return;
+          if (event.pointerType === "mouse" && event.button !== 0) return;
+          beginConciergeMarqueeTouch(event.clientX);
+        },
+        { passive: true },
+      );
+
+      viewportEl.addEventListener(
+        "pointermove",
+        function (event) {
+          if (event.pointerType === "touch" || !conciergeMarqueeTouch) return;
+          moveConciergeMarqueeTouch(event.clientX);
+        },
+        { passive: true },
+      );
+
+      viewportEl.addEventListener(
+        "pointerup",
+        function (event) {
+          if (event.pointerType === "touch") return;
+          endConciergeMarqueeTouch(
+            conciergeMarqueeTouch && conciergeMarqueeTouch.moved ? 2800 : 1800,
+          );
+        },
+        { passive: true },
+      );
+
+      viewportEl.addEventListener(
+        "pointercancel",
+        function (event) {
+          if (event.pointerType === "touch") return;
+          endConciergeMarqueeTouch(1800);
+        },
+        { passive: true },
+      );
+
+      choicesEl.addEventListener(
+        "click",
+        function (event) {
+          if (conciergeMarqueeTouch && conciergeMarqueeTouch.moved) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+        },
+        true,
+      );
+    }
+
+    function ensureConciergeMarqueeStarted(attempts) {
+      if (getConciergeMarqueeLoopHalf(choicesEl) > 4 || attempts > 24) {
+        startConciergeMarqueeAuto(choicesEl);
+        return;
+      }
+      window.requestAnimationFrame(function () {
+        ensureConciergeMarqueeStarted(attempts + 1);
+      });
+    }
+
+    window.requestAnimationFrame(function () {
+      ensureConciergeMarqueeStarted(0);
+    });
+  }
+
   function updateConciergePrompt(state) {
     var choicesEl = document.getElementById("booking-concierge-choices");
     if (!choicesEl) return;
@@ -289,6 +573,8 @@
         chip.classList.toggle("is-added", isOn);
       },
     );
+
+    syncConciergeMarqueeCloneLabels(choicesEl);
   }
 
   function getExtraLineTotal(item) {
@@ -889,15 +1175,31 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     refreshBookingDetailsView();
+    setupConciergeMarquee();
   });
 
   window.addEventListener("load", function () {
-    window.setTimeout(refreshBookingDetailsView, 150);
+    window.setTimeout(function () {
+      refreshBookingDetailsView();
+      setupConciergeMarquee();
+    }, 150);
   });
 
   document.addEventListener("derand:languagechange", function () {
     refreshBookingDetailsView();
+    window.setTimeout(setupConciergeMarquee, 120);
   });
+
+  function bindConciergeMarqueeMedia(query) {
+    if (typeof query.addEventListener === "function") {
+      query.addEventListener("change", setupConciergeMarquee);
+    } else if (typeof query.addListener === "function") {
+      query.addListener(setupConciergeMarquee);
+    }
+  }
+
+  bindConciergeMarqueeMedia(conciergeMarqueeMedia);
+  bindConciergeMarqueeMedia(conciergeReducedMotionMedia);
 
   document.addEventListener("click", function (event) {
     var removeBtn = event.target.closest(".booking-extra-remove");
