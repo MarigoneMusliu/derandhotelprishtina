@@ -6407,10 +6407,7 @@
           if (Math.abs(n - Math.round(n)) < 0.001) {
             return Math.round(n) + "\u20ac";
           }
-          if (n > 0 && n < 1) {
-            return n.toFixed(2) + "\u20ac";
-          }
-          return n.toFixed(1) + "\u20ac";
+          return n.toFixed(2) + "\u20ac";
         }
 
         function parsePrice(value) {
