@@ -42,7 +42,7 @@
       price: 10.6,
       category: "chocolate",
       description:
-        "A rich, curated journey of our finest flavors, balancing deep dark chocolate creams and smooth milk chocolate textures in perfect harmony.",
+        "A rich, curated journey of our finest flavors. This collection balances deep dark chocolate creams and smooth milk chocolate textures in perfect harmony—crafted to share a piece of Kosovo's history and national essence.",
     },
     {
       id: "chocolate-tog1",
@@ -51,7 +51,7 @@
       price: 10.6,
       category: "chocolate",
       description:
-        "Crafted for the modern palate, featuring a bold and vibrant mix of contemporary fillings, velvety creams, and satisfying crunchy pralines.",
+        "Crafted for the modern palate, featuring a bold and vibrant mix of contemporary fillings, velvety creams, and satisfying crunchy pralines. A perfect match for urban and modern hearts.",
     },
     {
       id: "chocolate-tog2",
@@ -60,34 +60,34 @@
       price: 10.6,
       category: "chocolate",
       description:
-        "A timeless, artistic tasting experience where comforting, slow-churned creams and traditional roasted nuts melt together elegantly.",
+        "A timeless, artistic tasting experience where tradition meets art. Comforting, slow-churned creams and traditional roasted nuts melt together elegantly to celebrate the rich heritage of Prizren.",
     },
     {
       id: "chocolate-tog3",
-      label: "Dark Chocolate with Cranberry",
+      label: "Spicy Dark Chocolate",
       image: "img/tog3.png",
       price: 4.99,
       category: "chocolate",
       description:
-        "Design your perfect box. Mix and match from 9 unique handcrafted flavors, ranging from zesty fruit creams to silky pistachio and crunchy salted caramel.",
+        "A bold, fiery contrast. Premium dark chocolate that melts slowly to release a subtle, lingering, and warming chili kick. Perfect for those who love a sophisticated, spicy twist.",
     },
     {
       id: "chocolate-tog5",
-      label: "Dark Chocolate with red berries – A dedication to the Albanian woman",
+      label: "Dark Chocolate with red berries",
       image: "img/tog5.png",
       price: 4.99,
       category: "chocolate",
       description:
-        "A bold, fiery contrast. Premium dark chocolate that melts slowly to release a subtle, lingering, and warming chili kick.",
+        "Deep and aromatic. Luxurious dark chocolate infused with a vibrant, tart medley of red berries—honoring the grace, strength, and beauty of the Albanian woman.",
     },
     {
       id: "chocolate-tog4",
-      label: "Spicy Dark Chocolate",
+      label: "Dark Chocolate with Cranberry",
       image: "img/tog4.png",
       price: 4.99,
       category: "chocolate",
       description:
-        "Intense, bittersweet dark chocolate beautifully balanced by the bright, tangy burst of real, chewy cranberries. This product is dedicated to love.",
+        "Elegance in simplicity. Intense, bittersweet dark chocolate beautifully balanced by the bright, tangy burst of real, chewy cranberries. A premium tablet dedicated to pure chocolate love.",
     },
     {
       id: "chocolate-tog6",
@@ -96,7 +96,7 @@
       price: 9.99,
       category: "chocolate",
       description:
-        'Deep and aromatic. Luxurious dark chocolate infused with a vibrant, tart medley of red berries—honoring the grace of the Albanian woman.',
+        'Design your perfect box. Mix and match from our 9 unique handcrafted flavors, ranging from zesty fruit creams to silky pistachio and crunchy salted caramel. Packaged in our elegant, vibrant red "With Love for You!" box—perfect for gifts and special occasions.',
     },
   ];
 

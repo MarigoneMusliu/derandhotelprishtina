@@ -71,14 +71,8 @@
         border-bottom-color: #b17256;
       }
 
-      body.extra-page-static-header.sacher-home:has(.extra-hero) {
-        padding-top: 0 !important;
-      }
-
-      @media (min-width: 992px) {
-        body.extra-page-static-header .header__menu > ul > li > a {
-          white-space: nowrap;
-        }
+      body.extra-page-static-header .header__menu > ul > li > a {
+        white-space: nowrap;
       }
 
       body.extra-page-static-header .site-whatsapp-wrap {
@@ -833,233 +827,6 @@
 
       body.extra-booking-mode .extra-order-modal.is-open .extra-order-modal__dialog {
         margin-top: max(16px, env(safe-area-inset-top, 0px));
-      }
-
-      .extra-decor-booking-modal {
-        position: fixed;
-        inset: 0;
-        z-index: 12050;
-        display: none;
-      }
-
-      .extra-decor-booking-modal.is-open {
-        display: block;
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
-      }
-
-      body.extra-booking-mode .extra-decor-booking-modal:not(.is-open) {
-        visibility: hidden;
-        pointer-events: none;
-      }
-
-      body.extra-booking-mode .extra-decor-booking-modal.is-open {
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-      }
-
-      body.extra-booking-mode .extra-decor-booking-modal__backdrop {
-        background: #faf9f7;
-        backdrop-filter: none;
-      }
-
-      .extra-decor-booking-modal__backdrop {
-        position: absolute;
-        inset: 0;
-        background: rgba(32, 28, 24, 0.42);
-        backdrop-filter: blur(3px);
-      }
-
-      .extra-decor-booking-modal__dialog {
-        position: relative;
-        width: min(440px, calc(100vw - 32px));
-        max-height: calc(100dvh - 32px);
-        overflow-x: hidden;
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
-        margin: max(16px, env(safe-area-inset-top, 0px)) auto 16px;
-        background: #faf9f7;
-        border-radius: 20px;
-        padding: 28px 28px 24px;
-        box-sizing: border-box;
-        box-shadow:
-          0 28px 60px rgba(28, 24, 20, 0.14),
-          0 8px 20px rgba(28, 24, 20, 0.06);
-      }
-
-      .extra-decor-booking-modal__heading {
-        margin: 0 0 16px;
-        font-family: "Forum", serif;
-        font-size: 1.35rem;
-        font-weight: 500;
-        line-height: 1.35;
-        text-align: center;
-        color: #2c2824;
-      }
-
-      .extra-decor-booking-picker {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: center;
-        gap: 10px;
-        margin: 0 0 18px;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        padding: 2px;
-      }
-
-      .extra-decor-booking-picker__item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-        width: 104px;
-        flex: 0 0 auto;
-        padding: 10px 8px 8px;
-        border: 2px solid rgba(177, 114, 86, 0.28);
-        border-radius: 12px;
-        background: #fff;
-        cursor: pointer;
-        transition:
-          border-color 0.2s ease,
-          background 0.2s ease,
-          box-shadow 0.2s ease;
-      }
-
-      .extra-decor-booking-picker__item:hover,
-      .extra-decor-booking-picker__item:focus-visible {
-        border-color: #b17256;
-        box-shadow: 0 6px 16px rgba(177, 114, 86, 0.12);
-      }
-
-      .extra-decor-booking-picker__item.is-selected {
-        border-color: #b17256;
-        background: #faf3ed;
-        box-shadow: 0 8px 22px rgba(177, 114, 86, 0.1);
-      }
-
-      .extra-decor-booking-picker__thumb {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 72px;
-        height: 72px;
-        border-radius: 10px;
-        overflow: hidden;
-        background: #fff;
-      }
-
-      .extra-decor-booking-picker__thumb img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        pointer-events: none;
-      }
-
-      .extra-decor-booking-picker__name {
-        font-size: 9px;
-        font-weight: 600;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: #4a433d;
-        font-family: "Forum", serif;
-        text-align: center;
-        line-height: 1.25;
-      }
-
-      .extra-decor-booking-preview {
-        margin-bottom: 8px;
-      }
-
-      .extra-decor-booking-preview__media {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 14px;
-        padding: 16px 44px;
-        background: #fff;
-        border-radius: 16px;
-      }
-
-      .extra-decor-booking-preview__media img {
-        width: 100%;
-        max-width: 220px;
-        height: 180px;
-        object-fit: contain;
-        object-position: center;
-      }
-
-      .extra-decor-booking-preview__desc {
-        margin: 0;
-        font-size: 14px;
-        color: #6e6760;
-        line-height: 1.55;
-        text-align: left;
-        font-family: "Forum", serif;
-      }
-
-      .extra-decor-booking-modal .extra-continue__options {
-        max-width: none;
-        margin: 0 0 16px;
-        padding: 0;
-        text-align: left;
-      }
-
-      .extra-decor-booking-modal .extra-continue__options-total {
-        margin-top: 12px;
-      }
-
-      .extra-decor-booking-modal .extra-continue__extra-picker {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        min-height: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      .extra-decor-booking-modal .extra-continue__extra-picker-nav {
-        position: static;
-        top: auto;
-        left: auto;
-        right: auto;
-        transform: none;
-        order: 0;
-        flex: 0 0 34px;
-        width: 34px;
-        height: 34px;
-        font-size: 20px;
-      }
-
-      .extra-decor-booking-modal .extra-continue__extra-picker-view {
-        flex: 1 1 auto;
-        order: 0;
-        width: auto;
-        min-width: 0;
-      }
-
-      .extra-decor-booking-modal .extra-continue__bouquet-row {
-        min-height: 0;
-      }
-
-      .extra-decor-booking-modal .extra-continue__bouquet-row-main {
-        min-width: 0;
-      }
-
-      .extra-decor-booking-modal .extra-continue__bouquet-row-copy {
-        min-width: 0;
-      }
-
-      .extra-decor-booking-modal .extra-continue__bouquet-row-copy strong {
-        display: block;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-
-      .extra-decor-booking-modal .extra-continue__extra-picker-nav[hidden] {
-        display: none;
       }
 
       @media (max-width: 991px) {
@@ -3928,13 +3695,11 @@
           border-color 0.2s ease;
       }
 
-      .extra-continue__extra-picker #extra-extra-prev,
-      .extra-continue__extra-picker #extra-decor-booking-extra-prev {
+      .extra-continue__extra-picker #extra-extra-prev {
         left: 0;
       }
 
-      .extra-continue__extra-picker #extra-extra-next,
-      .extra-continue__extra-picker #extra-decor-booking-extra-next {
+      .extra-continue__extra-picker #extra-extra-next {
         right: 0;
       }
 
@@ -4423,36 +4188,12 @@
           font-size: 18px;
         }
 
-        .extra-continue__extra-picker #extra-extra-prev,
-        .extra-continue__extra-picker #extra-decor-booking-extra-prev {
+        .extra-continue__extra-picker #extra-extra-prev {
           left: auto;
         }
 
-        .extra-continue__extra-picker #extra-extra-next,
-        .extra-continue__extra-picker #extra-decor-booking-extra-next {
+        .extra-continue__extra-picker #extra-extra-next {
           right: auto;
-        }
-
-        .extra-decor-booking-modal .extra-continue__extra-picker {
-          display: flex;
-          align-items: center;
-          gap: 6px;
-          padding: 0;
-        }
-
-        .extra-decor-booking-modal .extra-continue__extra-picker-nav {
-          position: static;
-          transform: none;
-          order: 0;
-          flex: 0 0 32px;
-          width: 32px;
-          height: 32px;
-        }
-
-        .extra-decor-booking-modal .extra-continue__extra-picker-view {
-          flex: 1 1 auto;
-          order: 0;
-          width: auto;
         }
 
         .extra-continue__bouquet-row {
@@ -4732,7 +4473,7 @@
                     </li> -->
 
                     <li>
-                      <a href="extra.html" data-i18n="nav-concierge">Concierge</a>
+                      <a href="extra.html">Concierge</a>
                     </li>
 
                   <!-- <li>
@@ -4908,11 +4649,11 @@
                 data-i18n-desc="extra-desc-perfume"
                 data-perfume-menu="true"
                 data-product="Giorgio Armani"
-                data-price="44.71"
+                data-price="33.12"
                 data-image="img/armani.png"
                 data-images="img/armani.png,img/diesel.png,img/dkny.png,img/juliet.png,img/prada.png,img/roberto.png,img/valentino.png,img/thierry.png,img/ralph.png,img/montale.png,img/viktor.png,img/yves.png"
                 data-products="Giorgio Armani,DIESEL LOVERDOSE,DKNY BE DELICIOUS,JULIET HAS A GUN,Prada Candy,Roberto Cavalli Just Cavalli For Her,Valentino Born In Roma,Thierry Mugler MU ANG NOVA,Ralph Lauren Polo Blue,MONTALE AOUD LIME,FLBB EDP SPRAY,YVES SAINT LAURENT"
-                data-prices="44.71,59.72,52.92,151.2,99.47,30.67,109.4,127.98,83.81,162,94.93,132.19"
+                data-prices="33.12,44.24,39.2,112,73.68,22.72,81.04,94.8,62.08,120,70.32,97.92"
                 data-description="Fragrance delivered to your room in the selected bottle size."
               >
                 <span data-i18n="extra-perfumes-btn">Choose Your Perfume</span>
@@ -4961,10 +4702,10 @@
                 data-product="With love from Kosova"
                 data-price="10.60"
                 data-image="img/tog.png"
-                data-images="img/tog.png,img/tog1.png,img/tog2.png,img/tog3.png,img/tog5.png,img/tog4.png,img/tog6.png"
-                data-products='With love from Kosova,With love from Prishtina,With love from Prizreni,Dark Chocolate with Cranberry,Dark Chocolate with red berries – A dedication to the Albanian woman,Spicy Dark Chocolate,Tog Tablet "ASAJ"'
+                data-images="img/tog.png,img/tog1.png,img/tog2.png,img/tog3.png,img/tog4.png,img/tog5.png,img/tog6.png"
+                data-products='Tog Chocolate Box "With love from Kosova",With love from Prishtina,With love from Prizreni,Spicy Dark Chocolate,Dark Chocolate with Cranberry,Dark Chocolate with red berries,Tog Tablet "ASAJ" Cranberry Dark Chocolate'
                 data-prices="10.60,10.60,10.60,4.99,4.99,4.99,9.99"
-                data-description=""
+                data-description="Premium Tog chocolate delivered to your room."
               >
                 <span data-i18n="extra-chocolates-btn">Choose Your Chocolate</span>
               </button>
@@ -5589,190 +5330,6 @@
       </div>
     </div>
 
-    <div
-      class="extra-decor-booking-modal"
-      id="extra-decor-booking-modal"
-      aria-hidden="true"
-    >
-      <div
-        class="extra-decor-booking-modal__backdrop"
-        data-decor-booking-close
-      ></div>
-      <div
-        class="extra-decor-booking-modal__dialog"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="extra-decor-booking-title"
-      >
-        <button
-          type="button"
-          class="extra-order-modal__close"
-          data-decor-booking-close
-          data-i18n-aria-label="extra-order-close"
-          aria-label="Close decor picker"
-        >
-          &times;
-        </button>
-        <p
-          class="extra-order-modal__title"
-          id="extra-decor-booking-title"
-          data-i18n="extra-order-title"
-        >
-          Add to cart
-        </p>
-        <h3
-          class="extra-decor-booking-modal__heading"
-          data-i18n="extra-decor-booking-heading"
-        >
-          Choose your celebration decor
-        </h3>
-        <div
-          class="extra-decor-booking-picker"
-          id="extra-decor-booking-picker"
-          role="listbox"
-          aria-label="Decor themes"
-        ></div>
-        <div class="extra-decor-booking-preview">
-          <div class="extra-decor-booking-preview__media">
-            <img
-              id="extra-decor-booking-image"
-              src="img/birthday.png"
-              alt="Selected decor"
-            />
-          </div>
-          <p
-            class="extra-decor-booking-preview__desc"
-            id="extra-decor-booking-desc"
-          ></p>
-        </div>
-        <div
-          class="extra-continue__options"
-          id="extra-decor-booking-choices"
-          hidden
-          data-i18n-aria-label="extra-decor-options"
-          aria-label="Optional decor extras"
-        >
-          <div class="extra-continue__price-stack">
-            <div class="extra-continue__price-row extra-continue__price-row--base">
-              <span
-                class="extra-continue__price-row-label"
-                data-i18n="extra-decor-room-included"
-                >Room decor (included)</span
-              >
-              <strong
-                class="extra-continue__price-row-amount"
-                id="extra-decor-booking-base-price"
-                >60&euro;</strong
-              >
-            </div>
-            <div class="extra-continue__extra-picker" id="extra-decor-booking-extra-picker">
-              <button
-                type="button"
-                class="extra-continue__extra-picker-nav"
-                id="extra-decor-booking-extra-prev"
-                data-i18n-aria-label="extra-decor-prev-extra"
-                aria-label="Previous extra"
-                hidden
-              >
-                &#8249;
-              </button>
-              <div
-                class="extra-continue__extra-picker-view"
-                id="extra-decor-booking-extra-picker-view"
-              >
-                <div class="extra-continue__bouquet-row" id="extra-decor-booking-bouquet-row">
-                  <div class="extra-continue__bouquet-row-main">
-                    <div
-                      class="extra-continue__extra-product-swipe"
-                      id="extra-decor-booking-product-swipe"
-                      data-i18n-aria-label="extra-decor-browse"
-                      aria-label="Browse products in this category"
-                    >
-                      <button
-                        type="button"
-                        class="extra-continue__extra-product-nav"
-                        id="extra-decor-booking-product-prev"
-                        data-i18n-aria-label="extra-decor-prev-product"
-                        aria-label="Previous product"
-                      >
-                        &#8249;
-                      </button>
-                      <div class="extra-continue__bouquet-row-thumb">
-                        <img
-                          id="extra-decor-booking-extra-thumb"
-                          src="img/flower1.jpg"
-                          alt=""
-                          width="56"
-                          height="56"
-                          loading="lazy"
-                        />
-                      </div>
-                      <button
-                        type="button"
-                        class="extra-continue__extra-product-nav"
-                        id="extra-decor-booking-product-next"
-                        data-i18n-aria-label="extra-decor-next-product"
-                        aria-label="Next product"
-                      >
-                        &#8250;
-                      </button>
-                    </div>
-                    <div class="extra-continue__bouquet-row-copy">
-                      <strong id="extra-decor-booking-extra-name">Flower bouquet</strong>
-                      <span id="extra-decor-booking-extra-price">+60&euro;</span>
-                    </div>
-                  </div>
-                  <button
-                    type="button"
-                    class="extra-continue__bouquet-add"
-                    id="extra-decor-booking-bouquet-toggle"
-                    aria-pressed="false"
-                    data-i18n-aria-label="extra-decor-add-bouquet"
-                    aria-label="Add flower bouquet for 60 euros"
-                  >
-                    <i class="fa fa-plus" aria-hidden="true"></i>
-                  </button>
-                </div>
-              </div>
-              <button
-                type="button"
-                class="extra-continue__extra-picker-nav"
-                id="extra-decor-booking-extra-next"
-                data-i18n-aria-label="extra-decor-next-extra"
-                aria-label="Next extra"
-                hidden
-              >
-                &#8250;
-              </button>
-            </div>
-          </div>
-          <p class="extra-continue__options-total" aria-live="polite">
-            <span data-i18n="extra-decor-total">Total</span>
-            <strong id="extra-decor-booking-choices-total">60&euro;</strong>
-          </p>
-        </div>
-        <div class="extra-order-modal__actions">
-          <div class="extra-order-form__total">
-            <span data-i18n="extra-order-selected-total">Selected total:</span>
-            <strong id="extra-decor-booking-total">60&euro;</strong>
-          </div>
-          <button
-            type="button"
-            class="extra-btn-cart-add"
-            id="extra-decor-booking-confirm"
-          >
-            <span data-i18n="extra-order-add-cart">Add to cart</span>
-          </button>
-          <p
-            class="extra-order-form__status"
-            id="extra-decor-booking-status"
-            role="status"
-            aria-live="polite"
-          ></p>
-        </div>
-      </div>
-    </div>
-
     <div id="site-whatsapp-wrap" class="site-whatsapp-wrap">
       <a
         id="site-whatsapp-fab"
@@ -6192,7 +5749,7 @@
 
       </div>
     </footer>
-    <script src="js/extra-i18n.js?v=4"></script>
+    <script src="js/extra-i18n.js?v=2"></script>
     <script src="js/jquery-3.3.1.min.js" defer></script>
     <script src="js/bootstrap.min.js" defer></script>
     <script src="js/jquery.nice-select.min.js" defer></script>
@@ -6282,8 +5839,8 @@
           "tog1",
           "tog2",
           "tog3",
-          "tog5",
           "tog4",
+          "tog5",
           "tog6",
         ];
         var FLOWER_MODAL_DESCRIPTIONS = {
@@ -6445,49 +6002,49 @@
             image: "img/tog.png",
             price: 10.6,
             description:
-              "A rich, curated journey of our finest flavors, balancing deep dark chocolate creams and smooth milk chocolate textures in perfect harmony.",
+              "A rich, curated journey of our finest flavors. This collection balances deep dark chocolate creams and smooth milk chocolate textures in perfect harmony—crafted to share a piece of Kosovo's history and national essence.",
           },
           tog1: {
-            name: "With love from Prishtina",
+            name: 'With love from Prishtina',
             image: "img/tog1.png",
             price: 10.6,
             description:
-              "Crafted for the modern palate, featuring a bold and vibrant mix of contemporary fillings, velvety creams, and satisfying crunchy pralines.",
+              "Crafted for the modern palate, featuring a bold and vibrant mix of contemporary fillings, velvety creams, and satisfying crunchy pralines. A perfect match for urban and modern hearts.",
           },
           tog2: {
-            name: "With love from Prizreni",
+            name: 'Tog Chocolate Box "With love from Prizreni"',
             image: "img/tog2.png",
             price: 10.6,
             description:
-              "A timeless, artistic tasting experience where comforting, slow-churned creams and traditional roasted nuts melt together elegantly.",
+              "A timeless, artistic tasting experience where tradition meets art. Comforting, slow-churned creams and traditional roasted nuts melt together elegantly to celebrate the rich heritage of Prizren.",
           },
           tog3: {
-            name: "Dark Chocolate with Cranberry",
+            name: "Spicy Dark Chocolate",
             image: "img/tog3.png",
             price: 4.99,
             description:
-              "Design your perfect box. Mix and match from 9 unique handcrafted flavors, ranging from zesty fruit creams to silky pistachio and crunchy salted caramel.",
+              "A bold, fiery contrast. Premium dark chocolate that melts slowly to release a subtle, lingering, and warming chili kick. Perfect for those who love a sophisticated, spicy twist.",
           },
           tog4: {
-            name: 'Spicy Dark Chocolate',
+            name: "Dark Chocolate with Cranberry",
             image: "img/tog4.png",
             price: 4.99,
             description:
-              "Intense, bittersweet dark chocolate beautifully balanced by the bright, tangy burst of real, chewy cranberries. This product is dedicated to love.",
+              "Elegance in simplicity. Intense, bittersweet dark chocolate beautifully balanced by the bright, tangy burst of real, chewy cranberries. A premium tablet dedicated to pure chocolate love.",
           },
           tog5: {
-            name: 'Dark Chocolate with red berries – A dedication to the Albanian woman',
+            name: "Dark Chocolate with red berries",
             image: "img/tog5.png",
             price: 4.99,
             description:
-              "A bold, fiery contrast. Premium dark chocolate that melts slowly to release a subtle, lingering, and warming chili kick.",
+              "Deep and aromatic. Luxurious dark chocolate infused with a vibrant, tart medley of red berries—honoring the grace, strength, and beauty of the Albanian woman.",
           },
           tog6: {
-            name: 'Tog Tablet "ASAJ"',
+            name: 'Tog Tablet "ASAJ" Cranberry Dark Chocolate',
             image: "img/tog6.png",
             price: 9.99,
             description:
-              'Deep and aromatic. Luxurious dark chocolate infused with a vibrant, tart medley of red berries—honoring the grace of the Albanian woman.',
+              'Design your perfect box. Mix and match from our 9 unique handcrafted flavors, ranging from zesty fruit creams to silky pistachio and crunchy salted caramel. Packaged in our elegant, vibrant red "With Love for You!" box—perfect for gifts and special occasions.',
           },
         };
         var PERFUME_CATALOG_IDS = [
@@ -6512,7 +6069,7 @@
               "A legendary aquatic scent blending crisp marine notes and calabrian bergamot over a warm cedarwood base.",
             sizes: [
               { ml: 50, disabled: true },
-              { ml: 75, price: 44.71, default: true },
+              { ml: 75, price: 33.12, default: true },
               { ml: 100, disabled: true },
             ],
           },
@@ -6522,9 +6079,9 @@
             description:
               "An addictive oriental-woody fragrance blending bold star anise and juicy mandarin over a rich, sweet base of liquorice and vanilla.",
             sizes: [
-              { ml: 30, price: 59.72, default: true },
-              { ml: 50, price: 81.43 },
-              { ml: 75, price: 97.63 },
+              { ml: 30, price: 44.24, default: true },
+              { ml: 50, price: 60.32 },
+              { ml: 75, price: 72.32 },
             ],
           },
           dkny: {
@@ -6533,8 +6090,8 @@
             description:
               "A refreshing floral-fruity fragrance blending crisp green apple and juicy cucumber over a soft, sophisticated base of magnolia and sandalwood.",
             sizes: [
-              { ml: 30, price: 52.92, default: true },
-              { ml: 50, price: 69.44 },
+              { ml: 30, price: 39.2, default: true },
+              { ml: 50, price: 51.44 },
             ],
           },
           juliet: {
@@ -6542,7 +6099,7 @@
             image: "img/juliet.png",
             description:
               "A delicious floral-gourmand fragrance blending sweet raspberry and powdery iris over a rich, creamy base of vanilla and sandalwood.",
-            sizes: [{ ml: 100, price: 151.2, default: true }],
+            sizes: [{ ml: 100, price: 112, default: true }],
           },
           prada: {
             name: "Prada Candy",
@@ -6550,9 +6107,9 @@
             description:
               "An indulgent amber-gourmand fragrance blending powdery white musk and warm benzoin over a rich, sweet base of pure caramel.",
             sizes: [
-              { ml: 30, price: 99.47, default: true },
-              { ml: 50, price: 132.52 },
-              { ml: 80, price: 169.78 },
+              { ml: 30, price: 73.68, default: true },
+              { ml: 50, price: 98.16 },
+              { ml: 80, price: 125.76 },
             ],
           },
           roberto: {
@@ -6561,9 +6118,9 @@
             description:
               "A provocative floral fragrance blending luminous neroli and tahitian tiare flower over a warm, seductive base of palisander rosewood.",
             sizes: [
-              { ml: 30, price: 30.67, default: true },
-              { ml: 50, price: 39.42 },
-              { ml: 90, price: 49.36 },
+              { ml: 30, price: 22.72, default: true },
+              { ml: 50, price: 29.2 },
+              { ml: 90, price: 36.56 },
             ],
           },
           valentino: {
@@ -6572,9 +6129,9 @@
             description:
               "A modern amber-floral fragrance blending sparkling blackcurrant and luminous jasmine trio over a rich, edgy base of bourbon vanilla.",
             sizes: [
-              { ml: 30, price: 109.4, default: true },
-              { ml: 50, price: 157.46 },
-              { ml: 100, price: 208.01 },
+              { ml: 30, price: 81.04, default: true },
+              { ml: 50, price: 116.64 },
+              { ml: 100, price: 154.08 },
             ],
           },
           thierry: {
@@ -6583,8 +6140,8 @@
             description:
               "A vibrant amber-floral fragrance blending juicy raspberry and upcycled rose over a rich, sensual base of akigalawood.",
             sizes: [
-              { ml: 50, price: 127.98, default: true },
-              { ml: 100, price: 169.45 },
+              { ml: 50, price: 94.8, default: true },
+              { ml: 100, price: 125.52 },
             ],
           },
           ralph: {
@@ -6593,8 +6150,8 @@
             description:
               "A refreshing aromatic-aquatic fragrance blending crisp cantaloupe melon and juicy cucumber over a smooth, masculine base of washed suede.",
             sizes: [
-              { ml: 75, price: 83.81, default: true },
-              { ml: 125, price: 94.93 },
+              { ml: 75, price: 62.08, default: true },
+              { ml: 125, price: 70.32 },
             ],
           },
           montale: {
@@ -6602,14 +6159,14 @@
             image: "img/montale.png",
             description:
               "A captivating woody-floral fragrance blending exotic Pakistani oud and fresh, tart lime over a rich, sensual base of precious rose and patchouli.",
-            sizes: [{ ml: 100, price: 162, default: true }],
+            sizes: [{ ml: 100, price: 120, default: true }],
           },
           viktor: {
             name: "FLBB EDP SPRAY",
             image: "img/viktor.png",
             description:
               "An explosive amber-floral fragrance blending luminous cattleya orchid and sensual centifolia rose over a warm, addictive base of patchouli and vanilla.",
-            sizes: [{ ml: 30, price: 94.93, default: true }],
+            sizes: [{ ml: 30, price: 70.32, default: true }],
           },
           yves: {
             name: "YVES SAINT LAURENT",
@@ -6617,8 +6174,8 @@
             description:
               "A powerful aromatic-woody fragrance blending fresh green apple and vibrant sage over a deep, masculine base of amberwood and tonka bean.",
             sizes: [
-              { ml: 60, price: 132.19, default: true },
-              { ml: 100, price: 169.56 },
+              { ml: 60, price: 97.92, default: true },
+              { ml: 100, price: 125.6 },
             ],
           },
         };
@@ -6642,32 +6199,6 @@
         );
         var orderDiscover = document.getElementById("extra-order-discover");
         var orderDiscoverGrid = document.getElementById("extra-order-discover-grid");
-        var decorBookingModal = document.getElementById("extra-decor-booking-modal");
-        var decorBookingPicker = document.getElementById("extra-decor-booking-picker");
-        var decorBookingImage = document.getElementById("extra-decor-booking-image");
-        var decorBookingDesc = document.getElementById("extra-decor-booking-desc");
-        var decorBookingTotal = document.getElementById("extra-decor-booking-total");
-        var decorBookingConfirm = document.getElementById("extra-decor-booking-confirm");
-        var decorBookingStatus = document.getElementById("extra-decor-booking-status");
-        var decorBookingChoices = document.getElementById("extra-decor-booking-choices");
-        var decorBookingBasePrice = document.getElementById("extra-decor-booking-base-price");
-        var decorBookingBouquetRow = document.getElementById("extra-decor-booking-bouquet-row");
-        var decorBookingBouquetToggle = document.getElementById(
-          "extra-decor-booking-bouquet-toggle",
-        );
-        var decorBookingExtraThumb = document.getElementById("extra-decor-booking-extra-thumb");
-        var decorBookingExtraName = document.getElementById("extra-decor-booking-extra-name");
-        var decorBookingExtraPrice = document.getElementById("extra-decor-booking-extra-price");
-        var decorBookingExtraPrev = document.getElementById("extra-decor-booking-extra-prev");
-        var decorBookingExtraNext = document.getElementById("extra-decor-booking-extra-next");
-        var decorBookingProductPrev = document.getElementById("extra-decor-booking-product-prev");
-        var decorBookingProductNext = document.getElementById("extra-decor-booking-product-next");
-        var decorBookingChoicesTotal = document.getElementById(
-          "extra-decor-booking-choices-total",
-        );
-        var decorBookingProductSwipe = document.getElementById(
-          "extra-decor-booking-product-swipe",
-        );
         var orderCardMedia = document.getElementById("extra-order-card-media");
         var variantWrap = document.getElementById("extra-order-variant-wrap");
         var variantStrip = document.getElementById("extra-order-variant-strip");
@@ -6838,116 +6369,6 @@
         var bookingFlowCategory = null;
         var currentModalCategoryId = null;
         var bookingUrlParams = null;
-        var selectedDecorBookingKey = "birthday";
-        var DECOR_BOOKING_EXTRA_TYPES = ["flower", "chocolate", "perfume"];
-        var decorBookingExtraTypeIndex = 0;
-        var decorBookingFlowerIndex = 0;
-        var decorBookingChocolateIndex = 0;
-        var decorBookingPerfumeIndex = 0;
-        var decorBookingSelectedExtras = {
-          flower: false,
-          chocolate: false,
-          perfume: false,
-        };
-        var DECOR_FLOWER_ADDON_PRICE = 60;
-        var DECOR_BOOKING_FLOWERS = [
-          { name: "Single Red Roses", image: "img/flower.jpg" },
-          { name: "Single White Rose", image: "img/whiteflower.png" },
-          { name: "Single Pink Rose", image: "img/redrose.jpg" },
-          { name: "Single Pink Dianthus", image: "img/rose.jpg" },
-          { name: "Single White Dianthus", image: "img/whiteflowers.png" },
-          { name: "Single White Lily", image: "img/flower5.png" },
-          { name: "Single Pink Lily", image: "img/lilypink.png" },
-          { name: "Lily Bouquet", image: "img/flower1.jpg" },
-          { name: "A Bouquet of Red Roses", image: "img/flower2.jpg" },
-          { name: "A Bouquet of Yellow Tulips", image: "img/flower3.jpg" },
-          { name: "Mixed Flower Bouquet", image: "img/flowers1.png" },
-        ];
-        var DECOR_BOOKING_CHOCOLATES = [
-          { name: "With love from Kosova", image: "img/tog.png", price: 10.6 },
-          { name: "With love from Prishtina", image: "img/tog1.png", price: 10.6 },
-          { name: "With love from Prizreni", image: "img/tog2.png", price: 10.6 },
-          { name: "Dark Chocolate with Cranberry", image: "img/tog3.png", price: 4.99 },
-          {
-            name: 'Dark Chocolate with red berries – A dedication to the Albanian woman',
-            image: "img/tog5.png",
-            price: 4.99,
-          },
-          { name: 'Spicy Dark Chocolate', image: "img/tog4.png", price: 4.99 },
-          {
-            name: 'Tog Tablet "ASAJ"',
-            image: "img/tog6.png",
-            price: 9.99,
-          },
-        ];
-        var DECOR_BOOKING_PERFUMES = [
-          { name: "Giorgio Armani", image: "img/armani.png", price: 44.71 },
-          { name: "DIESEL LOVERDOSE", image: "img/diesel.png", price: 59.72 },
-          { name: "DKNY BE DELICIOUS", image: "img/dkny.png", price: 52.92 },
-          { name: "JULIET HAS A GUN", image: "img/juliet.png", price: 151.2 },
-          { name: "Prada Candy", image: "img/prada.png", price: 99.47 },
-          {
-            name: "Roberto Cavalli Just Cavalli For Her",
-            image: "img/roberto.png",
-            price: 30.67,
-          },
-          { name: "Valentino Born In Roma", image: "img/valentino.png", price: 109.4 },
-          { name: "Thierry Mugler MU ANG NOVA", image: "img/thierry.png", price: 127.98 },
-          { name: "Ralph Lauren Polo Blue", image: "img/ralph.png", price: 83.81 },
-          { name: "MONTALE AOUD LIME", image: "img/montale.png", price: 162 },
-          { name: "FLBB EDP SPRAY", image: "img/viktor.png", price: 94.93 },
-          { name: "YVES SAINT LAURENT", image: "img/yves.png", price: 132.19 },
-        ];
-        var BOOKING_DECOR_ITEMS = [
-          {
-            key: "valentines",
-            src: "img/valentineday.png",
-            alt: "Valentine's room decor",
-            label: "Valentine",
-            labelKey: "decor-label-valentine",
-            priceAmount: 60,
-            cartName: "Valentine's room decor",
-            priceLabelKey: "decor-price-valentine",
-            canAddToCart: true,
-            showExtras: true,
-            flowerStartIndex: 8,
-            chocolateStartIndex: 6,
-            perfumeStartIndex: 0,
-            description:
-              "Valentine's room decor — in-room styling with romantic touches.",
-          },
-          {
-            key: "birthday",
-            src: "img/birthday.png",
-            alt: "Birthday room decor",
-            label: "Birthday",
-            labelKey: "decor-label-birthday",
-            priceAmount: 60,
-            cartName: "Birthday room decor",
-            priceLabelKey: "decor-price-birthday",
-            canAddToCart: true,
-            showExtras: true,
-            flowerStartIndex: 7,
-            chocolateStartIndex: 0,
-            perfumeStartIndex: 0,
-            description:
-              "Birthday room decor — balloons, soft lighting, and refined in-room touches.",
-          },
-          {
-            key: "custom",
-            src: "img/custom.png",
-            alt: "Custom room decor",
-            label: "Custom",
-            labelKey: "decor-label-custom",
-            priceAmount: 0,
-            cartName: "Custom room decor",
-            priceLabelKey: "decor-price-custom",
-            canAddToCart: true,
-            showExtras: false,
-            description:
-              "Custom room decor — tell us your vision and our team will prepare a bespoke setup.",
-          },
-        ];
         var isSpiritsOrder = false;
         var isPerfumeOrder = false;
         var isChocolateOrder = false;
@@ -6988,7 +6409,10 @@
           if (Math.abs(n - Math.round(n)) < 0.001) {
             return Math.round(n) + "\u20ac";
           }
-          return n.toFixed(2) + "\u20ac";
+          if (n > 0 && n < 1) {
+            return n.toFixed(2) + "\u20ac";
+          }
+          return n.toFixed(1) + "\u20ac";
         }
 
         function parsePrice(value) {
@@ -7944,47 +7368,17 @@
           laundryServiceByIndex = [];
         }
 
-        var cartAutoCloseTimer = null;
-
-        function clearCartAutoCloseTimer() {
-          if (!cartAutoCloseTimer) return;
-          window.clearTimeout(cartAutoCloseTimer);
-          cartAutoCloseTimer = null;
-        }
-
         function openCart() {
           cartDrawer.classList.add("is-open");
           cartDrawer.setAttribute("aria-hidden", "false");
           document.body.style.overflow = "hidden";
         }
 
-        function closeCart(force) {
-          if (!force && cart.length > 0) return;
-          clearCartAutoCloseTimer();
+        function closeCart() {
           cartDrawer.classList.remove("is-open");
           cartDrawer.setAttribute("aria-hidden", "true");
           if (!modal.classList.contains("is-open")) {
             document.body.style.overflow = "";
-          }
-        }
-
-        function scheduleCartAutoClose() {
-          if (isBookingFlow) return;
-          clearCartAutoCloseTimer();
-          openCart();
-          cartAutoCloseTimer = window.setTimeout(function () {
-            cartAutoCloseTimer = null;
-            closeCart(true);
-          }, 1000);
-        }
-
-        function syncCartDrawerState() {
-          if (isBookingFlow) return;
-          if (!cart.length) {
-            clearCartAutoCloseTimer();
-            if (cartDrawer.classList.contains("is-open")) {
-              closeCart(true);
-            }
           }
         }
 
@@ -8049,7 +7443,6 @@
               i18n("extra-cart-empty-hint") +
               "</p>" +
               "</div>";
-            syncCartDrawerState();
             return;
           }
 
@@ -8140,11 +7533,7 @@
                 (merged ? i18n("extra-toast-updated") : i18n("extra-toast-added-cart")),
             );
           }
-          if (!isBookingFlow) {
-            scheduleCartAutoClose();
-          } else {
-            syncCartDrawerState();
-          }
+          if (options.openCart !== false) openCart();
           return true;
         }
 
@@ -8303,474 +7692,6 @@
           goBackToBookingDetails();
         }
 
-        function getBookingDecorItem(key) {
-          for (var i = 0; i < BOOKING_DECOR_ITEMS.length; i++) {
-            if (BOOKING_DECOR_ITEMS[i].key === key) {
-              return BOOKING_DECOR_ITEMS[i];
-            }
-          }
-          return BOOKING_DECOR_ITEMS[1] || BOOKING_DECOR_ITEMS[0];
-        }
-
-        function getStoredDecorBookingKey() {
-          var lines = loadStoredBookingLines();
-          for (var i = 0; i < lines.length; i++) {
-            var line = lines[i];
-            if (!line || line.category !== "decor") continue;
-            if (line.id === "decor-valentines") return "valentines";
-            if (line.id === "decor-birthday") return "birthday";
-            if (line.id === "decor-custom") return "custom";
-          }
-          return "";
-        }
-
-        function getDecorBookingCatalog(type) {
-          if (type === "flower") return DECOR_BOOKING_FLOWERS;
-          if (type === "chocolate") return DECOR_BOOKING_CHOCOLATES;
-          return DECOR_BOOKING_PERFUMES;
-        }
-
-        function getDecorBookingIndex(type) {
-          if (type === "flower") return decorBookingFlowerIndex;
-          if (type === "chocolate") return decorBookingChocolateIndex;
-          return decorBookingPerfumeIndex;
-        }
-
-        function setDecorBookingIndex(type, index) {
-          var catalog = getDecorBookingCatalog(type);
-          if (!catalog.length) return;
-          var next = ((index % catalog.length) + catalog.length) % catalog.length;
-          if (type === "flower") decorBookingFlowerIndex = next;
-          else if (type === "chocolate") decorBookingChocolateIndex = next;
-          else decorBookingPerfumeIndex = next;
-        }
-
-        function getDecorBookingVisibleExtraTypes(item) {
-          if (!item || !item.showExtras) return [];
-          return DECOR_BOOKING_EXTRA_TYPES.slice();
-        }
-
-        function getDecorBookingCurrentExtraType(item) {
-          var visible = getDecorBookingVisibleExtraTypes(item);
-          if (!visible.length) return "flower";
-          if (
-            decorBookingExtraTypeIndex < 0 ||
-            decorBookingExtraTypeIndex >= visible.length
-          ) {
-            decorBookingExtraTypeIndex = 0;
-          }
-          return visible[decorBookingExtraTypeIndex];
-        }
-
-        function getDecorBookingFlowerPrice() {
-          return DECOR_FLOWER_ADDON_PRICE;
-        }
-
-        function getDecorBookingExtraDisplay(type) {
-          var catalog = getDecorBookingCatalog(type);
-          var index = getDecorBookingIndex(type);
-          var product = catalog[index] || catalog[0];
-          if (!product) {
-            return { name: "", image: "", price: 0, priceText: "" };
-          }
-          if (type === "flower") {
-            return {
-              name: product.name,
-              image: product.image,
-              price: getDecorBookingFlowerPrice(),
-              priceText: "+" + formatEuro(getDecorBookingFlowerPrice()),
-            };
-          }
-          return {
-            name: product.name,
-            image: product.image,
-            price: product.price,
-            priceText: "+" + formatEuro(product.price),
-          };
-        }
-
-        function getDecorBookingTotal(item) {
-          if (!item) return 0;
-          var total = item.priceAmount || 0;
-          if (!item.showExtras) return total;
-          if (decorBookingSelectedExtras.flower) {
-            total += getDecorBookingFlowerPrice();
-          }
-          if (decorBookingSelectedExtras.chocolate) {
-            total +=
-              (DECOR_BOOKING_CHOCOLATES[decorBookingChocolateIndex] || {}).price || 0;
-          }
-          if (decorBookingSelectedExtras.perfume) {
-            total +=
-              (DECOR_BOOKING_PERFUMES[decorBookingPerfumeIndex] || {}).price || 0;
-          }
-          return total;
-        }
-
-        function resetDecorBookingExtrasForDecor() {
-          var item = getBookingDecorItem(selectedDecorBookingKey);
-          decorBookingSelectedExtras.flower = false;
-          decorBookingSelectedExtras.chocolate = false;
-          decorBookingSelectedExtras.perfume = false;
-          decorBookingExtraTypeIndex = 0;
-          decorBookingFlowerIndex =
-            item && typeof item.flowerStartIndex === "number"
-              ? item.flowerStartIndex
-              : 0;
-          decorBookingChocolateIndex =
-            item && typeof item.chocolateStartIndex === "number"
-              ? item.chocolateStartIndex
-              : 0;
-          decorBookingPerfumeIndex =
-            item && typeof item.perfumeStartIndex === "number"
-              ? item.perfumeStartIndex
-              : 0;
-        }
-
-        function restoreDecorBookingExtrasFromLines(decorKey) {
-          if (!decorKey) return;
-          var lines = loadStoredBookingLines();
-          lines.forEach(function (line) {
-            if (!line || line.decorBundle !== decorKey) return;
-            if (line.decorExtraType === "flower") {
-              decorBookingSelectedExtras.flower = true;
-              var flowerMatch = line.id && line.id.match(/-(\d+)$/);
-              if (flowerMatch) {
-                decorBookingFlowerIndex = parseInt(flowerMatch[1], 10) || 0;
-              }
-            }
-            if (line.decorExtraType === "chocolate") {
-              decorBookingSelectedExtras.chocolate = true;
-              var chocolateMatch = line.id && line.id.match(/-(\d+)$/);
-              if (chocolateMatch) {
-                decorBookingChocolateIndex = parseInt(chocolateMatch[1], 10) || 0;
-              }
-            }
-            if (line.decorExtraType === "perfume") {
-              decorBookingSelectedExtras.perfume = true;
-              var perfumeMatch = line.id && line.id.match(/-(\d+)$/);
-              if (perfumeMatch) {
-                decorBookingPerfumeIndex = parseInt(perfumeMatch[1], 10) || 0;
-              }
-            }
-          });
-        }
-
-        function syncDecorBookingExtrasUi() {
-          var item = getBookingDecorItem(selectedDecorBookingKey);
-          var visible = getDecorBookingVisibleExtraTypes(item);
-          var hasExtras = visible.length > 0;
-
-          if (!hasExtras) {
-            decorBookingSelectedExtras.flower = false;
-            decorBookingSelectedExtras.chocolate = false;
-            decorBookingSelectedExtras.perfume = false;
-          }
-
-          if (decorBookingChoices) {
-            if (hasExtras) {
-              decorBookingChoices.removeAttribute("hidden");
-            } else {
-              decorBookingChoices.setAttribute("hidden", "");
-            }
-          }
-
-          if (decorBookingExtraPrev) {
-            if (visible.length > 1) {
-              decorBookingExtraPrev.removeAttribute("hidden");
-            } else {
-              decorBookingExtraPrev.setAttribute("hidden", "");
-            }
-          }
-          if (decorBookingExtraNext) {
-            if (visible.length > 1) {
-              decorBookingExtraNext.removeAttribute("hidden");
-            } else {
-              decorBookingExtraNext.setAttribute("hidden", "");
-            }
-          }
-
-          var type = getDecorBookingCurrentExtraType(item);
-          var display = hasExtras ? getDecorBookingExtraDisplay(type) : null;
-          var isSelected = hasExtras && !!decorBookingSelectedExtras[type];
-
-          if (decorBookingBouquetRow) {
-            decorBookingBouquetRow.classList.toggle("is-selected", isSelected);
-          }
-          if (decorBookingBouquetToggle) {
-            decorBookingBouquetToggle.disabled = !hasExtras;
-            decorBookingBouquetToggle.classList.toggle("is-selected", isSelected);
-            decorBookingBouquetToggle.setAttribute(
-              "aria-pressed",
-              isSelected ? "true" : "false",
-            );
-            if (display) {
-              decorBookingBouquetToggle.setAttribute(
-                "aria-label",
-                isSelected
-                  ? i18n("extra-decor-remove-bouquet-named", { name: display.name })
-                  : i18n("extra-decor-add-bouquet-named", { name: display.name }),
-              );
-            }
-            decorBookingBouquetToggle.innerHTML = isSelected
-              ? '<i class="fa fa-check" aria-hidden="true"></i>'
-              : '<i class="fa fa-plus" aria-hidden="true"></i>';
-          }
-
-          if (display) {
-            if (decorBookingExtraThumb) {
-              decorBookingExtraThumb.src = display.image;
-              decorBookingExtraThumb.alt = display.name;
-            }
-            if (decorBookingExtraName) {
-              decorBookingExtraName.textContent = display.name;
-            }
-            if (decorBookingExtraPrice) {
-              decorBookingExtraPrice.textContent = display.priceText;
-            }
-          }
-
-          if (decorBookingBasePrice && item.priceAmount) {
-            decorBookingBasePrice.textContent = formatEuro(item.priceAmount);
-          }
-
-          var total = getDecorBookingTotal(item);
-          if (decorBookingChoicesTotal) {
-            decorBookingChoicesTotal.textContent = formatEuro(total);
-          }
-          if (decorBookingTotal) {
-            decorBookingTotal.textContent =
-              item.key === "custom"
-                ? i18n("extra-decor-price-request")
-                : formatEuro(total);
-          }
-
-          var catalog = getDecorBookingCatalog(type);
-          var canBrowseProducts = catalog.length > 1;
-          if (decorBookingProductPrev) {
-            decorBookingProductPrev.disabled = !hasExtras || !canBrowseProducts;
-          }
-          if (decorBookingProductNext) {
-            decorBookingProductNext.disabled = !hasExtras || !canBrowseProducts;
-          }
-        }
-
-        function stepDecorBookingExtraType(direction) {
-          var item = getBookingDecorItem(selectedDecorBookingKey);
-          var visible = getDecorBookingVisibleExtraTypes(item);
-          if (visible.length <= 1) return;
-          decorBookingExtraTypeIndex =
-            (decorBookingExtraTypeIndex + direction + visible.length) %
-            visible.length;
-          syncDecorBookingExtrasUi();
-        }
-
-        function stepDecorBookingProductIndex(direction) {
-          var item = getBookingDecorItem(selectedDecorBookingKey);
-          if (!item.showExtras) return;
-          var type = getDecorBookingCurrentExtraType(item);
-          var catalog = getDecorBookingCatalog(type);
-          if (catalog.length <= 1) return;
-          setDecorBookingIndex(type, getDecorBookingIndex(type) + direction);
-          syncDecorBookingExtrasUi();
-        }
-
-        function toggleDecorBookingCurrentExtra() {
-          var item = getBookingDecorItem(selectedDecorBookingKey);
-          if (!item.showExtras) return;
-          var type = getDecorBookingCurrentExtraType(item);
-          decorBookingSelectedExtras[type] = !decorBookingSelectedExtras[type];
-          syncDecorBookingExtrasUi();
-        }
-
-        function renderDecorBookingPicker() {
-          if (!decorBookingPicker) return;
-          decorBookingPicker.innerHTML = "";
-          BOOKING_DECOR_ITEMS.forEach(function (item) {
-            var btn = document.createElement("button");
-            btn.type = "button";
-            btn.className =
-              "extra-decor-booking-picker__item" +
-              (item.key === selectedDecorBookingKey ? " is-selected" : "");
-            btn.setAttribute("data-decor-booking-key", item.key);
-            btn.setAttribute("role", "option");
-            btn.setAttribute(
-              "aria-selected",
-              item.key === selectedDecorBookingKey ? "true" : "false",
-            );
-
-            var thumb = document.createElement("span");
-            thumb.className = "extra-decor-booking-picker__thumb";
-            var img = document.createElement("img");
-            img.src = item.src;
-            img.alt = "";
-            img.width = 72;
-            img.height = 72;
-            thumb.appendChild(img);
-
-            var label = document.createElement("span");
-            label.className = "extra-decor-booking-picker__name";
-            label.textContent = item.labelKey ? i18n(item.labelKey) : item.label;
-
-            btn.appendChild(thumb);
-            btn.appendChild(label);
-            decorBookingPicker.appendChild(btn);
-          });
-        }
-
-        function updateDecorBookingPreview() {
-          var item = getBookingDecorItem(selectedDecorBookingKey);
-          if (!item) return;
-
-          if (decorBookingImage) {
-            decorBookingImage.src = item.src;
-            decorBookingImage.alt = item.alt;
-          }
-          if (decorBookingDesc) {
-            decorBookingDesc.textContent = item.description;
-          }
-          if (decorBookingConfirm) {
-            var confirmLabel = decorBookingConfirm.querySelector("[data-i18n]");
-            if (confirmLabel) {
-              confirmLabel.textContent =
-                item.key === "custom"
-                  ? i18n("extra-decor-booking-request")
-                  : i18n("extra-order-add-cart");
-            }
-            decorBookingConfirm.disabled = false;
-          }
-          if (decorBookingStatus) {
-            decorBookingStatus.textContent =
-              item.key === "custom" ? i18n("extra-decor-custom-hint") : "";
-          }
-          renderDecorBookingPicker();
-          syncDecorBookingExtrasUi();
-        }
-
-        function selectDecorBookingKey(key) {
-          if (!key) {
-            updateDecorBookingPreview();
-            return;
-          }
-          if (key !== selectedDecorBookingKey) {
-            selectedDecorBookingKey = key;
-            resetDecorBookingExtrasForDecor();
-          }
-          updateDecorBookingPreview();
-        }
-
-        function openDecorBookingModal() {
-          if (!decorBookingModal) return;
-          bookingFlowCategory = "decor";
-          var storedKey = getStoredDecorBookingKey();
-          selectedDecorBookingKey = storedKey || "birthday";
-          resetDecorBookingExtrasForDecor();
-          if (storedKey) {
-            restoreDecorBookingExtrasFromLines(storedKey);
-          }
-          updateDecorBookingPreview();
-          decorBookingModal.classList.add("is-open");
-          decorBookingModal.setAttribute("aria-hidden", "false");
-          document.body.style.overflow = "hidden";
-        }
-
-        function closeDecorBookingModal() {
-          if (isBookingFlow) {
-            goBackToBookingDetails();
-            return;
-          }
-          if (!decorBookingModal) return;
-          decorBookingModal.classList.remove("is-open");
-          decorBookingModal.setAttribute("aria-hidden", "true");
-          document.body.style.overflow = "";
-        }
-
-        function buildDecorBookingLine(item) {
-          return {
-            id: "decor-" + item.key,
-            catalogId: "decor-" + item.key,
-            category: "decor",
-            label: item.cartName,
-            price: item.priceAmount || 0,
-            image: item.src,
-            qty: 1,
-            decorBundle: item.key,
-          };
-        }
-
-        function buildDecorBookingExtraLine(decorItem, type) {
-          var catalog = getDecorBookingCatalog(type);
-          var index = getDecorBookingIndex(type);
-          var product = catalog[index] || catalog[0];
-          if (!product) return null;
-          var category =
-            type === "flower"
-              ? "flowers"
-              : type === "chocolate"
-                ? "chocolate"
-                : "perfume";
-          var price =
-            type === "flower" ? getDecorBookingFlowerPrice() : product.price;
-          return {
-            id:
-              "decor-extra-" +
-              type +
-              "-" +
-              decorItem.key +
-              "-" +
-              index,
-            catalogId:
-              "decor-extra-" +
-              type +
-              "-" +
-              decorItem.key +
-              "-" +
-              index,
-            category: category,
-            label: product.name + " with " + decorItem.cartName,
-            price: price,
-            image: product.image,
-            qty: 1,
-            decorBundle: decorItem.key,
-            decorExtraType: type,
-          };
-        }
-
-        function filterNonDecorBundleLines(lines) {
-          return (lines || []).filter(function (line) {
-            if (!line) return false;
-            if (line.category === "decor") return false;
-            if (line.decorBundle) return false;
-            return true;
-          });
-        }
-
-        function addDecorSelectionToBooking() {
-          var item = getBookingDecorItem(selectedDecorBookingKey);
-          if (!item) return;
-
-          var existing = filterNonDecorBundleLines(loadStoredBookingLines());
-          existing.push(buildDecorBookingLine(item));
-
-          if (item.showExtras) {
-            if (decorBookingSelectedExtras.flower) {
-              var flowerLine = buildDecorBookingExtraLine(item, "flower");
-              if (flowerLine) existing.push(flowerLine);
-            }
-            if (decorBookingSelectedExtras.chocolate) {
-              var chocolateLine = buildDecorBookingExtraLine(item, "chocolate");
-              if (chocolateLine) existing.push(chocolateLine);
-            }
-            if (decorBookingSelectedExtras.perfume) {
-              var perfumeLine = buildDecorBookingExtraLine(item, "perfume");
-              if (perfumeLine) existing.push(perfumeLine);
-            }
-          }
-
-          saveStoredBookingLines(existing);
-          goBackToBookingDetails();
-        }
-
         function initBookingFlow() {
           bookingUrlParams = new URLSearchParams(window.location.search);
           if (bookingUrlParams.get("from") !== "booking") return;
@@ -8791,10 +7712,6 @@
 
           var orderTitle = document.getElementById("extra-order-title");
           if (orderTitle) orderTitle.textContent = i18n("extra-order-title");
-          var decorBookingTitle = document.getElementById("extra-decor-booking-title");
-          if (decorBookingTitle) {
-            decorBookingTitle.textContent = i18n("extra-order-title");
-          }
           if (addToCartBtn) {
             var addLabel = addToCartBtn.querySelector("[data-i18n]");
             if (addLabel) addLabel.textContent = i18n("extra-order-add-cart");
@@ -8805,7 +7722,14 @@
 
           function openBookingCategoryModal() {
             if (focus === "decor") {
-              openDecorBookingModal();
+              var decorSection = document.querySelector(".extra-continue");
+              if (decorSection && typeof decorSection.scrollIntoView === "function") {
+                decorSection.scrollIntoView({ behavior: "smooth", block: "start" });
+              }
+              var decorAddButton = document.getElementById("extra-decor-add-cart");
+              if (decorAddButton && typeof decorAddButton.focus === "function") {
+                decorAddButton.focus({ preventScroll: true });
+              }
               return;
             }
             var trigger = document.querySelector(triggerSelector);
@@ -8864,6 +7788,7 @@
           if (!addedLines) return;
 
           closeModal();
+          openCart();
           showToast(
             addedLines > 1
               ? i18n("extra-toast-added-selections")
@@ -8923,6 +7848,7 @@
             },
             {
               closeModal: false,
+              openCart: false,
               skipToast: false,
               toastMessage: i18n("extra-toast-added"),
             },
@@ -8993,7 +7919,6 @@
 
         cart = loadCart();
         renderCart();
-        syncCartDrawerState();
         initBookingFlow();
         window.setTimeout(trySendPendingOrderAfterPayment, 120);
 
@@ -9014,30 +7939,20 @@
             var discoverKey = discoverBtn.getAttribute("data-extra-discover");
             if (discoverKey === "decor") {
               event.preventDefault();
-              if (isBookingFlow) {
-                openDecorBookingModal();
-              } else {
-                closeModal();
-                window.setTimeout(function () {
-                  var decorSection = document.querySelector(".extra-continue");
-                  if (
-                    decorSection &&
-                    typeof decorSection.scrollIntoView === "function"
-                  ) {
-                    decorSection.scrollIntoView({
-                      behavior: "smooth",
-                      block: "start",
-                    });
-                  }
-                  var decorAddButton = document.getElementById("extra-decor-add-cart");
-                  if (
-                    decorAddButton &&
-                    typeof decorAddButton.focus === "function"
-                  ) {
-                    decorAddButton.focus({ preventScroll: true });
-                  }
-                }, 280);
-              }
+              closeModal();
+              window.setTimeout(function () {
+                var decorSection = document.querySelector(".extra-continue");
+                if (decorSection && typeof decorSection.scrollIntoView === "function") {
+                  decorSection.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                }
+                var decorAddButton = document.getElementById("extra-decor-add-cart");
+                if (decorAddButton && typeof decorAddButton.focus === "function") {
+                  decorAddButton.focus({ preventScroll: true });
+                }
+              }, 280);
               return;
             }
             var discoverMeta =
@@ -9066,28 +7981,15 @@
             openModal(orderBtn);
             return;
           }
-          if (event.target.closest("[data-decor-booking-close]")) {
-            closeDecorBookingModal();
-            return;
-          }
-          var decorBookingKeyBtn = event.target.closest("[data-decor-booking-key]");
-          if (decorBookingKeyBtn) {
-            event.preventDefault();
-            selectDecorBookingKey(
-              decorBookingKeyBtn.getAttribute("data-decor-booking-key"),
-            );
-            return;
-          }
           if (event.target.closest("[data-modal-close]")) {
             closeModal();
             return;
           }
           if (event.target.closest("[data-cart-close]")) {
-            closeCart(true);
+            closeCart();
             return;
           }
           if (event.target.closest("#extra-cart-toggle")) {
-            clearCartAutoCloseTimer();
             openCart();
             return;
           }
@@ -9168,91 +8070,14 @@
           });
         }
 
-        if (decorBookingConfirm) {
-          decorBookingConfirm.addEventListener("click", function () {
-            if (!isBookingFlow) return;
-            addDecorSelectionToBooking();
-          });
-        }
-
-        if (decorBookingBouquetToggle) {
-          decorBookingBouquetToggle.addEventListener("click", function () {
-            toggleDecorBookingCurrentExtra();
-          });
-        }
-
-        if (decorBookingExtraPrev) {
-          decorBookingExtraPrev.addEventListener("click", function () {
-            stepDecorBookingExtraType(-1);
-          });
-        }
-
-        if (decorBookingExtraNext) {
-          decorBookingExtraNext.addEventListener("click", function () {
-            stepDecorBookingExtraType(1);
-          });
-        }
-
-        if (decorBookingProductPrev) {
-          decorBookingProductPrev.addEventListener("click", function (event) {
-            event.stopPropagation();
-            stepDecorBookingProductIndex(-1);
-          });
-        }
-
-        if (decorBookingProductNext) {
-          decorBookingProductNext.addEventListener("click", function (event) {
-            event.stopPropagation();
-            stepDecorBookingProductIndex(1);
-          });
-        }
-
-        if (decorBookingProductSwipe) {
-          var decorProductTouchStartX = 0;
-          var decorProductTouchStartY = 0;
-          decorBookingProductSwipe.addEventListener(
-            "touchstart",
-            function (event) {
-              if (!event.touches || !event.touches.length) return;
-              decorProductTouchStartX = event.touches[0].clientX;
-              decorProductTouchStartY = event.touches[0].clientY;
-            },
-            { passive: true },
-          );
-          decorBookingProductSwipe.addEventListener(
-            "touchend",
-            function (event) {
-              if (!event.changedTouches || !event.changedTouches.length) return;
-              var deltaX =
-                event.changedTouches[0].clientX - decorProductTouchStartX;
-              var deltaY =
-                event.changedTouches[0].clientY - decorProductTouchStartY;
-              if (Math.abs(deltaX) < 30) return;
-              if (Math.abs(deltaX) <= Math.abs(deltaY)) return;
-              event.stopPropagation();
-              stepDecorBookingProductIndex(deltaX < 0 ? 1 : -1);
-            },
-            { passive: true },
-          );
-        }
-
         document.addEventListener("keydown", function (event) {
           if (event.key !== "Escape") return;
-          if (
-            isBookingFlow &&
-            decorBookingModal &&
-            decorBookingModal.classList.contains("is-open")
-          ) {
-            goBackToBookingDetails();
-            return;
-          }
           if (isBookingFlow && modal.classList.contains("is-open")) {
             goBackToBookingDetails();
             return;
           }
-          if (cartDrawer.classList.contains("is-open")) {
-            if (!cart.length) closeCart(true);
-          } else if (modal.classList.contains("is-open")) closeModal();
+          if (cartDrawer.classList.contains("is-open")) closeCart();
+          else if (modal.classList.contains("is-open")) closeModal();
         });
 
         checkoutForm.addEventListener("submit", function (event) {
@@ -9355,6 +8180,7 @@
 
           window.setTimeout(function () {
             window.open(CARD_CHECKOUT_URL, "_blank", "noopener,noreferrer");
+            closeCart();
             if (cartPayBtn) cartPayBtn.disabled = cart.length === 0;
           }, 600);
         });
@@ -9365,13 +8191,6 @@
           if (modal && modal.classList.contains("is-open")) {
             updateModalView();
             renderVariantStrip();
-          }
-          if (
-            decorBookingModal &&
-            decorBookingModal.classList.contains("is-open")
-          ) {
-            updateDecorBookingPreview();
-            syncDecorBookingExtrasUi();
           }
         });
       })();
@@ -9463,72 +8282,71 @@
           perfume: false,
         };
 
-        var DECOR_FLOWER_ADDON_PRICE = 60;
         var DECOR_FLOWERS = [
-          { name: "Single Red Roses", image: "img/flower.jpg" },
-          { name: "Single White Rose", image: "img/whiteflower.png" },
-          { name: "Single Pink Rose", image: "img/redrose.jpg" },
-          { name: "Single Pink Dianthus", image: "img/rose.jpg" },
-          { name: "Single White Dianthus", image: "img/whiteflowers.png" },
-          { name: "Single White Lily", image: "img/flower5.png" },
-          { name: "Single Pink Lily", image: "img/lilypink.png" },
-          { name: "Lily Bouquet", image: "img/flower1.jpg" },
-          { name: "A Bouquet of Red Roses", image: "img/flower2.jpg" },
-          { name: "A Bouquet of Yellow Tulips", image: "img/flower3.jpg" },
-          { name: "Mixed Flower Bouquet", image: "img/flowers1.png" },
+          { name: "Single Red Roses", image: "img/flower.jpg", price: 3 },
+          { name: "Single White Rose", image: "img/whiteflower.png", price: 3 },
+          { name: "Single Pink Rose", image: "img/redrose.jpg", price: 3 },
+          { name: "Single Pink Dianthus", image: "img/rose.jpg", price: 2 },
+          { name: "Single White Dianthus", image: "img/whiteflowers.png", price: 2 },
+          { name: "Single White Lily", image: "img/flower5.png", price: 8 },
+          { name: "Single Pink Lily", image: "img/lilypink.png", price: 8 },
+          { name: "Lily Bouquet", image: "img/flower1.jpg", price: 50 },
+          { name: "A Bouquet of Red Roses", image: "img/flower2.jpg", price: 60 },
+          { name: "A Bouquet of Yellow Tulips", image: "img/flower3.jpg", price: 55 },
+          { name: "Mixed Flower Bouquet", image: "img/flowers1.png", price: 50 },
         ];
 
         var DECOR_CHOCOLATES = [
           {
-            name: "With love from Kosova",
+            name: 'Tog Chocolate Box "With love from Kosova"',
             image: "img/tog.png",
             price: 10.6,
           },
           {
-            name: "With love from Prishtina",
+            name: 'With love from Prishtina',
             image: "img/tog1.png",
             price: 10.6,
           },
           {
-            name: "With love from Prizreni",
+            name: 'Tog Chocolate Box "With love from Prizreni"',
             image: "img/tog2.png",
             price: 10.6,
           },
           {
-            name: "Dark Chocolate with Cranberry",
+            name: "Spicy Dark Chocolate",
             image: "img/tog3.png",
             price: 4.99,
           },
           {
-            name: 'Dark Chocolate with red berries – A dedication to the Albanian woman',
-            image: "img/tog5.png",
-            price: 4.99,
-          },
-          {
-            name: 'Spicy Dark Chocolate',
+            name: "Dark Chocolate with Cranberry",
             image: "img/tog4.png",
             price: 4.99,
           },
           {
-            name: 'Tog Tablet "ASAJ"',
+            name: "Dark Chocolate with red berries",
+            image: "img/tog5.png",
+            price: 4.99,
+          },
+          {
+            name: 'Tog Tablet "ASAJ" Cranberry Dark Chocolate',
             image: "img/tog6.png",
             price: 9.99,
           },
         ];
 
         var DECOR_PERFUMES = [
-          { name: "Giorgio Armani", image: "img/armani.png", price: 44.71 },
-          { name: "DIESEL LOVERDOSE", image: "img/diesel.png", price: 59.72 },
-          { name: "DKNY BE DELICIOUS", image: "img/dkny.png", price: 52.92 },
-          { name: "JULIET HAS A GUN", image: "img/juliet.png", price: 151.2 },
-          { name: "Prada Candy", image: "img/prada.png", price: 99.47 },
-          { name: "Roberto Cavalli Just Cavalli For Her", image: "img/roberto.png", price: 30.67 },
-          { name: "Valentino Born In Roma", image: "img/valentino.png", price: 109.4 },
-          { name: "Thierry Mugler MU ANG NOVA", image: "img/thierry.png", price: 127.98 },
-          { name: "Ralph Lauren Polo Blue", image: "img/ralph.png", price: 83.81 },
-          { name: "MONTALE AOUD LIME", image: "img/montale.png", price: 162 },
-          { name: "FLBB EDP SPRAY", image: "img/viktor.png", price: 94.93 },
-          { name: "YVES SAINT LAURENT", image: "img/yves.png", price: 132.19 },
+          { name: "Giorgio Armani", image: "img/armani.png", price: 33.12 },
+          { name: "DIESEL LOVERDOSE", image: "img/diesel.png", price: 44.24 },
+          { name: "DKNY BE DELICIOUS", image: "img/dkny.png", price: 39.2 },
+          { name: "JULIET HAS A GUN", image: "img/juliet.png", price: 112 },
+          { name: "Prada Candy", image: "img/prada.png", price: 73.68 },
+          { name: "Roberto Cavalli Just Cavalli For Her", image: "img/roberto.png", price: 22.72 },
+          { name: "Valentino Born In Roma", image: "img/valentino.png", price: 81.04 },
+          { name: "Thierry Mugler MU ANG NOVA", image: "img/thierry.png", price: 94.8 },
+          { name: "Ralph Lauren Polo Blue", image: "img/ralph.png", price: 62.08 },
+          { name: "MONTALE AOUD LIME", image: "img/montale.png", price: 120 },
+          { name: "FLBB EDP SPRAY", image: "img/viktor.png", price: 70.32 },
+          { name: "YVES SAINT LAURENT", image: "img/yves.png", price: 97.92 },
         ];
 
         if (
@@ -9680,18 +8498,14 @@
           else perfumeIndex = next;
         }
 
-        function getDecorFlowerAddonPrice() {
-          return DECOR_FLOWER_ADDON_PRICE;
-        }
-
         function getExtraDisplay(item, type) {
           if (type === "flower") {
             var flower = getFlower();
             return {
               name: flower.name,
               image: flower.image,
-              price: getDecorFlowerAddonPrice(),
-              priceText: formatDecorEuroPlus(getDecorFlowerAddonPrice()),
+              price: flower.price,
+              priceText: formatDecorEuroPlus(flower.price),
             };
           }
           if (type === "chocolate") {
@@ -9721,7 +8535,7 @@
           var total = item.priceAmount;
           if (item.showExtras) {
             if (selectedExtras.flower) {
-              total += getDecorFlowerAddonPrice();
+              total += getFlower().price || 0;
             }
             if (selectedExtras.chocolate) {
               total += getChocolate().price || 0;
@@ -10107,7 +8921,7 @@
                   productBase: flower.name,
                   variantLabel: "",
                   image: flower.image,
-                  price: getDecorFlowerAddonPrice(),
+                  price: flower.price,
                   qty: 1,
                   description: flower.name + " with " + current.cartName,
                 });
