@@ -333,7 +333,7 @@
       }
 
       #extra-champagne .extra-signature__layout {
-        overflow: hidden;
+        overflow: visible;
       }
 
       #extra-champagne .extra-signature__card-title {
@@ -1304,7 +1304,8 @@
         }
 
         .extra-order-modal--perfume.is-open,
-        .extra-order-modal--chocolate.is-open {
+        .extra-order-modal--chocolate.is-open,
+        .extra-order-modal--spirits.is-open {
           align-items: flex-start;
           padding-top: max(16px, env(safe-area-inset-top, 0px));
         }
@@ -1373,6 +1374,17 @@
         }
 
         .extra-order-card--chocolate .extra-order-card__desc {
+          max-height: none;
+          overflow: visible;
+          line-height: 1.5;
+        }
+
+        .extra-order-card--spirits .extra-order-card__desc-slot {
+          min-height: 5.5em;
+          margin-bottom: 10px;
+        }
+
+        .extra-order-card--spirits .extra-order-card__desc {
           max-height: none;
           overflow: visible;
           line-height: 1.5;
@@ -2371,12 +2383,21 @@
 
       .extra-order-card--spirits .extra-order-card__desc-slot {
         flex-shrink: 0;
-        min-height: 4.2em;
+        min-height: 5.5em;
+        margin-bottom: 8px;
+        padding-bottom: 4px;
+        order: 3;
       }
 
       .extra-order-card--spirits .extra-order-card__desc {
-        max-height: 4.2em;
-        overflow: hidden;
+        max-height: none;
+        overflow: visible;
+        line-height: 1.55;
+        padding-bottom: 2px;
+      }
+
+      .extra-order-card--spirits .extra-order-card__row {
+        order: 4;
       }
 
       .extra-order-modal--laundry.is-open {
@@ -2466,11 +2487,11 @@
 
       .extra-order-discover__grid {
         display: flex;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 10px;
-        overflow-x: auto;
-        overflow-y: hidden;
+        overflow-x: visible;
+        overflow-y: visible;
         -webkit-overflow-scrolling: touch;
       }
 
@@ -6295,8 +6316,12 @@
         var WEB3FORMS_URL = "https://api.web3forms.com/submit";
         var WEB3FORMS_ACCESS_KEY = "761d8dce-87b2-4534-bc76-77ec2305d4ec";
         var ORDER_TO_EMAIL = "info@derandhotel.com";
-        var CARD_CHECKOUT_URL = "book.html";
-        var PENDING_EXTRA_ORDER_KEY = "derand_extra_pending_order_v1";
+        var PAYMENT_CREATE_URL =
+          (window.location.origin || "") + "/api/raiaccept-create-checkout.php";
+        var PAYMENT_STATUS_URL =
+          (window.location.origin || "") + "/api/raiaccept-order-status.php";
+        var PENDING_EXTRA_ORDER_KEY = "derand_extra_pending_order_v2";
+        var EXTRA_EMAIL_SENT_PREFIX = "derand_extra_emailed_";
 
         function sendToHotelInbox(payload) {
           var body = Object.assign(
@@ -6325,6 +6350,31 @@
           });
         }
 
+        function parsePaymentJsonResponse(response) {
+          return response.text().then(function (text) {
+            var data = {};
+            if (text) {
+              try {
+                data = JSON.parse(text);
+              } catch (e) {
+                data = {};
+              }
+            }
+            var apiMessage = (data && (data.error || data.message)) || "";
+            if (!response.ok) {
+              throw new Error(
+                apiMessage || "We could not start secure payment. Please try again.",
+              );
+            }
+            if (data && data.ok === false) {
+              throw new Error(
+                apiMessage || "We could not start secure payment. Please try again.",
+              );
+            }
+            return data;
+          });
+        }
+
         function savePendingOrder(data) {
           try {
             localStorage.setItem(PENDING_EXTRA_ORDER_KEY, JSON.stringify(data));
@@ -6338,7 +6388,7 @@
             var raw = localStorage.getItem(PENDING_EXTRA_ORDER_KEY);
             if (!raw) return null;
             var parsed = JSON.parse(raw);
-            return parsed && parsed.payload ? parsed : null;
+            return parsed && parsed.merchantOrderReference ? parsed : null;
           } catch (e) {
             return null;
           }
@@ -6352,59 +6402,157 @@
           }
         }
 
-        function paymentMarkedSuccessful() {
-          var params = new URLSearchParams(window.location.search);
-          var values = [
-            params.get("payment"),
-            params.get("status"),
-            params.get("rbko_status"),
-            params.get("result"),
-            params.get("success"),
-            params.get("paid"),
-          ]
-            .map(function (value) {
-              return (value || "").toLowerCase();
-            })
-            .filter(Boolean);
-          for (var i = 0; i < values.length; i++) {
-            if (
-              values[i] === "success" ||
-              values[i] === "paid" ||
-              values[i] === "ok" ||
-              values[i] === "1" ||
-              values[i] === "true"
-            ) {
-              return true;
-            }
+        function markExtraEmailSent(orderReference) {
+          try {
+            sessionStorage.setItem(EXTRA_EMAIL_SENT_PREFIX + orderReference, "1");
+          } catch (e) {
+            /* ignore */
           }
-          return false;
         }
 
-        function trySendPendingOrderAfterPayment() {
-          var pending = getPendingOrder();
-          if (!pending || pending.sent === true) return;
-          if (!paymentMarkedSuccessful()) return;
+        function wasExtraEmailSent(orderReference) {
+          try {
+            return (
+              sessionStorage.getItem(EXTRA_EMAIL_SENT_PREFIX + orderReference) ===
+              "1"
+            );
+          } catch (e) {
+            return false;
+          }
+        }
+
+        function getCartLineTitle(item) {
+          var title = item.productBase || i18n("extra-cart-extra-fallback");
+          if (item.variantLabel && !isMlOnlyVariantLabel(item.variantLabel)) {
+            title += " (" + item.variantLabel + ")";
+          }
+          return title;
+        }
+
+        function buildPaymentItemsFromCart(cartItems) {
+          var items = [];
+          for (var i = 0; i < cartItems.length; i++) {
+            var c = cartItems[i];
+            var qty = c.qty || 0;
+            var unitPrice = Number(c.price) || 0;
+            if (qty < 1 || unitPrice <= 0) continue;
+            items.push({
+              description: getCartLineTitle(c),
+              quantity: qty,
+              unitPrice: unitPrice,
+            });
+          }
+          return items;
+        }
+
+        function buildOrderEmailPayload(pending, orderReference) {
+          var guest = pending.guest || {};
+          var cartSnapshot = Array.isArray(pending.cart) ? pending.cart : [];
+          var orderLines = [];
+          var grandTotal = 0;
+
+          for (var k = 0; k < cartSnapshot.length; k++) {
+            var c = cartSnapshot[k];
+            var title = getCartLineTitle(c);
+            var lineTotal = (c.price || 0) * (c.qty || 0);
+            grandTotal += lineTotal;
+            var line =
+              k +
+              1 +
+              ". " +
+              title +
+              ": " +
+              c.qty +
+              " \u00d7 " +
+              formatEuro(c.price) +
+              " = " +
+              formatEuro(lineTotal);
+            if (c.description) {
+              line += "\n   Note: " + c.description;
+            }
+            orderLines.push(line);
+          }
+
+          var fullMessage = [
+            "EXTRA ORDER — PAID",
+            "==================",
+            "",
+            "Recipient: " + ORDER_TO_EMAIL,
+            "",
+            "Order reference: " + orderReference,
+            "",
+            "Guest details",
+            "-------------",
+            "Name on reservation: " + (guest.lastName || ""),
+            "Delivery date: " + (guest.deliveryDate || ""),
+            "Delivery time: " + (guest.deliveryTime || ""),
+            "",
+            "Cart items (" + cartSnapshot.length + " product line(s))",
+            "----------",
+            orderLines.join("\n"),
+            "",
+            "Total: " + formatEuro(grandTotal),
+            "Payment: Card — PAID",
+            "",
+            "Guest message:",
+            guest.message || "(none)",
+            "",
+            "Sent from: extra.html (Derand Hotel website)",
+            "Time: " + new Date().toLocaleString("en-GB", { hour12: false }),
+          ].join("\n");
+
+          return {
+            subject:
+              "[Extra PAID] " +
+              (guest.lastName || "Guest") +
+              " \u2014 " +
+              cartSnapshot.length +
+              " item(s) \u2014 " +
+              orderReference,
+            from_name: "Derand Hotel \u2014 Extra Cart",
+            to_email: ORDER_TO_EMAIL,
+            recipient: ORDER_TO_EMAIL,
+            name: guest.lastName || "",
+            delivery_date: guest.deliveryDate || "",
+            delivery_time: guest.deliveryTime || "",
+            order_items: orderLines.join("\n"),
+            total_eur: formatEuro(grandTotal).replace("\u20ac", " EUR"),
+            guest_message: guest.message || "",
+            payment_method: "Card — PAID",
+            order_reference: orderReference,
+            message: fullMessage,
+          };
+        }
+
+        function completePaidExtraOrder(pending, orderReference) {
+          if (wasExtraEmailSent(orderReference)) {
+            if (checkoutStatusEl) {
+              checkoutStatusEl.classList.remove("is-error");
+              checkoutStatusEl.textContent = i18n("extra-checkout-payment-sent");
+            }
+            return Promise.resolve();
+          }
 
           if (checkoutStatusEl) {
             checkoutStatusEl.classList.remove("is-error");
             checkoutStatusEl.textContent = i18n("extra-checkout-payment-sending");
           }
 
-          sendToHotelInbox(pending.payload)
+          return sendToHotelInbox(buildOrderEmailPayload(pending, orderReference))
             .then(function (response) {
-              if (!response.ok) throw new Error("Submit failed");
-              return response.json();
+              return response.json().then(function (json) {
+                return { ok: response.ok, json: json };
+              });
             })
-            .then(function (data) {
-              if (!data || !data.success) {
-                throw new Error((data && data.message) || "Submit failed");
+            .then(function (result) {
+              if (!result.ok || !result.json || !result.json.success) {
+                throw new Error("Email failed");
               }
-              pending.sent = true;
-              savePendingOrder(pending);
+              markExtraEmailSent(orderReference);
+              clearPendingOrder();
               cart = [];
               saveCart();
               renderCart();
-              clearPendingOrder();
               if (checkoutStatusEl) {
                 checkoutStatusEl.textContent = i18n("extra-checkout-payment-sent");
               }
@@ -6418,6 +6566,159 @@
                 checkoutStatusEl.classList.add("is-error");
               }
             });
+        }
+
+        function verifyReturnedExtraPayment(paymentState, orderReference) {
+          var pending = getPendingOrder();
+          openCart();
+
+          if (!pending || pending.merchantOrderReference !== orderReference) {
+            if (wasExtraEmailSent(orderReference)) {
+              if (checkoutStatusEl) {
+                checkoutStatusEl.classList.remove("is-error");
+                checkoutStatusEl.textContent = i18n("extra-checkout-payment-sent");
+              }
+              return;
+            }
+            if (checkoutStatusEl) {
+              checkoutStatusEl.textContent =
+                "Payment return received. Please contact the hotel with reference " +
+                orderReference +
+                ".";
+              checkoutStatusEl.classList.add("is-error");
+            }
+            return;
+          }
+
+          if (paymentState === "cancel" || paymentState === "cancelled") {
+            if (checkoutStatusEl) {
+              checkoutStatusEl.textContent =
+                "Payment was cancelled. Your cart is still saved — you can try again.";
+              checkoutStatusEl.classList.add("is-error");
+            }
+            return;
+          }
+
+          if (
+            paymentState === "fail" ||
+            paymentState === "failed" ||
+            paymentState === "error"
+          ) {
+            if (checkoutStatusEl) {
+              checkoutStatusEl.textContent =
+                "Payment was not completed. Your cart is still saved — please try again.";
+              checkoutStatusEl.classList.add("is-error");
+            }
+            return;
+          }
+
+          if (!pending.orderIdentification) {
+            if (checkoutStatusEl) {
+              checkoutStatusEl.textContent =
+                "Payment return received. Please contact the hotel with reference " +
+                orderReference +
+                ".";
+              checkoutStatusEl.classList.add("is-error");
+            }
+            return;
+          }
+
+          if (checkoutStatusEl) {
+            checkoutStatusEl.classList.remove("is-error");
+            checkoutStatusEl.textContent = "Checking payment status\u2026";
+          }
+
+          fetch(
+            PAYMENT_STATUS_URL +
+              "?orderIdentification=" +
+              encodeURIComponent(pending.orderIdentification),
+            { method: "GET", headers: { Accept: "application/json" } },
+          )
+            .then(parsePaymentJsonResponse)
+            .then(function (data) {
+              if (data && data.paymentStatus === "paid") {
+                return completePaidExtraOrder(pending, orderReference);
+              }
+              if (data && data.paymentStatus === "cancelled") {
+                if (checkoutStatusEl) {
+                  checkoutStatusEl.textContent = "Payment was cancelled.";
+                  checkoutStatusEl.classList.add("is-error");
+                }
+                return;
+              }
+              if (data && data.paymentStatus === "failed") {
+                if (checkoutStatusEl) {
+                  checkoutStatusEl.textContent = "Payment was not completed.";
+                  checkoutStatusEl.classList.add("is-error");
+                }
+                return;
+              }
+              if (checkoutStatusEl) {
+                checkoutStatusEl.textContent =
+                  "Payment is still processing. Contact the hotel with reference " +
+                  orderReference +
+                  " if needed.";
+                checkoutStatusEl.classList.remove("is-error");
+              }
+            })
+            .catch(function () {
+              if (checkoutStatusEl) {
+                checkoutStatusEl.textContent =
+                  "We could not verify payment automatically. Contact the hotel with reference " +
+                  orderReference +
+                  ".";
+                checkoutStatusEl.classList.add("is-error");
+              }
+            });
+        }
+
+        function handleExtraPaymentReturn() {
+          var params = new URLSearchParams(window.location.search || "");
+          var paymentState = (params.get("payment") || "").trim().toLowerCase();
+          var orderReference = (params.get("orderRef") || "").trim();
+          if (!paymentState) return;
+
+          if (window.history && window.history.replaceState) {
+            params.delete("payment");
+            params.delete("orderRef");
+            var query = params.toString();
+            window.history.replaceState(
+              {},
+              document.title,
+              window.location.pathname + (query ? "?" + query : "") + window.location.hash,
+            );
+          }
+
+          if (!orderReference) {
+            if (checkoutStatusEl) {
+              checkoutStatusEl.textContent = "Payment return was missing a reference.";
+              checkoutStatusEl.classList.add("is-error");
+            }
+            openCart();
+            return;
+          }
+
+          if (
+            paymentState === "success" ||
+            paymentState === "paid" ||
+            paymentState === "ok"
+          ) {
+            verifyReturnedExtraPayment("success", orderReference);
+            return;
+          }
+          if (paymentState === "cancel" || paymentState === "cancelled") {
+            verifyReturnedExtraPayment("cancel", orderReference);
+            return;
+          }
+          if (
+            paymentState === "fail" ||
+            paymentState === "failed" ||
+            paymentState === "error"
+          ) {
+            verifyReturnedExtraPayment("fail", orderReference);
+            return;
+          }
+          verifyReturnedExtraPayment(paymentState, orderReference);
         }
 
         var cart = [];
@@ -8052,7 +8353,7 @@
         cart = loadCart();
         renderCart();
         initBookingFlow();
-        window.setTimeout(trySendPendingOrderAfterPayment, 120);
+        window.setTimeout(handleExtraPaymentReturn, 120);
 
         if (checkoutForm) {
           checkoutForm.addEventListener("input", function () {
@@ -8239,77 +8540,25 @@
           var deliveryDate = (checkoutForm.deliveryDate.value || "").trim();
           var deliveryTime = (checkoutForm.deliveryTime.value || "").trim();
           var message = (checkoutForm.message.value || "").trim();
-          var grandTotal = getCartSubtotal();
+          var paymentItems = buildPaymentItemsFromCart(cart);
 
-          var orderLines = [];
-          for (var k = 0; k < cart.length; k++) {
-            var c = cart[k];
-            var title = c.productBase;
-            if (c.variantLabel && !isMlOnlyVariantLabel(c.variantLabel)) {
-              title += " (" + c.variantLabel + ")";
+          if (!paymentItems.length) {
+            if (checkoutStatusEl) {
+              checkoutStatusEl.textContent =
+                "Your cart has no billable items. Please add priced products before paying.";
+              checkoutStatusEl.classList.add("is-error");
             }
-            orderLines.push(
-              title +
-                ": " +
-                c.qty +
-                " \u00d7 " +
-                formatEuro(c.price) +
-                " = " +
-                formatEuro(c.qty * c.price),
-            );
+            return;
           }
 
-          var fullMessage = [
-            "EXTRA ORDER — CART CHECKOUT",
-            "=========================",
-            "",
-            "Recipient: " + ORDER_TO_EMAIL,
-            "",
-            "Guest details",
-            "-------------",
-            "Name on reservation: " + lastName,
-            "Delivery date: " + deliveryDate,
-            "Delivery time: " + deliveryTime,
-            "",
-            "Cart items",
-            "----------",
-            orderLines.join("\n"),
-            "",
-            "Total: " + formatEuro(grandTotal),
-            "Payment: Card checkout requested",
-            "",
-            "Guest message:",
-            message || "(none)",
-            "",
-            "Sent from: extra.html (Derand Hotel website)",
-            "Time: " + new Date().toLocaleString("en-GB", { hour12: false }),
-          ].join("\n");
-
-          var payload = {
-            access_key: WEB3FORMS_ACCESS_KEY,
-            subject:
-              "[Extra Cart] " +
-              lastName +
-              " \u2014 " +
-              cart.length +
-              " item(s)",
-            from_name: "Derand Hotel \u2014 Extra Cart",
-            to_email: ORDER_TO_EMAIL,
-            recipient: ORDER_TO_EMAIL,
-            name: lastName,
-            delivery_date: deliveryDate,
-            delivery_time: deliveryTime,
-            order_items: orderLines.join("\n"),
-            total_eur: formatEuro(grandTotal).replace("\u20ac", " EUR"),
-            guest_message: message || "",
-            payment_method: "Card checkout requested",
-            message: fullMessage,
-          };
-
-          savePendingOrder({
-            createdAt: new Date().toISOString(),
-            payload: payload,
-            sent: false,
+          var cartSnapshot = cart.map(function (item) {
+            return {
+              productBase: item.productBase,
+              variantLabel: item.variantLabel,
+              price: item.price,
+              qty: item.qty,
+              description: item.description || "",
+            };
           });
 
           if (cartPayBtn) cartPayBtn.disabled = true;
@@ -8318,11 +8567,56 @@
             checkoutStatusEl.textContent = i18n("extra-checkout-opening");
           }
 
-          window.setTimeout(function () {
-            window.open(CARD_CHECKOUT_URL, "_blank", "noopener,noreferrer");
-            closeCart();
-            if (cartPayBtn) cartPayBtn.disabled = cart.length === 0;
-          }, 600);
+          fetch(PAYMENT_CREATE_URL, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            body: JSON.stringify({
+              productName:
+                "Extra order (" + cartSnapshot.length + " item(s)) — " + lastName,
+              lastName: lastName,
+              deliveryDate: deliveryDate,
+              deliveryTime: deliveryTime,
+              message: message,
+              returnPath: "/extra.html",
+              items: paymentItems,
+            }),
+          })
+            .then(parsePaymentJsonResponse)
+            .then(function (data) {
+              if (!data || !data.checkoutUrl || !data.merchantOrderReference) {
+                throw new Error("Payment session was incomplete.");
+              }
+              savePendingOrder({
+                merchantOrderReference: data.merchantOrderReference,
+                orderIdentification: data.orderIdentification || "",
+                guest: {
+                  lastName: lastName,
+                  deliveryDate: deliveryDate,
+                  deliveryTime: deliveryTime,
+                  message: message,
+                },
+                cart: cartSnapshot,
+                createdAt: new Date().toISOString(),
+              });
+              if (checkoutStatusEl) {
+                checkoutStatusEl.textContent = "Redirecting to secure payment\u2026";
+              }
+              window.location.href = data.checkoutUrl;
+            })
+            .catch(function (error) {
+              if (checkoutStatusEl) {
+                checkoutStatusEl.textContent =
+                  (error && error.message) ||
+                  i18n("extra-checkout-payment-email-fail", {
+                    email: ORDER_TO_EMAIL,
+                  });
+                checkoutStatusEl.classList.add("is-error");
+              }
+              if (cartPayBtn) cartPayBtn.disabled = cart.length === 0;
+            });
         });
 
         document.addEventListener("derand:languagechange", function () {
