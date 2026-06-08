@@ -134,7 +134,7 @@
       "extra-desc-champagne": "Premium spirit served chilled in your room.",
       "extra-desc-perfume":
         "Fragrance delivered to your room in the selected bottle size.",
-      "extra-desc-chocolate": "Premium Tog chocolate delivered to your room.",
+      "extra-desc-chocolate": "",
       "extra-desc-laundry":
         "In-room laundry \u2014 choose wash & ironing or ironing only per item.",
       "spirit-desc-default": "Served chilled in your room with premium glassware.",
@@ -327,7 +327,7 @@
       "extra-desc-champagne": "Premium-Spirituose gek\u00fchlt auf Ihr Zimmer serviert.",
       "extra-desc-perfume":
         "Parfum wird in der gew\u00e4hlten Flaschengr\u00f6\u00dfe auf Ihr Zimmer geliefert.",
-      "extra-desc-chocolate": "Premium Tog-Schokolade auf Ihr Zimmer geliefert.",
+      "extra-desc-chocolate": "",
       "extra-desc-laundry":
         "W\u00e4scheservice im Zimmer \u2013 Waschen & B\u00fcgeln oder nur B\u00fcgeln pro Artikel.",
       "spirit-desc-default": "Gek\u00fchlt auf Ihrem Zimmer mit Premium-Glasware serviert.",
@@ -518,7 +518,7 @@
       "extra-desc-champagne": "Pije premium e servirur e ftohur në dhomën tuaj.",
       "extra-desc-perfume":
         "Parfumi dorëzohet në dhomë në madhësinë e zgjedhur të shishes.",
-      "extra-desc-chocolate": "Çokollatë premium Tog e dorëzuar në dhomë.",
+      "extra-desc-chocolate": "",
       "extra-desc-laundry":
         "Rroba larëse në dhomë — larje & hekurosje ose vetëm hekurosje për artikull.",
       "spirit-desc-default": "E servirur e ftohur në dhomë me qelq premium.",

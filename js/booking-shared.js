@@ -35,13 +35,69 @@
   ];
 
   var CHOCOLATE_ITEMS = [
-    { id: "chocolate-tog", label: "With love from Kosova", image: "img/tog.png", price: 10.6, category: "chocolate" },
-    { id: "chocolate-tog1", label: "With love from Prishtina", image: "img/tog1.png", price: 10.6, category: "chocolate" },
-    { id: "chocolate-tog2", label: "With love from Prizreni", image: "img/tog2.png", price: 10.6, category: "chocolate" },
-    { id: "chocolate-tog3", label: "Me dashni per ty", image: "img/tog3.png", price: 16.63, category: "chocolate" },
-    { id: "chocolate-tog4", label: "Cranberry Dark Chocolate", image: "img/tog4.png", price: 6.25, category: "chocolate" },
-    { id: "chocolate-tog5", label: "Tog Spicy Chocolate bar", image: "img/tog5.png", price: 6.25, category: "chocolate" },
-    { id: "chocolate-tog6", label: 'Tog Tablet "ASAJ"', image: "img/tog6.png", price: 6.25, category: "chocolate" },
+    {
+      id: "chocolate-tog",
+      label: "With love from Kosova",
+      image: "img/tog.png",
+      price: 10.6,
+      category: "chocolate",
+      description:
+        "A rich, curated journey of our finest flavors, balancing deep dark chocolate creams and smooth milk chocolate textures in perfect harmony.",
+    },
+    {
+      id: "chocolate-tog1",
+      label: "With love from Prishtina",
+      image: "img/tog1.png",
+      price: 10.6,
+      category: "chocolate",
+      description:
+        "Crafted for the modern palate, featuring a bold and vibrant mix of contemporary fillings, velvety creams, and satisfying crunchy pralines.",
+    },
+    {
+      id: "chocolate-tog2",
+      label: "With love from Prizreni",
+      image: "img/tog2.png",
+      price: 10.6,
+      category: "chocolate",
+      description:
+        "A timeless, artistic tasting experience where comforting, slow-churned creams and traditional roasted nuts melt together elegantly.",
+    },
+    {
+      id: "chocolate-tog3",
+      label: "Dark Chocolate with Cranberry",
+      image: "img/tog3.png",
+      price: 4.99,
+      category: "chocolate",
+      description:
+        "Design your perfect box. Mix and match from 9 unique handcrafted flavors, ranging from zesty fruit creams to silky pistachio and crunchy salted caramel.",
+    },
+    {
+      id: "chocolate-tog5",
+      label: "Dark Chocolate with red berries – A dedication to the Albanian woman",
+      image: "img/tog5.png",
+      price: 4.99,
+      category: "chocolate",
+      description:
+        "A bold, fiery contrast. Premium dark chocolate that melts slowly to release a subtle, lingering, and warming chili kick.",
+    },
+    {
+      id: "chocolate-tog4",
+      label: "Spicy Dark Chocolate",
+      image: "img/tog4.png",
+      price: 4.99,
+      category: "chocolate",
+      description:
+        "Intense, bittersweet dark chocolate beautifully balanced by the bright, tangy burst of real, chewy cranberries. This product is dedicated to love.",
+    },
+    {
+      id: "chocolate-tog6",
+      label: 'Tog Tablet "ASAJ"',
+      image: "img/tog6.png",
+      price: 9.99,
+      category: "chocolate",
+      description:
+        'Deep and aromatic. Luxurious dark chocolate infused with a vibrant, tart medley of red berries—honoring the grace of the Albanian woman.',
+    },
   ];
 
   var PERFUME_ITEMS = [

@@ -4961,10 +4961,10 @@
                 data-product="With love from Kosova"
                 data-price="10.60"
                 data-image="img/tog.png"
-                data-images="img/tog.png,img/tog1.png,img/tog2.png,img/tog3.png,img/tog4.png,img/tog5.png,img/tog6.png"
-                data-products='With love from Kosova,With love from Prishtina,With love from Prizreni,Me dashni per ty,Cranberry Dark Chocolate,Tog Spicy Chocolate bar,Tog Tablet "ASAJ"'
-                data-prices="10.60,10.60,10.60,16.63,6.25,6.25,6.25"
-                data-description="Premium Tog chocolate delivered to your room."
+                data-images="img/tog.png,img/tog1.png,img/tog2.png,img/tog3.png,img/tog5.png,img/tog4.png,img/tog6.png"
+                data-products='With love from Kosova,With love from Prishtina,With love from Prizreni,Dark Chocolate with Cranberry,Dark Chocolate with red berries – A dedication to the Albanian woman,Spicy Dark Chocolate,Tog Tablet "ASAJ"'
+                data-prices="10.60,10.60,10.60,4.99,4.99,4.99,9.99"
+                data-description=""
               >
                 <span data-i18n="extra-chocolates-btn">Choose Your Chocolate</span>
               </button>
@@ -6282,8 +6282,8 @@
           "tog1",
           "tog2",
           "tog3",
-          "tog4",
           "tog5",
+          "tog4",
           "tog6",
         ];
         var FLOWER_MODAL_DESCRIPTIONS = {
@@ -6334,9 +6334,16 @@
           return id ? i18n("perfume-desc-" + id) : productDescription;
         }
 
+        function getChocolateDescriptionByIndex(index) {
+          var entry = getChocolateCatalogEntry(index);
+          return entry && entry.description
+            ? entry.description
+            : i18n("extra-desc-chocolate");
+        }
+
         function getModalDescriptionForIndex(index) {
           if (isPerfumeOrder) return getPerfumeDescriptionByIndex(index);
-          if (isChocolateOrder) return i18n("extra-desc-chocolate");
+          if (isChocolateOrder) return getChocolateDescriptionByIndex(index);
           if (isLaundryOrder) return i18n("extra-desc-laundry");
           if (isFlowersModalCategory()) {
             var name = getSlideProductName(index);
@@ -6438,49 +6445,49 @@
             image: "img/tog.png",
             price: 10.6,
             description:
-              'Premium Tog chocolate box — "With love from Kosova" — delivered to your room.',
+              "A rich, curated journey of our finest flavors, balancing deep dark chocolate creams and smooth milk chocolate textures in perfect harmony.",
           },
           tog1: {
             name: "With love from Prishtina",
             image: "img/tog1.png",
             price: 10.6,
             description:
-              'Premium Tog chocolate box — "With love from Prishtina" — delivered to your room.',
+              "Crafted for the modern palate, featuring a bold and vibrant mix of contemporary fillings, velvety creams, and satisfying crunchy pralines.",
           },
           tog2: {
             name: "With love from Prizreni",
             image: "img/tog2.png",
             price: 10.6,
             description:
-              'Premium Tog chocolate box — "With love from Prizreni" — delivered to your room.',
+              "A timeless, artistic tasting experience where comforting, slow-churned creams and traditional roasted nuts melt together elegantly.",
           },
           tog3: {
-            name: "Me dashni per ty",
+            name: "Dark Chocolate with Cranberry",
             image: "img/tog3.png",
-            price: 16.63,
+            price: 4.99,
             description:
-              'Premium Tog chocolate box — "Me dashni pÎr ty" — delivered to your room.',
+              "Design your perfect box. Mix and match from 9 unique handcrafted flavors, ranging from zesty fruit creams to silky pistachio and crunchy salted caramel.",
           },
           tog4: {
-            name: "Cranberry Dark Chocolate",
+            name: 'Spicy Dark Chocolate',
             image: "img/tog4.png",
-            price: 6.25,
+            price: 4.99,
             description:
-              "Cranberry Dark Chocolate — delivered to your room.",
+              "Intense, bittersweet dark chocolate beautifully balanced by the bright, tangy burst of real, chewy cranberries. This product is dedicated to love.",
           },
           tog5: {
-            name: "Tog Spicy Chocolate bar",
+            name: 'Dark Chocolate with red berries – A dedication to the Albanian woman',
             image: "img/tog5.png",
-            price: 6.25,
+            price: 4.99,
             description:
-              "Tog Spicy Chocolate bar — delivered to your room.",
+              "A bold, fiery contrast. Premium dark chocolate that melts slowly to release a subtle, lingering, and warming chili kick.",
           },
           tog6: {
             name: 'Tog Tablet "ASAJ"',
             image: "img/tog6.png",
-            price: 6.25,
+            price: 9.99,
             description:
-              'Tog Tablet "ASAJ" — delivered to your room.',
+              'Deep and aromatic. Luxurious dark chocolate infused with a vibrant, tart medley of red berries—honoring the grace of the Albanian woman.',
           },
         };
         var PERFUME_CATALOG_IDS = [
@@ -6860,17 +6867,17 @@
           { name: "With love from Kosova", image: "img/tog.png", price: 10.6 },
           { name: "With love from Prishtina", image: "img/tog1.png", price: 10.6 },
           { name: "With love from Prizreni", image: "img/tog2.png", price: 10.6 },
-          { name: "Me dashni per ty", image: "img/tog3.png", price: 16.63 },
-          { name: "Cranberry Dark Chocolate", image: "img/tog4.png", price: 6.25 },
+          { name: "Dark Chocolate with Cranberry", image: "img/tog3.png", price: 4.99 },
           {
-            name: "Tog Spicy Chocolate bar",
+            name: 'Dark Chocolate with red berries – A dedication to the Albanian woman',
             image: "img/tog5.png",
-            price: 6.25,
+            price: 4.99,
           },
+          { name: 'Spicy Dark Chocolate', image: "img/tog4.png", price: 4.99 },
           {
             name: 'Tog Tablet "ASAJ"',
             image: "img/tog6.png",
-            price: 6.25,
+            price: 9.99,
           },
         ];
         var DECOR_BOOKING_PERFUMES = [
@@ -6981,10 +6988,7 @@
           if (Math.abs(n - Math.round(n)) < 0.001) {
             return Math.round(n) + "\u20ac";
           }
-          if (n > 0 && n < 1) {
-            return n.toFixed(2) + "\u20ac";
-          }
-          return n.toFixed(1) + "\u20ac";
+          return n.toFixed(2) + "\u20ac";
         }
 
         function parsePrice(value) {
@@ -9491,24 +9495,24 @@
             price: 10.6,
           },
           {
-            name: "Me dashni per ty",
+            name: "Dark Chocolate with Cranberry",
             image: "img/tog3.png",
-            price: 16.63,
+            price: 4.99,
           },
           {
-            name: "Cranberry Dark Chocolate",
-            image: "img/tog4.png",
-            price: 6.25,
-          },
-          {
-            name: "Tog Spicy Chocolate bar",
+            name: 'Dark Chocolate with red berries – A dedication to the Albanian woman',
             image: "img/tog5.png",
-            price: 6.25,
+            price: 4.99,
+          },
+          {
+            name: 'Spicy Dark Chocolate',
+            image: "img/tog4.png",
+            price: 4.99,
           },
           {
             name: 'Tog Tablet "ASAJ"',
             image: "img/tog6.png",
-            price: 6.25,
+            price: 9.99,
           },
         ];
 
