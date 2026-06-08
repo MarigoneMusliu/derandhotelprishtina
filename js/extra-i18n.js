@@ -211,6 +211,124 @@
         "Deep and aromatic. Luxurious dark chocolate infused with a vibrant, tart medley of red berries\u2014honoring the grace, strength, and beauty of the Albanian woman.",
       "chocolate-desc-tog6":
         "Design your perfect box. Mix and match from our 9 unique handcrafted flavors, ranging from zesty fruit creams to silky pistachio and crunchy salted caramel. Packaged in our elegant, vibrant red \u201cWith Love for You!\u201d box\u2014perfect for gifts and special occasions.",
+      "extra-modal-added-cart": "Added to cart.",
+      "extra-modal-removed-cart": "Removed from cart.",
+      "extra-toast-removed-cart": "Removed from cart",
+      "extra-checkout-incomplete":
+        "Please fill in the name on your reservation, delivery date, and time before paying.",
+      "extra-checkout-payment-sending":
+        "Payment confirmed. Sending your order...",
+      "extra-checkout-payment-sent":
+        "Payment completed. Your order details were sent to hotel reception.",
+      "extra-checkout-payment-email-fail":
+        "Payment completed, but we could not send order details automatically. Please email {email}.",
+      "extra-form-sending": "Sending\u2026",
+      "extra-form-thank-you": "Thank you \u2014 we received your message.",
+      "extra-form-error":
+        "Something went wrong. Please email {email}.",
+      "extra-fallback-option": "Option {n}",
+      "extra-fallback-flower-bouquet": "Flower Bouquet",
+      "extra-wine-selection": "Wine selection",
+      "extra-decor-variant-only": "Decor only",
+      "extra-decor-with": "{extra} with {decor}",
+      "flower-name-red-rose": "Single Red Roses",
+      "flower-name-white-rose": "Single White Rose",
+      "flower-name-pink-rose": "Single Pink Rose",
+      "flower-name-pink-dianthus": "Single Pink Dianthus",
+      "flower-name-white-dianthus": "Single White Dianthus",
+      "flower-name-white-lily": "Single White Lily",
+      "flower-name-pink-lily": "Single Pink Lily",
+      "flower-name-lily-bouquet": "Lily Bouquet",
+      "flower-name-red-roses-bouquet": "A Bouquet of Red Roses",
+      "flower-name-yellow-tulips-bouquet": "A Bouquet of Yellow Tulips",
+      "flower-name-mixed-bouquet": "Mixed Flower Bouquet",
+      "flower-desc-red-rose":
+        "A timeless single red rose, elegantly bloomed with a rich green stem.",
+      "flower-desc-white-rose":
+        "A classic, elegant single white rose. Pure and timeless.",
+      "flower-desc-pink-rose":
+        "A classic, elegant single pink rose. Soft, romantic, and timeless.",
+      "flower-desc-pink-dianthus":
+        "A charming, single pink dianthus. Delicate, vibrant, and perfectly timed.",
+      "flower-desc-white-dianthus":
+        "A fresh, single white dianthus. Crisp, delicate, and simple.",
+      "flower-desc-white-lily":
+        "An elegant white lily stem with a clean, modern silhouette and a naturally gentle fragrance.",
+      "flower-desc-pink-lily":
+        "A striking, single pink lily. Vibrant, elegant, and timeless.",
+      "flower-desc-lily-bouquet":
+        "A stunning bouquet of fresh lilies. Bold, elegant, and sophisticated.",
+      "flower-desc-red-roses-bouquet":
+        "A breathtaking bouquet of rich red roses. Bold, romantic, and timeless.",
+      "flower-desc-yellow-tulips-bouquet":
+        "A vibrant bouquet of fresh yellow tulips. Bright, cheerful, and elegant.",
+      "flower-desc-mixed-bouquet":
+        "A beautiful, hand-tied bouquet of seasonal flowers. Vibrant, fresh, and elegant.",
+      "chocolate-name-tog": "With love from Kosova",
+      "chocolate-name-tog1": "With love from Prishtina",
+      "chocolate-name-tog2": "Tog Chocolate Box \u201cWith love from Prizreni\u201d",
+      "chocolate-name-tog3": "Spicy Dark Chocolate",
+      "chocolate-name-tog4": "Dark Chocolate with Cranberry",
+      "chocolate-name-tog5": "Dark Chocolate with red berries",
+      "chocolate-name-tog6": "Tog Tablet \u201cASAJ\u201d Cranberry Dark Chocolate",
+      "laundry-name-shirt": "Shirt",
+      "laundry-name-tshirt": "Cotton T-Shirt",
+      "laundry-name-dress": "Dress",
+      "laundry-name-pijamas": "Pijamas",
+      "laundry-name-underwear": "Underwear",
+      "laundry-name-trousers": "Trousers",
+      "laundry-name-skirt": "Skirt",
+      "laundry-name-suit": "Suit",
+      "laundry-name-socks": "Socks",
+      "laundry-name-sweater": "Sweater",
+      "laundry-name-jacket": "Jacket",
+      "laundry-desc-shirt":
+        "Shirt \u2014 professional wash and press, or ironing only, returned to your room.",
+      "laundry-desc-tshirt":
+        "Cotton T-shirt \u2014 professional wash and press, or ironing only, returned to your room.",
+      "laundry-desc-dress":
+        "Dress \u2014 professional wash and press, or ironing only, returned to your room.",
+      "laundry-desc-pijamas":
+        "Pijamas \u2014 professional wash and press, or ironing only, returned to your room.",
+      "laundry-desc-underwear":
+        "Underwear \u2014 professional wash and press, or ironing only, returned to your room.",
+      "laundry-desc-trousers":
+        "Trousers \u2014 professional wash and press, or ironing only, returned to your room.",
+      "laundry-desc-skirt":
+        "Skirt \u2014 professional wash and press, or ironing only, returned to your room.",
+      "laundry-desc-suit":
+        "Suit \u2014 professional wash and press, or ironing only, returned to your room.",
+      "laundry-desc-socks":
+        "Socks \u2014 professional wash and press, or ironing only, returned to your room.",
+      "laundry-desc-sweater":
+        "Sweater \u2014 professional wash and press, or ironing only, returned to your room.",
+      "laundry-desc-jacket":
+        "Jacket \u2014 professional wash and press, or ironing only, returned to your room.",
+      "perfume-name-armani": "Giorgio Armani",
+      "perfume-name-diesel": "DIESEL LOVERDOSE",
+      "perfume-name-dkny": "DKNY BE DELICIOUS",
+      "perfume-name-juliet": "JULIET HAS A GUN",
+      "perfume-name-prada": "Prada Candy",
+      "perfume-name-roberto": "Roberto Cavalli Just Cavalli For Her",
+      "perfume-name-valentino": "Valentino Born In Roma",
+      "perfume-name-thierry": "Thierry Mugler MU ANG NOVA",
+      "perfume-name-ralph": "Ralph Lauren Polo Blue",
+      "perfume-name-montale": "MONTALE AOUD LIME",
+      "perfume-name-viktor": "FLBB EDP SPRAY",
+      "perfume-name-yves": "YVES SAINT LAURENT",
+      "decor-alt-valentine": "Valentine\u2019s room decor",
+      "decor-alt-birthday": "Birthday room decor",
+      "decor-alt-custom": "Custom room decor",
+      "decor-cart-valentine": "Valentine\u2019s room decor",
+      "decor-cart-birthday": "Birthday room decor",
+      "decor-cart-custom": "Custom room decor",
+      "decor-desc-valentine":
+        "Valentine\u2019s room decor \u2014 in-room styling with romantic touches.",
+      "decor-desc-custom": "Custom room decor \u2014 price on request.",
+      "decor-story-birthday-title": "A birthday they will remember",
+      "decor-story-birthday-copy":
+        "We dress your room with balloons, soft lighting, and refined touches so the celebration feels personal and warm \u2014 quiet luxury, not loud party decor.",
+      "decor-story-birthday-price": "Birthday room decor \u2014 60\u20ac",
     },
     de: {
       "extra-page-title": "Concierge | Hotel in Pristina",
@@ -425,6 +543,124 @@
         "Tief und aromatisch. Luxuri\u00f6se Dunkelschokolade, durchdrungen von einer lebendigen, herb-s\u00e4uerlichen Mischung roter Beeren \u2013 zu Ehren von Anmut, St\u00e4rke und Sch\u00f6nheit der albanischen Frau.",
       "chocolate-desc-tog6":
         "Gestalten Sie Ihre perfekte Box. Mixen und kombinieren Sie aus 9 einzigartigen handgefertigten Sorten, von fruchtigen Cremes bis zu samtigem Pistazie und knusprigem Salzkaramell. Verpackt in unserer eleganten, lebendig roten \u201eWith Love for You!\u201c-Box \u2013 perfekt f\u00fcr Geschenke und besondere Anl\u00e4sse.",
+      "extra-modal-added-cart": "In den Warenkorb gelegt.",
+      "extra-modal-removed-cart": "Aus dem Warenkorb entfernt.",
+      "extra-toast-removed-cart": "Aus dem Warenkorb entfernt",
+      "extra-checkout-incomplete":
+        "Bitte f\u00fcllen Sie den Reservierungsnamen, Lieferdatum und die Uhrzeit aus, bevor Sie bezahlen.",
+      "extra-checkout-payment-sending":
+        "Zahlung best\u00e4tigt. Ihre Bestellung wird gesendet\u2026",
+      "extra-checkout-payment-sent":
+        "Zahlung abgeschlossen. Ihre Bestelldetails wurden an die Hotelrezeption gesendet.",
+      "extra-checkout-payment-email-fail":
+        "Zahlung abgeschlossen, aber die Bestelldetails konnten nicht automatisch gesendet werden. Bitte schreiben Sie an {email}.",
+      "extra-form-sending": "Wird gesendet\u2026",
+      "extra-form-thank-you": "Vielen Dank \u2014 wir haben Ihre Nachricht erhalten.",
+      "extra-form-error":
+        "Etwas ist schiefgelaufen. Bitte schreiben Sie an {email}.",
+      "extra-fallback-option": "Option {n}",
+      "extra-fallback-flower-bouquet": "Blumenstrau\u00df",
+      "extra-wine-selection": "Weinauswahl",
+      "extra-decor-variant-only": "Nur Dekoration",
+      "extra-decor-with": "{extra} mit {decor}",
+      "flower-name-red-rose": "Einzelne rote Rose",
+      "flower-name-white-rose": "Einzelne wei\u00dfe Rose",
+      "flower-name-pink-rose": "Einzelne rosa Rose",
+      "flower-name-pink-dianthus": "Einzelne rosa Nelke",
+      "flower-name-white-dianthus": "Einzelne wei\u00dfe Nelke",
+      "flower-name-white-lily": "Einzelne wei\u00dfe Lilie",
+      "flower-name-pink-lily": "Einzelne rosa Lilie",
+      "flower-name-lily-bouquet": "Lilienstrau\u00df",
+      "flower-name-red-roses-bouquet": "Strau\u00df roter Rosen",
+      "flower-name-yellow-tulips-bouquet": "Strau\u00df gelber Tulpen",
+      "flower-name-mixed-bouquet": "Gemischter Blumenstrau\u00df",
+      "flower-desc-red-rose":
+        "Eine zeitlose einzelne rote Rose, elegant erbl\u00fcht mit einem kr\u00e4ftig gr\u00fcnen Stiel.",
+      "flower-desc-white-rose":
+        "Eine klassische, elegante einzelne wei\u00dfe Rose. Rein und zeitlos.",
+      "flower-desc-pink-rose":
+        "Eine klassische, elegante einzelne rosa Rose. Sanft, romantisch und zeitlos.",
+      "flower-desc-pink-dianthus":
+        "Eine reizvolle einzelne rosa Nelke. Zart, lebendig und perfekt getimed.",
+      "flower-desc-white-dianthus":
+        "Eine frische einzelne wei\u00dfe Nelke. Klar, zart und schlicht.",
+      "flower-desc-white-lily":
+        "Ein eleganter wei\u00dfer Lilienstiel mit klarer, moderner Silhouette und sanftem Duft.",
+      "flower-desc-pink-lily":
+        "Eine auff\u00e4llige einzelne rosa Lilie. Lebendig, elegant und zeitlos.",
+      "flower-desc-lily-bouquet":
+        "Ein atemberaubender Strau\u00df frischer Lilien. Mutig, elegant und raffiniert.",
+      "flower-desc-red-roses-bouquet":
+        "Ein atemberaubender Strau\u00df sattroter Rosen. Mutig, romantisch und zeitlos.",
+      "flower-desc-yellow-tulips-bouquet":
+        "Ein lebendiger Strau\u00df frischer gelber Tulpen. Hell, fr\u00f6hlich und elegant.",
+      "flower-desc-mixed-bouquet":
+        "Ein wundersch\u00f6ner, handgebundener Strau\u00df saisonaler Blumen. Lebendig, frisch und elegant.",
+      "chocolate-name-tog": "With love from Kosova",
+      "chocolate-name-tog1": "With love from Prishtina",
+      "chocolate-name-tog2": "Tog Schokoladenbox \u201eWith love from Prizreni\u201c",
+      "chocolate-name-tog3": "W\u00fcrzige dunkle Schokolade",
+      "chocolate-name-tog4": "Dunkle Schokolade mit Cranberry",
+      "chocolate-name-tog5": "Dunkle Schokolade mit roten Beeren",
+      "chocolate-name-tog6": "Tog Tafel \u201eASAJ\u201c Cranberry Dark Chocolate",
+      "laundry-name-shirt": "Hemd",
+      "laundry-name-tshirt": "Baumwoll-T-Shirt",
+      "laundry-name-dress": "Kleid",
+      "laundry-name-pijamas": "Pyjama",
+      "laundry-name-underwear": "Unterw\u00e4sche",
+      "laundry-name-trousers": "Hose",
+      "laundry-name-skirt": "Rock",
+      "laundry-name-suit": "Anzug",
+      "laundry-name-socks": "Socken",
+      "laundry-name-sweater": "Pullover",
+      "laundry-name-jacket": "Jacke",
+      "laundry-desc-shirt":
+        "Hemd \u2014 professionelles Waschen und B\u00fcgeln oder nur B\u00fcgeln, zur\u00fcck auf Ihr Zimmer.",
+      "laundry-desc-tshirt":
+        "Baumwoll-T-Shirt \u2014 professionelles Waschen und B\u00fcgeln oder nur B\u00fcgeln, zur\u00fcck auf Ihr Zimmer.",
+      "laundry-desc-dress":
+        "Kleid \u2014 professionelles Waschen und B\u00fcgeln oder nur B\u00fcgeln, zur\u00fcck auf Ihr Zimmer.",
+      "laundry-desc-pijamas":
+        "Pyjama \u2014 professionelles Waschen und B\u00fcgeln oder nur B\u00fcgeln, zur\u00fcck auf Ihr Zimmer.",
+      "laundry-desc-underwear":
+        "Unterw\u00e4sche \u2014 professionelles Waschen und B\u00fcgeln oder nur B\u00fcgeln, zur\u00fcck auf Ihr Zimmer.",
+      "laundry-desc-trousers":
+        "Hose \u2014 professionelles Waschen und B\u00fcgeln oder nur B\u00fcgeln, zur\u00fcck auf Ihr Zimmer.",
+      "laundry-desc-skirt":
+        "Rock \u2014 professionelles Waschen und B\u00fcgeln oder nur B\u00fcgeln, zur\u00fcck auf Ihr Zimmer.",
+      "laundry-desc-suit":
+        "Anzug \u2014 professionelles Waschen und B\u00fcgeln oder nur B\u00fcgeln, zur\u00fcck auf Ihr Zimmer.",
+      "laundry-desc-socks":
+        "Socken \u2014 professionelles Waschen und B\u00fcgeln oder nur B\u00fcgeln, zur\u00fcck auf Ihr Zimmer.",
+      "laundry-desc-sweater":
+        "Pullover \u2014 professionelles Waschen und B\u00fcgeln oder nur B\u00fcgeln, zur\u00fcck auf Ihr Zimmer.",
+      "laundry-desc-jacket":
+        "Jacke \u2014 professionelles Waschen und B\u00fcgeln oder nur B\u00fcgeln, zur\u00fcck auf Ihr Zimmer.",
+      "perfume-name-armani": "Giorgio Armani",
+      "perfume-name-diesel": "DIESEL LOVERDOSE",
+      "perfume-name-dkny": "DKNY BE DELICIOUS",
+      "perfume-name-juliet": "JULIET HAS A GUN",
+      "perfume-name-prada": "Prada Candy",
+      "perfume-name-roberto": "Roberto Cavalli Just Cavalli For Her",
+      "perfume-name-valentino": "Valentino Born In Roma",
+      "perfume-name-thierry": "Thierry Mugler MU ANG NOVA",
+      "perfume-name-ralph": "Ralph Lauren Polo Blue",
+      "perfume-name-montale": "MONTALE AOUD LIME",
+      "perfume-name-viktor": "FLBB EDP SPRAY",
+      "perfume-name-yves": "YVES SAINT LAURENT",
+      "decor-alt-valentine": "Valentins-Zimmerdekoration",
+      "decor-alt-birthday": "Geburtstags-Zimmerdekoration",
+      "decor-alt-custom": "Individuelle Zimmerdekoration",
+      "decor-cart-valentine": "Valentins-Zimmerdekoration",
+      "decor-cart-birthday": "Geburtstags-Zimmerdekoration",
+      "decor-cart-custom": "Individuelle Zimmerdekoration",
+      "decor-desc-valentine":
+        "Valentins-Zimmerdekoration \u2014 romantische Inszenierung im Zimmer.",
+      "decor-desc-custom": "Individuelle Zimmerdekoration \u2014 Preis auf Anfrage.",
+      "decor-story-birthday-title": "Ein Geburtstag, den man nie vergisst",
+      "decor-story-birthday-copy":
+        "Wir gestalten Ihr Zimmer mit Ballons, sanftem Licht und feinen Details \u2014 pers\u00f6nlich und warm, leise Luxus statt lauter Party-Dekoration.",
+      "decor-story-birthday-price": "Geburtstags-Zimmerdekoration \u2014 60\u20ac",
     },
     al: {
       "extra-page-title": "Concierge | Hotel n\u00eb Prishtin\u00eb",
@@ -631,6 +867,124 @@
         "E thellë dhe aromatike. Çokollatë e errët luksoze e infuzuar me një përzierje të gjallë dhe të hidhur mali të kuq—duke nderuar hijeshinë, forcën dhe bukurinë e gruas shqiptare.",
       "chocolate-desc-tog6":
         "Dizajnoni kutinë tuaj perfekte. Përzieni dhe kombinoni nga 9 shije unike të punuara me dorë, nga kremrat e frutave të hidhur deri te pistacio i butë dhe karamel i kripur krokant. E paketuar në kutinë tonë elegante, të kuqe të gjallë „With Love for You!“—perfekt për dhurata dhe raste të veçanta.",
+      "extra-modal-added-cart": "Shtuar në shportë.",
+      "extra-modal-removed-cart": "Hequr nga shporta.",
+      "extra-toast-removed-cart": "Hequr nga shporta",
+      "extra-checkout-incomplete":
+        "Ju lutemi plotësoni emrin në rezervim, datën dhe orën e dorëzimit para pagesës.",
+      "extra-checkout-payment-sending":
+        "Pagesa u konfirmua. Po dërgohet porosia juaj…",
+      "extra-checkout-payment-sent":
+        "Pagesa u përfundua. Detajet e porosisë u dërguan në recepsion.",
+      "extra-checkout-payment-email-fail":
+        "Pagesa u përfundua, por detajet e porosisë nuk u dërguan automatikisht. Ju lutemi shkruani te {email}.",
+      "extra-form-sending": "Po dërgohet…",
+      "extra-form-thank-you": "Faleminderit — e morëm mesazhin tuaj.",
+      "extra-form-error":
+        "Diçka shkoi keq. Ju lutemi shkruani te {email}.",
+      "extra-fallback-option": "Opsioni {n}",
+      "extra-fallback-flower-bouquet": "Buqetë lulesh",
+      "extra-wine-selection": "Zgjedhje vere",
+      "extra-decor-variant-only": "Vetëm dekor",
+      "extra-decor-with": "{extra} me {decor}",
+      "flower-name-red-rose": "Trëndafil i kuq i vetëm",
+      "flower-name-white-rose": "Trëndafil i bardhë i vetëm",
+      "flower-name-pink-rose": "Trëndafil rozë i vetëm",
+      "flower-name-pink-dianthus": "Dianthus rozë i vetëm",
+      "flower-name-white-dianthus": "Dianthus i bardhë i vetëm",
+      "flower-name-white-lily": "Zambak i bardhë i vetëm",
+      "flower-name-pink-lily": "Zambak rozë i vetëm",
+      "flower-name-lily-bouquet": "Buqetë zambakësh",
+      "flower-name-red-roses-bouquet": "Buqetë trëndafilash të kuq",
+      "flower-name-yellow-tulips-bouquet": "Buqetë tulipanash të verdhë",
+      "flower-name-mixed-bouquet": "Buqetë lulesh të përziera",
+      "flower-desc-red-rose":
+        "Një trëndafil i kuq i vetëm, i përjetshëm, i lulëzuar me elegancë me kërcell të gjelbër.",
+      "flower-desc-white-rose":
+        "Një trëndafil i bardhë klasik dhe elegant. I pastër dhe i përjetshëm.",
+      "flower-desc-pink-rose":
+        "Një trëndafil rozë klasik dhe elegant. I butë, romantik dhe i përjetshëm.",
+      "flower-desc-pink-dianthus":
+        "Një dianthus rozë i vetëm, i këndshëm. Delikat, i gjallë dhe në kohë të përsosur.",
+      "flower-desc-white-dianthus":
+        "Një dianthus i bardhë i freskët. I qartë, delikat dhe i thjeshtë.",
+      "flower-desc-white-lily":
+        "Një kërcell zambaku i bardhë elegant me siluetë moderne dhe aromë të butë natyrale.",
+      "flower-desc-pink-lily":
+        "Një zambak rozë i vetëm, i dukshëm. I gjallë, elegant dhe i përjetshëm.",
+      "flower-desc-lily-bouquet":
+        "Një buqetë mahnitëse zambakësh të freskët. E guximshme, elegante dhe sofistikuar.",
+      "flower-desc-red-roses-bouquet":
+        "Një buqetë mahnitëse trëndafilash të kuq. E guximshme, romantike dhe e përjetshme.",
+      "flower-desc-yellow-tulips-bouquet":
+        "Një buqetë e gjallë tulipanash të verdhë. E ndritshme, e gëzueshme dhe elegante.",
+      "flower-desc-mixed-bouquet":
+        "Një buqetë e bukur e lidhur me dorë me lule sezonale. E gjallë, e freskët dhe elegante.",
+      "chocolate-name-tog": "With love from Kosova",
+      "chocolate-name-tog1": "With love from Prishtina",
+      "chocolate-name-tog2": "Kutia Tog \u201cWith love from Prizreni\u201d",
+      "chocolate-name-tog3": "Çokollatë e errët pikante",
+      "chocolate-name-tog4": "Çokollatë e errët me cranberry",
+      "chocolate-name-tog5": "Çokollatë e errët me mali të kuq",
+      "chocolate-name-tog6": "Tablet Tog \u201cASAJ\u201d Cranberry Dark Chocolate",
+      "laundry-name-shirt": "Këmishë",
+      "laundry-name-tshirt": "T-shirt pambuku",
+      "laundry-name-dress": "Fustan",
+      "laundry-name-pijamas": "Pizhamë",
+      "laundry-name-underwear": "Të brendshme",
+      "laundry-name-trousers": "Pantallona",
+      "laundry-name-skirt": "Fund",
+      "laundry-name-suit": "Kostum",
+      "laundry-name-socks": "Çorape",
+      "laundry-name-sweater": "Xhaketë",
+      "laundry-name-jacket": "Pallto",
+      "laundry-desc-shirt":
+        "Këmishë — larje dhe hekurosje profesionale, ose vetëm hekurosje, kthyer në dhomën tuaj.",
+      "laundry-desc-tshirt":
+        "T-shirt pambuku — larje dhe hekurosje profesionale, ose vetëm hekurosje, kthyer në dhomën tuaj.",
+      "laundry-desc-dress":
+        "Fustan — larje dhe hekurosje profesionale, ose vetëm hekurosje, kthyer në dhomën tuaj.",
+      "laundry-desc-pijamas":
+        "Pizhamë — larje dhe hekurosje profesionale, ose vetëm hekurosje, kthyer në dhomën tuaj.",
+      "laundry-desc-underwear":
+        "Të brendshme — larje dhe hekurosje profesionale, ose vetëm hekurosje, kthyer në dhomën tuaj.",
+      "laundry-desc-trousers":
+        "Pantallona — larje dhe hekurosje profesionale, ose vetëm hekurosje, kthyer në dhomën tuaj.",
+      "laundry-desc-skirt":
+        "Fund — larje dhe hekurosje profesionale, ose vetëm hekurosje, kthyer në dhomën tuaj.",
+      "laundry-desc-suit":
+        "Kostum — larje dhe hekurosje profesionale, ose vetëm hekurosje, kthyer në dhomën tuaj.",
+      "laundry-desc-socks":
+        "Çorape — larje dhe hekurosje profesionale, ose vetëm hekurosje, kthyer në dhomën tuaj.",
+      "laundry-desc-sweater":
+        "Xhaketë — larje dhe hekurosje profesionale, ose vetëm hekurosje, kthyer në dhomën tuaj.",
+      "laundry-desc-jacket":
+        "Pallto — larje dhe hekurosje profesionale, ose vetëm hekurosje, kthyer në dhomën tuaj.",
+      "perfume-name-armani": "Giorgio Armani",
+      "perfume-name-diesel": "DIESEL LOVERDOSE",
+      "perfume-name-dkny": "DKNY BE DELICIOUS",
+      "perfume-name-juliet": "JULIET HAS A GUN",
+      "perfume-name-prada": "Prada Candy",
+      "perfume-name-roberto": "Roberto Cavalli Just Cavalli For Her",
+      "perfume-name-valentino": "Valentino Born In Roma",
+      "perfume-name-thierry": "Thierry Mugler MU ANG NOVA",
+      "perfume-name-ralph": "Ralph Lauren Polo Blue",
+      "perfume-name-montale": "MONTALE AOUD LIME",
+      "perfume-name-viktor": "FLBB EDP SPRAY",
+      "perfume-name-yves": "YVES SAINT LAURENT",
+      "decor-alt-valentine": "Dekor dhome Valentini",
+      "decor-alt-birthday": "Dekor dhome ditëlindjeje",
+      "decor-alt-custom": "Dekor dhome personalizuar",
+      "decor-cart-valentine": "Dekor dhome Valentini",
+      "decor-cart-birthday": "Dekor dhome ditëlindjeje",
+      "decor-cart-custom": "Dekor dhome personalizuar",
+      "decor-desc-valentine":
+        "Dekor dhome Valentini — stilim romantik në dhomë.",
+      "decor-desc-custom": "Dekor dhome personalizuar — çmimi sipas kërkesës.",
+      "decor-story-birthday-title": "Një ditëlindje që do ta kujtojnë",
+      "decor-story-birthday-copy":
+        "E veshim dhomën tuaj me balona, dritë të butë dhe prekje të rafinuara — personal dhe e ngrohtë, luks i qetë, jo dekor feste i zhurmshëm.",
+      "decor-story-birthday-price": "Dekor dhome ditëlindjeje — 60€",
     },
   };
 
