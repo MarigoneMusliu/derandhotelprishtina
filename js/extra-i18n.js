@@ -53,7 +53,8 @@
       "extra-decor-remove-bouquet-named": "Remove {name} from order",
       "extra-decor-add-cart": "Add decor to cart",
       "extra-decor-price-note": "Decor 60\u20ac \u00b7 bouquet +60\u20ac below",
-      "extra-decor-arrows-hint": "Outer arrows: category \u00b7 inner arrows: pick product",
+      "extra-decor-arrows-hint":
+        "Outer arrows: category \u00b7 inner arrows: pick product",
       "extra-decor-price-request": "Price on request",
       "extra-decor-custom-hint":
         "For custom decor, please contact reception or info@derandhotel.com.",
@@ -87,7 +88,8 @@
       "extra-cart-heading": "Your order",
       "extra-cart-items": "Items",
       "extra-cart-delivery-title": "Delivery details",
-      "extra-cart-delivery-hint": "Tell us when to bring your order to your room.",
+      "extra-cart-delivery-hint":
+        "Tell us when to bring your order to your room.",
       "extra-cart-name-label": "Name on reservation",
       "extra-cart-name-placeholder": "As on your booking",
       "extra-cart-date": "Date",
@@ -137,7 +139,8 @@
       "extra-desc-chocolate": "",
       "extra-desc-laundry":
         "In-room laundry \u2014 choose wash & ironing or ironing only per item.",
-      "spirit-desc-default": "Served chilled in your room with premium glassware.",
+      "spirit-desc-default":
+        "Served chilled in your room with premium glassware.",
       "spirit-desc-moet-brut":
         "An iconic house champagne with bright fruitiness, a seductive palate, and an elegant, balanced finish.",
       "spirit-desc-moet-ice":
@@ -240,7 +243,8 @@
       "extra-laundry-btn": "Service w\u00e4hlen",
       "extra-continue-kicker": "Feier-Dekoration im Zimmer",
       "extra-continue-heading": "\u00dcberraschen Sie Ihre Liebsten",
-      "extra-continue-sub": "Und schenken Sie ihnen ein Gef\u00fchl von Zuhause.",
+      "extra-continue-sub":
+        "Und schenken Sie ihnen ein Gef\u00fchl von Zuhause.",
       "extra-decor-prev": "Vorherige Dekoration",
       "extra-decor-next": "N\u00e4chste Dekoration",
       "extra-decor-options": "Optionale Dekoration-Extras",
@@ -252,12 +256,15 @@
       "extra-decor-prev-product": "Vorheriges Produkt",
       "extra-decor-next-product": "N\u00e4chstes Produkt",
       "extra-decor-flower-bouquet": "Blumenstrau\u00df",
-      "extra-decor-add-bouquet": "Blumenstrau\u00df f\u00fcr 60 Euro hinzuf\u00fcgen",
-      "extra-decor-remove-bouquet": "Blumenstrau\u00df aus der Bestellung entfernen",
+      "extra-decor-add-bouquet":
+        "Blumenstrau\u00df f\u00fcr 60 Euro hinzuf\u00fcgen",
+      "extra-decor-remove-bouquet":
+        "Blumenstrau\u00df aus der Bestellung entfernen",
       "extra-decor-add-bouquet-named": "{name} zur Bestellung hinzuf\u00fcgen",
       "extra-decor-remove-bouquet-named": "{name} aus der Bestellung entfernen",
       "extra-decor-add-cart": "Dekoration in den Warenkorb",
-      "extra-decor-price-note": "Dekoration 60\u20ac \u00b7 Strau\u00df +60\u20ac unten",
+      "extra-decor-price-note":
+        "Dekoration 60\u20ac \u00b7 Strau\u00df +60\u20ac unten",
       "extra-decor-arrows-hint":
         "\u00c4u\u00dfere Pfeile: Kategorie \u00b7 innere Pfeile: Produkt w\u00e4hlen",
       "extra-decor-price-request": "Preis auf Anfrage",
@@ -305,7 +312,8 @@
       "extra-cart-order-total": "Bestellsumme",
       "extra-cart-pay": "Jetzt bezahlen",
       "extra-cart-empty": "Ihr Warenkorb ist leer",
-      "extra-cart-empty-hint": "F\u00fcgen Sie unten etwas aus unseren Extras hinzu.",
+      "extra-cart-empty-hint":
+        "F\u00fcgen Sie unten etwas aus unseren Extras hinzu.",
       "extra-cart-remove": "Entfernen",
       "extra-cart-decrease": "Menge verringern",
       "extra-cart-increase": "Menge erh\u00f6hen",
@@ -338,13 +346,15 @@
       "extra-discover-laundry": "W\u00e4sche",
       "extra-desc-flowers":
         "Frische Saisonblumen in dekoratives Papier gewickelt \u2013 eine romantische \u00dcberraschung auf dem Zimmer.",
-      "extra-desc-champagne": "Premium-Spirituose gek\u00fchlt auf Ihr Zimmer serviert.",
+      "extra-desc-champagne":
+        "Premium-Spirituose gek\u00fchlt auf Ihr Zimmer serviert.",
       "extra-desc-perfume":
         "Parfum wird in der gew\u00e4hlten Flaschengr\u00f6\u00dfe auf Ihr Zimmer geliefert.",
       "extra-desc-chocolate": "",
       "extra-desc-laundry":
         "W\u00e4scheservice im Zimmer \u2013 Waschen & B\u00fcgeln oder nur B\u00fcgeln pro Artikel.",
-      "spirit-desc-default": "Gek\u00fchlt auf Ihrem Zimmer mit Premium-Glasware serviert.",
+      "spirit-desc-default":
+        "Gek\u00fchlt auf Ihrem Zimmer mit Premium-Glasware serviert.",
       "spirit-desc-moet-brut":
         "Ein ikonischer Haus-Champagner mit lebendiger Fruchtigkeit, verf\u00fchrerischem Gaumen und elegantem, ausgewogenem Abgang.",
       "spirit-desc-moet-ice":
@@ -465,7 +475,8 @@
       "extra-decor-remove-bouquet-named": "Hiq {name} nga porosia",
       "extra-decor-add-cart": "Shto dekorin në shportë",
       "extra-decor-price-note": "Dekori 60€ · buqeta +60€ më poshtë",
-      "extra-decor-arrows-hint": "Shigjetat e jashtme: kategori · brenda: produkt",
+      "extra-decor-arrows-hint":
+        "Shigjetat e jashtme: kategori · brenda: produkt",
       "extra-decor-price-request": "Çmimi sipas kërkesës",
       "extra-decor-custom-hint":
         "Për dekor të personalizuar, kontaktoni recepsionin ose info@derandhotel.com.",
@@ -499,7 +510,8 @@
       "extra-cart-heading": "Porosia juaj",
       "extra-cart-items": "Artikuj",
       "extra-cart-delivery-title": "Detajet e dorëzimit",
-      "extra-cart-delivery-hint": "Na tregoni kur ta çojmë porosinë në dhomën tuaj.",
+      "extra-cart-delivery-hint":
+        "Na tregoni kur ta çojmë porosinë në dhomën tuaj.",
       "extra-cart-name-label": "Emri në rezervim",
       "extra-cart-name-placeholder": "Si në rezervimin tuaj",
       "extra-cart-date": "Data",
@@ -543,7 +555,8 @@
       "extra-discover-laundry": "Rroba larëse",
       "extra-desc-flowers":
         "Lule sezonale të freskëta të mbështjella për një surprizë romantike në dhomë.",
-      "extra-desc-champagne": "Pije premium e servirur e ftohur në dhomën tuaj.",
+      "extra-desc-champagne":
+        "Pije premium e servirur e ftohur në dhomën tuaj.",
       "extra-desc-perfume":
         "Parfumi dorëzohet në dhomë në madhësinë e zgjedhur të shishes.",
       "extra-desc-chocolate": "",
@@ -588,8 +601,7 @@
         "Orientale-druri me anis dhe mandarin mbi bazë ëmbël lakrice e vanilje.",
       "perfume-desc-dkny":
         "Floral-frutore me mollë jeshile dhe kastravec mbi magnoli e sandal.",
-      "perfume-desc-juliet":
-        "Floral-gourmand me mali, iris, vanilë e sandal.",
+      "perfume-desc-juliet": "Floral-gourmand me mali, iris, vanilë e sandal.",
       "perfume-desc-prada":
         "Amber-gourmand me mushk të bardhë dhe benzoe mbi karamel.",
       "perfume-desc-roberto":
@@ -598,8 +610,7 @@
         "Amber-floral modern me cassis dhe jasemin mbi vanilë bourbon.",
       "perfume-desc-thierry":
         "Amber-floral me mali dhe trëndafil mbi akigalawood.",
-      "perfume-desc-ralph":
-        "Aromatik-ujor me melonë dhe kastravec mbi suede.",
+      "perfume-desc-ralph": "Aromatik-ujor me melonë dhe kastravec mbi suede.",
       "perfume-desc-montale":
         "Druri-floral me oud pakistanez dhe limë mbi trëndafil e patchouli.",
       "perfume-desc-viktor":
@@ -639,11 +650,13 @@
     "Belvedere Vodka": "spirit-desc-belvedere",
     "Tanqueray — Ten": "spirit-desc-tanqueray",
     "Hendrick's Gin": "spirit-desc-hendricks",
-    "Jägermeister": "spirit-desc-jager",
+    Jägermeister: "spirit-desc-jager",
   };
 
   function normalizeLang(lang) {
-    lang = String(lang || "").toLowerCase().trim();
+    lang = String(lang || "")
+      .toLowerCase()
+      .trim();
     if (lang === "sq") lang = "al";
     return LANGS.indexOf(lang) >= 0 ? lang : "en";
   }
@@ -707,26 +720,56 @@
     document.documentElement.setAttribute("lang", lang === "al" ? "sq" : lang);
     document.title = t("extra-page-title", lang);
 
-    var metaDesc = document.querySelector('meta[name="description"][data-i18n]');
+    var metaDesc = document.querySelector(
+      'meta[name="description"][data-i18n]',
+    );
     if (metaDesc) {
-      metaDesc.setAttribute("content", t(metaDesc.getAttribute("data-i18n"), lang));
+      metaDesc.setAttribute(
+        "content",
+        t(metaDesc.getAttribute("data-i18n"), lang),
+      );
     }
 
-    applyNodes("[data-i18n]", "data-i18n", function (node, value) {
-      node.textContent = value;
-    }, lang);
-    applyNodes("[data-i18n-placeholder]", "data-i18n-placeholder", function (node, value) {
-      node.setAttribute("placeholder", value);
-    }, lang);
-    applyNodes("[data-i18n-aria-label]", "data-i18n-aria-label", function (node, value) {
-      node.setAttribute("aria-label", value);
-    }, lang);
-    applyNodes("[data-i18n-html]", "data-i18n-html", function (node, value) {
-      node.innerHTML = value;
-    }, lang);
-    applyNodes("[data-i18n-alt]", "data-i18n-alt", function (node, value) {
-      node.setAttribute("alt", value);
-    }, lang);
+    applyNodes(
+      "[data-i18n]",
+      "data-i18n",
+      function (node, value) {
+        node.textContent = value;
+      },
+      lang,
+    );
+    applyNodes(
+      "[data-i18n-placeholder]",
+      "data-i18n-placeholder",
+      function (node, value) {
+        node.setAttribute("placeholder", value);
+      },
+      lang,
+    );
+    applyNodes(
+      "[data-i18n-aria-label]",
+      "data-i18n-aria-label",
+      function (node, value) {
+        node.setAttribute("aria-label", value);
+      },
+      lang,
+    );
+    applyNodes(
+      "[data-i18n-html]",
+      "data-i18n-html",
+      function (node, value) {
+        node.innerHTML = value;
+      },
+      lang,
+    );
+    applyNodes(
+      "[data-i18n-alt]",
+      "data-i18n-alt",
+      function (node, value) {
+        node.setAttribute("alt", value);
+      },
+      lang,
+    );
 
     document.dispatchEvent(
       new CustomEvent("derand:languagechange", { detail: { lang: lang } }),

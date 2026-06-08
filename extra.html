@@ -2278,6 +2278,18 @@
         padding-bottom: 2px;
       }
 
+      .extra-order-card--chocolate .extra-order-card__desc-slot {
+        order: 3;
+      }
+
+      .extra-order-card--chocolate .extra-order-card__row {
+        order: 4;
+      }
+
+      .extra-order-card--chocolate .extra-order-variant-wrap {
+        order: 5;
+      }
+
       .extra-order-card--flowers .extra-order-card__desc-slot {
         flex-shrink: 0;
         min-height: 5.5em;
@@ -3156,7 +3168,6 @@
         .extra-order-card--flowers .extra-order-variant-wrap,
         .extra-order-card--spirits .extra-order-variant-wrap,
         .extra-order-card--perfume .extra-order-variant-wrap,
-        .extra-order-card--chocolate .extra-order-variant-wrap,
         .extra-order-card--laundry .extra-order-variant-wrap {
           display: none;
         }
@@ -5749,7 +5760,7 @@
 
       </div>
     </footer>
-    <script src="js/extra-i18n.js?v=2"></script>
+    <script src="js/extra-i18n.js?v=3"></script>
     <script src="js/jquery-3.3.1.min.js" defer></script>
     <script src="js/bootstrap.min.js" defer></script>
     <script src="js/jquery.nice-select.min.js" defer></script>
@@ -6178,6 +6189,14 @@
           },
         };
 
+        var preloderEl = document.getElementById("preloder");
+        if (preloderEl) {
+          preloderEl.style.opacity = "0";
+          preloderEl.style.visibility = "hidden";
+          preloderEl.style.pointerEvents = "none";
+          preloderEl.style.display = "none";
+        }
+
         var modal = document.getElementById("extra-order-modal");
         var productEl = document.getElementById("extra-order-product");
         var imageEl = document.getElementById("extra-order-image");
@@ -6381,6 +6400,8 @@
         var productBaseName = "";
         var productDescription = "";
         var toastTimer = null;
+        var cartPeekTimer = null;
+        var cartPeekActive = false;
 
         function loadCart() {
           try {
@@ -6905,7 +6926,6 @@
             isFlowersModalCategory() ||
             isSpiritsOrder ||
             isPerfumeOrder ||
-            isChocolateOrder ||
             isLaundryOrder
           );
         }
@@ -6985,9 +7005,13 @@
           variantWrap.hidden = false;
           variantStrip.innerHTML = "";
           if (variantLabelEl) {
-            variantLabelEl.textContent = isFlowersModalCategory()
-              ? i18n("extra-order-variant-flowers")
-              : i18n("extra-order-variant-more");
+            if (isChocolateOrder) {
+              variantLabelEl.textContent = i18n("extra-order-variant-chocolates");
+            } else {
+              variantLabelEl.textContent = isFlowersModalCategory()
+                ? i18n("extra-order-variant-flowers")
+                : i18n("extra-order-variant-more");
+            }
           }
 
           for (var i = 0; i < count; i++) {
@@ -7316,19 +7340,22 @@
           setPerfumeSizesPickerVisible(isPerfumeMenu);
           setChocolateModalLayout(isChocolateMenu);
           setLaundryModalLayout(isLaundryMenu);
-          var discoverCategory = getExtraCategoryFromButton(btn);
-          if (discoverCategory) {
-            renderOrderDiscover(discoverCategory);
-          } else {
-            setDiscoverVisible(false);
-          }
-          updateModalView();
           if (isBookingFlow) {
             modal.classList.add("extra-order-modal--booking");
           }
           modal.classList.add("is-open");
           modal.setAttribute("aria-hidden", "false");
           document.body.style.overflow = "hidden";
+
+          var discoverCategory = getExtraCategoryFromButton(btn);
+          updateModalView();
+          if (discoverCategory) {
+            window.requestAnimationFrame(function () {
+              renderOrderDiscover(discoverCategory);
+            });
+          } else {
+            setDiscoverVisible(false);
+          }
         }
 
         function goBackToBookingDetails() {
@@ -7355,12 +7382,34 @@
           var orderCardOnClose = document.querySelector(".extra-order-card");
           if (orderCardOnClose) {
             orderCardOnClose.classList.remove("extra-order-card--flowers");
+            orderCardOnClose.classList.remove("extra-order-card--active");
           }
           isPerfumeOrder = false;
           isChocolateOrder = false;
           isLaundryOrder = false;
           perfumeMlByIndex = [];
           laundryServiceByIndex = [];
+        }
+
+        function cancelCartPeek() {
+          if (cartPeekTimer) {
+            window.clearTimeout(cartPeekTimer);
+            cartPeekTimer = null;
+          }
+          cartPeekActive = false;
+        }
+
+        function peekCartBriefly(durationMs) {
+          durationMs = typeof durationMs === "number" ? durationMs : 1000;
+          cancelCartPeek();
+          openCart();
+          cartPeekActive = true;
+          cartPeekTimer = window.setTimeout(function () {
+            cartPeekTimer = null;
+            if (!cartPeekActive) return;
+            cartPeekActive = false;
+            closeCart();
+          }, durationMs);
         }
 
         function openCart() {
@@ -7520,7 +7569,19 @@
           }
           if (!merged) cart.push(item);
           saveCart();
-          renderCart();
+          if (options.deferRender) {
+            window.requestAnimationFrame(function () {
+              renderCart();
+              if (options.peekCart) {
+                peekCartBriefly(options.peekCartMs);
+              }
+            });
+          } else {
+            renderCart();
+            if (options.peekCart) {
+              peekCartBriefly(options.peekCartMs);
+            }
+          }
           if (options.closeModal) closeModal();
           if (options.skipToast !== true) {
             showToast(
@@ -7830,6 +7891,14 @@
             : currentImages[i];
           var price = isSpiritsOrder ? spiritsPrices[i] || 0 : linePriceAt(i);
           var variantLabel = getVariantLabel(i);
+          var prevQty = getModalQty();
+          setModalQty(prevQty + 1);
+          if (minusBtn) minusBtn.disabled = false;
+          if (qtyEl) qtyEl.textContent = String(getModalQty());
+          if (modalLineTotalEl) {
+            modalLineTotalEl.textContent = formatEuro(getModalSelectionTotal());
+          }
+
           var added = addLineToCart(
             {
               productBase: getSlideProductName(i),
@@ -7844,15 +7913,23 @@
             {
               closeModal: false,
               openCart: false,
-              skipToast: false,
-              toastMessage: i18n("extra-toast-added"),
+              skipToast: true,
+              deferRender: true,
+              peekCart: true,
+              peekCartMs: 1000,
             },
           );
 
           if (added) {
             if (modalStatusEl) modalStatusEl.textContent = "Added to cart.";
-            setModalQty(getModalQty() + 1);
             updateModalView();
+          } else {
+            setModalQty(prevQty);
+            if (minusBtn) minusBtn.disabled = prevQty <= 0;
+            if (qtyEl) qtyEl.textContent = String(prevQty);
+            if (modalLineTotalEl) {
+              modalLineTotalEl.textContent = formatEuro(getModalSelectionTotal());
+            }
           }
           return added;
         }
@@ -7959,14 +8036,7 @@
               : null;
             if (discoverTrigger) {
               event.preventDefault();
-              if (isBookingFlow) {
-                openModal(discoverTrigger);
-              } else {
-                closeModal();
-                window.setTimeout(function () {
-                  openModal(discoverTrigger);
-                }, 280);
-              }
+              openModal(discoverTrigger);
             }
             return;
           }
@@ -7981,10 +8051,12 @@
             return;
           }
           if (event.target.closest("[data-cart-close]")) {
+            cancelCartPeek();
             closeCart();
             return;
           }
           if (event.target.closest("#extra-cart-toggle")) {
+            cancelCartPeek();
             openCart();
             return;
           }
@@ -8005,27 +8077,40 @@
           addToCartBtn.addEventListener("click", addCurrentSelectionToCart);
         }
 
-        minusBtn.addEventListener("click", function (event) {
-          event.preventDefault();
-          if (isBookingFlow) {
-            if (getModalQty() > 0) {
-              removeCurrentVariantFromBookingInstantly();
+        if (minusBtn) {
+          minusBtn.addEventListener("click", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            if (isBookingFlow) {
+              if (getModalQty() > 0) {
+                removeCurrentVariantFromBookingInstantly();
+              }
+              return;
             }
-            return;
-          }
-          if (getModalQty() > 0) {
-            removeCurrentVariantFromCartInstantly();
-          }
-          setModalQty(getModalQty() - 1);
-          updateModalView();
-        });
+            if (getModalQty() > 0) {
+              removeCurrentVariantFromCartInstantly();
+            }
+            setModalQty(getModalQty() - 1);
+            updateModalView();
+          });
+        }
 
-        plusBtn.addEventListener("click", function (event) {
-          event.preventDefault();
-          if (addCurrentVariantToCartInstantly()) return;
-          setModalQty(getModalQty() + 1);
-          updateModalView();
-        });
+        if (plusBtn) {
+          plusBtn.addEventListener("click", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            if (!modal || !modal.classList.contains("is-open")) return;
+
+            var orderCard = document.querySelector(".extra-order-card");
+            if (orderCard) {
+              orderCard.classList.add("extra-order-card--active");
+            }
+
+            if (addCurrentVariantToCartInstantly()) {
+              return;
+            }
+          });
+        }
 
         imagePrevBtn.addEventListener("click", function () {
           if (isSpiritsOrder) {
