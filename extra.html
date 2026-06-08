@@ -71,8 +71,75 @@
         border-bottom-color: #b17256;
       }
 
-      body.extra-page-static-header .header__menu > ul > li > a {
-        white-space: nowrap;
+      body.extra-page-static-header.sacher-home:has(.extra-hero) {
+        padding-top: 0 !important;
+      }
+
+      @media (min-width: 992px) {
+        body.extra-page-static-header .header__menu > ul > li > a {
+          white-space: nowrap;
+        }
+      }
+
+      @media (min-width: 992px) and (max-width: 1399px) {
+        body.extra-page-static-header .header__nav__option .container {
+          max-width: 100%;
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+
+        body.extra-page-static-header .header__menu ul li {
+          margin-right: 18px;
+        }
+
+        body.extra-page-static-header .header__menu > ul > li > a {
+          font-size: 12px;
+          letter-spacing: 0.04em;
+        }
+
+        body.extra-page-static-header .header__nav__widget {
+          margin-left: 12px;
+        }
+
+        body.extra-page-static-header .header__lang__selector .lang-btn {
+          font-size: 12px;
+          min-width: 24px;
+          padding: 2px 3px;
+        }
+      }
+
+      @media (max-width: 991px) {
+        html,
+        body.extra-page-static-header {
+          overflow-x: hidden !important;
+        }
+
+        body.extra-page-static-header .header__nav__option .container {
+          max-width: 100%;
+          padding-left: 12px;
+          padding-right: 12px;
+          position: relative;
+          min-height: 68px;
+        }
+
+        body.extra-page-static-header .header__logo {
+          padding: 10px 0 !important;
+          padding-right: max(120px, min(200px, 42vw)) !important;
+        }
+
+        body.extra-page-static-header .header__logo a img {
+          max-height: 40px !important;
+          width: auto !important;
+        }
+
+        body.extra-page-static-header .header__nav .header__lang__selector,
+        body.extra-page-static-header .header__nav__widget {
+          display: none !important;
+        }
+
+        body.extra-page-static-header .header__menu > ul > li > a {
+          white-space: normal;
+        }
       }
 
       body.extra-page-static-header .site-whatsapp-wrap {
@@ -4902,11 +4969,11 @@
                 data-i18n-desc="extra-desc-perfume"
                 data-perfume-menu="true"
                 data-product="Giorgio Armani"
-                data-price="33.12"
+                data-price="44.71"
                 data-image="img/armani.png"
                 data-images="img/armani.png,img/diesel.png,img/dkny.png,img/juliet.png,img/prada.png,img/roberto.png,img/valentino.png,img/thierry.png,img/ralph.png,img/montale.png,img/viktor.png,img/yves.png"
                 data-products="Giorgio Armani,DIESEL LOVERDOSE,DKNY BE DELICIOUS,JULIET HAS A GUN,Prada Candy,Roberto Cavalli Just Cavalli For Her,Valentino Born In Roma,Thierry Mugler MU ANG NOVA,Ralph Lauren Polo Blue,MONTALE AOUD LIME,FLBB EDP SPRAY,YVES SAINT LAURENT"
-                data-prices="33.12,44.24,39.2,112,73.68,22.72,81.04,94.8,62.08,120,70.32,97.92"
+                data-prices="44.71,59.72,52.92,151.2,99.47,30.67,109.4,127.98,83.81,162,94.93,132.19"
                 data-description="Fragrance delivered to your room in the selected bottle size."
               >
                 <span data-i18n="extra-perfumes-btn">Choose Your Perfume</span>
@@ -6499,7 +6566,7 @@
               "A legendary aquatic scent blending crisp marine notes and calabrian bergamot over a warm cedarwood base.",
             sizes: [
               { ml: 50, disabled: true },
-              { ml: 75, price: 33.12, default: true },
+              { ml: 75, price: 44.71, default: true },
               { ml: 100, disabled: true },
             ],
           },
@@ -6509,9 +6576,9 @@
             description:
               "An addictive oriental-woody fragrance blending bold star anise and juicy mandarin over a rich, sweet base of liquorice and vanilla.",
             sizes: [
-              { ml: 30, price: 44.24, default: true },
-              { ml: 50, price: 60.32 },
-              { ml: 75, price: 72.32 },
+              { ml: 30, price: 59.72, default: true },
+              { ml: 50, price: 81.43 },
+              { ml: 75, price: 97.63 },
             ],
           },
           dkny: {
@@ -6520,8 +6587,8 @@
             description:
               "A refreshing floral-fruity fragrance blending crisp green apple and juicy cucumber over a soft, sophisticated base of magnolia and sandalwood.",
             sizes: [
-              { ml: 30, price: 39.2, default: true },
-              { ml: 50, price: 51.44 },
+              { ml: 30, price: 52.92, default: true },
+              { ml: 50, price: 69.44 },
             ],
           },
           juliet: {
@@ -6529,7 +6596,7 @@
             image: "img/juliet.png",
             description:
               "A delicious floral-gourmand fragrance blending sweet raspberry and powdery iris over a rich, creamy base of vanilla and sandalwood.",
-            sizes: [{ ml: 100, price: 112, default: true }],
+            sizes: [{ ml: 100, price: 151.2, default: true }],
           },
           prada: {
             name: "Prada Candy",
@@ -6537,9 +6604,9 @@
             description:
               "An indulgent amber-gourmand fragrance blending powdery white musk and warm benzoin over a rich, sweet base of pure caramel.",
             sizes: [
-              { ml: 30, price: 73.68, default: true },
-              { ml: 50, price: 98.16 },
-              { ml: 80, price: 125.76 },
+              { ml: 30, price: 99.47, default: true },
+              { ml: 50, price: 132.52 },
+              { ml: 80, price: 169.78 },
             ],
           },
           roberto: {
@@ -6548,9 +6615,9 @@
             description:
               "A provocative floral fragrance blending luminous neroli and tahitian tiare flower over a warm, seductive base of palisander rosewood.",
             sizes: [
-              { ml: 30, price: 22.72, default: true },
-              { ml: 50, price: 29.2 },
-              { ml: 90, price: 36.56 },
+              { ml: 30, price: 30.67, default: true },
+              { ml: 50, price: 39.42 },
+              { ml: 90, price: 49.36 },
             ],
           },
           valentino: {
@@ -6559,9 +6626,9 @@
             description:
               "A modern amber-floral fragrance blending sparkling blackcurrant and luminous jasmine trio over a rich, edgy base of bourbon vanilla.",
             sizes: [
-              { ml: 30, price: 81.04, default: true },
-              { ml: 50, price: 116.64 },
-              { ml: 100, price: 154.08 },
+              { ml: 30, price: 109.4, default: true },
+              { ml: 50, price: 157.46 },
+              { ml: 100, price: 208.01 },
             ],
           },
           thierry: {
@@ -6570,8 +6637,8 @@
             description:
               "A vibrant amber-floral fragrance blending juicy raspberry and upcycled rose over a rich, sensual base of akigalawood.",
             sizes: [
-              { ml: 50, price: 94.8, default: true },
-              { ml: 100, price: 125.52 },
+              { ml: 50, price: 127.98, default: true },
+              { ml: 100, price: 169.45 },
             ],
           },
           ralph: {
@@ -6580,8 +6647,8 @@
             description:
               "A refreshing aromatic-aquatic fragrance blending crisp cantaloupe melon and juicy cucumber over a smooth, masculine base of washed suede.",
             sizes: [
-              { ml: 75, price: 62.08, default: true },
-              { ml: 125, price: 70.32 },
+              { ml: 75, price: 83.81, default: true },
+              { ml: 125, price: 94.93 },
             ],
           },
           montale: {
@@ -6589,14 +6656,14 @@
             image: "img/montale.png",
             description:
               "A captivating woody-floral fragrance blending exotic Pakistani oud and fresh, tart lime over a rich, sensual base of precious rose and patchouli.",
-            sizes: [{ ml: 100, price: 120, default: true }],
+            sizes: [{ ml: 100, price: 162, default: true }],
           },
           viktor: {
             name: "FLBB EDP SPRAY",
             image: "img/viktor.png",
             description:
               "An explosive amber-floral fragrance blending luminous cattleya orchid and sensual centifolia rose over a warm, addictive base of patchouli and vanilla.",
-            sizes: [{ ml: 30, price: 70.32, default: true }],
+            sizes: [{ ml: 30, price: 94.93, default: true }],
           },
           yves: {
             name: "YVES SAINT LAURENT",
@@ -6604,8 +6671,8 @@
             description:
               "A powerful aromatic-woody fragrance blending fresh green apple and vibrant sage over a deep, masculine base of amberwood and tonka bean.",
             sizes: [
-              { ml: 60, price: 97.92, default: true },
-              { ml: 100, price: 125.6 },
+              { ml: 60, price: 132.19, default: true },
+              { ml: 100, price: 169.56 },
             ],
           },
         };
@@ -6868,22 +6935,22 @@
           },
         ];
         var DECOR_BOOKING_PERFUMES = [
-          { name: "Giorgio Armani", image: "img/armani.png", price: 33.12 },
-          { name: "DIESEL LOVERDOSE", image: "img/diesel.png", price: 44.24 },
-          { name: "DKNY BE DELICIOUS", image: "img/dkny.png", price: 39.2 },
-          { name: "JULIET HAS A GUN", image: "img/juliet.png", price: 112 },
-          { name: "Prada Candy", image: "img/prada.png", price: 73.68 },
+          { name: "Giorgio Armani", image: "img/armani.png", price: 44.71 },
+          { name: "DIESEL LOVERDOSE", image: "img/diesel.png", price: 59.72 },
+          { name: "DKNY BE DELICIOUS", image: "img/dkny.png", price: 52.92 },
+          { name: "JULIET HAS A GUN", image: "img/juliet.png", price: 151.2 },
+          { name: "Prada Candy", image: "img/prada.png", price: 99.47 },
           {
             name: "Roberto Cavalli Just Cavalli For Her",
             image: "img/roberto.png",
-            price: 22.72,
+            price: 30.67,
           },
-          { name: "Valentino Born In Roma", image: "img/valentino.png", price: 81.04 },
-          { name: "Thierry Mugler MU ANG NOVA", image: "img/thierry.png", price: 94.8 },
-          { name: "Ralph Lauren Polo Blue", image: "img/ralph.png", price: 62.08 },
-          { name: "MONTALE AOUD LIME", image: "img/montale.png", price: 120 },
-          { name: "FLBB EDP SPRAY", image: "img/viktor.png", price: 70.32 },
-          { name: "YVES SAINT LAURENT", image: "img/yves.png", price: 97.92 },
+          { name: "Valentino Born In Roma", image: "img/valentino.png", price: 109.4 },
+          { name: "Thierry Mugler MU ANG NOVA", image: "img/thierry.png", price: 127.98 },
+          { name: "Ralph Lauren Polo Blue", image: "img/ralph.png", price: 83.81 },
+          { name: "MONTALE AOUD LIME", image: "img/montale.png", price: 162 },
+          { name: "FLBB EDP SPRAY", image: "img/viktor.png", price: 94.93 },
+          { name: "YVES SAINT LAURENT", image: "img/yves.png", price: 132.19 },
         ];
         var BOOKING_DECOR_ITEMS = [
           {
@@ -9507,18 +9574,18 @@
         ];
 
         var DECOR_PERFUMES = [
-          { name: "Giorgio Armani", image: "img/armani.png", price: 33.12 },
-          { name: "DIESEL LOVERDOSE", image: "img/diesel.png", price: 44.24 },
-          { name: "DKNY BE DELICIOUS", image: "img/dkny.png", price: 39.2 },
-          { name: "JULIET HAS A GUN", image: "img/juliet.png", price: 112 },
-          { name: "Prada Candy", image: "img/prada.png", price: 73.68 },
-          { name: "Roberto Cavalli Just Cavalli For Her", image: "img/roberto.png", price: 22.72 },
-          { name: "Valentino Born In Roma", image: "img/valentino.png", price: 81.04 },
-          { name: "Thierry Mugler MU ANG NOVA", image: "img/thierry.png", price: 94.8 },
-          { name: "Ralph Lauren Polo Blue", image: "img/ralph.png", price: 62.08 },
-          { name: "MONTALE AOUD LIME", image: "img/montale.png", price: 120 },
-          { name: "FLBB EDP SPRAY", image: "img/viktor.png", price: 70.32 },
-          { name: "YVES SAINT LAURENT", image: "img/yves.png", price: 97.92 },
+          { name: "Giorgio Armani", image: "img/armani.png", price: 44.71 },
+          { name: "DIESEL LOVERDOSE", image: "img/diesel.png", price: 59.72 },
+          { name: "DKNY BE DELICIOUS", image: "img/dkny.png", price: 52.92 },
+          { name: "JULIET HAS A GUN", image: "img/juliet.png", price: 151.2 },
+          { name: "Prada Candy", image: "img/prada.png", price: 99.47 },
+          { name: "Roberto Cavalli Just Cavalli For Her", image: "img/roberto.png", price: 30.67 },
+          { name: "Valentino Born In Roma", image: "img/valentino.png", price: 109.4 },
+          { name: "Thierry Mugler MU ANG NOVA", image: "img/thierry.png", price: 127.98 },
+          { name: "Ralph Lauren Polo Blue", image: "img/ralph.png", price: 83.81 },
+          { name: "MONTALE AOUD LIME", image: "img/montale.png", price: 162 },
+          { name: "FLBB EDP SPRAY", image: "img/viktor.png", price: 94.93 },
+          { name: "YVES SAINT LAURENT", image: "img/yves.png", price: 132.19 },
         ];
 
         if (

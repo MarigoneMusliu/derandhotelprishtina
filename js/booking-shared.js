@@ -45,18 +45,18 @@
   ];
 
   var PERFUME_ITEMS = [
-    { id: "perfume-armani", label: "Giorgio Armani", image: "img/armani.png", price: 33.12, category: "perfume" },
-    { id: "perfume-diesel", label: "DIESEL LOVERDOSE", image: "img/diesel.png", price: 44.24, category: "perfume" },
-    { id: "perfume-dkny", label: "DKNY BE DELICIOUS", image: "img/dkny.png", price: 39.2, category: "perfume" },
-    { id: "perfume-juliet", label: "JULIET HAS A GUN", image: "img/juliet.png", price: 112, category: "perfume" },
-    { id: "perfume-prada", label: "Prada Candy", image: "img/prada.png", price: 73.68, category: "perfume" },
-    { id: "perfume-roberto", label: "Roberto Cavalli Just Cavalli For Her", image: "img/roberto.png", price: 22.72, category: "perfume" },
-    { id: "perfume-valentino", label: "Valentino Born In Roma", image: "img/valentino.png", price: 81.04, category: "perfume" },
-    { id: "perfume-thierry", label: "Thierry Mugler MU ANG NOVA", image: "img/thierry.png", price: 94.8, category: "perfume" },
-    { id: "perfume-ralph", label: "Ralph Lauren Polo Blue", image: "img/ralph.png", price: 62.08, category: "perfume" },
-    { id: "perfume-montale", label: "MONTALE AOUD LIME", image: "img/montale.png", price: 120, category: "perfume" },
-    { id: "perfume-viktor", label: "FLBB EDP SPRAY", image: "img/viktor.png", price: 70.32, category: "perfume" },
-    { id: "perfume-yves", label: "YVES SAINT LAURENT", image: "img/yves.png", price: 97.92, category: "perfume" },
+    { id: "perfume-armani", label: "Giorgio Armani", image: "img/armani.png", price: 44.71, category: "perfume" },
+    { id: "perfume-diesel", label: "DIESEL LOVERDOSE", image: "img/diesel.png", price: 59.72, category: "perfume" },
+    { id: "perfume-dkny", label: "DKNY BE DELICIOUS", image: "img/dkny.png", price: 52.92, category: "perfume" },
+    { id: "perfume-juliet", label: "JULIET HAS A GUN", image: "img/juliet.png", price: 151.2, category: "perfume" },
+    { id: "perfume-prada", label: "Prada Candy", image: "img/prada.png", price: 99.47, category: "perfume" },
+    { id: "perfume-roberto", label: "Roberto Cavalli Just Cavalli For Her", image: "img/roberto.png", price: 30.67, category: "perfume" },
+    { id: "perfume-valentino", label: "Valentino Born In Roma", image: "img/valentino.png", price: 109.4, category: "perfume" },
+    { id: "perfume-thierry", label: "Thierry Mugler MU ANG NOVA", image: "img/thierry.png", price: 127.98, category: "perfume" },
+    { id: "perfume-ralph", label: "Ralph Lauren Polo Blue", image: "img/ralph.png", price: 83.81, category: "perfume" },
+    { id: "perfume-montale", label: "MONTALE AOUD LIME", image: "img/montale.png", price: 162, category: "perfume" },
+    { id: "perfume-viktor", label: "FLBB EDP SPRAY", image: "img/viktor.png", price: 94.93, category: "perfume" },
+    { id: "perfume-yves", label: "YVES SAINT LAURENT", image: "img/yves.png", price: 132.19, category: "perfume" },
   ];
 
   var CATEGORIES = {
