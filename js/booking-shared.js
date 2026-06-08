@@ -35,13 +35,13 @@
   ];
 
   var CHOCOLATE_ITEMS = [
-    { id: "chocolate-tog", label: "With love from Kosova", image: "img/tog.png", price: 14.25, category: "chocolate" },
-    { id: "chocolate-tog1", label: "With love from Prishtina", image: "img/tog1.png", price: 14.25, category: "chocolate" },
-    { id: "chocolate-tog2", label: "With love from Prizreni", image: "img/tog2.png", price: 14.25, category: "chocolate" },
+    { id: "chocolate-tog", label: "With love from Kosova", image: "img/tog.png", price: 10.6, category: "chocolate" },
+    { id: "chocolate-tog1", label: "With love from Prishtina", image: "img/tog1.png", price: 10.6, category: "chocolate" },
+    { id: "chocolate-tog2", label: "With love from Prizreni", image: "img/tog2.png", price: 10.6, category: "chocolate" },
     { id: "chocolate-tog3", label: "Me dashni per ty", image: "img/tog3.png", price: 16.63, category: "chocolate" },
-    { id: "chocolate-tog4", label: "Tog Cranberry Dark Chocolate bar", image: "img/tog4.png", price: 6.25, category: "chocolate" },
-    { id: "chocolate-tog5", label: 'Tog Spicy Chocolate bar "Flakë e ëmbël"', image: "img/tog5.png", price: 6.25, category: "chocolate" },
-    { id: "chocolate-tog6", label: 'Tog Tablet "ASAJ" Cranberry Dark Chocolate', image: "img/tog6.png", price: 6.25, category: "chocolate" },
+    { id: "chocolate-tog4", label: "Cranberry Dark Chocolate", image: "img/tog4.png", price: 6.25, category: "chocolate" },
+    { id: "chocolate-tog5", label: "Tog Spicy Chocolate bar", image: "img/tog5.png", price: 6.25, category: "chocolate" },
+    { id: "chocolate-tog6", label: 'Tog Tablet "ASAJ"', image: "img/tog6.png", price: 6.25, category: "chocolate" },
   ];
 
   var PERFUME_ITEMS = [

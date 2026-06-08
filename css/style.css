@@ -910,7 +910,7 @@ body {
 }
 
 .header__logo a img {
-  max-height: 280px;
+  max-height: 56px;
   width: auto;
   display: block;
 }
@@ -11409,12 +11409,13 @@ body {
 }
 
 @media (max-width: 991px) {
-  body.sacher-home:has(.sacher-hero) {
+  body.sacher-home:has(.sacher-hero),
+  body.sacher-home:has(.extra-hero) {
     padding-top: 0 !important;
   }
 
-  body.sacher-home:not(:has(.sacher-hero)) {
-    padding-top: 80px !important;
+  body.sacher-home:not(:has(.sacher-hero)):not(:has(.extra-hero)) {
+    padding-top: 74px !important;
   }
 
   .header__nav__option {
@@ -12929,5 +12930,109 @@ body.derand-tidio-enabled #tidio-chat iframe {
   .site-whatsapp-fab__label.is-visible {
     max-width: 200px;
     padding: 8px 12px;
+  }
+}
+
+/* ========== Global responsive header (standard pages) ========== */
+@media (min-width: 992px) and (max-width: 1399px) {
+  body:not(.noya-reborn) .header__nav__option .container {
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  body:not(.noya-reborn) .header__menu ul li {
+    margin-right: 18px;
+  }
+
+  body:not(.noya-reborn) .header__menu > ul > li > a {
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+
+  body:not(.noya-reborn) .header__nav__widget {
+    margin-left: 12px;
+  }
+
+  body:not(.noya-reborn) .header__lang__selector .lang-btn {
+    font-size: 12px;
+    min-width: 24px;
+    padding: 2px 3px;
+  }
+}
+
+@media (max-width: 991px) {
+  html,
+  body:not(.noya-reborn) {
+    overflow-x: hidden !important;
+  }
+
+  body:has(> .header):not(.noya-reborn):not(.omma-page):not(
+      .sacher-home:has(.sacher-hero)
+    ):not(.sacher-home:has(.extra-hero)) {
+    padding-top: 74px !important;
+  }
+
+  body.pristina-guide main {
+    padding-top: 24px !important;
+  }
+
+  body:not(.noya-reborn) .header__nav__option .container {
+    max-width: 100%;
+    padding-left: max(12px, env(safe-area-inset-left));
+    padding-right: max(12px, env(safe-area-inset-right));
+    position: relative;
+    min-height: 68px;
+  }
+
+  body:not(.noya-reborn) .header__nav {
+    display: none !important;
+  }
+
+  body:not(.noya-reborn) .header .header__nav .header__lang__selector,
+  body:not(.noya-reborn) .header .header__nav__widget {
+    display: none !important;
+  }
+
+  body:not(.noya-reborn) .header__logo {
+    padding: 10px 0 !important;
+    padding-left: max(12px, env(safe-area-inset-left)) !important;
+    padding-right: max(120px, min(200px, 42vw)) !important;
+  }
+
+  body:not(.noya-reborn) .header__logo a img {
+    max-height: 40px !important;
+    width: auto !important;
+  }
+
+  body:not(.noya-reborn) .header .canvas__open {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    position: fixed !important;
+    right: max(14px, env(safe-area-inset-right)) !important;
+    top: max(14px, env(safe-area-inset-top)) !important;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px;
+    min-height: 44px;
+    border: 1px solid #e5e5e5 !important;
+    border-radius: 50% !important;
+    background: #ffffff !important;
+    color: #222222 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+    z-index: 1210 !important;
+    line-height: 1 !important;
+    cursor: pointer;
+    font-size: 18px !important;
+  }
+
+  body:not(.noya-reborn) .header .canvas__open .fa,
+  body:not(.noya-reborn) .header .canvas__open span,
+  body:not(.noya-reborn) .header .canvas__open i {
+    font-family: FontAwesome !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+    color: #222222 !important;
   }
 }

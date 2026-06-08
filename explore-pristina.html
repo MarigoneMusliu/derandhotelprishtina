@@ -125,7 +125,7 @@
 
       @media (max-width: 991px) {
         .pristina-guide main {
-          padding-top: 90px;
+          padding-top: 24px;
         }
 
         .guide-layout {
@@ -214,8 +214,13 @@
               </div>
             </div>
           </div>
-          <div class="canvas__open">
-            <i class="fa fa-bars"></i>
+          <div class="canvas__open" aria-label="Menu" role="button" tabindex="0">
+            <span class="fa fa-bars"></span>
+          </div>
+          <div class="mobile__lang__selector header__lang__selector">
+            <button class="lang-btn lang-active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="de">DE</button>
+            <button class="lang-btn" data-lang="al">AL</button>
           </div>
         </div>
       </div>
