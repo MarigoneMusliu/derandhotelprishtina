@@ -5892,10 +5892,8 @@
         }
 
         function getChocolateDescriptionByIndex(index) {
-          var entry = getChocolateCatalogEntry(index);
-          return entry && entry.description
-            ? entry.description
-            : i18n("extra-desc-chocolate");
+          var id = CHOCOLATE_CATALOG_IDS[index];
+          return id ? i18n("chocolate-desc-" + id) : i18n("extra-desc-chocolate");
         }
 
         function getModalDescriptionForIndex(index) {

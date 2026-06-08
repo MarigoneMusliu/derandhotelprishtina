@@ -194,6 +194,20 @@
         "An explosive amber-floral fragrance blending luminous cattleya orchid and sensual centifolia rose over a warm, addictive base of patchouli and vanilla.",
       "perfume-desc-yves":
         "A powerful aromatic-woody fragrance blending fresh green apple and vibrant sage over a deep, masculine base of amberwood and tonka bean.",
+      "chocolate-desc-tog":
+        "A rich, curated journey of our finest flavors. This collection balances deep dark chocolate creams and smooth milk chocolate textures in perfect harmony\u2014crafted to share a piece of Kosovo\u2019s history and national essence.",
+      "chocolate-desc-tog1":
+        "Crafted for the modern palate, featuring a bold and vibrant mix of contemporary fillings, velvety creams, and satisfying crunchy pralines. A perfect match for urban and modern hearts.",
+      "chocolate-desc-tog2":
+        "A timeless, artistic tasting experience where tradition meets art. Comforting, slow-churned creams and traditional roasted nuts melt together elegantly to celebrate the rich heritage of Prizren.",
+      "chocolate-desc-tog3":
+        "A bold, fiery contrast. Premium dark chocolate that melts slowly to release a subtle, lingering, and warming chili kick. Perfect for those who love a sophisticated, spicy twist.",
+      "chocolate-desc-tog4":
+        "Elegance in simplicity. Intense, bittersweet dark chocolate beautifully balanced by the bright, tangy burst of real, chewy cranberries. A premium tablet dedicated to pure chocolate love.",
+      "chocolate-desc-tog5":
+        "Deep and aromatic. Luxurious dark chocolate infused with a vibrant, tart medley of red berries\u2014honoring the grace, strength, and beauty of the Albanian woman.",
+      "chocolate-desc-tog6":
+        "Design your perfect box. Mix and match from our 9 unique handcrafted flavors, ranging from zesty fruit creams to silky pistachio and crunchy salted caramel. Packaged in our elegant, vibrant red \u201cWith Love for You!\u201d box\u2014perfect for gifts and special occasions.",
     },
     de: {
       "extra-page-title": "Concierge | Hotel in Pristina",
@@ -387,6 +401,20 @@
         "Amber-floral mit Cattleya-Orchidee und Rose \u00fcber Patchouli und Vanille.",
       "perfume-desc-yves":
         "Aromatisch-holzig mit gr\u00fcnem Apfel und Salbei \u00fcber Amberwood und Tonkabohne.",
+      "chocolate-desc-tog":
+        "Eine reichhaltige, kuratierte Reise durch unsere feinsten Aromen. Diese Kollektion vereint tiefe dunkle Schokoladencremes und samtige Milchschokoladen-Texturen in perfekter Harmonie \u2013 geschaffen, um ein St\u00fcck kosovarischer Geschichte und nationaler Essenz zu teilen.",
+      "chocolate-desc-tog1":
+        "F\u00fcr den modernen Gaumen kreiert \u2013 mit einer mutigen, lebendigen Mischung zeitgen\u00f6ssischer F\u00fcllungen, samtiger Cremes und knuspriger Pralin\u00e9s. Die perfekte Wahl f\u00fcr urbane und moderne Herzen.",
+      "chocolate-desc-tog2":
+        "Ein zeitloses, k\u00fcnstlerisches Geschmackserlebnis, in dem Tradition auf Kunst trifft. Wohltuende, langsam ger\u00fchrte Cremes und traditionell ger\u00f6stete N\u00fcsse verschmelzen elegant und feiern das reiche Erbe von Prizren.",
+      "chocolate-desc-tog3":
+        "Ein mutiger, feuriger Kontrast. Premium-Dunkelschokolade, die langsam schmilzt und einen subtilen, anhaltenden, w\u00e4rmenden Chili-Kick freisetzt. Perfekt f\u00fcr alle, die eine sophistizierte, w\u00fcrzige Note lieben.",
+      "chocolate-desc-tog4":
+        "Eleganz in der Einfachheit. Intensive, bitters\u00fc\u00dfe Dunkelschokolade, wundersch\u00f6n ausbalanciert durch den hellen, spritzigen Ausbruch echter, z\u00e4her Cranberries. Eine Premium-Tafel der puren Schokoladenliebe.",
+      "chocolate-desc-tog5":
+        "Tief und aromatisch. Luxuri\u00f6se Dunkelschokolade, durchdrungen von einer lebendigen, herb-s\u00e4uerlichen Mischung roter Beeren \u2013 zu Ehren von Anmut, St\u00e4rke und Sch\u00f6nheit der albanischen Frau.",
+      "chocolate-desc-tog6":
+        "Gestalten Sie Ihre perfekte Box. Mixen und kombinieren Sie aus 9 einzigartigen handgefertigten Sorten, von fruchtigen Cremes bis zu samtigem Pistazie und knusprigem Salzkaramell. Verpackt in unserer eleganten, lebendig roten \u201eWith Love for You!\u201c-Box \u2013 perfekt f\u00fcr Geschenke und besondere Anl\u00e4sse.",
     },
     al: {
       "extra-page-title": "Concierge | Hotel n\u00eb Prishtin\u00eb",
@@ -578,6 +606,20 @@
         "Amber-floral me orkide cattleya dhe trëndafil mbi patchouli e vanilje.",
       "perfume-desc-yves":
         "Aromatik-druri me mollë jeshile dhe sarri mbi amberwood e tonka.",
+      "chocolate-desc-tog":
+        "Një udhëtim i pasur dhe i kuruar nëpër shijet tona më të mira. Kjo koleksion balancon kremrat e thellë të çokollatës së errët dhe teksturat e lëmuara të çokollatës së qumështit në harmoni të përsosur—krijuar për të ndarë një pjesë të historisë dhe esencës kombëtare të Kosovës.",
+      "chocolate-desc-tog1":
+        "Krijuar për palatin modern, me një përzierje të guximshme dhe të gjallë mbushjesh bashkëkohore, kremra velvetoze dhe pralina krokante që kënaqin. Përputhje e përsosur për zemra urbane dhe moderne.",
+      "chocolate-desc-tog2":
+        "Një përvojë shijeje e përjetshme dhe artistike ku tradita takohet me artin. Kremrat ngrohtësues të përzier ngadalë dhe arrat tradicionale të pjekura shkrihen në mënyrë elegante për të festuar trashëgiminë e pasur të Prizrenit.",
+      "chocolate-desc-tog3":
+        "Një kontrast i guximshëm dhe zjarrtë. Çokollatë e errët premium që shkrihet ngadalë për të lëshuar një goditje të hollë, të qëndrueshme dhe ngrohtëse të chilit. Perfekt për ata që duan një nuancë të sofistikuar dhe pikante.",
+      "chocolate-desc-tog4":
+        "Elegancë në thjeshtësi. Çokollatë e errët intensive dhe e hidhur-ëmbël e balancuar bukur me shpërthimin e ndritshëm dhe të hidhur të cranberries të vërteta dhe të përtyra. Një tablet premium i dedikuar dashurisë së pastër për çokollatën.",
+      "chocolate-desc-tog5":
+        "E thellë dhe aromatike. Çokollatë e errët luksoze e infuzuar me një përzierje të gjallë dhe të hidhur mali të kuq—duke nderuar hijeshinë, forcën dhe bukurinë e gruas shqiptare.",
+      "chocolate-desc-tog6":
+        "Dizajnoni kutinë tuaj perfekte. Përzieni dhe kombinoni nga 9 shije unike të punuara me dorë, nga kremrat e frutave të hidhur deri te pistacio i butë dhe karamel i kripur krokant. E paketuar në kutinë tonë elegante, të kuqe të gjallë „With Love for You!“—perfekt për dhurata dhe raste të veçanta.",
     },
   };
 
