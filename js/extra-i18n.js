@@ -204,9 +204,9 @@
       "chocolate-desc-tog2":
         "A timeless, artistic tasting experience where tradition meets art. Comforting, slow-churned creams and traditional roasted nuts melt together elegantly to celebrate the rich heritage of Prizren.",
       "chocolate-desc-tog3":
-        "A bold, fiery contrast. Premium dark chocolate that melts slowly to release a subtle, lingering, and warming chili kick. Perfect for those who love a sophisticated, spicy twist.",
-      "chocolate-desc-tog4":
         "Elegance in simplicity. Intense, bittersweet dark chocolate beautifully balanced by the bright, tangy burst of real, chewy cranberries. A premium tablet dedicated to pure chocolate love.",
+      "chocolate-desc-tog4":
+        "A bold, fiery contrast. Premium dark chocolate that melts slowly to release a subtle, lingering, and warming chili kick. Perfect for those who love a sophisticated, spicy twist.",
       "chocolate-desc-tog5":
         "Deep and aromatic. Luxurious dark chocolate infused with a vibrant, tart medley of red berries\u2014honoring the grace, strength, and beauty of the Albanian woman.",
       "chocolate-desc-tog6":
@@ -269,8 +269,8 @@
       "chocolate-name-tog2": "Tog Chocolate Box \u201cWith love from Prizreni\u201d",
       "chocolate-name-tog3": "Spicy Dark Chocolate",
       "chocolate-name-tog4": "Dark Chocolate with Cranberry",
-      "chocolate-name-tog5": "Dark Chocolate with red berries",
-      "chocolate-name-tog6": "Tog Tablet \u201cASAJ\u201d Cranberry Dark Chocolate",
+      "chocolate-name-tog5": "Tog Chocolate \u201cASAJ\u201d Cranberry Dark Chocolate",
+      "chocolate-name-tog6": "Cranberry Dark Chocolate \u201cMe dashni p\u00ebr ty\u201d",
       "laundry-name-shirt": "Shirt",
       "laundry-name-tshirt": "Cotton T-Shirt",
       "laundry-name-dress": "Dress",
@@ -536,9 +536,9 @@
       "chocolate-desc-tog2":
         "Ein zeitloses, k\u00fcnstlerisches Geschmackserlebnis, in dem Tradition auf Kunst trifft. Wohltuende, langsam ger\u00fchrte Cremes und traditionell ger\u00f6stete N\u00fcsse verschmelzen elegant und feiern das reiche Erbe von Prizren.",
       "chocolate-desc-tog3":
-        "Ein mutiger, feuriger Kontrast. Premium-Dunkelschokolade, die langsam schmilzt und einen subtilen, anhaltenden, w\u00e4rmenden Chili-Kick freisetzt. Perfekt f\u00fcr alle, die eine sophistizierte, w\u00fcrzige Note lieben.",
-      "chocolate-desc-tog4":
         "Eleganz in der Einfachheit. Intensive, bitters\u00fc\u00dfe Dunkelschokolade, wundersch\u00f6n ausbalanciert durch den hellen, spritzigen Ausbruch echter, z\u00e4her Cranberries. Eine Premium-Tafel der puren Schokoladenliebe.",
+      "chocolate-desc-tog4":
+        "Ein mutiger, feuriger Kontrast. Premium-Dunkelschokolade, die langsam schmilzt und einen subtilen, anhaltenden, w\u00e4rmenden Chili-Kick freisetzt. Perfekt f\u00fcr alle, die eine sophistizierte, w\u00fcrzige Note lieben.",
       "chocolate-desc-tog5":
         "Tief und aromatisch. Luxuri\u00f6se Dunkelschokolade, durchdrungen von einer lebendigen, herb-s\u00e4uerlichen Mischung roter Beeren \u2013 zu Ehren von Anmut, St\u00e4rke und Sch\u00f6nheit der albanischen Frau.",
       "chocolate-desc-tog6":
@@ -601,8 +601,8 @@
       "chocolate-name-tog2": "Tog Schokoladenbox \u201eWith love from Prizreni\u201c",
       "chocolate-name-tog3": "W\u00fcrzige dunkle Schokolade",
       "chocolate-name-tog4": "Dunkle Schokolade mit Cranberry",
-      "chocolate-name-tog5": "Dunkle Schokolade mit roten Beeren",
-      "chocolate-name-tog6": "Tog Tafel \u201eASAJ\u201c Cranberry Dark Chocolate",
+      "chocolate-name-tog5": "Tog Schokolade \u201eASAJ\u201c Cranberry Dark Chocolate",
+      "chocolate-name-tog6": "Cranberry Dark Chocolate \u201eMe dashni p\u00ebr ty\u201c",
       "laundry-name-shirt": "Hemd",
       "laundry-name-tshirt": "Baumwoll-T-Shirt",
       "laundry-name-dress": "Kleid",
@@ -860,9 +860,9 @@
       "chocolate-desc-tog2":
         "Një përvojë shijeje e përjetshme dhe artistike ku tradita takohet me artin. Kremrat ngrohtësues të përzier ngadalë dhe arrat tradicionale të pjekura shkrihen në mënyrë elegante për të festuar trashëgiminë e pasur të Prizrenit.",
       "chocolate-desc-tog3":
-        "Një kontrast i guximshëm dhe zjarrtë. Çokollatë e errët premium që shkrihet ngadalë për të lëshuar një goditje të hollë, të qëndrueshme dhe ngrohtëse të chilit. Perfekt për ata që duan një nuancë të sofistikuar dhe pikante.",
-      "chocolate-desc-tog4":
         "Elegancë në thjeshtësi. Çokollatë e errët intensive dhe e hidhur-ëmbël e balancuar bukur me shpërthimin e ndritshëm dhe të hidhur të cranberries të vërteta dhe të përtyra. Një tablet premium i dedikuar dashurisë së pastër për çokollatën.",
+      "chocolate-desc-tog4":
+        "Një kontrast i guximshëm dhe zjarrtë. Çokollatë e errët premium që shkrihet ngadalë për të lëshuar një goditje të hollë, të qëndrueshme dhe ngrohtëse të chilit. Perfekt për ata që duan një nuancë të sofistikuar dhe pikante.",
       "chocolate-desc-tog5":
         "E thellë dhe aromatike. Çokollatë e errët luksoze e infuzuar me një përzierje të gjallë dhe të hidhur mali të kuq—duke nderuar hijeshinë, forcën dhe bukurinë e gruas shqiptare.",
       "chocolate-desc-tog6":
@@ -925,8 +925,8 @@
       "chocolate-name-tog2": "Kutia Tog \u201cWith love from Prizreni\u201d",
       "chocolate-name-tog3": "Çokollatë e errët pikante",
       "chocolate-name-tog4": "Çokollatë e errët me cranberry",
-      "chocolate-name-tog5": "Çokollatë e errët me mali të kuq",
-      "chocolate-name-tog6": "Tablet Tog \u201cASAJ\u201d Cranberry Dark Chocolate",
+      "chocolate-name-tog5": "Çokollata Tog \u201cASAJ\u201d Cranberry Dark Chocolate",
+      "chocolate-name-tog6": "Cranberry Dark Chocolate \u201cMe dashni p\u00ebr ty\u201d",
       "laundry-name-shirt": "Këmishë",
       "laundry-name-tshirt": "T-shirt pambuku",
       "laundry-name-dress": "Fustan",

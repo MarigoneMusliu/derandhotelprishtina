@@ -69,11 +69,11 @@
       price: 4.99,
       category: "chocolate",
       description:
-        "A bold, fiery contrast. Premium dark chocolate that melts slowly to release a subtle, lingering, and warming chili kick. Perfect for those who love a sophisticated, spicy twist.",
+        "Elegance in simplicity. Intense, bittersweet dark chocolate beautifully balanced by the bright, tangy burst of real, chewy cranberries. A premium tablet dedicated to pure chocolate love.",
     },
     {
       id: "chocolate-tog5",
-      label: "Dark Chocolate with red berries",
+      label: 'Tog Chocolate "ASAJ" Cranberry Dark Chocolate',
       image: "img/tog5.png",
       price: 4.99,
       category: "chocolate",
@@ -87,11 +87,11 @@
       price: 4.99,
       category: "chocolate",
       description:
-        "Elegance in simplicity. Intense, bittersweet dark chocolate beautifully balanced by the bright, tangy burst of real, chewy cranberries. A premium tablet dedicated to pure chocolate love.",
+        "A bold, fiery contrast. Premium dark chocolate that melts slowly to release a subtle, lingering, and warming chili kick. Perfect for those who love a sophisticated, spicy twist.",
     },
     {
       id: "chocolate-tog6",
-      label: 'Tog Tablet "ASAJ"',
+      label: 'Cranberry Dark Chocolate "Me dashni për ty"',
       image: "img/tog6.png",
       price: 9.99,
       category: "chocolate",
