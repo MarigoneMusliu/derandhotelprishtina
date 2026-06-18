@@ -57,20 +57,51 @@
         background: #f7f6f4;
       }
 
-      /* —— Hero header (mockup style) —— */
+      /* —— Hero header —— */
       .ep-hero {
         padding: 0;
         margin: 0;
-        background: #f7f6f4;
+        background: #141820;
       }
 
       .ep-hero__banner {
         position: relative;
         width: 100%;
-        min-height: clamp(500px, 72vh, 780px);
+        height: clamp(420px, 74vh, 780px);
+        background: #141820;
         overflow: hidden;
-        background: #1a2030 url("img/prishtina.png") center center / cover
-          no-repeat;
+      }
+
+      .ep-hero__image {
+        position: absolute;
+        inset: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 88%;
+        transform-origin: center center;
+        animation: epHeroKenBurns 20s ease-in-out infinite alternate;
+      }
+
+      .ep-hero__banner::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        background:
+          linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.68) 0%,
+            rgba(0, 0, 0, 0.5) 42%,
+            rgba(0, 0, 0, 0.36) 100%
+          ),
+          linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.24) 0%,
+            rgba(0, 0, 0, 0.44) 100%
+          );
       }
 
       .ep-hero__content {
@@ -78,51 +109,68 @@
         inset: 0;
         z-index: 2;
         display: flex;
-        align-items: center;
-        padding: clamp(48px, 8vh, 96px) 0;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding: 0 clamp(20px, 4vw, 48px) clamp(64px, 14vh, 150px);
+        pointer-events: none;
+      }
+
+      .ep-hero__content a {
+        pointer-events: auto;
       }
 
       .ep-hero__container {
         width: 100%;
         max-width: 1240px;
-        margin: 0 auto;
-        padding: 0 clamp(20px, 4vw, 48px);
+        margin: 0;
+        padding: 0;
       }
 
       .ep-hero__inner {
-        max-width: 580px;
+        max-width: 720px;
+        text-align: left;
       }
 
       .ep-hero__kicker {
         margin: 0 0 14px;
-        font-size: 11px;
+        text-align: left;
+        font-size: 10px;
         font-weight: 600;
         letter-spacing: 0.18em;
         text-transform: uppercase;
         color: #f0c96b;
         text-shadow: 0 1px 10px rgba(0, 0, 0, 0.35);
+        animation:
+          epHeroSlideIn 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both,
+          epHeroFloat 3s ease-in-out 1s infinite,
+          epHeroShimmer 2.2s ease-in-out infinite;
       }
 
       .ep-hero__title {
         margin: 0;
         font-family: "Noto Serif", serif;
-        font-size: clamp(36px, 5vw, 62px);
-        line-height: 1.08;
+        font-size: clamp(28px, 3.6vw, 46px);
+        line-height: 1.12;
         font-weight: 600;
         color: #ffffff;
         letter-spacing: -0.01em;
+        white-space: nowrap;
         text-shadow:
           0 2px 28px rgba(0, 0, 0, 0.45),
           0 1px 4px rgba(0, 0, 0, 0.3);
+        animation:
+          epHeroSlideIn 1s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both,
+          epHeroTitlePulse 3.5s ease-in-out 1.4s infinite;
       }
 
       .ep-hero__lead {
-        margin: 22px 0 0;
-        max-width: 540px;
-        font-size: clamp(15px, 1.5vw, 18px);
+        margin: 18px 0 0;
+        max-width: 520px;
+        font-size: clamp(14px, 1.35vw, 16px);
         line-height: 1.7;
         color: rgba(255, 255, 255, 0.92);
         text-shadow: 0 1px 18px rgba(0, 0, 0, 0.5);
+        animation: epHeroSlideIn 1s cubic-bezier(0.22, 1, 0.36, 1) 0.65s both;
       }
 
       .ep-hero__btn {
@@ -140,18 +188,123 @@
         transition:
           background 0.2s ease,
           transform 0.2s ease;
+        animation:
+          epHeroSlideIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.9s both,
+          epHeroButtonBob 2.2s ease-in-out 1.2s infinite,
+          epHeroButtonGlow 2s ease-in-out infinite;
       }
 
       .ep-hero__btn:hover {
         background: #16304f;
         color: #fff;
-        transform: translateY(-1px);
+        transform: translateY(-3px) scale(1.03);
+        animation-play-state: paused;
       }
 
       .ep-hero__btn svg {
         width: 16px;
         height: 16px;
         flex-shrink: 0;
+        animation: epHeroArrowNudge 1.2s ease-in-out infinite;
+      }
+
+      @keyframes epHeroKenBurns {
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(1.09);
+        }
+      }
+
+      @keyframes epHeroSlideIn {
+        from {
+          opacity: 0;
+          transform: translateX(-28px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes epHeroFloat {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-8px);
+        }
+      }
+
+      @keyframes epHeroShimmer {
+        0%,
+        100% {
+          color: #f0c96b;
+          letter-spacing: 0.18em;
+        }
+        50% {
+          color: #ffe9a8;
+          letter-spacing: 0.22em;
+        }
+      }
+
+      @keyframes epHeroTitlePulse {
+        0%,
+        100% {
+          text-shadow:
+            0 2px 28px rgba(0, 0, 0, 0.45),
+            0 1px 4px rgba(0, 0, 0, 0.3);
+          transform: scale(1);
+        }
+        50% {
+          text-shadow:
+            0 4px 36px rgba(240, 201, 107, 0.35),
+            0 2px 28px rgba(0, 0, 0, 0.5);
+          transform: scale(1.015);
+        }
+      }
+
+      @keyframes epHeroButtonBob {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+      }
+
+      @keyframes epHeroButtonGlow {
+        0%,
+        100% {
+          box-shadow: 0 4px 14px rgba(30, 58, 95, 0.2);
+        }
+        50% {
+          box-shadow: 0 14px 32px rgba(30, 58, 95, 0.45);
+        }
+      }
+
+      @keyframes epHeroArrowNudge {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(7px);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .ep-hero__image,
+        .ep-hero__kicker,
+        .ep-hero__title,
+        .ep-hero__lead,
+        .ep-hero__btn,
+        .ep-hero__btn svg {
+          animation: none !important;
+        }
       }
 
       /* —— Festivals —— */
@@ -267,18 +420,25 @@
       }
 
       @media (max-width: 900px) {
-        .ep-hero__banner {
-          min-height: clamp(540px, 80vh, 700px);
-          background-position: center center;
+        .ep-hero__content {
+          padding-bottom: clamp(40px, 7vh, 64px);
         }
 
-        .ep-hero__content {
-          align-items: flex-end;
-          padding-bottom: clamp(36px, 6vh, 56px);
+        .ep-hero__banner::before {
+          background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.26) 0%,
+            rgba(0, 0, 0, 0.55) 55%,
+            rgba(0, 0, 0, 0.7) 100%
+          );
         }
 
         .ep-hero__inner {
           max-width: 100%;
+        }
+
+        .ep-hero__title {
+          font-size: clamp(20px, 5vw, 30px);
         }
 
         .ep-festivals__head {
@@ -471,6 +631,15 @@
     <main>
       <section class="ep-hero" aria-label="Explore Prishtina">
         <div class="ep-hero__banner">
+          <img
+            class="ep-hero__image"
+            src="img/prishtina.png"
+            alt="Prishtina skyline at sunset"
+            width="1264"
+            height="842"
+            loading="eager"
+            decoding="async"
+          />
           <div class="ep-hero__content">
             <div class="ep-hero__container">
               <div class="ep-hero__inner">
