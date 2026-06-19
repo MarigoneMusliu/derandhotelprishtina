@@ -1142,7 +1142,9 @@
           </h2>
 
           <div class="ep-landmarks__grid">
-            <article class="ep-landmark-card ep-landmark-card--large ep-landmark-card--library">
+            <article
+              class="ep-landmark-card ep-landmark-card--large ep-landmark-card--library"
+            >
               <div class="ep-landmark-card__media">
                 <img
                   src="img/library.jpg"
@@ -1165,15 +1167,17 @@
                     class="ep-landmark-card__copy"
                     data-i18n="explore-landmark-library-copy"
                   >
-                    A stunning example of Brutalist design, this library's unique
-                    domes and metallic mesh are a symbol of Prishtina's
+                    A stunning example of Brutalist design, this library's
+                    unique domes and metallic mesh are a symbol of Prishtina's
                     intellectual resilience.
                   </p>
                 </div>
               </div>
             </article>
 
-            <article class="ep-landmark-card ep-landmark-card--large ep-landmark-card--cathedral">
+            <article
+              class="ep-landmark-card ep-landmark-card--large ep-landmark-card--cathedral"
+            >
               <div class="ep-landmark-card__media">
                 <img
                   src="img/katedralja.jpg"
@@ -1196,7 +1200,9 @@
               </div>
             </article>
 
-            <article class="ep-landmark-card ep-landmark-card--small ep-landmark-card--newborn">
+            <article
+              class="ep-landmark-card ep-landmark-card--small ep-landmark-card--newborn"
+            >
               <div class="ep-landmark-card__media">
                 <img
                   src="img/newborn1.jpg"
@@ -1219,7 +1225,9 @@
               </div>
             </article>
 
-            <article class="ep-landmark-card ep-landmark-card--small ep-landmark-card--museum">
+            <article
+              class="ep-landmark-card ep-landmark-card--small ep-landmark-card--museum"
+            >
               <div class="ep-landmark-card__media">
                 <img
                   src="img/kosova.jpg"
@@ -1242,7 +1250,9 @@
               </div>
             </article>
 
-            <article class="ep-landmark-card ep-landmark-card--small ep-landmark-card--heroinat">
+            <article
+              class="ep-landmark-card ep-landmark-card--small ep-landmark-card--heroinat"
+            >
               <div class="ep-landmark-card__media">
                 <img
                   src="img/heroinatt.jpg"
@@ -1505,9 +1515,7 @@
         var section = document.querySelector(".ep-landmarks");
         if (!section) return;
 
-        if (
-          window.matchMedia("(prefers-reduced-motion: reduce)").matches
-        ) {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
           section.classList.add("is-visible");
           return;
         }
@@ -1526,7 +1534,7 @@
               }
             });
           },
-          { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+          { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
         );
 
         observer.observe(section);

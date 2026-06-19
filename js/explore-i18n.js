@@ -82,7 +82,8 @@
       "explore-festival-jazz-title": "Pristina Jazz Festival",
       "explore-festival-jazz-copy":
         "Eine raffinierte Feier der Improvisation und musikalischen Handwerkskunst mit Meistern aus aller Welt.",
-      "explore-landmarks-title": "Sehenswürdigkeiten, die man gesehen haben muss",
+      "explore-landmarks-title":
+        "Sehenswürdigkeiten, die man gesehen haben muss",
       "explore-landmark-library-tag": "ARCHITEKTONISCHES WUNDER",
       "explore-landmark-library-title": "Nationalbibliothek des Kosovo",
       "explore-landmark-library-copy":
@@ -170,9 +171,14 @@
     document.documentElement.setAttribute("lang", lang === "al" ? "sq" : lang);
     document.title = t("explore-page-title", lang);
 
-    var metaDesc = document.querySelector('meta[name="description"][data-i18n]');
+    var metaDesc = document.querySelector(
+      'meta[name="description"][data-i18n]',
+    );
     if (metaDesc) {
-      metaDesc.setAttribute("content", t(metaDesc.getAttribute("data-i18n"), lang));
+      metaDesc.setAttribute(
+        "content",
+        t(metaDesc.getAttribute("data-i18n"), lang),
+      );
     }
 
     document.querySelectorAll("[data-i18n]").forEach(function (node) {
@@ -180,7 +186,6 @@
       if (!key || key.indexOf("explore-") !== 0) return;
       node.textContent = t(key, lang);
     });
-
   }
 
   function init() {
