@@ -1,5 +1,8 @@
 (function () {
 
+  /* Set to true to re-enable the Tidio live chat widget. */
+  var TIDIO_CHAT_ENABLED = false;
+
   var TIDIO_URL = "https://code.tidio.co/bnuc9odotvfbltnpijihm3enhpjj0ovy.js";
 
   var COOKIE_DELAY_MS = 15000;
@@ -186,7 +189,7 @@
 
 
   function shouldSkipTidio() {
-    return !!window.__derandSkipTidio;
+    return !!window.__derandSkipTidio || !TIDIO_CHAT_ENABLED;
   }
 
   window.derandLoadTidioChat = function () {
@@ -236,7 +239,14 @@
 
   window.derandOnWhatsAppLabelClosing = function () {
 
-    window.derandLoadTidioChat();
+    if (TIDIO_CHAT_ENABLED) {
+      window.derandLoadTidioChat();
+      return;
+    }
+
+    if (typeof window.derandLoadChatbaseWidget === "function") {
+      window.derandLoadChatbaseWidget();
+    }
 
   };
 
@@ -344,14 +354,27 @@
 
 
 
+  function scheduleChatbaseFallback() {
+    if (TIDIO_CHAT_ENABLED) return;
+    window.setTimeout(function () {
+      if (typeof window.derandLoadChatbaseWidget === "function") {
+        window.derandLoadChatbaseWidget();
+      }
+    }, TIDIO_FALLBACK_MS);
+  }
+
+
+
   function schedule() {
 
     watchForCookieBanner();
 
-    if (!shouldSkipTidio()) {
+    if (TIDIO_CHAT_ENABLED && !shouldSkipTidio()) {
       tidioFallbackTimer = window.setTimeout(function () {
         if (!window.__derandTidioLoaded) window.derandLoadTidioChat();
       }, TIDIO_FALLBACK_MS);
+    } else {
+      scheduleChatbaseFallback();
     }
 
     window.setTimeout(showCookieBanner, COOKIE_DELAY_MS);
@@ -371,5 +394,4 @@
   }
 
 })();
-
 

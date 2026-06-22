@@ -41,7 +41,10 @@
   var lastStatus = { key: "", state: "", vars: null };
 
   function t(key, vars) {
-    if (window.BookingDetailsI18n && typeof window.BookingDetailsI18n.t === "function") {
+    if (
+      window.BookingDetailsI18n &&
+      typeof window.BookingDetailsI18n.t === "function"
+    ) {
       return window.BookingDetailsI18n.t(key, null, vars);
     }
     return key;
@@ -106,10 +109,18 @@
   var childAgesWrapEl = document.getElementById("booking-child-ages");
   var childAgesInputsEl = document.getElementById("booking-child-ages-inputs");
   var notesEl = document.getElementById("booking-notes");
-  var extrasDeliveryPanelEl = document.getElementById("booking-extras-delivery");
-  var extrasDeliveryDateEl = document.getElementById("booking-extras-delivery-date");
-  var extrasDeliveryTimeEl = document.getElementById("booking-extras-delivery-time");
-  var extrasDeliveryNotesEl = document.getElementById("booking-extras-delivery-notes");
+  var extrasDeliveryPanelEl = document.getElementById(
+    "booking-extras-delivery",
+  );
+  var extrasDeliveryDateEl = document.getElementById(
+    "booking-extras-delivery-date",
+  );
+  var extrasDeliveryTimeEl = document.getElementById(
+    "booking-extras-delivery-time",
+  );
+  var extrasDeliveryNotesEl = document.getElementById(
+    "booking-extras-delivery-notes",
+  );
   var confirmBtnEl = document.getElementById("booking-confirm");
   var selectedMethod = "hotelrunner";
 
@@ -174,7 +185,9 @@
     }
     if (children > 0) {
       parts.push(
-        children + " " + t(children === 1 ? "bd-guest-child" : "bd-guest-children"),
+        children +
+          " " +
+          t(children === 1 ? "bd-guest-child" : "bd-guest-children"),
       );
     }
     return parts.join(", ") || t("bd-no-guests");
@@ -228,7 +241,9 @@
 
     var legacyExtras = [];
     if (window.DerandBooking) {
-      legacyExtras = window.DerandBooking.parseExtrasParam(params.get("extras"));
+      legacyExtras = window.DerandBooking.parseExtrasParam(
+        params.get("extras"),
+      );
     }
 
     return {
@@ -308,7 +323,9 @@
   function clearConciergeMarqueeClones(choicesEl) {
     if (!choicesEl) return;
     Array.prototype.forEach.call(
-      choicesEl.querySelectorAll(".booking-concierge-prompt__chip--marquee-clone"),
+      choicesEl.querySelectorAll(
+        ".booking-concierge-prompt__chip--marquee-clone",
+      ),
       function (clone) {
         clone.parentNode.removeChild(clone);
       },
@@ -326,8 +343,12 @@
     Array.prototype.forEach.call(clones, function (clone, index) {
       var source = originals[index % originals.length];
       if (!source) return;
-      var sourceLabel = source.querySelector(".booking-concierge-prompt__chip-label");
-      var cloneLabel = clone.querySelector(".booking-concierge-prompt__chip-label");
+      var sourceLabel = source.querySelector(
+        ".booking-concierge-prompt__chip-label",
+      );
+      var cloneLabel = clone.querySelector(
+        ".booking-concierge-prompt__chip-label",
+      );
       if (sourceLabel && cloneLabel) {
         cloneLabel.textContent = sourceLabel.textContent;
       }
@@ -390,7 +411,9 @@
 
   function setupConciergeMarquee() {
     var choicesEl = document.getElementById("booking-concierge-choices");
-    var viewportEl = document.getElementById("booking-concierge-choices-viewport");
+    var viewportEl = document.getElementById(
+      "booking-concierge-choices-viewport",
+    );
     if (!choicesEl || !viewportEl) return;
 
     stopConciergeMarqueeAuto();
@@ -453,9 +476,7 @@
         var moved = conciergeMarqueeTouch.moved;
         conciergeMarqueeTouch = null;
         viewportEl.classList.remove("is-marquee-dragging");
-        pauseConciergeMarqueeAuto(
-          resumeAfterMs || (moved ? 2800 : 1800),
-        );
+        pauseConciergeMarqueeAuto(resumeAfterMs || (moved ? 2800 : 1800));
       }
 
       viewportEl.addEventListener(
@@ -585,7 +606,8 @@
   }
 
   function removeExtraAtIndex(index) {
-    if (!state.extraLines || index < 0 || index >= state.extraLines.length) return;
+    if (!state.extraLines || index < 0 || index >= state.extraLines.length)
+      return;
     state.extraLines.splice(index, 1);
     if (window.DerandBooking) {
       window.DerandBooking.saveBookingLines(state.extraLines);
@@ -685,7 +707,8 @@
 
     state.extraLines.forEach(function (item, index) {
       var row = document.createElement("div");
-      row.className = "booking-summary-card__row booking-summary-card__row--extra";
+      row.className =
+        "booking-summary-card__row booking-summary-card__row--extra";
       var qtyLabel = item.qty && item.qty > 1 ? " (" + item.qty + "×)" : "";
 
       var labelSpan = document.createElement("span");
@@ -801,7 +824,10 @@
     if (adultsInputEl) {
       var typedAdults = parseInt(adultsInputEl.value, 10);
       if (isNaN(typedAdults)) typedAdults = 1;
-      state.adults = Math.min(getAdultsMaxForRoom(state.room), Math.max(1, typedAdults));
+      state.adults = Math.min(
+        getAdultsMaxForRoom(state.room),
+        Math.max(1, typedAdults),
+      );
       adultsInputEl.value = String(state.adults);
     }
     if (childrenInputEl) {
@@ -825,7 +851,11 @@
     selectEl.style.position = "relative";
     selectEl.style.zIndex = "3";
     var sibling = selectEl.nextElementSibling;
-    if (sibling && sibling.classList && sibling.classList.contains("nice-select")) {
+    if (
+      sibling &&
+      sibling.classList &&
+      sibling.classList.contains("nice-select")
+    ) {
       sibling.parentNode.removeChild(sibling);
     }
   }
@@ -846,7 +876,8 @@
   function setStatus(key, type, vars) {
     lastStatus = { key: key || "", state: type || "", vars: vars || null };
     statusEl.textContent = key ? t(key, vars) : "";
-    statusEl.className = "booking-details__status" + (type ? " is-" + type : "");
+    statusEl.className =
+      "booking-details__status" + (type ? " is-" + type : "");
   }
 
   function refreshStatusMessage() {
@@ -928,7 +959,9 @@
       if (!delivery.date) {
         if (extrasDeliveryDateEl) markError(extrasDeliveryDateEl);
         valid = false;
-      } else if (!isDeliveryDateWithinStay(delivery.date, state.checkin, state.checkout)) {
+      } else if (
+        !isDeliveryDateWithinStay(delivery.date, state.checkin, state.checkout)
+      ) {
         if (extrasDeliveryDateEl) markError(extrasDeliveryDateEl);
         valid = false;
       }
@@ -941,9 +974,12 @@
     if (!valid) {
       var deliveryMissing =
         hasBookingExtras(state) &&
-        (!getExtrasDeliveryFromForm().date || !getExtrasDeliveryFromForm().time);
+        (!getExtrasDeliveryFromForm().date ||
+          !getExtrasDeliveryFromForm().time);
       setStatus(
-        deliveryMissing ? "bd-status-delivery-required" : "bd-status-guest-required",
+        deliveryMissing
+          ? "bd-status-delivery-required"
+          : "bd-status-guest-required",
         "error",
       );
     }
@@ -958,7 +994,9 @@
     var guestEmail = emailEl.value.trim();
     var guestName = fullNameEl.value.trim();
     var guestPhone = phoneEl.value.trim();
-    var extrasDelivery = hasBookingExtras(state) ? getExtrasDeliveryFromForm() : null;
+    var extrasDelivery = hasBookingExtras(state)
+      ? getExtrasDeliveryFromForm()
+      : null;
     var payload = {
       access_key: WEB3FORMS_ACCESS_KEY,
       subject: "Booking details — " + room.label + " — " + state.checkin,
@@ -992,12 +1030,19 @@
         "Check-out: " + checkOutFormatted + " (" + state.checkout + ")",
         "Adults: " + state.adults,
         "Children: " + state.children,
-        "Children ages: " + ((state.childAges && state.childAges.length) ? state.childAges.join(", ") : "(none)"),
+        "Children ages: " +
+          (state.childAges && state.childAges.length
+            ? state.childAges.join(", ")
+            : "(none)"),
         "Children surcharge: " + currency(totals.childSurcharge || 0),
         "Concierge extras: " + formatExtrasList(state.extraLines),
         "Extras total: " + currency(totals.extrasTotal || 0),
         extrasDelivery
-          ? "Extras delivery date: " + formatDate(extrasDelivery.date) + " (" + extrasDelivery.date + ")"
+          ? "Extras delivery date: " +
+            formatDate(extrasDelivery.date) +
+            " (" +
+            extrasDelivery.date +
+            ")"
           : "Extras delivery date: (not applicable)",
         extrasDelivery
           ? "Extras delivery time: " + extrasDelivery.time
@@ -1048,7 +1093,10 @@
       "Check-out: " + formatDate(state.checkout),
       "Adults: " + state.adults,
       "Children: " + state.children,
-      "Stay: " + formatDate(state.checkin) + " to " + formatDate(state.checkout),
+      "Stay: " +
+        formatDate(state.checkin) +
+        " to " +
+        formatDate(state.checkout),
       "Guests summary: " + guestSummary(state.adults, state.children),
       "Nights: " + nights,
       "",
@@ -1064,7 +1112,10 @@
     if (hasBookingExtras(state)) {
       var delivery = getExtrasDeliveryFromForm();
       lines.push(
-        "Extras delivery: " + formatDate(delivery.date) + " at " + delivery.time,
+        "Extras delivery: " +
+          formatDate(delivery.date) +
+          " at " +
+          delivery.time,
       );
       if (delivery.notes) {
         lines.push("Extras delivery notes: " + delivery.notes);
@@ -1082,8 +1133,11 @@
     var subject = encodeURIComponent(
       "Booking details — " + room.label + " — " + state.checkin,
     );
-    var body = encodeURIComponent(buildEmailMessage(state, room, nights, totals));
-    window.location.href = "mailto:" + NOTIFY_EMAIL + "?subject=" + subject + "&body=" + body;
+    var body = encodeURIComponent(
+      buildEmailMessage(state, room, nights, totals),
+    );
+    window.location.href =
+      "mailto:" + NOTIFY_EMAIL + "?subject=" + subject + "&body=" + body;
   }
 
   function render(state) {
@@ -1093,7 +1147,10 @@
     syncChildAgesLength();
     renderChildAgeInputs();
     var pricePerNight = getRoomBasePrice(state.room, state.adults);
-    var childSurchargePerNight = getChildrenSurcharge(state.room, state.childAges);
+    var childSurchargePerNight = getChildrenSurcharge(
+      state.room,
+      state.childAges,
+    );
     var roomTotal = pricePerNight * nights;
     var childSurcharge = childSurchargePerNight * nights;
     var fees = 0;
@@ -1119,7 +1176,10 @@
         t("bd-rate-per-night-room", { price: currency(pricePerNight) }),
       );
     } else {
-      setText(roomRateEl, t("bd-rate-per-night", { price: currency(pricePerNight) }));
+      setText(
+        roomRateEl,
+        t("bd-rate-per-night", { price: currency(pricePerNight) }),
+      );
     }
     setText(
       roomTotalLabelEl,
@@ -1128,7 +1188,10 @@
     setText(checkinEl, formatDate(state.checkin));
     setText(checkoutEl, formatDate(state.checkout));
     setText(guestsEl, guestSummary(state.adults, state.children));
-    setText(nightsEl, nights + " " + t(nights === 1 ? "bd-night" : "bd-nights"));
+    setText(
+      nightsEl,
+      nights + " " + t(nights === 1 ? "bd-night" : "bd-nights"),
+    );
     setText(dateRangeEl, shortDateRange(state.checkin, state.checkout));
     setText(
       stayCountEl,
@@ -1138,7 +1201,10 @@
     renderExtrasRows(state);
     updateExtrasDeliveryPanel(state);
     setText(totalEl, currency(total));
-    setText(cancelDeadlineEl, cancelDeadline ? formatDate(formatIso(cancelDeadline)) : "—");
+    setText(
+      cancelDeadlineEl,
+      cancelDeadline ? formatDate(formatIso(cancelDeadline)) : "—",
+    );
     if (backLinkEl) {
       backLinkEl.href = buildBackUrl(state);
     }
@@ -1266,7 +1332,8 @@
         if (isNaN(current)) current = targetId === "booking-adults" ? 1 : 0;
 
         var min = targetId === "booking-adults" ? 1 : 0;
-        var max = targetId === "booking-adults" ? getAdultsMaxForRoom(state.room) : 2;
+        var max =
+          targetId === "booking-adults" ? getAdultsMaxForRoom(state.room) : 2;
         if (
           targetId === "booking-children" &&
           action === "increment" &&

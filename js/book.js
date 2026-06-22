@@ -69,7 +69,8 @@
 
     var layers = sources.map(function (src, index) {
       var layer = document.createElement("div");
-      layer.className = "booking-hero__layer" + (index === 0 ? " is-visible" : "");
+      layer.className =
+        "booking-hero__layer" + (index === 0 ? " is-visible" : "");
       layer.setAttribute("data-src", src);
       if (index === 0) {
         ensureLayerImage(layer);
@@ -145,9 +146,12 @@
   function syncGuestSelectFromCounts() {
     if (!guestsSelectEl) return;
     var combined = (adultsEl.value || "1") + "-" + (childrenEl.value || "0");
-    var hasExactOption = Array.prototype.some.call(guestsSelectEl.options, function (option) {
-      return option.value === combined;
-    });
+    var hasExactOption = Array.prototype.some.call(
+      guestsSelectEl.options,
+      function (option) {
+        return option.value === combined;
+      },
+    );
 
     if (hasExactOption) {
       guestsSelectEl.value = combined;
@@ -294,7 +298,7 @@
       total +
       "<span> " +
       t("book-price-total") +
-      "</span> <span class=\"booking-room-card__price-note\">" +
+      '</span> <span class="booking-room-card__price-note">' +
       t("book-price-multi", {
         nights: nights,
         nightly: nightly,
@@ -320,7 +324,12 @@
         if (nights > 1) {
           el.innerHTML = buildStayPriceHtml(nightly, nights);
         } else if (nights === 1) {
-          el.innerHTML = "&euro;" + nightly + "<span>" + t("book-price-per-night") + "</span>";
+          el.innerHTML =
+            "&euro;" +
+            nightly +
+            "<span>" +
+            t("book-price-per-night") +
+            "</span>";
         } else {
           el.innerHTML = el.dataset.defaultHtml;
         }
@@ -364,7 +373,8 @@
   function setStatus(key, state, vars) {
     lastStatus = { key: key || "", state: state || "", vars: vars || null };
     statusEl.textContent = key ? t(key, vars) : "";
-    statusEl.className = "booking-search__status" + (state ? " is-" + state : "");
+    statusEl.className =
+      "booking-search__status" + (state ? " is-" + state : "");
   }
 
   function refreshStatusMessage() {
@@ -396,7 +406,11 @@
     params.set("adults", adultsEl.value);
     params.set("children", childrenEl.value);
     params.set("room", selectedRoom);
-    window.history.replaceState(null, "", window.location.pathname + "?" + params.toString());
+    window.history.replaceState(
+      null,
+      "",
+      window.location.pathname + "?" + params.toString(),
+    );
   }
 
   function selectRoom(room) {
@@ -411,7 +425,8 @@
 
   function applyQueryParams() {
     var navEntries =
-      window.performance && typeof window.performance.getEntriesByType === "function"
+      window.performance &&
+      typeof window.performance.getEntriesByType === "function"
         ? window.performance.getEntriesByType("navigation")
         : [];
     var navType = navEntries.length ? navEntries[0].type : "";
@@ -429,7 +444,12 @@
 
     setMinDates();
 
-    if (room && cards.some(function (card) { return card.dataset.room === room; })) {
+    if (
+      room &&
+      cards.some(function (card) {
+        return card.dataset.room === room;
+      })
+    ) {
       selectedRoom = room;
     }
 
@@ -492,7 +512,9 @@
         return;
       }
       link.href = buildDetailsUrl(room);
-      setStatus("book-status-opening", "success", { room: getSelectedRoomLabel() });
+      setStatus("book-status-opening", "success", {
+        room: getSelectedRoomLabel(),
+      });
     });
   });
 
