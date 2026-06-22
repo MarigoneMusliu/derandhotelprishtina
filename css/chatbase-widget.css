@@ -1,0 +1,53 @@
+/* Derand — compact Chatbase chat widget */
+#chatbase-bubble-button {
+  width: 46px !important;
+  height: 46px !important;
+  min-width: 46px !important;
+  min-height: 46px !important;
+}
+
+#chatbase-bubble-button img,
+#chatbase-bubble-button svg {
+  width: 46px !important;
+  height: 46px !important;
+}
+
+#chatbase-bubble-window {
+  width: min(340px, 78vw) !important;
+  max-width: 340px !important;
+  height: min(540px, 68dvh) !important;
+  max-height: 68dvh !important;
+}
+
+#chatbase-message-bubbles,
+.chatbase-message-bubbles {
+  transform: scale(0.92);
+  transform-origin: bottom right;
+}
+
+@media (max-width: 767px) {
+  #chatbase-bubble-button {
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+    min-height: 42px !important;
+  }
+
+  #chatbase-bubble-button img,
+  #chatbase-bubble-button svg {
+    width: 42px !important;
+    height: 42px !important;
+  }
+
+  #chatbase-bubble-window {
+    width: min(300px, 90vw) !important;
+    max-width: 300px !important;
+    height: min(460px, 62dvh) !important;
+    max-height: 62dvh !important;
+  }
+
+  #chatbase-message-bubbles,
+  .chatbase-message-bubbles {
+    transform: scale(0.9);
+  }
+}
