@@ -368,6 +368,22 @@
         flex-direction: column;
       }
 
+      .ep-festival-card__link {
+        display: flex;
+        flex-direction: column;
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .ep-festival-card__link:hover {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .ep-festival-card__link:hover .ep-festival-card__body h3 {
+        color: #1e3a5f;
+      }
+
       .ep-festival-card--offset {
         margin-top: clamp(36px, 5vw, 64px);
       }
@@ -412,6 +428,25 @@
         line-height: 1.25;
       }
 
+      .ep-festival-card__date {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        margin: 0 0 10px;
+        font-size: 12.5px;
+        font-weight: 500;
+        letter-spacing: 0.01em;
+        line-height: 1.4;
+        color: #718096;
+      }
+
+      .ep-festival-card__date svg {
+        width: 13px;
+        height: 13px;
+        flex-shrink: 0;
+        color: #a0aec0;
+      }
+
       .ep-festival-card__body p {
         margin: 0;
         font-size: 14px;
@@ -451,6 +486,270 @@
 
         .ep-festival-card--offset {
           margin-top: 0;
+        }
+      }
+
+      /* —— Landmarks —— */
+      .ep-landmarks {
+        position: relative;
+        overflow: hidden;
+        background:
+          radial-gradient(
+            ellipse 80% 60% at 15% 0%,
+            rgba(201, 162, 39, 0.09),
+            transparent 55%
+          ),
+          radial-gradient(
+            ellipse 70% 50% at 90% 100%,
+            rgba(30, 58, 95, 0.07),
+            transparent 50%
+          ),
+          linear-gradient(180deg, #f8f7f5 0%, #efece6 100%);
+        padding: clamp(56px, 7vw, 88px) clamp(20px, 4vw, 28px)
+          clamp(72px, 9vw, 104px);
+      }
+
+      .ep-landmarks__inner {
+        position: relative;
+        z-index: 1;
+        max-width: 1240px;
+        margin: 0 auto;
+      }
+
+      .ep-landmarks__title {
+        margin: 0 0 clamp(40px, 5vw, 56px);
+        text-align: center;
+        font-family: "Noto Serif", serif;
+        font-size: clamp(30px, 3.6vw, 44px);
+        line-height: 1.15;
+        font-weight: 600;
+        color: #1e3a5f;
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+          transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      .ep-landmarks.is-visible .ep-landmarks__title {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .ep-landmarks__title::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 4px;
+        margin: 16px auto 0;
+        background: linear-gradient(90deg, #c9a227, #f0d878, #c9a227);
+        border-radius: 999px;
+        transition: width 1s cubic-bezier(0.22, 1, 0.36, 1) 0.25s;
+      }
+
+      .ep-landmarks.is-visible .ep-landmarks__title::after {
+        width: 72px;
+      }
+
+      .ep-landmarks__grid {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        grid-auto-rows: minmax(200px, auto);
+        gap: clamp(14px, 1.8vw, 20px);
+      }
+
+      .ep-landmark-card {
+        --ep-lm-delay: 0s;
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        background: #141820;
+        min-height: 240px;
+        cursor: pointer;
+        opacity: 0;
+        transform: translateY(48px) scale(0.97);
+        transition:
+          opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1) var(--ep-lm-delay),
+          transform 0.85s cubic-bezier(0.22, 1, 0.36, 1) var(--ep-lm-delay),
+          box-shadow 0.45s ease;
+        box-shadow: 0 12px 32px rgba(20, 24, 32, 0.12);
+      }
+
+      .ep-landmarks.is-visible .ep-landmark-card {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+
+      .ep-landmark-card:hover {
+        transform: translateY(-10px) scale(1.015);
+        box-shadow: 0 28px 56px rgba(20, 24, 32, 0.28);
+      }
+
+      .ep-landmarks.is-visible .ep-landmark-card:hover {
+        transform: translateY(-10px) scale(1.015);
+      }
+
+      .ep-landmark-card--library {
+        grid-column: span 7;
+        grid-row: span 2;
+        min-height: clamp(420px, 50vw, 520px);
+        --ep-lm-delay: 0.05s;
+      }
+
+      .ep-landmark-card--cathedral {
+        grid-column: span 5;
+        min-height: clamp(200px, 24vw, 250px);
+        --ep-lm-delay: 0.12s;
+      }
+
+      .ep-landmark-card--newborn {
+        grid-column: span 5;
+        min-height: clamp(200px, 24vw, 250px);
+        --ep-lm-delay: 0.2s;
+      }
+
+      .ep-landmark-card--museum {
+        grid-column: span 6;
+        min-height: clamp(220px, 26vw, 280px);
+        --ep-lm-delay: 0.28s;
+      }
+
+      .ep-landmark-card--heroinat {
+        grid-column: span 6;
+        min-height: clamp(220px, 26vw, 280px);
+        --ep-lm-delay: 0.36s;
+      }
+
+      .ep-landmark-card__media {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+      }
+
+      .ep-landmark-card__media img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1);
+        transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+        animation: epLandmarkKenBurns 22s ease-in-out infinite alternate;
+      }
+
+      .ep-landmark-card:hover .ep-landmark-card__media img {
+        transform: scale(1.1);
+        animation-play-state: paused;
+      }
+
+      @keyframes epLandmarkKenBurns {
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(1.07);
+        }
+      }
+
+      .ep-landmark-card__overlay {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: clamp(18px, 2.5vw, 28px);
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.15) 40%,
+          rgba(0, 0, 0, 0.82) 100%
+        );
+        transition: background 0.5s ease;
+      }
+
+      .ep-landmark-card:hover .ep-landmark-card__overlay {
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.05) 0%,
+          rgba(0, 0, 0, 0.35) 35%,
+          rgba(0, 0, 0, 0.88) 100%
+        );
+      }
+
+      .ep-landmark-card__tag {
+        display: inline-block;
+        margin: 0 0 10px;
+        padding-bottom: 8px;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #f0c96b;
+        text-shadow: 0 1px 10px rgba(0, 0, 0, 0.45);
+        position: relative;
+      }
+
+      .ep-landmark-card__tag::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 28px;
+        height: 2px;
+        background: linear-gradient(90deg, #f0c96b, transparent);
+        transition: width 0.45s ease;
+      }
+
+      .ep-landmark-card:hover .ep-landmark-card__tag::after {
+        width: 100%;
+      }
+
+      .ep-landmark-card__overlay h3 {
+        margin: 0;
+        font-family: "Noto Serif", serif;
+        font-size: clamp(18px, 2vw, 24px);
+        line-height: 1.22;
+        font-weight: 600;
+        color: #ffffff;
+        text-shadow: 0 2px 16px rgba(0, 0, 0, 0.45);
+      }
+
+      .ep-landmark-card__copy {
+        margin: 10px 0 0;
+        max-width: 520px;
+        font-size: clamp(13px, 1.15vw, 15px);
+        line-height: 1.65;
+        color: rgba(255, 255, 255, 0.92);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .ep-landmarks__title,
+        .ep-landmark-card,
+        .ep-landmark-card__media img {
+          animation: none !important;
+          transition: none !important;
+          opacity: 1 !important;
+          transform: none !important;
+        }
+
+        .ep-landmarks__title::after {
+          width: 72px;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .ep-landmarks__grid {
+          grid-template-columns: 1fr;
+        }
+
+        .ep-landmark-card--library,
+        .ep-landmark-card--cathedral,
+        .ep-landmark-card--newborn,
+        .ep-landmark-card--museum,
+        .ep-landmark-card--heroinat {
+          grid-column: auto;
+          grid-row: auto;
+          min-height: clamp(260px, 68vw, 340px);
         }
       }
     </style>
@@ -576,7 +875,7 @@
                             >Explore Prishtina</a
                           >
                         </li>
-        </ul>
+                      </ul>
                     </li>
                     <li><a href="extra.html">Concierge</a></li>
                     <li class="has-dropdown">
@@ -715,77 +1014,286 @@
 
           <div class="ep-festivals__grid">
             <article class="ep-festival-card">
-              <a class="ep-festival-card__media" href="sunnyhill.html">
-                <img
-                  src="img/sunnyhill.png"
-                  alt="Sunny Hill Festival"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <span
-                  class="ep-festival-card__tag"
-                  data-i18n="explore-festival-sunnyhill-tag"
-                  >Music & Pop</span
-                >
+              <a
+                class="ep-festival-card__link"
+                href="https://www.sunnyhillfestival.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Sunny Hill Festival — official website"
+              >
+                <div class="ep-festival-card__media">
+                  <img
+                    src="img/sunnyhill.png"
+                    alt="Sunny Hill Festival"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span
+                    class="ep-festival-card__tag"
+                    data-i18n="explore-festival-sunnyhill-tag"
+                    >Music & Pop</span
+                  >
+                </div>
+                <div class="ep-festival-card__body">
+                  <h3 data-i18n="explore-festival-sunnyhill-title">
+                    Sunny Hill Festival
+                  </h3>
+                  <p class="ep-festival-card__date">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      aria-hidden="true"
+                    >
+                      <rect x="3" y="5" width="18" height="16" rx="2" />
+                      <path
+                        d="M3 10h18M8 3v4M16 3v4"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                    <span data-i18n="explore-festival-sunnyhill-date"
+                      >July 31 – August 2, 2026</span
+                    >
+                  </p>
+                  <p data-i18n="explore-festival-sunnyhill-copy">
+                    The biggest music event in Kosovo, founded by Dua Lipa,
+                    bringing global superstars to the capital.
+                  </p>
+                </div>
               </a>
-              <div class="ep-festival-card__body">
-                <h3 data-i18n="explore-festival-sunnyhill-title">
-                  Sunny Hill Festival
-                </h3>
-                <p data-i18n="explore-festival-sunnyhill-copy">
-                  The biggest music event in Kosovo, founded by Dua Lipa,
-                  bringing global superstars to the capital.
-                </p>
-              </div>
             </article>
 
             <article class="ep-festival-card ep-festival-card--offset">
-              <div class="ep-festival-card__media">
+              <a
+                class="ep-festival-card__link"
+                href="https://dokufest.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="DokuFest — official website"
+              >
+                <div class="ep-festival-card__media">
+                  <img
+                    src="img/dokufest.png"
+                    alt="DokuFest Prishtina"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span
+                    class="ep-festival-card__tag"
+                    data-i18n="explore-festival-dokufest-tag"
+                    >Film & Culture</span
+                  >
+                </div>
+                <div class="ep-festival-card__body">
+                  <h3 data-i18n="explore-festival-dokufest-title">
+                    DokuFest Prishtina
+                  </h3>
+                  <p class="ep-festival-card__date">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      aria-hidden="true"
+                    >
+                      <rect x="3" y="5" width="18" height="16" rx="2" />
+                      <path
+                        d="M3 10h18M8 3v4M16 3v4"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                    <span data-i18n="explore-festival-dokufest-date"
+                      >August 7 – 15, 2026</span
+                    >
+                  </p>
+                  <p data-i18n="explore-festival-dokufest-copy">
+                    Experience the finest international documentary and short
+                    film screenings in unique urban locations.
+                  </p>
+                </div>
+              </a>
+            </article>
+
+            <article class="ep-festival-card">
+              <a
+                class="ep-festival-card__link"
+                href="https://www.instagram.com/prishtinajazzfest/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Prishtina Jazz Fest — Instagram"
+              >
+                <div class="ep-festival-card__media">
+                  <img
+                    src="img/jazz.png"
+                    alt="Pristina Jazz Festival"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span
+                    class="ep-festival-card__tag"
+                    data-i18n="explore-festival-jazz-tag"
+                    >Soul & Jazz</span
+                  >
+                </div>
+                <div class="ep-festival-card__body">
+                  <h3 data-i18n="explore-festival-jazz-title">
+                    Pristina Jazz Festival
+                  </h3>
+                  <p class="ep-festival-card__date">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      aria-hidden="true"
+                    >
+                      <rect x="3" y="5" width="18" height="16" rx="2" />
+                      <path
+                        d="M3 10h18M8 3v4M16 3v4"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                    <span data-i18n="explore-festival-jazz-date"
+                      >November 2026 (Dates TBA)</span
+                    >
+                  </p>
+                  <p data-i18n="explore-festival-jazz-copy">
+                    A refined celebration of improvisation and musical craft,
+                    gathering masters from across the globe.
+                  </p>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="ep-landmarks"
+        id="landmarks"
+        aria-labelledby="ep-landmarks-title"
+      >
+        <div class="ep-landmarks__inner">
+          <h2
+            class="ep-landmarks__title"
+            id="ep-landmarks-title"
+            data-i18n="explore-landmarks-title"
+          >
+            Must-visit Landmarks
+          </h2>
+
+          <div class="ep-landmarks__grid">
+            <article class="ep-landmark-card ep-landmark-card--library">
+              <div class="ep-landmark-card__media">
                 <img
-                  src="img/dokufest.png"
-                  alt="DokuFest Prishtina"
+                  src="img/library.jpg"
+                  alt="National Library of Kosovo"
                   loading="lazy"
                   decoding="async"
                 />
-                <span
-                  class="ep-festival-card__tag"
-                  data-i18n="explore-festival-dokufest-tag"
-                  >Film & Culture</span
-                >
               </div>
-              <div class="ep-festival-card__body">
-                <h3 data-i18n="explore-festival-dokufest-title">
-                  DokuFest Prishtina
+              <div class="ep-landmark-card__overlay">
+                <span
+                  class="ep-landmark-card__tag"
+                  data-i18n="explore-landmark-library-tag"
+                  >ARCHITECTURAL MARVEL</span
+                >
+                <h3 data-i18n="explore-landmark-library-title">
+                  National Library of Kosovo
                 </h3>
-                <p data-i18n="explore-festival-dokufest-copy">
-                  Experience the finest international documentary and short film
-                  screenings in unique urban locations.
+                <p
+                  class="ep-landmark-card__copy"
+                  data-i18n="explore-landmark-library-copy"
+                >
+                  A stunning example of Brutalist design, this library's unique
+                  domes and metallic mesh are a symbol of Prishtina's
+                  intellectual resilience.
                 </p>
               </div>
             </article>
 
-            <article class="ep-festival-card">
-              <div class="ep-festival-card__media">
+            <article class="ep-landmark-card ep-landmark-card--cathedral">
+              <div class="ep-landmark-card__media">
                 <img
-                  src="img/jazz.png"
-                  alt="Pristina Jazz Festival"
+                  src="img/katedralja.jpg"
+                  alt="Mother Teresa Cathedral in Pristina"
                   loading="lazy"
                   decoding="async"
                 />
-                <span
-                  class="ep-festival-card__tag"
-                  data-i18n="explore-festival-jazz-tag"
-                  >Soul & Jazz</span
-                >
               </div>
-              <div class="ep-festival-card__body">
-                <h3 data-i18n="explore-festival-jazz-title">
-                  Pristina Jazz Festival
+              <div class="ep-landmark-card__overlay">
+                <span
+                  class="ep-landmark-card__tag"
+                  data-i18n="explore-landmark-cathedral-tag"
+                  >SPIRITUAL CENTER</span
+                >
+                <h3 data-i18n="explore-landmark-cathedral-title">
+                  Mother Teresa Cathedral
                 </h3>
-                <p data-i18n="explore-festival-jazz-copy">
-                  A refined celebration of improvisation and musical craft,
-                  gathering masters from across the globe.
-                </p>
+              </div>
+            </article>
+
+            <article class="ep-landmark-card ep-landmark-card--newborn">
+              <div class="ep-landmark-card__media">
+                <img
+                  src="img/newborn1.jpg"
+                  alt="Newborn Monument in Pristina"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="ep-landmark-card__overlay">
+                <span
+                  class="ep-landmark-card__tag"
+                  data-i18n="explore-landmark-newborn-tag"
+                  >MODERN HISTORY</span
+                >
+                <h3 data-i18n="explore-landmark-newborn-title">
+                  Newborn Monument
+                </h3>
+              </div>
+            </article>
+
+            <article class="ep-landmark-card ep-landmark-card--museum">
+              <div class="ep-landmark-card__media">
+                <img
+                  src="img/kosova.jpg"
+                  alt="National Museum of Kosovo in Pristina"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="ep-landmark-card__overlay">
+                <span
+                  class="ep-landmark-card__tag"
+                  data-i18n="explore-landmark-museum-tag"
+                  >NATIONAL HERITAGE</span
+                >
+                <h3 data-i18n="explore-landmark-museum-title">
+                  National Museum of Kosovo
+                </h3>
+              </div>
+            </article>
+
+            <article class="ep-landmark-card ep-landmark-card--heroinat">
+              <div class="ep-landmark-card__media">
+                <img
+                  src="img/heroinatt.jpg"
+                  alt="HEROINAT Heroines Monument in Pristina"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="ep-landmark-card__overlay">
+                <span
+                  class="ep-landmark-card__tag"
+                  data-i18n="explore-landmark-heroinat-tag"
+                  >MEMORIAL &amp; REMEMBRANCE</span
+                >
+                <h3 data-i18n="explore-landmark-heroinat-title">
+                  Heroines Monument
+                </h3>
               </div>
             </article>
           </div>
@@ -1024,7 +1532,37 @@
     <script src="js/owl.carousel.min.js" defer></script>
     <script src="js/site-onboarding-sequence.js?v=9" defer></script>
     <script src="js/main.js?v=20260515-1" defer></script>
-    <script src="js/explore-i18n.js?v=4" defer></script>
+    <script>
+      (function () {
+        var section = document.querySelector(".ep-landmarks");
+        if (!section) return;
+
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          section.classList.add("is-visible");
+          return;
+        }
+
+        if (!("IntersectionObserver" in window)) {
+          section.classList.add("is-visible");
+          return;
+        }
+
+        var observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                section.classList.add("is-visible");
+                observer.disconnect();
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
+        );
+
+        observer.observe(section);
+      })();
+    </script>
+    <script src="js/explore-i18n.js?v=20" defer></script>
     <script src="js/site-whatsapp.js?v=9" defer></script>
     <!-- Tidio chat widget (disabled)
     <script src="js/tidio-left-position.js?v=2" defer></script>

@@ -26,16 +26,32 @@
       "explore-festivals-all": "View All Events",
       "explore-festival-sunnyhill-tag": "Music & Pop",
       "explore-festival-sunnyhill-title": "Sunny Hill Festival",
+      "explore-festival-sunnyhill-date": "July 31 – August 2, 2026",
       "explore-festival-sunnyhill-copy":
         "The biggest music event in Kosovo, founded by Dua Lipa, bringing global superstars to the capital.",
       "explore-festival-dokufest-tag": "Film & Culture",
       "explore-festival-dokufest-title": "DokuFest Prishtina",
+      "explore-festival-dokufest-date": "August 7 – 15, 2026",
       "explore-festival-dokufest-copy":
         "Experience the finest international documentary and short film screenings in unique urban locations.",
       "explore-festival-jazz-tag": "Soul & Jazz",
       "explore-festival-jazz-title": "Pristina Jazz Festival",
+      "explore-festival-jazz-date": "November 2026 (Dates TBA)",
       "explore-festival-jazz-copy":
         "A refined celebration of improvisation and musical craft, gathering masters from across the globe.",
+      "explore-landmarks-title": "Must-visit Landmarks",
+      "explore-landmark-library-tag": "ARCHITECTURAL MARVEL",
+      "explore-landmark-library-title": "National Library of Kosovo",
+      "explore-landmark-library-copy":
+        "A stunning example of Brutalist design, this library's unique domes and metallic mesh are a symbol of Prishtina's intellectual resilience.",
+      "explore-landmark-cathedral-tag": "SPIRITUAL CENTER",
+      "explore-landmark-cathedral-title": "Mother Teresa Cathedral",
+      "explore-landmark-newborn-tag": "MODERN HISTORY",
+      "explore-landmark-newborn-title": "Newborn Monument",
+      "explore-landmark-museum-tag": "NATIONAL HERITAGE",
+      "explore-landmark-museum-title": "National Museum of Kosovo",
+      "explore-landmark-heroinat-tag": "MEMORIAL & REMEMBRANCE",
+      "explore-landmark-heroinat-title": "Heroines Monument",
     },
     de: {
       "explore-page-title": "Prishtina entdecken | Derand Hotel",
@@ -59,16 +75,32 @@
       "explore-festivals-all": "Alle Events ansehen",
       "explore-festival-sunnyhill-tag": "Musik & Pop",
       "explore-festival-sunnyhill-title": "Sunny Hill Festival",
+      "explore-festival-sunnyhill-date": "31. Juli – 2. August 2026",
       "explore-festival-sunnyhill-copy":
         "Das größte Musikereignis im Kosovo, gegründet von Dua Lipa, mit globalen Superstars in der Hauptstadt.",
       "explore-festival-dokufest-tag": "Film & Kultur",
       "explore-festival-dokufest-title": "DokuFest Prishtina",
+      "explore-festival-dokufest-date": "7. – 15. August 2026",
       "explore-festival-dokufest-copy":
         "Erleben Sie die besten internationalen Dokumentar- und Kurzfilmvorführungen an einzigartigen urbanen Orten.",
       "explore-festival-jazz-tag": "Soul & Jazz",
       "explore-festival-jazz-title": "Pristina Jazz Festival",
+      "explore-festival-jazz-date": "November 2026 (Termine folgen)",
       "explore-festival-jazz-copy":
         "Eine raffinierte Feier der Improvisation und musikalischen Handwerkskunst mit Meistern aus aller Welt.",
+      "explore-landmarks-title": "Sehenswürdigkeiten, die man gesehen haben muss",
+      "explore-landmark-library-tag": "ARCHITEKTONISCHES WUNDER",
+      "explore-landmark-library-title": "Nationalbibliothek des Kosovo",
+      "explore-landmark-library-copy":
+        "Ein beeindruckendes Beispiel brutalistischer Architektur — die einzigartigen Kuppeln und das metallische Gitterwerk sind ein Symbol für Prishtinas intellektuelle Widerstandskraft.",
+      "explore-landmark-cathedral-tag": "SPIRITUELLES ZENTRUM",
+      "explore-landmark-cathedral-title": "Mutter-Teresa-Kathedrale",
+      "explore-landmark-newborn-tag": "MODERNE GESCHICHTE",
+      "explore-landmark-newborn-title": "Newborn-Denkmal",
+      "explore-landmark-museum-tag": "NATIONALES ERBE",
+      "explore-landmark-museum-title": "Nationalmuseum des Kosovo",
+      "explore-landmark-heroinat-tag": "GEDENKEN & ERINNERUNG",
+      "explore-landmark-heroinat-title": "Heldinnen-Denkmal",
     },
     al: {
       "explore-page-title": "Eksploro Prishtinën | Derand Hotel",
@@ -92,16 +124,32 @@
       "explore-festivals-all": "Shiko të gjitha eventet",
       "explore-festival-sunnyhill-tag": "Muzikë & Pop",
       "explore-festival-sunnyhill-title": "Sunny Hill Festival",
+      "explore-festival-sunnyhill-date": "31 korrik – 2 gusht 2026",
       "explore-festival-sunnyhill-copy":
         "Ngjarja më e madhe muzikore në Kosovë, themeluar nga Dua Lipa, që sjell superylltarë globalë në kryeqytet.",
       "explore-festival-dokufest-tag": "Film & Kulturë",
       "explore-festival-dokufest-title": "DokuFest Prishtina",
+      "explore-festival-dokufest-date": "7 – 15 gusht 2026",
       "explore-festival-dokufest-copy":
         "Përjetoni projeksionet më të mira ndërkombëtare të dokumentarëve dhe filmave të shkurtër në lokacione urbane unike.",
       "explore-festival-jazz-tag": "Soul & Jazz",
       "explore-festival-jazz-title": "Pristina Jazz Festival",
+      "explore-festival-jazz-date": "Nëntor 2026 (Datat TBA)",
       "explore-festival-jazz-copy":
         "Një festë e rafinuar e improvizimit dhe mjeshtërisë muzikore, që mbledh mjeshtër nga e gjithë bota.",
+      "explore-landmarks-title": "Monumentet që duhen vizituar",
+      "explore-landmark-library-tag": "MREKULLI ARKITEKTURORE",
+      "explore-landmark-library-title": "Biblioteka Kombëtare e Kosovës",
+      "explore-landmark-library-copy":
+        "Një shembull mahnitës i dizajnit brutalist — kupolat unike dhe rrjeti metalik janë simbol i reziliencës intelektuale të Prishtinës.",
+      "explore-landmark-cathedral-tag": "QENDËR SHPIRTËRORE",
+      "explore-landmark-cathedral-title": "Katedralja e Nënë Terezës",
+      "explore-landmark-newborn-tag": "HISTORI MODERNE",
+      "explore-landmark-newborn-title": "Monumenti Newborn",
+      "explore-landmark-museum-tag": "TRASHËGIMI KOMBËTARE",
+      "explore-landmark-museum-title": "Muzeu Kombëtar i Kosovës",
+      "explore-landmark-heroinat-tag": "MEMORIAL & KUJTIM",
+      "explore-landmark-heroinat-title": "Monumenti i Heroinave",
     },
   };
 
