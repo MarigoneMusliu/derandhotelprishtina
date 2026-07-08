@@ -1,4 +1,4 @@
-/* Derand — compact Chatbase chat widget */
+/* Derand — Chatbase chat widget */
 
 /* Hide Tidio if any legacy script still injects it */
 #tidio,
@@ -9,55 +9,92 @@ iframe[src*="tidio.co"] {
   visibility: hidden !important;
   pointer-events: none !important;
 }
+
+:root {
+  --derand-chatbase-inset-x: 20px;
+  --derand-chatbase-bottom: calc(28px + env(safe-area-inset-bottom, 0px));
+  --derand-chatbase-button-size: 46px;
+  --derand-chatbase-window-width: min(320px, calc(100vw - 40px));
+  --derand-chatbase-window-height: min(500px, calc(100dvh - 120px));
+}
+
+@media (max-width: 767px) {
+  :root {
+    --derand-chatbase-inset-x: 20px;
+    --derand-chatbase-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+    --derand-chatbase-button-size: 38px;
+    --derand-chatbase-window-width: min(300px, calc(100vw - 40px));
+    --derand-chatbase-window-height: min(56dvh, calc(100dvh - 108px));
+  }
+}
+
 #chatbase-bubble-button {
-  width: 46px !important;
-  height: 46px !important;
-  min-width: 46px !important;
-  min-height: 46px !important;
+  width: var(--derand-chatbase-button-size) !important;
+  height: var(--derand-chatbase-button-size) !important;
+  min-width: var(--derand-chatbase-button-size) !important;
+  min-height: var(--derand-chatbase-button-size) !important;
+  right: var(--derand-chatbase-inset-x) !important;
+  bottom: var(--derand-chatbase-bottom) !important;
+  z-index: 9999999 !important;
+  pointer-events: auto !important;
 }
 
 #chatbase-bubble-button img,
 #chatbase-bubble-button svg {
-  width: 46px !important;
-  height: 46px !important;
+  width: var(--derand-chatbase-button-size) !important;
+  height: var(--derand-chatbase-button-size) !important;
+  pointer-events: none !important;
 }
 
 #chatbase-bubble-window {
-  width: min(340px, 78vw) !important;
-  max-width: 340px !important;
-  height: min(540px, 68dvh) !important;
-  max-height: 68dvh !important;
+  width: var(--derand-chatbase-window-width) !important;
+  max-width: var(--derand-chatbase-window-width) !important;
+  height: var(--derand-chatbase-window-height) !important;
+  max-height: var(--derand-chatbase-window-height) !important;
+  right: var(--derand-chatbase-inset-x) !important;
+  left: auto !important;
+  bottom: calc(var(--derand-chatbase-bottom) + var(--derand-chatbase-button-size) + 10px) !important;
+  box-sizing: border-box !important;
+  overflow: visible !important;
+  z-index: 9999999 !important;
+  pointer-events: auto !important;
+}
+
+#chatbase-bubble-window iframe {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 100% !important;
+  border: 0 !important;
+  display: block !important;
+  pointer-events: auto !important;
+}
+
+#chatbase-bubble-window button,
+#chatbase-bubble-window [role="button"] {
+  pointer-events: auto !important;
+  z-index: 2 !important;
+  position: relative !important;
 }
 
 #chatbase-message-bubbles,
 .chatbase-message-bubbles {
-  transform: scale(0.92);
-  transform-origin: bottom right;
+  max-width: min(240px, calc(100vw - 88px)) !important;
+  pointer-events: auto !important;
 }
 
 @media (max-width: 767px) {
-  #chatbase-bubble-button {
-    width: 42px !important;
-    height: 42px !important;
-    min-width: 42px !important;
-    min-height: 42px !important;
-  }
-
-  #chatbase-bubble-button img,
-  #chatbase-bubble-button svg {
-    width: 42px !important;
-    height: 42px !important;
-  }
-
   #chatbase-bubble-window {
-    width: min(300px, 90vw) !important;
-    max-width: 300px !important;
-    height: min(460px, 62dvh) !important;
-    max-height: 62dvh !important;
+    left: auto !important;
+    right: var(--derand-chatbase-inset-x) !important;
+    width: min(300px, calc(100vw - 40px)) !important;
+    max-width: min(300px, calc(100vw - 40px)) !important;
+    height: min(56dvh, 420px) !important;
+    max-height: min(56dvh, 420px) !important;
+    border-radius: 14px !important;
   }
 
   #chatbase-message-bubbles,
   .chatbase-message-bubbles {
-    transform: scale(0.9);
+    max-width: min(220px, calc(100vw - 88px)) !important;
   }
 }

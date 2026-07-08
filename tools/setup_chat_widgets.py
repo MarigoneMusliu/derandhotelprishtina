@@ -8,7 +8,11 @@ TIDIO_TAG = '    <script src="js/tidio-left-position.js?v=2" defer></script>'
 CHATBASE_BLOCK = """    <!-- Tidio chat widget (disabled — set TIDIO_CHAT_ENABLED = true in js/site-onboarding-sequence.js to re-enable)
     <script src="js/tidio-left-position.js?v=2" defer></script>
     -->
-    <script src="js/chatbase-widget.js?v=2" defer></script>"""
+    <script src="js/chatbase-widget.js?v=4" defer></script>"""
+
+CHATBASE_TAG = '    <script src="js/chatbase-widget.js?v=2" defer></script>'
+CHATBASE_TAG_V3 = '    <script src="js/chatbase-widget.js?v=3" defer></script>'
+CHATBASE_TAG_V4 = '    <script src="js/chatbase-widget.js?v=4" defer></script>'
 
 TIDIO_INLINE = re.compile(
     r'    <script>\s*window\.addEventListener\("load", function \(\) \{\s*'
@@ -68,12 +72,20 @@ def patch_html(path: str) -> list[str]:
         if count:
             changes.append("inline-tidio-commented")
 
-    if "site-onboarding-sequence.js?v=8" in content:
+    if CHATBASE_TAG in content:
+        content = content.replace(CHATBASE_TAG, CHATBASE_TAG_V4)
+        changes.append("chatbase-v4")
+
+    if CHATBASE_TAG_V3 in content:
+        content = content.replace(CHATBASE_TAG_V3, CHATBASE_TAG_V4)
+        changes.append("chatbase-v4")
+
+    if "chatbase-widget.js" not in content and "</body>" in content:
         content = content.replace(
-            "site-onboarding-sequence.js?v=8",
-            "site-onboarding-sequence.js?v=9",
+            "</body>",
+            CHATBASE_TAG_V4 + "\n  </body>",
         )
-        changes.append("onboarding-v9")
+        changes.append("chatbase-added")
 
     if content != original:
         with open(path, "w", encoding="utf-8", newline="") as handle:
