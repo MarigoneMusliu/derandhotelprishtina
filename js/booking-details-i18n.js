@@ -112,6 +112,8 @@
       "bd-status-delivery-required":
         "Please choose when to deliver your extras to your room.",
       "bd-status-guest-required": "Please complete the highlighted guest details.",
+      "bd-status-blocked-dates":
+        "These dates cannot be processed. Please choose other dates.",
       "bd-status-sending": "Sending\u2026",
       "bd-status-thanks": "Thank you \u2014 we received your message.",
       "bd-status-error":
@@ -249,6 +251,8 @@
         "Bitte w\u00e4hlen Sie, wann wir Ihre Extras auf Ihr Zimmer liefern sollen.",
       "bd-status-guest-required":
         "Bitte vervollst\u00e4ndigen Sie die markierten G\u00e4stedaten.",
+      "bd-status-blocked-dates":
+        "Diese Daten k\u00f6nnen nicht verarbeitet werden. Bitte w\u00e4hlen Sie andere Daten.",
       "bd-status-sending": "Wird gesendet\u2026",
       "bd-status-thanks": "Vielen Dank \u2014 wir haben Ihre Nachricht erhalten.",
       "bd-status-error":
@@ -386,6 +390,8 @@
         "Ju lutemi zgjidhni kur t\u00eb sjellim shtesat n\u00eb dhom\u00ebn tuaj.",
       "bd-status-guest-required":
         "Ju lutemi plot\u00ebsoni detajet e mysafir\u00ebt t\u00eb theksuara.",
+      "bd-status-blocked-dates":
+        "K\u00ebto data nuk mund t\u00eb procesohen. Ju lutemi zgjidhni data t\u00eb tjera.",
       "bd-status-sending": "Duke d\u00ebrguar\u2026",
       "bd-status-thanks": "Faleminderit \u2014 e mor\u00ebm mesazhin tuaj.",
       "bd-status-error":

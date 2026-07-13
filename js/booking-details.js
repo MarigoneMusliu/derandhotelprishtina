@@ -11,31 +11,31 @@
       labelKey: "bd-room-junior-suite-label",
       metaKey: "bd-room-junior-suite-meta",
       image: "img/1111.webp",
-      price: 119,
+      price: 131,
     },
     "deluxe-double": {
       labelKey: "bd-room-deluxe-double-label",
       metaKey: "bd-room-deluxe-double-meta",
       image: "img/deluxeroom4.webp",
-      price: 88,
+      price: 97,
     },
     "premium-double": {
       labelKey: "bd-room-premium-double-label",
       metaKey: "bd-room-premium-double-meta",
       image: "img/premium1.webp",
-      price: 99,
+      price: 114,
     },
     "superior-twin": {
       labelKey: "bd-room-superior-twin-label",
       metaKey: "bd-room-superior-twin-meta",
       image: "img/twinbook.jpg",
-      price: 72,
+      price: 79,
     },
     "superior-double": {
       labelKey: "bd-room-superior-double-label",
       metaKey: "bd-room-superior-double-meta",
       image: "img/superiorroom3.webp",
-      price: 84,
+      price: 92,
     },
   };
 
@@ -191,16 +191,16 @@
 
   function getRoomBasePrice(roomKey, adults) {
     if (roomKey === "junior-suite") {
-      return adults >= 2 ? 125 : 119;
+      return adults >= 2 ? 138 : 131;
     }
     if (roomKey === "premium-double") {
-      return adults >= 3 ? 140 : 104;
+      return adults >= 3 ? 154 : 114;
     }
     if (roomKey === "deluxe-double") {
-      return adults >= 2 ? 93 : 88;
+      return adults >= 2 ? 102 : 97;
     }
     if (roomKey === "superior-twin") {
-      return adults >= 2 ? 84 : 72;
+      return adults >= 2 ? 92 : 79;
     }
     var room = ROOM_DATA[roomKey];
     return room ? room.price : 0;
@@ -225,6 +225,31 @@
     if (!start || !end || end <= start) {
       checkin = formatIso(today);
       checkout = formatIso(tomorrow);
+    }
+
+    if (
+      window.DerandBooking &&
+      typeof window.DerandBooking.stayOverlapsBlockedNights === "function" &&
+      window.DerandBooking.stayOverlapsBlockedNights(checkin, checkout)
+    ) {
+      var safeStart = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+      var safeEnd = new Date(safeStart);
+      safeEnd.setDate(safeEnd.getDate() + 1);
+      var guard = 0;
+      while (
+        guard < 40 &&
+        window.DerandBooking.stayOverlapsBlockedNights(
+          formatIso(safeStart),
+          formatIso(safeEnd),
+        )
+      ) {
+        safeStart.setDate(safeStart.getDate() + 1);
+        safeEnd = new Date(safeStart);
+        safeEnd.setDate(safeEnd.getDate() + 1);
+        guard += 1;
+      }
+      checkin = formatIso(safeStart);
+      checkout = formatIso(safeEnd);
     }
 
     var legacyExtras = [];
@@ -906,6 +931,17 @@
       if (checkinInputEl) markError(checkinInputEl);
       if (checkoutInputEl) markError(checkoutInputEl);
       valid = false;
+    } else if (
+      window.DerandBooking &&
+      typeof window.DerandBooking.stayOverlapsBlockedNights === "function" &&
+      window.DerandBooking.stayOverlapsBlockedNights(state.checkin, state.checkout)
+    ) {
+      if (checkinInputEl) markError(checkinInputEl);
+      if (checkoutInputEl) markError(checkoutInputEl);
+      valid = false;
+      setStatus("bd-status-blocked-dates", "error");
+      window.alert(t("bd-status-blocked-dates"));
+      return false;
     }
 
     if (isPremiumRoom(state.room) && state.children > 0) {
@@ -1459,6 +1495,13 @@
     checkinInputEl.addEventListener("change", function () {
       syncGuestStateFromInputs();
       renderState = render(state);
+      if (
+        window.DerandBooking &&
+        window.DerandBooking.stayOverlapsBlockedNights(state.checkin, state.checkout)
+      ) {
+        setStatus("bd-status-blocked-dates", "error");
+        window.alert(t("bd-status-blocked-dates"));
+      }
     });
   }
 
@@ -1466,6 +1509,13 @@
     checkoutInputEl.addEventListener("change", function () {
       syncGuestStateFromInputs();
       renderState = render(state);
+      if (
+        window.DerandBooking &&
+        window.DerandBooking.stayOverlapsBlockedNights(state.checkin, state.checkout)
+      ) {
+        setStatus("bd-status-blocked-dates", "error");
+        window.alert(t("bd-status-blocked-dates"));
+      }
     });
   }
 

@@ -249,10 +249,57 @@
     return EXTRA_ITEMS[id] || null;
   }
 
+  // Nights closed for all rooms (hotel night = check-in date through day before check-out).
+  var BLOCKED_NIGHTS = [
+    "2026-07-30",
+    "2026-07-31",
+    "2026-08-01",
+    "2026-08-02",
+    "2026-08-03",
+  ];
+
+  function parseIsoDate(value) {
+    if (!value) return null;
+    var parts = String(value).split("-");
+    if (parts.length !== 3) return null;
+    var date = new Date(+parts[0], +parts[1] - 1, +parts[2]);
+    return isNaN(date.getTime()) ? null : date;
+  }
+
+  function formatIsoDate(date) {
+    var month = String(date.getMonth() + 1).padStart(2, "0");
+    var day = String(date.getDate()).padStart(2, "0");
+    return date.getFullYear() + "-" + month + "-" + day;
+  }
+
+  function isBlockedNight(iso) {
+    return BLOCKED_NIGHTS.indexOf(String(iso || "")) >= 0;
+  }
+
+  function getBlockedNightsInStay(checkinIso, checkoutIso) {
+    var start = parseIsoDate(checkinIso);
+    var end = parseIsoDate(checkoutIso);
+    if (!start || !end || end <= start) return [];
+
+    var hits = [];
+    var cursor = new Date(start.getFullYear(), start.getMonth(), start.getDate());
+    while (cursor < end) {
+      var iso = formatIsoDate(cursor);
+      if (isBlockedNight(iso)) hits.push(iso);
+      cursor.setDate(cursor.getDate() + 1);
+    }
+    return hits;
+  }
+
+  function stayOverlapsBlockedNights(checkinIso, checkoutIso) {
+    return getBlockedNightsInStay(checkinIso, checkoutIso).length > 0;
+  }
+
   global.DerandBooking = {
     BOOKING_LINES_KEY: BOOKING_LINES_KEY,
     CATEGORIES: CATEGORIES,
     EXTRA_ITEMS: EXTRA_ITEMS,
+    BLOCKED_NIGHTS: BLOCKED_NIGHTS.slice(),
     loadBookingLines: loadBookingLines,
     saveBookingLines: saveBookingLines,
     clearBookingLines: clearBookingLines,
@@ -267,5 +314,8 @@
     getCategoryMeta: getCategoryMeta,
     categoryHasExtras: categoryHasExtras,
     getItemById: getItemById,
+    isBlockedNight: isBlockedNight,
+    getBlockedNightsInStay: getBlockedNightsInStay,
+    stayOverlapsBlockedNights: stayOverlapsBlockedNights,
   };
 })(typeof window !== "undefined" ? window : this);

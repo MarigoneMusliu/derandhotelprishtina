@@ -22,7 +22,20 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
       rel="stylesheet"
     />
+    <script>
+      window.__derandSkipChatbase = true;
+    </script>
     <style>
+      body.booking-details-page #chatbase-bubble-button,
+      body.booking-details-page #chatbase-bubble-window,
+      body.booking-details-page #chatbase-message-bubbles,
+      body.booking-details-page iframe[src*="chatbase"] {
+        display: none !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        opacity: 0 !important;
+      }
+
       body.booking-details-page.sacher-home.policy-font-noto-serif {
         padding-top: 78px !important;
       }
@@ -533,7 +546,7 @@
               <div class="booking-summary-card__rows" id="booking-summary-rows">
                 <div class="booking-summary-card__row">
                   <span id="booking-price-room-label">Superior Suite (4 nights)</span>
-                  <strong id="booking-price-room-total">&euro;390.00</strong>
+                  <strong id="booking-price-room-total">&euro;131.00</strong>
                 </div>
               </div>
 
@@ -543,7 +556,7 @@
 
               <div class="booking-summary-card__total">
                 <span data-i18n="bd-summary-total-due">Total due</span>
-                <strong id="booking-price-total">&euro;448.50</strong>
+                <strong id="booking-price-total">&euro;131.00</strong>
               </div>
 
               <button class="booking-confirm" id="booking-confirm" type="submit">
@@ -808,9 +821,9 @@
     <!-- Tidio chat widget (disabled)
     <script src="js/tidio-left-position.js?v=2" defer></script>
     -->
-    <script src="js/chatbase-widget.js?v=4" defer></script>
-    <script src="js/booking-shared.js?v=4" defer></script>
-    <script src="js/booking-details-i18n.js" defer></script>
-    <script src="js/booking-details.js?v=21" defer></script>
+    <!-- Chatbase disabled on booking-details -->
+    <script src="js/booking-shared.js?v=6" defer></script>
+    <script src="js/booking-details-i18n.js?v=4" defer></script>
+    <script src="js/booking-details.js?v=25" defer></script>
   </body>
 </html>

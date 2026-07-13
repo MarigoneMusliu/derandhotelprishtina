@@ -17,11 +17,11 @@ return [
     'raiaccept_api_base_url' => 'https://trapi.raiaccept.com',
     // Optional server-side overrides for room booking prices.
     'booking_room_rates' => [
-        'junior-suite' => ['single' => 119, 'double' => 125],
-        'deluxe-double' => ['single' => 88, 'double' => 93],
-        'premium-double' => ['single' => 104, 'double' => 104, 'triple' => 140],
-        'superior-twin' => ['single' => 72, 'double' => 84],
-        'superior-double' => ['single' => 84, 'double' => 84],
+        'junior-suite' => ['single' => 131, 'double' => 138],
+        'deluxe-double' => ['single' => 97, 'double' => 102],
+        'premium-double' => ['single' => 114, 'double' => 114, 'triple' => 154],
+        'superior-twin' => ['single' => 79, 'double' => 92],
+        'superior-double' => ['single' => 92, 'double' => 92],
     ],
     'booking_tax_rate' => 0,
     'is_production' => false,

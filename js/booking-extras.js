@@ -8,11 +8,11 @@
     "superior-double": "Superior Double Room",
   };
   var ROOM_NIGHTLY = {
-    "junior-suite": 119,
-    "deluxe-double": 88,
-    "premium-double": 104,
-    "superior-twin": 72,
-    "superior-double": 84,
+    "junior-suite": 131,
+    "deluxe-double": 97,
+    "premium-double": 114,
+    "superior-twin": 79,
+    "superior-double": 92,
   };
 
   var gridEl = document.getElementById("booking-extras-grid");

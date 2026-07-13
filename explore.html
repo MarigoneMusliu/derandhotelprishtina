@@ -17,742 +17,13 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="css/plugins.min.css" type="text/css" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/explore.css?v=1" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
       rel="stylesheet"
     />
-    <style>
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-      }
-
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-      }
-
-      body.explore-prishtina.sacher-home.policy-font-noto-serif,
-      body.explore-prishtina.sacher-home.policy-font-noto-serif h1,
-      body.explore-prishtina.sacher-home.policy-font-noto-serif h2,
-      body.explore-prishtina.sacher-home.policy-font-noto-serif h3,
-      body.explore-prishtina.sacher-home.policy-font-noto-serif p,
-      body.explore-prishtina.sacher-home.policy-font-noto-serif a,
-      body.explore-prishtina.sacher-home.policy-font-noto-serif button {
-        font-family: "Noto Serif", serif !important;
-      }
-
-      body.explore-prishtina.sacher-home .fa,
-      body.explore-prishtina.sacher-home [class^="icon_"],
-      body.explore-prishtina.sacher-home [class*=" icon_"] {
-        font-family: FontAwesome !important;
-      }
-
-      body.explore-prishtina {
-        color: #2d3748;
-        background: #f7f6f4;
-      }
-
-      /* â€”â€” Hero header â€”â€” */
-      .ep-hero {
-        padding: 0;
-        margin: 0;
-        background: #141820;
-      }
-
-      .ep-hero__banner {
-        position: relative;
-        width: 100%;
-        height: clamp(420px, 74vh, 780px);
-        background: #141820;
-        overflow: hidden;
-      }
-
-      .ep-hero__image {
-        position: absolute;
-        inset: 0;
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center 88%;
-        transform-origin: center center;
-        animation: epHeroKenBurns 20s ease-in-out infinite alternate;
-      }
-
-      .ep-hero__banner::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        z-index: 1;
-        pointer-events: none;
-        background:
-          linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.68) 0%,
-            rgba(0, 0, 0, 0.5) 42%,
-            rgba(0, 0, 0, 0.36) 100%
-          ),
-          linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0.24) 0%,
-            rgba(0, 0, 0, 0.44) 100%
-          );
-      }
-
-      .ep-hero__content {
-        position: absolute;
-        inset: 0;
-        z-index: 2;
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-start;
-        padding: 0 clamp(20px, 4vw, 48px) clamp(64px, 14vh, 150px);
-        pointer-events: none;
-      }
-
-      .ep-hero__content a {
-        pointer-events: auto;
-      }
-
-      .ep-hero__container {
-        width: 100%;
-        max-width: 1240px;
-        margin: 0;
-        padding: 0;
-      }
-
-      .ep-hero__inner {
-        max-width: 720px;
-        text-align: left;
-      }
-
-      .ep-hero__kicker {
-        margin: 0 0 14px;
-        text-align: left;
-        font-size: 10px;
-        font-weight: 600;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        color: #f0c96b;
-        text-shadow: 0 1px 10px rgba(0, 0, 0, 0.35);
-        animation:
-          epHeroSlideIn 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both,
-          epHeroFloat 3s ease-in-out 1s infinite,
-          epHeroShimmer 2.2s ease-in-out infinite;
-      }
-
-      .ep-hero__title {
-        margin: 0;
-        font-family: "Noto Serif", serif;
-        font-size: clamp(28px, 3.6vw, 46px);
-        line-height: 1.12;
-        font-weight: 600;
-        color: #ffffff;
-        letter-spacing: -0.01em;
-        white-space: nowrap;
-        text-shadow:
-          0 2px 28px rgba(0, 0, 0, 0.45),
-          0 1px 4px rgba(0, 0, 0, 0.3);
-        animation:
-          epHeroSlideIn 1s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both,
-          epHeroTitlePulse 3.5s ease-in-out 1.4s infinite;
-      }
-
-      .ep-hero__lead {
-        margin: 18px 0 0;
-        max-width: 520px;
-        font-size: clamp(14px, 1.35vw, 16px);
-        line-height: 1.7;
-        color: rgba(255, 255, 255, 0.92);
-        text-shadow: 0 1px 18px rgba(0, 0, 0, 0.5);
-        animation: epHeroSlideIn 1s cubic-bezier(0.22, 1, 0.36, 1) 0.65s both;
-      }
-
-      .ep-hero__btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        margin-top: 30px;
-        min-height: 48px;
-        padding: 0 22px;
-        border-radius: 8px;
-        background: #1e3a5f;
-        color: #fff;
-        font-size: 14px;
-        font-weight: 600;
-        transition:
-          background 0.2s ease,
-          transform 0.2s ease;
-        animation:
-          epHeroSlideIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.9s both,
-          epHeroButtonBob 2.2s ease-in-out 1.2s infinite,
-          epHeroButtonGlow 2s ease-in-out infinite;
-      }
-
-      .ep-hero__btn:hover {
-        background: #16304f;
-        color: #fff;
-        transform: translateY(-3px) scale(1.03);
-        animation-play-state: paused;
-      }
-
-      .ep-hero__btn svg {
-        width: 16px;
-        height: 16px;
-        flex-shrink: 0;
-        animation: epHeroArrowNudge 1.2s ease-in-out infinite;
-      }
-
-      @keyframes epHeroKenBurns {
-        from {
-          transform: scale(1);
-        }
-        to {
-          transform: scale(1.09);
-        }
-      }
-
-      @keyframes epHeroSlideIn {
-        from {
-          opacity: 0;
-          transform: translateX(-28px);
-        }
-        to {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-
-      @keyframes epHeroFloat {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-8px);
-        }
-      }
-
-      @keyframes epHeroShimmer {
-        0%,
-        100% {
-          color: #f0c96b;
-          letter-spacing: 0.18em;
-        }
-        50% {
-          color: #ffe9a8;
-          letter-spacing: 0.22em;
-        }
-      }
-
-      @keyframes epHeroTitlePulse {
-        0%,
-        100% {
-          text-shadow:
-            0 2px 28px rgba(0, 0, 0, 0.45),
-            0 1px 4px rgba(0, 0, 0, 0.3);
-          transform: scale(1);
-        }
-        50% {
-          text-shadow:
-            0 4px 36px rgba(240, 201, 107, 0.35),
-            0 2px 28px rgba(0, 0, 0, 0.5);
-          transform: scale(1.015);
-        }
-      }
-
-      @keyframes epHeroButtonBob {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-5px);
-        }
-      }
-
-      @keyframes epHeroButtonGlow {
-        0%,
-        100% {
-          box-shadow: 0 4px 14px rgba(30, 58, 95, 0.2);
-        }
-        50% {
-          box-shadow: 0 14px 32px rgba(30, 58, 95, 0.45);
-        }
-      }
-
-      @keyframes epHeroArrowNudge {
-        0%,
-        100% {
-          transform: translateX(0);
-        }
-        50% {
-          transform: translateX(7px);
-        }
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        .ep-hero__image,
-        .ep-hero__kicker,
-        .ep-hero__title,
-        .ep-hero__lead,
-        .ep-hero__btn,
-        .ep-hero__btn svg {
-          animation: none !important;
-        }
-      }
-
-      /* â€”â€” Festivals â€”â€” */
-      .ep-festivals {
-        background: #f7f6f4;
-        padding: clamp(48px, 6vw, 80px) 28px clamp(64px, 8vw, 96px);
-      }
-
-      .ep-festivals__inner {
-        max-width: 1240px;
-        margin: 0 auto;
-      }
-
-      .ep-festivals__head {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        gap: 24px 40px;
-        align-items: end;
-        margin-bottom: clamp(32px, 4vw, 48px);
-      }
-
-      .ep-festivals__title {
-        margin: 0;
-        font-family: "Noto Serif", serif;
-        font-size: clamp(30px, 3.6vw, 44px);
-        line-height: 1.15;
-        font-weight: 600;
-        color: #1e3a5f;
-      }
-
-      .ep-festivals__intro {
-        margin: 14px 0 0;
-        max-width: 640px;
-        font-size: clamp(14px, 1.4vw, 16px);
-        line-height: 1.7;
-        color: #4a5568;
-      }
-
-      .ep-festivals__all {
-        font-size: 14px;
-        font-weight: 600;
-        color: #1e3a5f;
-        text-decoration: underline;
-        text-underline-offset: 3px;
-        white-space: nowrap;
-      }
-
-      .ep-festivals__all:hover {
-        color: #16304f;
-      }
-
-      .ep-festivals__grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: clamp(18px, 2.5vw, 28px);
-        align-items: start;
-      }
-
-      .ep-festival-card {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .ep-festival-card__link {
-        display: flex;
-        flex-direction: column;
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .ep-festival-card__link:hover {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .ep-festival-card__link:hover .ep-festival-card__body h3 {
-        color: #1e3a5f;
-      }
-
-      .ep-festival-card--offset {
-        margin-top: clamp(36px, 5vw, 64px);
-      }
-
-      .ep-festival-card__media {
-        position: relative;
-        border-radius: 10px;
-        overflow: hidden;
-        aspect-ratio: 4 / 5;
-      }
-
-      .ep-festival-card__media img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .ep-festival-card__tag {
-        position: absolute;
-        left: 14px;
-        bottom: 14px;
-        padding: 6px 10px;
-        background: #f5c518;
-        color: #1a1a1a;
-        font-size: 10px;
-        font-weight: 700;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        border-radius: 3px;
-      }
-
-      .ep-festival-card__body {
-        padding: 18px 4px 0;
-      }
-
-      .ep-festival-card__body h3 {
-        margin: 0 0 8px;
-        font-size: clamp(18px, 1.8vw, 22px);
-        font-weight: 700;
-        color: #1a202c;
-        line-height: 1.25;
-      }
-
-      .ep-festival-card__date {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        margin: 0 0 10px;
-        font-size: 12.5px;
-        font-weight: 500;
-        letter-spacing: 0.01em;
-        line-height: 1.4;
-        color: #718096;
-      }
-
-      .ep-festival-card__date svg {
-        width: 13px;
-        height: 13px;
-        flex-shrink: 0;
-        color: #a0aec0;
-      }
-
-      .ep-festival-card__body p {
-        margin: 0;
-        font-size: 14px;
-        line-height: 1.65;
-        color: #4a5568;
-      }
-
-      @media (max-width: 900px) {
-        .ep-hero__content {
-          padding-bottom: clamp(40px, 7vh, 64px);
-        }
-
-        .ep-hero__banner::before {
-          background: linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0.26) 0%,
-            rgba(0, 0, 0, 0.55) 55%,
-            rgba(0, 0, 0, 0.7) 100%
-          );
-        }
-
-        .ep-hero__inner {
-          max-width: 100%;
-        }
-
-        .ep-hero__title {
-          font-size: clamp(20px, 5vw, 30px);
-        }
-
-        .ep-festivals__head {
-          grid-template-columns: 1fr;
-        }
-
-        .ep-festivals__grid {
-          grid-template-columns: 1fr;
-        }
-
-        .ep-festival-card--offset {
-          margin-top: 0;
-        }
-      }
-
-      /* —— Landmarks —— */
-      .ep-landmarks {
-        position: relative;
-        overflow: hidden;
-        background:
-          radial-gradient(
-            ellipse 80% 60% at 15% 0%,
-            rgba(201, 162, 39, 0.09),
-            transparent 55%
-          ),
-          radial-gradient(
-            ellipse 70% 50% at 90% 100%,
-            rgba(30, 58, 95, 0.07),
-            transparent 50%
-          ),
-          linear-gradient(180deg, #f8f7f5 0%, #efece6 100%);
-        padding: clamp(56px, 7vw, 88px) clamp(20px, 4vw, 28px)
-          clamp(72px, 9vw, 104px);
-      }
-
-      .ep-landmarks__inner {
-        position: relative;
-        z-index: 1;
-        max-width: 1240px;
-        margin: 0 auto;
-      }
-
-      .ep-landmarks__title {
-        margin: 0 0 clamp(40px, 5vw, 56px);
-        text-align: center;
-        font-family: "Noto Serif", serif;
-        font-size: clamp(30px, 3.6vw, 44px);
-        line-height: 1.15;
-        font-weight: 600;
-        color: #1e3a5f;
-        opacity: 0;
-        transform: translateY(24px);
-        transition:
-          opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
-          transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
-      }
-
-      .ep-landmarks.is-visible .ep-landmarks__title {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .ep-landmarks__title::after {
-        content: "";
-        display: block;
-        width: 0;
-        height: 4px;
-        margin: 16px auto 0;
-        background: linear-gradient(90deg, #c9a227, #f0d878, #c9a227);
-        border-radius: 999px;
-        transition: width 1s cubic-bezier(0.22, 1, 0.36, 1) 0.25s;
-      }
-
-      .ep-landmarks.is-visible .ep-landmarks__title::after {
-        width: 72px;
-      }
-
-      .ep-landmarks__grid {
-        display: grid;
-        grid-template-columns: repeat(12, minmax(0, 1fr));
-        grid-auto-rows: minmax(200px, auto);
-        gap: clamp(14px, 1.8vw, 20px);
-      }
-
-      .ep-landmark-card {
-        --ep-lm-delay: 0s;
-        position: relative;
-        border-radius: 16px;
-        overflow: hidden;
-        background: #141820;
-        min-height: 240px;
-        cursor: pointer;
-        opacity: 0;
-        transform: translateY(48px) scale(0.97);
-        transition:
-          opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1) var(--ep-lm-delay),
-          transform 0.85s cubic-bezier(0.22, 1, 0.36, 1) var(--ep-lm-delay),
-          box-shadow 0.45s ease;
-        box-shadow: 0 12px 32px rgba(20, 24, 32, 0.12);
-      }
-
-      .ep-landmarks.is-visible .ep-landmark-card {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-
-      .ep-landmark-card:hover {
-        transform: translateY(-10px) scale(1.015);
-        box-shadow: 0 28px 56px rgba(20, 24, 32, 0.28);
-      }
-
-      .ep-landmarks.is-visible .ep-landmark-card:hover {
-        transform: translateY(-10px) scale(1.015);
-      }
-
-      .ep-landmark-card--library {
-        grid-column: span 7;
-        grid-row: span 2;
-        min-height: clamp(420px, 50vw, 520px);
-        --ep-lm-delay: 0.05s;
-      }
-
-      .ep-landmark-card--cathedral {
-        grid-column: span 5;
-        min-height: clamp(200px, 24vw, 250px);
-        --ep-lm-delay: 0.12s;
-      }
-
-      .ep-landmark-card--newborn {
-        grid-column: span 5;
-        min-height: clamp(200px, 24vw, 250px);
-        --ep-lm-delay: 0.2s;
-      }
-
-      .ep-landmark-card--museum {
-        grid-column: span 6;
-        min-height: clamp(220px, 26vw, 280px);
-        --ep-lm-delay: 0.28s;
-      }
-
-      .ep-landmark-card--heroinat {
-        grid-column: span 6;
-        min-height: clamp(220px, 26vw, 280px);
-        --ep-lm-delay: 0.36s;
-      }
-
-      .ep-landmark-card__media {
-        position: absolute;
-        inset: 0;
-        overflow: hidden;
-      }
-
-      .ep-landmark-card__media img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transform: scale(1);
-        transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
-        animation: epLandmarkKenBurns 22s ease-in-out infinite alternate;
-      }
-
-      .ep-landmark-card:hover .ep-landmark-card__media img {
-        transform: scale(1.1);
-        animation-play-state: paused;
-      }
-
-      @keyframes epLandmarkKenBurns {
-        from {
-          transform: scale(1);
-        }
-        to {
-          transform: scale(1.07);
-        }
-      }
-
-      .ep-landmark-card__overlay {
-        position: absolute;
-        inset: 0;
-        z-index: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding: clamp(18px, 2.5vw, 28px);
-        background: linear-gradient(
-          180deg,
-          rgba(0, 0, 0, 0) 0%,
-          rgba(0, 0, 0, 0.15) 40%,
-          rgba(0, 0, 0, 0.82) 100%
-        );
-        transition: background 0.5s ease;
-      }
-
-      .ep-landmark-card:hover .ep-landmark-card__overlay {
-        background: linear-gradient(
-          180deg,
-          rgba(0, 0, 0, 0.05) 0%,
-          rgba(0, 0, 0, 0.35) 35%,
-          rgba(0, 0, 0, 0.88) 100%
-        );
-      }
-
-      .ep-landmark-card__tag {
-        display: inline-block;
-        margin: 0 0 10px;
-        padding-bottom: 8px;
-        font-size: 10px;
-        font-weight: 700;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        color: #f0c96b;
-        text-shadow: 0 1px 10px rgba(0, 0, 0, 0.45);
-        position: relative;
-      }
-
-      .ep-landmark-card__tag::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 28px;
-        height: 2px;
-        background: linear-gradient(90deg, #f0c96b, transparent);
-        transition: width 0.45s ease;
-      }
-
-      .ep-landmark-card:hover .ep-landmark-card__tag::after {
-        width: 100%;
-      }
-
-      .ep-landmark-card__overlay h3 {
-        margin: 0;
-        font-family: "Noto Serif", serif;
-        font-size: clamp(18px, 2vw, 24px);
-        line-height: 1.22;
-        font-weight: 600;
-        color: #ffffff;
-        text-shadow: 0 2px 16px rgba(0, 0, 0, 0.45);
-      }
-
-      .ep-landmark-card__copy {
-        margin: 10px 0 0;
-        max-width: 520px;
-        font-size: clamp(13px, 1.15vw, 15px);
-        line-height: 1.65;
-        color: rgba(255, 255, 255, 0.92);
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        .ep-landmarks__title,
-        .ep-landmark-card,
-        .ep-landmark-card__media img {
-          animation: none !important;
-          transition: none !important;
-          opacity: 1 !important;
-          transform: none !important;
-        }
-
-        .ep-landmarks__title::after {
-          width: 72px;
-        }
-      }
-
-      @media (max-width: 900px) {
-        .ep-landmarks__grid {
-          grid-template-columns: 1fr;
-        }
-
-        .ep-landmark-card--library,
-        .ep-landmark-card--cathedral,
-        .ep-landmark-card--newborn,
-        .ep-landmark-card--museum,
-        .ep-landmark-card--heroinat {
-          grid-column: auto;
-          grid-row: auto;
-          min-height: clamp(260px, 68vw, 340px);
-        }
-      }
-    </style>
   </head>
   <body class="sacher-home policy-font-noto-serif explore-prishtina">
     <div id="preloder">
@@ -958,47 +229,98 @@
                   youthful pulse, where history is etched in every corner, and
                   the world's best macchiato awaits.
                 </p>
-                <a
-                  class="ep-hero__btn"
-                  href="#festivals"
-                  data-i18n="explore-hero-cta"
-                >
-                  Start Exploring
-                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                    <path
-                      d="M3 8h10M9 4l4 4-4 4"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </a>
+                <div class="ep-hero__actions">
+                  <a
+                    class="ep-hero__btn"
+                    href="#festivals"
+                    data-i18n="explore-hero-cta"
+                    >Start Exploring</a
+                  >
+                  <a
+                    class="ep-hero__btn ep-hero__btn--ghost"
+                    href="#landmarks"
+                    data-i18n="explore-nav-landmarks"
+                    >Landmarks</a
+                  >
+                </div>
               </div>
             </div>
+          </div>
+          <div class="ep-hero__scroll" aria-hidden="true">
+            Scroll
+            <span></span>
           </div>
         </div>
       </section>
 
+      <nav class="ep-jump" aria-label="Explore sections">
+        <a href="#pulse" data-i18n="explore-jump-pulse">City Pulse</a>
+        <a href="#festivals" data-i18n="explore-nav-festivals">Festivals</a>
+        <a href="#landmarks" data-i18n="explore-nav-landmarks">Landmarks</a>
+        <a class="ep-jump__book" href="book.html" data-i18n="book-now">BOOK NOW</a>
+      </nav>
+
+      <section class="ep-quote ep-reveal" aria-labelledby="ep-quote-text">
+        <div class="ep-quote__inner">
+          <span class="ep-quote__mark" aria-hidden="true">"</span>
+          <blockquote class="ep-quote__text" id="ep-quote-text" data-i18n="explore-quote-text">
+            In Prishtina, every street tells a story — of resilience, of coffee
+            that never gets cold, and of a city forever becoming itself.
+          </blockquote>
+          <p class="ep-quote__by" data-i18n="explore-quote-by">
+            A note from Derand Hotel
+          </p>
+        </div>
+      </section>
+
+      <section class="ep-pulse ep-reveal" id="pulse" aria-labelledby="ep-pulse-title">
+        <div class="ep-pulse__grid">
+          <article class="ep-pulse__card">
+            <span class="ep-pulse__num">01</span>
+            <h3 id="ep-pulse-title" data-i18n="explore-pulse-1-title">Morning Macchiato</h3>
+            <p data-i18n="explore-pulse-1-copy">
+              Start the day the Prishtina way — a perfect macchiato and city
+              energy just steps from Derand.
+            </p>
+          </article>
+          <article class="ep-pulse__card">
+            <span class="ep-pulse__num">02</span>
+            <h3 data-i18n="explore-pulse-2-title">Walkable Icons</h3>
+            <p data-i18n="explore-pulse-2-copy">
+              Landmarks, galleries, and squares are close enough to explore on
+              foot — then return to quiet luxury.
+            </p>
+          </article>
+          <article class="ep-pulse__card">
+            <span class="ep-pulse__num">03</span>
+            <h3 data-i18n="explore-pulse-3-title">Festival Nights</h3>
+            <p data-i18n="explore-pulse-3-copy">
+              Year after year, the capital's cultural calendar fills the nights
+              with music, film, and unforgettable energy.
+            </p>
+          </article>
+        </div>
+      </section>
+
       <section
-        class="ep-festivals"
+        class="ep-festivals ep-reveal"
         id="festivals"
         aria-labelledby="ep-festivals-title"
       >
         <div class="ep-festivals__inner">
           <div class="ep-festivals__head">
             <div>
+              <span class="ep-section-label" data-i18n="explore-festivals-label"
+                >Culture &amp; Rhythm</span
+              >
               <h2
-                class="ep-festivals__title"
+                class="ep-section-title"
                 id="ep-festivals-title"
                 data-i18n="explore-festivals-title"
               >
                 Festivals that Define Us
               </h2>
-              <p
-                class="ep-festivals__intro"
-                data-i18n="explore-festivals-intro"
-              >
+              <p class="ep-section-intro" data-i18n="explore-festivals-intro">
                 From international music phenomenon to cinematic excellence,
                 Prishtina's festival circuit is the energetic heartbeat of the
                 Balkan cultural scene.
@@ -1006,7 +328,9 @@
             </div>
             <a
               class="ep-festivals__all"
-              href="sunnyhill.html"
+              href="https://www.sunnyhillfestival.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               data-i18n="explore-festivals-all"
               >View All Events</a
             >
@@ -1031,7 +355,7 @@
                   <span
                     class="ep-festival-card__tag"
                     data-i18n="explore-festival-sunnyhill-tag"
-                    >Music & Pop</span
+                    >Music &amp; Pop</span
                   >
                 </div>
                 <div class="ep-festival-card__body">
@@ -1047,10 +371,7 @@
                       aria-hidden="true"
                     >
                       <rect x="3" y="5" width="18" height="16" rx="2" />
-                      <path
-                        d="M3 10h18M8 3v4M16 3v4"
-                        stroke-linecap="round"
-                      />
+                      <path d="M3 10h18M8 3v4M16 3v4" stroke-linecap="round" />
                     </svg>
                     <span data-i18n="explore-festival-sunnyhill-date"
                       >July 31 – August 2, 2026</span
@@ -1082,7 +403,7 @@
                   <span
                     class="ep-festival-card__tag"
                     data-i18n="explore-festival-dokufest-tag"
-                    >Film & Culture</span
+                    >Film &amp; Culture</span
                   >
                 </div>
                 <div class="ep-festival-card__body">
@@ -1098,10 +419,7 @@
                       aria-hidden="true"
                     >
                       <rect x="3" y="5" width="18" height="16" rx="2" />
-                      <path
-                        d="M3 10h18M8 3v4M16 3v4"
-                        stroke-linecap="round"
-                      />
+                      <path d="M3 10h18M8 3v4M16 3v4" stroke-linecap="round" />
                     </svg>
                     <span data-i18n="explore-festival-dokufest-date"
                       >August 7 – 15, 2026</span
@@ -1133,7 +451,7 @@
                   <span
                     class="ep-festival-card__tag"
                     data-i18n="explore-festival-jazz-tag"
-                    >Soul & Jazz</span
+                    >Soul &amp; Jazz</span
                   >
                 </div>
                 <div class="ep-festival-card__body">
@@ -1149,10 +467,7 @@
                       aria-hidden="true"
                     >
                       <rect x="3" y="5" width="18" height="16" rx="2" />
-                      <path
-                        d="M3 10h18M8 3v4M16 3v4"
-                        stroke-linecap="round"
-                      />
+                      <path d="M3 10h18M8 3v4M16 3v4" stroke-linecap="round" />
                     </svg>
                     <span data-i18n="explore-festival-jazz-date"
                       >November 2026 (Dates TBA)</span
@@ -1175,13 +490,18 @@
         aria-labelledby="ep-landmarks-title"
       >
         <div class="ep-landmarks__inner">
-          <h2
-            class="ep-landmarks__title"
-            id="ep-landmarks-title"
-            data-i18n="explore-landmarks-title"
-          >
-            Must-visit Landmarks
-          </h2>
+          <header class="ep-landmarks__head">
+            <span class="ep-section-label" data-i18n="explore-landmarks-label"
+              >Iconic Places</span
+            >
+            <h2
+              class="ep-landmarks__title"
+              id="ep-landmarks-title"
+              data-i18n="explore-landmarks-title"
+            >
+              Must-visit Landmarks
+            </h2>
+          </header>
 
           <div class="ep-landmarks__grid">
             <article class="ep-landmark-card ep-landmark-card--library">
@@ -1297,6 +617,23 @@
               </div>
             </article>
           </div>
+        </div>
+      </section>
+
+      <section class="ep-stay ep-reveal" aria-labelledby="ep-stay-title">
+        <div class="ep-stay__box">
+          <div>
+            <h2 class="ep-stay__title" id="ep-stay-title" data-i18n="explore-cta-title">
+              Your Base for Exploring Prishtina
+            </h2>
+            <p class="ep-stay__copy" data-i18n="explore-cta-copy">
+              Steps from the city's best festivals, landmarks, and cafés — stay
+              at Derand Hotel and experience it all.
+            </p>
+          </div>
+          <a class="ep-stay__btn" href="book.html" data-i18n="explore-cta-btn"
+            >Book Your Stay</a
+          >
         </div>
       </section>
     </main>
@@ -1534,35 +871,33 @@
     <script src="js/main.js?v=20260515-1" defer></script>
     <script>
       (function () {
-        var section = document.querySelector(".ep-landmarks");
-        if (!section) return;
+        var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        var nodes = document.querySelectorAll(".ep-reveal, .ep-landmarks");
 
-        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-          section.classList.add("is-visible");
-          return;
-        }
-
-        if (!("IntersectionObserver" in window)) {
-          section.classList.add("is-visible");
+        if (reduce || !("IntersectionObserver" in window)) {
+          nodes.forEach(function (node) {
+            node.classList.add("is-visible");
+          });
           return;
         }
 
         var observer = new IntersectionObserver(
           function (entries) {
             entries.forEach(function (entry) {
-              if (entry.isIntersecting) {
-                section.classList.add("is-visible");
-                observer.disconnect();
-              }
+              if (!entry.isIntersecting) return;
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
             });
           },
-          { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
+          { threshold: 0.12, rootMargin: "0px 0px -48px 0px" },
         );
 
-        observer.observe(section);
+        nodes.forEach(function (node) {
+          observer.observe(node);
+        });
       })();
     </script>
-    <script src="js/explore-i18n.js?v=20" defer></script>
+    <script src="js/explore-i18n.js?v=22" defer></script>
     <script src="js/site-whatsapp.js?v=9" defer></script>
     <!-- Tidio chat widget (disabled)
     <script src="js/tidio-left-position.js?v=2" defer></script>

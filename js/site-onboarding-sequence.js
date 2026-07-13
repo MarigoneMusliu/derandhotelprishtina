@@ -243,6 +243,8 @@
       return;
     }
 
+    if (window.__derandSkipChatbase) return;
+
     if (typeof window.derandLoadChatbaseWidget === "function") {
       window.derandLoadChatbaseWidget();
     }
@@ -353,7 +355,7 @@
 
 
   function scheduleChatbaseFallback() {
-    if (TIDIO_CHAT_ENABLED) return;
+    if (TIDIO_CHAT_ENABLED || window.__derandSkipChatbase) return;
     window.setTimeout(function () {
       if (typeof window.derandLoadChatbaseWidget === "function") {
         window.derandLoadChatbaseWidget();

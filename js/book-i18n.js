@@ -91,6 +91,8 @@
       "book-summary-to": " to ",
       "book-status-invalid-dates":
         "Please choose a valid check-in and check-out date.",
+      "book-status-blocked-dates":
+        "These dates cannot be processed. Please choose other dates.",
       "book-status-updated":
         "Dates and guests updated. Choose any room below to continue.",
       "book-status-opening": "Opening guest details for {room}...",
@@ -183,6 +185,8 @@
       "book-summary-to": " bis ",
       "book-status-invalid-dates":
         "Bitte w\u00e4hlen Sie g\u00fcltige An- und Abreisedaten.",
+      "book-status-blocked-dates":
+        "Diese Daten k\u00f6nnen nicht verarbeitet werden. Bitte w\u00e4hlen Sie andere Daten.",
       "book-status-updated":
         "Daten und G\u00e4ste aktualisiert. W\u00e4hlen Sie unten ein Zimmer, um fortzufahren.",
       "book-status-opening": "G\u00e4stedetails f\u00fcr {room} werden ge\u00f6ffnet...",
@@ -275,6 +279,8 @@
       "book-summary-to": " deri ",
       "book-status-invalid-dates":
         "Ju lutemi zgjidhni data t\u00eb vlefshme t\u00eb check-in dhe check-out.",
+      "book-status-blocked-dates":
+        "K\u00ebto data nuk mund t\u00eb procesohen. Ju lutemi zgjidhni data t\u00eb tjera.",
       "book-status-updated":
         "Datat dhe mysafir\u00ebt u p\u00ebrdit\u00ebsuan. Zgjidhni nj\u00eb dhom\u00eb m\u00eb posht\u00eb p\u00ebr t\u00eb vazhduar.",
       "book-status-opening": "Duke hapur detajet e mysafir\u00ebt p\u00ebr {room}...",

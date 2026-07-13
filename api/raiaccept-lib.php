@@ -490,11 +490,11 @@ function raiaccept_build_extra_order_payload(array $input, array $config, string
 function raiaccept_booking_rooms(): array
 {
     return [
-        'junior-suite' => ['label' => 'Junior Suite', 'single' => 119.0, 'double' => 125.0, 'max_adults' => 2],
-        'deluxe-double' => ['label' => 'Deluxe Double Room', 'single' => 88.0, 'double' => 93.0, 'max_adults' => 2],
-        'premium-double' => ['label' => 'Premium Room', 'single' => 104.0, 'double' => 104.0, 'triple' => 140.0, 'max_adults' => 3],
-        'superior-twin' => ['label' => 'Superior Twin Room', 'single' => 72.0, 'double' => 84.0, 'max_adults' => 2],
-        'superior-double' => ['label' => 'Superior Double Room', 'single' => 84.0, 'double' => 84.0, 'max_adults' => 2],
+        'junior-suite' => ['label' => 'Junior Suite', 'single' => 131.0, 'double' => 138.0, 'max_adults' => 2],
+        'deluxe-double' => ['label' => 'Deluxe Double Room', 'single' => 97.0, 'double' => 102.0, 'max_adults' => 2],
+        'premium-double' => ['label' => 'Premium Room', 'single' => 114.0, 'double' => 114.0, 'triple' => 154.0, 'max_adults' => 3],
+        'superior-twin' => ['label' => 'Superior Twin Room', 'single' => 79.0, 'double' => 92.0, 'max_adults' => 2],
+        'superior-double' => ['label' => 'Superior Double Room', 'single' => 92.0, 'double' => 92.0, 'max_adults' => 2],
     ];
 }
 
@@ -569,11 +569,13 @@ function raiaccept_booking_room_rate(string $roomSlug, int $adults, array $confi
     $configuredRates = is_array($config['booking_room_rates'] ?? null) ? $config['booking_room_rates'] : [];
     $rate = 0.0;
 
-    if (isset($configuredRates[$roomSlug])) {
-        $rate = raiaccept_booking_rate_for_adults($configuredRates[$roomSlug], $adults);
-    }
-    if ($rate <= 0 && isset($defaults[$roomSlug])) {
+    // Code defaults are the source of truth for room prices (keeps RaiAccept in sync with the site).
+    if (isset($defaults[$roomSlug])) {
         $rate = raiaccept_booking_rate_for_adults($defaults[$roomSlug], $adults);
+    }
+    // Config may fill in a room that is not in the defaults map.
+    if ($rate <= 0 && isset($configuredRates[$roomSlug])) {
+        $rate = raiaccept_booking_rate_for_adults($configuredRates[$roomSlug], $adults);
     }
     if ($rate <= 0 && !empty($config['booking_allow_client_rates'])) {
         $rate = raiaccept_positive_number($input['nightlyRate'] ?? 0);

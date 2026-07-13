@@ -15,7 +15,10 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="css/plugins.min.css" type="text/css" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
-    <script>window.__derandSkipTidio = true;</script>
+    <script>
+      window.__derandSkipTidio = true;
+      window.__derandSkipChatbase = true;
+    </script>
 
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
@@ -79,7 +82,10 @@
       body.derand-no-tidio #tidio,
       body.derand-no-tidio #tidio-chat,
       body.derand-no-tidio #tidio-chat-iframe,
-      body.derand-no-tidio iframe[src*="tidio.co"] {
+      body.derand-no-tidio iframe[src*="tidio.co"],
+      body.derand-no-tidio #chatbase-bubble-button,
+      body.derand-no-tidio #chatbase-bubble-window,
+      body.derand-no-tidio #chatbase-message-bubbles {
         display: none !important;
         visibility: hidden !important;
         pointer-events: none !important;
@@ -4430,7 +4436,7 @@
 
       <div class="offcanvas_btn_widget">
         <a
-          href="/book"
+          href="book.html"
          
          
           ><span data-i18n="book-now">BOOK NOW</span>
@@ -4589,7 +4595,7 @@
 
                 <div class="header__nav__widget">
                   <a
-                    href="/book"
+                    href="book.html"
                    
                    
                   >
@@ -5839,7 +5845,7 @@
     <script src="js/site-onboarding-sequence.js?v=9" defer></script>
     <script src="js/main.js?v=20260515-1" defer></script>
         <script src="js/site-whatsapp.js?v=11" defer></script>
-    <script src="js/chatbase-widget.js?v=4" defer></script>
+    <!-- Chatbase disabled on extra.html -->
     <script>
       (function () {
         var CART_STORAGE_KEY = "derandExtraCart";

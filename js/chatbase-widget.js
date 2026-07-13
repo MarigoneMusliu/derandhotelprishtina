@@ -225,6 +225,7 @@
   }
 
   window.derandLoadChatbaseWidget = function () {
+    if (window.__derandSkipChatbase) return;
     if (window.__derandChatbaseLoaded) return;
     window.__derandChatbaseLoaded = true;
 

@@ -372,10 +372,30 @@
     setStatus(lastStatus.key, lastStatus.state, lastStatus.vars);
   }
 
+  function stayIsBlocked() {
+    return (
+      window.DerandBooking &&
+      typeof window.DerandBooking.stayOverlapsBlockedNights === "function" &&
+      window.DerandBooking.stayOverlapsBlockedNights(
+        checkInEl.value,
+        checkOutEl.value,
+      )
+    );
+  }
+
+  function alertBlockedDates() {
+    window.alert(t("book-status-blocked-dates"));
+  }
+
   function validateFilters() {
     var nights = getNightCount();
     if (!checkInEl.value || !checkOutEl.value || nights < 1) {
       setStatus("book-status-invalid-dates", "error");
+      return false;
+    }
+    if (stayIsBlocked()) {
+      setStatus("book-status-blocked-dates", "error");
+      alertBlockedDates();
       return false;
     }
     return true;
@@ -463,6 +483,12 @@
       updateSummary();
       syncReserveLinks();
       updateQueryString();
+      if (checkInEl.value && checkOutEl.value && stayIsBlocked()) {
+        setStatus("book-status-blocked-dates", "error");
+        alertBlockedDates();
+      } else if (lastStatus.key === "book-status-blocked-dates") {
+        setStatus("", "");
+      }
     });
   });
 
