@@ -4,6 +4,8 @@
     (window.location.origin || "") + "/api/raiaccept-create-booking-checkout.php";
   var PAYMENT_STATUS_URL =
     (window.location.origin || "") + "/api/raiaccept-order-status.php";
+  var PAYMENT_CONFIRM_EMAIL_URL =
+    (window.location.origin || "") + "/api/raiaccept-booking-confirm.php";
   var PENDING_PAYMENT_STORAGE_KEY = "derandBookingPendingPayments";
 
   var ROOM_DATA = {
@@ -99,6 +101,17 @@
   var fullNameEl = document.getElementById("booking-full-name");
   var emailEl = document.getElementById("booking-email");
   var phoneEl = document.getElementById("booking-phone");
+  if (phoneEl) {
+    phoneEl.removeAttribute("pattern");
+    phoneEl.removeAttribute("minlength");
+    phoneEl.removeAttribute("title");
+    phoneEl.setAttribute("maxlength", "40");
+    phoneEl.setAttribute("inputmode", "text");
+    if (phoneEl.type !== "text") phoneEl.type = "text";
+    phoneEl.addEventListener("input", function () {
+      if (phoneEl.setCustomValidity) phoneEl.setCustomValidity("");
+    });
+  }
   var roomInputEl = document.getElementById("booking-room");
   var checkinInputEl = document.getElementById("booking-checkin");
   var checkoutInputEl = document.getElementById("booking-checkout");
@@ -194,7 +207,9 @@
       return adults >= 2 ? 138 : 131;
     }
     if (roomKey === "premium-double") {
-      return adults >= 3 ? 154 : 114;
+      if (adults >= 3) return 154;
+      if (adults >= 2) return 130;
+      return 114;
     }
     if (roomKey === "deluxe-double") {
       return adults >= 2 ? 102 : 97;
@@ -202,8 +217,72 @@
     if (roomKey === "superior-twin") {
       return adults >= 2 ? 92 : 79;
     }
+    if (roomKey === "superior-double") {
+      return adults >= 2 ? 102 : 92;
+    }
     var room = ROOM_DATA[roomKey];
     return room ? room.price : 0;
+  }
+
+  function getRoomStayTotal(roomKey, adults, checkin, checkout) {
+    var base = getRoomBasePrice(roomKey, adults);
+    if (
+      window.DerandBooking &&
+      typeof window.DerandBooking.getStayRoomTotal === "function"
+    ) {
+      return window.DerandBooking.getStayRoomTotal(base, checkin, checkout);
+    }
+    var nights = getNightCount({ checkin: checkin, checkout: checkout });
+    return base * nights;
+  }
+
+  function getRoomStayAverageNightly(roomKey, adults, checkin, checkout) {
+    var base = getRoomBasePrice(roomKey, adults);
+    if (
+      window.DerandBooking &&
+      typeof window.DerandBooking.getStayAverageNightly === "function"
+    ) {
+      return window.DerandBooking.getStayAverageNightly(base, checkin, checkout);
+    }
+    return base;
+  }
+
+  function stayBlocksAllRooms(checkin, checkout) {
+    return (
+      window.DerandBooking &&
+      typeof window.DerandBooking.stayOverlapsBlockedNights === "function" &&
+      window.DerandBooking.stayOverlapsBlockedNights(checkin, checkout)
+    );
+  }
+
+  function juniorSuiteFullyBooked(checkin, checkout) {
+    return (
+      window.DerandBooking &&
+      typeof window.DerandBooking.stayOverlapsJuniorSuiteBlocked === "function" &&
+      window.DerandBooking.stayOverlapsJuniorSuiteBlocked(checkin, checkout)
+    );
+  }
+
+  function roomUnavailableForStay(roomKey, checkin, checkout) {
+    if (stayBlocksAllRooms(checkin, checkout)) return "blocked";
+    if (roomKey === "junior-suite" && juniorSuiteFullyBooked(checkin, checkout)) {
+      return "junior";
+    }
+    return "";
+  }
+
+  function alertRoomUnavailable(reason) {
+    if (reason === "junior") {
+      window.alert(t("bd-status-junior-fully-booked"));
+      return;
+    }
+    window.alert(t("bd-status-blocked-dates"));
+  }
+
+  function statusKeyForUnavailable(reason) {
+    return reason === "junior"
+      ? "bd-status-junior-fully-booked"
+      : "bd-status-blocked-dates";
   }
 
   function loadState() {
@@ -913,6 +992,8 @@
     if (!phoneEl.value.trim()) {
       markError(phoneEl);
       valid = false;
+    } else if (phoneEl.setCustomValidity) {
+      phoneEl.setCustomValidity("");
     }
 
     var adultsCount = parseInt(adultsInputEl && adultsInputEl.value, 10) || 0;
@@ -931,17 +1012,21 @@
       if (checkinInputEl) markError(checkinInputEl);
       if (checkoutInputEl) markError(checkoutInputEl);
       valid = false;
-    } else if (
-      window.DerandBooking &&
-      typeof window.DerandBooking.stayOverlapsBlockedNights === "function" &&
-      window.DerandBooking.stayOverlapsBlockedNights(state.checkin, state.checkout)
-    ) {
-      if (checkinInputEl) markError(checkinInputEl);
-      if (checkoutInputEl) markError(checkoutInputEl);
-      valid = false;
-      setStatus("bd-status-blocked-dates", "error");
-      window.alert(t("bd-status-blocked-dates"));
-      return false;
+    } else {
+      var unavailable = roomUnavailableForStay(
+        state.room,
+        state.checkin,
+        state.checkout,
+      );
+      if (unavailable) {
+        if (checkinInputEl) markError(checkinInputEl);
+        if (checkoutInputEl) markError(checkoutInputEl);
+        if (roomInputEl) markError(roomInputEl);
+        valid = false;
+        setStatus(statusKeyForUnavailable(unavailable), "error");
+        alertRoomUnavailable(unavailable);
+        return false;
+      }
     }
 
     if (isPremiumRoom(state.room) && state.children > 0) {
@@ -986,94 +1071,6 @@
     }
 
     return valid;
-  }
-
-  function notifyHotel(state, room, nights, totals) {
-    var submittedAt = new Date().toISOString();
-    var checkInFormatted = formatDate(state.checkin);
-    var checkOutFormatted = formatDate(state.checkout);
-    var guestEmail = emailEl.value.trim();
-    var guestName = fullNameEl.value.trim();
-    var guestPhone = phoneEl.value.trim();
-    var extrasDelivery = hasBookingExtras(state) ? getExtrasDeliveryFromForm() : null;
-    var payload = {
-      access_key: WEB3FORMS_ACCESS_KEY,
-      subject: "Booking details — " + room.label + " — " + state.checkin,
-      from_name: "Derand Hotel Booking Details",
-      email: NOTIFY_EMAIL,
-      replyto: guestEmail,
-      to_email: NOTIFY_EMAIL,
-      recipient: NOTIFY_EMAIL,
-      notify_email: NOTIFY_EMAIL,
-      name: guestName,
-      guest_email: guestEmail,
-      guest_phone: guestPhone,
-      guest_name: guestName,
-      booking_room: room.label,
-      booking_checkin: state.checkin,
-      booking_checkout: state.checkout,
-      booking_nights: String(nights),
-      booking_adults: String(state.adults),
-      booking_children: String(state.children),
-      booking_child_ages: (state.childAges || []).join(", "),
-      booking_total: currency(totals.total),
-      submitted_at: submittedAt,
-      message: [
-        "Recipient: " + NOTIFY_EMAIL,
-        "",
-        "New booking details submission — Derand Hotel",
-        "",
-        "Submitted at: " + submittedAt,
-        "Room type: " + room.label,
-        "Check-in: " + checkInFormatted + " (" + state.checkin + ")",
-        "Check-out: " + checkOutFormatted + " (" + state.checkout + ")",
-        "Adults: " + state.adults,
-        "Children: " + state.children,
-        "Children ages: " + ((state.childAges && state.childAges.length) ? state.childAges.join(", ") : "(none)"),
-        "Children surcharge: " + currency(totals.childSurcharge || 0),
-        "Concierge extras: " + formatExtrasList(state.extraLines),
-        "Extras total: " + currency(totals.extrasTotal || 0),
-        extrasDelivery
-          ? "Extras delivery date: " + formatDate(extrasDelivery.date) + " (" + extrasDelivery.date + ")"
-          : "Extras delivery date: (not applicable)",
-        extrasDelivery
-          ? "Extras delivery time: " + extrasDelivery.time
-          : "Extras delivery time: (not applicable)",
-        extrasDelivery
-          ? "Extras delivery notes: " + (extrasDelivery.notes || "(none)")
-          : "Extras delivery notes: (not applicable)",
-        "Stay: " + checkInFormatted + " to " + checkOutFormatted,
-        "Guests summary: " + guestSummary(state.adults, state.children),
-        "Nights: " + nights,
-        "Rate per night: " + currency(totals.pricePerNight || 0),
-        "Payment preference: " + selectedMethod,
-        "",
-        "Guest name: " + guestName,
-        "Email: " + guestEmail,
-        "Phone: " + guestPhone,
-        "",
-        "Special requests:",
-        notesEl.value.trim() || "(none)",
-        "",
-        "Room total: " + currency(totals.roomTotal),
-        "Extras total: " + currency(totals.extrasTotal || 0),
-        "Taxes & fees: " + currency(totals.fees),
-        "Final total (one payment): " + currency(totals.total),
-      ].join("\n"),
-    };
-
-    return fetch(WEB3FORMS_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(payload),
-    }).then(function (response) {
-      return response.json().then(function (data) {
-        return { ok: response.ok, json: data };
-      });
-    });
   }
 
   function buildEmailMessage(state, room, nights, totals) {
@@ -1251,6 +1248,91 @@
     }
   }
 
+  function notifyHotelFromBrowser(pendingOrder, orderReference) {
+    // Web3Forms only accepts browser submissions on the free plan, so this is
+    // the fallback channel when the server-side hotel email did not go out.
+    // Same access key and pattern as the NOYA reservation form.
+    var state = pendingOrder.state || {};
+    var guestName = pendingOrder.fullName || "";
+    var message = [
+      "DERAND HOTEL — paid room reservation",
+      "",
+      "Name: " + guestName,
+      "Email: " + (pendingOrder.email || ""),
+      "Phone: " + (pendingOrder.phone || ""),
+      "",
+      "Room: " + (pendingOrder.roomName || ""),
+      "Check-in: " + (state.checkin || ""),
+      "Check-out: " + (state.checkout || ""),
+      "Adults: " + (state.adults || 1),
+      "Children: " + (state.children || 0),
+      "Nights: " + (pendingOrder.nights || ""),
+      "Total price: " + (pendingOrder.amount || "") + " EUR",
+      "Payment: PAID",
+      "Reservation reference: " + orderReference,
+      "Notes: " + (pendingOrder.notes || "(none)"),
+    ].join("\n");
+    return fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        access_key: "761d8dce-87b2-4534-bc76-77ec2305d4ec",
+        subject: "Room reservation — " + (guestName || orderReference),
+        from_name: "Derand Hotel Room Reservation",
+        name: guestName,
+        email: pendingOrder.email || "info@derandhotel.com",
+        replyto: pendingOrder.email || "",
+        phone: pendingOrder.phone || "",
+        message: message,
+      }),
+    });
+  }
+
+  function sendPaidBookingEmails(pendingOrder, orderReference) {
+    if (!pendingOrder || !orderReference) return;
+    var state = pendingOrder.state || {};
+    fetch(PAYMENT_CONFIRM_EMAIL_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        merchantOrderReference: orderReference,
+        orderIdentification: pendingOrder.orderIdentification || "",
+        guestName: pendingOrder.fullName || "",
+        guestEmail: pendingOrder.email || "",
+        guestPhone: pendingOrder.phone || "",
+        roomName: pendingOrder.roomName || "",
+        checkIn: state.checkin || "",
+        checkOut: state.checkout || "",
+        adults: state.adults || 1,
+        children: state.children || 0,
+        nights: pendingOrder.nights || "",
+        amount: pendingOrder.amount || "",
+        currency: "EUR",
+        notes: pendingOrder.notes || "",
+      }),
+    })
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        if (!data || !data.hotelSent) {
+          return notifyHotelFromBrowser(pendingOrder, orderReference);
+        }
+      })
+      .catch(function () {
+        // The confirm API failed entirely; try the browser channel directly.
+        return notifyHotelFromBrowser(pendingOrder, orderReference).catch(function () {
+          /* Never block the paid success UI if email delivery fails. */
+        });
+      });
+  }
+
   function verifyReturnedPayment(paymentState, orderReference) {
     var pendingOrder = getPendingPayment(orderReference);
     restorePendingPayment(pendingOrder);
@@ -1290,6 +1372,7 @@
       .then(function (data) {
         var paymentStatus = (data && data.paymentStatus) || "pending";
         if (paymentStatus === "paid") {
+          sendPaidBookingEmails(pendingOrder, orderReference);
           removePendingPayment(orderReference);
           if (window.DerandBooking) {
             window.DerandBooking.clearBookingLines();
@@ -1357,9 +1440,19 @@
     enforceChildrenPolicy(false);
     syncChildAgesLength();
     renderChildAgeInputs();
-    var pricePerNight = getRoomBasePrice(state.room, state.adults);
+    var pricePerNight = getRoomStayAverageNightly(
+      state.room,
+      state.adults,
+      state.checkin,
+      state.checkout,
+    );
     var childSurchargePerNight = getChildrenSurcharge(state.room, state.childAges);
-    var roomTotal = pricePerNight * nights;
+    var roomTotal = getRoomStayTotal(
+      state.room,
+      state.adults,
+      state.checkin,
+      state.checkout,
+    );
     var childSurcharge = childSurchargePerNight * nights;
     var fees = 0;
     var discount = 0;
@@ -1429,19 +1522,53 @@
 
   var state;
   var renderState;
+  var warnedUnavailableStay = false;
 
   function refreshBookingDetailsView() {
     if (!state) {
       state = loadState();
+    } else if (window.DerandBooking) {
+      // Always re-read concierge lines so returning from extra.html updates the pay card.
+      state.extraLines = window.DerandBooking.loadBookingLines();
+    }
+    try {
+      if (sessionStorage.getItem("derandBookingReturnFromExtras") === "1") {
+        sessionStorage.removeItem("derandBookingReturnFromExtras");
+        if (window.DerandBooking) {
+          state.extraLines = window.DerandBooking.loadBookingLines();
+        }
+      }
+    } catch (e) {
+      /* ignore */
     }
     renderState = render(state);
     refreshStatusMessage();
+  }
+
+  function warnIfStayUnavailable() {
+    if (!state || warnedUnavailableStay) return;
+    var unavailable = roomUnavailableForStay(
+      state.room,
+      state.checkin,
+      state.checkout,
+    );
+    if (!unavailable) return;
+    warnedUnavailableStay = true;
+    // Status only on load — do not alert when returning from extras picker.
+    setStatus(statusKeyForUnavailable(unavailable), "error");
   }
 
   document.addEventListener("DOMContentLoaded", function () {
     refreshBookingDetailsView();
     setupConciergeMarquee();
     handlePaymentReturn();
+    warnIfStayUnavailable();
+  });
+
+  window.addEventListener("pageshow", function (event) {
+    if (event.persisted || (state && window.DerandBooking)) {
+      refreshBookingDetailsView();
+    }
   });
 
   window.addEventListener("load", function () {
@@ -1488,6 +1615,15 @@
     roomInputEl.addEventListener("change", function () {
       syncGuestStateFromInputs();
       renderState = render(state);
+      var unavailable = roomUnavailableForStay(
+        state.room,
+        state.checkin,
+        state.checkout,
+      );
+      if (unavailable) {
+        setStatus(statusKeyForUnavailable(unavailable), "error");
+        alertRoomUnavailable(unavailable);
+      }
     });
   }
 
@@ -1495,12 +1631,14 @@
     checkinInputEl.addEventListener("change", function () {
       syncGuestStateFromInputs();
       renderState = render(state);
-      if (
-        window.DerandBooking &&
-        window.DerandBooking.stayOverlapsBlockedNights(state.checkin, state.checkout)
-      ) {
-        setStatus("bd-status-blocked-dates", "error");
-        window.alert(t("bd-status-blocked-dates"));
+      var unavailable = roomUnavailableForStay(
+        state.room,
+        state.checkin,
+        state.checkout,
+      );
+      if (unavailable) {
+        setStatus(statusKeyForUnavailable(unavailable), "error");
+        alertRoomUnavailable(unavailable);
       }
     });
   }
@@ -1509,12 +1647,14 @@
     checkoutInputEl.addEventListener("change", function () {
       syncGuestStateFromInputs();
       renderState = render(state);
-      if (
-        window.DerandBooking &&
-        window.DerandBooking.stayOverlapsBlockedNights(state.checkin, state.checkout)
-      ) {
-        setStatus("bd-status-blocked-dates", "error");
-        window.alert(t("bd-status-blocked-dates"));
+      var unavailable = roomUnavailableForStay(
+        state.room,
+        state.checkin,
+        state.checkout,
+      );
+      if (unavailable) {
+        setStatus(statusKeyForUnavailable(unavailable), "error");
+        alertRoomUnavailable(unavailable);
       }
     });
   }

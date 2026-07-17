@@ -114,6 +114,8 @@
       "bd-status-guest-required": "Please complete the highlighted guest details.",
       "bd-status-blocked-dates":
         "These dates cannot be processed. Please choose other dates.",
+      "bd-status-junior-fully-booked":
+        "The Junior Suite is fully booked for these dates. Please search for another room.",
       "bd-status-sending": "Sending\u2026",
       "bd-status-thanks": "Thank you \u2014 we received your message.",
       "bd-status-error":
@@ -253,6 +255,8 @@
         "Bitte vervollst\u00e4ndigen Sie die markierten G\u00e4stedaten.",
       "bd-status-blocked-dates":
         "Diese Daten k\u00f6nnen nicht verarbeitet werden. Bitte w\u00e4hlen Sie andere Daten.",
+      "bd-status-junior-fully-booked":
+        "Die Junior Suite ist f\u00fcr diese Daten ausgebucht. Bitte suchen Sie nach einem anderen Zimmer.",
       "bd-status-sending": "Wird gesendet\u2026",
       "bd-status-thanks": "Vielen Dank \u2014 wir haben Ihre Nachricht erhalten.",
       "bd-status-error":
@@ -392,6 +396,8 @@
         "Ju lutemi plot\u00ebsoni detajet e mysafir\u00ebt t\u00eb theksuara.",
       "bd-status-blocked-dates":
         "K\u00ebto data nuk mund t\u00eb procesohen. Ju lutemi zgjidhni data t\u00eb tjera.",
+      "bd-status-junior-fully-booked":
+        "Suite Junior \u00ebsht\u00eb plot\u00ebsisht e rezervuar p\u00ebr k\u00ebto data. Ju lutemi k\u00ebrkoni nj\u00eb dhom\u00eb tjet\u00ebr.",
       "bd-status-sending": "Duke d\u00ebrguar\u2026",
       "bd-status-thanks": "Faleminderit \u2014 e mor\u00ebm mesazhin tuaj.",
       "bd-status-error":

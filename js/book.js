@@ -286,29 +286,72 @@
     });
   }
 
-  function buildStayPriceHtml(nightly, nights) {
+  function buildStayPriceHtml(nightly, nights, total) {
     var perNight = t("book-price-per-night");
-    var total = nightly * nights;
+    var stayTotal =
+      typeof total === "number" && !isNaN(total) ? total : nightly * nights;
+    var displayNightly = Math.round(nightly);
+    if (Math.abs(nightly - displayNightly) > 0.001) {
+      displayNightly = Math.round(nightly * 100) / 100;
+    }
     return (
       "&euro;" +
-      total +
+      Math.round(stayTotal) +
       "<span> " +
       t("book-price-total") +
       "</span> <span class=\"booking-room-card__price-note\">" +
       t("book-price-multi", {
         nights: nights,
-        nightly: nightly,
+        nightly: displayNightly,
         perNight: perNight,
       }) +
       "</span>"
     );
   }
 
+  function getCardBaseNightly(card) {
+    var adults = parseInt(adultsEl && adultsEl.value, 10) || 1;
+    var single = parseFloat(card.getAttribute("data-price-night"), 10) || 0;
+    var doubleRate = parseFloat(card.getAttribute("data-price-double"), 10);
+    var tripleRate = parseFloat(card.getAttribute("data-price-triple"), 10);
+    if (adults >= 3 && tripleRate > 0) return tripleRate;
+    if (adults >= 2 && doubleRate > 0) return doubleRate;
+    return single;
+  }
+
+  function getCardStayPricing(card) {
+    var base = getCardBaseNightly(card);
+    var nights = getNightCount();
+    if (
+      !nights ||
+      !checkInEl.value ||
+      !checkOutEl.value ||
+      !window.DerandBooking ||
+      typeof window.DerandBooking.getStayRoomTotal !== "function"
+    ) {
+      return { base: base, nights: nights, nightly: base, total: base * nights };
+    }
+    var total = window.DerandBooking.getStayRoomTotal(
+      base,
+      checkInEl.value,
+      checkOutEl.value,
+    );
+    var nightly =
+      typeof window.DerandBooking.getStayAverageNightly === "function"
+        ? window.DerandBooking.getStayAverageNightly(
+            base,
+            checkInEl.value,
+            checkOutEl.value,
+          )
+        : total / nights;
+    return { base: base, nights: nights, nightly: nightly, total: total };
+  }
+
   function updateRoomCardPrices() {
     var nights = getNightCount();
     cards.forEach(function (card) {
-      var nightly = parseFloat(card.getAttribute("data-price-night"), 10);
-      if (!nightly) return;
+      var pricing = getCardStayPricing(card);
+      if (!pricing.base) return;
 
       var priceEls = card.querySelectorAll(
         ".booking-room-card__feature-price, .booking-room-card__inline-price",
@@ -318,9 +361,18 @@
           el.dataset.defaultHtml = el.innerHTML;
         }
         if (nights > 1) {
-          el.innerHTML = buildStayPriceHtml(nightly, nights);
+          el.innerHTML = buildStayPriceHtml(
+            pricing.nightly,
+            nights,
+            pricing.total,
+          );
         } else if (nights === 1) {
-          el.innerHTML = "&euro;" + nightly + "<span>" + t("book-price-per-night") + "</span>";
+          el.innerHTML =
+            "&euro;" +
+            Math.round(pricing.nightly) +
+            "<span>" +
+            t("book-price-per-night") +
+            "</span>";
         } else {
           el.innerHTML = el.dataset.defaultHtml;
         }
@@ -372,7 +424,7 @@
     setStatus(lastStatus.key, lastStatus.state, lastStatus.vars);
   }
 
-  function stayIsBlocked() {
+  function stayIsBlockedForAllRooms() {
     return (
       window.DerandBooking &&
       typeof window.DerandBooking.stayOverlapsBlockedNights === "function" &&
@@ -383,19 +435,44 @@
     );
   }
 
-  function alertBlockedDates() {
+  function juniorSuiteIsFullyBooked() {
+    return (
+      window.DerandBooking &&
+      typeof window.DerandBooking.stayOverlapsJuniorSuiteBlocked === "function" &&
+      window.DerandBooking.stayOverlapsJuniorSuiteBlocked(
+        checkInEl.value,
+        checkOutEl.value,
+      )
+    );
+  }
+
+  function roomIsUnavailable(room) {
+    if (stayIsBlockedForAllRooms()) return true;
+    return room === "junior-suite" && juniorSuiteIsFullyBooked();
+  }
+
+  function alertUnavailableRoom(room) {
+    if (room === "junior-suite" && juniorSuiteIsFullyBooked()) {
+      window.alert(t("book-status-junior-fully-booked"));
+      return;
+    }
     window.alert(t("book-status-blocked-dates"));
   }
 
-  function validateFilters() {
+  function validateFilters(room) {
     var nights = getNightCount();
+    var targetRoom = room || selectedRoom;
     if (!checkInEl.value || !checkOutEl.value || nights < 1) {
       setStatus("book-status-invalid-dates", "error");
       return false;
     }
-    if (stayIsBlocked()) {
-      setStatus("book-status-blocked-dates", "error");
-      alertBlockedDates();
+    if (roomIsUnavailable(targetRoom)) {
+      var statusKey =
+        targetRoom === "junior-suite" && juniorSuiteIsFullyBooked()
+          ? "book-status-junior-fully-booked"
+          : "book-status-blocked-dates";
+      setStatus(statusKey, "error");
+      alertUnavailableRoom(targetRoom);
       return false;
     }
     return true;
@@ -469,7 +546,7 @@
     event.preventDefault();
     syncCountsFromGuestSelect();
     updateCheckOutMin();
-    if (!validateFilters()) return;
+    if (!validateFilters(selectedRoom)) return;
 
     updateSummary();
     syncReserveLinks();
@@ -483,10 +560,21 @@
       updateSummary();
       syncReserveLinks();
       updateQueryString();
-      if (checkInEl.value && checkOutEl.value && stayIsBlocked()) {
-        setStatus("book-status-blocked-dates", "error");
-        alertBlockedDates();
-      } else if (lastStatus.key === "book-status-blocked-dates") {
+      if (
+        checkInEl.value &&
+        checkOutEl.value &&
+        roomIsUnavailable(selectedRoom)
+      ) {
+        var statusKey =
+          selectedRoom === "junior-suite" && juniorSuiteIsFullyBooked()
+            ? "book-status-junior-fully-booked"
+            : "book-status-blocked-dates";
+        setStatus(statusKey, "error");
+        alertUnavailableRoom(selectedRoom);
+      } else if (
+        lastStatus.key === "book-status-blocked-dates" ||
+        lastStatus.key === "book-status-junior-fully-booked"
+      ) {
         setStatus("", "");
       }
     });
@@ -504,7 +592,16 @@
   cards.forEach(function (card) {
     card.addEventListener("click", function (event) {
       if (event.target.closest("a")) return;
-      selectRoom(card.dataset.room);
+      var room = card.dataset.room;
+      selectRoom(room);
+      if (checkInEl.value && checkOutEl.value && roomIsUnavailable(room)) {
+        var statusKey =
+          room === "junior-suite" && juniorSuiteIsFullyBooked()
+            ? "book-status-junior-fully-booked"
+            : "book-status-blocked-dates";
+        setStatus(statusKey, "error");
+        alertUnavailableRoom(room);
+      }
     });
   });
 
@@ -513,7 +610,7 @@
       var room = link.dataset.room || selectedRoom;
       selectRoom(room);
       ensureValidDatesForReserve();
-      if (!validateFilters()) {
+      if (!validateFilters(room)) {
         event.preventDefault();
         return;
       }

@@ -835,6 +835,62 @@
         display: none !important;
       }
 
+      body.extra-booking-mode.extra-booking-decor {
+        overflow: auto !important;
+        background: #faf9f7;
+      }
+
+      body.extra-booking-mode.extra-booking-decor .extra-continue {
+        display: block !important;
+        padding-top: 72px;
+        padding-bottom: 48px;
+        min-height: 100dvh;
+      }
+
+      body.extra-booking-mode.extra-booking-decor .extra-order-modal {
+        display: none !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+      }
+
+      body.extra-booking-mode .extra-booking-return {
+        display: none;
+      }
+
+      body.extra-booking-mode.extra-booking-decor .extra-booking-return {
+        display: flex !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10030;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 14px 18px;
+        background: rgba(250, 249, 247, 0.96);
+        border-bottom: 1px solid rgba(44, 40, 36, 0.08);
+        box-shadow: 0 8px 24px rgba(28, 24, 20, 0.06);
+      }
+
+      body.extra-booking-mode.extra-booking-decor .extra-booking-return__btn {
+        appearance: none;
+        border: 1px solid rgba(44, 40, 36, 0.14);
+        background: #fff;
+        color: #2c2824;
+        border-radius: 999px;
+        padding: 8px 14px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      body.extra-booking-mode.extra-booking-decor .extra-booking-return__label {
+        margin: 0;
+        font-size: 13px;
+        color: #6e6760;
+      }
+
       body.extra-booking-mode {
         background: #faf9f7;
         overflow: hidden;
@@ -1257,6 +1313,7 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
+        z-index: 5;
         width: 32px;
         height: 32px;
         border: 1px solid rgba(44, 40, 36, 0.12);
@@ -4430,7 +4487,7 @@
     <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu-wrapper">
       <div class="offcanvas__logo">
-        <a href="/"><img src="img/logoo.webp" alt="Hotel in Prishtina"  loading="lazy" decoding="async" width="756" height="263"></a>
+        <a href="index.html"><img src="img/logoo.webp" alt="Hotel in Prishtina"  loading="lazy" decoding="async" width="756" height="263"></a>
       </div>
       <div id="mobile-menu-wrap"></div>
 
@@ -4461,7 +4518,7 @@
           <div class="row">
             <div class="col-lg-2">
               <div class="header__logo">
-                <a href="/"
+                <a href="index.html"
                   ><img src="img/logoo.webp" alt="Hotels in Pristina"
                  loading="lazy" decoding="async" width="756" height="263"></a>
               </div>
@@ -4471,32 +4528,32 @@
                 <nav class="header__menu">
                   <ul class="menu__class">
                     <li>
-                      <a href="/rooms" data-i18n="nav-rooms"
+                      <a href="rooms.html" data-i18n="nav-rooms"
                         >ROOMS & SUITES</a
                       >
                       <ul class="dropdown">
                         <li>
-                          <a href="/junior" data-i18n="nav-room-1"
+                          <a href="junior.html" data-i18n="nav-room-1"
                             >JUNIOR SUITE</a
                           >
                         </li>
                         <li>
-                          <a href="/deluxe-double" data-i18n="nav-room-2"
+                          <a href="deluxe-double.html" data-i18n="nav-room-2"
                             >DELUXE DOUBLE ROOM</a
                           >
                         </li>
                         <li>
-                          <a href="/superior-twin" data-i18n="nav-room-3"
+                          <a href="superior-twin.html" data-i18n="nav-room-3"
                             >SUPERIOR TWIN ROOM</a
                           >
                         </li>
                         <li>
-                          <a href="/premium-double" data-i18n="nav-room-4"
+                          <a href="premium-double.html" data-i18n="nav-room-4"
                             >PREMIUM DOUBLE ROOM</a
                           >
                         </li>
                         <li>
-                          <a href="/superior-double" data-i18n="nav-room-5"
+                          <a href="superior-double.html" data-i18n="nav-room-5"
                             >SUPERIOR DOUBLE ROOM</a
                           >
                         </li>
@@ -4504,20 +4561,20 @@
                     </li>
 
                     <li>
-                      <a href="/noya" data-i18n="nav-restaurant"
+                      <a href="noya.html" data-i18n="nav-restaurant"
                         >RESTAURANT & BAR</a
                       >
                       <ul class="dropdown">
                         <li>
                           <a
-                            href="/noya"
+                            href="noya.html"
                             data-i18n="nav-restaurant-1"
                             >NOYA</a
                           >
                         </li>
                         <li>
                           <a
-                            href="/omma"
+                            href="omma.html"
                             data-i18n="nav-restaurant-2"
                             >OMMA-Cafe & Buffet</a
                           >
@@ -4531,7 +4588,7 @@
                       >
                       <ul class="dropdown">
                         <li>
-                          <a href="/rinu" data-i18n="nav-activity-2"
+                          <a href="rinu.html" data-i18n="nav-activity-2"
                             >RINU MEDSPA</a
                           >
                         </li>
@@ -4547,7 +4604,7 @@
                       <a href="#" data-i18n="nav-offers">OFFERS</a>
                       <ul class="dropdown">
                         <li>
-                          <a href="/sunnyhill" data-i18n="nav-offer-1"
+                          <a href="sunnyhill.html" data-i18n="nav-offer-1"
                             >SUNNY HILL FESTIVAL</a
                           >
                         </li>
@@ -4560,25 +4617,25 @@
                     </li> -->
 
                     <li>
-                      <a href="/extra">Concierge</a>
+                      <a href="extra.html">Concierge</a>
                     </li>
 <!-- <li>
-                      <a href="/extra">EXTRA</a>
+                      <a href="extra.html">EXTRA</a>
                     </li>  -->
 
                     <li class="has-dropdown">
                       
-                      <a href="/contact" data-i18n="nav-inquiry">CONTACT</a>
+                      <a href="contact.html" data-i18n="nav-inquiry">CONTACT</a>
 
                       <ul class="dropdown">
                         <li>
-      <a href="/contact" data-i18n="nav-contact-us">CONTACT US</a>
+      <a href="contact.html" data-i18n="nav-contact-us">CONTACT US</a>
                         </li>
                         <li>
-                          <a href="/careers" data-i18n="footer-link-5">Careers</a>
+                          <a href="careers.html" data-i18n="footer-link-5">Careers</a>
                         </li>
                         <li>
-                          <a href="/faqs" data-i18n="nav-faqs">FAQS</a>
+                          <a href="faqs.html" data-i18n="nav-faqs">FAQS</a>
                         </li>
                       </ul>
                     </li>
@@ -4620,10 +4677,10 @@
       <div class="container">
         <div class="extra-hero__content">
           <h1 id="extra-heading-title" data-i18n="extra-hero-title">
-            Explore our exclusive products
+            Craft your perfect moments.
           </h1>
           <p id="extra-heading-subtitle" data-i18n="extra-hero-subtitle">
-            available at your room
+            Discover curated experiences, delivered straight to your room.
           </p>
           <a class="extra-hero__more" href="#extra-flowers"
             ><span data-i18n="extra-hero-more">More</span>
@@ -5268,6 +5325,13 @@
       </div> -->
     </section>
 
+    <div class="extra-booking-return" id="extra-booking-return" hidden>
+      <button type="button" class="extra-booking-return__btn" id="extra-booking-return-btn">
+        ← Back to booking
+      </button>
+      <p class="extra-booking-return__label">Choose in-room decor for your stay</p>
+    </div>
+
     <div class="extra-order-modal" id="extra-order-modal" aria-hidden="true">
       <div class="extra-order-modal__backdrop" data-modal-close></div>
       <div
@@ -5533,14 +5597,31 @@
                   >
                   <input
                     id="extra-checkout-reservation-name"
-                type="text"
-                name="lastName"
+                    type="text"
+                    name="lastName"
                     data-i18n-placeholder="extra-cart-name-placeholder"
                     placeholder="As on your booking"
                     autocomplete="name"
-                required
-              />
-            </div>
+                    required
+                  />
+                </div>
+                <div class="extra-delivery__field">
+                  <label
+                    for="extra-checkout-room-number"
+                    data-i18n="extra-cart-room-label"
+                    >Room number</label
+                  >
+                  <input
+                    id="extra-checkout-room-number"
+                    type="text"
+                    name="roomNumber"
+                    data-i18n-placeholder="extra-cart-room-placeholder"
+                    placeholder="e.g. 204"
+                    inputmode="text"
+                    autocomplete="off"
+                    required
+                  />
+                </div>
                 <div class="extra-delivery__row">
                   <div class="extra-delivery__field">
                     <label for="extra-checkout-date" data-i18n="extra-cart-date"
@@ -5635,11 +5716,11 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__brandbar">
-          <a href="/" class="footer__brandbar__logo">
+          <a href="index.html" class="footer__brandbar__logo">
             <img src="img/logo3.webp" alt="best hotel in pristina"  loading="lazy" decoding="async">
           </a>
           <span class="footer__brandbar__divider"></span>
-          <a href="/" class="footer__brandbar__partner">
+          <a href="index.html" class="footer__brandbar__partner">
             <span data-i18n="footer-powered">Powered by</span>
             <img src="img/logo/logo-1.webp" alt="Best hotels in Prishtina"  loading="lazy" decoding="async">
           </a>
@@ -5747,46 +5828,46 @@
                 <div class="footer__links__grid">
                   <ul>
                     <li>
-                      <a href="/contact" data-i18n="footer-link-1"
+                      <a href="contact.html" data-i18n="footer-link-1"
                         >Contact Us
                       </a>
                     </li>
                     <li>
-                      <a href="/our-location" data-i18n="footer-link-2"
+                      <a href="our-location.html" data-i18n="footer-link-2"
                         >Derand History</a
                       >
                     </li>
                     <li>
-                      <a href="/termsofservices" data-i18n="footer-link-3"
+                      <a href="termsofservices.html" data-i18n="footer-link-3"
                         >Terms of Service</a
                       >
                     </li>
                     <li>
-                      <a href="/guestapp" data-i18n="footer-link-4">Derand Magazine</a>
+                      <a href="guestapp.html" data-i18n="footer-link-4">Derand Magazine</a>
                     </li>
                   </ul>
                   <ul>
                     <li>
-                      <a href="/careers" data-i18n="footer-link-5">Careers</a>
+                      <a href="careers.html" data-i18n="footer-link-5">Careers</a>
                     </li>
                     <li>
-                      <a href="/faqs" data-i18n="footer-link-6"
+                      <a href="faqs.html" data-i18n="footer-link-6"
                         >FAQs</a
                       >
                     </li>
                     <li>
-                      <a href="/privacypolicy" data-i18n="footer-link-7"
+                      <a href="privacypolicy.html" data-i18n="footer-link-7"
                         >Privacy Policy</a
                       >
                     </li>
-                    <li><a href="/termsofservices" data-i18n="footer-link-8">Payments</a></li>
+                    <li><a href="termsofservices.html" data-i18n="footer-link-8">Payments</a></li>
                   </ul>
                   <ul>
                     <li>
-                      <a href="/guestapp" data-i18n="footer-link-9">Guest App </a>
+                      <a href="guestapp.html" data-i18n="footer-link-9">Guest App </a>
                     </li>
                     <li>
-                      <a href="/our-location" data-i18n="footer-link-11">Our Location</a>
+                      <a href="our-location.html" data-i18n="footer-link-11">Our Location</a>
                     </li>
                   </ul>
                 </div>
@@ -5835,7 +5916,7 @@
 
       </div>
     </footer>
-    <script src="js/extra-i18n.js?v=7"></script>
+    <script src="js/extra-i18n.js?v=9"></script>
     <script src="js/jquery-3.3.1.min.js" defer></script>
     <script src="js/bootstrap.min.js" defer></script>
     <script src="js/jquery.nice-select.min.js" defer></script>
@@ -5914,11 +5995,6 @@
             : EXTRA_DISCOVER_CATEGORY_ORDER.filter(function (key) {
                 return key !== categoryId;
               });
-          if (isBookingFlow) {
-            keys = keys.filter(function (key) {
-              return key !== "decor";
-            });
-          }
           return keys;
         }
         var FLOWER_CATALOG_IDS = [
@@ -6512,6 +6588,7 @@
             "Guest details",
             "-------------",
             "Name on reservation: " + (guest.lastName || ""),
+            "Room number: " + (guest.roomNumber || ""),
             "Delivery date: " + (guest.deliveryDate || ""),
             "Delivery time: " + (guest.deliveryTime || ""),
             "",
@@ -6531,7 +6608,9 @@
 
           return {
             subject:
-              "[Extra PAID] " +
+              "[Extra PAID] Room " +
+              (guest.roomNumber || "?") +
+              " \u2014 " +
               (guest.lastName || "Guest") +
               " \u2014 " +
               cartSnapshot.length +
@@ -6541,6 +6620,7 @@
             to_email: ORDER_TO_EMAIL,
             recipient: ORDER_TO_EMAIL,
             name: guest.lastName || "",
+            room_number: guest.roomNumber || "",
             delivery_date: guest.deliveryDate || "",
             delivery_time: guest.deliveryTime || "",
             order_items: orderLines.join("\n"),
@@ -7748,12 +7828,61 @@
           }
         }
 
-        function goBackToBookingDetails() {
-          window.location.href = getBookingDetailsUrl();
+        function getBookingDetailsUrl() {
+          var params = new URLSearchParams();
+          var source = bookingUrlParams || new URLSearchParams(window.location.search);
+          params.set("room", source.get("room") || "junior-suite");
+          params.set("checkin", source.get("checkin") || "");
+          params.set("checkout", source.get("checkout") || "");
+          params.set("adults", source.get("adults") || "1");
+          params.set("children", source.get("children") || "0");
+          var query = params.toString();
+          // Resolve against the current page so it works on the live site and local files.
+          try {
+            return new URL(
+              "booking-details.html" + (query ? "?" + query : ""),
+              window.location.href,
+            ).href;
+          } catch (e) {
+            return "booking-details.html" + (query ? "?" + query : "");
+          }
         }
 
-        function closeModal() {
-          if (isBookingFlow) {
+        function goBackToBookingDetails() {
+          var fallbackUrl = getBookingDetailsUrl();
+          try {
+            sessionStorage.setItem("derandBookingReturnFromExtras", "1");
+          } catch (e) {
+            /* ignore */
+          }
+          // Prefer the real previous page (booking details) when available.
+          try {
+            if (
+              window.history.length > 1 &&
+              document.referrer &&
+              document.referrer.indexOf("booking-details") >= 0
+            ) {
+              window.history.back();
+              window.setTimeout(function () {
+                if (
+                  document.body &&
+                  document.body.classList.contains("extra-booking-mode")
+                ) {
+                  window.location.href = fallbackUrl;
+                }
+              }, 500);
+              return;
+            }
+          } catch (e) {
+            /* ignore */
+          }
+          window.location.href = fallbackUrl;
+        }
+
+        function closeModal(options) {
+          options = options || {};
+          // Booking picker: leave and return to the booking page the guest came from.
+          if (isBookingFlow && options.returnToBooking !== false) {
             goBackToBookingDetails();
             return;
           }
@@ -7820,6 +7949,7 @@
           if (!checkoutForm || !cart.length) return false;
           return !!(
             (checkoutForm.lastName.value || "").trim() &&
+            (checkoutForm.roomNumber.value || "").trim() &&
             (checkoutForm.deliveryDate.value || "").trim() &&
             (checkoutForm.deliveryTime.value || "").trim()
           );
@@ -7827,7 +7957,7 @@
 
         function focusFirstEmptyCheckoutField() {
           if (!checkoutForm) return;
-          var names = ["lastName", "deliveryDate", "deliveryTime"];
+          var names = ["lastName", "roomNumber", "deliveryDate", "deliveryTime"];
           for (var i = 0; i < names.length; i++) {
             var el = checkoutForm[names[i]];
             if (!el || (el.value || "").trim()) continue;
@@ -7982,17 +8112,6 @@
           return true;
         }
 
-        function getBookingDetailsUrl() {
-          if (!bookingUrlParams) return "/booking-details";
-          var params = new URLSearchParams();
-          params.set("room", bookingUrlParams.get("room") || "junior-suite");
-          params.set("checkin", bookingUrlParams.get("checkin") || "");
-          params.set("checkout", bookingUrlParams.get("checkout") || "");
-          params.set("adults", bookingUrlParams.get("adults") || "1");
-          params.set("children", bookingUrlParams.get("children") || "0");
-          return "/booking-details?" + params.toString();
-        }
-
         function loadStoredBookingLines() {
           try {
             var raw = sessionStorage.getItem("derandBookingExtraLines");
@@ -8137,6 +8256,64 @@
           goBackToBookingDetails();
         }
 
+        function showBookingDecorPicker() {
+          document.body.classList.add("extra-booking-decor");
+          document.body.style.overflow = "";
+          var returnBar = document.getElementById("extra-booking-return");
+          if (returnBar) returnBar.hidden = false;
+          var decorSection = document.querySelector(".extra-continue");
+          if (decorSection && typeof decorSection.scrollIntoView === "function") {
+            decorSection.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+          var decorAddButton = document.getElementById("extra-decor-add-cart");
+          if (decorAddButton && typeof decorAddButton.focus === "function") {
+            window.setTimeout(function () {
+              decorAddButton.focus({ preventScroll: true });
+            }, 200);
+          }
+        }
+
+        function hideBookingDecorPicker() {
+          document.body.classList.remove("extra-booking-decor");
+          var returnBar = document.getElementById("extra-booking-return");
+          if (returnBar) returnBar.hidden = true;
+        }
+
+        function bookingLineFromCartItem(lineItem) {
+          var base = String(lineItem.productBase || "Decor item").trim();
+          var variant = String(lineItem.variantLabel || "").trim();
+          var slug = (base + (variant ? "-" + variant : ""))
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, "-")
+            .replace(/(^-|-$)/g, "");
+          return {
+            id: "decor-" + (slug || String(Date.now())),
+            label: variant && variant.toLowerCase().indexOf("only") >= 0
+              ? base
+              : base + (variant ? " — " + variant : ""),
+            price: Number(lineItem.price) || 0,
+            image: lineItem.image || "",
+            category: "decor",
+            qty: lineItem.qty || 1,
+            description: lineItem.description || "",
+          };
+        }
+
+        function addDecorLineToBooking(lineItem) {
+          var line = bookingLineFromCartItem(lineItem);
+          if (!line.price || line.price <= 0) return false;
+          upsertBookingLine(line);
+          return true;
+        }
+
+        function finishBookingDecorAdd() {
+          if (!isBookingFlow) return;
+          showToast(i18n("extra-toast-added-booking"));
+          window.setTimeout(function () {
+            goBackToBookingDetails();
+          }, 250);
+        }
+
         function initBookingFlow() {
           bookingUrlParams = new URLSearchParams(window.location.search);
           if (bookingUrlParams.get("from") !== "booking") return;
@@ -8165,18 +8342,19 @@
           var preloder = document.getElementById("preloder");
           if (preloder) preloder.style.display = "none";
 
+          var returnBtn = document.getElementById("extra-booking-return-btn");
+          if (returnBtn) {
+            returnBtn.addEventListener("click", function () {
+              goBackToBookingDetails();
+            });
+          }
+
           function openBookingCategoryModal() {
             if (focus === "decor") {
-              var decorSection = document.querySelector(".extra-continue");
-              if (decorSection && typeof decorSection.scrollIntoView === "function") {
-                decorSection.scrollIntoView({ behavior: "smooth", block: "start" });
-              }
-              var decorAddButton = document.getElementById("extra-decor-add-cart");
-              if (decorAddButton && typeof decorAddButton.focus === "function") {
-                decorAddButton.focus({ preventScroll: true });
-              }
+              showBookingDecorPicker();
               return;
             }
+            hideBookingDecorPicker();
             var trigger = document.querySelector(triggerSelector);
             if (trigger) {
               openModal(trigger);
@@ -8356,8 +8534,13 @@
         }
 
         window.derandAddToCart = function (lineItem) {
+          if (isBookingFlow) {
+            return addDecorLineToBooking(lineItem);
+          }
           return addLineToCart(lineItem, { closeModal: false });
         };
+        window.derandFinishBookingDecorAdd = finishBookingDecorAdd;
+        window.derandShowBookingDecorPicker = showBookingDecorPicker;
 
         function changeCartQty(id, delta) {
           for (var i = 0; i < cart.length; i++) {
@@ -8400,6 +8583,11 @@
             var discoverKey = discoverBtn.getAttribute("data-extra-discover");
             if (discoverKey === "decor") {
               event.preventDefault();
+              if (isBookingFlow) {
+                closeModal({ returnToBooking: false });
+                showBookingDecorPicker();
+                return;
+              }
               closeModal();
               window.setTimeout(function () {
                 var decorSection = document.querySelector(".extra-continue");
@@ -8436,7 +8624,8 @@
             return;
           }
           if (event.target.closest("[data-modal-close]")) {
-            closeModal();
+            // Outside the product box (or ×): return to the booking page.
+            closeModal({ returnToBooking: true });
             return;
           }
           if (event.target.closest("[data-cart-close]")) {
@@ -8501,7 +8690,9 @@
           });
         }
 
-        imagePrevBtn.addEventListener("click", function () {
+        imagePrevBtn.addEventListener("click", function (event) {
+          event.preventDefault();
+          event.stopPropagation();
           if (isSpiritsOrder) {
             if (spiritsProducts.length <= 1) return;
             currentImageIndex =
@@ -8517,7 +8708,9 @@
           updateModalView();
         });
 
-        imageNextBtn.addEventListener("click", function () {
+        imageNextBtn.addEventListener("click", function (event) {
+          event.preventDefault();
+          event.stopPropagation();
           if (isSpiritsOrder) {
             if (spiritsProducts.length <= 1) return;
             currentImageIndex =
@@ -8542,7 +8735,7 @@
         document.addEventListener("keydown", function (event) {
           if (event.key !== "Escape") return;
           if (isBookingFlow && modal.classList.contains("is-open")) {
-            goBackToBookingDetails();
+            closeModal({ returnToBooking: true });
             return;
           }
           if (cartDrawer.classList.contains("is-open")) closeCart();
@@ -8565,6 +8758,7 @@
 
           clearCheckoutStatus();
           var lastName = (checkoutForm.lastName.value || "").trim();
+          var roomNumber = (checkoutForm.roomNumber.value || "").trim();
           var deliveryDate = (checkoutForm.deliveryDate.value || "").trim();
           var deliveryTime = (checkoutForm.deliveryTime.value || "").trim();
           var message = (checkoutForm.message.value || "").trim();
@@ -8603,12 +8797,18 @@
             },
             body: JSON.stringify({
               productName:
-                "Extra order (" + cartSnapshot.length + " item(s)) — " + lastName,
+                "Extra order Room " +
+                roomNumber +
+                " (" +
+                cartSnapshot.length +
+                " item(s)) — " +
+                lastName,
               lastName: lastName,
+              roomNumber: roomNumber,
               deliveryDate: deliveryDate,
               deliveryTime: deliveryTime,
               message: message,
-              returnPath: "/extra",
+              returnPath: "/extra.html",
               items: paymentItems,
             }),
           })
@@ -8622,6 +8822,7 @@
                 orderIdentification: data.orderIdentification || "",
                 guest: {
                   lastName: lastName,
+                  roomNumber: roomNumber,
                   deliveryDate: deliveryDate,
                   deliveryTime: deliveryTime,
                   message: message,
@@ -9352,63 +9553,87 @@
             if (decorAddHint) decorAddHint.textContent = "";
 
             var decorName = getDecorCartName(current);
-            window.derandAddToCart({
-              productBase: decorName,
-              variantLabel: decorT("extra-decor-variant-only"),
-              image: current.src,
-              price: current.priceAmount,
-              qty: 1,
-              description: current.descriptionKey
-                ? decorT(current.descriptionKey)
-                : current.description || "",
-            });
+            var addedAny = false;
+            if (
+              window.derandAddToCart({
+                productBase: decorName,
+                variantLabel: decorT("extra-decor-variant-only"),
+                image: current.src,
+                price: current.priceAmount,
+                qty: 1,
+                description: current.descriptionKey
+                  ? decorT(current.descriptionKey)
+                  : current.description || "",
+              })
+            ) {
+              addedAny = true;
+            }
 
             if (current.showExtras) {
               if (selectedExtras.flower) {
                 var flower = getFlower();
                 var flowerName = getDecorCatalogName(flower, "flower");
-                window.derandAddToCart({
-                  productBase: flowerName,
-                  variantLabel: "",
-                  image: flower.image,
-                  price: flower.price,
-                  qty: 1,
-                  description: decorT("extra-decor-with", {
-                    extra: flowerName,
-                    decor: decorName,
-                  }),
-                });
+                if (
+                  window.derandAddToCart({
+                    productBase: flowerName,
+                    variantLabel: "",
+                    image: flower.image,
+                    price: flower.price,
+                    qty: 1,
+                    description: decorT("extra-decor-with", {
+                      extra: flowerName,
+                      decor: decorName,
+                    }),
+                  })
+                ) {
+                  addedAny = true;
+                }
               }
               if (selectedExtras.chocolate) {
                 var chocolate = getChocolate();
                 var chocolateName = getDecorCatalogName(chocolate, "chocolate");
-                window.derandAddToCart({
-                  productBase: chocolateName,
-                  variantLabel: "",
-                  image: chocolate.image,
-                  price: chocolate.price,
-                  qty: 1,
-                  description: decorT("extra-decor-with", {
-                    extra: chocolateName,
-                    decor: decorName,
-                  }),
-                });
+                if (
+                  window.derandAddToCart({
+                    productBase: chocolateName,
+                    variantLabel: "",
+                    image: chocolate.image,
+                    price: chocolate.price,
+                    qty: 1,
+                    description: decorT("extra-decor-with", {
+                      extra: chocolateName,
+                      decor: decorName,
+                    }),
+                  })
+                ) {
+                  addedAny = true;
+                }
               }
               if (selectedExtras.perfume) {
                 var perfume = getPerfume();
                 var perfumeName = getDecorCatalogName(perfume, "perfume");
-                window.derandAddToCart({
-                  productBase: perfumeName,
-                  variantLabel: "",
-                  image: perfume.image,
-                  price: perfume.price,
-                  qty: 1,
-                  description: decorT("extra-decor-with", {
-                    extra: perfumeName,
-                    decor: decorName,
-                  }),
-                });
+                if (
+                  window.derandAddToCart({
+                    productBase: perfumeName,
+                    variantLabel: "",
+                    image: perfume.image,
+                    price: perfume.price,
+                    qty: 1,
+                    description: decorT("extra-decor-with", {
+                      extra: perfumeName,
+                      decor: decorName,
+                    }),
+                  })
+                ) {
+                  addedAny = true;
+                }
               }
+            }
+
+            if (
+              addedAny &&
+              typeof window.derandFinishBookingDecorAdd === "function"
+            ) {
+              window.derandFinishBookingDecorAdd();
             }
           });
         }

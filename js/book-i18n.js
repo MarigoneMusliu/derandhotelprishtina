@@ -93,6 +93,8 @@
         "Please choose a valid check-in and check-out date.",
       "book-status-blocked-dates":
         "These dates cannot be processed. Please choose other dates.",
+      "book-status-junior-fully-booked":
+        "The Junior Suite is fully booked for these dates. Please search for another room.",
       "book-status-updated":
         "Dates and guests updated. Choose any room below to continue.",
       "book-status-opening": "Opening guest details for {room}...",
@@ -187,6 +189,8 @@
         "Bitte w\u00e4hlen Sie g\u00fcltige An- und Abreisedaten.",
       "book-status-blocked-dates":
         "Diese Daten k\u00f6nnen nicht verarbeitet werden. Bitte w\u00e4hlen Sie andere Daten.",
+      "book-status-junior-fully-booked":
+        "Die Junior Suite ist f\u00fcr diese Daten ausgebucht. Bitte suchen Sie nach einem anderen Zimmer.",
       "book-status-updated":
         "Daten und G\u00e4ste aktualisiert. W\u00e4hlen Sie unten ein Zimmer, um fortzufahren.",
       "book-status-opening": "G\u00e4stedetails f\u00fcr {room} werden ge\u00f6ffnet...",
@@ -281,6 +285,8 @@
         "Ju lutemi zgjidhni data t\u00eb vlefshme t\u00eb check-in dhe check-out.",
       "book-status-blocked-dates":
         "K\u00ebto data nuk mund t\u00eb procesohen. Ju lutemi zgjidhni data t\u00eb tjera.",
+      "book-status-junior-fully-booked":
+        "Suite Junior \u00ebsht\u00eb plot\u00ebsisht e rezervuar p\u00ebr k\u00ebto data. Ju lutemi k\u00ebrkoni nj\u00eb dhom\u00eb tjet\u00ebr.",
       "book-status-updated":
         "Datat dhe mysafir\u00ebt u p\u00ebrdit\u00ebsuan. Zgjidhni nj\u00eb dhom\u00eb m\u00eb posht\u00eb p\u00ebr t\u00eb vazhduar.",
       "book-status-opening": "Duke hapur detajet e mysafir\u00ebt p\u00ebr {room}...",

@@ -372,10 +372,13 @@
               <label class="booking-field booking-field--half">
                 <span data-i18n="bd-label-phone">Phone Number</span>
                 <input
-                  type="tel"
+                  type="text"
                   id="booking-phone"
                   name="phone"
                   autocomplete="tel"
+                  inputmode="text"
+                  maxlength="40"
+                  spellcheck="false"
                   required
                 />
               </label>
@@ -822,8 +825,8 @@
     <script src="js/tidio-left-position.js?v=2" defer></script>
     -->
     <!-- Chatbase disabled on booking-details -->
-    <script src="js/booking-shared.js?v=6" defer></script>
-    <script src="js/booking-details-i18n.js?v=4" defer></script>
-    <script src="js/booking-details.js?v=25" defer></script>
+    <script src="js/booking-shared.js?v=8" defer></script>
+    <script src="js/booking-details-i18n.js?v=5" defer></script>
+    <script src="js/booking-details.js?v=34" defer></script>
   </body>
 </html>

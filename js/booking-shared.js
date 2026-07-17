@@ -120,6 +120,26 @@
     bottle: { id: "bottle", label: "Champagne & spirits", items: BOTTLE_ITEMS },
     chocolate: { id: "chocolate", label: "Tog chocolates", items: CHOCOLATE_ITEMS },
     perfume: { id: "perfume", label: "Perfumes", items: PERFUME_ITEMS },
+    decor: {
+      id: "decor",
+      label: "Decor",
+      items: [
+        {
+          id: "decor-valentine",
+          label: "Valentine decor",
+          image: "img/valentineday.webp",
+          price: 60,
+          category: "decor",
+        },
+        {
+          id: "decor-birthday",
+          label: "Birthday decor",
+          image: "img/birthday.png",
+          price: 60,
+          category: "decor",
+        },
+      ],
+    },
   };
 
   var EXTRA_ITEMS = {};
@@ -249,14 +269,18 @@
     return EXTRA_ITEMS[id] || null;
   }
 
-  // Nights closed for all rooms (hotel night = check-in date through day before check-out).
-  var BLOCKED_NIGHTS = [
-    "2026-07-30",
+  // Hotel night = check-in date through the day before check-out.
+  // Special event rate for all bookable rooms (Junior Suite is sold out on these nights).
+  var SPECIAL_RATE_NIGHTS = [
     "2026-07-31",
     "2026-08-01",
     "2026-08-02",
     "2026-08-03",
   ];
+  var SPECIAL_RATE_EUR = 350;
+  var JUNIOR_SUITE_BLOCKED_NIGHTS = SPECIAL_RATE_NIGHTS.slice();
+  // Legacy: nights closed for every room (none currently).
+  var BLOCKED_NIGHTS = [];
 
   function parseIsoDate(value) {
     if (!value) return null;
@@ -272,27 +296,75 @@
     return date.getFullYear() + "-" + month + "-" + day;
   }
 
-  function isBlockedNight(iso) {
-    return BLOCKED_NIGHTS.indexOf(String(iso || "")) >= 0;
-  }
-
-  function getBlockedNightsInStay(checkinIso, checkoutIso) {
+  function eachNightIso(checkinIso, checkoutIso) {
     var start = parseIsoDate(checkinIso);
     var end = parseIsoDate(checkoutIso);
     if (!start || !end || end <= start) return [];
 
-    var hits = [];
+    var nights = [];
     var cursor = new Date(start.getFullYear(), start.getMonth(), start.getDate());
     while (cursor < end) {
-      var iso = formatIsoDate(cursor);
-      if (isBlockedNight(iso)) hits.push(iso);
+      nights.push(formatIsoDate(cursor));
       cursor.setDate(cursor.getDate() + 1);
     }
-    return hits;
+    return nights;
+  }
+
+  function isBlockedNight(iso) {
+    return BLOCKED_NIGHTS.indexOf(String(iso || "")) >= 0;
+  }
+
+  function isSpecialRateNight(iso) {
+    return SPECIAL_RATE_NIGHTS.indexOf(String(iso || "")) >= 0;
+  }
+
+  function isJuniorSuiteBlockedNight(iso) {
+    return JUNIOR_SUITE_BLOCKED_NIGHTS.indexOf(String(iso || "")) >= 0;
+  }
+
+  function getBlockedNightsInStay(checkinIso, checkoutIso) {
+    return eachNightIso(checkinIso, checkoutIso).filter(isBlockedNight);
+  }
+
+  function getSpecialRateNightsInStay(checkinIso, checkoutIso) {
+    return eachNightIso(checkinIso, checkoutIso).filter(isSpecialRateNight);
+  }
+
+  function getJuniorSuiteBlockedNightsInStay(checkinIso, checkoutIso) {
+    return eachNightIso(checkinIso, checkoutIso).filter(isJuniorSuiteBlockedNight);
   }
 
   function stayOverlapsBlockedNights(checkinIso, checkoutIso) {
     return getBlockedNightsInStay(checkinIso, checkoutIso).length > 0;
+  }
+
+  function stayOverlapsJuniorSuiteBlocked(checkinIso, checkoutIso) {
+    return getJuniorSuiteBlockedNightsInStay(checkinIso, checkoutIso).length > 0;
+  }
+
+  function applyNightlySpecialRate(baseRate, nightIso) {
+    var base = Number(baseRate) || 0;
+    return isSpecialRateNight(nightIso) ? SPECIAL_RATE_EUR : base;
+  }
+
+  function getStayRoomTotal(baseRate, checkinIso, checkoutIso) {
+    var nights = eachNightIso(checkinIso, checkoutIso);
+    if (!nights.length) return 0;
+    var total = 0;
+    for (var i = 0; i < nights.length; i++) {
+      total += applyNightlySpecialRate(baseRate, nights[i]);
+    }
+    return total;
+  }
+
+  function getStayAverageNightly(baseRate, checkinIso, checkoutIso) {
+    var nights = eachNightIso(checkinIso, checkoutIso);
+    if (!nights.length) return Number(baseRate) || 0;
+    return getStayRoomTotal(baseRate, checkinIso, checkoutIso) / nights.length;
+  }
+
+  function stayHasSpecialRate(checkinIso, checkoutIso) {
+    return getSpecialRateNightsInStay(checkinIso, checkoutIso).length > 0;
   }
 
   global.DerandBooking = {
@@ -300,6 +372,9 @@
     CATEGORIES: CATEGORIES,
     EXTRA_ITEMS: EXTRA_ITEMS,
     BLOCKED_NIGHTS: BLOCKED_NIGHTS.slice(),
+    SPECIAL_RATE_NIGHTS: SPECIAL_RATE_NIGHTS.slice(),
+    SPECIAL_RATE_EUR: SPECIAL_RATE_EUR,
+    JUNIOR_SUITE_BLOCKED_NIGHTS: JUNIOR_SUITE_BLOCKED_NIGHTS.slice(),
     loadBookingLines: loadBookingLines,
     saveBookingLines: saveBookingLines,
     clearBookingLines: clearBookingLines,
@@ -314,8 +389,18 @@
     getCategoryMeta: getCategoryMeta,
     categoryHasExtras: categoryHasExtras,
     getItemById: getItemById,
+    eachNightIso: eachNightIso,
     isBlockedNight: isBlockedNight,
+    isSpecialRateNight: isSpecialRateNight,
+    isJuniorSuiteBlockedNight: isJuniorSuiteBlockedNight,
     getBlockedNightsInStay: getBlockedNightsInStay,
+    getSpecialRateNightsInStay: getSpecialRateNightsInStay,
+    getJuniorSuiteBlockedNightsInStay: getJuniorSuiteBlockedNightsInStay,
     stayOverlapsBlockedNights: stayOverlapsBlockedNights,
+    stayOverlapsJuniorSuiteBlocked: stayOverlapsJuniorSuiteBlocked,
+    applyNightlySpecialRate: applyNightlySpecialRate,
+    getStayRoomTotal: getStayRoomTotal,
+    getStayAverageNightly: getStayAverageNightly,
+    stayHasSpecialRate: stayHasSpecialRate,
   };
 })(typeof window !== "undefined" ? window : this);

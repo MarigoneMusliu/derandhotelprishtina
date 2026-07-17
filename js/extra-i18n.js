@@ -8,8 +8,9 @@
       "extra-page-title": "Concierge | Hotel in Prishtina",
       "extra-meta-description":
         "Derand Hotel Extra offers curated in-room surprises and premium add-ons in Pristina.",
-      "extra-hero-title": "Explore our exclusive products",
-      "extra-hero-subtitle": "available at your room",
+      "extra-hero-title": "Craft your perfect moments.",
+      "extra-hero-subtitle":
+        "Discover curated experiences, delivered straight to your room.",
       "extra-hero-more": "More",
       "extra-signature-the": "The",
       "extra-signature-collection": "Signature Collection",
@@ -92,6 +93,8 @@
         "Tell us when to bring your order to your room.",
       "extra-cart-name-label": "Name on reservation",
       "extra-cart-name-placeholder": "As on your booking",
+      "extra-cart-room-label": "Room number",
+      "extra-cart-room-placeholder": "e.g. 204",
       "extra-cart-date": "Date",
       "extra-cart-time": "Time",
       "extra-cart-notes": "Notes",
@@ -334,8 +337,9 @@
       "extra-page-title": "Concierge | Hotel in Pristina",
       "extra-meta-description":
         "Derand Hotel Extra bietet kuratierte \u00dcberraschungen und Premium-Zusatzleistungen auf dem Zimmer in Pristina.",
-      "extra-hero-title": "Entdecken Sie unsere exklusiven Produkte",
-      "extra-hero-subtitle": "verf\u00fcgbar auf Ihrem Zimmer",
+      "extra-hero-title": "Gestalten Sie Ihre perfekten Momente.",
+      "extra-hero-subtitle":
+        "Entdecken Sie kuratierte Erlebnisse – direkt auf Ihr Zimmer geliefert.",
       "extra-hero-more": "Mehr",
       "extra-signature-the": "Die",
       "extra-signature-collection": "Signature Kollektion",
@@ -422,6 +426,8 @@
         "Teilen Sie uns mit, wann wir Ihre Bestellung auf Ihr Zimmer bringen sollen.",
       "extra-cart-name-label": "Name der Reservierung",
       "extra-cart-name-placeholder": "Wie in Ihrer Buchung",
+      "extra-cart-room-label": "Zimmernummer",
+      "extra-cart-room-placeholder": "z. B. 204",
       "extra-cart-date": "Datum",
       "extra-cart-time": "Uhrzeit",
       "extra-cart-notes": "Notizen",
@@ -666,8 +672,9 @@
       "extra-page-title": "Concierge | Hotel n\u00eb Prishtin\u00eb",
       "extra-meta-description":
         "Derand Hotel Extra ofron surpriza dhe shtesa premium n\u00eb dhom\u00eb n\u00eb Prishtin\u00eb.",
-      "extra-hero-title": "Zbuloni produktet tona ekskluzive",
-      "extra-hero-subtitle": "t\u00eb disponueshme n\u00eb dhom\u00ebn tuaj",
+      "extra-hero-title": "Krijoni momentet tuaja të përsosura.",
+      "extra-hero-subtitle":
+        "Zbuloni përvoja të kuruara, të dorëzuara direkt në dhomën tuaj.",
       "extra-hero-more": "M\u00eb shum\u00eb",
       "extra-signature-the": "",
       "extra-signature-collection": "Koleksioni Signature",
@@ -750,6 +757,8 @@
         "Na tregoni kur ta çojmë porosinë në dhomën tuaj.",
       "extra-cart-name-label": "Emri në rezervim",
       "extra-cart-name-placeholder": "Si në rezervimin tuaj",
+      "extra-cart-room-label": "Numri i dhomës",
+      "extra-cart-room-placeholder": "p.sh. 204",
       "extra-cart-date": "Data",
       "extra-cart-time": "Ora",
       "extra-cart-notes": "Shënime",

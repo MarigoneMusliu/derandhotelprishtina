@@ -19,9 +19,9 @@ return [
     'booking_room_rates' => [
         'junior-suite' => ['single' => 131, 'double' => 138],
         'deluxe-double' => ['single' => 97, 'double' => 102],
-        'premium-double' => ['single' => 114, 'double' => 114, 'triple' => 154],
+        'premium-double' => ['single' => 114, 'double' => 130, 'triple' => 154],
         'superior-twin' => ['single' => 79, 'double' => 92],
-        'superior-double' => ['single' => 92, 'double' => 92],
+        'superior-double' => ['single' => 92, 'double' => 102],
     ],
     'booking_tax_rate' => 0,
     'is_production' => false,

@@ -124,7 +124,18 @@
   }
 
   function getRoomTotal(state) {
-    return (ROOM_NIGHTLY[state.room] || 0) * getNightCount(state);
+    var base = ROOM_NIGHTLY[state.room] || 0;
+    if (
+      window.DerandBooking &&
+      typeof window.DerandBooking.getStayRoomTotal === "function"
+    ) {
+      return window.DerandBooking.getStayRoomTotal(
+        base,
+        state.checkin,
+        state.checkout,
+      );
+    }
+    return base * getNightCount(state);
   }
 
   function buildDetailsUrl(state, extrasIds) {

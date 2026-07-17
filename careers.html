@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Derand Hotel Careers in Pristina Luxury offers Premium Rooms, refined hospitality, and elevated city-stay comfort for business and leisure travelers." />
+    <meta name="description" content="Apply to Derand Hotel in Pristina. Submit an open application with your details and CV." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Careers</title>
+    <title>Careers | Derand Hotel</title>
     <link rel="canonical" href="https://www.derandhotel.com/careers.html" />
     <link rel="alternate" hreflang="en" href="https://www.derandhotel.com/careers.html" />
     <link rel="alternate" hreflang="de" href="https://www.derandhotel.com/careers.html" />
@@ -15,180 +15,273 @@
     <link rel="icon" href="favicon.ico?v=14" type="image/x-icon" />
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="css/plugins.min.css" type="text/css" />
-<link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
     <style>
-      
       .career-page
         *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]):not([class^="icon_"]):not([class*=" icon_"]) {
-        font-family: "Noto Serif", serif !important;
+        font-family: "Noto Serif", Georgia, serif !important;
         font-weight: 400 !important;
       }
       .career-page input::placeholder,
-      .career-page textarea::placeholder {
-        font-family: "Noto Serif", serif !important;
+      .career-page select {
+        font-family: "Noto Serif", Georgia, serif !important;
       }
-      .career-page [data-parallax] {
-        will-change: transform;
-      }
-      .career-page { background: #f7f5f2; color: #25211f; }
-      .career-shell { padding-top: 92px; }
-      .career-hero {
-        position: relative;
-        padding: 86px 0 62px;
+      .career-page {
+        color: #1f1b16;
         background:
-          linear-gradient(180deg, rgba(16, 14, 13, 0.7) 0%, rgba(16, 14, 13, 0.74) 100%),
-          url("img/careers.webp") center center / cover no-repeat;
-        border-bottom: 1px solid rgba(177, 114, 86, 0.22);
+          radial-gradient(ellipse 70% 45% at 50% 0%, rgba(177, 114, 86, 0.08), transparent 55%),
+          linear-gradient(180deg, #f8f4ee 0%, #f3efe8 45%, #ebe4da 100%);
       }
-      .career-hero .container {
-        position: relative;
-        z-index: 1;
-      }
-      .career-kicker {
-        margin: 0 0 12px;
-        text-transform: uppercase;
-        letter-spacing: 0.2em;
-        font-size: 12px;
-        color: #d6a692;
-        font-weight: 600;
-      }
-      .career-title {
-        margin: 0 0 10px;
-        font-family: "Noto Serif", serif !important;
-        font-size: clamp(36px, 4.3vw, 60px);
-        color: #ffffff;
-      }
-      .career-sub {
-        margin: 0;
-        max-width: 760px;
-        color: rgba(255, 255, 255, 0.92);
-        font-size: 17px;
-        line-height: 1.7;
-      }
-
-      .career-main { padding: 52px 0 56px; }
+      .career-shell { padding-top: 92px; }
       .footer { margin: 0; padding-bottom: 0; }
-      .career-grid { display: grid; grid-template-columns: 320px 1fr; gap: 30px; align-items: start; }
-      .career-open-box {
-        background: transparent;
-        border: 1px solid rgba(177, 114, 86, 0.24);
-        border-radius: 14px;
-        padding: 24px;
-        margin-left: -18px;
+
+      .careers-stage {
+        min-height: calc(100vh - 92px);
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding: max(24px, env(safe-area-inset-top)) 16px max(48px, env(safe-area-inset-bottom));
+        overflow-x: clip;
       }
-      .career-open-box h3 {
-        margin: 0 0 10px;
-        font-family: "Noto Serif", serif !important;
-        font-size: 32px;
-        color: #2a2320;
-      }
-      .career-open-box p {
-        margin: 0 0 14px;
-        color: #5f5750;
-        line-height: 1.65;
-        font-size: 14px;
-      }
-      .career-open-form label {
-        display: block;
-        margin-bottom: 6px;
-        color: #6c6159;
-        font-size: 12px;
-        text-transform: uppercase;
-        letter-spacing: 0.12em;
-      }
-      .career-open-box input,
-      .career-open-box select {
-        width: 100%;
-        height: 42px;
-        margin-bottom: 12px;
-        border: 0;
-        border-bottom: 1px solid rgba(177, 114, 86, 0.45);
-        border-radius: 0;
-        background: transparent;
-        padding: 0 2px;
-        font-size: 14px;
-        color: #3d3530;
-      }
-      .career-open-box input:focus,
-      .career-open-box select:focus {
-        outline: none;
-        border-bottom-color: #b17256;
-      }
-      .career-open-btn {
-        display: block;
-        width: 100%;
-        height: 40px;
-        border: 0;
+      .careers-panel {
+        width: min(100%, 520px);
+        margin: 24px auto 0;
+        padding: clamp(22px, 4vw, 36px);
+        background: rgba(255, 253, 250, 0.96);
+        border: 1px solid rgba(31, 27, 22, 0.08);
         border-radius: 6px;
-        background: #b17256;
-        color: #fff;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        font-weight: 700;
-        font-size: 11px;
-        line-height: 40px;
+        box-shadow: 0 18px 48px rgba(31, 27, 22, 0.06);
+      }
+      .careers-panel__eyebrow {
+        margin: 0 0 10px;
         text-align: center;
-        text-decoration: none;
-        margin-top: 6px;
+        color: #b17256;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+      }
+      .careers-panel__title {
+        margin: 0 0 10px;
+        text-align: center;
+        font-size: clamp(1.55rem, 5vw, 2.15rem);
+        font-weight: 500;
+        font-style: italic;
+        line-height: 1.15;
+        color: #1f1b16;
+      }
+      .careers-panel__lead {
+        margin: 0 auto 24px;
+        max-width: 38ch;
+        text-align: center;
+        color: #6b6359;
+        font-size: clamp(13px, 3.5vw, 15px);
+        line-height: 1.55;
+      }
+      .careers-form { display: grid; gap: 14px; }
+      .careers-form__row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      .careers-field {
+        min-width: 0;
+      }
+      .careers-field label {
+        display: block;
+        margin-bottom: 7px;
+        color: #847668;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+      .careers-field input {
+        width: 100%;
+        min-height: 48px;
+        padding: 0 14px;
+        border: 1px solid rgba(31, 27, 22, 0.12);
+        border-radius: 4px;
+        background: #fff;
+        color: #1f1b16;
+        font-size: 16px;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      }
+      .careers-field input:focus {
+        outline: none;
+        border-color: rgba(177, 114, 86, 0.55);
+        box-shadow: 0 0 0 3px rgba(177, 114, 86, 0.1);
       }
 
-      .career-list-head {
-        margin: 0 0 16px;
-        text-transform: uppercase;
-        letter-spacing: 0.19em;
-        font-size: 12px;
-        color: #7a6e65;
+      /* Custom department dropdown — stays inside the form, scrollable */
+      .careers-select {
+        position: relative;
+        z-index: 5;
       }
-      .career-list-scroll { max-height: none; overflow: visible; padding-right: 0; }
-      .career-list-scroll::-webkit-scrollbar { width: 0; } .career-list-scroll::-webkit-scrollbar-thumb { background: transparent; }
-      .career-item {
-        display: grid;
-        grid-template-columns: 88px 1fr 20px;
-        gap: 16px;
-        align-items: center;
-        padding: 17px 12px;
-        border: 1px solid transparent;
-        border-top: 1px solid rgba(177, 114, 86, 0.25);
-        border-radius: 10px;
-        text-decoration: none;
-        transition: background-color 0.2s ease, border-color 0.2s ease;
+      .careers-select__trigger {
+        width: 100%;
+        min-height: 48px;
+        padding: 0 44px 0 14px;
+        border: 1px solid rgba(31, 27, 22, 0.12);
+        border-radius: 4px;
+        background: #fff;
+        color: #1f1b16;
+        font-size: 16px;
+        text-align: left;
+        cursor: pointer;
+        position: relative;
       }
-      .career-item:hover {
-        background: #fffdfa;
-        border-color: rgba(177, 114, 86, 0.3);
+      .careers-select__trigger::after {
+        content: "";
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        width: 8px;
+        height: 8px;
+        border-right: 1.5px solid #847668;
+        border-bottom: 1.5px solid #847668;
+        transform: translateY(-65%) rotate(45deg);
+        transition: transform 0.2s ease;
       }
-      .career-item img { width: 100%; opacity: 0.74; }
-      .career-item h4 {
-        margin: 0 0 5px;
-        font-size: 24px;
-        line-height: 1.2;
-        color: #262220;
-        text-decoration: none;
+      .careers-select.is-open .careers-select__trigger::after {
+        transform: translateY(-20%) rotate(-135deg);
+      }
+      .careers-select__trigger.is-placeholder {
+        color: #9a9086;
+      }
+      .careers-select__trigger:focus {
+        outline: none;
+        border-color: rgba(177, 114, 86, 0.55);
+        box-shadow: 0 0 0 3px rgba(177, 114, 86, 0.1);
+      }
+      .careers-select__menu {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: calc(100% + 6px);
+        max-height: min(240px, 42vh);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 0;
+        padding: 6px;
+        list-style: none;
+        background: #fff;
+        border: 1px solid rgba(31, 27, 22, 0.12);
+        border-radius: 4px;
+        box-shadow: 0 14px 36px rgba(31, 27, 22, 0.12);
+        z-index: 20;
+      }
+      .careers-select.is-open .careers-select__menu {
+        display: block;
+      }
+      .careers-select__option {
+        display: block;
+        width: 100%;
+        padding: 12px 12px;
+        border: 0;
+        border-radius: 3px;
+        background: transparent;
+        color: #1f1b16;
+        font-size: 15px;
+        text-align: left;
+        cursor: pointer;
+      }
+      .careers-select__option:hover,
+      .careers-select__option:focus-visible {
+        background: rgba(177, 114, 86, 0.1);
+        outline: none;
+      }
+      .careers-select__option.is-selected {
+        background: rgba(21, 58, 45, 0.08);
+        color: #153a2d;
         font-weight: 600;
       }
-      .career-item p { margin: 0; color: #5f5750; font-size: 14px; }
-      .career-item small {
-        display: block;
-        margin-bottom: 5px;
-        color: #b17256;
-        text-transform: uppercase;
-        letter-spacing: 0.15em;
-        font-size: 11px;
-        font-weight: 700;
-      }
-      .career-item i { color: #9f8a7f; font-size: 18px; }
-      .career-item.career-item--no-logo {
-        grid-template-columns: 1fr 20px;
+      .careers-select__native {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        pointer-events: none;
       }
 
+      .careers-field--file input[type="file"] {
+        padding: 12px;
+        min-height: 0;
+        border-style: dashed;
+        cursor: pointer;
+        font-size: 14px;
+        line-height: 1.4;
+      }
+      .careers-field__hint {
+        margin: 6px 0 0;
+        color: #9a9086;
+        font-size: 12px;
+        line-height: 1.4;
+      }
+      .careers-field--other.is-hidden,
+      .careers-field--other[hidden] {
+        display: none !important;
+      }
+      .careers-form__submit {
+        margin-top: 6px;
+        width: 100%;
+        min-height: 48px;
+        border: 0;
+        border-radius: 999px;
+        background: #153a2d;
+        color: #fff;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+      .careers-form__submit:hover,
+      .careers-form__submit:focus-visible { background: #b17256; }
+      .careers-form__submit:disabled { opacity: 0.65; cursor: wait; }
+      .careers-form__status {
+        margin: 0;
+        min-height: 1.2em;
+        text-align: center;
+        font-size: 13px;
+        line-height: 1.45;
+        color: #6b6359;
+        word-break: break-word;
+      }
+      .careers-form__status.is-success { color: #153a2d; }
+      .careers-form__status.is-error { color: #9b3b2e; }
+      .careers-form__note {
+        margin: 0;
+        text-align: center;
+        color: #9a9086;
+        font-size: 12px;
+        line-height: 1.45;
+      }
       @media (max-width: 991px) {
         .career-shell { padding-top: 78px; }
-        .career-grid { grid-template-columns: 1fr; }
-        .career-open-box { margin-left: 0; }
+        .careers-stage {
+          min-height: calc(100vh - 78px);
+          padding: 16px 14px 40px;
+        }
+        .careers-panel {
+          margin-top: 12px;
+          padding: 20px 16px 24px;
+        }
+        .careers-select__menu {
+          max-height: min(200px, 36vh);
+        }
       }
-      @media (max-width: 575px) { .career-hero { padding: 58px 0 42px; } .career-sub { font-size: 15px; } .career-item { grid-template-columns: 66px 1fr 14px; gap: 11px; padding: 14px 8px; }
-        .career-item h4 { font-size: 18px; }
-        .career-item p { font-size: 13px; }
+      @media (max-width: 560px) {
+        .careers-form__row { grid-template-columns: 1fr; }
+        .careers-panel__lead { max-width: none; }
       }
     </style>
   </head>
@@ -363,185 +456,147 @@
       </div>
     </header>
 
-    <section class="career-hero">
-      <div class="container" data-parallax="y" data-parallax-speed="0.04">
-        <p class="career-kicker" data-i18n="careers-hero-kicker" data-parallax="y" data-parallax-speed="0.03">Derand Careers</p>
-        <h1 class="career-title" data-i18n="careers-hero-title" data-parallax="y" data-parallax-speed="0.05">Work With Us</h1>
-        <p class="career-sub" data-i18n="careers-hero-sub" data-parallax="y" data-parallax-speed="0.04">
-          Explore current roles or apply online. We only need your name, email, and phone number ï¿½ no CV upload.
+    <main class="careers-stage">
+      <section class="careers-panel" aria-labelledby="careers-open-title">
+        <p class="careers-panel__eyebrow">Derand Careers</p>
+        <h1 class="careers-panel__title" id="careers-open-title">Open Application</h1>
+        <p class="careers-panel__lead">
+          Share your details and CV. We will review every application carefully.
         </p>
-      </div>
-    </section>
 
-    <section class="career-main" data-parallax="y" data-parallax-speed="0.025">
-      <div class="container">
-        <div class="career-grid">
-          <aside class="career-open-box" data-parallax="y" data-parallax-speed="0.03">
-            <h3 data-i18n="careers-open-application-title">Open Application</h3>
-            <p data-i18n="careers-open-application-copy">
-              Optionally choose a role, then continue to a short form with your name, email, and phone number.
-            </p>
-            <form id="open-application-form" class="career-open-form">
-              <label for="open-position" data-i18n="careers-preferred-position-label">Preferred Position</label>
-              <input
-                type="text"
-                id="open-position"
-                placeholder="e.g. Receptionist"
-                data-i18n-placeholder="careers-preferred-position-placeholder"
-              />
-              <label for="open-department" data-i18n="careers-preferred-department-label">Preferred Department</label>
-              <input
-                type="text"
-                id="open-department"
-                list="department-options"
-                placeholder="Select or type a department"
-                data-i18n-placeholder="careers-preferred-department-placeholder"
-              />
-              <datalist id="department-options">
-                <option data-i18n="careers-dept-housekeeping">Housekeeping</option>
-                <option data-i18n="careers-dept-housekeeping-mgmt">Housekeeping Management</option>
-                <option data-i18n="careers-dept-reception">Reception / Front Office</option>
-                <option data-i18n="careers-dept-security">Security</option>
-                <option data-i18n="careers-dept-procurement">Procurement & Logistics</option>
-                <option data-i18n="careers-dept-bell">Bell Service</option>
-                <option data-i18n="careers-dept-sales">Sales</option>
-                <option data-i18n="careers-dept-architecture">Architecture</option>
-                <option data-i18n="careers-dept-social">Social Media</option>
-                <option data-i18n="careers-dept-it">IT</option>
-                <option data-i18n="careers-dept-finance">Finance</option>
-                <option data-i18n="careers-dept-uiux">UI/UX Design</option>
-                <option data-i18n="careers-dept-management">Management</option>
-                <option data-i18n="careers-dept-other">Other</option>
-              </datalist>
-              <button class="career-open-btn" type="submit" data-i18n="careers-submit-cv">Continue to application</button>
-            </form>
-          </aside>
+        <form
+          id="careers-open-form"
+          class="careers-form"
+          action="https://formsubmit.co/ajax/hr@derandhotel.com"
+          method="POST"
+          enctype="multipart/form-data"
+          novalidate
+        >
+          <input type="text" name="botcheck" value="" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_subject" id="career-email-subject" value="Derand Hotel — Career application" />
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true" />
 
-          <div>
-            <p class="career-list-head" data-i18n="careers-current-positions-title" data-parallax="y" data-parallax-speed="0.02">Current Open Positions</p>
-            <div class="career-list-scroll" data-parallax="y" data-parallax-speed="0.02">
-              <a class="career-item" href="career-housekeeping.html">
-              <img src="img/derandlogo.webp" alt="Best hotels in pristina" decoding="async" loading="lazy">
-              <div>
-                <small data-i18n="careers-company-name">Derand Hotel Prishtina</small>
-                <h4 data-i18n="careers-job-1-title">Housekeeping Staff</h4>
-                <p data-i18n="careers-job-1-detail">Type: Full-time | Position: Operations</p>
-              </div>
-              <i class="fa fa-angle-right"></i>
-            </a>
-            <a class="career-item" href="career-housekeeping-manager.html">
-              <img src="img/derandlogo.webp" alt="The luxury hotels in prishtina" decoding="async" loading="lazy">
-              <div>
-                <small data-i18n="careers-company-name">Derand Hotel Prishtina</small>
-                <h4 data-i18n="careers-job-2-title">Housekeeping Manager</h4>
-                <p data-i18n="careers-job-2-detail">Type: Full-time | Position: Management</p>
-              </div>
-              <i class="fa fa-angle-right"></i>
-            </a>
-            <a class="career-item" href="career-receptionist.html">
-              <img src="img/derandlogo.webp" alt="Hotels in prishtina" decoding="async" loading="lazy">
-              <div>
-                <small data-i18n="careers-company-name">Derand Hotel Prishtina</small>
-                <h4 data-i18n="careers-job-3-title">Receptionist </h4>
-                <p data-i18n="careers-job-3-detail">Type: Full-time | Position: Front Office</p>
-              </div>
-              <i class="fa fa-angle-right"></i>
-            </a>
-            <a class="career-item" href="career-security.html">
-              <img src="img/derandlogo.webp" alt="Best hotels in prishtina" decoding="async" loading="lazy">
-              <div>
-                <small data-i18n="careers-company-name">Derand Hotel Prishtina</small>
-                <h4 data-i18n="careers-job-4-title">Security  </h4>
-                <p data-i18n="careers-job-4-detail">Type: Full-time | Position: Security</p>
-              </div>
-              <i class="fa fa-angle-right"></i>
-            </a>
-            <a class="career-item" href="career-security-manager.html">
-              <img src="img/derandlogo.webp" alt="Luxury hotel in pristina" decoding="async" loading="lazy">
-              <div>
-                <small data-i18n="careers-company-name">Derand Hotel Prishtina</small>
-                <h4 data-i18n="careers-job-5-title">Security Manager</h4>
-                <p data-i18n="careers-job-5-detail">Type: Full-time | Position: Security Management</p>
-              </div>
-              <i class="fa fa-angle-right"></i>
-            </a>
-            <a class="career-item" href="career-bellboy.html">
-              <img src="img/derandlogo.webp" alt="Hotels in prishtina" decoding="async" loading="lazy">
-              <div>
-                <small data-i18n="careers-company-name">Derand Hotel Prishtina</small>
-                <h4 data-i18n="careers-job-6-title">Bellboy </h4>
-                <p data-i18n="careers-job-6-detail">Type: Full-time | Position: Guest Service</p>
-              </div>
-              <i class="fa fa-angle-right"></i>
-            </a>
-            <a class="career-item" href="career-sales.html">
-              <img src="img/derandlogo.webp" alt="Best hotels in prishtina" decoding="async" loading="lazy">
-              <div>
-                <small data-i18n="careers-company-name">Derand Hotel Prishtina</small>
-                <h4 data-i18n="careers-job-7-title">Sales  </h4>
-                <p data-i18n="careers-job-7-detail">Type: Full-time  | Position: Sales</p>
-              </div>
-              <i class="fa fa-angle-right"></i>
-            </a>
-            <a class="career-item" href="career-architect.html">
-              <img src="img/derandlogo.webp" alt="The luxury hotels in prishtina" decoding="async" loading="lazy">
-              <div>
-                <small data-i18n="careers-company-name">Derand Hotel Prishtina</small>
-                <h4 data-i18n="careers-job-8-title">Architect </h4>
-                <p data-i18n="careers-job-8-detail">Type: Full-time | Position: Architecture</p>
-              </div>
-              <i class="fa fa-angle-right"></i>
-            </a>
-            <a class="career-item" href="career-social-media.html">
-              <img src="img/derandlogo.webp" alt="Hotels in prishtina" decoding="async" loading="lazy">
-              <div>
-                <small data-i18n="careers-company-name">Derand Hotel Prishtina</small>
-                <h4 data-i18n="careers-job-9-title">Social Media Marketing</h4>
-                <p data-i18n="careers-job-9-detail">Type: Full-time |  Position: Marketing</p>
-              </div>
-              <i class="fa fa-angle-right"></i>
-            </a>
-            <a class="career-item" href="career-it-specialist.html">
-              <img src="img/derandlogo.webp" alt="Best hotels in prishtina" decoding="async" loading="lazy">
-              <div>
-                <small data-i18n="careers-company-name">Derand Hotel Prishtina</small>
-                <h4 data-i18n="careers-job-10-title">IT Specialist </h4>
-                <p data-i18n="careers-job-10-detail">Type: Full-time | Position: IT</p>
-              </div>
-              <i class="fa fa-angle-right"></i>
-            </a>
-            <a class="career-item" href="career-procurement-logistics.html">
-              <img src="img/derandlogo.webp" alt="The luxury hotels in prishtina" decoding="async" loading="lazy">
-              <div>
-                <small data-i18n="careers-company-name">Derand Hotel Prishtina</small>
-                <h4 data-i18n="careers-job-11-title">Procurement / Logistics</h4>
-                <p data-i18n="careers-job-11-detail">Type: Full-time | Position: Operations</p>
-              </div>
-              <i class="fa fa-angle-right"></i>
-            </a>
-            <a class="career-item" href="career-finance.html">
-              <img src="img/derandlogo.webp" alt="Hotels in prishtina" decoding="async" loading="lazy">
-              <div>
-                <small data-i18n="careers-company-name">Derand Hotel Prishtina</small>
-                <h4 data-i18n="careers-job-12-title">Finance Officer </h4>
-                <p data-i18n="careers-job-12-detail">Type: Full-time | Position: Finance</p>
-              </div>
-              <i class="fa fa-angle-right"></i>
-            </a>
-            <a class="career-item" href="career-uiux.html">
-              <img src="img/derandlogo.webp" alt="Best hotels in prishtina" decoding="async" loading="lazy">
-              <div>
-                <small data-i18n="careers-company-name">Derand Hotel Prishtina</small>
-                <h4 data-i18n="careers-job-13-title">UI/UX Designer </h4>
-                <p data-i18n="careers-job-13-detail">Type: Full-time | Position: Design</p>
-              </div>
-              <i class="fa fa-angle-right"></i>
-            </a>
+          <div class="careers-field">
+            <label id="career-department-label" for="career-department-trigger">Department</label>
+            <div class="careers-select" id="career-department-select">
+              <button
+                type="button"
+                class="careers-select__trigger is-placeholder"
+                id="career-department-trigger"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-labelledby="career-department-label career-department-trigger"
+              >
+                Select a department
+              </button>
+              <ul
+                class="careers-select__menu"
+                id="career-department-menu"
+                role="listbox"
+                aria-labelledby="career-department-label"
+                hidden
+              >
+                <li role="none"><button type="button" class="careers-select__option" role="option" data-value="Housekeeping">Housekeeping</button></li>
+                <li role="none"><button type="button" class="careers-select__option" role="option" data-value="Housekeeping Management">Housekeeping Management</button></li>
+                <li role="none"><button type="button" class="careers-select__option" role="option" data-value="Reception / Front Office">Reception / Front Office</button></li>
+                <li role="none"><button type="button" class="careers-select__option" role="option" data-value="Security">Security</button></li>
+                <li role="none"><button type="button" class="careers-select__option" role="option" data-value="Security Management">Security Management</button></li>
+                <li role="none"><button type="button" class="careers-select__option" role="option" data-value="Procurement & Logistics">Procurement &amp; Logistics</button></li>
+                <li role="none"><button type="button" class="careers-select__option" role="option" data-value="Bell Service">Bell Service</button></li>
+                <li role="none"><button type="button" class="careers-select__option" role="option" data-value="Sales">Sales</button></li>
+                <li role="none"><button type="button" class="careers-select__option" role="option" data-value="Architecture">Architecture</button></li>
+                <li role="none"><button type="button" class="careers-select__option" role="option" data-value="Social Media">Social Media</button></li>
+                <li role="none"><button type="button" class="careers-select__option" role="option" data-value="IT">IT</button></li>
+                <li role="none"><button type="button" class="careers-select__option" role="option" data-value="Finance">Finance</button></li>
+                <li role="none"><button type="button" class="careers-select__option" role="option" data-value="UI/UX Design">UI/UX Design</button></li>
+                <li role="none"><button type="button" class="careers-select__option" role="option" data-value="Management">Management</button></li>
+                <li role="none"><button type="button" class="careers-select__option" role="option" data-value="Other">Other</button></li>
+              </ul>
+              <select
+                class="careers-select__native"
+                id="career-department"
+                name="department"
+                required
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <option value="" selected disabled>Select a department</option>
+                <option value="Housekeeping">Housekeeping</option>
+                <option value="Housekeeping Management">Housekeeping Management</option>
+                <option value="Reception / Front Office">Reception / Front Office</option>
+                <option value="Security">Security</option>
+                <option value="Security Management">Security Management</option>
+                <option value="Procurement & Logistics">Procurement &amp; Logistics</option>
+                <option value="Bell Service">Bell Service</option>
+                <option value="Sales">Sales</option>
+                <option value="Architecture">Architecture</option>
+                <option value="Social Media">Social Media</option>
+                <option value="IT">IT</option>
+                <option value="Finance">Finance</option>
+                <option value="UI/UX Design">UI/UX Design</option>
+                <option value="Management">Management</option>
+                <option value="Other">Other</option>
+              </select>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+
+          <div class="careers-field careers-field--other is-hidden" id="career-other-wrap" hidden>
+            <label for="career-other-role">What are you applying for?</label>
+            <input
+              id="career-other-role"
+              name="otherRole"
+              type="text"
+              maxlength="120"
+              placeholder="e.g. Concierge, Chef, Marketing Assistant"
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="careers-form__row">
+            <div class="careers-field">
+              <label for="career-first-name">Name</label>
+              <input id="career-first-name" name="firstName" type="text" required autocomplete="given-name" />
+            </div>
+            <div class="careers-field">
+              <label for="career-last-name">Surname</label>
+              <input id="career-last-name" name="lastName" type="text" required autocomplete="family-name" />
+            </div>
+          </div>
+
+          <div class="careers-field">
+            <label for="career-email">Email</label>
+            <input id="career-email" name="email" type="email" required autocomplete="email" />
+          </div>
+
+          <div class="careers-field">
+            <label for="career-phone">Phone number</label>
+            <input id="career-phone" name="phone" type="tel" required autocomplete="tel" />
+          </div>
+
+          <div class="careers-field careers-field--file">
+            <label for="career-cv">Upload CV</label>
+            <input
+              id="career-cv"
+              name="attachment"
+              type="file"
+              accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+              required
+            />
+            <p class="careers-field__hint">PDF or Word, max 5 MB.</p>
+          </div>
+
+          <button type="submit" class="careers-form__submit" id="careers-submit-btn">
+            Submit application
+          </button>
+          <p class="careers-form__status" id="careers-form-status" role="status" aria-live="polite"></p>
+          <p class="careers-form__note">
+            Applications are sent to hr@derandhotel.com. By submitting, you agree that we may contact you about your application.
+          </p>
+        </form>
+      </section>
+    </main>
 
     <footer class="footer">
       <div class="container">
@@ -749,28 +804,359 @@
 
     <script>
       (function () {
-        var form = document.getElementById("open-application-form");
+        var form = document.getElementById("careers-open-form");
+        var statusEl = document.getElementById("careers-form-status");
+        var submitBtn = document.getElementById("careers-submit-btn");
+        var cvInput = document.getElementById("career-cv");
+        var departmentEl = document.getElementById("career-department");
+        var otherWrap = document.getElementById("career-other-wrap");
+        var otherInput = document.getElementById("career-other-role");
+        var selectRoot = document.getElementById("career-department-select");
+        var selectTrigger = document.getElementById("career-department-trigger");
+        var selectMenu = document.getElementById("career-department-menu");
         if (!form) return;
+
+        function syncOtherField() {
+          var isOther = departmentEl && departmentEl.value === "Other";
+          if (!otherWrap || !otherInput) return;
+          if (isOther) {
+            otherWrap.hidden = false;
+            otherWrap.classList.remove("is-hidden");
+            otherInput.required = true;
+          } else {
+            otherWrap.hidden = true;
+            otherWrap.classList.add("is-hidden");
+            otherInput.required = false;
+            otherInput.value = "";
+          }
+        }
+
+        function closeDepartmentMenu() {
+          if (!selectRoot || !selectTrigger || !selectMenu) return;
+          selectRoot.classList.remove("is-open");
+          selectTrigger.setAttribute("aria-expanded", "false");
+          selectMenu.hidden = true;
+          selectMenu.style.top = "";
+          selectMenu.style.bottom = "";
+        }
+
+        function positionDepartmentMenu() {
+          if (!selectRoot || !selectMenu || !selectTrigger) return;
+          selectMenu.style.top = "calc(100% + 6px)";
+          selectMenu.style.bottom = "auto";
+          var rect = selectTrigger.getBoundingClientRect();
+          var spaceBelow = window.innerHeight - rect.bottom;
+          var spaceAbove = rect.top;
+          var menuHeight = Math.min(240, window.innerHeight * 0.42);
+          if (spaceBelow < menuHeight + 16 && spaceAbove > spaceBelow) {
+            selectMenu.style.top = "auto";
+            selectMenu.style.bottom = "calc(100% + 6px)";
+          }
+        }
+
+        function openDepartmentMenu() {
+          if (!selectRoot || !selectTrigger || !selectMenu) return;
+          selectRoot.classList.add("is-open");
+          selectTrigger.setAttribute("aria-expanded", "true");
+          selectMenu.hidden = false;
+          positionDepartmentMenu();
+        }
+
+        function setDepartmentValue(value, label) {
+          if (!departmentEl || !selectTrigger) return;
+          departmentEl.value = value;
+          selectTrigger.textContent = label || value;
+          selectTrigger.classList.toggle("is-placeholder", !value);
+          Array.prototype.forEach.call(
+            selectMenu.querySelectorAll(".careers-select__option"),
+            function (btn) {
+              var selected = btn.getAttribute("data-value") === value;
+              btn.classList.toggle("is-selected", selected);
+              btn.setAttribute("aria-selected", selected ? "true" : "false");
+            },
+          );
+          departmentEl.dispatchEvent(new Event("change", { bubbles: true }));
+          syncOtherField();
+        }
+
+        if (selectTrigger && selectMenu && selectRoot) {
+          selectTrigger.addEventListener("click", function () {
+            if (selectRoot.classList.contains("is-open")) {
+              closeDepartmentMenu();
+            } else {
+              openDepartmentMenu();
+            }
+          });
+
+          selectMenu.addEventListener("click", function (event) {
+            var option = event.target.closest(".careers-select__option");
+            if (!option) return;
+            setDepartmentValue(
+              option.getAttribute("data-value"),
+              option.textContent.trim(),
+            );
+            closeDepartmentMenu();
+            if (departmentEl.value === "Other" && otherInput) {
+              otherInput.focus();
+            }
+          });
+
+          document.addEventListener("click", function (event) {
+            if (!selectRoot.contains(event.target)) {
+              closeDepartmentMenu();
+            }
+          });
+
+          document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") closeDepartmentMenu();
+          });
+
+          window.addEventListener("resize", function () {
+            if (selectRoot.classList.contains("is-open")) {
+              positionDepartmentMenu();
+            }
+          });
+        }
+
+        if (departmentEl) {
+          departmentEl.addEventListener("change", syncOtherField);
+          syncOtherField();
+        }
+
+        var params = new URLSearchParams(window.location.search);
+        if (params.get("applied") === "1" && statusEl) {
+          statusEl.textContent = "Thank you. Your application was sent to HR.";
+          statusEl.className = "careers-form__status is-success";
+        }
 
         form.addEventListener("submit", function (event) {
           event.preventDefault();
-          var position = document.getElementById("open-position");
-          var department = document.getElementById("open-department");
-          var params = new URLSearchParams();
-
-          if (position && position.value.trim()) {
-            params.set("position", position.value.trim());
-          }
-          if (department && department.value.trim()) {
-            params.set("department", department.value.trim());
+          closeDepartmentMenu();
+          if (statusEl) {
+            statusEl.textContent = "";
+            statusEl.className = "careers-form__status";
           }
 
-          var target = "career-apply.html";
-          var query = params.toString();
-          window.location.href = query ? target + "?" + query : target;
+          syncOtherField();
+
+          if (!departmentEl || !departmentEl.value) {
+            if (statusEl) {
+              statusEl.textContent = "Please select a department.";
+              statusEl.className = "careers-form__status is-error";
+            }
+            if (selectTrigger) selectTrigger.focus();
+            return;
+          }
+
+          if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+          }
+
+          if (
+            departmentEl.value === "Other" &&
+            otherInput &&
+            !otherInput.value.trim()
+          ) {
+            if (statusEl) {
+              statusEl.textContent = "Please describe the role you are applying for.";
+              statusEl.className = "careers-form__status is-error";
+            }
+            otherInput.focus();
+            return;
+          }
+
+          if (cvInput && cvInput.files && cvInput.files[0]) {
+            var file = cvInput.files[0];
+            var maxBytes = 5 * 1024 * 1024;
+            if (file.size > maxBytes) {
+              if (statusEl) {
+                statusEl.textContent = "Please upload a CV smaller than 5 MB.";
+                statusEl.className = "careers-form__status is-error";
+              }
+              return;
+            }
+          }
+
+          if (submitBtn) submitBtn.disabled = true;
+          if (statusEl) {
+            statusEl.textContent = "Sending your application…";
+            statusEl.className = "careers-form__status";
+          }
+
+          var applyingFor =
+            departmentEl.value === "Other" && otherInput
+              ? "Other — " + otherInput.value.trim()
+              : departmentEl.value;
+
+          var subjectEl = document.getElementById("career-email-subject");
+          if (subjectEl) {
+            subjectEl.value =
+              "Derand Hotel — Career application — " + applyingFor;
+          }
+
+          // Delivers to hr@derandhotel.com (FormSubmit + server PHP backup).
+          var endpoints = [
+            "https://formsubmit.co/ajax/hr@derandhotel.com",
+            "api/career-apply.php",
+          ];
+
+          function isSuccess(result) {
+            if (!result || !result.json) return false;
+            var s = result.json.success;
+            return s === true || s === "true" || s === 1 || s === "1";
+          }
+
+          function messageText(result) {
+            return result && result.json && result.json.message
+              ? String(result.json.message)
+              : "";
+          }
+
+          function needsActivation(result) {
+            var msg = messageText(result).toLowerCase();
+            return (
+              msg.indexOf("activat") >= 0 ||
+              msg.indexOf("confirm your email") >= 0 ||
+              msg.indexOf("confirmation") >= 0
+            );
+          }
+
+          function buildPayload() {
+            var data = new FormData();
+            var first = document.getElementById("career-first-name").value.trim();
+            var last = document.getElementById("career-last-name").value.trim();
+            var email = document.getElementById("career-email").value.trim();
+            var phone = document.getElementById("career-phone").value.trim();
+
+            data.append("firstName", first);
+            data.append("lastName", last);
+            data.append("name", first + " " + last);
+            data.append("email", email);
+            data.append("phone", phone);
+            data.append("department", departmentEl.value);
+            data.append("applying_for", applyingFor);
+            if (otherInput && otherInput.value.trim()) {
+              data.append("otherRole", otherInput.value.trim());
+            }
+            data.append(
+              "_subject",
+              "Derand Hotel — Career application — " + applyingFor,
+            );
+            data.append("_template", "table");
+            data.append("_captcha", "false");
+            data.append(
+              "message",
+              "Career application for: " +
+                applyingFor +
+                "\nName: " +
+                first +
+                " " +
+                last +
+                "\nEmail: " +
+                email +
+                "\nPhone: " +
+                phone +
+                "\nDepartment: " +
+                departmentEl.value,
+            );
+
+            if (cvInput && cvInput.files && cvInput.files[0]) {
+              data.append("attachment", cvInput.files[0], cvInput.files[0].name);
+            }
+            return data;
+          }
+
+          function postTo(url) {
+            return fetch(url, {
+              method: "POST",
+              body: buildPayload(),
+              headers: { Accept: "application/json" },
+            }).then(function (res) {
+              return res
+                .json()
+                .then(function (json) {
+                  return { ok: res.ok, json: json, url: url };
+                })
+                .catch(function () {
+                  return { ok: res.ok, json: null, url: url };
+                });
+            });
+          }
+
+          function markSuccess() {
+            form.reset();
+            if (selectTrigger) {
+              selectTrigger.textContent = "Select a department";
+              selectTrigger.classList.add("is-placeholder");
+            }
+            if (selectMenu) {
+              Array.prototype.forEach.call(
+                selectMenu.querySelectorAll(".careers-select__option"),
+                function (btn) {
+                  btn.classList.remove("is-selected");
+                  btn.setAttribute("aria-selected", "false");
+                },
+              );
+            }
+            syncOtherField();
+            if (statusEl) {
+              statusEl.textContent =
+                "Thank you. Your application was sent to hr@derandhotel.com.";
+              statusEl.className = "careers-form__status is-success";
+            }
+            if (window.history && window.history.replaceState) {
+              window.history.replaceState(null, "", "careers.html?applied=1");
+            }
+          }
+
+          function finishError(message) {
+            if (statusEl) {
+              statusEl.textContent = message;
+              statusEl.className = "careers-form__status is-error";
+            }
+            if (submitBtn) submitBtn.disabled = false;
+          }
+
+          function tryNext(index) {
+            if (index >= endpoints.length) {
+              finishError(
+                "Could not send right now. Please email your CV to hr@derandhotel.com.",
+              );
+              return;
+            }
+
+            postTo(endpoints[index])
+              .then(function (result) {
+                if (needsActivation(result)) {
+                  finishError(
+                    "Check hr@derandhotel.com for a FormSubmit email and click Activate Form once, then submit again.",
+                  );
+                  return;
+                }
+
+                if (
+                  isSuccess(result) ||
+                  (result.ok &&
+                    messageText(result).toLowerCase().indexOf("sent") >= 0)
+                ) {
+                  markSuccess();
+                  if (submitBtn) submitBtn.disabled = false;
+                  return;
+                }
+
+                tryNext(index + 1);
+              })
+              .catch(function () {
+                tryNext(index + 1);
+              });
+          }
+
+          tryNext(0);
         });
       })();
     </script>
+
     <script src="js/jquery-3.3.1.min.js" defer></script>
     <script src="js/bootstrap.min.js" defer></script>
     <script src="js/jquery.nice-select.min.js" defer></script>
