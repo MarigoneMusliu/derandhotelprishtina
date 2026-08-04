@@ -115,7 +115,8 @@ function raiaccept_load_config(): array
         'web3forms_access_key' => $web3formsAccessKey,
         'web3forms_url' => trim((string) ($config['web3forms_url'] ?? 'https://api.web3forms.com/submit')),
         'order_notification_email' => trim((string) ($config['order_notification_email'] ?? 'info@derandhotel.com')),
-        'booking_room_rates' => is_array($config['booking_room_rates'] ?? null) ? $config['booking_room_rates'] : [],
+        // Room rates always come from raiaccept_booking_rooms() so RaiAccept matches the website.
+        'booking_room_rates' => raiaccept_booking_room_rate_map(),
         'booking_tax_rate' => is_numeric($config['booking_tax_rate'] ?? null) ? max(0.0, (float) $config['booking_tax_rate']) : 0.0,
         'booking_allow_client_rates' => !empty($config['booking_allow_client_rates']),
         'is_production' => !empty($config['is_production']),
@@ -178,6 +179,55 @@ function raiaccept_request(string $method, string $url, ?array $body, array $hea
 function raiaccept_trimmed_string($value): string
 {
     return trim((string) ($value ?? ''));
+}
+
+function raiaccept_booking_phone_digits(string $phone): string
+{
+    $digits = preg_replace('/\D+/', '', $phone);
+    return is_string($digits) ? $digits : '';
+}
+
+function raiaccept_mobile_phone_for_raiaccept(string $digits): string
+{
+    $normalized = $digits;
+
+    // Kosovo local numbers often start with 0 — RaiAccept rejects +0…, so use +383…
+    if (str_starts_with($normalized, '0') && strlen($normalized) >= 9) {
+        $normalized = '383' . substr($normalized, 1);
+    } elseif (
+        strlen($normalized) >= 8
+        && strlen($normalized) <= 9
+        && !str_starts_with($normalized, '383')
+    ) {
+        $normalized = '383' . ltrim($normalized, '0');
+    }
+
+    if (str_starts_with($normalized, '383') && strlen($normalized) >= 11) {
+        return '+' . $normalized;
+    }
+
+    // RaiAccept also accepts plain 8–16 digit numbers without a + prefix.
+    return $normalized;
+}
+
+function raiaccept_normalize_booking_phone(string $phone): array
+{
+    $raw = raiaccept_trimmed_string($phone);
+    $digits = raiaccept_booking_phone_digits($raw);
+    $length = strlen($digits);
+    if ($length < 5 || $length > 20) {
+        raiaccept_json_response(400, [
+            'error' => 'Please enter a phone number with 5 to 20 digits.',
+        ]);
+    }
+
+    $mobilePhone = raiaccept_mobile_phone_for_raiaccept($digits);
+
+    return [
+        'display' => raiaccept_truncate($raw !== '' ? $raw : $digits, 20),
+        'digits' => $digits,
+        'mobilePhone' => $mobilePhone,
+    ];
 }
 
 function raiaccept_positive_number($value): float
@@ -503,32 +553,56 @@ function raiaccept_build_extra_order_payload(array $input, array $config, string
 function raiaccept_booking_rooms(): array
 {
     return [
-        'junior-suite' => ['label' => 'Junior Suite', 'single' => 131.0, 'double' => 138.0, 'max_adults' => 2],
-        'deluxe-double' => ['label' => 'Deluxe Double Room', 'single' => 97.0, 'double' => 102.0, 'max_adults' => 2],
-        'premium-double' => ['label' => 'Premium Room', 'single' => 114.0, 'double' => 130.0, 'triple' => 154.0, 'max_adults' => 3],
-        'superior-twin' => ['label' => 'Superior Twin Room', 'single' => 79.0, 'double' => 92.0, 'max_adults' => 2],
-        'superior-double' => ['label' => 'Superior Double Room', 'single' => 92.0, 'double' => 102.0, 'max_adults' => 2],
+        'junior-suite' => ['label' => 'Junior Suite', 'single' => 140.0, 'double' => 140.0, 'max_adults' => 2],
+        'deluxe-double' => ['label' => 'Deluxe Double Room', 'single' => 105.0, 'double' => 105.0, 'max_adults' => 2],
+        'premium-double' => ['label' => 'Premium Room', 'single' => 120.0, 'double' => 130.0, 'triple' => 140.0, 'max_adults' => 3],
+        'superior-twin' => ['label' => 'Superior Twin Room', 'single' => 95.0, 'double' => 95.0, 'max_adults' => 2],
+        'superior-double' => ['label' => 'Superior Double Room', 'single' => 95.0, 'double' => 95.0, 'max_adults' => 2],
     ];
+}
+
+function raiaccept_booking_room_rate_map(): array
+{
+    $rates = [];
+    foreach (raiaccept_booking_rooms() as $slug => $room) {
+        $entry = [];
+        if (isset($room['single'])) {
+            $entry['single'] = $room['single'];
+        }
+        if (isset($room['double'])) {
+            $entry['double'] = $room['double'];
+        }
+        if (isset($room['triple'])) {
+            $entry['triple'] = $room['triple'];
+        }
+        $rates[$slug] = $entry;
+    }
+    return $rates;
 }
 
 function raiaccept_special_rate_nights(): array
 {
-    return [
-        '2026-07-31',
-        '2026-08-01',
-        '2026-08-02',
-        '2026-08-03',
-    ];
+    return [];
 }
 
 function raiaccept_special_rate_eur(): float
 {
-    return 350.0;
+    return 0.0;
+}
+
+function raiaccept_august_reduced_rate_nights(): array
+{
+    return [];
+}
+
+function raiaccept_august_reduced_rate_eur(): float
+{
+    return 0.0;
 }
 
 function raiaccept_junior_suite_blocked_nights(): array
 {
-    return raiaccept_special_rate_nights();
+    return [];
 }
 
 function raiaccept_booking_each_night(DateTimeImmutable $checkInDate, DateTimeImmutable $checkOutDate): array
@@ -555,10 +629,6 @@ function raiaccept_stay_hits_junior_suite_block(DateTimeImmutable $checkInDate, 
 
 function raiaccept_booking_nightly_rate_for_date(float $baseRate, string $nightIso): float
 {
-    $special = array_flip(raiaccept_special_rate_nights());
-    if (isset($special[$nightIso])) {
-        return raiaccept_special_rate_eur();
-    }
     return $baseRate;
 }
 
@@ -650,16 +720,11 @@ function raiaccept_booking_rate_for_adults($rateConfig, int $adults): float
 function raiaccept_booking_room_rate(string $roomSlug, int $adults, array $config, array $input): float
 {
     $defaults = raiaccept_booking_rooms();
-    $configuredRates = is_array($config['booking_room_rates'] ?? null) ? $config['booking_room_rates'] : [];
     $rate = 0.0;
 
-    // Code defaults are the source of truth for room prices (keeps RaiAccept in sync with the site).
+    // Website + RaiAccept checkout both use raiaccept_booking_rooms() as the only source of truth.
     if (isset($defaults[$roomSlug])) {
         $rate = raiaccept_booking_rate_for_adults($defaults[$roomSlug], $adults);
-    }
-    // Config may fill in a room that is not in the defaults map.
-    if ($rate <= 0 && isset($configuredRates[$roomSlug])) {
-        $rate = raiaccept_booking_rate_for_adults($configuredRates[$roomSlug], $adults);
     }
     if ($rate <= 0 && !empty($config['booking_allow_client_rates'])) {
         $rate = raiaccept_positive_number($input['nightlyRate'] ?? 0);
@@ -771,11 +836,12 @@ function raiaccept_build_booking_order_payload(array $input, array $config, stri
     $guestFirstName = raiaccept_truncate($guestFirstName, 32);
     $guestLastName = raiaccept_truncate($guestLastName, 32);
     $email = raiaccept_truncate(raiaccept_trimmed_string($input['email'] ?? ''), 64);
-    // Accept any phone text the guest types (no + / 0 / digit-count rules).
-    $phone = raiaccept_truncate(raiaccept_trimmed_string($input['phone'] ?? $input['mobilePhone'] ?? ''), 40);
+    $phoneData = raiaccept_normalize_booking_phone($input['phone'] ?? $input['mobilePhone'] ?? '');
+    $phone = $phoneData['display'];
+    $mobilePhone = $phoneData['mobilePhone'];
     $message = raiaccept_truncate(raiaccept_trimmed_string($input['message'] ?? $input['notes'] ?? ''), 160);
 
-    if ($guestFirstName === '' || $guestLastName === '' || $email === '' || $phone === '') {
+    if ($guestFirstName === '' || $guestLastName === '' || $email === '') {
         raiaccept_json_response(400, ['error' => 'Guest name, email, and phone are required.']);
     }
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -824,7 +890,7 @@ function raiaccept_build_booking_order_payload(array $input, array $config, stri
         ];
     } else {
         $items[] = [
-            'description' => raiaccept_truncate($roomName . ' | ' . $checkIn . ' to ' . $checkOut . ' | ' . $nights . ' night' . ($nights === 1 ? '' : 's') . ' (event rate nights included)', 100),
+            'description' => raiaccept_truncate($roomName . ' | ' . $checkIn . ' to ' . $checkOut . ' | ' . $nights . ' night' . ($nights === 1 ? '' : 's'), 100),
             'numberOfItems' => 1,
             'price' => $roomSubtotal,
         ];
@@ -880,7 +946,7 @@ function raiaccept_build_booking_order_payload(array $input, array $config, stri
                 'firstName' => $guestFirstName,
                 'lastName' => $guestLastName,
                 'email' => $email,
-                'mobilePhone' => $phone,
+                'mobilePhone' => $mobilePhone,
             ],
             'invoice' => [
                 'merchantOrderReference' => $merchantOrderReference,
@@ -893,6 +959,10 @@ function raiaccept_build_booking_order_payload(array $input, array $config, stri
             'urls' => raiaccept_order_urls($config, $returnPath, $merchantOrderReference),
         ],
         'amount' => $total,
+        'roomSubtotal' => $roomSubtotal,
+        'nightlyRate' => $nightlyRate,
+        'childSurcharge' => $childSurcharge,
+        'extrasTotal' => $extrasTotal,
         'confirmation' => [
             'type' => 'booking',
             'guestFirstName' => $guestFirstName,
@@ -936,6 +1006,43 @@ function raiaccept_order_prefix(array $input): string
     return 'EXTRA';
 }
 
+function raiaccept_raiaccept_error_message(string $fallback, $details): string
+{
+    if (!is_string($details) || trim($details) === '') {
+        return $fallback;
+    }
+
+    $decoded = json_decode($details, true);
+    if (!is_array($decoded)) {
+        return $fallback;
+    }
+
+    $parts = [];
+    if (!empty($decoded['message']) && is_string($decoded['message'])) {
+        $parts[] = $decoded['message'];
+    }
+    if (!empty($decoded['errors']) && is_array($decoded['errors'])) {
+        foreach ($decoded['errors'] as $error) {
+            if (!is_array($error)) {
+                continue;
+            }
+            $field = raiaccept_trimmed_string($error['fieldName'] ?? '');
+            $message = raiaccept_trimmed_string($error['message'] ?? '');
+            if ($field !== '' && $message !== '') {
+                $parts[] = $field . ': ' . $message;
+            } elseif ($message !== '') {
+                $parts[] = $message;
+            }
+        }
+    }
+
+    if ($parts === []) {
+        return $fallback;
+    }
+
+    return $fallback . ' ' . implode(' ', array_unique($parts));
+}
+
 function raiaccept_create_checkout(array $input): array
 {
     $config = raiaccept_load_config();
@@ -950,7 +1057,10 @@ function raiaccept_create_checkout(array $input): array
     $orderResponse = raiaccept_request('POST', $config['api_base_url'] . '/orders', $prepared['payload'], $authHeader);
     if (!$orderResponse['ok'] || !is_array($orderResponse['data'])) {
         raiaccept_json_response(502, [
-            'error' => 'Could not create RaiAccept order.',
+            'error' => raiaccept_raiaccept_error_message(
+                'Could not create RaiAccept order.',
+                $orderResponse['raw'] ?? ''
+            ),
             'details' => $orderResponse['raw'],
         ]);
     }
@@ -999,6 +1109,10 @@ function raiaccept_create_checkout(array $input): array
         'merchantOrderReference' => $merchantOrderReference,
         'amount' => $prepared['amount'],
         'currency' => $prepared['payload']['invoice']['currency'],
+        'roomSubtotal' => $prepared['roomSubtotal'] ?? null,
+        'nightlyRate' => $prepared['nightlyRate'] ?? null,
+        'childSurcharge' => $prepared['childSurcharge'] ?? null,
+        'extrasTotal' => $prepared['extrasTotal'] ?? null,
     ];
 }
 
@@ -1300,9 +1414,40 @@ function raiaccept_send_plaintext_mail(string $to, string $subject, string $body
         'Content-Transfer-Encoding: 8bit',
         'From: ' . $fromName . ' <' . $fromEmail . '>',
         'Reply-To: ' . $fromEmail,
+        'Return-Path: ' . $fromEmail,
         'X-Mailer: DerandHotelBooking/1.0',
     ];
-    return @mail($to, $encodedSubject, $body, implode("\r\n", $headers));
+    $headerString = implode("\r\n", $headers);
+    if (stripos(PHP_OS, 'WIN') === 0) {
+        return @mail($to, $encodedSubject, $body, $headerString);
+    }
+
+    return @mail($to, $encodedSubject, $body, $headerString, '-f ' . $fromEmail);
+}
+
+function raiaccept_send_guest_confirmation_via_formsubmit(string $guestEmail, string $subject, string $body): bool
+{
+    if ($guestEmail === '' || !filter_var($guestEmail, FILTER_VALIDATE_EMAIL)) {
+        return false;
+    }
+
+    $response = raiaccept_request(
+        'POST',
+        'https://formsubmit.co/ajax/' . rawurlencode($guestEmail),
+        [
+            '_subject' => $subject,
+            '_captcha' => 'false',
+            '_template' => 'box',
+            'name' => 'Derand Hotel',
+            'message' => $body,
+        ]
+    );
+    if (!$response['ok']) {
+        return false;
+    }
+
+    $data = is_array($response['data']) ? $response['data'] : [];
+    return !empty($data['success']);
 }
 
 function raiaccept_guest_confirmation_message(array $booking): string
@@ -1318,35 +1463,89 @@ function raiaccept_guest_confirmation_message(array $booking): string
         $guestName = 'Guest';
     }
 
+    $roomName = raiaccept_trimmed_string($booking['roomName'] ?? '');
     $checkIn = raiaccept_format_guest_date((string) ($booking['checkIn'] ?? ''));
     $checkOut = raiaccept_format_guest_date((string) ($booking['checkOut'] ?? ''));
     $checkInTime = raiaccept_trimmed_string($booking['checkInTime'] ?? '15:00') ?: '15:00';
     $checkOutTime = raiaccept_trimmed_string($booking['checkOutTime'] ?? '11:00') ?: '11:00';
     $phone = raiaccept_trimmed_string($booking['hotelPhone'] ?? '+383 (0) 41 111 222');
     $reference = raiaccept_trimmed_string($booking['merchantOrderReference'] ?? '');
+    $nights = (string) ($booking['nights'] ?? '');
+    $adults = (string) ($booking['adults'] ?? '');
+    $children = (string) ($booking['children'] ?? '');
+    $currency = raiaccept_trimmed_string($booking['currency'] ?? 'EUR') ?: 'EUR';
+    $totalValue = (float) ($booking['total'] ?? $booking['amount'] ?? 0);
+    $total = $totalValue > 0 ? number_format($totalValue, 2, '.', '') : '';
+    $notes = raiaccept_trimmed_string($booking['notes'] ?? '');
 
     $lines = [
         'Booking Confirmed!',
         '',
-        'Hi ' . $guestName . ', we are thrilled to welcome you to Derand Hotel. Your reservation is officially locked in.',
+        'Dear ' . $guestName . ',',
         '',
-        'Check-in: ' . $checkIn . ' | ' . $checkInTime,
-        '',
-        'Check-out: ' . $checkOut . ' | ' . $checkOutTime,
+        'Thank you for choosing Derand Hotel. We have received your reservation and payment — your stay is confirmed.',
         '',
     ];
+    if ($roomName !== '') {
+        $lines[] = 'Room: ' . $roomName;
+    }
+    $lines[] = 'Check-in: ' . $checkIn . ' from ' . $checkInTime;
+    $lines[] = 'Check-out: ' . $checkOut . ' until ' . $checkOutTime;
+    if ($nights !== '') {
+        $lines[] = 'Nights: ' . $nights;
+    }
+    if ($adults !== '') {
+        $guestLine = 'Guests: ' . $adults . ' adult' . ($adults === '1' ? '' : 's');
+        if ($children !== '' && $children !== '0') {
+            $guestLine .= ', ' . $children . ' child' . ($children === '1' ? '' : 'ren');
+        }
+        $lines[] = $guestLine;
+    }
+    if ($total !== '') {
+        $lines[] = 'Total paid: ' . $total . ' ' . $currency;
+    }
     if ($reference !== '') {
         $lines[] = 'Booking reference: ' . $reference;
-        $lines[] = '';
     }
-    $lines[] = 'Need anything? Reply to this email or call us directly at ' . $phone . '.';
+    if ($notes !== '') {
+        $lines[] = 'Your notes: ' . $notes;
+    }
     $lines[] = '';
-    $lines[] = 'Safe travels, and see you soon!';
+    $lines[] = 'Need to change anything? Reply to this email or call us at ' . $phone . '.';
+    $lines[] = '';
+    $lines[] = 'We look forward to welcoming you.';
     $lines[] = '';
     $lines[] = '— Derand Hotel';
+    $lines[] = raiaccept_trimmed_string($booking['hotelAddress'] ?? 'Bekim Fehmiu Str. 30, Pristina 10000, Kosovo');
     $lines[] = 'info@derandhotel.com';
 
     return implode("\n", $lines);
+}
+
+function raiaccept_notify_guest_confirmation(array $booking, array $config): bool
+{
+    $guestEmail = raiaccept_trimmed_string($booking['guestEmail'] ?? '');
+    if ($guestEmail === '') {
+        return false;
+    }
+
+    $guestName = trim((string) ($booking['guestName'] ?? ''));
+    if ($guestName === '') {
+        $guestName = trim(
+            raiaccept_trimmed_string($booking['guestFirstName'] ?? '') . ' ' .
+            raiaccept_trimmed_string($booking['guestLastName'] ?? '')
+        );
+    }
+
+    $subject = 'Booking Confirmed — Derand Hotel';
+    $body = raiaccept_guest_confirmation_message($booking);
+    $fromEmail = $config['order_notification_email'] ?: 'info@derandhotel.com';
+
+    if (raiaccept_send_plaintext_mail($guestEmail, $subject, $body, $fromEmail, 'Derand Hotel')) {
+        return true;
+    }
+
+    return raiaccept_send_guest_confirmation_via_formsubmit($guestEmail, $subject, $body);
 }
 
 function raiaccept_notify_hotel_paid_booking(array $booking, array $config): bool
@@ -1493,15 +1692,8 @@ function raiaccept_dispatch_paid_booking_emails(string $merchantOrderReference, 
         $hotelSent = raiaccept_notify_hotel_paid_booking($booking, $config);
     }
 
-    $guestEmail = raiaccept_trimmed_string($booking['guestEmail'] ?? '');
-    if (!$guestSent && $guestEmail !== '') {
-        $guestSent = raiaccept_send_plaintext_mail(
-            $guestEmail,
-            'Booking Confirmed — Derand Hotel',
-            raiaccept_guest_confirmation_message($booking),
-            'info@derandhotel.com',
-            'Derand Hotel'
-        );
+    if (!$guestSent) {
+        $guestSent = raiaccept_notify_guest_confirmation($booking, $config);
     }
 
     $booking['guestEmailSent'] = !empty($booking['guestEmailSent']) || $guestSent;

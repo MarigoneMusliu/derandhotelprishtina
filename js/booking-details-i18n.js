@@ -33,7 +33,8 @@
       "bd-label-room": "Room",
       "bd-label-check-in": "Check-in",
       "bd-label-check-out": "Check-out",
-      "bd-label-full-name": "Full Name",
+      "bd-label-first-name": "Name",
+      "bd-label-surname": "Surname",
       "bd-label-email": "Email Address",
       "bd-label-phone": "Phone Number",
       "bd-label-adults": "Adults",
@@ -112,6 +113,8 @@
       "bd-status-delivery-required":
         "Please choose when to deliver your extras to your room.",
       "bd-status-guest-required": "Please complete the highlighted guest details.",
+      "bd-status-phone-invalid":
+        "Please enter a phone number with 5 to 20 digits.",
       "bd-status-blocked-dates":
         "These dates cannot be processed. Please choose other dates.",
       "bd-status-junior-fully-booked":
@@ -124,7 +127,15 @@
       "bd-status-payment-redirect": "Redirecting to secure payment...",
       "bd-status-payment-checking": "Checking payment status...",
       "bd-status-payment-confirmed":
-        "Payment confirmed. Booking reference: {reference}.",
+        "Your reservation is confirmed! Reference: {reference}. A confirmation email is on its way.",
+      "bd-status-otello-success":
+        "Your reservation was sent to Otello PMS successfully.",
+      "bd-alert-reservation-confirmed":
+        "Your reservation is confirmed!\n\nThank you for booking with Derand Hotel.\n\nRoom: {room}\nCheck-in: {checkin}\nCheck-out: {checkout}\nBooking reference: {reference}\n\nA confirmation email will be sent to:\n{email}\n\nWe look forward to welcoming you!",
+      "bd-alert-payment-confirm":
+        "Please confirm your booking:\n\nRoom: {room}\nCheck-in: {checkin}\nCheck-out: {checkout}\n{guests}\n\nTotal to pay now: {total}\n\nContinue to secure card payment?",
+      "bd-status-payment-amount-mismatch":
+        "The payment total ({charged}) does not match your booking summary ({expected}). Please refresh the page or contact reception at info@derandhotel.com.",
       "bd-status-payment-cancelled":
         "Payment was cancelled. Your booking details are still here if you want to try again.",
       "bd-status-payment-failed":
@@ -173,7 +184,8 @@
       "bd-label-room": "Zimmer",
       "bd-label-check-in": "Anreise",
       "bd-label-check-out": "Abreise",
-      "bd-label-full-name": "Vollst\u00e4ndiger Name",
+      "bd-label-first-name": "Vorname",
+      "bd-label-surname": "Nachname",
       "bd-label-email": "E-Mail-Adresse",
       "bd-label-phone": "Telefonnummer",
       "bd-label-adults": "Erwachsene",
@@ -253,6 +265,8 @@
         "Bitte w\u00e4hlen Sie, wann wir Ihre Extras auf Ihr Zimmer liefern sollen.",
       "bd-status-guest-required":
         "Bitte vervollst\u00e4ndigen Sie die markierten G\u00e4stedaten.",
+      "bd-status-phone-invalid":
+        "Bitte geben Sie eine Telefonnummer mit 5 bis 20 Ziffern ein.",
       "bd-status-blocked-dates":
         "Diese Daten k\u00f6nnen nicht verarbeitet werden. Bitte w\u00e4hlen Sie andere Daten.",
       "bd-status-junior-fully-booked":
@@ -265,7 +279,15 @@
       "bd-status-payment-redirect": "Weiterleitung zur sicheren Zahlung...",
       "bd-status-payment-checking": "Zahlungsstatus wird geprueft...",
       "bd-status-payment-confirmed":
-        "Zahlung bestaetigt. Buchungsreferenz: {reference}.",
+        "Ihre Reservierung ist bestaetigt! Referenz: {reference}. Eine Bestaetigungs-E-Mail ist unterwegs.",
+      "bd-status-otello-success":
+        "Ihre Reservierung wurde erfolgreich an Otello PMS gesendet.",
+      "bd-alert-reservation-confirmed":
+        "Ihre Reservierung ist bestaetigt!\n\nVielen Dank fuer Ihre Buchung im Derand Hotel.\n\nZimmer: {room}\nCheck-in: {checkin}\nCheck-out: {checkout}\nBuchungsreferenz: {reference}\n\nEine Bestaetigungs-E-Mail wird gesendet an:\n{email}\n\nWir freuen uns auf Ihren Besuch!",
+      "bd-alert-payment-confirm":
+        "Bitte bestaetigen Sie Ihre Buchung:\n\nZimmer: {room}\nCheck-in: {checkin}\nCheck-out: {checkout}\n{guests}\n\nJetzt zu zahlen: {total}\n\nWeiter zur sicheren Kartenzahlung?",
+      "bd-status-payment-amount-mismatch":
+        "Der Zahlungsbetrag ({charged}) stimmt nicht mit Ihrer Buchungsuebersicht ({expected}) ueberein. Bitte laden Sie die Seite neu oder kontaktieren Sie die Rezeption unter info@derandhotel.com.",
       "bd-status-payment-cancelled":
         "Die Zahlung wurde abgebrochen. Ihre Buchungsdaten bleiben erhalten, falls Sie es erneut versuchen moechten.",
       "bd-status-payment-failed":
@@ -314,7 +336,8 @@
       "bd-label-room": "Dhoma",
       "bd-label-check-in": "Check-in",
       "bd-label-check-out": "Check-out",
-      "bd-label-full-name": "Emri i Plot\u00eb",
+      "bd-label-first-name": "Emri",
+      "bd-label-surname": "Mbiemri",
       "bd-label-email": "Adresa e Email-it",
       "bd-label-phone": "Numri i Telefonit",
       "bd-label-adults": "T\u00eb rritur",
@@ -394,6 +417,8 @@
         "Ju lutemi zgjidhni kur t\u00eb sjellim shtesat n\u00eb dhom\u00ebn tuaj.",
       "bd-status-guest-required":
         "Ju lutemi plot\u00ebsoni detajet e mysafir\u00ebt t\u00eb theksuara.",
+      "bd-status-phone-invalid":
+        "Ju lutemi shkruani nj\u00eb num\u00ebr telefoni me 5 deri n\u00eb 20 shifra.",
       "bd-status-blocked-dates":
         "K\u00ebto data nuk mund t\u00eb procesohen. Ju lutemi zgjidhni data t\u00eb tjera.",
       "bd-status-junior-fully-booked":
@@ -406,7 +431,15 @@
       "bd-status-payment-redirect": "Duke ju derguar te pagesa e sigurt...",
       "bd-status-payment-checking": "Duke kontrolluar statusin e pageses...",
       "bd-status-payment-confirmed":
-        "Pagesa u konfirmua. Referenca e rezervimit: {reference}.",
+        "Rezervimi juaj eshte konfirmuar! Reference: {reference}. Nje email konfirmimi eshte ne rrug.",
+      "bd-status-otello-success":
+        "Rezervimi juaj u dergua me sukses ne Otello PMS.",
+      "bd-alert-reservation-confirmed":
+        "Rezervimi juaj eshte konfirmuar!\n\nFaleminderit qe rezervuat ne Derand Hotel.\n\nDhoma: {room}\nCheck-in: {checkin}\nCheck-out: {checkout}\nReference e rezervimit: {reference}\n\nNje email konfirmimi do te dergohet te:\n{email}\n\nJemi te lumtur qe ju presim!",
+      "bd-alert-payment-confirm":
+        "Ju lutemi konfirmoni rezervimin tuaj:\n\nDhoma: {room}\nCheck-in: {checkin}\nCheck-out: {checkout}\n{guests}\n\nTotali per tu paguar tani: {total}\n\nVazhdoni te pagesa e sigurt me karte?",
+      "bd-status-payment-amount-mismatch":
+        "Shuma e pageses ({charged}) nuk perputhet me permbledhjen e rezervimit ({expected}). Ju lutemi rifreskoni faqen ose kontaktoni recepsionin ne info@derandhotel.com.",
       "bd-status-payment-cancelled":
         "Pagesa u anulua. Detajet e rezervimit jane ende ketu nese doni te provoni perseri.",
       "bd-status-payment-failed":

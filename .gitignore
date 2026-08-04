@@ -2,4 +2,5 @@ raiaccept-private-config.php
 raiaccept-private-config*.php
 api/raiaccept-config.php
 api/_raiaccept-config.local.php
+api/otello-config.php
 api/_storage/

@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta
       name="description"
-      content="Sunny Hill Festival offers at Derand Hotel Prishtina."
+      content="Sunny Hill Festival 2026 has ended. Explore regular stays at Derand Hotel in Prishtina."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Sunny Hill Festival Offers | Derand Hotel</title>
+    <title>Sunny Hill Festival Stay | Derand Hotel</title>
     <link rel="canonical" href="https://www.derandhotel.com/sunnyhill.html" />
     <link rel="icon" href="favicon.ico?v=14" type="image/x-icon" />
 
@@ -21,7 +21,7 @@
       href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800;900&family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/sunnyhill.css" type="text/css" />
+    <link rel="stylesheet" href="css/sunnyhill.css?v=6" type="text/css" />
     <style>
       body.sunnyhill-page.policy-font-noto-serif.sacher-home,
       body.sunnyhill-page.policy-font-noto-serif.sacher-home h1,
@@ -52,7 +52,7 @@
     </style>
   </head>
 
-  <body class="sunnyhill-page policy-font-noto-serif sacher-home">
+  <body class="sunnyhill-page policy-font-noto-serif sacher-home sunnyhill-page--festival-closed">
     <div id="preloder">
       <div class="loader"></div>
     </div>
@@ -166,6 +166,11 @@
                       <a href="#" data-i18n="nav-activities">ACTIVITIES</a>
                       <ul class="dropdown">
                         <li>
+                          <a href="sunnyhill.html" data-i18n="nav-offer-1"
+                            >SUNNY HILL FESTIVAL</a
+                          >
+                        </li>
+                        <li>
                           <a href="rinu.html" data-i18n="nav-activity-2"
                             >RINU MEDSPA</a
                           >
@@ -177,7 +182,7 @@
                         </li>
                       </ul>
                     </li>
-                    <li>
+                    <!-- <li>
                       <a href="#" data-i18n="nav-offers">OFFERS</a>
                       <ul class="dropdown">
                         <li>
@@ -186,7 +191,7 @@
                           >
                         </li>
                       </ul>
-                    </li>
+                    </li> -->
                     <li>
                       <a href="extra.html">Concierge</a>
                     </li>
@@ -249,165 +254,200 @@
 
     <main class="sunnyhill-festival">
       <div class="sunnyhill-festival__shell">
-        <section class="sunnyhill-hero" aria-labelledby="sunnyhill-lineup-title">
+        <section class="sunnyhill-hero" aria-labelledby="sunnyhill-hero-title">
           <div class="sunnyhill-hero__content">
-            <p class="sunnyhill-hero__eyebrow">AUGUST 2026 &bull; PRISHTINA</p>
-            <h1 class="sunnyhill-hero__title" id="sunnyhill-lineup-title">
-              <span>THE 2026</span>
-              <span>LINEUP</span>
+            <p class="sunnyhill-hero__brand">Derand Hotel</p>
+            <h1 class="sunnyhill-hero__title" id="sunnyhill-hero-title">
+              <span>Your festival</span>
+              <span>stay</span>
             </h1>
-            <a
-              href="#claim-your-pass"
-              class="sunnyhill-hero__cta"
-              >BOOK YOUR FESTIVAL PASS</a
+            <p class="sunnyhill-hero__eyebrow">31 JULY – 3 AUGUST 2026 · PRISHTINA</p>
+            <p class="sunnyhill-hero__lead">
+              Thank you for celebrating Sunny Hill with us. Festival room
+              packages are no longer available — explore our regular stays
+              anytime.
+            </p>
+            <a href="book.html" class="sunnyhill-hero__cta"
+              >Book a regular stay</a
             >
           </div>
         </section>
 
         <section
-          class="sunnyhill-passes"
-          id="claim-your-pass"
-          aria-labelledby="sunnyhill-passes-title"
+          class="sunnyhill-rooms"
+          id="festival-rooms"
+          aria-labelledby="sunnyhill-rooms-title"
         >
-          <div class="sunnyhill-passes__intro">
-            <p class="sunnyhill-passes__eyebrow">Exclusive Access</p>
-            <h2 class="sunnyhill-passes__title" id="sunnyhill-passes-title">
-              Claim Your Pass
-            </h2>
-            <div
-              class="sunnyhill-passes__mode"
-              role="group"
-              aria-label="Solo or couple ticket pricing"
-            >
-              <button
-                type="button"
-                class="sunnyhill-passes__mode-btn is-active"
-                data-pass-mode="solo"
-                aria-pressed="true"
-              >
-                Solo ticket
-              </button>
-              <button
-                type="button"
-                class="sunnyhill-passes__mode-btn"
-                data-pass-mode="couple"
-                aria-pressed="false"
-              >
-                Couple ticket
-              </button>
+          <div class="sunnyhill-rooms__header">
+            <div class="sunnyhill-rooms__heading">
+              <p class="sunnyhill-rooms__eyebrow">Festival accommodation</p>
+              <h2 class="sunnyhill-rooms__title" id="sunnyhill-rooms-title">
+                Rooms for Sunny Hill
+              </h2>
             </div>
           </div>
 
-          <div class="sunnyhill-passes__grid" data-pass-pricing="solo">
-            <article
-              class="pass-card pass-card--standard"
-              data-pass-id="standard"
-              data-pass-title="Standard"
-              data-pass-detail="3-Day Access"
-            >
-              <div class="pass-card__body">
-                <h3 class="pass-card__title">Standard</h3>
-                <p class="pass-card__subtitle">The essential entry</p>
-                <p class="pass-card__detail" data-pass-detail>3-Day Access</p>
-                <ul class="pass-card__features">
-                  <li>3-Day General Admission</li>
-                  <li
-                    data-room-solo="Superior Standard Room (Solo)"
-                    data-room-couple="Superior Standard Room (Couple)"
-                  >
-                    Superior Standard Room (Solo)
-                  </li>
-                  <li>Round-trip Hotel Shuttle</li>
-                </ul>
-                <p
-                  class="pass-card__price"
-                  data-price-solo="585"
-                  data-price-couple="754"
+          <div
+            id="sunnyhill-closed-notice"
+            class="sunnyhill-festival-closed"
+            role="status"
+            aria-live="polite"
+          >
+            <p class="sunnyhill-festival-closed__eyebrow">Sunny Hill Festival 2026</p>
+            <h3 class="sunnyhill-festival-closed__title">Festival reservations have ended</h3>
+            <p class="sunnyhill-festival-closed__copy">
+              Sunny Hill has finished for this year, so festival room packages
+              are no longer available. We would love to welcome you for a regular
+              stay at Derand Hotel instead.
+            </p>
+            <a href="book.html" class="sunnyhill-festival-closed__cta">Browse all rooms</a>
+          </div>
+
+          <div
+            id="sunnyhill-closed-toast"
+            class="sunnyhill-festival-closed-toast"
+            role="alert"
+            hidden
+          >
+            <p>
+              Sunny Hill Festival has ended. Festival reservations are closed —
+              please choose a regular stay on our booking page.
+            </p>
+            <button type="button" class="sunnyhill-festival-closed-toast__close" aria-label="Dismiss">
+              &times;
+            </button>
+          </div>
+
+          <div class="sunnyhill-rooms__list">
+            <article class="stay-row">
+              <a
+                class="stay-row__media"
+                href="booking-details.html?room=superior-double&amp;checkin=2026-07-31&amp;checkout=2026-08-03&amp;adults=1&amp;children=0"
+                data-room-link="superior-double"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <img
+                  src="img/superiorroom3.webp"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  width="900"
+                  height="700"
+                />
+              </a>
+              <div class="stay-row__content">
+                <p class="stay-row__index">01</p>
+                <h3 class="stay-row__title">Superior Double</h3>
+                <p class="stay-row__meta">22 m² · King bed · City calm</p>
+                <p class="stay-row__price">€220 <span>per night</span></p>
+                <a
+                  class="stay-row__cta"
+                  href="booking-details.html?room=superior-double&amp;checkin=2026-07-31&amp;checkout=2026-08-03&amp;adults=1&amp;children=0"
+                  data-room="superior-double"
+                  >Reservations closed</a
                 >
-                  <span class="pass-card__price-value">585</span>
-                  <span class="pass-card__price-currency">EUR</span>
-                </p>
-                <button
-                  type="button"
-                  class="pass-card__button"
-                  data-pass-action="checkout"
-                >
-                  Claim Pass
-                </button>
               </div>
             </article>
 
-            <article
-              class="pass-card pass-card--featured"
-              data-pass-id="vip"
-              data-pass-title="VIP Pass"
-              data-pass-detail="3-Day Access Â· C4 Stage"
-            >
-              <div class="pass-card__body">
-                <span class="pass-card__badge">Recommended</span>
-                <h3 class="pass-card__title">VIP Pass</h3>
-                <p class="pass-card__subtitle">Premium festival access</p>
-                <p class="pass-card__detail" data-pass-detail>
-                  3-Day Access &middot; C4 Stage
-                </p>
-                <ul class="pass-card__features">
-                  <li>Full VIP Stage Access</li>
-                  <li>Premium Suite Upgrade</li>
-                  <li>Fast-track Lane Access</li>
-                </ul>
-                <p
-                  class="pass-card__price"
-                  data-price-solo="790"
-                  data-price-couple="1190"
+            <article class="stay-row stay-row--flip">
+              <a
+                class="stay-row__media"
+                href="booking-details.html?room=deluxe-double&amp;checkin=2026-07-31&amp;checkout=2026-08-03&amp;adults=1&amp;children=0"
+                data-room-link="deluxe-double"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <img
+                  src="img/deluxeroom4.webp"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  width="900"
+                  height="700"
+                />
+              </a>
+              <div class="stay-row__content">
+                <p class="stay-row__index">02</p>
+                <h3 class="stay-row__title">Deluxe Double</h3>
+                <p class="stay-row__meta">Refined comfort · Garden side</p>
+                <p class="stay-row__price">€220 <span>per night</span></p>
+                <a
+                  class="stay-row__cta"
+                  href="booking-details.html?room=deluxe-double&amp;checkin=2026-07-31&amp;checkout=2026-08-03&amp;adults=1&amp;children=0"
+                  data-room="deluxe-double"
+                  >Reservations closed</a
                 >
-                  <span class="pass-card__price-value">790</span>
-                  <span class="pass-card__price-currency">EUR</span>
-                </p>
-                <button
-                  type="button"
-                  class="pass-card__button pass-card__button--featured"
-                  data-pass-action="checkout"
-                >
-                  Secure VIP
-                </button>
               </div>
             </article>
 
-            <article
-              class="pass-card pass-card--ultra"
-              data-pass-id="ultra"
-              data-pass-title="Ultra VIP"
-              data-pass-detail="3-Day Access Â· Sunny Hill + C4 Stage"
-            >
-              <div class="pass-card__body">
-                <h3 class="pass-card__title">Ultra VIP</h3>
-                <p class="pass-card__subtitle">The pinnacle package</p>
-                <p class="pass-card__detail" data-pass-detail>
-                  3-Day Access &middot; BUNDLE
-                </p>
-                <ul class="pass-card__features">
-                  <li>Full Backstage &amp; Ultra Access</li>
-                  <li>Presidential Suite at Derand</li>
-                  <li>24/7 Personal Chauffeur</li>
-                </ul>
-                <p
-                  class="pass-card__price"
-                  data-price-solo="1190"
-                  data-price-couple="1990"
+            <article class="stay-row">
+              <a
+                class="stay-row__media"
+                href="booking-details.html?room=premium-double&amp;checkin=2026-07-31&amp;checkout=2026-08-03&amp;adults=1&amp;children=0"
+                data-room-link="premium-double"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <img
+                  src="img/premium1.webp"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  width="900"
+                  height="700"
+                />
+              </a>
+              <div class="stay-row__content">
+                <p class="stay-row__index">03</p>
+                <h3 class="stay-row__title">Premium Room</h3>
+                <p class="stay-row__meta">28 m² · Sitting area · Elevated stay</p>
+                <p class="stay-row__price">€220 <span>per night</span></p>
+                <a
+                  class="stay-row__cta"
+                  href="booking-details.html?room=premium-double&amp;checkin=2026-07-31&amp;checkout=2026-08-03&amp;adults=1&amp;children=0"
+                  data-room="premium-double"
+                  >Reservations closed</a
                 >
-                  <span class="pass-card__price-value">1190</span>
-                  <span class="pass-card__price-currency">EUR</span>
-                </p>
-                <button
-                  type="button"
-                  class="pass-card__button"
-                  data-pass-action="checkout"
+              </div>
+            </article>
+
+            <article class="stay-row stay-row--flip">
+              <a
+                class="stay-row__media"
+                href="booking-details.html?room=superior-twin&amp;checkin=2026-07-31&amp;checkout=2026-08-03&amp;adults=1&amp;children=0"
+                data-room-link="superior-twin"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <img
+                  src="img/twinbook.webp"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  width="900"
+                  height="700"
+                />
+              </a>
+              <div class="stay-row__content">
+                <p class="stay-row__index">04</p>
+                <h3 class="stay-row__title">Superior Twin</h3>
+                <p class="stay-row__meta">23 m² · Twin beds · Shared ease</p>
+                <p class="stay-row__price">€220 <span>per night</span></p>
+                <a
+                  class="stay-row__cta"
+                  href="booking-details.html?room=superior-twin&amp;checkin=2026-07-31&amp;checkout=2026-08-03&amp;adults=1&amp;children=0"
+                  data-room="superior-twin"
+                  >Reservations closed</a
                 >
-                  Apply for Ultra
-                </button>
               </div>
             </article>
           </div>
+
+          <p class="sunnyhill-rooms__note">
+            Festival room bookings are closed. For upcoming stays at Derand Hotel,
+            <a href="book.html">browse all rooms and dates</a>.
+          </p>
         </section>
 
         <section class="sunnyhill-lineup" aria-labelledby="sunnyhill-lineup-label">
@@ -612,15 +652,15 @@
 
             <article class="advantage-card">
               <div class="advantage-card__icon" aria-hidden="true">
-                <i class="fa fa-ticket"></i>
+                <i class="fa fa-bed"></i>
               </div>
-              <h3 class="advantage-card__title">Tickets Options</h3>
+              <h3 class="advantage-card__title">Festival Rooms</h3>
               <p class="advantage-card__copy">
-                Compare Standard, VIP, and Ultra VIP access and choose the pass
-                that fits your Sunny Hill experience best.
+                Sunny Hill festival packages have ended. Book a regular Derand
+                stay for comfort, location, and our full concierge service.
               </p>
-              <a href="#claim-your-pass" class="advantage-card__link"
-                >Explore the tickets <span>&rarr;</span></a
+              <a href="book.html" class="advantage-card__link"
+                >Browse rooms <span>&rarr;</span></a
               >
             </article>
           </div>
@@ -866,124 +906,6 @@
       </div>
     </footer>
 
-    <div
-      class="sunnyhill-checkout"
-      id="sunnyhill-checkout"
-      aria-hidden="true"
-    >
-      <div
-        class="sunnyhill-checkout__backdrop"
-        data-checkout-close
-        tabindex="-1"
-      ></div>
-      <div
-        class="sunnyhill-checkout__panel"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="sunnyhill-checkout-title"
-      >
-        <header class="sunnyhill-checkout__header">
-          <div class="sunnyhill-checkout__header-text">
-            <p class="sunnyhill-checkout__eyebrow">Secure checkout</p>
-            <h2 class="sunnyhill-checkout__title" id="sunnyhill-checkout-title">
-              Complete your pass
-            </h2>
-          </div>
-          <button
-            type="button"
-            class="sunnyhill-checkout__close"
-            data-checkout-close
-            aria-label="Close checkout"
-          >
-            &times;
-          </button>
-        </header>
-
-        <div class="sunnyhill-checkout__summary pass-card" id="sunnyhill-checkout-summary">
-          <div class="pass-card__body">
-            <p class="sunnyhill-checkout__summary-label">Your selection</p>
-            <h3 class="pass-card__title" id="sunnyhill-checkout-pass-name">Standard</h3>
-            <p class="pass-card__subtitle" id="sunnyhill-checkout-pass-mode">Solo pass</p>
-            <p class="pass-card__detail" id="sunnyhill-checkout-pass-detail">3-Day Access</p>
-            <p class="pass-card__price sunnyhill-checkout__price">
-              <span class="pass-card__price-value" id="sunnyhill-checkout-pass-price">585</span>
-              <span class="pass-card__price-currency">EUR</span>
-            </p>
-          </div>
-        </div>
-
-        <form class="sunnyhill-checkout__form" id="sunnyhill-checkout-form">
-          <p class="sunnyhill-checkout__form-title">Guest details</p>
-          <p class="sunnyhill-checkout__form-hint">
-            We will use these details for your festival pass and confirmation.
-          </p>
-          <div class="sunnyhill-checkout__row">
-            <div class="sunnyhill-checkout__field">
-              <label for="sunnyhill-first-name">First name</label>
-              <input
-                id="sunnyhill-first-name"
-                type="text"
-                name="firstName"
-                autocomplete="given-name"
-                required
-              />
-            </div>
-            <div class="sunnyhill-checkout__field">
-              <label for="sunnyhill-last-name">Surname</label>
-              <input
-                id="sunnyhill-last-name"
-                type="text"
-                name="lastName"
-                autocomplete="family-name"
-                required
-              />
-            </div>
-          </div>
-          <div class="sunnyhill-checkout__field">
-            <label for="sunnyhill-phone">Phone number</label>
-            <input
-              id="sunnyhill-phone"
-              type="tel"
-              name="phone"
-              autocomplete="tel"
-              required
-            />
-          </div>
-          <div class="sunnyhill-checkout__field">
-            <label for="sunnyhill-email">Email</label>
-            <input
-              id="sunnyhill-email"
-              type="email"
-              name="email"
-              autocomplete="email"
-              required
-            />
-          </div>
-        </form>
-
-        <footer class="sunnyhill-checkout__footer">
-          <div class="sunnyhill-checkout__total-row">
-            <span>Total due</span>
-            <strong id="sunnyhill-checkout-total">585 EUR</strong>
-          </div>
-          <button
-            type="submit"
-            form="sunnyhill-checkout-form"
-            class="sunnyhill-checkout__pay"
-            id="sunnyhill-checkout-pay-btn"
-          >
-            Pay securely
-          </button>
-          <p
-            class="sunnyhill-checkout__status"
-            id="sunnyhill-checkout-status"
-            role="status"
-            aria-live="polite"
-          ></p>
-        </footer>
-      </div>
-    </div>
-
     <script src="js/jquery-3.3.1.min.js" defer></script>
     <script src="js/bootstrap.min.js" defer></script>
     <script src="js/jquery.nice-select.min.js" defer></script>
@@ -997,7 +919,7 @@
     <script src="js/tidio-left-position.js?v=2" defer></script>
     -->
     <script src="js/chatbase-widget.js?v=4" defer></script>
-    <script src="js/sunnyhill-checkout.js?v=3" defer></script>
+    <script src="js/sunnyhill-festival-closed.js?v=1" defer></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         var grid = document.getElementById("sunnyhill-grid");

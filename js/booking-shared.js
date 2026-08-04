@@ -269,16 +269,12 @@
     return EXTRA_ITEMS[id] || null;
   }
 
-  // Hotel night = check-in date through the day before check-out.
-  // Special event rate for all bookable rooms (Junior Suite is sold out on these nights).
-  var SPECIAL_RATE_NIGHTS = [
-    "2026-07-31",
-    "2026-08-01",
-    "2026-08-02",
-    "2026-08-03",
-  ];
-  var SPECIAL_RATE_EUR = 350;
-  var JUNIOR_SUITE_BLOCKED_NIGHTS = SPECIAL_RATE_NIGHTS.slice();
+  // Flat nightly rates for all dates (no seasonal overrides).
+  var SPECIAL_RATE_NIGHTS = [];
+  var AUGUST_REDUCED_RATE_NIGHTS = [];
+  var SPECIAL_RATE_EUR = 0;
+  var AUGUST_REDUCED_RATE_EUR = 0;
+  var JUNIOR_SUITE_BLOCKED_NIGHTS = [];
   // Legacy: nights closed for every room (none currently).
   var BLOCKED_NIGHTS = [];
 
@@ -314,6 +310,10 @@
     return BLOCKED_NIGHTS.indexOf(String(iso || "")) >= 0;
   }
 
+  function isAugustReducedRateNight(iso) {
+    return AUGUST_REDUCED_RATE_NIGHTS.indexOf(String(iso || "")) >= 0;
+  }
+
   function isSpecialRateNight(iso) {
     return SPECIAL_RATE_NIGHTS.indexOf(String(iso || "")) >= 0;
   }
@@ -343,8 +343,7 @@
   }
 
   function applyNightlySpecialRate(baseRate, nightIso) {
-    var base = Number(baseRate) || 0;
-    return isSpecialRateNight(nightIso) ? SPECIAL_RATE_EUR : base;
+    return Number(baseRate) || 0;
   }
 
   function getStayRoomTotal(baseRate, checkinIso, checkoutIso) {
@@ -373,7 +372,9 @@
     EXTRA_ITEMS: EXTRA_ITEMS,
     BLOCKED_NIGHTS: BLOCKED_NIGHTS.slice(),
     SPECIAL_RATE_NIGHTS: SPECIAL_RATE_NIGHTS.slice(),
+    AUGUST_REDUCED_RATE_NIGHTS: AUGUST_REDUCED_RATE_NIGHTS.slice(),
     SPECIAL_RATE_EUR: SPECIAL_RATE_EUR,
+    AUGUST_REDUCED_RATE_EUR: AUGUST_REDUCED_RATE_EUR,
     JUNIOR_SUITE_BLOCKED_NIGHTS: JUNIOR_SUITE_BLOCKED_NIGHTS.slice(),
     loadBookingLines: loadBookingLines,
     saveBookingLines: saveBookingLines,
@@ -392,6 +393,7 @@
     eachNightIso: eachNightIso,
     isBlockedNight: isBlockedNight,
     isSpecialRateNight: isSpecialRateNight,
+    isAugustReducedRateNight: isAugustReducedRateNight,
     isJuniorSuiteBlockedNight: isJuniorSuiteBlockedNight,
     getBlockedNightsInStay: getBlockedNightsInStay,
     getSpecialRateNightsInStay: getSpecialRateNightsInStay,

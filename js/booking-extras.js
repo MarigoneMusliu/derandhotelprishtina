@@ -8,11 +8,11 @@
     "superior-double": "Superior Double Room",
   };
   var ROOM_NIGHTLY = {
-    "junior-suite": 131,
-    "deluxe-double": 97,
-    "premium-double": 114,
-    "superior-twin": 79,
-    "superior-double": 92,
+    "junior-suite": { single: 140, double: 140 },
+    "deluxe-double": { single: 105, double: 105 },
+    "premium-double": { single: 120, double: 130, triple: 140 },
+    "superior-twin": { single: 95, double: 95 },
+    "superior-double": { single: 95, double: 95 },
   };
 
   var gridEl = document.getElementById("booking-extras-grid");
@@ -124,7 +124,14 @@
   }
 
   function getRoomTotal(state) {
-    var base = ROOM_NIGHTLY[state.room] || 0;
+    var rates = ROOM_NIGHTLY[state.room] || {};
+    var adults = Number(state.adults) || 1;
+    var base =
+      adults >= 3 && rates.triple
+        ? rates.triple
+        : adults >= 2 && rates.double
+          ? rates.double
+          : rates.single || 0;
     if (
       window.DerandBooking &&
       typeof window.DerandBooking.getStayRoomTotal === "function"

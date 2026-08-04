@@ -21,8 +21,8 @@ body.sunnyhill-page .footer {
   padding: 0 0 88px;
   color: #fff;
   background:
-    radial-gradient(circle at top, rgba(86, 41, 158, 0.28), transparent 34%),
-    linear-gradient(180deg, #090909 0%, #050505 100%);
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(177, 114, 86, 0.18), transparent 55%),
+    linear-gradient(180deg, #0c0b0a 0%, #070706 48%, #050505 100%);
 }
 
 .sunnyhill-festival__shell {
@@ -1725,3 +1725,505 @@ body.sunnyhill-page .footer {
     filter: saturate(0.88) brightness(0.55) contrast(1.04);
   }
 }
+
+/* ===== Festival stay — editorial redesign ===== */
+:root {
+  --sh-stay-ink: #0d0c0b;
+  --sh-stay-panel: #151311;
+  --sh-stay-line: rgba(214, 186, 148, 0.22);
+  --sh-stay-gold: #c9a87a;
+  --sh-stay-copper: #b27256;
+  --sh-stay-cream: #f3ebe2;
+  --sh-stay-muted: rgba(243, 235, 226, 0.68);
+}
+
+.sunnyhill-hero {
+  border-radius: 0;
+  min-height: min(92vh, 760px);
+  box-shadow: none;
+}
+
+.sunnyhill-hero::before {
+  transform: scale(1.02);
+  filter: brightness(0.58) contrast(1.1) saturate(0.82);
+}
+
+.sunnyhill-hero__brand {
+  margin: 0 0 18px;
+  font-family: "Noto Serif", serif !important;
+  font-size: clamp(1.45rem, 2.6vw, 2rem);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+  animation: stayBrandIn 0.9s ease both;
+}
+
+@keyframes stayBrandIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sunnyhill-hero__eyebrow {
+  color: var(--sh-stay-gold);
+  margin: 20px 0 0;
+}
+
+.sunnyhill-hero__lead {
+  margin: 18px auto 0;
+  max-width: 34rem;
+  color: rgba(255, 244, 232, 0.82);
+  font-size: clamp(0.98rem, 1.5vw, 1.12rem);
+  line-height: 1.7;
+  font-weight: 400;
+  animation: stayBrandIn 1s ease 0.12s both;
+}
+
+.sunnyhill-hero__title {
+  animation: stayBrandIn 0.95s ease 0.06s both;
+}
+
+.sunnyhill-hero__cta {
+  background: var(--sh-stay-copper);
+  border-radius: 999px;
+  letter-spacing: 0.14em;
+  box-shadow: 0 12px 34px rgba(178, 114, 86, 0.32);
+  animation: stayBrandIn 1.05s ease 0.18s both;
+}
+
+.sunnyhill-hero__title span:last-child {
+  color: var(--sh-stay-gold);
+}
+
+.sunnyhill-hero__cta:hover,
+.sunnyhill-hero__cta:focus-visible {
+  background: #c48466;
+}
+
+/* Rooms section */
+.sunnyhill-rooms {
+  position: relative;
+  margin: clamp(40px, 7vw, 72px) 0 0;
+  padding: clamp(36px, 5vw, 64px) clamp(18px, 3vw, 28px) clamp(40px, 6vw, 72px);
+  border-radius: 28px;
+  background:
+    radial-gradient(ellipse 80% 50% at 10% 0%, rgba(178, 114, 86, 0.12), transparent 55%),
+    radial-gradient(ellipse 70% 45% at 90% 100%, rgba(201, 168, 122, 0.08), transparent 50%),
+    linear-gradient(180deg, #171411 0%, var(--sh-stay-ink) 48%, #12100e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+}
+
+.sunnyhill-rooms::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.35;
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+}
+
+.sunnyhill-rooms__header {
+  position: relative;
+  z-index: 1;
+  margin-bottom: clamp(36px, 5vw, 56px);
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--sh-stay-line);
+}
+
+.sunnyhill-rooms__eyebrow {
+  margin: 0 0 10px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--sh-stay-gold);
+}
+
+.sunnyhill-rooms__title {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.85rem, 3.4vw, 2.75rem);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+.sunnyhill-rooms__header,
+.sunnyhill-rooms__list {
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stay-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: clamp(22px, 3.5vw, 48px);
+  align-items: center;
+  opacity: 0;
+  transform: translateY(18px);
+  animation: stayRowIn 0.7s ease forwards;
+}
+
+.stay-row:nth-child(1) { animation-delay: 0.05s; }
+.stay-row:nth-child(2) { animation-delay: 0.12s; }
+.stay-row:nth-child(3) { animation-delay: 0.19s; }
+.stay-row:nth-child(4) { animation-delay: 0.26s; }
+
+.stay-row--flip {
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+}
+
+.stay-row--flip .stay-row__media {
+  order: 2;
+}
+
+.stay-row--flip .stay-row__content {
+  order: 1;
+  text-align: right;
+  align-items: flex-end;
+}
+
+@keyframes stayRowIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stay-row__media {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 4px 28px 4px 28px;
+  aspect-ratio: 5 / 3.6;
+  background: #1a1714;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.stay-row--flip .stay-row__media {
+  border-radius: 28px 4px 28px 4px;
+}
+
+.stay-row__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(13, 12, 11, 0.12) 0%,
+    transparent 45%,
+    rgba(178, 114, 86, 0.12) 100%
+  );
+  pointer-events: none;
+}
+
+.stay-row__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.stay-row:hover .stay-row__media img,
+.stay-row:focus-within .stay-row__media img {
+  transform: scale(1.05);
+}
+
+.stay-row__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  padding: 8px 4px;
+}
+
+.stay-row__index {
+  margin: 0 0 14px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: var(--sh-stay-gold);
+}
+
+.stay-row__title {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.55rem, 2.6vw, 2.15rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.stay-row__meta {
+  margin: 12px 0 0;
+  color: var(--sh-stay-muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.stay-row__price {
+  margin: 22px 0 0;
+  color: var(--sh-stay-cream);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.stay-row__price span {
+  margin-left: 6px;
+  font-size: 0.78rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--sh-stay-muted);
+  letter-spacing: 0;
+}
+
+.stay-row__cta {
+  margin-top: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 26px;
+  border: 1px solid rgba(201, 168, 122, 0.55);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--sh-stay-cream);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 10px;
+  font-weight: 700;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.stay-row__cta:hover,
+.stay-row__cta:focus-visible {
+  background: var(--sh-stay-copper);
+  border-color: var(--sh-stay-copper);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.sunnyhill-rooms__list {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(28px, 4vw, 44px);
+}
+
+.sunnyhill-rooms__note {
+  position: relative;
+  z-index: 1;
+  margin: clamp(32px, 5vw, 48px) auto 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--sh-stay-line);
+  color: var(--sh-stay-muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  text-align: center;
+  max-width: 40rem;
+}
+
+.sunnyhill-rooms__note a {
+  color: var(--sh-stay-gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.sunnyhill-rooms__note a:hover,
+.sunnyhill-rooms__note a:focus-visible {
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .stay-row,
+  .stay-row--flip {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .stay-row--flip .stay-row__media,
+  .stay-row--flip .stay-row__content {
+    order: initial;
+  }
+
+  .stay-row--flip .stay-row__content {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .stay-row__media,
+  .stay-row--flip .stay-row__media {
+    border-radius: 18px;
+    aspect-ratio: 16 / 10;
+  }
+}
+
+@media (max-width: 640px) {
+  .sunnyhill-rooms {
+    border-radius: 20px;
+    padding: 28px 16px 36px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stay-row {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .stay-row__media img {
+    transition: none;
+  }
+}
+
+.sunnyhill-festival-closed {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 clamp(28px, 4vw, 40px);
+  padding: clamp(22px, 3.5vw, 30px);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 180, 130, 0.22);
+  background:
+    radial-gradient(ellipse 80% 120% at 0% 0%, rgba(255, 154, 82, 0.12), transparent 55%),
+    rgba(255, 255, 255, 0.03);
+  text-align: center;
+}
+
+.sunnyhill-festival-closed__eyebrow {
+  margin: 0 0 8px;
+  color: #ff9a52;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.sunnyhill-festival-closed__title {
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: clamp(1.35rem, 2.4vw, 1.85rem);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.sunnyhill-festival-closed__copy {
+  margin: 0 auto;
+  max-width: 52ch;
+  color: rgba(255, 244, 236, 0.82);
+  font-size: clamp(0.92rem, 1.5vw, 1rem);
+  line-height: 1.55;
+}
+
+.sunnyhill-festival-closed__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18px;
+  min-height: 42px;
+  padding: 0 22px;
+  border-radius: 999px;
+  border: 1px solid #b17256;
+  background: #b17256;
+  color: #fff !important;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-decoration: none !important;
+  text-transform: uppercase;
+}
+
+.sunnyhill-festival-closed__cta:hover,
+.sunnyhill-festival-closed__cta:focus-visible {
+  background: #9a6249;
+  border-color: #9a6249;
+  color: #fff !important;
+}
+
+.sunnyhill-festival-closed-toast {
+  position: fixed;
+  left: 50%;
+  bottom: max(20px, env(safe-area-inset-bottom));
+  z-index: 10050;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: min(520px, calc(100vw - 32px));
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 180, 130, 0.24);
+  background: rgba(18, 14, 12, 0.96);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.42);
+  color: rgba(255, 244, 236, 0.94);
+  transform: translate(-50%, 120%);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    transform 0.28s ease,
+    opacity 0.28s ease;
+}
+
+.sunnyhill-festival-closed-toast.is-visible {
+  transform: translate(-50%, 0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sunnyhill-festival-closed-toast p {
+  margin: 0;
+  flex: 1 1 auto;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.sunnyhill-festival-closed-toast__close {
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+body.sunnyhill-page--festival-closed .stay-row__cta--closed,
+body.sunnyhill-page--festival-closed a[data-room-link] {
+  opacity: 0.62;
+  cursor: not-allowed;
+  pointer-events: auto;
+}
+
+body.sunnyhill-page--festival-closed .stay-row__cta--closed:hover,
+body.sunnyhill-page--festival-closed .stay-row__cta--closed:focus-visible,
+body.sunnyhill-page--festival-closed a[data-room-link]:hover,
+body.sunnyhill-page--festival-closed a[data-room-link]:focus-visible {
+  background: transparent;
+  border-color: rgba(201, 168, 122, 0.35);
+  color: rgba(255, 244, 236, 0.72);
+  transform: none;
+}
+
+body.sunnyhill-page--festival-closed .stay-row__media {
+  pointer-events: none;
+}
+

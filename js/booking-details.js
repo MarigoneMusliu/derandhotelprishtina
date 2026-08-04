@@ -6,6 +6,8 @@
     (window.location.origin || "") + "/api/raiaccept-order-status.php";
   var PAYMENT_CONFIRM_EMAIL_URL =
     (window.location.origin || "") + "/api/raiaccept-booking-confirm.php";
+  var OTELLO_CREATE_URL =
+    (window.location.origin || "") + "/api/otello-create-reservation.php";
   var PENDING_PAYMENT_STORAGE_KEY = "derandBookingPendingPayments";
 
   var ROOM_DATA = {
@@ -13,31 +15,31 @@
       labelKey: "bd-room-junior-suite-label",
       metaKey: "bd-room-junior-suite-meta",
       image: "img/1111.webp",
-      price: 131,
+      price: 140,
     },
     "deluxe-double": {
       labelKey: "bd-room-deluxe-double-label",
       metaKey: "bd-room-deluxe-double-meta",
       image: "img/deluxeroom4.webp",
-      price: 97,
+      price: 105,
     },
     "premium-double": {
       labelKey: "bd-room-premium-double-label",
       metaKey: "bd-room-premium-double-meta",
       image: "img/premium1.webp",
-      price: 114,
+      price: 120,
     },
     "superior-twin": {
       labelKey: "bd-room-superior-twin-label",
       metaKey: "bd-room-superior-twin-meta",
       image: "img/twinbook.jpg",
-      price: 79,
+      price: 95,
     },
     "superior-double": {
       labelKey: "bd-room-superior-double-label",
       metaKey: "bd-room-superior-double-meta",
       image: "img/superiorroom3.webp",
-      price: 92,
+      price: 95,
     },
   };
 
@@ -98,18 +100,40 @@
   var cancelDeadlineEl = document.getElementById("booking-cancel-deadline");
   var statusEl = document.getElementById("booking-details-status");
   var backLinkEl = document.getElementById("booking-back-link");
-  var fullNameEl = document.getElementById("booking-full-name");
+  var firstNameEl = document.getElementById("booking-first-name");
+  var lastNameEl = document.getElementById("booking-last-name");
   var emailEl = document.getElementById("booking-email");
+  function phoneDigitCount(value) {
+    return ((value || "").match(/\d/g) || []).length;
+  }
+
+  function isPhoneValid(value) {
+    var digits = phoneDigitCount(value);
+    return digits >= 5 && digits <= 20;
+  }
+
+  function normalizePhoneInput(value) {
+    return String(value || "")
+      .replace(/\D/g, "")
+      .slice(0, 20);
+  }
+
   var phoneEl = document.getElementById("booking-phone");
   if (phoneEl) {
     phoneEl.removeAttribute("pattern");
-    phoneEl.removeAttribute("minlength");
     phoneEl.removeAttribute("title");
-    phoneEl.setAttribute("maxlength", "40");
-    phoneEl.setAttribute("inputmode", "text");
-    if (phoneEl.type !== "text") phoneEl.type = "text";
+    phoneEl.setAttribute("maxlength", "20");
+    phoneEl.setAttribute("minlength", "5");
+    phoneEl.setAttribute("inputmode", "numeric");
+    if (phoneEl.type !== "tel") phoneEl.type = "tel";
     phoneEl.addEventListener("input", function () {
-      if (phoneEl.setCustomValidity) phoneEl.setCustomValidity("");
+      var normalized = normalizePhoneInput(phoneEl.value);
+      if (phoneEl.value !== normalized) {
+        phoneEl.value = normalized;
+      }
+      if (phoneEl.setCustomValidity) {
+        phoneEl.setCustomValidity(isPhoneValid(phoneEl.value) ? "" : t("bd-status-phone-invalid"));
+      }
     });
   }
   var roomInputEl = document.getElementById("booking-room");
@@ -202,23 +226,34 @@
     return roomKey === "premium-double";
   }
 
+  function getRoomRateOption(roomKey) {
+    if (!roomInputEl) return null;
+    return roomInputEl.querySelector('option[value="' + roomKey + '"]');
+  }
+
   function getRoomBasePrice(roomKey, adults) {
+    var option = getRoomRateOption(roomKey);
+    if (option) {
+      var single = parseFloat(option.getAttribute("data-price-night"), 10) || 0;
+      var doubleRate = parseFloat(option.getAttribute("data-price-double"), 10);
+      var tripleRate = parseFloat(option.getAttribute("data-price-triple"), 10);
+      if (adults >= 3 && tripleRate > 0) return tripleRate;
+      if (adults >= 2 && doubleRate > 0) return doubleRate;
+      if (single > 0) return single;
+    }
     if (roomKey === "junior-suite") {
-      return adults >= 2 ? 138 : 131;
+      return 140;
     }
     if (roomKey === "premium-double") {
-      if (adults >= 3) return 154;
+      if (adults >= 3) return 140;
       if (adults >= 2) return 130;
-      return 114;
+      return 120;
     }
     if (roomKey === "deluxe-double") {
-      return adults >= 2 ? 102 : 97;
+      return 105;
     }
-    if (roomKey === "superior-twin") {
-      return adults >= 2 ? 92 : 79;
-    }
-    if (roomKey === "superior-double") {
-      return adults >= 2 ? 102 : 92;
+    if (roomKey === "superior-twin" || roomKey === "superior-double") {
+      return 95;
     }
     var room = ROOM_DATA[roomKey];
     return room ? room.price : 0;
@@ -979,8 +1014,13 @@
     var start = parseIso(state.checkin);
     var end = parseIso(state.checkout);
 
-    if (!fullNameEl.value.trim()) {
-      markError(fullNameEl);
+    if (!firstNameEl.value.trim()) {
+      markError(firstNameEl);
+      valid = false;
+    }
+
+    if (!lastNameEl.value.trim()) {
+      markError(lastNameEl);
       valid = false;
     }
 
@@ -989,9 +1029,12 @@
       valid = false;
     }
 
-    if (!phoneEl.value.trim()) {
+    if (!phoneEl.value.trim() || !isPhoneValid(phoneEl.value)) {
       markError(phoneEl);
       valid = false;
+      if (phoneEl.setCustomValidity) {
+        phoneEl.setCustomValidity(t("bd-status-phone-invalid"));
+      }
     } else if (phoneEl.setCustomValidity) {
       phoneEl.setCustomValidity("");
     }
@@ -1064,8 +1107,13 @@
       var deliveryMissing =
         hasBookingExtras(state) &&
         (!getExtrasDeliveryFromForm().date || !getExtrasDeliveryFromForm().time);
+      var phoneInvalid = phoneEl && phoneEl.value.trim() && !isPhoneValid(phoneEl.value);
       setStatus(
-        deliveryMissing ? "bd-status-delivery-required" : "bd-status-guest-required",
+        deliveryMissing
+          ? "bd-status-delivery-required"
+          : phoneInvalid
+            ? "bd-status-phone-invalid"
+            : "bd-status-guest-required",
         "error",
       );
     }
@@ -1086,7 +1134,7 @@
       "Guests summary: " + guestSummary(state.adults, state.children),
       "Nights: " + nights,
       "",
-      "Guest name: " + fullNameEl.value.trim(),
+      "Guest name: " + getGuestFullName(),
       "Email: " + emailEl.value.trim(),
       "Phone: " + phoneEl.value.trim(),
       "",
@@ -1118,6 +1166,18 @@
     );
     var body = encodeURIComponent(buildEmailMessage(state, room, nights, totals));
     window.location.href = "mailto:" + NOTIFY_EMAIL + "?subject=" + subject + "&body=" + body;
+  }
+
+  function getPendingGuestName(pendingOrder) {
+    if (!pendingOrder) return "";
+    if (pendingOrder.fullName) return pendingOrder.fullName;
+    return (
+      (pendingOrder.firstName || "") + " " + (pendingOrder.lastName || "")
+    ).trim();
+  }
+
+  function getGuestFullName() {
+    return (firstNameEl.value.trim() + " " + lastNameEl.value.trim()).trim();
   }
 
   function splitFullName(value) {
@@ -1237,7 +1297,13 @@
       }
       renderState = render(state);
     }
-    if (record.fullName) fullNameEl.value = record.fullName;
+    if (record.firstName) firstNameEl.value = record.firstName;
+    if (record.lastName) lastNameEl.value = record.lastName;
+    if (record.fullName && !record.firstName && !record.lastName) {
+      var restoredName = splitFullName(record.fullName);
+      firstNameEl.value = restoredName.firstName;
+      lastNameEl.value = restoredName.lastName;
+    }
     if (record.email) emailEl.value = record.email;
     if (record.phone) phoneEl.value = record.phone;
     if (record.notes) notesEl.value = record.notes;
@@ -1248,12 +1314,206 @@
     }
   }
 
-  function notifyHotelFromBrowser(pendingOrder, orderReference) {
-    // Web3Forms only accepts browser submissions on the free plan, so this is
-    // the fallback channel when the server-side hotel email did not go out.
-    // Same access key and pattern as the NOYA reservation form.
+  function buildGuestConfirmationMessage(pendingOrder, orderReference) {
     var state = pendingOrder.state || {};
-    var guestName = pendingOrder.fullName || "";
+    var guestName =
+      pendingOrder.fullName ||
+      (
+        (pendingOrder.firstName || "") +
+        " " +
+        (pendingOrder.lastName || "")
+      ).trim() ||
+      "Guest";
+    var lines = [
+      "Booking Confirmed!",
+      "",
+      "Dear " + guestName + ",",
+      "",
+      "Thank you for choosing Derand Hotel. We have received your reservation and payment — your stay is confirmed.",
+      "",
+    ];
+    if (pendingOrder.roomName) {
+      lines.push("Room: " + pendingOrder.roomName);
+    }
+    lines.push(
+      "Check-in: " + (state.checkin || "") + " from 15:00",
+      "Check-out: " + (state.checkout || "") + " until 11:00",
+    );
+    if (pendingOrder.nights) {
+      lines.push("Nights: " + pendingOrder.nights);
+    }
+    var guestLine = "Guests: " + (state.adults || 1) + " adult";
+    if ((state.adults || 1) !== 1) {
+      guestLine += "s";
+    }
+    if (state.children > 0) {
+      guestLine +=
+        ", " +
+        state.children +
+        " child" +
+        (state.children === 1 ? "" : "ren");
+    }
+    lines.push(guestLine);
+    if (pendingOrder.amount) {
+      lines.push("Total paid: " + pendingOrder.amount + " EUR");
+    }
+    if (orderReference) {
+      lines.push("Booking reference: " + orderReference);
+    }
+    if (pendingOrder.notes) {
+      lines.push("Your notes: " + pendingOrder.notes);
+    }
+    lines.push(
+      "",
+      "Need to change anything? Reply to this email or call us at +383 (0) 41 111 222.",
+      "",
+      "We look forward to welcoming you.",
+      "",
+      "— Derand Hotel",
+      "Bekim Fehmiu Str. 30, Pristina 10000, Kosovo",
+      "info@derandhotel.com",
+    );
+    return lines.join("\n");
+  }
+
+  var GUEST_CONFIRM_STORAGE_PREFIX = "derandGuestConfirm:";
+  var RESERVATION_ALERT_STORAGE_PREFIX = "derandReservationAlert:";
+
+  function reservationAlertAlreadyShown(orderReference) {
+    if (!orderReference) return false;
+    try {
+      return (
+        sessionStorage.getItem(RESERVATION_ALERT_STORAGE_PREFIX + orderReference) ===
+        "1"
+      );
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function markReservationAlertShown(orderReference) {
+    if (!orderReference) return;
+    try {
+      sessionStorage.setItem(RESERVATION_ALERT_STORAGE_PREFIX + orderReference, "1");
+    } catch (e) {
+      /* ignore */
+    }
+  }
+
+  function showReservationConfirmedAlert(pendingOrder, orderReference) {
+    if (!orderReference || reservationAlertAlreadyShown(orderReference)) return;
+    var state = pendingOrder && pendingOrder.state ? pendingOrder.state : {};
+    markReservationAlertShown(orderReference);
+    window.alert(
+      t("bd-alert-reservation-confirmed", {
+        room: (pendingOrder && pendingOrder.roomName) || "—",
+        checkin: formatDate(state.checkin || ""),
+        checkout: formatDate(state.checkout || ""),
+        reference: orderReference,
+        email: (pendingOrder && pendingOrder.email) || "—",
+      }),
+    );
+    if (statusEl && typeof statusEl.scrollIntoView === "function") {
+      statusEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+  }
+
+  function guestConfirmAlreadySent(orderReference) {
+    if (!orderReference) return false;
+    try {
+      return sessionStorage.getItem(GUEST_CONFIRM_STORAGE_PREFIX + orderReference) === "1";
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function markGuestConfirmSent(orderReference) {
+    if (!orderReference) return;
+    try {
+      sessionStorage.setItem(GUEST_CONFIRM_STORAGE_PREFIX + orderReference, "1");
+    } catch (e) {
+      /* ignore */
+    }
+  }
+
+  function notifyGuestFromBrowser(pendingOrder, orderReference) {
+    var guestEmail = (pendingOrder.email || "").trim();
+    if (!guestEmail || guestEmail.indexOf("@") < 1) {
+      return Promise.resolve(false);
+    }
+    if (guestConfirmAlreadySent(orderReference)) {
+      return Promise.resolve(true);
+    }
+
+    var subject = "Booking Confirmed — Derand Hotel";
+    var message = buildGuestConfirmationMessage(pendingOrder, orderReference);
+
+    return fetch(
+      "https://formsubmit.co/ajax/" + encodeURIComponent(guestEmail),
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          _subject: subject,
+          _captcha: "false",
+          _template: "box",
+          name: "Derand Hotel",
+          message: message,
+        }),
+      },
+    )
+      .then(function (response) {
+        return response.json().then(function (data) {
+          if (data && data.success) {
+            markGuestConfirmSent(orderReference);
+            return true;
+          }
+          return false;
+        });
+      })
+      .catch(function () {
+        return false;
+      })
+      .then(function (sent) {
+        if (sent) return true;
+        return fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            access_key: "761d8dce-87b2-4534-bc76-77ec2305d4ec",
+            subject: subject,
+            from_name: "Derand Hotel",
+            name: getPendingGuestName(pendingOrder) || "Guest",
+            email: guestEmail,
+            replyto: "info@derandhotel.com",
+            message: message,
+          }),
+        })
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (data) {
+            if (data && data.success) {
+              markGuestConfirmSent(orderReference);
+              return true;
+            }
+            return false;
+          })
+          .catch(function () {
+            return false;
+          });
+      });
+  }
+
+  function notifyHotelFromBrowser(pendingOrder, orderReference) {
+    var state = pendingOrder.state || {};
+    var guestName = getPendingGuestName(pendingOrder);
     var message = [
       "DERAND HOTEL — paid room reservation",
       "",
@@ -1291,6 +1551,64 @@
     });
   }
 
+  function sendOtelloReservation(pendingOrder, orderReference) {
+    if (!pendingOrder || !orderReference) {
+      return Promise.resolve(null);
+    }
+
+    var state = pendingOrder.state || {};
+    return fetch(OTELLO_CREATE_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        merchantOrderReference: orderReference,
+        roomType: state.room || "",
+        checkin: state.checkin || "",
+        checkout: state.checkout || "",
+        firstname: pendingOrder.firstName || "",
+        lastname: pendingOrder.lastName || "",
+        email: pendingOrder.email || "",
+        tel: pendingOrder.phone || "",
+        totalpax: state.adults || 1,
+        totalchd1: state.children || 0,
+        note: pendingOrder.notes || "",
+      }),
+    })
+      .then(parsePaymentJsonResponse)
+      .then(function (data) {
+        if (data && data.ok) {
+          console.log("Otello PMS reservation activated successfully.", data);
+          if (data.warning) {
+            console.warn("Otello PMS:", data.warning);
+          }
+          if (!data.alreadySent) {
+            setStatus("bd-status-otello-success", "success");
+          }
+        } else {
+          console.error("Otello PMS reservation failed.", data);
+          if (data && data.step) {
+            console.error(
+              "Otello failed at step:",
+              data.step,
+              data.error || "",
+              data.response || data,
+            );
+          }
+          if (data && data.warning) {
+            console.warn("Otello PMS:", data.warning);
+          }
+        }
+        return data;
+      })
+      .catch(function (error) {
+        console.error("Otello PMS reservation failed.", error);
+        return null;
+      });
+  }
+
   function sendPaidBookingEmails(pendingOrder, orderReference) {
     if (!pendingOrder || !orderReference) return;
     var state = pendingOrder.state || {};
@@ -1303,15 +1621,19 @@
       body: JSON.stringify({
         merchantOrderReference: orderReference,
         orderIdentification: pendingOrder.orderIdentification || "",
-        guestName: pendingOrder.fullName || "",
+        guestName: getPendingGuestName(pendingOrder),
+        guestFirstName: pendingOrder.firstName || "",
+        guestLastName: pendingOrder.lastName || "",
         guestEmail: pendingOrder.email || "",
         guestPhone: pendingOrder.phone || "",
+        roomType: state.room || "",
         roomName: pendingOrder.roomName || "",
         checkIn: state.checkin || "",
         checkOut: state.checkout || "",
         adults: state.adults || 1,
         children: state.children || 0,
         nights: pendingOrder.nights || "",
+        total: pendingOrder.amount || "",
         amount: pendingOrder.amount || "",
         currency: "EUR",
         notes: pendingOrder.notes || "",
@@ -1321,15 +1643,27 @@
         return response.json();
       })
       .then(function (data) {
+        var followUps = [];
         if (!data || !data.hotelSent) {
-          return notifyHotelFromBrowser(pendingOrder, orderReference);
+          followUps.push(
+            notifyHotelFromBrowser(pendingOrder, orderReference).catch(function () {}),
+          );
+        }
+        // Always attempt guest confirmation from the browser — server mail() is often blocked.
+        followUps.push(
+          notifyGuestFromBrowser(pendingOrder, orderReference).catch(function () {
+            return false;
+          }),
+        );
+        if (followUps.length) {
+          return Promise.all(followUps);
         }
       })
       .catch(function () {
-        // The confirm API failed entirely; try the browser channel directly.
-        return notifyHotelFromBrowser(pendingOrder, orderReference).catch(function () {
-          /* Never block the paid success UI if email delivery fails. */
-        });
+        return Promise.all([
+          notifyHotelFromBrowser(pendingOrder, orderReference).catch(function () {}),
+          notifyGuestFromBrowser(pendingOrder, orderReference).catch(function () {}),
+        ]);
       });
   }
 
@@ -1372,6 +1706,7 @@
       .then(function (data) {
         var paymentStatus = (data && data.paymentStatus) || "pending";
         if (paymentStatus === "paid") {
+          sendOtelloReservation(pendingOrder, orderReference);
           sendPaidBookingEmails(pendingOrder, orderReference);
           removePendingPayment(orderReference);
           if (window.DerandBooking) {
@@ -1380,6 +1715,7 @@
           setStatus("bd-status-payment-confirmed", "success", {
             reference: orderReference,
           });
+          showReservationConfirmedAlert(pendingOrder, orderReference);
           return;
         }
         if (paymentStatus === "cancelled") {
@@ -1709,24 +2045,26 @@
     },
   );
 
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-    syncGuestStateFromInputs();
-    renderState = render(state);
-    if (!form.checkValidity()) {
-      form.reportValidity();
-      window.alert(t("bd-alert-form-incomplete"));
-      return;
-    }
-    if (!validate()) return;
+  function paymentTotalsMatch(expected, charged) {
+    var expectedAmount = Number(expected);
+    var chargedAmount = Number(charged);
+    if (!isFinite(expectedAmount) || !isFinite(chargedAmount)) return false;
+    return Math.abs(expectedAmount - chargedAmount) < 0.02;
+  }
 
-    var name = splitFullName(fullNameEl.value);
-    var extrasDelivery = hasBookingExtras(state) ? getExtrasDeliveryFromForm() : null;
-    var fullName = fullNameEl.value.trim();
-    var email = emailEl.value.trim();
-    var phone = phoneEl.value.trim();
-    var notes = notesEl.value.trim();
+  function confirmPaymentProceed(renderState, state) {
+    return window.confirm(
+      t("bd-alert-payment-confirm", {
+        room: renderState.room.label,
+        checkin: formatDate(state.checkin),
+        checkout: formatDate(state.checkout),
+        guests: guestSummary(state.adults, state.children),
+        total: currency(renderState.total),
+      }),
+    );
+  }
 
+  function startSecurePayment(renderState, state, guestDetails) {
     if (confirmBtnEl) confirmBtnEl.disabled = true;
     setStatus("bd-status-payment-starting", "success");
 
@@ -1745,11 +2083,11 @@
         adults: state.adults,
         children: state.children,
         childAges: state.childAges || [],
-        guestFirstName: name.firstName,
-        guestLastName: name.lastName,
-        email: email,
-        phone: phone,
-        message: notes,
+        guestFirstName: guestDetails.firstName,
+        guestLastName: guestDetails.lastName,
+        email: guestDetails.email,
+        phone: guestDetails.phone,
+        message: guestDetails.notes,
         nightlyRate: renderState.pricePerNight,
         roomTotal: renderState.roomTotal,
         childSurcharge: renderState.childSurcharge,
@@ -1757,9 +2095,15 @@
         fees: renderState.fees,
         total: renderState.total,
         extras: getExtraPaymentItems(state),
-        extrasDeliveryDate: extrasDelivery ? extrasDelivery.date : "",
-        extrasDeliveryTime: extrasDelivery ? extrasDelivery.time : "",
-        extrasDeliveryNotes: extrasDelivery ? extrasDelivery.notes : "",
+        extrasDeliveryDate: guestDetails.extrasDelivery
+          ? guestDetails.extrasDelivery.date
+          : "",
+        extrasDeliveryTime: guestDetails.extrasDelivery
+          ? guestDetails.extrasDelivery.time
+          : "",
+        extrasDeliveryNotes: guestDetails.extrasDelivery
+          ? guestDetails.extrasDelivery.notes
+          : "",
         returnPath: buildReturnPath(state),
       }),
     })
@@ -1773,17 +2117,27 @@
         ) {
           throw new Error(t("bd-status-payment-incomplete"));
         }
+        if (!paymentTotalsMatch(renderState.total, data.amount)) {
+          throw new Error(
+            t("bd-status-payment-amount-mismatch", {
+              charged: currency(Number(data.amount) || 0),
+              expected: currency(renderState.total),
+            }),
+          );
+        }
         savePendingPayment({
           merchantOrderReference: data.merchantOrderReference,
           orderIdentification: data.orderIdentification,
           state: JSON.parse(JSON.stringify(state)),
           roomName: renderState.room.label,
           nights: renderState.nights,
-          fullName: fullName,
-          email: email,
-          phone: phone,
-          notes: notes,
-          extrasDelivery: extrasDelivery,
+          firstName: guestDetails.firstName,
+          lastName: guestDetails.lastName,
+          fullName: guestDetails.fullName,
+          email: guestDetails.email,
+          phone: guestDetails.phone,
+          notes: guestDetails.notes,
+          extrasDelivery: guestDetails.extrasDelivery,
           amount: data.amount,
           createdAt: new Date().toISOString(),
         });
@@ -1797,5 +2151,36 @@
         });
         if (confirmBtnEl) confirmBtnEl.disabled = false;
       });
+  }
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    syncGuestStateFromInputs();
+    renderState = render(state);
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      window.alert(t("bd-alert-form-incomplete"));
+      return;
+    }
+    if (!validate()) return;
+
+    var name = {
+      firstName: firstNameEl.value.trim(),
+      lastName: lastNameEl.value.trim(),
+    };
+    var extrasDelivery = hasBookingExtras(state) ? getExtrasDeliveryFromForm() : null;
+    if (!confirmPaymentProceed(renderState, state)) {
+      return;
+    }
+
+    startSecurePayment(renderState, state, {
+      firstName: name.firstName,
+      lastName: name.lastName,
+      fullName: getGuestFullName(),
+      email: emailEl.value.trim(),
+      phone: phoneEl.value.trim(),
+      notes: notesEl.value.trim(),
+      extrasDelivery: extrasDelivery,
+    });
   });
 })();

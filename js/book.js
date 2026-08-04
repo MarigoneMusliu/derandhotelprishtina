@@ -269,9 +269,15 @@
     return "&euro;" + nightly + perNight;
   }
 
+  function getCardDisplayNightly(card) {
+    var display = parseFloat(card.getAttribute("data-display-night"), 10);
+    if (display > 0) return display;
+    return parseFloat(card.getAttribute("data-price-night"), 10) || 0;
+  }
+
   function resetDefaultPriceHtml() {
     cards.forEach(function (card) {
-      var nightly = parseFloat(card.getAttribute("data-price-night"), 10);
+      var nightly = getCardDisplayNightly(card);
       if (!nightly) return;
 
       card
