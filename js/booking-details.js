@@ -32,7 +32,7 @@
     "superior-twin": {
       labelKey: "bd-room-superior-twin-label",
       metaKey: "bd-room-superior-twin-meta",
-      image: "img/twinbook.jpg",
+      image: "img/twinbook.webp",
       price: 95,
     },
     "superior-double": {
@@ -252,7 +252,10 @@
     if (roomKey === "deluxe-double") {
       return 105;
     }
-    if (roomKey === "superior-twin" || roomKey === "superior-double") {
+    if (roomKey === "superior-twin") {
+      return adults >= 2 ? 105 : 95;
+    }
+    if (roomKey === "superior-double") {
       return 95;
     }
     var room = ROOM_DATA[roomKey];
@@ -328,6 +331,9 @@
     tomorrow.setDate(tomorrow.getDate() + 1);
 
     var room = ROOM_DATA[roomKey] ? roomKey : "junior-suite";
+    if (window.__derandTestBookingPage) {
+      room = "junior-suite";
+    }
     var checkin = params.get("checkin") || formatIso(today);
     var checkout = params.get("checkout") || formatIso(tomorrow);
     var adults = parseInt(params.get("adults"), 10) || 1;
@@ -1574,6 +1580,11 @@
         tel: pendingOrder.phone || "",
         totalpax: state.adults || 1,
         totalchd1: state.children || 0,
+        nights: pendingOrder.nights || "",
+        paidAmount: pendingOrder.amount || "",
+        total: pendingOrder.amount || "",
+        amount: pendingOrder.amount || "",
+        currency: pendingOrder.currency || "EUR",
         note: pendingOrder.notes || "",
       }),
     })
@@ -1667,6 +1678,54 @@
       });
   }
 
+  function finalizePaidBookingOnServer(pendingOrder, orderReference) {
+    var state = pendingOrder && pendingOrder.state ? pendingOrder.state : {};
+    return fetch(PAYMENT_CONFIRM_EMAIL_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        merchantOrderReference: orderReference,
+        orderIdentification: pendingOrder ? pendingOrder.orderIdentification || "" : "",
+        guestName: pendingOrder ? getPendingGuestName(pendingOrder) : "",
+        guestFirstName: pendingOrder ? pendingOrder.firstName || "" : "",
+        guestLastName: pendingOrder ? pendingOrder.lastName || "" : "",
+        guestEmail: pendingOrder ? pendingOrder.email || "" : "",
+        guestPhone: pendingOrder ? pendingOrder.phone || "" : "",
+        roomType: state.room || "",
+        roomName: pendingOrder ? pendingOrder.roomName || "" : "",
+        checkIn: state.checkin || "",
+        checkOut: state.checkout || "",
+        adults: state.adults || 1,
+        children: state.children || 0,
+        nights: pendingOrder ? pendingOrder.nights || "" : "",
+        total: pendingOrder ? pendingOrder.amount || "" : "",
+        amount: pendingOrder ? pendingOrder.amount || "" : "",
+        currency: "EUR",
+        notes: pendingOrder ? pendingOrder.notes || "" : "",
+      }),
+    })
+      .then(parsePaymentJsonResponse)
+      .catch(function () {
+        return null;
+      });
+  }
+
+  function completePaidBooking(pendingOrder, orderReference) {
+    sendOtelloReservation(pendingOrder, orderReference);
+    sendPaidBookingEmails(pendingOrder, orderReference);
+    removePendingPayment(orderReference);
+    if (window.DerandBooking) {
+      window.DerandBooking.clearBookingLines();
+    }
+    setStatus("bd-status-payment-confirmed", "success", {
+      reference: orderReference,
+    });
+    showReservationConfirmedAlert(pendingOrder, orderReference);
+  }
+
   function verifyReturnedPayment(paymentState, orderReference) {
     var pendingOrder = getPendingPayment(orderReference);
     restorePendingPayment(pendingOrder);
@@ -1678,6 +1737,24 @@
       }
       if (paymentState === "fail") {
         setStatus("bd-status-payment-failed", "error", { reference: orderReference });
+        return;
+      }
+      if (paymentState === "success") {
+        setStatus("bd-status-payment-checking", "success");
+        finalizePaidBookingOnServer(null, orderReference).then(function (data) {
+          if (data && data.ok !== false) {
+            setStatus("bd-status-payment-confirmed", "success", {
+              reference: orderReference,
+            });
+            if (data.otello && !data.otello.ok && !data.otello.alreadySent) {
+              console.error("Otello PMS reservation failed.", data.otello);
+            }
+            return;
+          }
+          setStatus("bd-status-payment-return-reference", "error", {
+            reference: orderReference,
+          });
+        });
         return;
       }
       setStatus("bd-status-payment-return-reference", "error", {
@@ -1706,16 +1783,7 @@
       .then(function (data) {
         var paymentStatus = (data && data.paymentStatus) || "pending";
         if (paymentStatus === "paid") {
-          sendOtelloReservation(pendingOrder, orderReference);
-          sendPaidBookingEmails(pendingOrder, orderReference);
-          removePendingPayment(orderReference);
-          if (window.DerandBooking) {
-            window.DerandBooking.clearBookingLines();
-          }
-          setStatus("bd-status-payment-confirmed", "success", {
-            reference: orderReference,
-          });
-          showReservationConfirmedAlert(pendingOrder, orderReference);
+          completePaidBooking(pendingOrder, orderReference);
           return;
         }
         if (paymentStatus === "cancelled") {
@@ -2155,6 +2223,12 @@
 
   form.addEventListener("submit", function (event) {
     event.preventDefault();
+    if (window.__derandTestSkipPayment) {
+      if (typeof window.__derandSendTestReservation === "function") {
+        window.__derandSendTestReservation();
+      }
+      return;
+    }
     syncGuestStateFromInputs();
     renderState = render(state);
     if (!form.checkValidity()) {
@@ -2183,4 +2257,39 @@
       extrasDelivery: extrasDelivery,
     });
   });
+
+  if (window.__derandTestBookingPage) {
+    window.__derandBookingDetails = {
+      syncGuestStateFromInputs: syncGuestStateFromInputs,
+      render: function () {
+        renderState = render(state);
+        return renderState;
+      },
+      validate: validate,
+      getState: function () {
+        return state;
+      },
+      getRenderState: function () {
+        return renderState;
+      },
+      getGuestFullName: getGuestFullName,
+      getExtrasDeliveryFromForm: getExtrasDeliveryFromForm,
+      hasBookingExtras: function () {
+        return hasBookingExtras(state);
+      },
+      startSecurePayment: startSecurePayment,
+      confirmPaymentProceed: confirmPaymentProceed,
+      formatDate: formatDate,
+      guestSummary: guestSummary,
+      currency: currency,
+      setStatus: setStatus,
+      form: form,
+      confirmBtnEl: confirmBtnEl,
+      firstNameEl: firstNameEl,
+      lastNameEl: lastNameEl,
+      emailEl: emailEl,
+      phoneEl: phoneEl,
+      notesEl: notesEl,
+    };
+  }
 })();

@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 require __DIR__ . '/raiaccept-lib.php';
+require __DIR__ . '/otello-lib.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     raiaccept_json_response(405, ['error' => 'Method not allowed. Use POST.']);
@@ -14,6 +15,22 @@ if (!is_array($input)) {
 }
 
 raiaccept_send_webhook_email($input);
+
+$merchantOrderReference = raiaccept_trimmed_string(
+    raiaccept_first_by_key($input, 'merchantOrderReference')
+);
+if (
+    raiaccept_successful_purchase($input)
+    && $merchantOrderReference !== ''
+    && raiaccept_webhook_is_room_booking(['merchantOrderReference' => $merchantOrderReference])
+    && raiaccept_load_booking_confirmation($merchantOrderReference) !== null
+) {
+    otello_dispatch_from_booking_confirmation($merchantOrderReference, [
+        'orderIdentification' => raiaccept_trimmed_string(
+            raiaccept_first_by_key($input, 'orderIdentification')
+        ),
+    ]);
+}
 
 raiaccept_json_response(200, [
     'received' => true,

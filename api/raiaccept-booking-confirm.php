@@ -56,14 +56,24 @@ $result = raiaccept_dispatch_paid_booking_emails($merchantOrderReference, [
     'notes' => raiaccept_trimmed_string($input['notes'] ?? ''),
 ]);
 
-$otelloResult = otello_dispatch_reservation(array_merge($input, [
-    'merchantOrderReference' => $merchantOrderReference,
-    'firstname' => raiaccept_trimmed_string($input['guestFirstName'] ?? ($nameParts[0] ?? '')),
-    'lastname' => raiaccept_trimmed_string($input['guestLastName'] ?? ($nameParts[1] ?? '')),
-    'email' => raiaccept_trimmed_string($input['guestEmail'] ?? $input['email'] ?? ''),
-    'tel' => raiaccept_trimmed_string($input['guestPhone'] ?? $input['phone'] ?? ''),
-    'note' => raiaccept_trimmed_string($input['notes'] ?? ''),
-]));
+$otelloResult = otello_dispatch_from_booking_confirmation($merchantOrderReference, [
+    'orderIdentification' => $orderIdentification,
+    'guestName' => $guestName,
+    'guestFirstName' => raiaccept_trimmed_string($input['guestFirstName'] ?? ($nameParts[0] ?? '')),
+    'guestLastName' => raiaccept_trimmed_string($input['guestLastName'] ?? ($nameParts[1] ?? '')),
+    'guestEmail' => raiaccept_trimmed_string($input['guestEmail'] ?? $input['email'] ?? ''),
+    'guestPhone' => raiaccept_trimmed_string($input['guestPhone'] ?? $input['phone'] ?? ''),
+    'roomType' => raiaccept_trimmed_string($input['roomType'] ?? $input['room'] ?? ''),
+    'roomName' => raiaccept_trimmed_string($input['roomName'] ?? ''),
+    'checkIn' => raiaccept_trimmed_string($input['checkIn'] ?? $input['checkin'] ?? ''),
+    'checkOut' => raiaccept_trimmed_string($input['checkOut'] ?? $input['checkout'] ?? ''),
+    'adults' => $input['adults'] ?? '',
+    'children' => $input['children'] ?? '',
+    'nights' => $input['nights'] ?? '',
+    'total' => $input['total'] ?? $input['amount'] ?? '',
+    'currency' => raiaccept_trimmed_string($input['currency'] ?? 'EUR') ?: 'EUR',
+    'notes' => raiaccept_trimmed_string($input['notes'] ?? ''),
+]);
 $result['otello'] = $otelloResult;
 
 raiaccept_json_response(!empty($result['ok']) ? 200 : 409, $result);

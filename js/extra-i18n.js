@@ -91,6 +91,10 @@
       "extra-cart-delivery-title": "Delivery details",
       "extra-cart-delivery-hint":
         "Tell us when to bring your order to your room.",
+      "extra-cart-delivery-24h":
+        "Flowers and perfumes require at least 24 hours' notice for delivery.",
+      "extra-cart-delivery-24h-error":
+        "Delivery for flowers or perfume must be at least 24 hours from now. Please choose a later date and time.",
       "extra-cart-name-label": "Name on reservation",
       "extra-cart-name-placeholder": "As on your booking",
       "extra-cart-room-label": "Room number",
@@ -424,6 +428,10 @@
       "extra-cart-delivery-title": "Lieferdetails",
       "extra-cart-delivery-hint":
         "Teilen Sie uns mit, wann wir Ihre Bestellung auf Ihr Zimmer bringen sollen.",
+      "extra-cart-delivery-24h":
+        "Blumen und Parf\u00fcm erfordern mindestens 24 Stunden Vorlaufzeit f\u00fcr die Lieferung.",
+      "extra-cart-delivery-24h-error":
+        "Die Lieferung von Blumen oder Parf\u00fcm muss mindestens 24 Stunden ab jetzt liegen. Bitte w\u00e4hlen Sie ein sp\u00e4teres Datum und eine sp\u00e4tere Uhrzeit.",
       "extra-cart-name-label": "Name der Reservierung",
       "extra-cart-name-placeholder": "Wie in Ihrer Buchung",
       "extra-cart-room-label": "Zimmernummer",
@@ -755,6 +763,10 @@
       "extra-cart-delivery-title": "Detajet e dorëzimit",
       "extra-cart-delivery-hint":
         "Na tregoni kur ta çojmë porosinë në dhomën tuaj.",
+      "extra-cart-delivery-24h":
+        "Lule dhe parfume kërkojnë të paktën 24 orë njoftim për dorëzim.",
+      "extra-cart-delivery-24h-error":
+        "Dorëzimi i luleve ose parfumeve duhet të jetë të paktën 24 orë nga tani. Ju lutemi zgjidhni datë dhe orë më vonë.",
       "extra-cart-name-label": "Emri në rezervim",
       "extra-cart-name-placeholder": "Si në rezervimin tuaj",
       "extra-cart-room-label": "Numri i dhomës",

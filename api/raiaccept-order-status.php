@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 require __DIR__ . '/raiaccept-lib.php';
+require __DIR__ . '/otello-lib.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
     raiaccept_json_response(405, ['error' => 'Method not allowed. Use GET.']);
@@ -31,6 +32,21 @@ if (
     ]);
     $status['hotelEmailSent'] = !empty($emailResult['hotelSent']);
     $status['guestEmailSent'] = !empty($emailResult['guestSent']);
+    $otelloResult = otello_dispatch_from_booking_confirmation($merchantOrderReference, [
+        'orderIdentification' => $orderIdentification,
+    ]);
+    $status['otello'] = $otelloResult;
+    $status['otelloSent'] = !empty($otelloResult['ok']);
+} elseif (
+    ($status['paymentStatus'] ?? '') === 'paid'
+    && $merchantOrderReference !== ''
+    && raiaccept_is_extra_order_reference($merchantOrderReference)
+) {
+    $emailResult = raiaccept_dispatch_paid_extra_emails($merchantOrderReference, [
+        'orderIdentification' => $orderIdentification,
+        'skipPaymentRecheck' => true,
+    ]);
+    $status['hotelEmailSent'] = !empty($emailResult['hotelSent']);
 }
 
 raiaccept_json_response(200, $status);

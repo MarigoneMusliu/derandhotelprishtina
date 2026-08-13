@@ -1,0 +1,13 @@
+{
+  "merchantOrderReference": "TEST-MARIGONA-20261010",
+  "roomType": "superior-double",
+  "checkin": "2026-10-10",
+  "checkout": "2026-10-11",
+  "firstname": "MARIGONA",
+  "lastname": "MUSLIU",
+  "email": "marigona.musliu.test@derandhotel.com",
+  "tel": "+38344123456",
+  "totalpax": 1,
+  "totalchd1": 0,
+  "note": "API test booking - please ignore"
+}

@@ -11,7 +11,7 @@
     "junior-suite": { single: 140, double: 140 },
     "deluxe-double": { single: 105, double: 105 },
     "premium-double": { single: 120, double: 130, triple: 140 },
-    "superior-twin": { single: 95, double: 95 },
+    "superior-twin": { single: 95, double: 105 },
     "superior-double": { single: 95, double: 95 },
   };
 

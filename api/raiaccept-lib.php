@@ -492,6 +492,10 @@ function raiaccept_build_extra_order_payload(array $input, array $config, string
         raiaccept_json_response(400, ['error' => 'No billable cart items were provided.']);
     }
 
+    if (raiaccept_extra_cart_requires_advance_delivery($input)) {
+        raiaccept_validate_flowers_perfume_delivery($deliveryDate, $deliveryTime);
+    }
+
     $amount = raiaccept_sum_invoice_items($invoiceItems);
     if ($amount <= 0) {
         raiaccept_json_response(400, ['error' => 'Cart total must be greater than zero.']);
@@ -547,6 +551,19 @@ function raiaccept_build_extra_order_payload(array $input, array $config, string
             'urls' => raiaccept_order_urls($config, $returnPath, $merchantOrderReference),
         ],
         'amount' => $amount,
+        'confirmation' => [
+            'type' => 'extra',
+            'lastName' => $lastName,
+            'roomNumber' => $roomNumber,
+            'deliveryDate' => $deliveryDate,
+            'deliveryTime' => $deliveryTime,
+            'message' => $message,
+            'productName' => $productName,
+            'cart' => is_array($input['cartItems'] ?? null) ? $input['cartItems'] : [],
+            'total' => $amount,
+            'currency' => $config['currency'],
+            'hotelEmailSent' => false,
+        ],
     ];
 }
 
@@ -556,7 +573,7 @@ function raiaccept_booking_rooms(): array
         'junior-suite' => ['label' => 'Junior Suite', 'single' => 140.0, 'double' => 140.0, 'max_adults' => 2],
         'deluxe-double' => ['label' => 'Deluxe Double Room', 'single' => 105.0, 'double' => 105.0, 'max_adults' => 2],
         'premium-double' => ['label' => 'Premium Room', 'single' => 120.0, 'double' => 130.0, 'triple' => 140.0, 'max_adults' => 3],
-        'superior-twin' => ['label' => 'Superior Twin Room', 'single' => 95.0, 'double' => 95.0, 'max_adults' => 2],
+        'superior-twin' => ['label' => 'Superior Twin Room', 'single' => 95.0, 'double' => 105.0, 'max_adults' => 2],
         'superior-double' => ['label' => 'Superior Double Room', 'single' => 95.0, 'double' => 95.0, 'max_adults' => 2],
     ];
 }
@@ -970,6 +987,7 @@ function raiaccept_build_booking_order_payload(array $input, array $config, stri
             'guestName' => $guestName,
             'guestEmail' => $email,
             'guestPhone' => $phone,
+            'roomType' => $roomSlug,
             'roomName' => $roomName,
             'checkIn' => $checkIn,
             'checkOut' => $checkOut,
@@ -1099,6 +1117,17 @@ function raiaccept_create_checkout(array $input): array
             'orderIdentification' => $orderIdentification,
             'createdAt' => gmdate('c'),
             'guestEmailSent' => false,
+            'hotelEmailSent' => false,
+        ]));
+    } elseif (
+        !raiaccept_is_booking_order($input)
+        && !empty($prepared['confirmation'])
+        && is_array($prepared['confirmation'])
+    ) {
+        raiaccept_store_extra_confirmation($merchantOrderReference, array_merge($prepared['confirmation'], [
+            'merchantOrderReference' => $merchantOrderReference,
+            'orderIdentification' => $orderIdentification,
+            'createdAt' => gmdate('c'),
             'hotelEmailSent' => false,
         ]));
     }
@@ -1394,6 +1423,98 @@ function raiaccept_load_booking_confirmation(string $merchantOrderReference): ?a
     }
     $decoded = json_decode($raw, true);
     return is_array($decoded) ? $decoded : null;
+}
+
+function raiaccept_extra_confirmation_dir(): string
+{
+    return __DIR__ . '/_storage/extra-confirmations';
+}
+
+function raiaccept_extra_confirmation_path(string $merchantOrderReference): string
+{
+    $safe = preg_replace('/[^A-Za-z0-9._-]+/', '_', $merchantOrderReference) ?: 'unknown';
+    return raiaccept_extra_confirmation_dir() . '/' . $safe . '.json';
+}
+
+function raiaccept_store_extra_confirmation(string $merchantOrderReference, array $data): void
+{
+    if ($merchantOrderReference === '') {
+        return;
+    }
+    $dir = raiaccept_extra_confirmation_dir();
+    if (!is_dir($dir) && !@mkdir($dir, 0775, true) && !is_dir($dir)) {
+        return;
+    }
+    @file_put_contents(
+        raiaccept_extra_confirmation_path($merchantOrderReference),
+        json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES),
+        LOCK_EX
+    );
+}
+
+function raiaccept_load_extra_confirmation(string $merchantOrderReference): ?array
+{
+    if ($merchantOrderReference === '') {
+        return null;
+    }
+    $path = raiaccept_extra_confirmation_path($merchantOrderReference);
+    if (!is_file($path)) {
+        return null;
+    }
+    $raw = @file_get_contents($path);
+    if (!is_string($raw) || trim($raw) === '') {
+        return null;
+    }
+    $decoded = json_decode($raw, true);
+    return is_array($decoded) ? $decoded : null;
+}
+
+function raiaccept_is_extra_order_reference(string $merchantOrderReference): bool
+{
+    $reference = strtoupper(raiaccept_trimmed_string($merchantOrderReference));
+    return strpos($reference, 'EXTRA-') === 0 || strpos($reference, 'EXTRA_') === 0;
+}
+
+function raiaccept_extra_cart_requires_advance_delivery(array $input): bool
+{
+    $items = $input['cartItems'] ?? [];
+    if (!is_array($items)) {
+        return false;
+    }
+
+    foreach ($items as $item) {
+        if (!is_array($item)) {
+            continue;
+        }
+        $category = strtolower(raiaccept_trimmed_string($item['category'] ?? ''));
+        if (in_array($category, ['flowers', 'flower', 'perfumes', 'perfume'], true)) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+function raiaccept_validate_flowers_perfume_delivery(string $deliveryDate, string $deliveryTime): void
+{
+    if ($deliveryDate === '' || $deliveryTime === '') {
+        return;
+    }
+
+    $timePart = substr($deliveryTime, 0, 5);
+    $delivery = DateTimeImmutable::createFromFormat('!Y-m-d H:i', $deliveryDate . ' ' . $timePart);
+    if (!$delivery) {
+        raiaccept_json_response(400, [
+            'error' => 'Invalid delivery date or time.',
+        ]);
+    }
+
+    $minimum = (new DateTimeImmutable())->modify('+24 hours');
+    if ($delivery < $minimum) {
+        raiaccept_json_response(400, [
+            'error' => 'Flowers and perfumes require at least 24 hours notice for delivery. Please choose a later date and time.',
+        ]);
+    }
 }
 
 function raiaccept_format_guest_date(string $iso): string
@@ -1704,6 +1825,185 @@ function raiaccept_dispatch_paid_booking_emails(string $merchantOrderReference, 
     return [
         'ok' => $guestSent || $hotelSent,
         'guestSent' => $guestSent,
+        'hotelSent' => $hotelSent,
+        'merchantOrderReference' => $merchantOrderReference,
+    ];
+}
+
+function raiaccept_build_extra_hotel_email_message(array $extra): string
+{
+    $cart = is_array($extra['cart'] ?? null) ? $extra['cart'] : [];
+    $orderLines = [];
+    $grandTotal = 0.0;
+
+    foreach ($cart as $index => $item) {
+        if (!is_array($item)) {
+            continue;
+        }
+        $title = raiaccept_trimmed_string($item['productBase'] ?? 'Extra item');
+        $variant = raiaccept_trimmed_string($item['variantLabel'] ?? '');
+        if ($variant !== '' && stripos($variant, 'ml') === false) {
+            $title .= ' (' . $variant . ')';
+        } elseif ($variant !== '') {
+            $title .= ' — ' . $variant;
+        }
+        $qty = max(0, (int) ($item['qty'] ?? 0));
+        $price = (float) ($item['price'] ?? 0);
+        $lineTotal = round($qty * $price, 2);
+        $grandTotal += $lineTotal;
+        $line = ($index + 1) . '. ' . $title . ': ' . $qty . ' x '
+            . number_format($price, 2, '.', '') . ' EUR = '
+            . number_format($lineTotal, 2, '.', '') . ' EUR';
+        $description = raiaccept_trimmed_string($item['description'] ?? '');
+        if ($description !== '') {
+            $line .= "\n   Note: " . $description;
+        }
+        $orderLines[] = $line;
+    }
+
+    if ($orderLines === []) {
+        $orderLines[] = raiaccept_trimmed_string($extra['productName'] ?? 'Extra order');
+        $grandTotal = (float) ($extra['total'] ?? 0);
+    }
+
+    $reference = raiaccept_trimmed_string($extra['merchantOrderReference'] ?? '');
+    $hotelEmail = 'info@derandhotel.com';
+
+    return implode("\n", [
+        'EXTRA ORDER — PAID',
+        '==================',
+        '',
+        'Recipient: ' . $hotelEmail,
+        '',
+        'Order reference: ' . $reference,
+        '',
+        'Guest details',
+        '-------------',
+        'Name on reservation: ' . raiaccept_trimmed_string($extra['lastName'] ?? ''),
+        'Room number: ' . raiaccept_trimmed_string($extra['roomNumber'] ?? ''),
+        'Delivery date: ' . raiaccept_trimmed_string($extra['deliveryDate'] ?? ''),
+        'Delivery time: ' . raiaccept_trimmed_string($extra['deliveryTime'] ?? ''),
+        '',
+        'Cart items (' . count($cart) . ' product line(s))',
+        '----------',
+        implode("\n", $orderLines),
+        '',
+        'Total: ' . number_format($grandTotal > 0 ? $grandTotal : (float) ($extra['total'] ?? 0), 2, '.', '') . ' EUR',
+        'Payment: Card — PAID',
+        '',
+        'Guest message:',
+        raiaccept_trimmed_string($extra['message'] ?? '') !== '' ? (string) $extra['message'] : '(none)',
+        '',
+        'Sent from: /extra (Derand Hotel website)',
+        'Time: ' . gmdate('Y-m-d H:i:s') . ' UTC',
+    ]);
+}
+
+function raiaccept_notify_hotel_paid_extra(array $extra, array $config): bool
+{
+    $hotelEmail = $config['order_notification_email'] ?: 'info@derandhotel.com';
+    $roomNumber = raiaccept_trimmed_string($extra['roomNumber'] ?? '?');
+    $lastName = raiaccept_trimmed_string($extra['lastName'] ?? 'Guest');
+    $reference = raiaccept_trimmed_string($extra['merchantOrderReference'] ?? '');
+    $cartCount = is_array($extra['cart'] ?? null) ? count($extra['cart']) : 0;
+    $subject = '[Extra PAID] Room ' . $roomNumber . ' — ' . $lastName . ' — '
+        . $cartCount . ' item(s) — ' . $reference;
+    $message = raiaccept_build_extra_hotel_email_message($extra);
+
+    $sent = raiaccept_send_plaintext_mail(
+        $hotelEmail,
+        $subject,
+        $message,
+        $hotelEmail,
+        'Derand Hotel — Extra Cart'
+    );
+
+    if ($config['web3forms_access_key'] !== '') {
+        $response = raiaccept_request(
+            'POST',
+            $config['web3forms_url'] ?: 'https://api.web3forms.com/submit',
+            [
+                'access_key' => $config['web3forms_access_key'],
+                'subject' => $subject,
+                'from_name' => 'Derand Hotel — Extra Cart',
+                'to_email' => $hotelEmail,
+                'recipient' => $hotelEmail,
+                'notify_email' => $hotelEmail,
+                'name' => $lastName,
+                'room_number' => $roomNumber,
+                'delivery_date' => raiaccept_trimmed_string($extra['deliveryDate'] ?? ''),
+                'delivery_time' => raiaccept_trimmed_string($extra['deliveryTime'] ?? ''),
+                'order_reference' => $reference,
+                'payment_method' => 'Card — PAID',
+                'message' => $message,
+            ]
+        );
+        $sent = $sent || !empty($response['ok']);
+    }
+
+    return $sent;
+}
+
+function raiaccept_dispatch_paid_extra_emails(string $merchantOrderReference, array $fallback = []): array
+{
+    $config = raiaccept_load_config();
+    $stored = raiaccept_load_extra_confirmation($merchantOrderReference) ?: [];
+
+    $extra = $stored;
+    foreach ($fallback as $key => $value) {
+        if ($value === null || $value === '') {
+            continue;
+        }
+        if (in_array($key, ['hotelAlreadyNotified', 'skipPaymentRecheck'], true)) {
+            continue;
+        }
+        $extra[$key] = $value;
+    }
+    $extra['merchantOrderReference'] = $merchantOrderReference;
+
+    if ($extra === [] && !empty($fallback['guest']) && is_array($fallback['guest'])) {
+        $guest = $fallback['guest'];
+        $extra = [
+            'lastName' => raiaccept_trimmed_string($guest['lastName'] ?? ''),
+            'roomNumber' => raiaccept_trimmed_string($guest['roomNumber'] ?? ''),
+            'deliveryDate' => raiaccept_trimmed_string($guest['deliveryDate'] ?? ''),
+            'deliveryTime' => raiaccept_trimmed_string($guest['deliveryTime'] ?? ''),
+            'message' => raiaccept_trimmed_string($guest['message'] ?? ''),
+            'cart' => is_array($fallback['cart'] ?? null) ? $fallback['cart'] : [],
+        ];
+    } elseif (!empty($fallback['cart']) && is_array($fallback['cart']) && empty($extra['cart'])) {
+        $extra['cart'] = $fallback['cart'];
+    }
+
+    $orderIdentification = raiaccept_trimmed_string(
+        $extra['orderIdentification'] ?? ($fallback['orderIdentification'] ?? '')
+    );
+    $skipRecheck = !empty($fallback['skipPaymentRecheck']);
+    if (!$skipRecheck && $orderIdentification !== '') {
+        $status = raiaccept_get_order_payment_status($orderIdentification);
+        if (($status['paymentStatus'] ?? '') !== 'paid') {
+            return [
+                'ok' => false,
+                'hotelSent' => false,
+                'error' => 'Payment is not confirmed as paid yet.',
+                'paymentStatus' => $status['paymentStatus'] ?? 'pending',
+            ];
+        }
+    }
+
+    $hotelSent = !empty($extra['hotelEmailSent']) || !empty($fallback['hotelAlreadyNotified']);
+    if (!$hotelSent) {
+        $hotelSent = raiaccept_notify_hotel_paid_extra($extra, $config);
+    }
+
+    if ($merchantOrderReference !== '' && $hotelSent) {
+        $extra['hotelEmailSent'] = true;
+        $extra['confirmedAt'] = gmdate('c');
+        raiaccept_store_extra_confirmation($merchantOrderReference, $extra);
+    }
+
+    return [
+        'ok' => $hotelSent,
         'hotelSent' => $hotelSent,
         'merchantOrderReference' => $merchantOrderReference,
     ];
