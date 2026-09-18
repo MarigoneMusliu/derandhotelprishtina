@@ -3,11 +3,8 @@
 declare(strict_types=1);
 
 /**
- * Copy to otello-config.php on the server.
- *
- * Production (Derand Hotel):
- *   api_base: https://balkan.hotech.systems/orest
- *   hotelrefno: from Hotech support
+ * Legacy local fallback only. Production: copy otello-private-config.example.php
+ * to otello-private-config.php one folder above public_html.
  *
  * Override via env: OTELLO_API_BASE, OTELLO_HOTELREFNO, OTELLO_USERNAME, OTELLO_PASSWORD
  */

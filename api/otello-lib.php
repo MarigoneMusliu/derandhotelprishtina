@@ -2,13 +2,49 @@
 
 declare(strict_types=1);
 
-require __DIR__ . '/raiaccept-lib.php';
+require_once __DIR__ . '/raiaccept-lib.php';
+
+function otello_config_paths(): array
+{
+    $apiDir = __DIR__;
+    $publicRoot = dirname($apiDir);
+    $privateRoot = dirname($publicRoot);
+    $accountRoot = dirname($privateRoot);
+    $paths = [
+        $privateRoot . '/otello-private-config.php',
+        $publicRoot . '/otello-private-config.php',
+        $accountRoot . '/otello-private-config.php',
+        __DIR__ . '/otello-config.php',
+        __DIR__ . '/_otello-config.local.php',
+        $privateRoot . '/otello-config.php',
+        $accountRoot . '/otello-config.php',
+    ];
+
+    $envPath = getenv('OTELLO_CONFIG_PATH');
+    if (is_string($envPath) && trim($envPath) !== '') {
+        array_unshift($paths, trim($envPath));
+    }
+
+    $documentRoot = $_SERVER['DOCUMENT_ROOT'] ?? '';
+    if (is_string($documentRoot) && trim($documentRoot) !== '') {
+        $documentRoot = rtrim(trim($documentRoot), "/\\");
+        $documentRootParent = dirname($documentRoot);
+        $documentRootGrandparent = dirname($documentRootParent);
+        $paths[] = $documentRootParent . '/otello-private-config.php';
+        $paths[] = $documentRootParent . '/otello-config.php';
+        $paths[] = $documentRootGrandparent . '/otello-private-config.php';
+        $paths[] = $documentRootGrandparent . '/otello-config.php';
+    }
+
+    return array_values(array_unique($paths));
+}
 
 function otello_config_path(): string
 {
-    $local = __DIR__ . '/otello-config.php';
-    if (is_file($local)) {
-        return $local;
+    foreach (otello_config_paths() as $path) {
+        if (is_file($path)) {
+            return $path;
+        }
     }
 
     return __DIR__ . '/otello-config.example.php';
@@ -328,7 +364,7 @@ function otello_hotelrefno_is_configured(array $config): bool
 function otello_config_error(array $config): ?string
 {
     if (!otello_hotelrefno_is_configured($config)) {
-        return 'Otello hotelrefno is not configured. Set OTELLO_HOTELREFNO on the server or hotelrefno in api/otello-config.php.';
+        return 'Otello hotelrefno is not configured. Set OTELLO_HOTELREFNO on the server or hotelrefno in otello-private-config.php (one folder above public_html).';
     }
 
     if (otello_resolve_api_token($config) !== '') {
@@ -336,7 +372,7 @@ function otello_config_error(array $config): ?string
     }
 
     if (otello_resolve_username($config) === '' || otello_resolve_password($config) === '') {
-        return 'Otello login credentials are not configured. Set OTELLO_USERNAME and OTELLO_PASSWORD on the server or username/password in api/otello-config.php.';
+        return 'Otello login credentials are not configured. Set OTELLO_USERNAME and OTELLO_PASSWORD on the server or username/password in otello-private-config.php.';
     }
 
     return null;

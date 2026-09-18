@@ -21,7 +21,7 @@
 
   if (!cards.length) return;
 
-  var selectedRoom = cards[0].dataset.room || "junior-suite";
+  var selectedRoom = cards[0].dataset.room || "superior-double";
   var lastStatus = { key: "", state: "" };
 
   function t(key, vars) {

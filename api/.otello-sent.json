@@ -94,5 +94,29 @@
         "checkout": "2026-11-16",
         "hotelrefno": 117176417,
         "sentAt": "2026-08-13T07:37:00+00:00"
+    },
+    "TEST-MARIGONA-20260908074959": {
+        "status": "A",
+        "reservatGid": "aac19f84-b708-4283-a888-a40e037c472a",
+        "reservatno": 315616,
+        "accid": 116158038,
+        "clientGid": "08bb38f3-2570-4f96-ad95-7b8adf1a17f2",
+        "roomtypeid": 22524,
+        "checkin": "2026-10-10",
+        "checkout": "2026-10-12",
+        "hotelrefno": 117176417,
+        "sentAt": "2026-09-08T07:50:07+00:00"
+    },
+    "TEST-DISPATCH-20260908075225": {
+        "status": "A",
+        "reservatGid": "a38b887a-7f3c-429e-9ce8-3aec86a494d4",
+        "reservatno": 315617,
+        "accid": 116158039,
+        "clientGid": "d86dd08e-98da-40d6-851d-5e2d363721d1",
+        "roomtypeid": 22627,
+        "checkin": "2026-11-15",
+        "checkout": "2026-11-16",
+        "hotelrefno": 117176417,
+        "sentAt": "2026-09-08T07:52:27+00:00"
     }
 }

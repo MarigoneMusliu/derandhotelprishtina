@@ -13,7 +13,9 @@
 </FilesMatch>
 
 <IfModule mod_rewrite.c>
-  RewriteRule ^api/(raiaccept-config|_raiaccept-config).*\.php$ - [F,L]
+  RewriteRule ^api/(raiaccept-config|_raiaccept-config|otello-config).*\.php$ - [F,L]
+  RewriteRule ^api/_storage(/|$) - [F,L]
+  RewriteRule ^api/\.otello- - [F,L]
 </IfModule>
 
 <IfModule mod_mime.c>

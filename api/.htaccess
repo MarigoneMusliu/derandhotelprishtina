@@ -1,0 +1,27 @@
+# Block direct HTTP access to sensitive API files.
+# PHP can still read these from disk; only browser/download access is denied.
+
+<IfModule mod_authz_core.c>
+  <FilesMatch "^(otello-config|raiaccept-config|_raiaccept-config).*\.php$">
+    Require all denied
+  </FilesMatch>
+  <FilesMatch "^\.otello-">
+    Require all denied
+  </FilesMatch>
+</IfModule>
+
+<IfModule !mod_authz_core.c>
+  <FilesMatch "^(otello-config|raiaccept-config|_raiaccept-config).*\.php$">
+    Order allow,deny
+    Deny from all
+  </FilesMatch>
+  <FilesMatch "^\.otello-">
+    Order allow,deny
+    Deny from all
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^_storage(/|$) - [F,L]
+</IfModule>

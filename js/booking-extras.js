@@ -12,7 +12,7 @@
     "deluxe-double": { single: 105, double: 105 },
     "premium-double": { single: 120, double: 130, triple: 140 },
     "superior-twin": { single: 95, double: 105 },
-    "superior-double": { single: 95, double: 95 },
+    "superior-double": { single: 95, double: 105 },
   };
 
   var gridEl = document.getElementById("booking-extras-grid");
@@ -85,8 +85,8 @@
     var dayIn = String(today.getDate()).padStart(2, "0");
     var defaultIn = today.getFullYear() + "-" + monthIn + "-" + dayIn;
 
-    var room = params.get("room") || "junior-suite";
-    if (!ROOM_LABELS[room]) room = "junior-suite";
+    var room = params.get("room") || "superior-double";
+    if (!ROOM_LABELS[room]) room = "superior-double";
 
     var checkin = params.get("checkin") || defaultIn;
     var checkout = params.get("checkout") || defaultOut;

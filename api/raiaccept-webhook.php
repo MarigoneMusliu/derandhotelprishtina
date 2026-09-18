@@ -2,8 +2,7 @@
 
 declare(strict_types=1);
 
-require __DIR__ . '/raiaccept-lib.php';
-require __DIR__ . '/otello-lib.php';
+require_once __DIR__ . '/otello-lib.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     raiaccept_json_response(405, ['error' => 'Method not allowed. Use POST.']);

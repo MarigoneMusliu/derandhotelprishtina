@@ -11,11 +11,11 @@
   var PENDING_PAYMENT_STORAGE_KEY = "derandBookingPendingPayments";
 
   var ROOM_DATA = {
-    "junior-suite": {
-      labelKey: "bd-room-junior-suite-label",
-      metaKey: "bd-room-junior-suite-meta",
-      image: "img/1111.webp",
-      price: 140,
+    "superior-double": {
+      labelKey: "bd-room-superior-double-label",
+      metaKey: "bd-room-superior-double-meta",
+      image: "img/superiorheader.webp",
+      price: 95,
     },
     "deluxe-double": {
       labelKey: "bd-room-deluxe-double-label",
@@ -35,11 +35,11 @@
       image: "img/twinbook.webp",
       price: 95,
     },
-    "superior-double": {
-      labelKey: "bd-room-superior-double-label",
-      metaKey: "bd-room-superior-double-meta",
-      image: "img/superiorroom3.webp",
-      price: 95,
+    "junior-suite": {
+      labelKey: "bd-room-junior-suite-label",
+      metaKey: "bd-room-junior-suite-meta",
+      image: "img/1111.webp",
+      price: 140,
     },
   };
 
@@ -256,7 +256,7 @@
       return adults >= 2 ? 105 : 95;
     }
     if (roomKey === "superior-double") {
-      return 95;
+      return adults >= 2 ? 105 : 95;
     }
     var room = ROOM_DATA[roomKey];
     return room ? room.price : 0;
@@ -330,7 +330,7 @@
     var tomorrow = new Date(today);
     tomorrow.setDate(tomorrow.getDate() + 1);
 
-    var room = ROOM_DATA[roomKey] ? roomKey : "junior-suite";
+    var room = ROOM_DATA[roomKey] ? roomKey : "superior-double";
     if (window.__derandTestBookingPage) {
       room = "junior-suite";
     }

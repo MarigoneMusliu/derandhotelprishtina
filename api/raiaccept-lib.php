@@ -574,7 +574,7 @@ function raiaccept_booking_rooms(): array
         'deluxe-double' => ['label' => 'Deluxe Double Room', 'single' => 105.0, 'double' => 105.0, 'max_adults' => 2],
         'premium-double' => ['label' => 'Premium Room', 'single' => 120.0, 'double' => 130.0, 'triple' => 140.0, 'max_adults' => 3],
         'superior-twin' => ['label' => 'Superior Twin Room', 'single' => 95.0, 'double' => 105.0, 'max_adults' => 2],
-        'superior-double' => ['label' => 'Superior Double Room', 'single' => 95.0, 'double' => 95.0, 'max_adults' => 2],
+        'superior-double' => ['label' => 'Superior Double Room', 'single' => 95.0, 'double' => 105.0, 'max_adults' => 2],
     ];
 }
 
