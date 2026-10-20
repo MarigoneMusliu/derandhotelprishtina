@@ -1,0 +1,5075 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Step inside Derand Hotel Prishtina — a story on every floor. Discover the places, people and details that make Derand your second home."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Inside Derand | Derand Hotel Prishtina</title>
+    <link rel="icon" href="favicon.ico?v=14" type="image/x-icon" sizes="any" />
+    <link
+      rel="canonical"
+      href="https://www.derandhotel.com/ExploreDerand"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/plugins.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css?v=20261020e1" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" as="image" href="img/kati2.webp" fetchpriority="high" />
+    <style>
+      body.explorederand-page.policy-font-noto-serif.sacher-home,
+      body.explorederand-page.policy-font-noto-serif.sacher-home h1,
+      body.explorederand-page.policy-font-noto-serif.sacher-home h2,
+      body.explorederand-page.policy-font-noto-serif.sacher-home h3,
+      body.explorederand-page.policy-font-noto-serif.sacher-home h4,
+      body.explorederand-page.policy-font-noto-serif.sacher-home p,
+      body.explorederand-page.policy-font-noto-serif.sacher-home span,
+      body.explorederand-page.policy-font-noto-serif.sacher-home a,
+      body.explorederand-page.policy-font-noto-serif.sacher-home li,
+      body.explorederand-page.policy-font-noto-serif.sacher-home small,
+      body.explorederand-page.policy-font-noto-serif.sacher-home button {
+        font-family: "Noto Serif", serif !important;
+      }
+
+      body.explorederand-page.policy-font-noto-serif.sacher-home .fa,
+      body.explorederand-page.policy-font-noto-serif.sacher-home
+        [class^="icon_"],
+      body.explorederand-page.policy-font-noto-serif.sacher-home
+        [class*=" icon_"],
+      body.explorederand-page.policy-font-noto-serif.sacher-home
+        .elegant-icons {
+        font-family: FontAwesome !important;
+      }
+
+      body.explorederand-page {
+        --ed-gutter: clamp(20px, 5vw, 56px);
+        --ed-section-y: clamp(56px, 10vw, 112px);
+        --ed-header: clamp(72px, 12vw, 112px);
+        --ed-scroll-offset: clamp(72px, 12vw, 110px);
+        background: #ffffff;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        /* clip (not hidden) so the window scrolls instead of <body> becoming a nested scroller */
+        overflow-x: clip !important;
+      }
+
+      body.explorederand-page.modal-open {
+        overflow: hidden;
+      }
+
+      html:has(> body.explorederand-page.modal-open),
+      html:has(> body.explorederand-page.mobile-nav-open) {
+        overflow: hidden;
+      }
+
+      @media (max-width: 991.98px) {
+        body.explorederand-page .canvas__open,
+        body.explorederand-page .footer__social a {
+          min-width: 48px;
+          min-height: 48px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      .ed-hero {
+        --ed-accent: #99928c;
+        --ed-copper: #b27256;
+        --ed-ink: #1a1a1a;
+        --ed-muted: #525252;
+        --ed-soft: #b5aea6;
+        --ed-line: #e7e7e7;
+        --ed-gallery-top: clamp(24px, 4vw, 36px);
+        --ed-hero-h: calc(100vh - var(--ed-header));
+        --ed-hero-h: calc(100dvh - var(--ed-header));
+        display: grid;
+        grid-template-columns: minmax(0, 44.14%) minmax(0, 55.86%);
+        align-items: start;
+        min-height: var(--ed-hero-h);
+        width: 100%;
+        max-width: 100%;
+        padding-bottom: clamp(24px, 4vw, 40px);
+        background: #ffffff;
+      }
+
+      .ed-hero__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: var(--ed-hero-h);
+        min-width: 0;
+        padding: clamp(40px, 5vw, 53px) var(--ed-gutter) clamp(28px, 4vw, 36px)
+          clamp(24px, 8vw, 112px);
+      }
+
+      .ed-hero__intro {
+        width: 372px;
+        max-width: 100%;
+        padding-top: 48px;
+      }
+
+      .ed-hero__eyebrow {
+        margin: 0 0 38px;
+        color: var(--ed-copper);
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0.26em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .ed-hero__title {
+        margin: 0 0 30px;
+        color: var(--ed-ink);
+        font-size: clamp(38px, 6.8vw, 72px);
+        font-weight: 400;
+        line-height: 0.92;
+        letter-spacing: -0.025em;
+      }
+
+      .ed-hero__title-line {
+        display: block;
+      }
+
+      .ed-hero__title em {
+        color: var(--ed-copper);
+        font-style: italic;
+        font-weight: 400;
+        letter-spacing: -0.1em;
+      }
+
+      .ed-hero__copy {
+        margin: 0 0 34px;
+        width: auto;
+        max-width: 100%;
+        color: #525252;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 1.6;
+        letter-spacing: 0.01em;
+      }
+
+      .ed-hero__copy-line {
+        display: block;
+        white-space: nowrap;
+      }
+
+      .ed-hero__cta {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        color: var(--ed-ink);
+        font-size: 19px;
+        font-weight: 400;
+        letter-spacing: 0;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      .ed-hero__cta:hover {
+        color: var(--ed-accent);
+      }
+
+      .ed-hero__cta-line {
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: var(--ed-accent);
+      }
+
+      .ed-hero__footer {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin: 0;
+        color: #b5aea6;
+        font-size: 12px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: 0.02em;
+      }
+
+      .ed-hero__footer-rule {
+        display: block;
+        width: 34px;
+        height: 1px;
+        background: #d8d2cb;
+        flex-shrink: 0;
+      }
+
+      .ed-hero__gallery {
+        display: flex;
+        align-items: flex-start;
+        gap: clamp(16px, 3vw, 30px);
+        min-height: var(--ed-hero-h);
+        min-width: 0;
+        padding: var(--ed-gallery-top) clamp(16px, 4vw, 56px)
+          clamp(24px, 4vw, 24px) 0;
+      }
+
+      .ed-hero__main {
+        position: relative;
+        flex: 0 0 322px;
+        width: 322px;
+        height: calc(var(--ed-hero-h) * 0.931);
+        margin: 0;
+        overflow: hidden;
+      }
+
+      .ed-hero__main,
+      .ed-hero__side-img-wrap {
+        background: #f5f1ec;
+      }
+
+      .ed-hero__main img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: center center;
+      }
+
+      .ed-hero__main-caption {
+        position: absolute;
+        left: 20px;
+        bottom: 22px;
+        margin: 0;
+        color: #ffffff;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1;
+        white-space: nowrap;
+        text-shadow: 0 1px 10px rgba(0, 0, 0, 0.28);
+      }
+
+      .ed-hero__side {
+        flex: 0 0 169px;
+        width: 169px;
+        margin: 114px 0 0;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .ed-hero__side-img-wrap {
+        overflow: hidden;
+        height: 220px;
+      }
+
+      .ed-hero__side img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: center top;
+      }
+
+      .ed-hero__side-caption {
+        margin: 0;
+        color: #b5aea6;
+        font-size: 13px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 1.4;
+      }
+
+      @media (min-width: 992px) {
+        .ed-hero__main {
+          flex-basis: 31.2vw;
+          width: 31.2vw;
+          max-width: 450px;
+        }
+
+        .ed-hero__side {
+          flex-basis: 16.5vw;
+          width: 16.5vw;
+          max-width: 238px;
+          margin-top: 11.13vw;
+        }
+
+        .ed-hero__side-img-wrap {
+          height: calc(var(--ed-hero-h) * 0.45);
+          max-height: 355px;
+        }
+
+        .ed-hero__gallery {
+          gap: 2.93vw;
+        }
+      }
+
+      @media (max-width: 1400px) and (min-width: 992px) {
+        .ed-hero__content {
+          padding-left: clamp(72px, 7.8vw, 112px);
+        }
+
+        .ed-hero__title {
+          font-size: clamp(56px, 5vw, 72px);
+        }
+      }
+
+      @media (max-width: 991px) {
+        body.explorederand-page {
+          padding-top: clamp(56px, 15vw, 72px);
+        }
+
+        .ed-hero {
+          grid-template-columns: minmax(0, 1fr);
+          min-height: auto;
+        }
+
+        .ed-hero__content {
+          min-height: auto;
+          justify-content: flex-start;
+          padding: clamp(16px, 4vw, 24px) var(--ed-gutter)
+            clamp(32px, 5vh, 48px);
+        }
+
+        .ed-hero__intro {
+          padding-top: 0;
+        }
+
+        .ed-hero__intro,
+        .ed-hero__copy {
+          width: auto;
+        }
+
+        .ed-hero__copy-line {
+          white-space: normal;
+        }
+
+        .ed-hero__footer {
+          margin-top: clamp(28px, 5vh, 40px);
+        }
+
+        .ed-hero__gallery {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: clamp(14px, 3vw, 22px);
+          align-items: stretch;
+          min-height: auto;
+          padding: var(--ed-gallery-top) var(--ed-gutter) clamp(20px, 4vw, 28px);
+        }
+
+        .ed-hero__main,
+        .ed-hero__side {
+          width: 100%;
+          max-width: none;
+          margin: 0;
+          min-width: 0;
+        }
+
+        .ed-hero__main {
+          height: auto;
+          aspect-ratio: 4 / 5;
+          max-height: none;
+        }
+
+        .ed-hero__side {
+          display: block;
+          position: relative;
+        }
+
+        .ed-hero__side-img-wrap {
+          height: auto;
+          aspect-ratio: 4 / 5;
+        }
+
+        .ed-hero__main-caption,
+        .ed-hero__side-caption {
+          left: clamp(14px, 3.5vw, 20px);
+          bottom: clamp(14px, 3.5vw, 22px);
+          font-size: clamp(11px, 2.8vw, 13px);
+          line-height: 1.35;
+          white-space: normal;
+          max-width: calc(100% - 28px);
+        }
+
+        .ed-hero__side-caption {
+          position: absolute;
+          margin: 0;
+          color: #ffffff;
+          text-shadow: 0 1px 10px rgba(0, 0, 0, 0.28);
+        }
+      }
+
+      @media (max-width: 639px) {
+        .ed-hero__gallery {
+          grid-template-columns: minmax(0, 1fr);
+          gap: clamp(16px, 4vw, 24px);
+        }
+
+        .ed-hero__main,
+        .ed-hero__side-img-wrap {
+          aspect-ratio: 5 / 6;
+        }
+      }
+
+      @media (max-width: 575px) {
+        body.explorederand-page {
+          padding-top: 56px;
+        }
+
+        .ed-hero__content {
+          padding-top: 12px;
+        }
+
+        .ed-hero__gallery {
+          padding-bottom: 16px;
+        }
+
+        .ed-hero__title {
+          font-size: clamp(38px, 10vw, 46px);
+          line-height: 0.94;
+        }
+
+        .ed-hero__title em {
+          letter-spacing: -0.07em;
+        }
+
+        .ed-hero__copy {
+          font-size: 16px;
+          line-height: 1.6;
+        }
+      }
+
+      .ed-subnav {
+        border-top: 1px solid var(--ed-copper);
+        border-bottom: 1px solid var(--ed-copper);
+        background: #ffffff;
+        padding: clamp(24px, 4vw, 38px) var(--ed-gutter);
+      }
+
+      .ed-subnav__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: clamp(24px, 6vw, 112px);
+        max-width: none;
+        margin: 0 auto;
+      }
+
+      .ed-subnav__item {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 8px;
+        color: var(--ed-ink);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1;
+        text-decoration: none;
+        transition: opacity 0.2s ease;
+      }
+
+      .ed-subnav__item:hover,
+      .ed-subnav__item:focus-visible {
+        opacity: 0.72;
+      }
+
+      .ed-subnav__num {
+        color: #b27256;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0.02em;
+      }
+
+      .ed-subnav__label {
+        color: #1a1a1a;
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      .ed-section {
+        padding: var(--ed-section-y) var(--ed-gutter) clamp(72px, 12vw, 96px);
+        background: #ffffff;
+      }
+
+      .ed-section__eyebrow {
+        margin: 0;
+        color: #b27256;
+        font-size: 11px;
+        font-weight: 400;
+        letter-spacing: 0.28em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .ed-section__intro {
+        display: grid;
+        grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+        align-items: center;
+        gap: clamp(32px, 5vw, 72px);
+        margin-top: 44px;
+      }
+
+      .ed-section__title {
+        margin: 0;
+        color: #1a1a1a;
+        font-size: clamp(34px, 5.5vw, 56px);
+        font-weight: 400;
+        line-height: 0.95;
+        letter-spacing: -0.02em;
+      }
+
+      .ed-section__title-line {
+        display: block;
+      }
+
+      .ed-section__copy {
+        margin: 0;
+        max-width: 320px;
+        color: #525252;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 1.6;
+        letter-spacing: 0.01em;
+      }
+
+      body.explorederand-page .wrap {
+        width: min(1280px, calc(100% - 2 * var(--ed-gutter)));
+        margin-inline: auto;
+      }
+
+      body.explorederand-page .ed-section.film-section {
+        overflow: hidden;
+        padding-inline: 0;
+      }
+
+      body.explorederand-page .film-section .ed-section__eyebrow,
+      body.explorederand-page .film-section .ed-section__intro {
+        padding-inline: var(--ed-gutter);
+      }
+
+      .film-section {
+        overflow: hidden;
+      }
+
+      .film-carousel {
+        background: #1b1917;
+        padding: 0;
+        overflow: hidden;
+        margin-top: 58px;
+      }
+
+      .film-track {
+        display: flex;
+        gap: clamp(12px, 2vw, 20px);
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        padding: 0 max(var(--ed-gutter), calc((100% - min(980px, 92vw)) / 2));
+        overscroll-behavior-x: contain;
+        cursor: grab;
+        touch-action: pan-x;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .film-track::-webkit-scrollbar {
+        display: none;
+      }
+
+      .film-track.dragging {
+        cursor: grabbing;
+        scroll-snap-type: none;
+        scroll-behavior: auto;
+        user-select: none;
+      }
+
+      .film-track.is-scrolling,
+      .film-track.is-drifting {
+        scroll-snap-type: none;
+        scroll-behavior: auto;
+      }
+
+      .film-track.is-drifting {
+        cursor: default;
+      }
+
+      .film-track.is-drifting .film-photo {
+        cursor: default;
+      }
+
+      .film-frame {
+        flex: 0 0 min(92vw, 980px);
+        scroll-snap-align: center;
+        position: relative;
+        padding: clamp(28px, 4vw, 40px) 0;
+        background: #1b1917;
+        touch-action: pan-x;
+      }
+
+      .film-frame::before,
+      .film-frame::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 17px;
+        background: repeating-linear-gradient(
+          90deg,
+          #f5f1ec 0 22px,
+          transparent 22px 38px
+        );
+        opacity: 0.94;
+        pointer-events: none;
+      }
+
+      .film-frame::before {
+        top: 12px;
+      }
+
+      .film-frame::after {
+        bottom: 12px;
+      }
+
+      .film-photo {
+        display: block;
+        width: calc(100% - clamp(24px, 4vw, 40px));
+        height: clamp(320px, 62vw, 530px);
+        margin: clamp(12px, 2vw, 20px);
+        position: relative;
+        overflow: hidden;
+        text-align: left;
+        background: #1f1814;
+        border: 0;
+        padding: 0;
+        cursor: grab;
+        touch-action: pan-x;
+        -webkit-user-select: none;
+        user-select: none;
+        box-shadow:
+          inset 0 0 0 10px rgba(248, 236, 214, 0.09),
+          inset 0 0 0 11px rgba(255, 255, 255, 0.04),
+          inset 0 0 90px rgba(0, 0, 0, 0.72),
+          inset 0 0 180px rgba(18, 12, 8, 0.55);
+      }
+
+      .film-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 46%;
+        pointer-events: none;
+        -webkit-user-drag: none;
+        user-select: none;
+        filter: sepia(0.52) contrast(1.1) saturate(0.58) brightness(0.84)
+          hue-rotate(-4deg);
+      }
+
+      .film-photo::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        background:
+          radial-gradient(
+            circle at 14% 22%,
+            rgba(255, 255, 255, 0.42) 0 1px,
+            transparent 1.2px
+          ),
+          radial-gradient(
+            circle at 31% 58%,
+            rgba(12, 8, 6, 0.38) 0 1.4px,
+            transparent 1.6px
+          ),
+          radial-gradient(
+            circle at 52% 14%,
+            rgba(255, 248, 230, 0.5) 0 0.9px,
+            transparent 1.1px
+          ),
+          radial-gradient(
+            circle at 68% 41%,
+            rgba(0, 0, 0, 0.32) 0 1px,
+            transparent 1.2px
+          ),
+          radial-gradient(
+            circle at 79% 73%,
+            rgba(255, 255, 255, 0.36) 0 1.3px,
+            transparent 1.5px
+          ),
+          radial-gradient(
+            circle at 91% 28%,
+            rgba(18, 12, 8, 0.34) 0 0.8px,
+            transparent 1px
+          ),
+          radial-gradient(
+            circle at 7% 81%,
+            rgba(255, 255, 255, 0.28) 0 1.6px,
+            transparent 1.8px
+          ),
+          radial-gradient(
+            circle at 24% 36%,
+            rgba(0, 0, 0, 0.26) 0 0.7px,
+            transparent 0.9px
+          ),
+          radial-gradient(
+            circle at 43% 88%,
+            rgba(255, 245, 220, 0.44) 0 1.1px,
+            transparent 1.3px
+          ),
+          radial-gradient(
+            circle at 61% 67%,
+            rgba(10, 8, 6, 0.3) 0 1.2px,
+            transparent 1.4px
+          ),
+          radial-gradient(
+            circle at 84% 52%,
+            rgba(255, 255, 255, 0.32) 0 0.85px,
+            transparent 1.05px
+          ),
+          radial-gradient(
+            circle at 56% 32%,
+            rgba(0, 0, 0, 0.22) 0 1.5px,
+            transparent 1.7px
+          ),
+          repeating-linear-gradient(
+            112deg,
+            transparent 0 14px,
+            rgba(255, 245, 225, 0.05) 14px 15px,
+            transparent 15px 38px,
+            rgba(0, 0, 0, 0.05) 38px 39px,
+            transparent 39px 72px
+          ),
+          repeating-linear-gradient(
+            -3deg,
+            transparent 0 90px,
+            rgba(0, 0, 0, 0.08) 90px 91px,
+            transparent 91px 210px
+          ),
+          radial-gradient(
+            circle at 88% 10%,
+            rgba(255, 196, 120, 0.22) 0%,
+            transparent 24%
+          ),
+          radial-gradient(
+            ellipse at center,
+            transparent 18%,
+            rgba(24, 16, 10, 0.45) 58%,
+            rgba(6, 4, 3, 0.92) 100%
+          ),
+          linear-gradient(
+            168deg,
+            rgba(255, 210, 140, 0.16) 0%,
+            rgba(180, 120, 170, 0.1) 42%,
+            rgba(55, 38, 24, 0.14) 68%,
+            rgba(18, 12, 8, 0.48) 100%
+          );
+        mix-blend-mode: multiply;
+        opacity: 0.96;
+      }
+
+      .film-photo::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        pointer-events: none;
+        opacity: 0.38;
+        background-image:
+          radial-gradient(
+            circle at 18% 11%,
+            rgba(255, 255, 255, 0.55) 0 1px,
+            transparent 1.2px
+          ),
+          radial-gradient(
+            circle at 37% 24%,
+            rgba(0, 0, 0, 0.35) 0 0.75px,
+            transparent 0.95px
+          ),
+          radial-gradient(
+            circle at 72% 18%,
+            rgba(255, 250, 235, 0.48) 0 1.25px,
+            transparent 1.45px
+          ),
+          radial-gradient(
+            circle at 11% 47%,
+            rgba(0, 0, 0, 0.28) 0 1.1px,
+            transparent 1.3px
+          ),
+          radial-gradient(
+            circle at 48% 51%,
+            rgba(255, 255, 255, 0.38) 0 0.9px,
+            transparent 1.1px
+          ),
+          radial-gradient(
+            circle at 63% 79%,
+            rgba(12, 8, 6, 0.32) 0 1.35px,
+            transparent 1.55px
+          ),
+          radial-gradient(
+            circle at 88% 61%,
+            rgba(255, 255, 255, 0.42) 0 0.8px,
+            transparent 1px
+          ),
+          radial-gradient(
+            circle at 26% 92%,
+            rgba(0, 0, 0, 0.24) 0 1.4px,
+            transparent 1.6px
+          ),
+          radial-gradient(
+            circle at 94% 86%,
+            rgba(255, 248, 230, 0.34) 0 1px,
+            transparent 1.2px
+          ),
+          repeating-linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.025) 0 1px,
+            transparent 1px 4px
+          ),
+          url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.95'/%3E%3C/svg%3E");
+        mix-blend-mode: overlay;
+      }
+
+      @keyframes ed-film-pan {
+        from {
+          object-position: 36% 46%;
+        }
+        to {
+          object-position: 64% 46%;
+        }
+      }
+
+      .film-frame.is-active .film-photo img {
+        animation: ed-film-pan 10s ease-in-out forwards;
+      }
+
+      .film-track.dragging .film-photo img,
+      .film-track.is-paused .film-photo img,
+      .film-track.is-drifting .film-photo img {
+        animation-play-state: paused;
+      }
+
+      .film-track.is-drifting .film-photo img {
+        animation: none;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .film-frame.is-active .film-photo img {
+          animation: none;
+        }
+      }
+
+      .film-track.dragging .film-photo {
+        cursor: grabbing;
+      }
+
+      .film-overlay {
+        position: absolute;
+        inset: 0;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: clamp(22px, 4vw, 42px);
+        color: #ffffff;
+        background: linear-gradient(transparent 35%, #14100ee6);
+        pointer-events: none;
+      }
+
+      .film-overlay::after {
+        content: "09·1986";
+        position: absolute;
+        top: 30px;
+        right: 34px;
+        font:
+          600 12px/1 "Courier New",
+          Courier,
+          monospace;
+        letter-spacing: 0.08em;
+        color: rgba(255, 96, 42, 0.82);
+        text-shadow:
+          0 1px 0 rgba(0, 0, 0, 0.35),
+          0 0 8px rgba(255, 120, 60, 0.22);
+        transform: rotate(-1.5deg);
+        opacity: 0.9;
+        pointer-events: none;
+      }
+
+      .film-overlay > span:first-child {
+        font:
+          12px/1.6 Arial,
+          sans-serif;
+        letter-spacing: 0.17em;
+        text-transform: uppercase;
+      }
+
+      .film-overlay strong {
+        font-family: "Noto Serif", Georgia, serif;
+        font-size: clamp(36px, 8vw, 64px);
+        line-height: 1.15;
+        font-weight: 400;
+        margin: 8px 0 20px;
+        letter-spacing: -0.035em;
+      }
+
+      .film-overlay__theme {
+        font:
+          13px/1.5 Arial,
+          sans-serif;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #d7b780;
+        margin: -6px 0 18px;
+      }
+
+      .film-overlay > span:last-child {
+        font:
+          14px/1.6 Arial,
+          sans-serif;
+        letter-spacing: 0.03em;
+        border-bottom: 1px solid #ffffff80;
+        padding-bottom: 6px;
+      }
+
+      .film-edge {
+        position: absolute;
+        top: 30px;
+        left: 2px;
+        right: 2px;
+        display: flex;
+        justify-content: space-between;
+        color: #d7b780;
+        font: 8px/1 monospace;
+        letter-spacing: 0.14em;
+        pointer-events: none;
+      }
+
+      .film-edge.bottom {
+        top: auto;
+        bottom: 30px;
+      }
+
+      .film-controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: clamp(16px, 3vw, 24px);
+        margin-top: clamp(22px, 4vw, 30px);
+        padding-inline: var(--ed-gutter);
+        flex-wrap: wrap;
+      }
+
+      .floor-select {
+        display: flex;
+        gap: 9px;
+        flex-wrap: wrap;
+      }
+
+      .floor-select button {
+        width: 43px;
+        height: 43px;
+        border: 1px solid #ded7d0;
+        font-size: 14px;
+        background: transparent;
+        transition:
+          background 0.2s,
+          color 0.2s;
+      }
+
+      .floor-select button[aria-pressed="true"] {
+        color: #ffffff;
+        background: #96593e;
+        border-color: #96593e;
+      }
+
+      .floor-select button:hover {
+        border-color: #b17256;
+      }
+
+      .film-paging {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .film-status {
+        font: 13px monospace;
+        letter-spacing: 0.08em;
+        margin-right: 14px;
+        white-space: nowrap;
+      }
+
+      .film-paging button {
+        width: 45px;
+        height: 45px;
+        border: 1px solid #ded7d0;
+        font:
+          22px Arial,
+          sans-serif;
+        background: transparent;
+      }
+
+      .film-paging button:hover {
+        background: #f5f1ec;
+      }
+
+      .film-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: clamp(16px, 3vw, 25px);
+        margin-top: 25px;
+        padding-bottom: 8px;
+        padding-inline: var(--ed-gutter);
+        flex-wrap: wrap;
+      }
+
+      .film-footer p {
+        margin: 0;
+        font-size: 12px;
+        color: #706961;
+      }
+
+      .film-footer .ed-text-link {
+        flex-shrink: 0;
+        font-size: 14px;
+        display: inline-flex;
+        align-items: center;
+        gap: 28px;
+        border-bottom: 1px solid #b17256;
+        padding-bottom: 8px;
+        line-height: 1.6;
+        color: #292522;
+        background: none;
+        cursor: pointer;
+      }
+
+      .film-footer .ed-text-link span {
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+      }
+
+      .film-track:focus-visible {
+        outline: 2px solid #b17256;
+        outline-offset: -2px;
+      }
+
+      .ed-text-link {
+        font-size: 14px;
+        display: inline-flex;
+        align-items: center;
+        gap: 28px;
+        border-bottom: 1px solid #b17256;
+        padding-bottom: 8px;
+        line-height: 1.6;
+        color: #292522;
+        text-decoration: none;
+        background: none;
+        cursor: pointer;
+      }
+
+      .ed-text-link span {
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+      }
+
+      .ed-building {
+        background: #f5f1ec;
+        border-block: 1px solid #e8e1d9;
+        padding-block: clamp(64px, 10vw, 112px);
+        padding-inline: 0;
+      }
+
+      .ed-building__layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: clamp(32px, 8vw, 10%);
+        align-items: center;
+      }
+
+      .ed-building__drawing {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .ed-building__drawing img {
+        height: clamp(320px, 52vw, 655px);
+        max-width: 100%;
+        width: auto;
+        object-fit: contain;
+        mix-blend-mode: multiply;
+        opacity: 0.8;
+      }
+
+      .ed-building__caption {
+        margin-top: 24px;
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #706961;
+      }
+
+      .ed-building__copy h2 {
+        margin: 19px 0 28px;
+        color: #1a1a1a;
+        font-size: clamp(34px, 4.8vw, 51px);
+        font-weight: 400;
+        line-height: 1.17;
+        letter-spacing: -0.035em;
+      }
+
+      .ed-building__copy h2 em {
+        font-style: italic;
+        font-weight: 400;
+        color: #b27256;
+      }
+
+      .ed-building__lead {
+        max-width: 430px;
+        margin: 0;
+        color: #706961;
+        font-size: 16px;
+        line-height: 1.8;
+      }
+
+      .ed-building__details {
+        margin-top: 36px;
+      }
+
+      .ed-building__details > div {
+        display: grid;
+        grid-template-columns: 105px 1fr;
+        gap: 20px;
+        align-items: baseline;
+        padding: 17px 0;
+        border-top: 1px solid #ded7d0;
+      }
+
+      .ed-building__details span {
+        color: #292522;
+        font-size: 17px;
+      }
+
+      .ed-building__details p {
+        margin: 0;
+        color: #706961;
+        font-size: 14px;
+        line-height: 1.75;
+      }
+
+      .ed-building__copy .ed-text-link {
+        margin-top: 26px;
+      }
+
+      .ed-spaces {
+        padding-block: clamp(64px, 10vw, 112px);
+        padding-inline: 0;
+      }
+
+      .ed-spaces__layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.02fr);
+        gap: clamp(32px, 7vw, 9%);
+        align-items: start;
+      }
+
+      .ed-spaces__left h2 {
+        margin: 17px 0 0;
+        color: #1a1a1a;
+        font-size: clamp(32px, 4.5vw, 48px);
+        font-weight: 400;
+        line-height: 1.17;
+        letter-spacing: -0.035em;
+      }
+
+      .ed-spaces__photo {
+        margin: 36px 0 0;
+      }
+
+      .ed-spaces__photo img {
+        width: 100%;
+        height: clamp(280px, 52vw, 690px);
+        object-fit: cover;
+        object-position: 50% 40%;
+      }
+
+      .ed-spaces__photo figcaption {
+        margin-top: 15px;
+        color: #706961;
+        font-size: 12px;
+        font-style: italic;
+        line-height: 1.6;
+      }
+
+      .ed-spaces__intro {
+        max-width: 460px;
+        margin: 0 0 36px;
+        color: #706961;
+        font-size: 16px;
+        line-height: 1.85;
+      }
+
+      .ed-spaces__list {
+        border-top: 1px solid #ded7d0;
+      }
+
+      .ed-spaces__list > a {
+        display: block;
+        position: relative;
+        padding: 27px 45px 29px 0;
+        border-bottom: 1px solid #ded7d0;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .ed-spaces__list-eyebrow {
+        display: block;
+        color: #96593e;
+        font-size: 12px;
+        letter-spacing: 0.15em;
+        line-height: 1.6;
+        text-transform: uppercase;
+      }
+
+      .ed-spaces__list h3 {
+        margin: 7px 0 8px;
+        color: #292522;
+        font-size: clamp(22px, 3.2vw, 29px);
+        font-weight: 400;
+        letter-spacing: -0.03em;
+        line-height: 1.17;
+        transition: color 0.2s ease;
+      }
+
+      .ed-spaces__list p {
+        margin: 0;
+        color: #706961;
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      .ed-spaces__arrow {
+        position: absolute;
+        top: 69px;
+        right: 3px;
+        font:
+          24px Arial,
+          sans-serif;
+        transition: transform 0.2s ease;
+      }
+
+      .ed-spaces__list > a:hover h3,
+      .ed-spaces__list > a:focus-visible h3 {
+        color: #96593e;
+      }
+
+      .ed-spaces__list > a:hover .ed-spaces__arrow,
+      .ed-spaces__list > a:focus-visible .ed-spaces__arrow {
+        transform: translate(4px, -4px);
+      }
+
+      .ed-stay-banner {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        min-height: clamp(360px, 30vw, 460px);
+        margin-bottom: 0;
+        background: #292622;
+        color: #ffffff;
+      }
+
+      .ed-stay-banner__image {
+        position: relative;
+        min-height: clamp(240px, 30vw, 460px);
+        height: auto;
+        overflow: hidden;
+      }
+
+      .ed-stay-banner__image img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 32%;
+      }
+
+      .ed-stay-banner__copy {
+        align-self: center;
+        padding: clamp(32px, 6vw, 60px) clamp(24px, 8vw, 11%);
+      }
+
+      .ed-stay-banner__eyebrow {
+        margin: 0;
+        color: #d7ad95;
+        font-size: 12px;
+        letter-spacing: 0.15em;
+        line-height: 1.6;
+        text-transform: uppercase;
+      }
+
+      .ed-stay-banner__copy h2 {
+        margin: 23px 0 33px;
+        color: #ffffff;
+        font-size: clamp(28px, 4.2vw, 41px);
+        font-weight: 400;
+        line-height: 1.28;
+        letter-spacing: -0.025em;
+      }
+
+      .ed-stay-banner__book {
+        display: inline-block;
+        padding: 14px 26px;
+        border: 1px solid #b17256;
+        background: #b17256;
+        color: #ffffff;
+        font-size: 13px;
+        letter-spacing: 0.09em;
+        line-height: 1.4;
+        text-align: center;
+        text-decoration: none;
+        transition: background 0.2s ease;
+      }
+
+      .ed-stay-banner__book:hover,
+      .ed-stay-banner__book:focus-visible {
+        background: #96593e;
+        border-color: #96593e;
+        color: #ffffff;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body.explorederand-page {
+        scroll-padding-top: var(--ed-scroll-offset);
+      }
+
+      #floors-galleries,
+      #building,
+      #spaces {
+        scroll-margin-top: var(--ed-scroll-offset);
+      }
+
+      .ed-lightbox {
+        width: min(1800px, calc(100% - 24px));
+        height: calc(100dvh - 24px);
+        padding: 12px clamp(14px, 2vw, 24px);
+        border: 1px solid #635b52;
+        background: #211f1c;
+        color: #ffffff;
+        max-width: none;
+        max-height: none;
+      }
+
+      .ed-lightbox::backdrop {
+        background: #181512ed;
+        backdrop-filter: blur(6px);
+      }
+
+      .ed-lightbox[open] {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .ed-lightbox__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding-bottom: 12px;
+      }
+
+      .ed-lightbox__top h2 {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 400;
+        color: #ffffff;
+      }
+
+      .ed-lightbox__close {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-size: 14px;
+        padding: 5px;
+        border: 0;
+        background: transparent;
+        color: #ffffff;
+        cursor: pointer;
+      }
+
+      .ed-lightbox__close span {
+        font:
+          30px Arial,
+          sans-serif;
+        line-height: 1;
+      }
+
+      .ed-lightbox__stage {
+        display: flex;
+        flex: 1;
+        min-height: 0;
+        align-items: center;
+        justify-content: space-between;
+        gap: 25px;
+      }
+
+      .ed-lightbox__viewport {
+        position: relative;
+        flex: 1;
+        min-width: 0;
+        width: calc(100% - 130px);
+        height: 100%;
+        overflow: hidden;
+        cursor: grab;
+      }
+
+      .ed-lightbox__viewport.is-loupe {
+        cursor: crosshair;
+      }
+
+      .ed-lightbox__actions {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+      }
+
+      .ed-lightbox__zoom,
+      .ed-lightbox__read {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 12px;
+        border: 1px solid #71675e;
+        background: transparent;
+        color: #ffffff;
+        font-size: 13px;
+        cursor: pointer;
+        transition:
+          background 0.2s ease,
+          color 0.2s ease,
+          border-color 0.2s ease;
+      }
+
+      .ed-lightbox__zoom svg,
+      .ed-lightbox__read svg {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+      }
+
+      .ed-lightbox__zoom:hover,
+      .ed-lightbox__read:hover {
+        background: #40392f;
+      }
+
+      .ed-lightbox__zoom[aria-pressed="true"],
+      .ed-lightbox__read[aria-pressed="true"] {
+        background: #d2ad99;
+        border-color: #d2ad99;
+        color: #211f1c;
+      }
+
+      .ed-lightbox__read[hidden] {
+        display: none;
+      }
+
+      .ed-lightbox__story {
+        flex: 0 0 clamp(270px, 28%, 360px);
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        padding: 4px 6px 4px 28px;
+        border-left: 1px solid #4a433c;
+        background: #211f1c;
+        color: #f3ede6;
+        transition: opacity 0.28s ease;
+      }
+
+      .ed-lightbox__story[hidden] {
+        display: none;
+      }
+
+      .ed-lightbox__story.is-changing {
+        opacity: 0.45;
+      }
+
+      .ed-lightbox__story-inner {
+        margin-block: auto;
+      }
+
+      .ed-lightbox__story-title {
+        margin: 0 0 10px;
+        font-size: clamp(20px, 1.7vw, 24px);
+        font-weight: 400;
+        line-height: 1.25;
+        letter-spacing: 0.01em;
+        color: #ffffff;
+        overflow-wrap: anywhere;
+      }
+
+      .ed-lightbox__story-meta {
+        margin: 0 0 18px;
+        font-size: 12px;
+        line-height: 1.5;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #d2ad99;
+      }
+
+      .ed-lightbox__story-text {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.7;
+        color: #f3ede6;
+      }
+
+      @media (max-width: 1099.98px) {
+        .ed-lightbox__stage {
+          position: relative;
+        }
+
+        .ed-lightbox__story {
+          position: absolute;
+          left: 69px;
+          right: 69px;
+          bottom: 0;
+          z-index: 6;
+          max-height: min(62%, calc(100% - 80px));
+          padding: 18px 20px 20px;
+          border: 1px solid #4a433c;
+          background: #1a1815;
+          box-shadow: 0 -14px 32px rgba(0, 0, 0, 0.5);
+        }
+
+        .ed-lightbox__story-inner {
+          margin-block: 0;
+        }
+      }
+
+      @media (max-width: 1099.98px) and (max-height: 520px) {
+        .ed-lightbox__story {
+          max-height: 100%;
+        }
+      }
+
+      @media (max-width: 420px) {
+        .ed-lightbox .ed-lightbox__actions {
+          gap: 8px;
+        }
+
+        .ed-lightbox .ed-lightbox__zoom,
+        .ed-lightbox .ed-lightbox__read {
+          gap: 6px;
+          padding: 5px 8px;
+        }
+
+        .ed-lightbox .ed-lightbox__close {
+          gap: 0;
+          font-size: 0;
+        }
+      }
+
+      .ed-loupe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        width: 230px;
+        height: 230px;
+        border: 3px solid #d2ad99;
+        border-radius: 50%;
+        background-color: #000000;
+        background-repeat: no-repeat;
+        box-shadow:
+          0 12px 32px rgba(0, 0, 0, 0.55),
+          inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+        pointer-events: none;
+        opacity: 0;
+        transform: scale(0.85);
+        transition:
+          opacity 0.15s ease,
+          transform 0.15s ease;
+      }
+
+      .ed-loupe.is-visible {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      .ed-lightbox__viewport.is-dragging {
+        cursor: grabbing;
+      }
+
+      .ed-lightbox__track {
+        display: flex;
+        height: 100%;
+        transition: transform 0.72s cubic-bezier(0.22, 1, 0.36, 1);
+        will-change: transform;
+      }
+
+      .ed-lightbox__track.is-instant {
+        transition: none;
+      }
+
+      .ed-lightbox__track.is-dragging {
+        transition: none;
+      }
+
+      .ed-lightbox__slide {
+        flex: 0 0 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .ed-lightbox__slide img {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        object-position: center center;
+        user-select: none;
+        -webkit-user-drag: none;
+        transition: transform 0.72s cubic-bezier(0.22, 1, 0.36, 1);
+        will-change: transform;
+      }
+
+      .ed-lightbox__track.is-instant .ed-lightbox__slide img {
+        transition: none;
+      }
+
+      .ed-lightbox__track.is-dragging .ed-lightbox__slide img {
+        transition: none;
+      }
+
+      @media (min-width: 992px) {
+        .ed-lightbox__viewport:not(.is-loupe) .ed-lightbox__slide img {
+          cursor: zoom-in;
+        }
+      }
+
+      .ed-lightbox__slide.is-enlarged {
+        align-items: flex-start;
+        justify-content: flex-start;
+        overflow: auto;
+        overscroll-behavior: contain;
+        scrollbar-width: thin;
+        scrollbar-color: #71675e transparent;
+      }
+
+      .ed-lightbox__viewport:not(.is-loupe) .ed-lightbox__slide.is-enlarged img {
+        flex-shrink: 0;
+        max-width: none;
+        max-height: none;
+        margin: auto;
+        object-fit: fill;
+        cursor: zoom-out;
+        transition: none;
+      }
+
+      .ed-lightbox__viewport.is-panning .ed-lightbox__slide.is-enlarged img {
+        cursor: grabbing;
+      }
+
+      .ed-lightbox__hint {
+        position: absolute;
+        left: 50%;
+        top: 14px;
+        z-index: 7;
+        margin: 0;
+        max-width: calc(100% - 24px);
+        padding: 8px 16px;
+        border-radius: 999px;
+        background: rgba(17, 15, 13, 0.86);
+        color: #ffffff;
+        font-size: 13px;
+        line-height: 1.4;
+        text-align: center;
+        pointer-events: none;
+        opacity: 0;
+        transform: translate(-50%, -6px);
+        transition:
+          opacity 0.25s ease,
+          transform 0.25s ease;
+      }
+
+      .ed-lightbox__hint.is-visible {
+        opacity: 1;
+        transform: translate(-50%, 0);
+      }
+
+      .ed-lightbox__caption {
+        margin: 0;
+        color: #eee5dc;
+        transition: opacity 0.28s ease;
+      }
+
+      .ed-lightbox__caption.is-changing {
+        opacity: 0.45;
+      }
+
+      .ed-lightbox__control {
+        font:
+          27px Arial,
+          sans-serif;
+        width: 44px;
+        height: 52px;
+        flex-shrink: 0;
+        border: 1px solid #71675e;
+        background: transparent;
+        color: #ffffff;
+        cursor: pointer;
+      }
+
+      .ed-lightbox__control:hover {
+        background: #40392f;
+      }
+
+      .ed-lightbox__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        padding-top: 12px;
+        font-size: 13px;
+      }
+
+      .ed-lightbox__count {
+        white-space: nowrap;
+        color: #d2ad99;
+      }
+
+      @media (max-width: 991px) {
+        .ed-section {
+          padding-block: clamp(48px, 8vh, 72px) clamp(64px, 10vh, 96px);
+        }
+
+        body.explorederand-page .ed-section.film-section,
+        body.explorederand-page .ed-section.ed-building,
+        body.explorederand-page .ed-section.ed-spaces {
+          padding-inline: 0;
+        }
+
+        .ed-section__intro {
+          grid-template-columns: minmax(0, 1fr);
+          gap: 28px;
+          margin-top: 36px;
+        }
+
+        .ed-section__copy {
+          max-width: none;
+        }
+
+        .ed-subnav {
+          padding: 0 var(--ed-gutter) clamp(20px, 4vw, 28px);
+          border-top: none;
+          border-bottom: none;
+        }
+
+        .ed-subnav__inner {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr);
+          gap: 0;
+          width: 100%;
+          max-width: none;
+          border: 1px solid rgba(178, 114, 86, 0.45);
+          background: #fcfbfa;
+        }
+
+        .ed-subnav__item {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          width: 100%;
+          padding: 15px 18px;
+          border-bottom: 1px solid #ebe6e1;
+          color: var(--ed-ink);
+          font-size: 15px;
+          line-height: 1.25;
+          transition:
+            background-color 0.2s ease,
+            opacity 0.2s ease;
+        }
+
+        .ed-subnav__item:last-child {
+          border-bottom: none;
+        }
+
+        .ed-subnav__item:hover,
+        .ed-subnav__item:focus-visible {
+          opacity: 1;
+          background: #f5f0eb;
+        }
+
+        .ed-subnav__num {
+          flex-shrink: 0;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-width: 34px;
+          height: 34px;
+          border: 1px solid rgba(178, 114, 86, 0.35);
+          border-radius: 50%;
+          font-size: 11px;
+          letter-spacing: 0.06em;
+        }
+
+        .ed-subnav__label {
+          flex: 1;
+          min-width: 0;
+          font-size: 15px;
+        }
+
+        .ed-subnav__item::after {
+          content: "\2192";
+          flex-shrink: 0;
+          color: var(--ed-copper);
+          font-size: 14px;
+          line-height: 1;
+          opacity: 0.7;
+        }
+
+        .ed-building__layout,
+        .ed-spaces__layout {
+          grid-template-columns: minmax(0, 1fr);
+          gap: clamp(40px, 8vw, 64px);
+        }
+
+        .ed-stay-banner {
+          grid-template-columns: minmax(0, 1fr);
+          min-height: auto;
+        }
+
+        .ed-stay-banner__image {
+          min-height: clamp(220px, 36vw, 320px);
+        }
+
+        .film-controls {
+          align-items: flex-start;
+          flex-direction: column;
+          margin-top: 22px;
+          gap: 20px;
+        }
+
+        .floor-select {
+          width: 100%;
+          justify-content: flex-start;
+          gap: 8px;
+        }
+
+        .film-paging {
+          align-self: flex-end;
+          width: 100%;
+          justify-content: flex-end;
+        }
+
+        .film-footer {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 17px;
+        }
+
+        .film-footer p {
+          max-width: 36ch;
+        }
+
+        .ed-spaces__list > a {
+          padding-right: 36px;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .film-track {
+          padding-inline: max(16px, calc((100% - 92vw) / 2));
+        }
+
+        .film-frame {
+          flex-basis: 92vw;
+          padding-block: 34px;
+        }
+
+        .film-frame::before,
+        .film-frame::after {
+          height: 13px;
+          background: repeating-linear-gradient(
+            90deg,
+            #f5f1ec 0 16px,
+            transparent 16px 29px
+          );
+        }
+
+        .film-frame::before {
+          top: 9px;
+        }
+
+        .film-frame::after {
+          bottom: 9px;
+        }
+
+        .film-edge {
+          top: 25px;
+          font-size: 7px;
+        }
+
+        .film-edge.bottom {
+          top: auto;
+          bottom: 25px;
+        }
+
+        .film-overlay::after {
+          top: 18px;
+          right: 20px;
+          font-size: 10px;
+        }
+
+        .floor-select {
+          justify-content: space-between;
+          gap: 5px;
+        }
+
+        .floor-select button {
+          width: 38px;
+          height: 40px;
+        }
+
+        .ed-lightbox {
+          width: 100%;
+          max-width: 100%;
+          height: 100dvh;
+          margin: 0;
+          padding: 18px 15px;
+          border: 0;
+        }
+
+        .ed-lightbox__top {
+          padding-bottom: 16px;
+        }
+
+        .ed-lightbox__top h2 {
+          font-size: 19px;
+        }
+
+        .ed-lightbox__stage {
+          position: relative;
+          gap: 0;
+          padding-bottom: 68px;
+        }
+
+        .ed-lightbox__viewport {
+          width: 100%;
+          height: 100%;
+        }
+
+        .ed-lightbox__track {
+          transition-duration: 0.5s;
+        }
+
+        .ed-lightbox__control {
+          position: absolute;
+          bottom: 5px;
+          width: 52px;
+          height: 45px;
+        }
+
+        .ed-lightbox__control--prev {
+          left: calc(50% - 64px);
+        }
+
+        .ed-lightbox__control--next {
+          right: calc(50% - 64px);
+        }
+
+        .ed-lightbox__bottom {
+          gap: 15px;
+          align-items: flex-start;
+          padding-top: 10px;
+          padding-bottom: 12px;
+        }
+
+        .ed-lightbox__caption {
+          font-size: 12px;
+          line-height: 1.65;
+        }
+
+        .ed-lightbox__count {
+          font-size: 12px;
+        }
+
+        .ed-lightbox__close {
+          font-size: 12px;
+        }
+
+        .ed-lightbox__actions {
+          gap: 10px;
+        }
+
+        .ed-lightbox__zoom,
+        .ed-lightbox__read {
+          padding: 5px 10px;
+          font-size: 12px;
+        }
+
+        .ed-lightbox__story {
+          left: 0;
+          right: 0;
+          bottom: 68px;
+          padding: 18px 18px 20px;
+        }
+
+        .ed-lightbox__story-title {
+          font-size: 19px;
+        }
+
+        .ed-lightbox__story-meta {
+          margin-bottom: 12px;
+          font-size: 11px;
+        }
+
+        .ed-lightbox__story-text {
+          font-size: 15px;
+          line-height: 1.65;
+        }
+
+        .ed-loupe {
+          width: 170px;
+          height: 170px;
+        }
+      }
+
+      @media (max-width: 575px) {
+        .ed-section__intro {
+          margin-top: 28px;
+        }
+
+        .ed-section__copy {
+          font-size: 16px;
+        }
+
+        .ed-subnav {
+          padding-bottom: 18px;
+        }
+
+        .ed-subnav__item {
+          padding: 14px 16px;
+          gap: 12px;
+        }
+
+        .ed-subnav__num {
+          min-width: 30px;
+          height: 30px;
+          font-size: 10px;
+        }
+
+        .ed-subnav__label,
+        .ed-subnav__item {
+          font-size: 14px;
+        }
+
+        .ed-building__layout {
+          display: flex;
+          flex-direction: column-reverse;
+          gap: 50px;
+        }
+
+        .ed-building__lead {
+          font-size: 15px;
+        }
+
+        .ed-building__details {
+          margin-top: 28px;
+        }
+
+        .ed-building__details > div {
+          grid-template-columns: minmax(72px, 90px) minmax(0, 1fr);
+          gap: 14px;
+        }
+
+        .ed-building__copy .ed-text-link {
+          margin-top: 18px;
+        }
+
+        .ed-building__drawing {
+          width: 100%;
+          padding-top: 25px;
+          border-top: 1px solid #ded7d0;
+        }
+
+        .ed-spaces__layout {
+          display: block;
+        }
+
+        .ed-spaces__left h2 {
+          margin-top: 14px;
+          line-height: 1.2;
+        }
+
+        .ed-spaces__photo {
+          margin-top: 28px;
+        }
+
+        .ed-spaces__photo img {
+          object-position: 50% 35%;
+        }
+
+        .ed-spaces__intro {
+          margin-top: 28px;
+          margin-bottom: 33px;
+          font-size: 15px;
+        }
+
+        .ed-spaces__list > a {
+          padding-block: 25px;
+        }
+
+        .ed-spaces__arrow {
+          top: 60px;
+        }
+
+        .ed-stay-banner__image {
+          min-height: 240px;
+        }
+
+        .ed-stay-banner__copy {
+          padding: 42px 24px 48px;
+        }
+      }
+    </style>
+  </head>
+  <body class="sacher-home policy-font-noto-serif explorederand-page">
+    <div id="preloder">
+      <div class="loader"></div>
+    </div>
+
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+      <div class="offcanvas__logo">
+        <a href="/Home"
+          ><img
+            src="img/Gemini_Generated_Image_bx7xllbx7xllbx7x.png"
+            alt="Hotel in Prishtina"
+            loading="lazy"
+            decoding="async"
+            width="756"
+            height="263"
+        /></a>
+      </div>
+      <div id="mobile-menu-wrap"></div>
+
+      <div class="offcanvas_btn_widget">
+        <a href="/Book"
+          ><span data-i18n="book-now">BOOK NOW</span>
+          <span class="arrow_right"></span
+        ></a>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="header__top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7"></div>
+            <div class="col-lg-5">
+              <div class="header__top__right"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__nav__option">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-2">
+              <div class="header__logo">
+                <a href="/Home"
+                  ><img
+                    src="img/Gemini_Generated_Image_bx7xllbx7xllbx7x.png"
+                    alt="Hotels in Pristina"
+                    loading="lazy"
+                    decoding="async"
+                    width="756"
+                    height="263"
+                /></a>
+              </div>
+            </div>
+            <div class="col-lg-10">
+              <div class="header__nav">
+                <nav class="header__menu">
+                  <ul class="menu__class">
+                    <li>
+                      <a href="/Rooms" data-i18n="nav-rooms"
+                        >ROOMS</a
+                      >
+                      <ul class="dropdown">
+                        <li>
+                          <a href="/Junior" data-i18n="nav-room-1"
+                            >JUNIOR SUITE</a
+                          >
+                        </li>
+                        <li>
+                          <a href="/Deluxe-Double" data-i18n="nav-room-2"
+                            >DELUXE DOUBLE ROOM</a
+                          >
+                        </li>
+                        <li>
+                          <a href="/Superior-Twin" data-i18n="nav-room-3"
+                            >SUPERIOR TWIN ROOM</a
+                          >
+                        </li>
+                        <li>
+                          <a href="/Premium-Double" data-i18n="nav-room-4"
+                            >PREMIUM DOUBLE ROOM</a
+                          >
+                        </li>
+                        <li>
+                          <a href="/Superior-Double" data-i18n="nav-room-5"
+                            >SUPERIOR DOUBLE ROOM</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="/Noya" data-i18n="nav-restaurant"
+                        >RESTAURANTS</a
+                      >
+                      <ul class="dropdown">
+                        <li>
+                          <a href="/Noya" data-i18n="nav-restaurant-1"
+                            >NOYA</a
+                          >
+                        </li>
+                        <li>
+                          <a href="/Omma" data-i18n="nav-restaurant-2"
+                            >OMMA-Cafe & Buffet</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a
+                        href="/ExploreDerand"
+                        data-i18n="nav-explore-derand"
+                        >EXPLORE</a
+                      >
+                    </li>
+                    <li><a href="/ConferenceHall" data-i18n="nav-event-hall">CONFERENCE HALL</a></li>
+
+                    <li>
+                      <a href="#" data-i18n="nav-activities">ACTIVITIES</a>
+                      <ul class="dropdown">
+                        <li>
+                          <a href="/Rinu" data-i18n="nav-activity-2"
+                            >RINU MEDSPA</a
+                          >
+                        </li>
+                        <li>
+                          <a href="/Derandtickets" data-i18n="nav-derand-tickets"
+                            >DERAND TICKETS</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="/Concierge">Concierge</a>
+                    </li>
+
+                    <li class="has-dropdown">
+                      <a href="/Contact" data-i18n="nav-inquiry">CONTACT</a>
+                      <ul class="dropdown">
+                        <li>
+                          <a href="/Contact" data-i18n="nav-contact-us"
+                            >CONTACT US</a
+                          >
+                        </li>
+                        <li>
+                          <a href="/Careers" data-i18n="footer-link-5"
+                            >Careers</a
+                          >
+                        </li>
+                        <li>
+                          <a href="/Faqs" data-i18n="nav-faqs">FAQS</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+
+                <div class="header__lang__selector">
+                  <button class="lang-btn lang-active" data-lang="en">
+                    EN
+                  </button>
+                  <button class="lang-btn" data-lang="de">DE</button>
+                  <button class="lang-btn" data-lang="al">AL</button>
+                </div>
+
+                <div class="header__nav__widget">
+                  <a href="/Book"
+                    ><span data-i18n="book-now">BOOK NOW</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="canvas__open"
+            aria-label="Menu"
+            role="button"
+            tabindex="0"
+          >
+            <span class="fa fa-bars"></span>
+          </div>
+          <div class="mobile__lang__selector header__lang__selector">
+            <button class="lang-btn lang-active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="de">DE</button>
+            <button class="lang-btn" data-lang="al">AL</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <h1 class="sr-only">Inside Derand | Derand Hotel Prishtina</h1>
+
+    <section class="ed-hero" aria-label="Inside Derand Prishtina">
+      <div class="ed-hero__content">
+        <div class="ed-hero__intro">
+          <p class="ed-hero__eyebrow">INSIDE DERAND · PRISHTINA</p>
+          <h2 class="ed-hero__title">
+            <span class="ed-hero__title-line">A story on</span>
+            <span class="ed-hero__title-line">every <em>floor.</em></span>
+          </h2>
+          <p class="ed-hero__copy">
+            <span class="ed-hero__copy-line"
+              >A closer look at the places, people and</span
+            >
+            <span class="ed-hero__copy-line"
+              >details that make Derand your second</span
+            >
+            <span class="ed-hero__copy-line">home.</span>
+          </p>
+          <a class="ed-hero__cta" href="#floors-galleries">
+            Step inside ↓
+            <span class="ed-hero__cta-line" aria-hidden="true"></span>
+          </a>
+        </div>
+        <p class="ed-hero__footer">
+          <span class="ed-hero__footer-rule" aria-hidden="true"></span>
+          Floors, stories &amp; spaces
+        </p>
+      </div>
+
+      <div class="ed-hero__gallery">
+        <figure class="ed-hero__main">
+          <img
+            src="img/kati2.webp"
+            alt="Hallway gallery with framed portraits at Derand Hotel"
+            width="720"
+            height="960"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+          />
+          <figcaption class="ed-hero__main-caption">
+            Culture, just outside your door.
+          </figcaption>
+        </figure>
+
+        <figure class="ed-hero__side">
+          <div class="ed-hero__side-img-wrap">
+            <img
+              src="img/kati1.webp"
+              alt="Framed artwork in a Derand Hotel corridor"
+              width="320"
+              height="420"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <figcaption class="ed-hero__side-caption">
+            A sense of place
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <nav class="ed-subnav" aria-label="Inside Derand sections">
+      <div class="ed-subnav__inner">
+        <a class="ed-subnav__item" href="#floors-galleries">
+          <span class="ed-subnav__num">01</span>
+          <span class="ed-subnav__label">Floors &amp; galleries</span>
+        </a>
+        <a class="ed-subnav__item" href="#building">
+          <span class="ed-subnav__num">02</span>
+          <span class="ed-subnav__label">The building</span>
+        </a>
+        <a class="ed-subnav__item" href="#spaces">
+          <span class="ed-subnav__num">03</span>
+          <span class="ed-subnav__label">Around the hotel</span>
+        </a>
+      </div>
+    </nav>
+
+    <section
+      id="floors-galleries"
+      class="ed-section film-section"
+      aria-labelledby="ed-section-floors-title"
+    >
+      <p class="ed-section__eyebrow" id="ed-section-floors-title">
+        01 / FLOORS &amp; GALLERIES
+      </p>
+      <div class="ed-section__intro">
+        <h2 class="ed-section__title">
+          <span class="ed-section__title-line">Seven floors.</span>
+          <span class="ed-section__title-line">A reel of stories.</span>
+        </h2>
+        <p class="ed-section__copy">
+          Move through the floors, one frame at a time. A closer look at the
+          art, culture and details along the way.
+        </p>
+      </div>
+
+      <div
+        class="film-carousel"
+        role="region"
+        aria-roledescription="carousel"
+        aria-label="Derand’s seven floors"
+      >
+        <div
+          class="film-track"
+          tabindex="0"
+          aria-label="Floor photographs. Swipe or use left and right arrow keys."
+        >
+          <article
+            class="film-frame"
+            role="group"
+            aria-roledescription="slide"
+            aria-label="Floor 14, 1 of 7"
+          >
+            <div class="film-edge" aria-hidden="true">
+              <span>DERAND • 35 MM</span><span>14 A</span>
+            </div>
+            <div
+              class="film-photo"
+              role="button"
+              tabindex="0"
+              data-photo="0"
+              aria-label="Open album for floor 14"
+            >
+              <img
+                src="img/kati14.jpeg"
+                alt="Derand corridor collection, preview for floor 14"
+                width="1152"
+                height="1536"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="film-overlay"
+                ><span>EXPLORE DERAND</span><strong>Floor 14</strong
+                ><span class="film-overlay__theme">Albanian heritage</span
+                ><span>Open the album ↗</span></span
+              >
+            </div>
+            <div class="film-edge bottom" aria-hidden="true">
+              <span>▸ 01</span><span>DERAND HOTEL</span>
+            </div>
+          </article>
+          <article
+            class="film-frame"
+            role="group"
+            aria-roledescription="slide"
+            aria-label="Floor 15, 2 of 7"
+          >
+            <div class="film-edge" aria-hidden="true">
+              <span>DERAND • 35 MM</span><span>15 A</span>
+            </div>
+            <div
+              class="film-photo"
+              role="button"
+              tabindex="0"
+              data-photo="1"
+              aria-label="Open album for floor 15"
+            >
+              <img
+                src="img/kati15.jpeg"
+                alt="Derand corridor collection, preview for floor 15"
+                width="1152"
+                height="1536"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="film-overlay"
+                ><span>EXPLORE DERAND</span><strong>Floor 15</strong
+                ><span class="film-overlay__theme">Stage &amp; screen</span
+                ><span>Open the album ↗</span></span
+              >
+            </div>
+            <div class="film-edge bottom" aria-hidden="true">
+              <span>▸ 02</span><span>DERAND HOTEL</span>
+            </div>
+          </article>
+          <article
+            class="film-frame"
+            role="group"
+            aria-roledescription="slide"
+            aria-label="Floor 16, 3 of 7"
+          >
+            <div class="film-edge" aria-hidden="true">
+              <span>DERAND • 35 MM</span><span>16 A</span>
+            </div>
+            <div
+              class="film-photo"
+              role="button"
+              tabindex="0"
+              data-photo="2"
+              aria-label="Open album for floor 16"
+            >
+              <img
+                src="img/kati16.jpeg"
+                alt="Derand corridor collection, preview for floor 16"
+                width="1152"
+                height="1536"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="film-overlay"
+                ><span>EXPLORE DERAND</span><strong>Floor 16</strong
+                ><span class="film-overlay__theme">Hall of fame</span
+                ><span>Open the album ↗</span></span
+              >
+            </div>
+            <div class="film-edge bottom" aria-hidden="true">
+              <span>▸ 03</span><span>DERAND HOTEL</span>
+            </div>
+          </article>
+          <article
+            class="film-frame"
+            role="group"
+            aria-roledescription="slide"
+            aria-label="Floor 17, 4 of 7"
+          >
+            <div class="film-edge" aria-hidden="true">
+              <span>DERAND • 35 MM</span><span>17 A</span>
+            </div>
+            <div
+              class="film-photo"
+              role="button"
+              tabindex="0"
+              data-photo="3"
+              aria-label="Open album for floor 17"
+            >
+              <img
+                src="img/kati17.jpeg"
+                alt="Derand corridor collection, preview for floor 17"
+                width="1152"
+                height="1536"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="film-overlay"
+                ><span>EXPLORE DERAND</span><strong>Floor 17</strong
+                ><span class="film-overlay__theme">Kosovo’s independence</span
+                ><span>Open the album ↗</span></span
+              >
+            </div>
+            <div class="film-edge bottom" aria-hidden="true">
+              <span>▸ 04</span><span>DERAND HOTEL</span>
+            </div>
+          </article>
+          <article
+            class="film-frame"
+            role="group"
+            aria-roledescription="slide"
+            aria-label="Floor 18, 5 of 7"
+          >
+            <div class="film-edge" aria-hidden="true">
+              <span>DERAND • 35 MM</span><span>18 A</span>
+            </div>
+            <div
+              class="film-photo"
+              role="button"
+              tabindex="0"
+              data-photo="4"
+              aria-label="Open album for floor 18"
+            >
+              <img
+                src="img/kati18.jpeg"
+                alt="Derand corridor collection, preview for floor 18"
+                width="1152"
+                height="1536"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="film-overlay"
+                ><span>EXPLORE DERAND</span><strong>Floor 18</strong
+                ><span class="film-overlay__theme">Monuments of Kosovo</span
+                ><span>Open the album ↗</span></span
+              >
+            </div>
+            <div class="film-edge bottom" aria-hidden="true">
+              <span>▸ 05</span><span>DERAND HOTEL</span>
+            </div>
+          </article>
+          <article
+            class="film-frame"
+            role="group"
+            aria-roledescription="slide"
+            aria-label="Floor 19, 6 of 7"
+          >
+            <div class="film-edge" aria-hidden="true">
+              <span>DERAND • 35 MM</span><span>19 A</span>
+            </div>
+            <div
+              class="film-photo"
+              role="button"
+              tabindex="0"
+              data-photo="5"
+              aria-label="Open album for floor 19"
+            >
+              <img
+                src="img/kati19.jpeg"
+                alt="Derand corridor collection, preview for floor 19"
+                width="1152"
+                height="1536"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="film-overlay"
+                ><span>EXPLORE DERAND</span><strong>Floor 19</strong
+                ><span class="film-overlay__theme">Kosovo outdoors</span
+                ><span>Open the album ↗</span></span
+              >
+            </div>
+            <div class="film-edge bottom" aria-hidden="true">
+              <span>▸ 06</span><span>DERAND HOTEL</span>
+            </div>
+          </article>
+          <article
+            class="film-frame"
+            role="group"
+            aria-roledescription="slide"
+            aria-label="Floor 20, 7 of 7"
+          >
+            <div class="film-edge" aria-hidden="true">
+              <span>DERAND • 35 MM</span><span>20 A</span>
+            </div>
+            <div
+              class="film-photo"
+              role="button"
+              tabindex="0"
+              data-photo="6"
+              aria-label="Open album for floor 20"
+            >
+              <img
+                src="img/kati20.jpeg"
+                alt="Derand corridor collection, preview for floor 20"
+                width="1152"
+                height="1536"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="film-overlay"
+                ><span>EXPLORE DERAND</span><strong>Floor 20</strong
+                ><span class="film-overlay__theme">Prishtina nightlife</span
+                ><span>Open the album ↗</span></span
+              >
+            </div>
+            <div class="film-edge bottom" aria-hidden="true">
+              <span>▸ 07</span><span>DERAND HOTEL</span>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="film-controls wrap">
+        <div class="floor-select" aria-label="Choose a floor">
+          <button
+            type="button"
+            data-floor-index="0"
+            aria-label="Go to floor 14"
+            aria-pressed="true"
+          >
+            14
+          </button>
+          <button
+            type="button"
+            data-floor-index="1"
+            aria-label="Go to floor 15"
+            aria-pressed="false"
+          >
+            15
+          </button>
+          <button
+            type="button"
+            data-floor-index="2"
+            aria-label="Go to floor 16"
+            aria-pressed="false"
+          >
+            16
+          </button>
+          <button
+            type="button"
+            data-floor-index="3"
+            aria-label="Go to floor 17"
+            aria-pressed="false"
+          >
+            17
+          </button>
+          <button
+            type="button"
+            data-floor-index="4"
+            aria-label="Go to floor 18"
+            aria-pressed="false"
+          >
+            18
+          </button>
+          <button
+            type="button"
+            data-floor-index="5"
+            aria-label="Go to floor 19"
+            aria-pressed="false"
+          >
+            19
+          </button>
+          <button
+            type="button"
+            data-floor-index="6"
+            aria-label="Go to floor 20"
+            aria-pressed="false"
+          >
+            20
+          </button>
+        </div>
+        <div class="film-paging">
+          <span class="film-status" aria-live="polite">01 / 07</span>
+          <button class="film-prev" type="button" aria-label="Previous floor">
+            ←
+          </button>
+          <button class="film-next" type="button" aria-label="Next floor">
+            →
+          </button>
+        </div>
+      </div>
+
+      <div class="film-footer wrap">
+        <p>Photo placement by floor is a preview, pending confirmation.</p>
+        <button class="ed-text-link" type="button" data-photo="0">
+          View all 10 photographs <span aria-hidden="true">↗</span>
+        </button>
+      </div>
+    </section>
+
+    <section
+      id="building"
+      class="ed-section ed-building"
+      aria-labelledby="ed-building-heading"
+    >
+      <div class="wrap ed-building__layout">
+        <div class="ed-building__drawing">
+          <img
+            src="img/arkitektura.webp"
+            alt="Architectural elevation drawing of Derand Hotel"
+            width="608"
+            height="1304"
+            loading="lazy"
+            decoding="async"
+          />
+          <span class="ed-building__caption">Derand Hotel / Prishtina</span>
+        </div>
+        <div class="ed-building__copy">
+          <p class="ed-section__eyebrow">02 / THE BUILDING</p>
+          <h2 id="ed-building-heading">
+            One address.<br />
+            Many ways to<br />
+            <em>feel at home.</em>
+          </h2>
+          <p class="ed-building__lead">
+            From the welcome downstairs to the view beyond your window, Derand
+            brings the different moments of a city stay together.
+          </p>
+          <div class="ed-building__details">
+            <div>
+              <span>Stay</span>
+              <p>A quiet place to make your own.</p>
+            </div>
+            <div>
+              <span>Discover</span>
+              <p>Culture woven into the journey.</p>
+            </div>
+            <div>
+              <span>Connect</span>
+              <p>Spaces for a coffee, a conversation or a shared table.</p>
+            </div>
+          </div>
+          <a class="ed-text-link" href="#spaces">
+            Find your next stop <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="spaces"
+      class="ed-section ed-spaces wrap"
+      aria-labelledby="ed-spaces-heading"
+    >
+      <div class="ed-spaces__layout">
+        <div class="ed-spaces__left">
+          <p class="ed-section__eyebrow">03 / AROUND THE HOTEL</p>
+          <h2 id="ed-spaces-heading">Make a day of it.</h2>
+          <figure class="ed-spaces__photo">
+            <img
+              src="img/reception2.webp"
+              alt="The Derand reception team welcoming guests"
+              width="1200"
+              height="1800"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>Your stay begins with a warm welcome.</figcaption>
+          </figure>
+        </div>
+        <div class="ed-spaces__right">
+          <p class="ed-spaces__intro">
+            A good stay has its own rhythm. Settle in, explore the building,
+            then find a place to enjoy the moment.
+          </p>
+          <div class="ed-spaces__list">
+            <a href="/Rooms">
+              <span class="ed-spaces__list-eyebrow">Rooms &amp; suites</span>
+              <h3>A room with a view.</h3>
+              <p>Your own space to rest above the city.</p>
+              <span class="ed-spaces__arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href="/Noya">
+              <span class="ed-spaces__list-eyebrow">Restaurant &amp; bar</span>
+              <h3>Meet at NOYA.</h3>
+              <p>A table, a drink and time well spent.</p>
+              <span class="ed-spaces__arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href="/Omma">
+              <span class="ed-spaces__list-eyebrow">Café &amp; buffet</span>
+              <h3>A moment at OMMA.</h3>
+              <p>Make room for a coffee and a slower start.</p>
+              <span class="ed-spaces__arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href="/Rinu">
+              <span class="ed-spaces__list-eyebrow">RINU MedSpa</span>
+              <h3>Time for yourself.</h3>
+              <p>Explore the hotel’s wellness experience.</p>
+              <span class="ed-spaces__arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ed-stay-banner" aria-labelledby="ed-stay-heading">
+      <div class="ed-stay-banner__image">
+        <img
+          src="img/view1.webp"
+          alt="The evening view across Prishtina from a Derand guest room"
+          width="720"
+          height="1080"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <div class="ed-stay-banner__copy">
+        <p class="ed-stay-banner__eyebrow">Your second home</p>
+        <h2 id="ed-stay-heading">
+          Come for the stay.<br />
+          Leave with a story.
+        </h2>
+        <a class="ed-stay-banner__book" href="/Book">Find your room</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__brandbar">
+          <a href="/Home" class="footer__brandbar__logo">
+            <img
+              src="img/Gemini_Generated_Image_bx7xllbx7xllbx7x.png"
+              alt="best hotel in pristina"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <span class="footer__brandbar__divider"></span>
+          <a href="/Home" class="footer__brandbar__partner">
+            <span data-i18n="footer-powered">Powered by</span>
+            <img
+              src="img/logo/logo-1.webp"
+              alt="Best hotels in Prishtina"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+        </div>
+
+        <div class="footer__contactbar">
+          <a
+            href="https://wa.me/38343727272"
+            class="footer__contactbar__item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-phone"></i>
+            <span>+383 43 727 272</span>
+          </a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=info@derandhotel.com"
+            class="footer__contactbar__item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-envelope-o"></i>
+            <span>info@derandhotel.com</span>
+          </a>
+          <a
+            href="https://www.google.com/maps/place/Derand+Hotel/@42.655716,21.1505223,200m/data=!3m2!1e3!4b1!4m9!3m8!1s0x13549f6c2e02e469:0xc02b72e6fc22c09b!5m2!4m1!1i2!8m2!3d42.655715!4d21.151166!16s%2Fg%2F11vcm48zlk?entry=ttu&g_ep=EgoyMDI2MDMwOC4wIKXMDSoASAFQAw%3D%3D"
+            class="footer__contactbar__item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-map-marker"></i>
+            <span data-i18n="index-footer-address"
+              >Bekim Fehmiu Str. 30 Pristina 10000 Kosovo</span
+            >
+          </a>
+        </div>
+
+        <div class="footer__content">
+          <div class="row">
+            <div class="col-12 col-lg-5">
+              <div class="footer__newslatter">
+                <h4 data-i18n="newsletter-title">Become part of our world</h4>
+                <p data-i18n="newsletter-copy">
+                  Receive curated stories, seasonal offers, and private
+                  invitations.
+                </p>
+                <form
+                  class="footer__newslatter__form"
+                  action="https://api.web3forms.com/submit"
+                  method="POST"
+                  data-contact-email="info@derandhotel.com"
+                >
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="761d8dce-87b2-4534-bc76-77ec2305d4ec"
+                  />
+                  <input
+                    type="hidden"
+                    name="from_name"
+                    value="Derand Hotel Website (Footer)"
+                  />
+                  <div class="footer__newslatter__group">
+                    <input
+                      type="text"
+                      name="firstName"
+                      placeholder="FIRST NAME"
+                      data-i18n-placeholder="newsletter-first-name"
+                      autocomplete="given-name"
+                    />
+                    <input
+                      type="text"
+                      name="lastName"
+                      placeholder="LAST NAME"
+                      data-i18n-placeholder="newsletter-last-name"
+                      autocomplete="family-name"
+                    />
+                  </div>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="EMAIL ADDRESS"
+                    data-i18n-placeholder="newsletter-email"
+                    autocomplete="email"
+                  />
+                  <label class="footer__newslatter__check">
+                    <input type="checkbox" name="consent" />
+                    <span data-i18n="newsletter-agree"
+                      >I agree to the terms and privacy policy.</span
+                    >
+                  </label>
+                  <button type="submit" data-i18n="newsletter-button">
+                    SIGN ME UP
+                  </button>
+                  <p
+                    class="footer__newslatter__status"
+                    role="status"
+                    aria-live="polite"
+                  ></p>
+                </form>
+              </div>
+            </div>
+            <div class="col-12 col-lg-7">
+              <div class="footer__widget">
+                <div class="footer__links__grid">
+                  <ul>
+                    <li>
+                      <a href="/Contact" data-i18n="footer-link-1"
+                        >Contact Us
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/Our-Location" data-i18n="footer-link-2"
+                        >Derand History</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/Termsofservices" data-i18n="footer-link-3"
+                        >Terms of Service</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/Guestapp" data-i18n="footer-link-4"
+                        >Derand Magazine</a
+                      >
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <a href="/Careers" data-i18n="footer-link-5"
+                        >Careers</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/Faqs" data-i18n="footer-link-6">FAQs</a>
+                    </li>
+                    <li>
+                      <a href="/Privacypolicy" data-i18n="footer-link-7"
+                        >Privacy Policy</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/Termsofservices" data-i18n="footer-link-8"
+                        >Payments</a
+                      >
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <a href="/Guestapp" data-i18n="footer-link-9"
+                        >Guest App
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/Our-Location" data-i18n="footer-link-11"
+                        >Our Location</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__social footer__social--bottom">
+          <a
+            href="https://www.facebook.com/derandhotel"
+            aria-label="Facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-facebook"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/derandhotel_prishtina/"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/100894439/admin/dashboard/"
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-linkedin"></i
+          ></a>
+          <a
+            href="https://www.youtube.com/watch?v=cyq_5a9X3wA"
+            aria-label="YouTube"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-youtube-play"></i
+          ></a>
+          <a
+            href="https://www.tiktok.com/@derandhotel"
+            aria-label="TikTok"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-music"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <dialog class="ed-lightbox" aria-labelledby="ed-lightbox-title">
+      <div class="ed-lightbox__top">
+        <h2 id="ed-lightbox-title">Floors &amp; galleries</h2>
+        <div class="ed-lightbox__actions">
+          <button
+            class="ed-lightbox__zoom"
+            type="button"
+            aria-pressed="false"
+            aria-label="Magnifier: zoom into the photograph"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <circle cx="11" cy="11" r="7" />
+              <path d="M16.5 16.5 21 21" />
+              <path d="M11 8v6M8 11h6" />
+            </svg>
+            <span>Zoom</span>
+          </button>
+          <button
+            class="ed-lightbox__read"
+            type="button"
+            aria-pressed="false"
+            aria-controls="ed-lightbox-story"
+            aria-label="Show the text of this artwork"
+            hidden
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <path d="M4 6h16M4 11h16M4 16h10" />
+            </svg>
+            <span>Read</span>
+          </button>
+          <button
+            class="ed-lightbox__close"
+            type="button"
+            aria-label="Close gallery"
+          >
+            Close <span aria-hidden="true">×</span>
+          </button>
+        </div>
+      </div>
+      <div class="ed-lightbox__stage">
+        <button
+          class="ed-lightbox__control ed-lightbox__control--prev"
+          type="button"
+          aria-label="Previous photograph"
+        >
+          ←
+        </button>
+        <div class="ed-lightbox__viewport" data-lightbox-viewport>
+          <div class="ed-lightbox__track" data-lightbox-track></div>
+          <div class="ed-loupe" aria-hidden="true"></div>
+          <p class="ed-lightbox__hint" aria-live="polite"></p>
+        </div>
+        <button
+          class="ed-lightbox__control ed-lightbox__control--next"
+          type="button"
+          aria-label="Next photograph"
+        >
+          →
+        </button>
+        <aside
+          class="ed-lightbox__story"
+          id="ed-lightbox-story"
+          aria-label="About this artwork"
+          hidden
+        >
+          <div class="ed-lightbox__story-inner">
+            <h3 class="ed-lightbox__story-title"></h3>
+            <p class="ed-lightbox__story-meta"></p>
+            <p class="ed-lightbox__story-text"></p>
+          </div>
+        </aside>
+      </div>
+      <div class="ed-lightbox__bottom">
+        <p class="ed-lightbox__caption" aria-live="polite"></p>
+        <span class="ed-lightbox__count"></span>
+      </div>
+    </dialog>
+
+    <script>
+      (function () {
+        var filmTrack = document.querySelector(".film-track");
+        if (!filmTrack) return;
+
+        var filmFrames = Array.prototype.slice.call(
+          document.querySelectorAll(".film-frame"),
+        );
+        var floorButtons = Array.prototype.slice.call(
+          document.querySelectorAll("[data-floor-index]"),
+        );
+        var filmIndex = 0;
+        var reducedMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        );
+        var autoPlayDelay = 4000;
+        var autoPlayScrollMs = 900;
+        var driftFrame = null;
+        var isMobileViewport = window.matchMedia("(max-width: 991px)");
+        // Seconds for one floor to drift past (time-based, so refresh rate and screen scaling don't change it).
+        var driftSecondsPerFloor = 19.9;
+        var mobileDriftSpeed = 0.65;
+        var driftPos = 0;
+        var driftLastTime = null;
+        var driftPitch = 0;
+        var sectionVisibleRatio = isMobileViewport.matches ? 0.08 : 0.25;
+        var scrollAnimFrame = null;
+        var userPausedAuto = false;
+        var sectionVisible = false;
+        var resumeTimer = null;
+        var filmSection = document.getElementById("floors-galleries");
+
+        function getScrollY() {
+          return filmTrack.scrollLeft;
+        }
+
+        function setScrollLeft(y) {
+          filmTrack.scrollLeft = y;
+        }
+
+        function easeInOutCubic(t) {
+          return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        }
+
+        function animateScrollLeft(targetLeft, duration, done) {
+          if (scrollAnimFrame) {
+            cancelAnimationFrame(scrollAnimFrame);
+            scrollAnimFrame = null;
+          }
+
+          if (reducedMotion.matches || duration <= 0) {
+            setScrollLeft(targetLeft);
+            if (done) done();
+            return;
+          }
+
+          var startLeft = getScrollY();
+          var distance = targetLeft - startLeft;
+          var startTime = null;
+
+          filmTrack.classList.add("is-scrolling");
+
+          function step(timestamp) {
+            if (startTime === null) startTime = timestamp;
+            var progress = Math.min((timestamp - startTime) / duration, 1);
+            setScrollLeft(startLeft + distance * easeInOutCubic(progress));
+
+            if (progress < 1) {
+              scrollAnimFrame = requestAnimationFrame(step);
+            } else {
+              scrollAnimFrame = null;
+              filmTrack.classList.remove("is-scrolling");
+              if (done) done();
+            }
+          }
+
+          scrollAnimFrame = requestAnimationFrame(step);
+        }
+
+        function restartPhotoPan(frame) {
+          if (!frame || reducedMotion.matches) return;
+          var img = frame.querySelector(".film-photo img");
+          if (!img) return;
+          img.style.animation = "none";
+          void img.offsetWidth;
+          img.style.animation = "";
+        }
+
+        function setActiveFrame(index) {
+          filmFrames.forEach(function (frame, i) {
+            var isActive = i === index;
+            if (isActive && !frame.classList.contains("is-active")) {
+              frame.classList.add("is-active");
+              restartPhotoPan(frame);
+            } else if (!isActive) {
+              frame.classList.remove("is-active");
+            }
+          });
+        }
+
+        function stopDrift() {
+          if (driftFrame) {
+            cancelAnimationFrame(driftFrame);
+            driftFrame = null;
+          }
+          filmTrack.classList.remove("is-drifting");
+        }
+
+        function startDrift() {
+          stopDrift();
+          if (
+            reducedMotion.matches ||
+            userPausedAuto ||
+            !sectionVisible ||
+            filmDrag ||
+            scrollAnimFrame
+          ) {
+            return;
+          }
+
+          filmTrack.classList.add("is-drifting");
+          driftPos = filmTrack.scrollLeft;
+          driftLastTime = null;
+          driftPitch =
+            filmFrames.length > 1
+              ? filmFrames[1].offsetLeft - filmFrames[0].offsetLeft
+              : filmTrack.clientWidth;
+
+          function tick(now) {
+            if (
+              userPausedAuto ||
+              !sectionVisible ||
+              filmDrag ||
+              scrollAnimFrame
+            ) {
+              stopDrift();
+              return;
+            }
+
+            var maxScroll = filmTrack.scrollWidth - filmTrack.clientWidth;
+            var elapsed =
+              driftLastTime === null ? 0 : Math.min(now - driftLastTime, 100);
+            driftLastTime = now;
+
+            if (maxScroll <= 0) {
+              driftFrame = requestAnimationFrame(tick);
+              return;
+            }
+
+            if (isMobileViewport.matches) {
+              var nextLeft = filmTrack.scrollLeft + mobileDriftSpeed;
+              filmTrack.scrollLeft = nextLeft >= maxScroll ? 0 : nextLeft;
+              driftPos = filmTrack.scrollLeft;
+              driftFrame = requestAnimationFrame(tick);
+              return;
+            }
+
+            if (Math.abs(filmTrack.scrollLeft - driftPos) > 2) {
+              driftPos = filmTrack.scrollLeft;
+            }
+            driftPos += (driftPitch / driftSecondsPerFloor) * (elapsed / 1000);
+
+            if (driftPos >= maxScroll) {
+              driftPos = 0;
+            }
+            filmTrack.scrollLeft = driftPos;
+
+            driftFrame = requestAnimationFrame(tick);
+          }
+
+          driftFrame = requestAnimationFrame(tick);
+        }
+
+        function clearResumeTimer() {
+          if (resumeTimer) {
+            clearTimeout(resumeTimer);
+            resumeTimer = null;
+          }
+        }
+
+        function pauseAutoPlay() {
+          userPausedAuto = true;
+          stopDrift();
+          clearResumeTimer();
+          filmTrack.classList.add("is-paused");
+        }
+
+        function resumeAutoPlay(delay) {
+          clearResumeTimer();
+          resumeTimer = window.setTimeout(
+            function () {
+              userPausedAuto = false;
+              filmTrack.classList.remove("is-paused");
+              if (sectionVisible) {
+                startDrift();
+              }
+            },
+            typeof delay === "number" ? delay : 0,
+          );
+        }
+
+        function getFrameScrollLeft(frame) {
+          return (
+            filmTrack.scrollLeft +
+            frame.getBoundingClientRect().left -
+            filmTrack.getBoundingClientRect().left -
+            (filmTrack.clientWidth - frame.clientWidth) / 2
+          );
+        }
+
+        function goToFloor(index, options) {
+          options = options || {};
+          stopDrift();
+
+          var next = (index + filmFrames.length) % filmFrames.length;
+          var frame = filmFrames[next];
+          var targetLeft = getFrameScrollLeft(frame);
+          var duration = reducedMotion.matches ? 0 : autoPlayScrollMs;
+
+          animateScrollLeft(targetLeft, duration, function () {
+            filmIndex = next;
+            setActiveFrame(next);
+            if (!options.manual && sectionVisible && !userPausedAuto) {
+              startDrift();
+            }
+          });
+        }
+
+        floorButtons.forEach(function (button, index) {
+          button.addEventListener("click", function () {
+            pauseAutoPlay();
+            goToFloor(index, { manual: true });
+            resumeAutoPlay(autoPlayDelay);
+          });
+        });
+
+        var prevBtn = document.querySelector(".film-prev");
+        var nextBtn = document.querySelector(".film-next");
+        if (prevBtn) {
+          prevBtn.addEventListener("click", function () {
+            pauseAutoPlay();
+            goToFloor(filmIndex - 1, { manual: true });
+            resumeAutoPlay(autoPlayDelay);
+          });
+        }
+        if (nextBtn) {
+          nextBtn.addEventListener("click", function () {
+            pauseAutoPlay();
+            goToFloor(filmIndex + 1, { manual: true });
+            resumeAutoPlay(autoPlayDelay);
+          });
+        }
+
+        filmTrack.addEventListener("keydown", function (event) {
+          if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
+            event.preventDefault();
+            pauseAutoPlay();
+            goToFloor(filmIndex + (event.key === "ArrowRight" ? 1 : -1), {
+              manual: true,
+            });
+            resumeAutoPlay(autoPlayDelay);
+          }
+          if (event.key === "Home") {
+            event.preventDefault();
+            pauseAutoPlay();
+            goToFloor(0, { manual: true });
+            resumeAutoPlay(autoPlayDelay);
+          }
+          if (event.key === "End") {
+            event.preventDefault();
+            pauseAutoPlay();
+            goToFloor(6, { manual: true });
+            resumeAutoPlay(autoPlayDelay);
+          }
+        });
+
+        var filmTick = false;
+        filmTrack.addEventListener(
+          "scroll",
+          function () {
+            if (filmTick) return;
+            filmTick = true;
+            requestAnimationFrame(function () {
+              var bounds = filmTrack.getBoundingClientRect();
+              var center = bounds.left + bounds.width / 2;
+              var nearest = 0;
+              var distance = Infinity;
+              filmFrames.forEach(function (frame, i) {
+                var rect = frame.getBoundingClientRect();
+                var d = Math.abs(rect.left + rect.width / 2 - center);
+                if (d < distance) {
+                  nearest = i;
+                  distance = d;
+                }
+              });
+              filmIndex = nearest;
+              if (
+                !filmTrack.classList.contains("is-scrolling") &&
+                !filmTrack.classList.contains("dragging") &&
+                !filmTrack.classList.contains("is-drifting")
+              ) {
+                setActiveFrame(nearest);
+              }
+              floorButtons.forEach(function (button, i) {
+                button.setAttribute("aria-pressed", String(i === nearest));
+              });
+              var status = document.querySelector(".film-status");
+              if (status) {
+                status.textContent =
+                  String(nearest + 1).padStart(2, "0") + " / 07";
+              }
+              filmTick = false;
+            });
+          },
+          { passive: true },
+        );
+
+        var filmDrag = null;
+        var dragged = false;
+        var suppressPhotoClick = false;
+        var dragThreshold = 5;
+
+        function getDragClientX(event) {
+          if (event.touches && event.touches.length) {
+            return event.touches[0].clientX;
+          }
+          if (event.changedTouches && event.changedTouches.length) {
+            return event.changedTouches[0].clientX;
+          }
+          return event.clientX;
+        }
+
+        function isPrimaryDragPointer(event) {
+          if (event.pointerType) {
+            return event.pointerType !== "mouse" || event.button === 0;
+          }
+          if (event.type === "mousedown") {
+            return event.button === 0;
+          }
+          return true;
+        }
+
+        function startFilmDrag(event) {
+          if (!isPrimaryDragPointer(event)) return;
+          if (!event.target.closest(".film-frame")) return;
+
+          pauseAutoPlay();
+          if (scrollAnimFrame) {
+            cancelAnimationFrame(scrollAnimFrame);
+            scrollAnimFrame = null;
+            filmTrack.classList.remove("is-scrolling");
+          }
+          stopDrift();
+
+          filmDrag = {
+            x: getDragClientX(event),
+            left: filmTrack.scrollLeft,
+            pointerId:
+              typeof event.pointerId === "number" ? event.pointerId : null,
+          };
+          dragged = false;
+          filmTrack.classList.add("dragging");
+        }
+
+        function moveFilmDrag(event) {
+          if (!filmDrag) return;
+          if (
+            filmDrag.pointerId !== null &&
+            typeof event.pointerId === "number" &&
+            event.pointerId !== filmDrag.pointerId
+          ) {
+            return;
+          }
+
+          var delta = getDragClientX(event) - filmDrag.x;
+          if (!dragged && Math.abs(delta) > dragThreshold) {
+            dragged = true;
+            if (
+              filmDrag.pointerId !== null &&
+              typeof filmTrack.setPointerCapture === "function"
+            ) {
+              try {
+                filmTrack.setPointerCapture(filmDrag.pointerId);
+              } catch (error) {}
+            }
+          }
+
+          if (dragged) {
+            event.preventDefault();
+            filmTrack.scrollLeft = filmDrag.left - delta;
+          }
+        }
+
+        function endFilmDrag(event) {
+          if (!filmDrag) return;
+          if (
+            event &&
+            filmDrag.pointerId !== null &&
+            typeof event.pointerId === "number" &&
+            event.pointerId !== filmDrag.pointerId
+          ) {
+            return;
+          }
+
+          if (
+            filmDrag.pointerId !== null &&
+            typeof filmTrack.releasePointerCapture === "function"
+          ) {
+            try {
+              filmTrack.releasePointerCapture(filmDrag.pointerId);
+            } catch (error) {}
+          }
+
+          filmTrack.classList.remove("dragging");
+
+          var wasDragged = dragged;
+
+          if (wasDragged) {
+            suppressPhotoClick = true;
+            goToFloor(filmIndex, { manual: true });
+          } else if (event && event.target) {
+            var photo = event.target.closest(".film-photo");
+            if (photo && photo.hasAttribute("data-photo")) {
+              photo.dispatchEvent(
+                new CustomEvent("ed-open-gallery", { bubbles: true }),
+              );
+            }
+          }
+
+          filmDrag = null;
+          dragged = false;
+          resumeAutoPlay(autoPlayDelay);
+        }
+
+        if (filmSection && "IntersectionObserver" in window) {
+          var sectionObserver = new IntersectionObserver(
+            function (entries) {
+              var entry = entries[0];
+              sectionVisible =
+                entry.isIntersecting &&
+                entry.intersectionRatio >= sectionVisibleRatio;
+
+              if (sectionVisible && !userPausedAuto) {
+                startDrift();
+              } else {
+                stopDrift();
+              }
+            },
+            { threshold: [0, 0.08, 0.25, 0.5, 0.75] },
+          );
+          sectionObserver.observe(filmSection);
+        } else if (filmSection) {
+          sectionVisible = true;
+        }
+
+        var filmCarousel = document.querySelector(".film-carousel");
+        if (filmCarousel) {
+          filmCarousel.addEventListener("focusin", pauseAutoPlay);
+          filmCarousel.addEventListener("focusout", function (event) {
+            if (!filmCarousel.contains(event.relatedTarget)) {
+              resumeAutoPlay();
+            }
+          });
+        }
+
+        document.addEventListener("visibilitychange", function () {
+          if (document.hidden) {
+            stopDrift();
+          } else if (sectionVisible && !userPausedAuto) {
+            startDrift();
+          }
+        });
+
+        reducedMotion.addEventListener("change", function () {
+          if (reducedMotion.matches) {
+            pauseAutoPlay();
+          } else if (sectionVisible) {
+            resumeAutoPlay(0);
+          }
+        });
+
+        if (window.PointerEvent) {
+          filmTrack.addEventListener("pointerdown", startFilmDrag);
+          filmTrack.addEventListener("pointermove", moveFilmDrag, {
+            passive: false,
+          });
+          filmTrack.addEventListener("pointerup", endFilmDrag);
+          filmTrack.addEventListener("pointercancel", endFilmDrag);
+        } else {
+          filmTrack.addEventListener("mousedown", startFilmDrag);
+          document.addEventListener("mousemove", moveFilmDrag);
+          document.addEventListener("mouseup", endFilmDrag);
+          filmTrack.addEventListener("touchstart", startFilmDrag, {
+            passive: true,
+          });
+          filmTrack.addEventListener("touchmove", moveFilmDrag, {
+            passive: false,
+          });
+          filmTrack.addEventListener("touchend", endFilmDrag);
+          filmTrack.addEventListener("touchcancel", endFilmDrag);
+        }
+
+        function maybeRestartDrift() {
+          if (
+            sectionVisible &&
+            !userPausedAuto &&
+            !filmDrag &&
+            !scrollAnimFrame
+          ) {
+            startDrift();
+          }
+        }
+
+        filmTrack.querySelectorAll("img").forEach(function (img) {
+          if (img.complete) return;
+          img.addEventListener("load", maybeRestartDrift, { once: true });
+        });
+
+        isMobileViewport.addEventListener("change", function () {
+          sectionVisibleRatio = isMobileViewport.matches ? 0.08 : 0.25;
+        });
+        filmTrack.addEventListener("dragstart", function (event) {
+          event.preventDefault();
+        });
+        filmTrack.addEventListener(
+          "click",
+          function (event) {
+            if (suppressPhotoClick) {
+              event.preventDefault();
+              event.stopImmediatePropagation();
+              suppressPhotoClick = false;
+              return;
+            }
+            if (event.target.closest(".film-photo")) {
+              event.preventDefault();
+              event.stopImmediatePropagation();
+            }
+          },
+          true,
+        );
+
+        document.querySelectorAll(".film-photo").forEach(function (photo) {
+          photo.addEventListener("keydown", function (event) {
+            if (event.key !== "Enter" && event.key !== " ") return;
+            event.preventDefault();
+            photo.dispatchEvent(
+              new CustomEvent("ed-open-gallery", { bubbles: true }),
+            );
+          });
+        });
+
+        filmTrack.scrollLeft = getFrameScrollLeft(filmFrames[0]);
+        filmIndex = 0;
+        setActiveFrame(0);
+        floorButtons.forEach(function (button, i) {
+          button.setAttribute("aria-pressed", String(i === 0));
+        });
+        var statusEl = document.querySelector(".film-status");
+        if (statusEl) {
+          statusEl.textContent = "01 / 07";
+        }
+
+        if (filmSection && !("IntersectionObserver" in window)) {
+          startDrift();
+        }
+      })();
+    </script>
+
+    <script>
+      (function () {
+        var floorNumbers = [14, 15, 16, 17, 18, 19, 20];
+
+        var defaultPhotos = [
+          {
+            src: "img/kati1-gallery.webp",
+            focus: "42% 38%",
+            caption:
+              "The portrait collection · Cultural stories along the guest corridors.",
+          },
+          {
+            src: "img/kati1-gallery.webp",
+            focus: "48% 44%",
+            caption:
+              "The portrait collection · Music, performance and cultural memory.",
+          },
+          {
+            src: "img/kati1-gallery.webp",
+            focus: "54% 50%",
+            caption:
+              "The portrait collection · A different perspective along the corridor.",
+          },
+          {
+            src: "img/kati1-gallery.webp",
+            focus: "60% 46%",
+            caption:
+              "The portrait collection · Faces and stories from the stage and screen.",
+          },
+          {
+            src: "img/kati1-gallery.webp",
+            focus: "38% 52%",
+            caption:
+              "The portrait collection · A moment with the people behind the stories.",
+          },
+          {
+            src: "img/kati1-gallery.webp",
+            focus: "46% 58%",
+            caption: "The portrait collection · Framed memories, softly lit.",
+          },
+          {
+            src: "img/kati1-gallery.webp",
+            focus: "52% 42%",
+            caption:
+              "The portrait collection · A life in cinema, told in photographs.",
+          },
+          {
+            src: "img/kati1-gallery.webp",
+            focus: "58% 54%",
+            caption: "Architecture & heritage · The traditional kulla.",
+          },
+          {
+            src: "img/kati1-gallery.webp",
+            focus: "44% 48%",
+            caption:
+              "The portrait collection · Art and culture woven into every floor.",
+          },
+          {
+            src: "img/kati1-gallery.webp",
+            focus: "50% 56%",
+            caption:
+              "The portrait collection · A closer look at Derand’s corridor galleries.",
+          },
+        ];
+
+        var floor14Photos = [
+          {
+            src: "img/floor14-01-teuta.jpg?v=20261005b",
+            focus: "50% 38%",
+            caption: "Floor 14 · Teuta",
+          },
+          {
+            src: "img/floor14-02-gjergj-kastrioti-skanderbeg.jpg?v=20261005b",
+            focus: "50% 40%",
+            caption: "Floor 14 · Gjergj Kastrioti Skanderbeg",
+          },
+          {
+            src: "img/floor14-03-gjon-buzuku.jpg?v=20261005b",
+            focus: "50% 42%",
+            caption: "Floor 14 · Gjon Buzuku",
+          },
+          {
+            src: "img/floor14-04-karl-gega.jpg?v=20261005b",
+            focus: "50% 38%",
+            caption: "Floor 14 · Karl Gega",
+          },
+          {
+            src: "img/floor14-05-elena-gjika-dora-distria.jpg?v=20261005b",
+            focus: "50% 40%",
+            caption: "Floor 14 · Elena Gjika (Dora d’Istria)",
+          },
+          {
+            src: "img/floor14-06-ismail-qemali.jpg?v=20261005b",
+            focus: "50% 42%",
+            caption: "Floor 14 · Ismail Qemali",
+          },
+          {
+            src: "img/floor14-07-sevasti-qiriazi.jpg?v=20261005b",
+            focus: "50% 38%",
+            caption: "Floor 14 · Sevasti Qiriazi",
+          },
+          {
+            src: "img/floor14-08-hasan-prishtina.jpg?v=20261005b",
+            focus: "50% 40%",
+            caption: "Floor 14 · Hasan Prishtina",
+          },
+          {
+            src: "img/floor14-09-mulla-nuredin-gjinoci.jpg?v=20261005b",
+            focus: "50% 42%",
+            caption: "Floor 14 · Mulla Nuredin Gjinoci",
+          },
+          {
+            src: "img/floor14-10-shote-galica.jpg?v=20261005b",
+            focus: "50% 38%",
+            caption: "Floor 14 · Shote Galica",
+          },
+          {
+            src: "img/floor14-11-adem-voca.jpg?v=20261005b",
+            focus: "50% 40%",
+            caption: "Floor 14 · Adem Voca",
+          },
+          {
+            src: "img/floor14-12-adem-jashari.jpg?v=20261005b",
+            focus: "50% 42%",
+            caption: "Floor 14 · Adem Jashari",
+          },
+        ];
+
+        var floor15Photos = [
+          {
+            src: "img/floor15-01-bekim-fehmiu.jpg",
+            focus: "50% 38%",
+            caption: "Floor 15 · Bekim Fehmiu",
+          },
+          {
+            src: "img/floor15-02-ismail-malo-gami.jpg",
+            focus: "50% 40%",
+            caption: "Floor 15 · Ismail Malo Gami",
+          },
+          {
+            src: "img/floor15-03-katarina-josipi.jpg",
+            focus: "50% 42%",
+            caption: "Floor 15 · Katarina Josipi",
+          },
+          {
+            src: "img/floor15-04-leze-qena.jpg",
+            focus: "50% 38%",
+            caption: "Floor 15 · Leze Qena",
+          },
+          {
+            src: "img/floor15-05-faruk-begolli.jpg",
+            focus: "50% 40%",
+            caption: "Floor 15 · Faruk Begolli",
+          },
+          {
+            src: "img/floor15-06-abdurrahman-shala.jpg",
+            focus: "50% 42%",
+            caption: "Floor 15 · Abdurrahman Shala",
+          },
+          {
+            src: "img/floor15-07-melihate-ajeti-qena.jpg",
+            focus: "50% 38%",
+            caption: "Floor 15 · Melihate Ajeti Qena",
+          },
+          {
+            src: "img/floor15-08-shani-pallaska.jpg",
+            focus: "50% 40%",
+            caption: "Floor 15 · Shani Pallaska",
+          },
+          {
+            src: "img/floor15-09-xhevat-qena.jpg",
+            focus: "50% 42%",
+            caption: "Floor 15 · Xhevat Qena",
+          },
+          {
+            src: "img/floor15-10-xhevat-qorraj.jpg",
+            focus: "50% 38%",
+            caption: "Floor 15 · Xhevat Qorraj",
+          },
+          {
+            src: "img/floor15-11-abi-nokshiqi.jpg",
+            focus: "50% 40%",
+            caption: "Floor 15 · Abi Nokshiqi",
+          },
+          {
+            src: "img/floor15-12-besim-sahatciu.jpg",
+            focus: "50% 42%",
+            caption: "Floor 15 · Besim Sahatciu",
+          },
+        ];
+
+        var floor16Photos = [
+          {
+            src: "img/floor16-01-nexhmije-pagarusha.jpg",
+            focus: "50% 38%",
+            caption: "Floor 16 · Nexhmije Pagarusha",
+          },
+          {
+            src: "img/floor16-02-dua-lipa.jpg",
+            focus: "50% 40%",
+            caption: "Floor 16 · Dua Lipa",
+          },
+          {
+            src: "img/floor16-03-muharrem-qena.jpg",
+            focus: "50% 42%",
+            caption: "Floor 16 · Muharrem Qena",
+          },
+          {
+            src: "img/floor16-04-mira-murati.jpg",
+            focus: "50% 38%",
+            caption: "Floor 16 · Mira Murati",
+          },
+          {
+            src: "img/floor16-05-bebe-rexha.jpg",
+            focus: "50% 40%",
+            caption: "Floor 16 · Bebe Rexha",
+          },
+          {
+            src: "img/floor16-06-rame-lahaj.jpg",
+            focus: "50% 42%",
+            caption: "Floor 16 · Rame Lahaj",
+          },
+          {
+            src: "img/floor16-07-gjon-mili.jpg",
+            focus: "50% 38%",
+            caption: "Floor 16 · Gjon Mili",
+          },
+          {
+            src: "img/floor16-08-majlinda-kelmendi.jpg",
+            focus: "50% 40%",
+            caption: "Floor 16 · Majlinda Kelmendi",
+          },
+          {
+            src: "img/floor16-09-granit-xhaka.jpg",
+            focus: "50% 42%",
+            caption: "Floor 16 · Granit Xhaka",
+          },
+          {
+            src: "img/floor16-10-ismail-kadare.jpg",
+            focus: "50% 38%",
+            caption: "Floor 16 · Ismail Kadare",
+          },
+          {
+            src: "img/floor16-11-fadil-vokrri.jpg",
+            focus: "50% 40%",
+            caption: "Floor 16 · Fadil Vokrri",
+          },
+          {
+            src: "img/floor16-12-inva-mula.jpg",
+            focus: "50% 42%",
+            caption: "Floor 16 · Inva Mula",
+          },
+          {
+            src: "img/floor16-13-jim-belushi.jpg",
+            focus: "50% 38%",
+            caption: "Floor 16 · Jim Belushi",
+          },
+          {
+            src: "img/floor16-14-action-bronson.jpg",
+            focus: "50% 40%",
+            caption: "Floor 16 · Action Bronson",
+          },
+        ];
+
+        var floor17Photos = [
+          {
+            src: "img/floor17-01-celebration-of-independence.jpg",
+            focus: "50% 38%",
+            caption: "Floor 17 · Celebration of independence",
+          },
+          {
+            src: "img/floor17-02-newborn-monument.jpg",
+            focus: "50% 40%",
+            caption: "Floor 17 · NEWBORN monument",
+          },
+          {
+            src: "img/floor17-03-cake-of-independence.jpg",
+            focus: "50% 42%",
+            caption: "Floor 17 · Cake of independence",
+          },
+          {
+            src: "img/floor17-04-kosovo-parliament.jpg",
+            focus: "50% 38%",
+            caption: "Floor 17 · Kosovo parliament",
+          },
+          {
+            src: "img/floor17-05-declaration-of-independence.jpg",
+            focus: "50% 40%",
+            caption: "Floor 17 · Declaration of independence",
+          },
+          {
+            src: "img/floor17-06-the-declaration.jpg",
+            focus: "50% 42%",
+            caption: "Floor 17 · The declaration",
+          },
+          {
+            src: "img/floor17-07-new-flag-of-kosovo.jpg",
+            focus: "50% 38%",
+            caption: "Floor 17 · New flag of Kosovo",
+          },
+          {
+            src: "img/floor17-08-the-first-toast.jpg",
+            focus: "50% 40%",
+            caption: "Floor 17 · The first toast",
+          },
+          {
+            src: "img/floor17-09-kosovo-forces.jpg",
+            focus: "50% 42%",
+            caption: "Floor 17 · Kosovo forces",
+          },
+          {
+            src: "img/floor17-10-new-generation.jpg",
+            focus: "50% 38%",
+            caption: "Floor 17 · New generation",
+          },
+          {
+            src: "img/floor17-11-newborn-monument-inauguration.jpg",
+            focus: "50% 40%",
+            caption: "Floor 17 · NEWBORN monument inauguration",
+          },
+          {
+            src: "img/floor17-12-albanian-flag.jpg",
+            focus: "50% 42%",
+            caption: "Floor 17 · Albanian flag",
+          },
+        ];
+
+        var floor18Photos = [
+          {
+            src: "img/floor18-01-goddess-on-the-throne.jpg",
+            focus: "50% 38%",
+            caption: "Floor 18 · Goddess on the Throne",
+          },
+          {
+            src: "img/floor18-02-national-theatre-of-kosovo.jpg",
+            focus: "50% 40%",
+            caption: "Floor 18 · National Theatre of Kosovo",
+          },
+          {
+            src: "img/floor18-03-old-bazaar-of-prishtina.jpg",
+            focus: "50% 42%",
+            caption: "Floor 18 · Old Bazaar of Prishtina",
+          },
+          {
+            src: "img/floor18-04-old-and-new-prishtina.jpg",
+            focus: "50% 38%",
+            caption: "Floor 18 · Old and new Prishtina",
+          },
+          {
+            src: "img/floor18-05-brotherhood-and-unity-monument.jpg",
+            focus: "50% 40%",
+            caption: "Floor 18 · Brotherhood and Unity monument",
+          },
+          {
+            src: "img/floor18-06-bankos.jpg",
+            focus: "50% 42%",
+            caption: "Floor 18 · Bankos",
+          },
+          {
+            src: "img/floor18-07-national-library.jpg",
+            focus: "50% 38%",
+            caption: "Floor 18 · National Library",
+          },
+          {
+            src: "img/floor18-08-entering-prishtina.jpg",
+            focus: "50% 40%",
+            caption: "Floor 18 · Entering Prishtina",
+          },
+          {
+            src: "img/floor18-09-old-city-and-new-city.jpg",
+            focus: "50% 42%",
+            caption: "Floor 18 · Old city and new city",
+          },
+          {
+            src: "img/floor18-10-mother-teresa-boulevard.jpg",
+            focus: "50% 38%",
+            caption: "Floor 18 · Mother Teresa Boulevard",
+          },
+          {
+            src: "img/floor18-11-kids-playing.jpg",
+            focus: "50% 40%",
+            caption: "Floor 18 · Kids playing",
+          },
+          {
+            src: "img/floor18-12-ulpiana-district.jpg",
+            focus: "50% 42%",
+            caption: "Floor 18 · Ulpiana district",
+          },
+        ];
+
+        var floor19Photos = [
+          {
+            src: "img/floor19-01-rugova-canyon.jpg",
+            focus: "50% 38%",
+            caption: "Floor 19 · Rugova Canyon",
+          },
+          {
+            src: "img/floor19-02-sharr-mountains.jpg",
+            focus: "50% 40%",
+            caption: "Floor 19 · Sharr Mountains",
+          },
+          {
+            src: "img/floor19-03-hajla-peak.jpg",
+            focus: "50% 42%",
+            caption: "Floor 19 · Hajla Peak",
+          },
+          {
+            src: "img/floor19-04-brezovica-ski-center.jpg",
+            focus: "50% 38%",
+            caption: "Floor 19 · Brezovica Ski Center",
+          },
+          {
+            src: "img/floor19-05-mirusha-waterfalls.jpg",
+            focus: "50% 40%",
+            caption: "Floor 19 · Mirusha Waterfalls",
+          },
+          {
+            src: "img/floor19-06-traditional-kulla.jpg",
+            focus: "50% 42%",
+            caption: "Floor 19 · Traditional kulla",
+          },
+          {
+            src: "img/floor19-07-traditional-kulla-2.jpg",
+            focus: "50% 38%",
+            caption: "Floor 19 · Traditional kulla",
+          },
+          {
+            src: "img/floor19-08-ancient-city-of-ulpiana.jpg",
+            focus: "50% 40%",
+            caption: "Floor 19 · Ancient city of Ulpiana",
+          },
+          {
+            src: "img/floor19-09-stone-bridge-of-vicianum.jpg",
+            focus: "50% 42%",
+            caption: "Floor 19 · Stone bridge of Vicianum",
+          },
+          {
+            src: "img/floor19-10-theth-church-albania.jpg",
+            focus: "50% 38%",
+            caption: "Floor 19 · Theth Church, Albania",
+          },
+          {
+            src: "img/floor19-11-prizren-fortress.jpg",
+            focus: "50% 40%",
+            caption: "Floor 19 · Prizren Fortress",
+          },
+          {
+            src: "img/floor19-12-view-from-prizren-fortress.jpg",
+            focus: "50% 42%",
+            caption: "Floor 19 · View from Prizren Fortress",
+          },
+          {
+            src: "img/floor19-13-prizren-clock-tower.jpg",
+            focus: "50% 38%",
+            caption: "Floor 19 · Prizren Clock Tower",
+          },
+        ];
+
+        var floor20Photos = [
+          {
+            src: "img/floor20-01-light-and-color.jpg",
+            focus: "50% 38%",
+            caption: "Floor 20 · Light and color",
+          },
+          {
+            src: "img/floor20-02-rooftop-celebration.jpg",
+            focus: "50% 40%",
+            caption: "Floor 20 · Rooftop celebration",
+          },
+          {
+            src: "img/floor20-03-the-crowd.jpg",
+            focus: "50% 42%",
+            caption: "Floor 20 · The crowd",
+          },
+          {
+            src: "img/floor20-04-cosmic-light.jpg",
+            focus: "50% 38%",
+            caption: "Floor 20 · Cosmic light",
+          },
+          {
+            src: "img/floor20-05-nightlife.jpg",
+            focus: "50% 40%",
+            caption: "Floor 20 · Nightlife",
+          },
+          {
+            src: "img/floor20-06-energy.jpg",
+            focus: "50% 42%",
+            caption: "Floor 20 · Energy",
+          },
+          {
+            src: "img/floor20-07-lasers.jpg",
+            focus: "50% 38%",
+            caption: "Floor 20 · Lasers",
+          },
+          {
+            src: "img/floor20-08-celebration.jpg",
+            focus: "50% 40%",
+            caption: "Floor 20 · Celebration",
+          },
+          {
+            src: "img/floor20-09-stage-lights.jpg",
+            focus: "50% 42%",
+            caption: "Floor 20 · Stage lights",
+          },
+          {
+            src: "img/floor20-10-faces-in-the-crowd.jpg",
+            focus: "50% 38%",
+            caption: "Floor 20 · Faces in the crowd",
+          },
+          {
+            src: "img/floor20-11-after-the-celebration.jpg",
+            focus: "50% 40%",
+            caption: "Floor 20 · After the celebration",
+          },
+          {
+            src: "img/floor20-12-behind-the-music.jpg",
+            focus: "50% 42%",
+            caption: "Floor 20 · Behind the music",
+          },
+        ];
+
+        // Text printed on each framed artwork, keyed by image file name.
+        var posterTexts = {
+          "floor14-01-teuta": { t: "Teuta: The Pirate Queen", m: "3rd century BC – 228 BC", d: "The Sovereign of the Seas. A fierce Illyrian monarch who dared to challenge the might of the Roman Empire. Refusing to curb her nation's maritime power or bow to foreign envoys, she ruled the Adriatic with an iron will. She remains the ultimate symbol of female authority and the refusal to trade sovereignty for peace." },
+          "floor14-02-gjergj-kastrioti-skanderbeg": { t: "Gjergj Kastrioti (Skanderbeg)", m: "1405 – 1468", d: "National Hero and ‘Defender of Western Civilization.’ A legendary military strategist who unified the Albanian principalities and stood as a bulwark against empire for twenty-five years." },
+          "floor14-03-gjon-buzuku": { t: "Gjon Buzuku", m: "1499 – 1577", d: "The architect of the written Albanian word. Author of “Meshari” (1555), the first known book in the Albanian language, laying the foundation for a nation's literary heritage." },
+          "floor14-04-karl-gega": { t: "Karl Gega", m: "1802 – 1860", d: "The mastermind of Alpine engineering. An architect of Albanian descent world-renowned for designing the Semmering Railway — the first mountain railway in the world and a UNESCO World Heritage site." },
+          "floor14-05-elena-gjika-dora-distria": { t: "Elena Gjika (Dora d’Istria)", m: "1828 – 1888", d: "A polymath and a European intellectual powerhouse. As a writer and advocate, she used her global influence to champion Albanian independence and cultural identity on the world stage." },
+          "floor14-06-ismail-qemali": { t: "Ismail Qemali", m: "1844 – 1919", d: "The Founding Father of modern Albania. A diplomat and visionary leader who raised the flag of independence in 1912, serving as the first Prime Minister of a sovereign nation." },
+          "floor14-07-sevasti-qiriazi": { t: "Sevasti Qiriazi", m: "1871 – 1949", d: "A visionary of enlightenment and the pioneer of female education. Founder of the first Albanian school for girls (1891), she dedicated her life to the empowerment of women through knowledge." },
+          "floor14-08-hasan-prishtina": { t: "Hasan Prishtina", m: "1873 – 1933", d: "Architect of political resistance, educator, diplomat, and one of the key voices behind Albanian national awakening. Born in Vushtrri, he dedicated his life to education, identity and the fight for Albanian self-determination. His leadership helped shape the political foundations of modern Albanian history." },
+          "floor14-09-mulla-nuredin-gjinoci": { t: "Mulla Nuredin Gjinoci", m: "1895 – 1952", d: "The Guardian of the Albanian Soul. A visionary leader and MP who fought for the forbidden right to education, calling the Albanian language “the essential food of the soul.” He refused to bow to oppression and died a martyr in political exile. Though his grave remains unknown, his legacy is the cornerstone of our national identity." },
+          "floor14-10-shote-galica": { t: "Shote Galica", m: "1895 – 1927", d: "The Uncompromising Force of the Highlands. Shota Galica rejected the passive roles assigned to women of her era to lead the Kaçak movement with a fierce, independent spirit. Her legacy isn't defined by her attire, but by her refusal to settle for a life of submission, setting a definitive standard for what it means to lead through raw courage and absolute conviction." },
+          "floor14-11-adem-voca": { t: "Adem Voca", m: "1903 – 1945", d: "A symbol of grassroots resistance and national pride. An influential patriot from the Mitrovica region, his life was defined by the relentless pursuit of freedom and the defense of Albanian lands." },
+          "floor14-12-adem-jashari": { t: "Adem Jashari", m: "1955 – 1998", d: "The Icon of Absolute Sacrifice. A man who didn't wait for freedom; he commanded it. Transforming his home into a fortress, he stood against an entire army, sacrificing himself and 50 family members rather than surrendering an inch. An epic defiance that proved the price of dignity knows no limits." },
+          "floor15-01-bekim-fehmiu": { t: "Bekim Fehmiu", m: "1936 – 2010", d: "An internationally acclaimed actor and one of the first performers from the Balkans to achieve global recognition, whose career brought Albanian artistic talent to audiences around the world." },
+          "floor15-02-ismail-malo-gami": { t: "Ismail (Malo) Gami", m: "1930 – 1998", d: "One of Kosovo's most recognized actors, whose work in theatre and cinema captivated audiences for decades, earning him a lasting place in the cultural heritage of Albanian performing arts." },
+          "floor15-03-katarina-josipi": { t: "Katarina Josipi", m: "1923 – 1969", d: "One of the most celebrated actresses in Albanian theatre history, remembered for her remarkable stage presence and her contribution to the development of dramatic arts in Kosovo." },
+          "floor15-04-leze-qena": { t: "Leze Qena", m: "1935 – 2020", d: "One of Kosovo's most beloved actresses, whose distinguished career in theatre and film enriched Albanian culture through decades of memorable performances and artistic dedication." },
+          "floor15-05-faruk-begolli": { t: "Faruk Begolli", m: "1944 – 2007", d: "An acclaimed actor, director, and educator whose influence helped shape modern theatre and cinema in Kosovo, leaving a lasting legacy on generations of artists and audiences." },
+          "floor15-06-abdurrahman-shala": { t: "Abdurrahman Shala", m: "1922 – 1994", d: "A distinguished actor and cultural figure whose performances became a cornerstone of Kosovo's theatrical and cinematic heritage, inspiring generations through artistic excellence." },
+          "floor15-07-melihate-ajeti-qena": { t: "Melihate Ajeti Qena", m: "Born in 1949", d: "One of the most distinguished actresses of Albanian theatre and cinema, celebrated for her powerful performances and enduring contribution to the cultural identity of Kosovo." },
+          "floor15-08-shani-pallaska": { t: "Shani Pallaska", m: "1928 – 1999", d: "A renowned actor whose commanding presence and exceptional performances established him among the most influential figures in Albanian theatre and film during the twentieth century." },
+          "floor15-09-xhevat-qena": { t: "Xhevat Qena", m: "1930 – 2003", d: "A beloved actor and comedian whose unforgettable performances brought humor, authenticity, and warmth to Albanian audiences, making him one of Kosovo's most recognizable cultural figures." },
+          "floor15-10-xhevat-qorraj": { t: "Xhevat Qorraj", m: "1947 – 2023", d: "A respected actor whose extensive career in theatre and film contributed significantly to Kosovo's artistic landscape, earning admiration for his versatility and dedication to the craft." },
+          "floor15-11-abi-nokshiqi": { t: "Abi Nokshiqi", m: "1941 – 2000", d: "He was a pioneering Albanian ballet dancer, choreographer, and professor who laid the historical foundations for professional ballet in Kosovo." },
+          "floor15-12-besim-sahatciu": { t: "Besim Sahatçiu", m: "1935 – 2005", d: "A visionary film director, writer, and cultural pioneer whose work played a defining role in the development of Kosovo's cinematic identity and artistic heritage." },
+          "floor16-01-nexhmije-pagarusha": { t: "Nexhmije Pagarusha", m: "1933 – 2020 · Singer & Cultural Icon", d: "One of the most celebrated performers in Albanian cultural history, whose extraordinary voice and artistic influence brought lasting recognition to Albanian music through decades of exceptional achievement." },
+          "floor16-02-dua-lipa": { t: "Dua Lipa", m: "Singer & Songwriter", d: "One of the most successful music artists of her generation, whose international achievements and cultural influence have brought global recognition to Albanian talent through contemporary music and entertainment." },
+          "floor16-03-muharrem-qena": { t: "Muharrem Qena", m: "1930 – 2006 · Actor, Director & Composer", d: "One of Kosovo's most influential cultural figures, whose work in theatre, film, and music helped shape the artistic identity of generations, leaving an enduring legacy in Albanian performing arts." },
+          "floor16-04-mira-murati": { t: "Mira Murati", m: "Technology Innovator", d: "One of the leading figures in artificial intelligence, whose work on some of the world's most influential technologies has helped shape a new era of innovation, transforming how people learn, create, and interact across the globe." },
+          "floor16-05-bebe-rexha": { t: "Bebe Rexha", m: "Singer & Songwriter", d: "One of the most successful Albanian-American music artists, whose international achievements and distinctive artistic style have brought global recognition to Albanian talent through contemporary music and entertainment." },
+          "floor16-06-rame-lahaj": { t: "Rame Lahaj", m: "Operatic Tenor", d: "An internationally celebrated tenor whose remarkable talent and performances in prestigious opera houses have established him among the leading voices of contemporary opera, bringing global recognition to Kosovo's cultural heritage." },
+          "floor16-07-gjon-mili": { t: "Gjon Mili", m: "1904 – 1984 · Photographer & Innovator", d: "A pioneering photographer whose groundbreaking experiments with light and motion transformed modern photography and visual storytelling. Among his most celebrated works are the famous light-drawing collaborations with Pablo Picasso, represented in this collection by the image displayed in the lower-right corner." },
+          "floor16-08-majlinda-kelmendi": { t: "Majlinda Kelmendi", m: "Olympic Champion & World Champion", d: "A symbol of determination and national pride, her historic achievements in judo brought Kosovo its first Olympic gold medal, establishing her among the most accomplished athletes in the history of international sport." },
+          "floor16-09-granit-xhaka": { t: "Granit Xhaka", m: "Professional Football Player", d: "One of the most recognized footballers in international competition, whose achievements, leadership, and enduring influence have brought global recognition to Albanian talent through the world's most popular sport." },
+          "floor16-10-ismail-kadare": { t: "Ismail Kadare", m: "1936 – 2024 · Writer & Intellectual", d: "A Nobel Prize contender and one of Europe's most celebrated literary voices, whose novels, essays, and poetry brought Albanian history, identity, and human struggle to international recognition through decades of extraordinary literary influence." },
+          "floor16-11-fadil-vokrri": { t: "Fadil Vokrri", m: "1960 – 2018", d: "A legendary footballer and visionary sports leader whose achievements on and off the pitch transformed the future of football in Kosovo. In recognition of his lasting legacy, Kosovo's national stadium proudly bears his name." },
+          "floor16-12-inva-mula": { t: "Inva Mula", m: "Operatic Soprano", d: "One of the most celebrated sopranos in contemporary opera, whose extraordinary vocal talent has earned international recognition on the world's foremost stages. Her voice also brought life to the iconic Diva Plavalaguna in The Fifth Element, featured in the accompanying image and remembered as one of cinema's most remarkable musical performances." },
+          "floor16-13-jim-belushi": { t: "Jim Belushi", m: "Actor, Comedian & Musician", d: "One of the most recognizable figures in American entertainment, whose work across television, film, and music has earned international acclaim. A proud descendant of Albanian immigrants, he has frequently spoken about his family roots while inspiring generations through his talent, charisma, and enduring cultural influence." },
+          "floor16-14-action-bronson": { t: "Action Bronson", m: "Rapper, Chef & TV Personality", d: "A New York-born rapper, chef, and television personality, Action Bronson built a career that spans music, food, and entertainment. His popular culinary and travel shows, combined with his unique artistic style, earned him international recognition. Throughout his career, he has proudly embraced and promoted his Albanian heritage." },
+          "floor17-01-celebration-of-independence": { t: "Celebration of Independence", m: "Independence Day · Feb. 17, 2008", d: "Captured in the historic streets of Prishtina, this moment reflects the joy, unity, and hope that marked Kosovo's declaration of independence. Waving national flags and celebrating together, thousands welcomed the beginning of a new chapter, symbolizing resilience, freedom, and the aspirations of a young nation." },
+          "floor17-02-newborn-monument": { t: "NEWBORN Monument", m: "Independence Day · Feb. 17, 2008", d: "In the hours following Kosovo's declaration of independence, thousands gathered around the NEWBORN Monument, leaving signatures, messages of hope, and personal reflections. The monument became a living canvas, preserving the emotions, gratitude, and aspirations of a nation celebrating the beginning of a new chapter." },
+          "floor17-03-cake-of-independence": { t: "Cake of Independence", m: "Independence Day · Feb. 17, 2008", d: "To mark Kosovo's first day of independence, a giant cake bearing the word “Pavarësia” (“Independence”) was prepared and shared with thousands gathered in the capital. More than a celebration, it became a symbol of unity, hope, and the joy of a nation welcoming the birth of its newest European republic." },
+          "floor17-04-kosovo-parliament": { t: "Kosovo Parliament", m: "Independence Day · Feb. 17, 2008", d: "On 17 February 2008, the Assembly of Kosovo convened in an extraordinary session to proclaim Kosovo an independent and sovereign state. Before representatives, international guests, and the world's media, the Declaration of Independence was unanimously adopted, marking the birth of Europe's newest republic and a defining moment in Kosovo's modern history." },
+          "floor17-05-declaration-of-independence": { t: "Declaration of Independence", m: "Independence Day · Feb. 17, 2008", d: "The Declaration of Independence, adopted on 17 February 2008, formally established Kosovo as a sovereign state. Signed by the country's elected representatives, it stands as the defining document of Kosovo's modern history." },
+          "floor17-06-the-declaration": { t: "The Declaration", m: "Independence Day · Feb. 17, 2008", d: "This historic moment captures the reading of Kosovo's Declaration of Independence before the Assembly on 17 February 2008. Following a unanimous vote, Kosovo formally declared itself an independent and sovereign republic, opening a new chapter in its history and affirming the democratic will of its people." },
+          "floor17-07-new-flag-of-kosovo": { t: "New Flag of Kosovo", m: "Independence Day · Feb. 17, 2008", d: "As Kosovo declared its independence on 17 February 2008, the newly adopted national flag was raised for the first time as the official symbol of the Republic. Featuring the map of Kosovo beneath six white stars representing its communities, the flag marked the beginning of a new chapter in the country's history and its place among the world's sovereign nations." },
+          "floor17-08-the-first-toast": { t: "The First Toast", m: "Independence Day · Feb. 17, 2008", d: "As the declaration spread across the country, thousands gathered in streets and squares to celebrate Kosovo's independence. Friends, families, and strangers raised glasses together, sharing a spontaneous toast to freedom, hope, and the beginning of a new chapter for the nation's future." },
+          "floor17-09-kosovo-forces": { t: "Kosovo Forces", m: "Independence Day · Feb. 17, 2008", d: "As Kosovo entered a new era of statehood, the Kosovo Security Force emerged as one of its key national institutions. Representing professionalism, resilience, and service to the Republic, it reflects the country's continued commitment to protecting its sovereignty, supporting its citizens, and contributing to regional and international security." },
+          "floor17-10-new-generation": { t: "New Generation", m: "Independence Day · Feb. 17, 2008", d: "The first generation of Kosovo Security Force cadets represented the beginning of a new national institution, committed to protecting the country's sovereignty, security, and future through professionalism and service." },
+          "floor17-11-newborn-monument-inauguration": { t: "NEWBORN Monument", m: "Independence Day · Feb. 17, 2008", d: "Inaugurated on February 17, 2008, the NEWBORN Monument commemorates Kosovo's declaration of independence. Continuously transformed through annual artistic redesigns, it reflects the country's journey, resilience, and aspirations while remaining one of Prishtina's defining cultural symbols." },
+          "floor17-12-albanian-flag": { t: "Albanian Flag", m: "Independence Day · Feb. 17, 2008", d: "On the day Kosovo declared independence, the Albanian flag filled the streets as thousands celebrated a historic moment. For many, it represented the flag under which generations had preserved their identity and struggled for freedom, while Kosovo's newly adopted state flag was only beginning its journey as the symbol of the Republic." },
+          "floor18-01-goddess-on-the-throne": { t: "Hyjnesha në Fron (Goddess on the Throne)", m: "Neolithic period · c. 5700 – 4500 BC", d: "One of Kosovo's most iconic archaeological discoveries, the Goddess on the Throne symbolizes fertility, motherhood, and the spiritual life of the Neolithic communities that once flourished in the region. Unearthed near Prishtina in 1956, it has become a national symbol of Kosovo's ancient cultural heritage." },
+          "floor18-02-national-theatre-of-kosovo": { t: "National Theatre of Kosovo", m: "1950s · Modernist landmark", d: "Completed during the Yugoslav period, the National Theatre of Kosovo became the country's leading stage for drama, music, and cultural expression. For generations, it has welcomed audiences and artists, playing a central role in the development of Kosovo's modern performing arts and cultural identity." },
+          "floor18-03-old-bazaar-of-prishtina": { t: "Old Bazaar of Prishtina", m: "", d: "For centuries, the Old Bazaar was the commercial heart of Prishtina, where merchants, craftsmen, and travelers gathered to trade goods and exchange ideas. Located on the same site as today's market district, it remains a living reminder of the city's rich trading heritage and enduring urban identity." },
+          "floor18-04-old-and-new-prishtina": { t: "Old & New Prishtina", m: "City through time", d: "Two views of Prishtina capture its remarkable transformation, from a modest provincial town to the vibrant capital of Kosovo. Together, they reflect decades of urban growth while preserving the city's enduring character and historical identity." },
+          "floor18-05-brotherhood-and-unity-monument": { t: "Brotherhood and Unity Monument", m: "Commonly known as “The Triangle”", d: "Unveiled in 1961, the Brotherhood and Unity Monument became one of Prishtina's most recognizable landmarks. Standing in the city's central square, it symbolized unity among Kosovo's communities during the Yugoslav period. Today, the monument remains an enduring part of Prishtina's skyline, while the surrounding square has evolved into one of the capital's busiest public gathering places." },
+          "floor18-06-bankos": { t: "Bankos", m: "Bank building", d: "Designed as a prominent banking institution, this modernist building remains a recognizable landmark, now serving a new generation as the home of Burger King in central Prishtina." },
+          "floor18-07-national-library": { t: "National Library", m: "", d: "Completed in 1982, the National Library of Kosovo became one of Prishtina's most recognizable landmarks. Its unique blend of concrete, geometric domes, and metal lattice has made it one of the world's most distinctive examples of modernist architecture." },
+          "floor18-08-entering-prishtina": { t: "Entering Prishtina", m: "", d: "Viewed from the Veternik hillside, this approach has long been one of the capital's most familiar entrances. For generations of residents and visitors alike, it has marked the moment when Prishtina first comes into view, signaling the beginning of every journey into the city." },
+          "floor18-09-old-city-and-new-city": { t: "The Old City and New City", m: "", d: "An aerial view of Prishtina's historic center, where the Ottoman Old Bazaar meets the city's modern civic core. Dominated by the Brotherhood and Unity Monument, the square has long served as one of the capital's central gathering places, connecting centuries of history within a single panorama." },
+          "floor18-10-mother-teresa-boulevard": { t: "Mother Teresa Boulevard", m: "", d: "Built as one of Prishtina's first modern urban districts, this boulevard reflected the city's rapid growth during the Yugoslav era. Today, it has evolved into Mother Teresa Boulevard, Kosovo's main pedestrian avenue and the vibrant heart of the capital." },
+          "floor18-11-kids-playing": { t: "Kids Playing", m: "", d: "Captured in front of Prishtina's Municipal Building, now commonly known as the Old Municipal Building, this photograph preserves an everyday moment in the city's civic heart, where generations have crossed its square." },
+          "floor18-12-ulpiana-district": { t: "Ulpiana District", m: "", d: "This aerial view captures Ulpiana, one of Prishtina's most recognizable residential neighborhoods. At its center stand the iconic Soliter towers and the Fontana complex, surrounded by apartment blocks, schools, parks, and public spaces that have shaped everyday life for generations. Planned as a modern urban district, Ulpiana remains one of the capital's most distinctive and vibrant communities." },
+          "floor19-01-rugova-canyon": { t: "Rugova Canyon", m: "Natural and Cultural Landmark", d: "Spanning the Lumbardh River at the entrance to Rugova Gorge near Peja, Rugova Bridge stands within one of Kosovo's most breathtaking landscapes. Surrounded by towering cliffs and crystal-clear waters, it symbolizes the enduring connection between nature, history, and the cultural heritage of the region." },
+          "floor19-02-sharr-mountains": { t: "Sharr Mountains", m: "Natural Landscape", d: "Stretching across southern Kosovo, the Sharr Mountains are renowned for their rolling meadows, dense forests, and breathtaking scenery. Rich in biodiversity and tradition, they remain one of the country's most treasured natural landscapes." },
+          "floor19-03-hajla-peak": { t: "Hajla Peak, Bjeshkët e Nemuna", m: "Natural Landmark", d: "Rising to 2,403 meters, Hajla Peak forms part of the majestic border ridge between Kosovo and Montenegro. Surrounded by the alpine villages of Bogë and Shtupeq, its forests, pastures, and mountain landscapes represent some of the most beautiful scenery within Bjeshkët e Nemuna National Park." },
+          "floor19-04-brezovica-ski-center": { t: "Brezovica Ski Center", m: "Winter Sports Destination", d: "Located within the Sharr Mountains National Park, Brezovica Ski Center is Kosovo's premier winter sports destination. Renowned for its snow-covered slopes, alpine scenery, and exceptional terrain, it has welcomed skiers, snowboarders, and mountain enthusiasts for generations while remaining one of the country's most iconic mountain landmarks." },
+          "floor19-05-mirusha-waterfalls": { t: "Mirusha Waterfalls", m: "Natural Monument", d: "Located within the Mirusha Regional Park, the Mirusha Waterfalls are among Kosovo's most remarkable natural attractions. Formed by a series of cascading waterfalls, lakes, and limestone cliffs, they create a unique landscape renowned for its beauty, biodiversity, and geological significance." },
+          "floor19-06-traditional-kulla": { t: "Traditional Kulla", m: "Architectural Heritage", d: "For centuries, the Kulla served as both a family home and a symbol of resilience, hospitality, and social status. Built from stone and designed to withstand the challenges of mountain life, these fortified tower houses remain among the most distinctive examples of Albanian architectural heritage." },
+          "floor19-07-traditional-kulla-2": { t: "Traditional Kulla", m: "Architectural Heritage", d: "More than a house, the Kulla represents a living piece of Kosovo's cultural identity. Its stone walls, wooden details, and distinctive architecture tell stories of family, honor, and perseverance passed down through generations. Preserved across the country, these remarkable structures stand as enduring reminders of the traditions and craftsmanship that continue to shape Kosovo today." },
+          "floor19-08-ancient-city-of-ulpiana": { t: "Ancient City of Ulpiana", m: "Archaeological Heritage Site", d: "Located near Prishtina, Ulpiana was a prominent Roman and Byzantine city renowned for its prosperity and strategic importance. Its preserved ruins continue to reveal the rich cultural and historical legacy of one of Kosovo's most remarkable archaeological treasures." },
+          "floor19-09-stone-bridge-of-vicianum": { t: "Stone Bridge of Vicianum", m: "Medieval Landmark", d: "Located near the historic city of Vicianum, this medieval stone bridge stands as a testament to the engineering skill and craftsmanship of its time. Today, it remains one of Kosovo's most treasured landmarks, preserving an important chapter of the region's cultural history." },
+          "floor19-10-theth-church-albania": { t: "Theth Church, Albania", m: "Cultural and Natural Landmark", d: "Located in the remote valley of Theth, this iconic stone church stands beneath the rugged peaks of the Albanian Alps. Together, they form one of the most celebrated landscapes in the Balkans, attracting visitors from around the world with their beauty and authenticity." },
+          "floor19-11-prizren-fortress": { t: "Prizren Fortress", m: "Historic Landmark", d: "Dominating the skyline above the old city of Prizren, this historic fortress has witnessed centuries of cultural, political, and architectural transformation. Today, it stands as a powerful symbol of Kosovo's heritage and the enduring legacy of one of its most iconic cities." },
+          "floor19-12-view-from-prizren-fortress": { t: "View from Prizren Fortress", m: "Historic Landmark", d: "From the ancient walls of Prizren Fortress, visitors are offered one of Kosovo's most celebrated views. Overlooking the old city, the Lumbardhi River, and the surrounding landscape, this vantage point reflects centuries of history and the enduring connection between the fortress and the city below." },
+          "floor19-13-prizren-clock-tower": { t: "Prizren Clock Tower", m: "Historic Landmark", d: "Rising above the traditional stone and terracotta rooftops of Prizren, the Clock Tower stands as a lasting symbol of the city's rich cultural heritage. For generations, it has marked the passage of time while overlooking one of the most historic and picturesque urban centers in the Balkans." },
+          "floor20-01-light-and-color": { t: "Light & Color", m: "Prishtina, 2009", d: "As darkness settles, light takes on a language of its own. Colors move across the crowd like brushstrokes on a canvas, transforming a simple gathering into an immersive experience where every moment feels suspended between reality and imagination." },
+          "floor20-02-rooftop-celebration": { t: "Rooftop Celebration", m: "Prishtina, 2009", d: "The true spirit of celebration is found not only in music or movement, but in the collective energy of people sharing the same moment. Beneath the lights, conversations become memories and ordinary evenings become stories worth remembering." },
+          "floor20-03-the-crowd": { t: "The Crowd", m: "Prishtina, 2019", d: "There is a unique beauty in a crowd united by a common feeling. Individual stories blend into a single atmosphere of excitement, anticipation, and joy, creating moments that exist only once yet remain vivid long after they have passed." },
+          "floor20-04-cosmic-light": { t: "Cosmic Light", m: "Prishtina, 2011", d: "Light travels through darkness much like memories travel through time. Fleeting and impossible to hold, these luminous fragments remind us that some experiences are meant not to be preserved, but simply felt." },
+          "floor20-05-nightlife": { t: "Nightlife", m: "Prishtina, 2010", d: "Every city has moments when it reveals a different side of itself. As the lights grow brighter and the music grows louder, familiar spaces are transformed into places of connection, expression, and shared celebration." },
+          "floor20-06-energy": { t: "Energy", m: "Prishtina, 2010", d: "The most memorable nights are rarely defined by a single event. They are shaped by countless small moments of excitement, spontaneity, and human connection, woven together into an atmosphere that feels larger than life." },
+          "floor20-07-lasers": { t: "Lasers", m: "Prishtina, 2010", d: "Lines of light cut through the darkness with remarkable precision, creating a visual landscape that exists only for an instant. It is a reminder that beauty is often found in moments that are temporary and impossible to repeat." },
+          "floor20-08-celebration": { t: "Celebration", m: "Prishtina, 2009", d: "Hands rise, voices merge, and for a brief moment hundreds of individuals move with the same rhythm. In these moments of collective celebration, differences disappear and a sense of belonging takes center stage." },
+          "floor20-09-stage-lights": { t: "Stage Lights", m: "Prishtina, 2017", d: "The interplay of shadow and light creates a spectacle that captivates the senses. Every beam illuminates not only the space itself, but also the emotions, anticipation, and excitement shared by everyone present." },
+          "floor20-10-faces-in-the-crowd": { t: "Faces in the Crowd", m: "Prishtina, 2017", d: "Every face carries a unique journey, a different perspective, and a personal story. Together they form a living portrait of a moment in time, connected by curiosity, energy, and the desire to be part of something memorable." },
+          "floor20-11-after-the-celebration": { t: "After the Celebration", m: "Prishtina, 2018", d: "Long after the music fades, traces of the evening remain. Small details scattered across the floor become silent reminders of laughter, conversations, and memories created in moments that passed too quickly." },
+          "floor20-12-behind-the-music": { t: "Behind the Music", m: "Prishtina, 2009", d: "Behind every unforgettable atmosphere stands the invisible craft of creating it. Sound, rhythm, and light come together to shape an experience that lingers not in photographs alone, but in memory itself." },
+        };
+
+        var galleriesByFloor = {
+          14: floor14Photos,
+          15: floor15Photos,
+          16: floor16Photos,
+          17: floor17Photos,
+          18: floor18Photos,
+          19: floor19Photos,
+          20: floor20Photos,
+        };
+
+        var photos = defaultPhotos;
+
+        var dialog = document.querySelector(".ed-lightbox");
+        if (!dialog) return;
+
+        var track = dialog.querySelector("[data-lightbox-track]");
+        var viewport = dialog.querySelector("[data-lightbox-viewport]");
+        var captionEl = dialog.querySelector(".ed-lightbox__caption");
+        var countEl = dialog.querySelector(".ed-lightbox__count");
+        var closeBtn = dialog.querySelector(".ed-lightbox__close");
+        var prevBtn = dialog.querySelector(".ed-lightbox__control--prev");
+        var nextBtn = dialog.querySelector(".ed-lightbox__control--next");
+        var currentPhoto = 0;
+        var trigger = null;
+        var slides = [];
+        var reducedMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        );
+        var loupe = dialog.querySelector(".ed-loupe");
+        var storyEl = dialog.querySelector(".ed-lightbox__story");
+        var storyTitle = dialog.querySelector(".ed-lightbox__story-title");
+        var storyMeta = dialog.querySelector(".ed-lightbox__story-meta");
+        var storyText = dialog.querySelector(".ed-lightbox__story-text");
+        var readBtn = dialog.querySelector(".ed-lightbox__read");
+        var storyOn = null;
+
+        function storyFor(photo) {
+          if (!photo || !photo.src) return null;
+          var key = photo.src
+            .split("?")[0]
+            .split("/")
+            .pop()
+            .replace(/\.[a-z0-9]+$/i, "");
+          return posterTexts[key] || null;
+        }
+
+        function syncStoryVisibility(story) {
+          if (readBtn) {
+            readBtn.hidden = !story;
+            readBtn.setAttribute("aria-pressed", storyOn ? "true" : "false");
+          }
+          if (storyEl) storyEl.hidden = !(story && storyOn);
+        }
+
+        function fillStory(story) {
+          if (!storyEl || !story) return;
+          storyTitle.textContent = story.t;
+          storyMeta.textContent = story.m || "";
+          storyMeta.hidden = !story.m;
+          storyText.textContent = story.d;
+          storyEl.scrollTop = 0;
+        }
+
+        function hideLoupe() {
+          if (loupe) loupe.classList.remove("is-visible");
+        }
+
+        function buildSlides(galleryPhotos) {
+          track.innerHTML = "";
+          slides = [];
+          photos = galleryPhotos;
+
+          galleryPhotos.forEach(function (photo) {
+            var slide = document.createElement("div");
+            slide.className = "ed-lightbox__slide";
+            var img = document.createElement("img");
+            img.src = photo.src;
+            img.alt = photo.caption;
+            img.width = 1152;
+            img.height = 1536;
+            img.decoding = "async";
+            img.style.objectPosition = "center center";
+            slide.appendChild(img);
+            track.appendChild(slide);
+            slides.push(slide);
+          });
+        }
+
+        function galleryForOpener(opener) {
+          if (!opener) return defaultPhotos;
+
+          if (opener.hasAttribute("data-floor-index")) {
+            var floorNum =
+              floorNumbers[Number(opener.getAttribute("data-floor-index"))];
+            return galleriesByFloor[floorNum] || defaultPhotos;
+          }
+
+          if (opener.hasAttribute("data-photo")) {
+            var photoIndex = Number(opener.getAttribute("data-photo"));
+            var floorFromPhoto = floorNumbers[photoIndex];
+            if (floorFromPhoto && galleriesByFloor[floorFromPhoto]) {
+              return galleriesByFloor[floorFromPhoto];
+            }
+          }
+
+          return defaultPhotos;
+        }
+
+        buildSlides(defaultPhotos);
+
+        function setTrackPosition(index, dragOffset) {
+          if (dragOffset) {
+            track.style.transform =
+              "translateX(calc(-" + index * 100 + "% + " + dragOffset + "px))";
+            return;
+          }
+          track.style.transform = "translateX(-" + index * 100 + "%)";
+        }
+
+        function updateActiveSlide() {
+          slides.forEach(function (slide, index) {
+            slide.classList.toggle("is-active", index === currentPhoto);
+          });
+        }
+
+        function renderPhoto(index, instant) {
+          currentPhoto = (index + photos.length) % photos.length;
+          var photo = photos[currentPhoto];
+          hideLoupe();
+          resetEnlarged();
+
+          if (instant || reducedMotion.matches) {
+            track.classList.add("is-instant");
+          }
+
+          setTrackPosition(currentPhoto);
+          updateActiveSlide();
+
+          if (instant || reducedMotion.matches) {
+            requestAnimationFrame(function () {
+              track.classList.remove("is-instant");
+            });
+          }
+
+          var story = storyFor(photo);
+          syncStoryVisibility(story);
+          captionEl.classList.add("is-changing");
+          if (storyEl) storyEl.classList.add("is-changing");
+          window.setTimeout(
+            function () {
+              captionEl.textContent = photo.caption;
+              countEl.textContent =
+                String(currentPhoto + 1).padStart(2, "0") +
+                " / " +
+                String(photos.length).padStart(2, "0");
+              captionEl.classList.remove("is-changing");
+              if (photos[currentPhoto] === photo) fillStory(story);
+              if (storyEl) storyEl.classList.remove("is-changing");
+            },
+            instant || reducedMotion.matches ? 0 : 180,
+          );
+        }
+
+        function openGallery(index, opener) {
+          trigger = opener || null;
+          if (storyOn === null) {
+            storyOn = window.matchMedia("(min-width: 1100px)").matches;
+          }
+          buildSlides(galleryForOpener(opener));
+          renderPhoto(index, true);
+          dialog.showModal();
+          document.body.classList.add("modal-open");
+          if (!compactLightbox.matches) {
+            showHint(
+              coarsePointer
+                ? "Tap the photo to zoom in on the text"
+                : "Click the photo to zoom in on the text",
+              3500,
+            );
+          }
+        }
+
+        function openFromOpener(opener) {
+          if (!opener) return;
+          openGallery(0, opener);
+        }
+
+        document.addEventListener("ed-open-gallery", function (event) {
+          openFromOpener(event.target.closest("[data-photo]"));
+        });
+
+        document.querySelectorAll("[data-photo]").forEach(function (button) {
+          if (button.closest(".film-track")) return;
+          button.addEventListener("click", function () {
+            openFromOpener(button);
+          });
+        });
+
+        if (closeBtn) {
+          closeBtn.addEventListener("click", function () {
+            dialog.close();
+          });
+        }
+
+        if (readBtn) {
+          readBtn.addEventListener("click", function () {
+            storyOn = !storyOn;
+            var story = storyFor(photos[currentPhoto]);
+            fillStory(story);
+            syncStoryVisibility(story);
+          });
+        }
+
+        if (prevBtn) {
+          prevBtn.addEventListener("click", function () {
+            renderPhoto(currentPhoto - 1);
+          });
+        }
+
+        if (nextBtn) {
+          nextBtn.addEventListener("click", function () {
+            renderPhoto(currentPhoto + 1);
+          });
+        }
+
+        dialog.addEventListener("keydown", function (event) {
+          if (event.key === "ArrowLeft") {
+            event.preventDefault();
+            renderPhoto(currentPhoto - 1);
+          }
+          if (event.key === "ArrowRight") {
+            event.preventDefault();
+            renderPhoto(currentPhoto + 1);
+          }
+        });
+
+        dialog.addEventListener("click", function (event) {
+          if (event.target !== dialog) return;
+          var rect = dialog.getBoundingClientRect();
+          if (
+            event.clientX < rect.left ||
+            event.clientX > rect.right ||
+            event.clientY < rect.top ||
+            event.clientY > rect.bottom
+          ) {
+            dialog.close();
+          }
+        });
+
+        dialog.addEventListener("close", function () {
+          hideLoupe();
+          resetEnlarged();
+          hideHint();
+          document.body.classList.remove("modal-open");
+          if (trigger) {
+            trigger.focus({ preventScroll: true });
+          }
+        });
+
+        var hintEl = dialog.querySelector(".ed-lightbox__hint");
+        var hintTimer = null;
+        var enlargedSlide = null;
+        var panDrag = null;
+        var suppressImageClick = false;
+        var coarsePointer = window.matchMedia("(hover: none)").matches;
+        var compactLightbox = window.matchMedia("(max-width: 991px)");
+        var enlargeFactor = 2.5;
+
+        function showHint(text, duration) {
+          if (!hintEl) return;
+          hintEl.textContent = text;
+          hintEl.classList.add("is-visible");
+          window.clearTimeout(hintTimer);
+          hintTimer = window.setTimeout(hideHint, duration || 3000);
+        }
+
+        function hideHint() {
+          window.clearTimeout(hintTimer);
+          if (hintEl) hintEl.classList.remove("is-visible");
+        }
+
+        function resetEnlarged() {
+          if (!enlargedSlide) return;
+          var img = enlargedSlide.querySelector("img");
+          enlargedSlide.classList.remove("is-enlarged");
+          enlargedSlide.scrollTop = 0;
+          enlargedSlide.scrollLeft = 0;
+          if (img) {
+            img.style.width = "";
+            img.style.height = "";
+          }
+          enlargedSlide = null;
+          panDrag = null;
+          viewport.classList.remove("is-panning");
+        }
+
+        function enlargeAt(slide, clientX, clientY) {
+          var img = slide.querySelector("img");
+          if (!img || !img.naturalWidth) return false;
+
+          var box = img.getBoundingClientRect();
+          var fit = Math.min(
+            box.width / img.naturalWidth,
+            box.height / img.naturalHeight,
+          );
+          var shownW = img.naturalWidth * fit;
+          var shownH = img.naturalHeight * fit;
+          var fx = (clientX - (box.left + (box.width - shownW) / 2)) / shownW;
+          var fy = (clientY - (box.top + (box.height - shownH) / 2)) / shownH;
+          fx = Math.min(1, Math.max(0, fx));
+          fy = Math.min(1, Math.max(0, fy));
+
+          var fitWidth = (viewport.clientWidth - 12) / img.naturalWidth;
+          var scale = Math.min(
+            Math.max(fitWidth, fit * 1.8),
+            fit * enlargeFactor,
+          );
+          scale = Math.min(scale, Math.max(1, fit * 1.5));
+          var width = Math.round(img.naturalWidth * scale);
+          var height = Math.round(img.naturalHeight * scale);
+          var vp = viewport.getBoundingClientRect();
+
+          slide.classList.add("is-enlarged");
+          img.style.width = width + "px";
+          img.style.height = height + "px";
+          slide.scrollLeft = fx * width - (clientX - vp.left);
+          slide.scrollTop = fy * height - (clientY - vp.top);
+          enlargedSlide = slide;
+          return true;
+        }
+
+        viewport.addEventListener("click", function (event) {
+          if (suppressImageClick) {
+            suppressImageClick = false;
+            return;
+          }
+          if (loupeOn || event.target.tagName !== "IMG") return;
+          if (compactLightbox.matches && !enlargedSlide) return;
+
+          if (enlargedSlide) {
+            resetEnlarged();
+            hideHint();
+            return;
+          }
+
+          var slide = slides[currentPhoto];
+          if (slide && enlargeAt(slide, event.clientX, event.clientY)) {
+            showHint(
+              coarsePointer
+                ? "Swipe to move around · tap to zoom out"
+                : "Drag or scroll to move around · click to zoom out",
+              3200,
+            );
+          }
+        });
+
+        window.addEventListener("resize", function () {
+          if (enlargedSlide) resetEnlarged();
+        });
+
+        var touchStartX = null;
+        var touchStartY = null;
+        var lightboxDrag = null;
+        var lightboxDragThreshold = 6;
+
+        viewport.addEventListener(
+          "touchstart",
+          function (event) {
+            touchStartX = event.changedTouches[0].clientX;
+            touchStartY = event.changedTouches[0].clientY;
+          },
+          { passive: true },
+        );
+        viewport.addEventListener(
+          "touchend",
+          function (event) {
+            if (touchStartX === null) return;
+            if (loupeOn || enlargedSlide) {
+              touchStartX = null;
+              return;
+            }
+            var dx = event.changedTouches[0].clientX - touchStartX;
+            var dy = event.changedTouches[0].clientY - touchStartY;
+            if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+              renderPhoto(currentPhoto + (dx < 0 ? 1 : -1));
+            }
+            touchStartX = null;
+          },
+          { passive: true },
+        );
+
+        viewport.addEventListener("mousedown", function (event) {
+          if (event.button !== 0) return;
+          suppressImageClick = false;
+          if (enlargedSlide) {
+            event.preventDefault();
+            panDrag = {
+              x: event.clientX,
+              y: event.clientY,
+              left: enlargedSlide.scrollLeft,
+              top: enlargedSlide.scrollTop,
+              moved: false,
+            };
+            return;
+          }
+          lightboxDrag = {
+            x: event.clientX,
+            moved: false,
+          };
+        });
+
+        function moveLightboxDrag(event) {
+          if (panDrag && enlargedSlide) {
+            var panX = event.clientX - panDrag.x;
+            var panY = event.clientY - panDrag.y;
+            if (
+              !panDrag.moved &&
+              Math.abs(panX) + Math.abs(panY) > lightboxDragThreshold
+            ) {
+              panDrag.moved = true;
+              viewport.classList.add("is-panning");
+            }
+            if (panDrag.moved) {
+              event.preventDefault();
+              enlargedSlide.scrollLeft = panDrag.left - panX;
+              enlargedSlide.scrollTop = panDrag.top - panY;
+            }
+            return;
+          }
+          if (!lightboxDrag) return;
+          var delta = event.clientX - lightboxDrag.x;
+          if (!lightboxDrag.moved && Math.abs(delta) > lightboxDragThreshold) {
+            lightboxDrag.moved = true;
+            track.classList.add("is-dragging");
+            viewport.classList.add("is-dragging");
+          }
+          if (lightboxDrag.moved) {
+            event.preventDefault();
+            setTrackPosition(currentPhoto, delta);
+          }
+        }
+
+        function endLightboxDrag(event) {
+          if (panDrag) {
+            if (panDrag.moved) suppressImageClick = true;
+            panDrag = null;
+            viewport.classList.remove("is-panning");
+            return;
+          }
+          if (!lightboxDrag) return;
+          var delta = event.clientX - lightboxDrag.x;
+          track.classList.remove("is-dragging");
+          viewport.classList.remove("is-dragging");
+          if (lightboxDrag.moved) {
+            suppressImageClick = true;
+            if (delta < -60) {
+              renderPhoto(currentPhoto + 1);
+            } else if (delta > 60) {
+              renderPhoto(currentPhoto - 1);
+            } else {
+              renderPhoto(currentPhoto);
+            }
+          }
+          lightboxDrag = null;
+        }
+
+        document.addEventListener("mousemove", moveLightboxDrag);
+        document.addEventListener("mouseup", endLightboxDrag);
+
+        var zoomBtn = dialog.querySelector(".ed-lightbox__zoom");
+        var loupeOn = false;
+        var loupeZoom = 2.5;
+        var loupeTouching = false;
+
+        function setLoupeOn(on) {
+          loupeOn = !!on;
+          if (loupeOn) resetEnlarged();
+          if (zoomBtn) {
+            zoomBtn.setAttribute("aria-pressed", loupeOn ? "true" : "false");
+          }
+          viewport.classList.toggle("is-loupe", loupeOn);
+          if (!loupeOn) hideLoupe();
+        }
+
+        function showLoupeAt(clientX, clientY, isTouch) {
+          if (!loupe || !loupeOn) return false;
+          var slide = slides[currentPhoto];
+          var img = slide ? slide.querySelector("img") : null;
+          if (!img || !img.naturalWidth) {
+            hideLoupe();
+            return false;
+          }
+
+          var box = img.getBoundingClientRect();
+          var fit = Math.min(
+            box.width / img.naturalWidth,
+            box.height / img.naturalHeight,
+          );
+          var shownW = img.naturalWidth * fit;
+          var shownH = img.naturalHeight * fit;
+          var x = clientX - (box.left + (box.width - shownW) / 2);
+          var y = clientY - (box.top + (box.height - shownH) / 2);
+          if (x < 0 || y < 0 || x > shownW || y > shownH) {
+            hideLoupe();
+            return false;
+          }
+
+          var size = loupe.offsetWidth;
+          var half = size / 2;
+          var vp = viewport.getBoundingClientRect();
+          var lensX = clientX - vp.left - half;
+          var lensY = clientY - vp.top - half;
+          if (isTouch) {
+            lensY -= size * 0.75;
+            if (lensY < 0) lensY = clientY - vp.top + size * 0.25;
+          }
+
+          loupe.style.left = lensX + "px";
+          loupe.style.top = lensY + "px";
+          loupe.style.backgroundImage =
+            'url("' + (img.currentSrc || img.src) + '")';
+          loupe.style.backgroundSize =
+            shownW * loupeZoom + "px " + shownH * loupeZoom + "px";
+          loupe.style.backgroundPosition =
+            half - x * loupeZoom + "px " + (half - y * loupeZoom) + "px";
+          loupe.classList.add("is-visible");
+          return true;
+        }
+
+        if (zoomBtn) {
+          zoomBtn.addEventListener("click", function () {
+            setLoupeOn(!loupeOn);
+          });
+        }
+
+        viewport.addEventListener("mousemove", function (event) {
+          if (lightboxDrag && lightboxDrag.moved) {
+            hideLoupe();
+            return;
+          }
+          showLoupeAt(event.clientX, event.clientY, false);
+        });
+
+        viewport.addEventListener("mouseleave", hideLoupe);
+
+        viewport.addEventListener(
+          "wheel",
+          function (event) {
+            if (!loupeOn || !loupe.classList.contains("is-visible")) return;
+            event.preventDefault();
+            loupeZoom += event.deltaY < 0 ? 0.25 : -0.25;
+            loupeZoom = Math.min(5, Math.max(1.5, loupeZoom));
+            showLoupeAt(event.clientX, event.clientY, false);
+          },
+          { passive: false },
+        );
+
+        viewport.addEventListener(
+          "touchstart",
+          function (event) {
+            if (!loupeOn) return;
+            var touch = event.touches[0];
+            loupeTouching = showLoupeAt(touch.clientX, touch.clientY, true);
+          },
+          { passive: true },
+        );
+
+        viewport.addEventListener(
+          "touchmove",
+          function (event) {
+            if (!loupeOn || !loupeTouching) return;
+            event.preventDefault();
+            var touch = event.touches[0];
+            showLoupeAt(touch.clientX, touch.clientY, true);
+          },
+          { passive: false },
+        );
+
+        viewport.addEventListener("touchend", function () {
+          if (!loupeTouching) return;
+          loupeTouching = false;
+          hideLoupe();
+        });
+
+        viewport.addEventListener("touchcancel", function () {
+          loupeTouching = false;
+          hideLoupe();
+        });
+
+        setLoupeOn(false);
+      })();
+    </script>
+
+    <script>
+      (function () {
+        var scrollLinks = document.querySelectorAll(
+          ".ed-hero__cta, .ed-subnav__item",
+        );
+        if (!scrollLinks.length) return;
+
+        var reducedMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        );
+        var scrollOffset = 110;
+        var duration = 1800;
+
+        function getScrollY() {
+          return (
+            document.body.scrollTop ||
+            document.documentElement.scrollTop ||
+            window.pageYOffset ||
+            0
+          );
+        }
+
+        function setScrollY(y) {
+          document.body.scrollTop = y;
+          document.documentElement.scrollTop = y;
+        }
+
+        function easeInOutCubic(t) {
+          return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        }
+
+        function smoothScrollToHash(event) {
+          var hash = event.currentTarget.getAttribute("href");
+          if (!hash || hash.charAt(0) !== "#") return;
+
+          var target = document.querySelector(hash);
+          if (!target) return;
+
+          event.preventDefault();
+
+          if (reducedMotion.matches) {
+            target.scrollIntoView({ block: "start" });
+            if (history.replaceState) {
+              history.replaceState(null, "", hash);
+            }
+            return;
+          }
+
+          var startY = getScrollY();
+          var targetY =
+            target.getBoundingClientRect().top + startY - scrollOffset;
+          var distance = targetY - startY;
+          var startTime = null;
+
+          function animateScroll(timestamp) {
+            if (startTime === null) startTime = timestamp;
+            var elapsed = timestamp - startTime;
+            var progress = Math.min(elapsed / duration, 1);
+
+            setScrollY(startY + distance * easeInOutCubic(progress));
+
+            if (progress < 1) {
+              requestAnimationFrame(animateScroll);
+            } else if (history.replaceState) {
+              history.replaceState(null, "", hash);
+            }
+          }
+
+          requestAnimationFrame(animateScroll);
+        }
+
+        scrollLinks.forEach(function (link) {
+          link.addEventListener("click", smoothScrollToHash);
+        });
+      })();
+    </script>
+
+    <script src="js/jquery-3.3.1.min.js" defer></script>
+    <script src="js/bootstrap.min.js" defer></script>
+    <script src="js/jquery.nice-select.min.js" defer></script>
+    <script src="js/jquery-ui.min.js" defer></script>
+    <script src="js/jquery.slicknav.js" defer></script>
+    <script src="js/owl.carousel.min.js" defer></script>
+    <script src="js/site-onboarding-sequence.js?v=9" defer></script>
+    <script src="js/main.js?v=20261016c" defer></script>
+    <script src="js/site-whatsapp.js?v=9" defer></script>
+    <script src="js/chatbase-widget.js?v=2" defer></script>
+  </body>
+</html>

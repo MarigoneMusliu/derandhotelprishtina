@@ -1,5 +1,5 @@
 (function () {
-  var BOOKING_DETAILS_PAGE = "booking-details.html";
+  var BOOKING_DETAILS_PAGE = "/Booking-Details";
   var ROOM_LABELS = {
     "junior-suite": "Junior Suite",
     "deluxe-double": "Deluxe Double Room",
@@ -12,7 +12,7 @@
     "deluxe-double": { single: 105, double: 105 },
     "premium-double": { single: 120, double: 130, triple: 140 },
     "superior-twin": { single: 95, double: 105 },
-    "superior-double": { single: 95, double: 105 },
+    "superior-double": { single: 80, double: 90 },
   };
 
   var gridEl = document.getElementById("booking-extras-grid");

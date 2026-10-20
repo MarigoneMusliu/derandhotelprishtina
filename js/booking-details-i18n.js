@@ -76,7 +76,7 @@
         "\u00a92026 Derand Hotel. Excellence in hospitality since 1990. Providing curated luxury experiences across Kosovo.",
       "bd-footer-discover": "Discover",
       "bd-footer-about": "About Us",
-      "bd-footer-rooms": "Rooms & Suites",
+      "bd-footer-rooms": "Rooms",
       "bd-footer-support": "Support",
       "bd-footer-contact": "Contact",
       "bd-footer-terms": "Terms of Service",
@@ -227,7 +227,7 @@
         "\u00a92026 Derand Hotel. Exzellenz in der Gastfreundschaft seit 1990. Kuratierte Luxuserlebnisse in ganz Kosovo.",
       "bd-footer-discover": "Entdecken",
       "bd-footer-about": "\u00dcber uns",
-      "bd-footer-rooms": "Zimmer & Suiten",
+      "bd-footer-rooms": "Zimmer",
       "bd-footer-support": "Support",
       "bd-footer-contact": "Kontakt",
       "bd-footer-terms": "Nutzungsbedingungen",
@@ -379,7 +379,7 @@
         "\u00a92026 Derand Hotel. Ekselenc\u00eb n\u00eb mikpritje q\u00eb nga 1990. P\u00ebrjetime luksoze t\u00eb kuruara n\u00eb t\u00eb gjith\u00eb Kosov\u00ebn.",
       "bd-footer-discover": "Eksploro",
       "bd-footer-about": "Rreth Nesh",
-      "bd-footer-rooms": "Dhomat & Suit\u00eb",
+      "bd-footer-rooms": "Dhomat",
       "bd-footer-support": "Mb\u00ebshtetje",
       "bd-footer-contact": "Kontakt",
       "bd-footer-terms": "Kushtet e Sh\u00ebrbimit",
@@ -503,21 +503,6 @@
     return text;
   }
 
-  var HEADER_FREEZE_ROOTS =
-    ".header, .offcanvas-menu-wrapper, #mobile-menu-wrap";
-
-  function freezeHeaderChrome() {
-    document.querySelectorAll(HEADER_FREEZE_ROOTS).forEach(function (root) {
-      root.querySelectorAll("[data-i18n]").forEach(function (node) {
-        if (!node.hasAttribute("data-i18n-chrome-frozen")) {
-          node.setAttribute("data-i18n-chrome-frozen", node.textContent);
-          node.removeAttribute("data-i18n");
-        }
-        node.textContent = node.getAttribute("data-i18n-chrome-frozen");
-      });
-    });
-  }
-
   function isDetailsScopedNode(node) {
     return (
       (!!node.closest(".booking-details") ||
@@ -571,10 +556,8 @@
   }
 
   function init() {
-    freezeHeaderChrome();
     applyPage(currentLang());
     window.addEventListener("load", function () {
-      freezeHeaderChrome();
       window.setTimeout(function () {
         applyPage(currentLang());
       }, 50);
@@ -584,7 +567,6 @@
       if (!btn) return;
       var lang = normalizeLang(btn.getAttribute("data-lang"));
       window.setTimeout(function () {
-        freezeHeaderChrome();
         applyPage(lang);
       }, 150);
     });
@@ -596,10 +578,6 @@
     applyPage: applyPage,
     init: init,
   };
-
-  if (document.querySelector(".header")) {
-    freezeHeaderChrome();
-  }
 
   document.addEventListener("DOMContentLoaded", init);
 })(window);

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="referrer" content="same-origin" />
+    <title>Ticket Admin Â· Derand Hotel</title>
+    <link rel="icon" href="favicon.ico?v=14" type="image/x-icon" sizes="any" />
+    <link rel="stylesheet" href="css/tickets-admin.css?v=20261014b" />
+  </head>
+  <body>
+    <div id="boot" class="boot-screen"><div class="spinner" aria-label="Loading"></div></div>
+
+    <!-- Sign in -->
+    <section id="login-view" class="auth" hidden>
+      <div class="auth__card">
+        <img class="auth__logo" src="img/Gemini_Generated_Image_bx7xllbx7xllbx7x.png" alt="Derand Hotel" width="756" height="263" />
+        <h1 class="auth__title">Festival Ticket Admin</h1>
+        <p class="auth__sub">Sign in to manage festival tickets.</p>
+        <form id="login-form" novalidate>
+          <label class="field"><span>Username</span>
+            <input class="input" name="username" autocomplete="username" autocapitalize="none" spellcheck="false" required />
+          </label>
+          <label class="field"><span>Password</span>
+            <span class="pw-wrap">
+              <input class="input" name="password" type="password" autocomplete="current-password" required />
+              <button type="button" data-toggle-pw aria-label="Show password"></button>
+            </span>
+          </label>
+          <div class="form-error" id="login-error" role="alert"></div>
+          <button class="btn btn--primary btn--block" type="submit">Sign in</button>
+        </form>
+        <p class="auth__foot">Derand Hotel Â· Prishtina â€” authorised staff and festival partners only</p>
+      </div>
+    </section>
+
+    <!-- Forced password change (first sign-in) -->
+    <section id="password-view" class="auth" hidden>
+      <div class="auth__card">
+        <img class="auth__logo" src="img/Gemini_Generated_Image_bx7xllbx7xllbx7x.png" alt="Derand Hotel" width="756" height="263" />
+        <h1 class="auth__title">Choose your own password</h1>
+        <p class="auth__sub">For security, replace the starting password before you continue.</p>
+        <form id="first-password-form" novalidate>
+          <label class="field"><span>Current password</span>
+            <input class="input" name="current" type="password" autocomplete="current-password" required />
+          </label>
+          <label class="field"><span>New password</span>
+            <span class="pw-wrap">
+              <input class="input" name="new" type="password" autocomplete="new-password" minlength="8" required />
+              <button type="button" data-toggle-pw aria-label="Show password"></button>
+            </span>
+            <small>At least 8 characters.</small>
+          </label>
+          <label class="field"><span>Repeat new password</span>
+            <input class="input" name="repeat" type="password" autocomplete="new-password" required />
+          </label>
+          <div class="form-error" id="first-password-error" role="alert"></div>
+          <button class="btn btn--primary btn--block" type="submit">Save password and continue</button>
+          <button class="btn btn--ghost btn--block" type="button" data-logout>Sign out</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- App -->
+    <div id="shell" class="shell" hidden>
+      <aside class="side" id="side" aria-label="Main navigation">
+        <a class="side__brand" href="#/overview">
+          <span class="side__mark">D</span>
+          <span><b>Derand Tickets</b><small>Admin panel</small></span>
+        </a>
+        <nav class="side__group" id="nav-main"></nav>
+        <div class="side__group">
+          <div class="side__label">Festivals</div>
+          <nav id="nav-festivals"></nav>
+        </div>
+        <nav class="side__group" id="nav-admin"></nav>
+        <div class="side__foot">
+          <div class="me" id="me"></div>
+          <a class="nav-link" href="#/account"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>My account</span></a>
+          <button class="nav-link" type="button" data-logout><svg class="ic" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/></svg><span>Sign out</span></button>
+        </div>
+      </aside>
+      <div class="main">
+        <header class="topbar">
+          <button class="btn btn--ghost btn--icon menu-btn" type="button" id="menu-btn" aria-label="Open menu"><svg class="ic" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+          <h1 id="page-title">Overview</h1>
+          <span class="muted hide-sm" id="updated-at"></span>
+          <button class="btn btn--sm" type="button" id="refresh-btn" title="Refresh"><svg class="ic" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg><span class="hide-sm">Refresh</span></button>
+        </header>
+        <main class="content" id="view"></main>
+      </div>
+    </div>
+
+    <div id="modal-root"></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="js/tickets-admin.js?v=20261014b"></script>
+  </body>
+</html>

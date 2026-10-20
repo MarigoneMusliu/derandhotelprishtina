@@ -336,21 +336,6 @@
     return text;
   }
 
-  var HEADER_FREEZE_ROOTS =
-    ".header, .offcanvas-menu-wrapper, #mobile-menu-wrap";
-
-  function freezeHeaderChrome() {
-    document.querySelectorAll(HEADER_FREEZE_ROOTS).forEach(function (root) {
-      root.querySelectorAll("[data-i18n]").forEach(function (node) {
-        if (!node.hasAttribute("data-i18n-chrome-frozen")) {
-          node.setAttribute("data-i18n-chrome-frozen", node.textContent);
-          node.removeAttribute("data-i18n");
-        }
-        node.textContent = node.getAttribute("data-i18n-chrome-frozen");
-      });
-    });
-  }
-
   function isBookScopedNode(node) {
     return (
       !!node.closest(".booking-ui") &&
@@ -402,10 +387,8 @@
   }
 
   function init() {
-    freezeHeaderChrome();
     applyPage(currentLang());
     window.addEventListener("load", function () {
-      freezeHeaderChrome();
       window.setTimeout(function () {
         applyPage(currentLang());
       }, 50);
@@ -415,7 +398,6 @@
       if (!btn) return;
       var lang = normalizeLang(btn.getAttribute("data-lang"));
       window.setTimeout(function () {
-        freezeHeaderChrome();
         applyPage(lang);
       }, 150);
     });
@@ -427,10 +409,6 @@
     applyPage: applyPage,
     init: init,
   };
-
-  if (document.querySelector(".header")) {
-    freezeHeaderChrome();
-  }
 
   document.addEventListener("DOMContentLoaded", init);
 })(window);

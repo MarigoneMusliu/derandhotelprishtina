@@ -1,24 +1,29 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Looking for a hotel in Prishtina? Derand Hotel offers modern rooms, free Wi-Fi, and the best location." />
-    <meta name="keywords" content="Hiroto, unica, creative, html" />
+    <meta name="description" content="Derand Hotel is a modern boutique hotel in central Prishtina, Kosovo, with elegant rooms and suites, NOYA restaurant, RINU MedSpa and free Wi-Fi." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Derand Hotel</title>
+    <title>Derand Hotel Prishtina | Boutique Hotel in Pristina, Kosovo</title>
     <link rel="icon" href="favicon.ico?v=14" type="image/x-icon" sizes="any" />
-    <link rel="canonical" href="https://www.derandhotel.com/index.html" />
-    <link rel="alternate" hreflang="en" href="https://www.derandhotel.com/" />
-    <link rel="alternate" hreflang="de" href="https://www.derandhotel.com/" />
-    <link rel="alternate" hreflang="al" href="https://www.derandhotel.com/" />
-    <link rel="alternate" hreflang="x-default" href="https://www.derandhotel.com/" />
+    <link rel="canonical" href="https://www.derandhotel.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Derand Hotel" />
+    <meta property="og:title" content="Derand Hotel Prishtina | Boutique Hotel in Pristina, Kosovo" />
+    <meta property="og:description" content="Derand Hotel is a modern boutique hotel in central Prishtina, Kosovo, with elegant rooms and suites, NOYA restaurant, RINU MedSpa and free Wi-Fi." />
+    <meta property="og:url" content="https://www.derandhotel.com/" />
+    <meta property="og:image" content="https://www.derandhotel.com/img/indexx.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+
 
     <link rel="preload" as="image" href="https://www.derandhotel.com/img/indexx.webp" fetchpriority="high" />
 
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="css/plugins.min.css" type="text/css" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css?v=20261020e1" type="text/css" />
+    <link rel="preload" as="font" type="font/woff2" href="fonts/miama.woff2" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,6 +31,75 @@
       rel="stylesheet"
     />
     <style>
+      /* Homepage header stays clear. The page is milky so the white menu still reads. */
+      body.sacher-home {
+        padding-top: 0 !important;
+        background: #f3eee6 !important;
+      }
+
+      body.sacher-home .header__nav__option {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0) 100%) !important;
+        box-shadow: none !important;
+      }
+
+      body.sacher-home .header__nav,
+      body.sacher-home .header__menu {
+        background: transparent !important;
+        box-shadow: none !important;
+      }
+
+      body.sacher-home .header__logo {
+        padding-top: 14px;
+        padding-bottom: 14px;
+      }
+
+      body.sacher-home .header__logo a img,
+      body.sacher-home .offcanvas__logo img {
+        max-height: 72px !important;
+        width: auto;
+        height: auto;
+      }
+
+      @media (max-width: 991px) {
+        body.sacher-home .header__logo a img,
+        body.sacher-home .offcanvas__logo img {
+          max-height: 54px !important;
+        }
+      }
+
+      body.sacher-home .sacher-mozart,
+      body.sacher-home .sacher-events,
+      body.sacher-home .sacher-facilities,
+      body.sacher-home .sacher-social {
+        background: #f3eee6 !important;
+      }
+
+      body.sacher-home .header__menu .menu__class > li > a,
+      body.sacher-home .header__menu .menu__class > li:hover > a,
+      body.sacher-home .header__menu .menu__class > li > a:hover {
+        color: #fff !important;
+        font-weight: 700 !important;
+        text-shadow: 0 1px 2px rgba(40, 30, 20, 0.45);
+      }
+
+      body.sacher-home .header__lang__selector .lang-btn,
+      body.sacher-home .mobile__lang__selector .lang-btn {
+        color: #fff !important;
+        font-weight: 700 !important;
+        text-shadow: 0 1px 2px rgba(40, 30, 20, 0.45);
+      }
+
+      body.sacher-home .header__lang__selector .lang-btn.lang-active,
+      body.sacher-home .mobile__lang__selector .lang-btn.lang-active {
+        color: #fff !important;
+        border-bottom-color: #fff !important;
+      }
+
+      body.sacher-home .header__lang__selector .lang-btn:hover,
+      body.sacher-home .mobile__lang__selector .lang-btn:hover {
+        color: #fff !important;
+      }
+
       /* Entire index page: text uses Noto Serif only (icon fonts preserved). */
       body.policy-font-noto-serif.sacher-home,
       body.policy-font-noto-serif.sacher-home h1,
@@ -55,6 +129,23 @@
       body.policy-font-noto-serif.sacher-home [class*=" icon_"],
       body.policy-font-noto-serif.sacher-home .elegant-icons {
         font-family: FontAwesome !important;
+      }
+
+      @font-face {
+        font-family: "Miama";
+        src: url("fonts/miama.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      html
+        body.policy-font-noto-serif.sacher-home
+        .sacher-hero__content
+        :is(h1.traviata-hero-title, h1.traviata-hero-title span):not(.fa):not([class^="fa-"]):not([class*=" fa-"]) {
+        font-family: "Miama", "Noto Serif", cursive !important;
+        letter-spacing: 0 !important;
+        font-weight: 400 !important;
       }
 
       .sacher-home .sacher-hero__content {
@@ -156,13 +247,59 @@
         opacity: 0.95;
       }
 
+      .sacher-home .sacher-hero__slider {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+      }
+
+      .sacher-home .sacher-hero__video {
+        transform: scale(1.62);
+        transform-origin: center center;
+        animation: homeHeroPullBack 2.15s cubic-bezier(0.22, 0.61, 0.36, 1) 0.08s forwards;
+        will-change: transform;
+      }
+
+      @keyframes homeHeroPullBack {
+        to {
+          transform: scale(1);
+        }
+      }
+
+      .sacher-home .sacher-hero__content .hero-divider,
+      .sacher-home .sacher-hero__content .hero-subtitle,
+      .sacher-home .sacher-hero__content .hero-more {
+        opacity: 0;
+        transform: translateY(22px);
+        animation: homeHeroCopy 0.95s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+      }
+
+      .sacher-home .sacher-hero__content .hero-divider {
+        animation-delay: 0.98s;
+      }
+
+      .sacher-home .sacher-hero__content .hero-subtitle {
+        animation-delay: 1.14s;
+      }
+
+      .sacher-home .sacher-hero__content .hero-more {
+        animation-delay: 1.34s;
+      }
+
+      @keyframes homeHeroCopy {
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+
       .sacher-home .sacher-hero__content .traviata-hero-title .hero-letter {
         display: inline-block;
         opacity: 0;
-        transform: translateY(14px);
+        transform: translateY(18px);
         filter: blur(1.5px);
-        animation: heroLetterIn 0.55s ease-out forwards;
-        animation-delay: calc(var(--i) * 0.045s);
+        animation: heroLetterIn 0.7s ease-out forwards;
+        animation-delay: calc(0.78s + var(--i) * 0.07s);
       }
 
       .sacher-home .sacher-hero__content .traviata-hero-title .hero-letter--space {
@@ -274,12 +411,75 @@
         }
       }
 
+      .sacher-home .scroll-reveal,
+      .sacher-home .scroll-reveal.index-scroll-slow,
+      .sacher-home .scroll-reveal.from-left,
+      .sacher-home .scroll-reveal.from-right,
+      .sacher-home .scroll-reveal.index-scroll-slow.from-left,
+      .sacher-home .scroll-reveal.index-scroll-slow.from-right {
+        opacity: 0;
+        transform: translate3d(0, 46px, 0);
+        transition:
+          opacity 1.05s cubic-bezier(0.22, 0.61, 0.36, 1),
+          transform 1.2s cubic-bezier(0.22, 0.61, 0.36, 1);
+      }
+
+      .sacher-home .scroll-reveal.is-visible {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+
+      .sacher-home .sacher-mozart__image,
+      .sacher-home .sacher-feature__left,
+      .sacher-home .sacher-facilities__visual {
+        overflow: hidden;
+      }
+
+      .sacher-home .sacher-card.set-bg {
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+      }
+
+      .sacher-home .scroll-reveal img,
+      .sacher-home .scroll-reveal video {
+        transform: scale(1.14);
+        transform-origin: center center;
+        transition: transform 1.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+      }
+
+      .sacher-home .scroll-reveal.is-visible img,
+      .sacher-home .scroll-reveal.is-visible video {
+        transform: scale(1);
+      }
+
+      .sacher-home section.set-bg.scroll-reveal {
+        background-size: cover;
+      }
+
       @media (prefers-reduced-motion: reduce) {
+        .sacher-home .sacher-hero__video,
+        .sacher-home .sacher-hero__content .hero-divider,
+        .sacher-home .sacher-hero__content .hero-subtitle,
+        .sacher-home .sacher-hero__content .hero-more,
         .sacher-home .sacher-hero__content .traviata-hero-title .hero-letter {
           animation: none;
           opacity: 1;
           transform: none;
           filter: none;
+        }
+
+        .sacher-home .scroll-reveal,
+        .sacher-home .scroll-reveal img,
+        .sacher-home .scroll-reveal video,
+        .sacher-home section.set-bg.scroll-reveal {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+
+        .sacher-home .sacher-card.set-bg {
+          background-size: cover !important;
         }
       }
 
@@ -329,13 +529,15 @@
 {
   "@context": "https://schema.org",
   "@type": "Hotel",
-  "name": "Hotel Derand",
+  "name": "Derand Hotel",
+  "description": "Modern boutique hotel in central Prishtina, Kosovo, with elegant rooms and suites, NOYA restaurant and RINU MedSpa.",
   "image": [
-    "https://derandhotel.com/img/hand1.webp",
-    "https://derandhotel.com/img/home-about/home-about.webp"
+    "https://www.derandhotel.com/img/indexx.webp",
+    "https://www.derandhotel.com/img/hand1.webp",
+    "https://www.derandhotel.com/img/home-about/home-about.webp"
   ],
-  "@id": "https://derandhotel.com",
-  "url": "https://derandhotel.com",
+  "@id": "https://www.derandhotel.com/#hotel",
+  "url": "https://www.derandhotel.com/",
   "telephone": "+38343727272",
   "email": "info@derandhotel.com",
   "address": {
@@ -351,8 +553,16 @@
     "longitude": 21.1655
   },
   "priceRange": "$$",
-  "amenities": ["Free WiFi", "Parking", "Breakfast Included", "Air Conditioning"],
-  "starRating": {
+  "priceRange": "€€",
+  "checkinTime": "15:00",
+  "checkoutTime": "11:00",
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Free WiFi", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Valet parking", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Restaurant", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Spa", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Air conditioning", "value": true }
+  ],
     "@type": "Rating",
     "ratingValue": "4"
   }
@@ -369,13 +579,13 @@
     <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu-wrapper">
       <div class="offcanvas__logo">
-        <a href="./index.html"><img src="img/logoo.webp" alt="Hotel in Prishtina"  loading="lazy" decoding="async" width="756" height="263"></a>
+        <a href="/Home"><img src="img/Gemini_Generated_Image_bx7xllbx7xllbx7x.png" alt="Derand Hotel" width="1717" height="608"></a>
       </div>
       <div id="mobile-menu-wrap"></div>
 
       <div class="offcanvas_btn_widget">
         <a
-          href="book.html"
+          href="/Book"
          
          
           ><span data-i18n="book-now">BOOK NOW</span>
@@ -400,9 +610,9 @@
           <div class="row">
             <div class="col-lg-2">
               <div class="header__logo">
-                <a href="./index.html"
-                  ><img src="img/logoo.webp" alt="Hotels in Pristina"
-                 loading="lazy" decoding="async" width="756" height="263"></a>
+                <a href="/Home"
+                  ><img src="img/Gemini_Generated_Image_bx7xllbx7xllbx7x.png" alt="Derand Hotel"
+                 width="1717" height="608"></a>
               </div>
             </div>
             <div class="col-lg-10">
@@ -410,32 +620,32 @@
                 <nav class="header__menu">
                   <ul class="menu__class">
                     <li>
-                      <a href="rooms.html" data-i18n="nav-rooms"
-                        >ROOMS & SUITES</a
+                      <a href="/Rooms" data-i18n="nav-rooms"
+                        >ROOMS</a
                       >
                       <ul class="dropdown">
                         <li>
-                          <a href="junior.html" data-i18n="nav-room-1"
+                          <a href="/Junior" data-i18n="nav-room-1"
                             >JUNIOR SUITE</a
                           >
                         </li>
                         <li>
-                          <a href="deluxe-double.html" data-i18n="nav-room-2"
+                          <a href="/Deluxe-Double" data-i18n="nav-room-2"
                             >DELUXE DOUBLE ROOM</a
                           >
                         </li>
                         <li>
-                          <a href="superior-twin.html" data-i18n="nav-room-3"
+                          <a href="/Superior-Twin" data-i18n="nav-room-3"
                             >SUPERIOR TWIN ROOM</a
                           >
                         </li>
                         <li>
-                          <a href="premium-double.html" data-i18n="nav-room-4"
+                          <a href="/Premium-Double" data-i18n="nav-room-4"
                             >PREMIUM DOUBLE ROOM</a
                           >
                         </li>
                         <li>
-                          <a href="superior-double.html" data-i18n="nav-room-5"
+                          <a href="/Superior-Double" data-i18n="nav-room-5"
                             >SUPERIOR DOUBLE ROOM</a
                           >
                         </li>
@@ -443,20 +653,20 @@
                     </li>
 
                     <li>
-                      <a href="noya.html" data-i18n="nav-restaurant"
-                        >RESTAURANT & BAR</a
+                      <a href="/Noya" data-i18n="nav-restaurant"
+                        >RESTAURANTS</a
                       >
                       <ul class="dropdown">
                         <li>
                           <a
-                            href="noya.html"
+                            href="/Noya"
                             data-i18n="nav-restaurant-1"
                             >NOYA</a
                           >
                         </li>
                         <li>
                           <a
-                            href="omma.html"
+                            href="/Omma"
                             data-i18n="nav-restaurant-2"
                             >OMMA-Cafe & Buffet</a
                           >
@@ -465,23 +675,24 @@
                     </li>
 
                     <li>
+                      <a href="/ExploreDerand" data-i18n="nav-explore-derand"
+                        >EXPLORE</a
+                      >
+                    </li>
+                    <li><a href="/ConferenceHall" data-i18n="nav-event-hall">CONFERENCE HALL</a></li>
+                    <li>
                       <a href="#" data-i18n="nav-activities"
                         >ACTIVITIES</a
                       >
                       <ul class="dropdown">
                         <li>
-                          <a href="sunnyhill.html" data-i18n="nav-offer-1"
-                            >SUNNY HILL FESTIVAL</a
-                          >
-                        </li>
-                        <li>
-                          <a href="rinu.html" data-i18n="nav-activity-2"
+                          <a href="/Rinu" data-i18n="nav-activity-2"
                             >RINU MEDSPA</a
                           >
                         </li>
                         <li>
-                          <a href="explore.html" data-i18n="nav-activity-explore"
-                            >Explore Prishtina</a
+                          <a href="/Derandtickets" data-i18n="nav-derand-tickets"
+                            >DERAND TICKETS</a
                           >
                         </li>
                       </ul>
@@ -490,13 +701,8 @@
                     <!-- <li>
                       <a href="#" data-i18n="nav-offers">OFFERS</a>
                       <ul class="dropdown">
-                        <li>
-                          <a href="sunnyhill.html" data-i18n="nav-offer-1"
-                            >SUNNY HILL FESTIVAL</a
-                          >
-                        </li>
-                        <li>
-                          <a href="explore.html" data-i18n="nav-activity-explore"
+<li>
+                          <a href="/Explore" data-i18n="nav-activity-explore"
                             >Explore Prishtina</a
                           >
                         </li>
@@ -504,25 +710,25 @@
                     </li> -->
 
                     <li>
-                      <a href="extra.html">Concierge</a>
+                      <a href="/Concierge">Concierge</a>
                     </li>
 <!-- <li>
-                      <a href="extra.html">EXTRA</a>
+                      <a href="/Concierge">EXTRA</a>
                     </li>  -->
 
                     <li class="has-dropdown">
                       
-  <a href="contact.html" data-i18n="nav-inquiry">CONTACT</a>
+  <a href="/Contact" data-i18n="nav-inquiry">CONTACT</a>
 
   <ul class="dropdown">
     <li>
-      <a href="contact.html" data-i18n="nav-contact-us">CONTACT US</a>
+      <a href="/Contact" data-i18n="nav-contact-us">CONTACT US</a>
     </li>
     <li>
-      <a href="careers.html" data-i18n="footer-link-5">Careers</a>
+      <a href="/Careers" data-i18n="footer-link-5">Careers</a>
     </li>
     <li>
-      <a href="faqs.html" data-i18n="nav-faqs">FAQS</a>
+      <a href="/Faqs" data-i18n="nav-faqs">FAQS</a>
     </li>
   </ul>
 </li>
@@ -539,7 +745,7 @@
 
                 <div class="header__nav__widget">
                   <a
-                    href="book.html"
+                    href="/Book"
                    
                    
                   >
@@ -616,7 +822,7 @@
             data-reveal-delay="0.1s"
           >
             <img
-              src="img/lenta.png"
+              src="img/lenta.webp"
               alt="Best hotels in Prishtina"
               autoplay
               muted
@@ -686,7 +892,7 @@
           <div class="sacher-events__viewport">
             <div class="sacher-events__track">
               <div class="sacher-events__item">
-                <a href="rinu.html" style="display:block;text-decoration:none;color:inherit;">
+                <a href="/Rinu" style="display:block;text-decoration:none;color:inherit;">
                   <article
                     class="sacher-card set-bg"
                     data-setbg="img/emp.webp"
@@ -704,7 +910,7 @@
                 </a>
               </div>
               <div class="sacher-events__item">
-                <a href="noya.html" style="display:block;text-decoration:none;color:inherit;">
+                <a href="/Noya" style="display:block;text-decoration:none;color:inherit;">
                   <article
                     class="sacher-card set-bg"
                     data-setbg="img/noyaa13.webp"
@@ -824,7 +1030,7 @@
           >
           <h3 data-parallax="y" data-parallax-speed="0.14" data-i18n="index-rooms-title">Rooms and Suites</h3>
           <a
-            href="rooms.html"
+            href="/Rooms"
             class="sacher-link"
             data-parallax="y"
             data-parallax-speed="0.11"
@@ -884,7 +1090,7 @@
                 style meets the art of refined hospitality.
               </p>
               <a
-                href="rooms.html"
+                href="/Rooms"
                 class="sacher-link"
                 data-parallax="y"
                 data-parallax-speed="0.08"
@@ -912,7 +1118,7 @@
           <span data-parallax="y" data-parallax-speed="0.11" data-i18n="index-health-kicker">HELLO Prishtina</span>
           <h3 data-parallax="y" data-parallax-speed="0.12" data-i18n="index-health-title">Stay. Relax. Enjoy.</h3>
           <a
-            href="omma.html"
+            href="/Omma"
             class="sacher-link"
             data-parallax="y"
             data-parallax-speed="0.1"
@@ -1325,7 +1531,7 @@
         <div class="guest-testimonials__cta-wrap scroll-reveal index-scroll-slow" data-reveal-delay="0.22s">
           <a
             class="guest-testimonials__cta"
-            href="book.html"
+            href="/Book"
            
            
             data-i18n="index-book-room"
@@ -1358,7 +1564,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                aria-label="Hotel in prishtina">
-                <img src="img/lenta1.png" alt="Best hotel in prishtina"  loading="lazy" decoding="async">
+                <img src="img/lenta1.webp" alt="Best hotel in prishtina"  loading="lazy" decoding="async">
               </a>
               <a
                 class="sacher-instagram__tile"
@@ -1537,11 +1743,11 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__brandbar">
-          <a href="index.html" class="footer__brandbar__logo">
-            <img src="img/logo3.webp" alt="best hotel in pristina"  loading="lazy" decoding="async">
+          <a href="/Home" class="footer__brandbar__logo">
+            <img src="img/Gemini_Generated_Image_bx7xllbx7xllbx7x.png" alt="best hotel in pristina"  loading="lazy" decoding="async">
           </a>
           <span class="footer__brandbar__divider"></span>
-          <a href="index.html" class="footer__brandbar__partner">
+          <a href="/Home" class="footer__brandbar__partner">
             <span data-i18n="footer-powered">Powered by</span>
             <img src="img/logo/logo-1.webp" alt="Best hotels in Prishtina"  loading="lazy" decoding="async">
           </a>
@@ -1649,46 +1855,46 @@
                 <div class="footer__links__grid">
                   <ul>
                     <li>
-                      <a href="contact.html" data-i18n="footer-link-1"
+                      <a href="/Contact" data-i18n="footer-link-1"
                         >Contact Us
                       </a>
                     </li>
                     <li>
-                      <a href="our-location.html" data-i18n="footer-link-2"
+                      <a href="/Our-Location" data-i18n="footer-link-2"
                         >Derand History</a
                       >
                     </li>
                     <li>
-                      <a href="termsofservices.html" data-i18n="footer-link-3"
+                      <a href="/Termsofservices" data-i18n="footer-link-3"
                         >Terms of Service</a
                       >
                     </li>
                     <li>
-                      <a href="guestapp.html" data-i18n="footer-link-4">Derand Magazine</a>
+                      <a href="/Guestapp" data-i18n="footer-link-4">Derand Magazine</a>
                     </li>
                   </ul>
                   <ul>
                     <li>
-                      <a href="careers.html" data-i18n="footer-link-5">Careers</a>
+                      <a href="/Careers" data-i18n="footer-link-5">Careers</a>
                     </li>
                     <li>
-                      <a href="faqs.html" data-i18n="footer-link-6"
+                      <a href="/Faqs" data-i18n="footer-link-6"
                         >FAQs</a
                       >
                     </li>
                     <li>
-                      <a href="privacypolicy.html" data-i18n="footer-link-7"
+                      <a href="/Privacypolicy" data-i18n="footer-link-7"
                         >Privacy Policy</a
                       >
                     </li>
-                    <li><a href="termsofservices.html" data-i18n="footer-link-8">Payments</a></li>
+                    <li><a href="/Termsofservices" data-i18n="footer-link-8">Payments</a></li>
                   </ul>
                   <ul>
                     <li>
-                      <a href="guestapp.html" data-i18n="footer-link-9">Guest App </a>
+                      <a href="/Guestapp" data-i18n="footer-link-9">Guest App </a>
                     </li>
                     <li>
-                      <a href="our-location.html" data-i18n="footer-link-11">Our Location</a>
+                      <a href="/Our-Location" data-i18n="footer-link-11">Our Location</a>
                     </li>
                   </ul>
                 </div>
@@ -1745,7 +1951,7 @@
     <script src="js/jquery.slicknav.js" defer></script>
     <script src="js/owl.carousel.min.js" defer></script>
     <script src="js/site-onboarding-sequence.js?v=9" defer></script>
-    <script src="js/main.js?v=20260515-1" defer></script>
+    <script src="js/main.js?v=20261016c" defer></script>
         <script src="js/site-whatsapp.js?v=9" defer></script>
     <!-- Tidio chat widget (disabled)
     <script src="js/tidio-left-position.js?v=2" defer></script>
@@ -1812,13 +2018,19 @@
           var text = (title.textContent || "").trim();
           if (!text) return;
           title.textContent = "";
-          var index = 0;
-          for (var i = 0; i < text.length; i++) {
-            var ch = text[i];
+          // Whole words, not single letters: Miama is a joined script and splitting letters breaks the joins.
+          var words = text.split(/\s+/);
+          for (var i = 0; i < words.length; i++) {
+            if (i > 0) {
+              var gap = document.createElement("span");
+              gap.className = "hero-letter hero-letter--space";
+              gap.textContent = "\u00A0";
+              title.appendChild(gap);
+            }
             var span = document.createElement("span");
-            span.className = "hero-letter" + (ch === " " ? " hero-letter--space" : "");
-            span.style.setProperty("--i", String(index++));
-            span.textContent = ch === " " ? "\u00A0" : ch;
+            span.className = "hero-letter";
+            span.style.setProperty("--i", String(i * 3));
+            span.textContent = words[i];
             title.appendChild(span);
           }
         }

@@ -956,6 +956,16 @@ body {
   transition: all 0.3s;
 }
 
+@media (max-width: 1199.98px) {
+  .header__menu ul li:last-child > .dropdown {
+    left: auto;
+    right: 0;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}
+
 .header__menu ul li .dropdown li {
   display: block;
   margin-right: 0;
@@ -7077,28 +7087,14 @@ body {
 .sacher-home .header .container,
 .sacher-home .header__nav__option > .container {
   max-width: 100%;
-  padding-left: 0;
-  padding-right: 0;
 }
 
 .sacher-home .header__top {
   display: none;
 }
 
-.sacher-home .header__logo {
-  padding: 10px 0 10px 16px;
-}
-
-.sacher-home .header__nav__widget {
-  padding-right: 5px;
-}
-
 .sacher-home {
   padding-top: 84px;
-}
-
-.sacher-home .header__nav {
-  padding: 10px 0;
 }
 
 .sacher-home .sacher-hero {
@@ -9627,6 +9623,13 @@ body {
 
 .sacher-instagram__carousel .owl-dots {
   display: none;
+}
+
+@media (max-width: 1199.98px) {
+  .sacher-instagram__carousel .owl-nav {
+    left: 8px;
+    right: 8px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -12510,7 +12513,7 @@ body {
 
   #mobile-menu-wrap
     .slicknav_nav
-    > li:nth-child(-n + 4)
+    > li:nth-child(-n + 5)
     > span.slicknav_parent-link
     > a:not(.slicknav_item),
   #mobile-menu-wrap .slicknav_nav > li:nth-child(1) > a.slicknav_row,
@@ -12520,18 +12523,20 @@ body {
   #mobile-menu-wrap .slicknav_nav > li:nth-child(3) > a.slicknav_row,
   #mobile-menu-wrap .slicknav_nav > li:nth-child(3) > a.slicknav_row a,
   #mobile-menu-wrap .slicknav_nav > li:nth-child(4) > a.slicknav_row,
-  #mobile-menu-wrap .slicknav_nav > li:nth-child(4) > a.slicknav_row a {
+  #mobile-menu-wrap .slicknav_nav > li:nth-child(4) > a.slicknav_row a,
+  #mobile-menu-wrap .slicknav_nav > li:nth-child(5) > a.slicknav_row,
+  #mobile-menu-wrap .slicknav_nav > li:nth-child(5) > a.slicknav_row a {
     color: #b17256 !important;
   }
 
   #mobile-menu-wrap
     .slicknav_nav
-    > li:nth-child(-n + 4)
+    > li:nth-child(-n + 5)
     > span.slicknav_parent-link:hover
     > a:not(.slicknav_item),
   #mobile-menu-wrap
     .slicknav_nav
-    > li:nth-child(-n + 4)
+    > li:nth-child(-n + 5)
     > span.slicknav_parent-link:focus-within
     > a:not(.slicknav_item),
   #mobile-menu-wrap .slicknav_nav > li:nth-child(1) > a.slicknav_row:hover,
@@ -12542,6 +12547,8 @@ body {
   #mobile-menu-wrap .slicknav_nav > li:nth-child(3) > a.slicknav_row:hover a,
   #mobile-menu-wrap .slicknav_nav > li:nth-child(4) > a.slicknav_row:hover,
   #mobile-menu-wrap .slicknav_nav > li:nth-child(4) > a.slicknav_row:hover a,
+  #mobile-menu-wrap .slicknav_nav > li:nth-child(5) > a.slicknav_row:hover,
+  #mobile-menu-wrap .slicknav_nav > li:nth-child(5) > a.slicknav_row:hover a,
   #mobile-menu-wrap .slicknav_nav > li:nth-child(1) > a.slicknav_row:focus,
   #mobile-menu-wrap .slicknav_nav > li:nth-child(1) > a.slicknav_row:focus a,
   #mobile-menu-wrap .slicknav_nav > li:nth-child(2) > a.slicknav_row:focus,
@@ -12549,21 +12556,23 @@ body {
   #mobile-menu-wrap .slicknav_nav > li:nth-child(3) > a.slicknav_row:focus,
   #mobile-menu-wrap .slicknav_nav > li:nth-child(3) > a.slicknav_row:focus a,
   #mobile-menu-wrap .slicknav_nav > li:nth-child(4) > a.slicknav_row:focus,
-  #mobile-menu-wrap .slicknav_nav > li:nth-child(4) > a.slicknav_row:focus a {
+  #mobile-menu-wrap .slicknav_nav > li:nth-child(4) > a.slicknav_row:focus a,
+  #mobile-menu-wrap .slicknav_nav > li:nth-child(5) > a.slicknav_row:focus,
+  #mobile-menu-wrap .slicknav_nav > li:nth-child(5) > a.slicknav_row:focus a {
     background: rgba(177, 114, 86, 0.1) !important;
     color: #8f543e !important;
   }
 
-  #mobile-menu-wrap .slicknav_nav > li:nth-child(n + 5) > a.slicknav_row:hover,
+  #mobile-menu-wrap .slicknav_nav > li:nth-child(n + 6) > a.slicknav_row:hover,
   #mobile-menu-wrap
     .slicknav_nav
-    > li:nth-child(n + 5)
+    > li:nth-child(n + 6)
     > a.slicknav_row:hover
     a,
-  #mobile-menu-wrap .slicknav_nav > li:nth-child(n + 5) > a.slicknav_row:focus,
+  #mobile-menu-wrap .slicknav_nav > li:nth-child(n + 6) > a.slicknav_row:focus,
   #mobile-menu-wrap
     .slicknav_nav
-    > li:nth-child(n + 5)
+    > li:nth-child(n + 6)
     > a.slicknav_row:focus
     a {
     background: rgba(0, 0, 0, 0.04) !important;
@@ -12601,14 +12610,42 @@ body {
     color: #1a1a1a !important;
   }
 
-  #mobile-menu-wrap .slicknav_nav > li:nth-child(-n + 4) .slicknav_arrow {
+  #mobile-menu-wrap .slicknav_nav > li:nth-child(-n + 5) .slicknav_arrow {
     color: #b17256 !important;
     text-shadow: none !important;
   }
 
-  #mobile-menu-wrap .slicknav_nav > li:nth-child(n + 5) .slicknav_arrow {
+  #mobile-menu-wrap .slicknav_nav > li:nth-child(n + 6) .slicknav_arrow {
     color: #1a1a1a !important;
     text-shadow: none !important;
+  }
+
+  #mobile-menu-wrap .slicknav_nav a[data-i18n="nav-explore-derand"],
+  #mobile-menu-wrap .slicknav_nav > li > a[href*="explorederand.html"],
+  #mobile-menu-wrap .slicknav_nav > li > a.slicknav_row[href*="explorederand.html"],
+  #mobile-menu-wrap .slicknav_nav > li > a[href*="extra.html"],
+  #mobile-menu-wrap .slicknav_nav > li > a.slicknav_row[href*="extra.html"] {
+    color: #b17256 !important;
+  }
+
+  #mobile-menu-wrap .slicknav_nav a[data-i18n="nav-explore-derand"]:hover,
+  #mobile-menu-wrap .slicknav_nav a[data-i18n="nav-explore-derand"]:focus,
+  #mobile-menu-wrap .slicknav_nav > li > a[href*="explorederand.html"]:hover,
+  #mobile-menu-wrap .slicknav_nav > li > a[href*="explorederand.html"]:focus,
+  #mobile-menu-wrap
+    .slicknav_nav
+    > li
+    > a.slicknav_row[href*="explorederand.html"]:hover,
+  #mobile-menu-wrap
+    .slicknav_nav
+    > li
+    > a.slicknav_row[href*="explorederand.html"]:focus,
+  #mobile-menu-wrap .slicknav_nav > li > a[href*="extra.html"]:hover,
+  #mobile-menu-wrap .slicknav_nav > li > a[href*="extra.html"]:focus,
+  #mobile-menu-wrap .slicknav_nav > li > a.slicknav_row[href*="extra.html"]:hover,
+  #mobile-menu-wrap .slicknav_nav > li > a.slicknav_row[href*="extra.html"]:focus {
+    background: rgba(177, 114, 86, 0.1) !important;
+    color: #8f543e !important;
   }
 
   #mobile-menu-wrap .slicknav_arrow {
@@ -12967,7 +13004,7 @@ body.derand-tidio-enabled #tidio-chat iframe {
     overflow-x: hidden !important;
   }
 
-  body:has(> .header):not(.noya-reborn):not(.omma-page):not(
+  body:has(> .header):not(.noya-reborn):not(.omma-page):not(.contact-page-traviata):not(.rooms-page):not(
       .sacher-home:has(.sacher-hero)
     ):not(.sacher-home:has(.extra-hero)) {
     padding-top: 74px !important;
@@ -13035,4 +13072,531 @@ body.derand-tidio-enabled #tidio-chat iframe {
     line-height: 1 !important;
     color: #222222 !important;
   }
+}
+
+/* ========== Desktop header: keep logo + menu on one line in every language (DE/AL labels are longer) ========== */
+@media (min-width: 992px) {
+  .header__nav__option .row {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+
+  .header__nav__option .col-lg-10 {
+    min-width: 0;
+  }
+
+  .header__menu > ul,
+  .header__menu > ul > li > a {
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  body:not(.noya-reborn) .header__menu > ul > li {
+    margin-right: clamp(8px, calc(5vw - 52px), 18px);
+  }
+
+  body:not(.noya-reborn) .header__menu > ul > li:last-child {
+    margin-right: 0;
+  }
+}
+
+/* Starts at 1399px so zoomed / fractional viewports between the 1399px and 1400px breakpoints are covered. */
+@media (min-width: 1399px) {
+  body:not(.noya-reborn) .header__menu > ul > li {
+    margin-right: clamp(18px, calc(4.2vw - 42px), 36px);
+  }
+
+  body:not(.noya-reborn) .header__menu > ul > li:last-child {
+    margin-right: 0;
+  }
+
+  body:not(.noya-reborn) .header__menu > ul > li > a {
+    font-size: clamp(13px, calc(0.5vw + 6px), 15px);
+  }
+}
+
+/* Book Now keeps one size in every language so the EN/DE/AL buttons never shift. */
+.header .header__nav__widget a {
+  -webkit-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  width: 163px !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  -webkit-box-pack: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+}
+
+/* Same header font on every page (matches the Conference Hall page). */
+.rooms-page
+  .header
+  *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]):not([class^="icon_"]):not(
+    [class*=" icon_"]
+  ) {
+  font-family: "Noto Serif", serif !important;
+}
+
+/* Header fade on every page: black at the top, clear at the bottom. */
+.header__nav__option {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0) 100%) !important;
+  box-shadow: none !important;
+}
+
+html body .header__menu .menu__class > li > a:not(.fa):not([class^="fa-"]):not([class*=" fa-"]):not([class^="icon_"]):not([class*=" icon_"]) {
+  color: #fff !important;
+  font-weight: 700 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+
+html body .header__lang__selector .lang-btn:not(.fa):not([class^="fa-"]):not([class*=" fa-"]):not([class^="icon_"]):not([class*=" icon_"]),
+html body .mobile__lang__selector .lang-btn:not(.fa):not([class^="fa-"]):not([class*=" fa-"]):not([class^="icon_"]):not([class*=" icon_"]) {
+  color: #fff !important;
+  font-weight: 700 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+
+.header__logo a img,
+.offcanvas__logo img,
+.rooms-page .header__logo a img,
+body:not(.noya-reborn) .header__logo a img {
+  max-height: 72px !important;
+  width: auto !important;
+  height: auto;
+}
+
+@media (max-width: 991px) {
+  .header__logo a img,
+  .offcanvas__logo img,
+  .rooms-page .header__logo a img,
+  body:not(.noya-reborn) .header__logo a img {
+    max-height: 48px !important;
+    max-width: min(190px, 52vw) !important;
+  }
+}
+
+/* Phone and tablet header: one quiet row, then a dark full-screen menu. */
+@media (max-width: 991px) {
+  html body:not(.noya-reborn) .header__nav__option .container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    min-height: 64px !important;
+    padding: 8px 16px 10px !important;
+    position: relative !important;
+  }
+
+  html body:not(.noya-reborn) .header__nav__option .row {
+    display: flex !important;
+    align-items: center !important;
+    flex: 0 1 auto !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+
+  html body:not(.noya-reborn) .header__nav__option .col-lg-2 {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  html body:not(.noya-reborn) .header__nav__option .col-lg-10 {
+    display: none !important;
+  }
+
+  html body:not(.noya-reborn) .header__logo,
+  html body.sacher-home .header__logo {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  html body:not(.noya-reborn) .header__logo a img,
+  html body.sacher-home .header__logo a img,
+  html body.rooms-page .header__logo a img {
+    max-height: 48px !important;
+    max-width: min(190px, 52vw) !important;
+    width: auto !important;
+    height: auto !important;
+  }
+
+  html body:not(.noya-reborn) .mobile__lang__selector.header__lang__selector {
+    position: static !important;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    order: 2 !important;
+    gap: 0 !important;
+    margin: 0 0 0 auto !important;
+    padding: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    z-index: 2 !important;
+  }
+
+  html body:not(.noya-reborn) .mobile__lang__selector .lang-btn {
+    min-width: 26px !important;
+    min-height: 32px !important;
+    padding: 4px 5px !important;
+    font-size: 11px !important;
+    letter-spacing: 0.12em !important;
+  }
+
+  html body:not(.noya-reborn) .header .canvas__open,
+  html body.sacher-home .canvas__open,
+  html body.rooms-page .canvas__open {
+    position: static !important;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    min-height: 36px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #fff !important;
+    flex: 0 0 36px !important;
+    order: 3 !important;
+  }
+
+  html body:not(.noya-reborn) .header .canvas__open span.fa,
+  html body:not(.noya-reborn) .header .canvas__open .fa,
+  html body.sacher-home .canvas__open span,
+  html body.sacher-home .canvas__open .fa,
+  html body.rooms-page .canvas__open span,
+  html body.rooms-page .canvas__open .fa {
+    position: relative !important;
+    display: block !important;
+    width: 20px !important;
+    height: 14px !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    color: transparent !important;
+    background: none !important;
+  }
+
+  html body:not(.noya-reborn) .header .canvas__open span.fa:before,
+  html body:not(.noya-reborn) .header .canvas__open .fa:before,
+  html body.sacher-home .canvas__open .fa:before,
+  html body.rooms-page .canvas__open .fa:before {
+    content: "" !important;
+    font-family: inherit !important;
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: 6px !important;
+    width: 20px !important;
+    height: 1px !important;
+    background: #fff !important;
+    box-shadow: 0 -6px 0 #fff, 0 6px 0 #fff !important;
+  }
+
+  html body.mobile-nav-open:not(.noya-reborn) .header__nav__option {
+    z-index: 10080 !important;
+    background: #12100e !important;
+  }
+
+  html body.mobile-nav-open:not(.noya-reborn) .mobile__lang__selector.header__lang__selector {
+    position: static !important;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    margin: 0 0 0 auto !important;
+    padding: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+
+  html body.mobile-nav-open:not(.noya-reborn) .header .canvas__open span.fa:before,
+  html body.mobile-nav-open:not(.noya-reborn) .header .canvas__open .fa:before {
+    top: 6px !important;
+    box-shadow: none !important;
+    transform: rotate(45deg) !important;
+  }
+
+  html body.mobile-nav-open:not(.noya-reborn) .header .canvas__open span.fa:after,
+  html body.mobile-nav-open:not(.noya-reborn) .header .canvas__open .fa:after {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 6px !important;
+    width: 20px !important;
+    height: 1px !important;
+    background: #fff !important;
+    transform: rotate(-45deg) !important;
+  }
+
+  html body.mobile-nav-open .offcanvas-menu-wrapper .offcanvas__logo,
+  html body.mobile-nav-open .offcanvas-menu-close {
+    display: none !important;
+  }
+
+  html body.mobile-nav-open .offcanvas-menu-wrapper,
+  html body.mobile-nav-open.rooms-page .offcanvas-menu-wrapper {
+    padding-top: 64px !important;
+  }
+
+  html body.mobile-nav-open .mobile__lang__selector .lang-btn {
+    color: #fff !important;
+    background: transparent !important;
+  }
+
+  html body .offcanvas-menu-wrapper,
+  html body.rooms-page .offcanvas-menu-wrapper {
+    background: #12100e !important;
+  }
+
+  html body .offcanvas-menu-wrapper .offcanvas__logo,
+  html body.rooms-page .offcanvas-menu-wrapper .offcanvas__logo {
+    background: transparent !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+    min-height: 68px;
+    display: flex !important;
+    align-items: center !important;
+    padding: max(14px, env(safe-area-inset-top)) 132px 14px
+      max(20px, env(safe-area-inset-left)) !important;
+  }
+
+  html body .offcanvas-menu-wrapper .offcanvas__logo img,
+  html body.rooms-page .offcanvas-menu-wrapper .offcanvas__logo img {
+    max-height: 32px !important;
+    max-width: min(132px, 38vw) !important;
+  }
+
+  html body .offcanvas-menu-wrapper #mobile-menu-wrap,
+  html body.rooms-page .offcanvas-menu-wrapper #mobile-menu-wrap {
+    position: static !important;
+  }
+
+  html body .offcanvas-menu-wrapper .offcanvas-menu-close,
+  html body .offcanvas-menu-wrapper .offcanvas-menu-close .fa,
+  html body.rooms-page .offcanvas-menu-wrapper .offcanvas-menu-close,
+  html body.rooms-page .offcanvas-menu-wrapper .offcanvas-menu-close .fa {
+    color: #fff !important;
+  }
+
+  html body #mobile-menu-wrap .slicknav_nav,
+  html body #mobile-menu-wrap .slicknav_nav ul,
+  html body #mobile-menu-wrap .slicknav_menu {
+    background: transparent !important;
+  }
+
+  html body #mobile-menu-wrap .slicknav_nav > li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+
+  html body #mobile-menu-wrap .slicknav_nav > li > a,
+  html body #mobile-menu-wrap .slicknav_nav > li > a.slicknav_row,
+  html body #mobile-menu-wrap .slicknav_nav > li > a.slicknav_row a,
+  html body #mobile-menu-wrap .slicknav_nav > li > span.slicknav_parent-link,
+  html body #mobile-menu-wrap .slicknav_nav > li > span.slicknav_parent-link > a:not(.slicknav_item),
+  html body #mobile-menu-wrap .slicknav_nav > li:nth-child(-n + 8) > a,
+  html body #mobile-menu-wrap .slicknav_nav > li:nth-child(-n + 8) > a.slicknav_row,
+  html body #mobile-menu-wrap .slicknav_nav > li:nth-child(-n + 8) > a.slicknav_row a,
+  html body #mobile-menu-wrap .slicknav_nav > li:nth-child(-n + 8) > span.slicknav_parent-link > a:not(.slicknav_item),
+  html body #mobile-menu-wrap .slicknav_nav a[data-i18n="nav-explore-derand"] {
+    color: #f6f3ee !important;
+    background: transparent !important;
+  }
+
+  html body #mobile-menu-wrap .slicknav_nav > li > a.slicknav_row:hover,
+  html body #mobile-menu-wrap .slicknav_nav > li > a.slicknav_row:focus,
+  html body #mobile-menu-wrap .slicknav_nav > li:nth-child(-n + 8) > a.slicknav_row:hover,
+  html body #mobile-menu-wrap .slicknav_nav > li:nth-child(-n + 8) > a.slicknav_row:hover a,
+  html body #mobile-menu-wrap .slicknav_nav > li:nth-child(-n + 8) > span.slicknav_parent-link:hover > a:not(.slicknav_item) {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: #fff !important;
+  }
+
+  html body #mobile-menu-wrap .slicknav_nav ul a,
+  html body #mobile-menu-wrap .slicknav_nav ul .slicknav_row {
+    color: rgba(246, 243, 238, 0.72) !important;
+    background: transparent !important;
+  }
+
+  html body #mobile-menu-wrap .slicknav_nav > li > span.slicknav_parent-link > a.slicknav_item,
+  html body #mobile-menu-wrap .slicknav_arrow {
+    color: rgba(246, 243, 238, 0.7) !important;
+  }
+
+  html body .offcanvas_btn_widget,
+  html body .offcanvas__btn__widget,
+  html body.rooms-page .offcanvas_btn_widget,
+  html body.rooms-page .offcanvas__btn__widget {
+    background: transparent !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+    padding: 16px 22px max(18px, env(safe-area-inset-bottom)) !important;
+    min-height: 0 !important;
+  }
+
+  html body .offcanvas_btn_widget a,
+  html body .offcanvas__btn__widget a,
+  html body.rooms-page .offcanvas_btn_widget a,
+  html body.rooms-page .offcanvas__btn__widget a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    background: #b17256 !important;
+    border: 0 !important;
+    color: #fff !important;
+    letter-spacing: 0.22em !important;
+    padding: 15px 20px !important;
+    box-shadow: none !important;
+  }
+
+  html body .offcanvas_btn_widget a .arrow_right,
+  html body .offcanvas__btn__widget a .arrow_right {
+    display: none !important;
+  }
+}
+
+/* Active language and the page you are on: #b27256 with an underline. */
+html body .header__lang__selector .lang-btn.lang-active:not(.fa):not([class^="fa-"]):not([class*=" fa-"]):not([class^="icon_"]):not([class*=" icon_"]),
+html body .mobile__lang__selector .lang-btn.lang-active:not(.fa):not([class^="fa-"]):not([class*=" fa-"]):not([class^="icon_"]):not([class*=" icon_"]),
+html body .header__lang__selector .lang-btn:not(.fa):not([class^="fa-"]):not([class*=" fa-"]):not([class^="icon_"]):not([class*=" icon_"]):hover,
+html body .mobile__lang__selector .lang-btn:not(.fa):not([class^="fa-"]):not([class*=" fa-"]):not([class^="icon_"]):not([class*=" icon_"]):hover,
+html body.mobile-nav-open .mobile__lang__selector .lang-btn.lang-active,
+html body.mobile-nav-open .mobile__lang__selector .lang-btn:hover {
+  color: #b27256 !important;
+  border-bottom-color: #b27256 !important;
+}
+
+html body .header__menu .menu__class > li:hover > a:not(.fa):not([class^="fa-"]):not([class*=" fa-"]):not([class^="icon_"]):not([class*=" icon_"]),
+html body .header__menu .menu__class > li > a:not(.fa):not([class^="fa-"]):not([class*=" fa-"]):not([class^="icon_"]):not([class*=" icon_"]):hover,
+html body .header__menu .menu__class > li.is-current > a:not(.fa):not([class^="fa-"]):not([class*=" fa-"]):not([class^="icon_"]):not([class*=" icon_"]),
+html body .header__menu .menu__class > li.is-current:hover > a:not(.fa):not([class^="fa-"]):not([class*=" fa-"]):not([class^="icon_"]):not([class*=" icon_"]) {
+  color: #b27256 !important;
+}
+
+html body .header__menu .menu__class > li > a:after,
+html body .header__menu .menu__class > li:hover > a:after,
+html body .header__menu .menu__class > li.is-current > a:after {
+  background: #b27256 !important;
+}
+
+html body .header__menu .menu__class > li.is-current > a:after {
+  width: 100% !important;
+  -webkit-transform: translateX(-50%) scaleX(1) !important;
+  transform: translateX(-50%) scaleX(1) !important;
+}
+
+html body .header__menu ul.dropdown li a.is-current,
+html body .header__menu ul.dropdown li a.is-current:hover {
+  color: #b27256 !important;
+}
+
+html body #mobile-menu-wrap .slicknav_nav > li.is-current > a,
+html body #mobile-menu-wrap .slicknav_nav > li.is-current > a.slicknav_row,
+html body #mobile-menu-wrap .slicknav_nav > li.is-current > a.slicknav_row a,
+html body #mobile-menu-wrap .slicknav_nav > li.is-current > span.slicknav_parent-link > a:not(.slicknav_item),
+html body #mobile-menu-wrap .slicknav_nav > li.is-current:nth-child(-n + 8) > a,
+html body #mobile-menu-wrap .slicknav_nav > li.is-current:nth-child(-n + 8) > a.slicknav_row,
+html body #mobile-menu-wrap .slicknav_nav > li.is-current:nth-child(-n + 8) > a.slicknav_row a,
+html body #mobile-menu-wrap .slicknav_nav > li.is-current:nth-child(-n + 8) > span.slicknav_parent-link > a:not(.slicknav_item) {
+  color: #b27256 !important;
+  box-shadow: inset 0 -1px 0 #b27256 !important;
+}
+
+/* Milky page background on every page. */
+html,
+html body:not(.derand-tickets-page) {
+  background-color: #f3eee6 !important;
+}
+
+html body .sacher-home,
+html body .sacher-mozart,
+html body .sacher-events,
+html body .sacher-facilities,
+html body .sacher-social,
+html body .sacher-feature__grid,
+html body .sacher-feature__content,
+html body .room-showcase,
+html body .room-specs,
+html body .suite-collage,
+html body .experience-editorial,
+html body .director-showcase,
+html body .culinary-hero,
+html body .arch-rooms-heading,
+html body .content-overlay,
+html body .breadcrumb-option,
+html body .junior-details,
+html body .junior-amenities,
+html body .junior-policies,
+html body .junior-faq,
+html body .junior-related,
+html body .preview-wrap,
+html body .junior-specs-section,
+html body .junior-editorial-title,
+html body .junior-photo-grid,
+html body .o-hall,
+html body .o-occ,
+html body .o-hero,
+html body .guest-app-page {
+  background-color: #f3eee6 !important;
+}
+
+html body.rooms-page {
+  padding-top: 0 !important;
+}
+
+html body.rooms-page .hero.hero--left {
+  margin-top: 0 !important;
+}
+
+/* Explore: let the header fade keep dissolving past the menu. */
+html body.explore-prishtina .header__nav__option,
+html body.explorederand-page .header__nav__option {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.82) 0%,
+    rgba(0, 0, 0, 0.68) 42%,
+    rgba(0, 0, 0, 0.34) 74%,
+    rgba(0, 0, 0, 0.14) 100%
+  ) !important;
+  overflow: visible !important;
+}
+
+html body.explore-prishtina .header__nav__option::after,
+html body.explorederand-page .header__nav__option::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 140px;
+  pointer-events: none;
+  z-index: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.14) 0%,
+    rgba(0, 0, 0, 0.07) 34%,
+    rgba(0, 0, 0, 0.02) 68%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+html body.mobile-nav-open.explore-prishtina .header__nav__option::after,
+html body.mobile-nav-open.explorederand-page .header__nav__option::after {
+  display: none;
 }

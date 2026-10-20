@@ -48,4 +48,14 @@ if (
     $status['hotelEmailSent'] = !empty($emailResult['hotelSent']);
 }
 
+if (tickets_is_ticket_reference($merchantOrderReference)) {
+    try {
+        tickets_set_payment_status($merchantOrderReference, (string) ($status['paymentStatus'] ?? ''), [
+            'transactionId' => $status['transactionId'] ?? '',
+        ]);
+    } catch (Throwable $e) {
+        error_log('tickets: status update failed for ' . $merchantOrderReference . ': ' . $e->getMessage());
+    }
+}
+
 raiaccept_json_response(200, $status);

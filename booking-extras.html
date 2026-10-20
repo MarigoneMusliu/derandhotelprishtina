@@ -2,18 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0;url=extra.html" />
-    <title>Redirectingâ€¦ | Derand Hotel</title>
+    <meta http-equiv="refresh" content="0;url=extra" />
+    <title>Concierge Extras | Derand Hotel</title>
+    <meta name="robots" content="noindex, follow" />
     <script>
       (function () {
         var params = new URLSearchParams(window.location.search);
         params.set("from", "booking");
-        window.location.replace("extra.html?" + params.toString());
+        window.location.replace("/Concierge?" + params.toString());
       })();
     </script>
   </head>
   <body>
-    <p><a href="extra.html">Continue to Concierge extras</a></p>
+    <p><a href="/Concierge">Continue to Concierge extras</a></p>
       <script src="js/chatbase-widget.js?v=4" defer></script>
   </body>
 </html>

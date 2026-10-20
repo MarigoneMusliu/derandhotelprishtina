@@ -13,11 +13,21 @@ if (!is_array($input)) {
     raiaccept_json_response(400, ['error' => 'Invalid JSON body.']);
 }
 
-raiaccept_send_webhook_email($input);
-
 $merchantOrderReference = raiaccept_trimmed_string(
     raiaccept_first_by_key($input, 'merchantOrderReference')
 );
+
+if (raiaccept_successful_purchase($input) && tickets_is_ticket_reference($merchantOrderReference)) {
+    try {
+        tickets_set_payment_status($merchantOrderReference, 'paid', [
+            'transactionId' => raiaccept_trimmed_string(raiaccept_first_by_key($input, 'transactionId')),
+        ]);
+    } catch (Throwable $e) {
+        error_log('tickets: webhook update failed for ' . $merchantOrderReference . ': ' . $e->getMessage());
+    }
+}
+
+raiaccept_send_webhook_email($input);
 if (
     raiaccept_successful_purchase($input)
     && $merchantOrderReference !== ''

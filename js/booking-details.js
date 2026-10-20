@@ -15,7 +15,7 @@
       labelKey: "bd-room-superior-double-label",
       metaKey: "bd-room-superior-double-meta",
       image: "img/superiorheader.webp",
-      price: 95,
+      price: 80,
     },
     "deluxe-double": {
       labelKey: "bd-room-deluxe-double-label",
@@ -256,7 +256,7 @@
       return adults >= 2 ? 105 : 95;
     }
     if (roomKey === "superior-double") {
-      return adults >= 2 ? 105 : 95;
+      return adults >= 2 ? 90 : 80;
     }
     var room = ROOM_DATA[roomKey];
     return room ? room.price : 0;
@@ -405,7 +405,14 @@
     params.set("checkout", state.checkout);
     params.set("adults", String(state.adults));
     params.set("children", String(state.children));
-    return "book.html?" + params.toString();
+    var roomPaths = {
+      "superior-double": "/BookNowSuperiorDoubleRoom",
+      "superior-twin": "/BookNowSuperiorTwinRoom",
+      "premium-double": "/BookNowPremiumDoubleRoom",
+      "deluxe-double": "/BookNowDeluxeDoubleRoom",
+      "junior-suite": "/BookNowJuniorSuite",
+    };
+    return (roomPaths[state.room] || "/Book") + "?" + params.toString();
   }
 
   function buildExtrasPickerUrl(state, focusId) {
@@ -417,7 +424,7 @@
     params.set("adults", String(state.adults));
     params.set("children", String(state.children));
     if (focusId) params.set("focus", focusId);
-    return "extra.html?" + params.toString();
+    return "/Concierge?" + params.toString();
   }
 
   var conciergeMarqueeMedia = window.matchMedia("(max-width: 767px)");
@@ -1255,9 +1262,9 @@
     params.set("checkout", state.checkout);
     params.set("adults", String(state.adults));
     params.set("children", String(state.children));
-    var path = window.location.pathname || "/booking-details.html";
+    var path = window.location.pathname || "/Booking-Details";
     if (path === "/" || /\/$/.test(path)) {
-      path = "/booking-details.html";
+      path = "/Booking-Details";
     }
     return path + "?" + params.toString();
   }
@@ -1932,7 +1939,7 @@
     if (!state) {
       state = loadState();
     } else if (window.DerandBooking) {
-      // Always re-read concierge lines so returning from extra.html updates the pay card.
+      // Always re-read concierge lines so returning from extra updates the pay card.
       state.extraLines = window.DerandBooking.loadBookingLines();
     }
     try {

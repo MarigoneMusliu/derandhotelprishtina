@@ -33,7 +33,7 @@
       .querySelectorAll(".stay-row__cta[data-room], a[data-room-link]")
       .forEach(blockReservationLink);
 
-    document.querySelectorAll('a[href*="booking-details"]').forEach(function (el) {
+    document.querySelectorAll('a[href*="booking-details" i]').forEach(function (el) {
       if (el.dataset.festivalClosedBound === "1") return;
       blockReservationLink(el);
     });

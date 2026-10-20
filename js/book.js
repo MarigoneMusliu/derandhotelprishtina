@@ -1,6 +1,15 @@
 (function () {
   var HOTELRUNNER_BASE = "https://derand-hotel.hotelrunner.com/bv3/search";
-  var BOOKING_DETAILS_PAGE = "booking-details.html";
+  var BOOKING_DETAILS_PAGE = "/Booking-Details";
+  var BOOK_STATE_KEY = "derand-book-state";
+  // Keep in sync with the BookNow* rewrite in .htaccess and _tools/dev_server.py.
+  var ROOM_PATHS = {
+    "superior-double": "/BookNowSuperiorDoubleRoom",
+    "superior-twin": "/BookNowSuperiorTwinRoom",
+    "premium-double": "/BookNowPremiumDoubleRoom",
+    "deluxe-double": "/BookNowDeluxeDoubleRoom",
+    "junior-suite": "/BookNowJuniorSuite",
+  };
 
   var form = document.getElementById("book-form");
   if (!form) return;
@@ -18,11 +27,23 @@
   var reserveLinks = Array.prototype.slice.call(
     document.querySelectorAll(".booking-room-card__reserve"),
   );
+  var overlay360Links = Array.prototype.slice.call(
+    document.querySelectorAll(".booking-room-card__overlay-360"),
+  );
 
   if (!cards.length) return;
 
   var selectedRoom = cards[0].dataset.room || "superior-double";
+  var roomInUrl = false;
   var lastStatus = { key: "", state: "" };
+
+  function roomFromPath() {
+    var path = (window.location.pathname || "").replace(/\/+$/, "").toLowerCase();
+    for (var room in ROOM_PATHS) {
+      if (ROOM_PATHS[room].toLowerCase() === path) return room;
+    }
+    return "";
+  }
 
   function t(key, vars) {
     if (window.BookI18n && typeof window.BookI18n.t === "function") {
@@ -251,9 +272,24 @@
     return BOOKING_DETAILS_PAGE + "?" + buildSearchParams(room).toString();
   }
 
+  function build360Url(basePath, room) {
+    var params = buildSearchParams(room || selectedRoom);
+    params.set("from", "book");
+    return basePath.split("?")[0] + "?" + params.toString();
+  }
+
   function syncReserveLinks() {
     reserveLinks.forEach(function (link) {
       link.href = buildDetailsUrl(link.dataset.room || selectedRoom);
+    });
+  }
+
+  function sync360Links() {
+    overlay360Links.forEach(function (link) {
+      var card = link.closest(".booking-room-card");
+      var room = card ? card.dataset.room : selectedRoom;
+      var base = (link.getAttribute("href") || "").split("?")[0];
+      if (base) link.href = build360Url(base, room);
     });
   }
 
@@ -499,7 +535,23 @@
     params.set("adults", adultsEl.value);
     params.set("children", childrenEl.value);
     params.set("room", selectedRoom);
-    window.history.replaceState(null, "", window.location.pathname + "?" + params.toString());
+    try {
+      window.sessionStorage.setItem(BOOK_STATE_KEY, params.toString());
+    } catch (e) {}
+    var path =
+      roomInUrl && ROOM_PATHS[selectedRoom] ? ROOM_PATHS[selectedRoom] : window.location.pathname;
+    window.history.replaceState(null, "", path + window.location.hash);
+  }
+
+  function readBookParams() {
+    if (window.location.search) {
+      return new URLSearchParams(window.location.search);
+    }
+    try {
+      return new URLSearchParams(window.sessionStorage.getItem(BOOK_STATE_KEY) || "");
+    } catch (e) {
+      return new URLSearchParams();
+    }
   }
 
   function selectRoom(room) {
@@ -509,6 +561,7 @@
     });
     updateSummary();
     syncReserveLinks();
+    sync360Links();
     updateQueryString();
   }
 
@@ -519,8 +572,11 @@
         : [];
     var navType = navEntries.length ? navEntries[0].type : "";
     var isReload = navType === "reload";
-    var params = new URLSearchParams(window.location.search);
-    var room = params.get("room");
+    var params = readBookParams();
+    var queryRoom = window.location.search ? params.get("room") : "";
+    var pathRoom = roomFromPath();
+    var room = queryRoom || pathRoom || params.get("room");
+    roomInUrl = !!(queryRoom || pathRoom);
 
     if (!isReload) {
       if (params.get("checkin")) checkInEl.value = params.get("checkin");
@@ -556,6 +612,7 @@
 
     updateSummary();
     syncReserveLinks();
+    sync360Links();
     updateQueryString();
     setStatus("book-status-updated", "success");
   });
@@ -565,6 +622,7 @@
       if (element === checkInEl) updateCheckOutMin();
       updateSummary();
       syncReserveLinks();
+      sync360Links();
       updateQueryString();
       if (
         checkInEl.value &&
@@ -591,6 +649,7 @@
       syncCountsFromGuestSelect();
       updateSummary();
       syncReserveLinks();
+      sync360Links();
       updateQueryString();
     });
   }
@@ -599,6 +658,7 @@
     card.addEventListener("click", function (event) {
       if (event.target.closest("a")) return;
       var room = card.dataset.room;
+      roomInUrl = true;
       selectRoom(room);
       if (checkInEl.value && checkOutEl.value && roomIsUnavailable(room)) {
         var statusKey =
@@ -635,4 +695,5 @@
   selectRoom(selectedRoom);
   updateSummary();
   syncReserveLinks();
+  sync360Links();
 })();

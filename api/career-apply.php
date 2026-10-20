@@ -99,7 +99,7 @@ $subject = 'Career application — ' . $roleLine . ' — ' . $firstName . ' ' . 
 $subject = '=?UTF-8?B?' . base64_encode($subject) . '?=';
 
 $bodyText = implode("\r\n", [
-    'New open application from derandhotel.com/careers.html',
+    'New open application from derandhotel.com/careers',
     '',
     'Name: ' . $firstName,
     'Surname: ' . $lastName,

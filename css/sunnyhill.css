@@ -725,7 +725,7 @@ body.sunnyhill-page .footer {
   background-image:
     linear-gradient(180deg, rgba(14, 3, 18, 0.18), rgba(14, 3, 18, 0.76)),
     radial-gradient(circle at 50% 0%, rgba(255, 74, 232, 0.42), transparent 38%),
-    url("../img/keinemusik.png");
+    url("../img/keinemusik.webp");
   background-position: center 34%;
   filter: saturate(1.02) brightness(0.62) contrast(1.06);
 }
@@ -1019,7 +1019,7 @@ body.sunnyhill-page .footer {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: url("../img/map.png");
+  background: url("../img/map.webp");
   background-position: center;
   background-size: 112% auto;
 }
@@ -1371,7 +1371,7 @@ body.sunnyhill-page .footer {
 
   .sunnyhill-location__panel {
     min-height: clamp(340px, 85vw, 420px);
-    background: url("../img/map.png");
+    background: url("../img/map.webp");
     background-position: center;
     background-size: cover;
   }

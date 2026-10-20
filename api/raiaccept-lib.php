@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+require_once __DIR__ . '/tickets-lib.php';
+
 const RAIACCEPT_SUCCESS_CODE = '0000';
 
 function raiaccept_json_response(int $status, array $payload): void
@@ -395,9 +397,9 @@ function raiaccept_status_summary(array $source): array
 
 function raiaccept_return_url(string $baseUrl, string $returnPath, string $paymentState, string $merchantOrderReference): string
 {
-    $candidate = trim($returnPath !== '' ? $returnPath : '/extra.html');
+    $candidate = trim($returnPath !== '' ? $returnPath : '/Concierge');
     if ($candidate === '' || strpos($candidate, '://') !== false || strpos($candidate, '/api/') === 0) {
-        $candidate = '/extra.html';
+        $candidate = '/Concierge';
     }
     $path = '/' . ltrim($candidate, '/');
     $query = http_build_query([
@@ -501,9 +503,9 @@ function raiaccept_build_extra_order_payload(array $input, array $config, string
         raiaccept_json_response(400, ['error' => 'Cart total must be greater than zero.']);
     }
 
-    $returnPath = raiaccept_trimmed_string($input['returnPath'] ?? '/extra.html');
+    $returnPath = raiaccept_trimmed_string($input['returnPath'] ?? '/Concierge');
     if ($returnPath === '') {
-        $returnPath = '/extra.html';
+        $returnPath = '/Concierge';
     }
 
     $descriptionParts = [$productName];
@@ -574,7 +576,7 @@ function raiaccept_booking_rooms(): array
         'deluxe-double' => ['label' => 'Deluxe Double Room', 'single' => 105.0, 'double' => 105.0, 'max_adults' => 2],
         'premium-double' => ['label' => 'Premium Room', 'single' => 120.0, 'double' => 130.0, 'triple' => 140.0, 'max_adults' => 3],
         'superior-twin' => ['label' => 'Superior Twin Room', 'single' => 95.0, 'double' => 105.0, 'max_adults' => 2],
-        'superior-double' => ['label' => 'Superior Double Room', 'single' => 95.0, 'double' => 105.0, 'max_adults' => 2],
+        'superior-double' => ['label' => 'Superior Double Room', 'single' => 80.0, 'double' => 90.0, 'max_adults' => 2],
     ];
 }
 
@@ -931,9 +933,9 @@ function raiaccept_build_booking_order_payload(array $input, array $config, stri
         $items[] = $extraItem;
     }
 
-    $returnPath = raiaccept_trimmed_string($input['returnPath'] ?? '/booking-details.html');
+    $returnPath = raiaccept_trimmed_string($input['returnPath'] ?? '/Booking-Details');
     if ($returnPath === '') {
-        $returnPath = '/booking-details.html';
+        $returnPath = '/Booking-Details';
     }
 
     $guestName = trim($guestFirstName . ' ' . $guestLastName);
@@ -1018,10 +1020,137 @@ function raiaccept_order_prefix(array $input): string
     }
     $returnPath = strtolower(raiaccept_trimmed_string($input['returnPath'] ?? ''));
     $productName = strtolower(raiaccept_trimmed_string($input['productName'] ?? ''));
+    if (strpos($returnPath, 'derandtickets') !== false) {
+        return 'TICKETS';
+    }
     if (strpos($returnPath, 'sunnyhill') !== false || strpos($productName, 'sunny hill') !== false) {
         return 'SUNNYHILL';
     }
     return 'EXTRA';
+}
+
+function raiaccept_is_ticket_order(array $input): bool
+{
+    return !raiaccept_is_booking_order($input)
+        && strpos(strtolower(raiaccept_trimmed_string($input['returnPath'] ?? '')), 'derandtickets') !== false;
+}
+
+/* Festivals, ticket types and prices are managed in the ticket admin panel (/TicketsAdmin). */
+function raiaccept_ticket_festivals(): array
+{
+    $festivals = [];
+    foreach (tickets_catalog()['festivals'] as $f) {
+        if (empty($f['active']) || empty($f['salesOpen'])) {
+            continue;
+        }
+        $tiers = [];
+        foreach ($f['tiers'] as $t) {
+            if (!empty($t['active'])) {
+                $tiers[$t['key']] = ['label' => $t['label'], 'price' => (float) $t['price']];
+            }
+        }
+        $festivals[$f['id']] = ['name' => $f['name'], 'nights' => (int) $f['nights'], 'tiers' => $tiers];
+    }
+    return $festivals;
+}
+
+function raiaccept_ticket_transfer_price(): float
+{
+    return (float) (tickets_catalog()['transferPrice'] ?? 25.0);
+}
+
+/* Replaces the browser-supplied items and product name with server-side prices. */
+function raiaccept_apply_ticket_pricing(array $input): array
+{
+    $ticket = is_array($input['ticketOrder'] ?? null) ? $input['ticketOrder'] : null;
+    if ($ticket === null) {
+        raiaccept_json_response(400, ['error' => 'Ticket order details are missing. Please refresh the page and try again.']);
+    }
+
+    $festivals = raiaccept_ticket_festivals();
+    $festivalId = raiaccept_trimmed_string($ticket['festival'] ?? '');
+    $festival = $festivals[$festivalId] ?? null;
+    if ($festival === null) {
+        raiaccept_json_response(400, ['error' => 'Unknown festival. Please refresh the page and try again.']);
+    }
+
+    $tierKey = raiaccept_trimmed_string($ticket['tier'] ?? '');
+    $tier = $festival['tiers'][$tierKey] ?? null;
+    if ($tier === null) {
+        raiaccept_json_response(400, ['error' => 'Unknown ticket tier. Please refresh the page and try again.']);
+    }
+
+    $guests = (int) ($ticket['guests'] ?? 0);
+    if ($guests < 1 || $guests > 10) {
+        raiaccept_json_response(400, ['error' => 'Guests must be between 1 and 10.']);
+    }
+
+    $remaining = tickets_available($festivalId, $tierKey);
+    if ($remaining !== null && $guests > $remaining) {
+        raiaccept_json_response(409, ['error' => $remaining > 0
+            ? 'Only ' . $remaining . ' tickets of this type are left. Please choose fewer guests.'
+            : 'This ticket type is sold out.']);
+    }
+
+    $items = [[
+        'description' => $festival['name'] . ' - ' . $tier['label'] . ' ticket',
+        'quantity' => $guests,
+        'unitPrice' => $tier['price'],
+    ]];
+    $title = $festival['name'] . ' — ' . $tier['label'];
+    $record = [
+        'festivalId' => $festivalId,
+        'festivalName' => $festival['name'],
+        'tierKey' => $tierKey,
+        'tierLabel' => $tier['label'],
+        'quantity' => $guests,
+        'unitPrice' => (float) $tier['price'],
+        'mode' => 'tickets',
+        'roomLabel' => '',
+        'nights' => null,
+        'transfer' => !empty($ticket['transfer']),
+        'guest' => [
+            'firstName' => raiaccept_trimmed_string($input['firstName'] ?? ''),
+            'lastName' => raiaccept_trimmed_string($input['lastName'] ?? ''),
+            'email' => raiaccept_trimmed_string($input['email'] ?? ''),
+            'phone' => raiaccept_trimmed_string($input['phone'] ?? ''),
+        ],
+    ];
+
+    if (raiaccept_trimmed_string($ticket['mode'] ?? '') === 'bundle') {
+        $rooms = raiaccept_booking_rooms();
+        $roomSlug = raiaccept_trimmed_string($ticket['room'] ?? '');
+        $room = $rooms[$roomSlug] ?? null;
+        if ($room === null) {
+            raiaccept_json_response(400, ['error' => 'Unknown room type. Please refresh the page and try again.']);
+        }
+        $nights = (int) $festival['nights'];
+        $items[] = [
+            'description' => 'Derand Hotel - ' . $room['label'] . ', ' . $nights . ' nights x ' . number_format((float) $room['single'], 0) . ' EUR',
+            'quantity' => $guests,
+            'unitPrice' => round((float) $room['single'] * $nights, 2),
+        ];
+        $title .= ' + ' . $room['label'] . ' (' . $nights . ' nights)';
+        $record['mode'] = 'bundle';
+        $record['roomLabel'] = $room['label'];
+        $record['nights'] = $nights;
+    }
+
+    if (!empty($ticket['transfer'])) {
+        $items[] = [
+            'description' => 'Airport transfer PRN - hotel, round trip',
+            'quantity' => $guests,
+            'unitPrice' => raiaccept_ticket_transfer_price(),
+        ];
+    }
+
+    $input['items'] = $items;
+    $input['productName'] = 'Derand Tickets — ' . $title . ' — ' . $guests . ($guests > 1 ? ' guests' : ' guest');
+    $record['total'] = round(array_sum(array_map(static function (array $item): float {
+        return (float) $item['unitPrice'] * (int) $item['quantity'];
+    }, $items)), 2);
+    $input['_ticketRecord'] = $record;
+    return $input;
 }
 
 function raiaccept_raiaccept_error_message(string $fallback, $details): string
@@ -1063,6 +1192,10 @@ function raiaccept_raiaccept_error_message(string $fallback, $details): string
 
 function raiaccept_create_checkout(array $input): array
 {
+    if (raiaccept_is_ticket_order($input)) {
+        $input = raiaccept_apply_ticket_pricing($input);
+    }
+
     $config = raiaccept_load_config();
     $token = raiaccept_get_token($config);
 
@@ -1105,6 +1238,17 @@ function raiaccept_create_checkout(array $input): array
     $checkoutUrl = raiaccept_extract_checkout_url($checkoutResponse['data']);
     if ($checkoutUrl === '') {
         raiaccept_json_response(502, ['error' => 'RaiAccept checkout URL was missing from the response.']);
+    }
+
+    if (is_array($input['_ticketRecord'] ?? null)) {
+        try {
+            tickets_record_online_order($input['_ticketRecord'] + [
+                'id' => $merchantOrderReference,
+                'orderIdentification' => $orderIdentification,
+            ]);
+        } catch (Throwable $e) {
+            error_log('tickets: could not record ' . $merchantOrderReference . ': ' . $e->getMessage());
+        }
     }
 
     if (
@@ -1359,6 +1503,16 @@ function raiaccept_send_webhook_email(array $payload): void
             'skipPaymentRecheck' => true,
         ]);
         $hotelOk = !empty($bookingEmails['hotelSent']);
+    } elseif (
+        raiaccept_is_extra_order_reference($merchantOrderReference)
+        && raiaccept_load_extra_confirmation($merchantOrderReference) !== null
+    ) {
+        // Shares the stored hotelEmailSent flag with the browser-return path, so only one email goes out.
+        $extraEmails = raiaccept_dispatch_paid_extra_emails($merchantOrderReference, [
+            'orderIdentification' => $orderIdentification,
+            'skipPaymentRecheck' => true,
+        ]);
+        $hotelOk = !empty($extraEmails['hotelSent']);
     } else {
         $hotelEmail = $config['order_notification_email'] ?: 'info@derandhotel.com';
         $hotelOk = raiaccept_send_plaintext_mail(
@@ -1501,18 +1655,20 @@ function raiaccept_validate_flowers_perfume_delivery(string $deliveryDate, strin
         return;
     }
 
+    $hotelZone = new DateTimeZone('Europe/Belgrade');
     $timePart = substr($deliveryTime, 0, 5);
-    $delivery = DateTimeImmutable::createFromFormat('!Y-m-d H:i', $deliveryDate . ' ' . $timePart);
+    $delivery = DateTimeImmutable::createFromFormat('!Y-m-d H:i', $deliveryDate . ' ' . $timePart, $hotelZone);
     if (!$delivery) {
         raiaccept_json_response(400, [
             'error' => 'Invalid delivery date or time.',
         ]);
     }
 
-    $minimum = (new DateTimeImmutable())->modify('+24 hours');
+    // Allow a few minutes of slack for the time the guest spends at the payment page.
+    $minimum = (new DateTimeImmutable('now', $hotelZone))->modify('+25 minutes');
     if ($delivery < $minimum) {
         raiaccept_json_response(400, [
-            'error' => 'Flowers and perfumes require at least 24 hours notice for delivery. Please choose a later date and time.',
+            'error' => 'Delivery needs at least 30 minutes from now. Please choose a later time.',
         ]);
     }
 }

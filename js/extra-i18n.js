@@ -5,7 +5,7 @@
 
   var T = {
     en: {
-      "extra-page-title": "Concierge | Hotel in Prishtina",
+      "extra-page-title": "Concierge Extras & Gifts | Derand Hotel Prishtina",
       "extra-meta-description":
         "Derand Hotel Extra offers curated in-room surprises and premium add-ons in Pristina.",
       "extra-hero-title": "Craft your perfect moments.",
@@ -91,10 +91,18 @@
       "extra-cart-delivery-title": "Delivery details",
       "extra-cart-delivery-hint":
         "Tell us when to bring your order to your room.",
-      "extra-cart-delivery-24h":
-        "Flowers and perfumes require at least 24 hours' notice for delivery.",
+      "extra-cart-delivery-30min":
+        "Please allow up to 30 minutes for your order to be delivered to your room.",
       "extra-cart-delivery-24h-error":
-        "Delivery for flowers or perfume must be at least 24 hours from now. Please choose a later date and time.",
+        "Delivery needs at least 30 minutes from now. Please choose a later time.",
+      "extra-cart-night-tomorrow":
+        "Room delivery runs from 09:00 to 21:00. Orders placed now will be delivered tomorrow morning at 09:00.",
+      "extra-cart-night-today":
+        "Room delivery starts at 09:00. Orders placed now will be delivered this morning at 09:00.",
+      "extra-cart-delivery-hours-error":
+        "Room delivery is available from 09:00 to 21:00. Please choose a time in that window.",
+      "extra-cart-delivery-night-error":
+        "Orders placed after 21:00 are delivered from 09:00. Please choose 09:00 or later.",
       "extra-cart-name-label": "Name on reservation",
       "extra-cart-name-placeholder": "As on your booking",
       "extra-cart-room-label": "Room number",
@@ -181,29 +189,1787 @@
       "spirit-desc-jager":
         "Herbal liqueur served chilled in your room with premium glassware.",
       "perfume-desc-armani":
-        "A legendary aquatic scent blending crisp marine notes and calabrian bergamot over a warm cedarwood base.",
+        "An elegant and refreshing fragrance for women that blends the freshness of lemon and mint with warm notes of jasmine and cedarwood. An iconic floral-aquatic scent, perfect for everyday wear.",
+      "perfume-desc-cacharel":
+        "An enchanting and passionate fragrance for women that combines vibrant notes of pink grapefruit and mandarin with a heart of red rose and a warm vanilla-amber base. A youthful and romantic floral-fruity scent, perfect for any occasion.",
+      "perfume-desc-armani-code":
+        "An elegant and seductive fragrance for women that features top notes of Italian orange and jasmine, a heart of orange blossom, and a warm, sensual base of honey and vanilla. A sophisticated floral-oriental scent, perfect for evening wear and special occasions.",
+      "perfume-desc-lancome":
+        "A radiant and joyful fragrance for women that opens with luminous black currant and pear, blooms into a heart of iris and jasmine, and settles into a delicious gourmand base of praline, patchouli, and vanilla. An uplifting floral-gourmand scent that celebrates life's beautiful moments.",
+      "perfume-desc-mon-paris":
+        "A captivating and romantic fragrance for women that bursts with juicy Calabrian bergamot, strawberry, and raspberry, evolves into a luminous heart of datura flower and peony, and lingers with a sensual chypre base of patchouli and white musk. A vibrant floral-fruity scent inspired by the magic of Paris.",
+      "perfume-desc-black-opium":
+        "An addictive and seductive fragrance for women that opens with a bold burst of rich coffee and sweet pink pepper, unfolds into a luminous heart of jasmine and orange blossom, and settles into a warm, enveloping base of vanilla and patchouli. A captivating oriental-gourmand scent perfect for evening wear.",
+      "perfume-desc-diesel-brave":
+        "A bold and charismatic fragrance for men that opens with fresh lemon and mandarin, strengthens with a heart of cedarwood and coriander, and finishes with a deep, masculine base of amber and benzoin. A confident aromatic-woody scent for the modern man.",
+      "perfume-desc-lhomme-nuit":
+        "A seductive and intense fragrance for men that opens with spicy black pepper and cardamom, deepens with a rich heart of labdanum and patchouli, and lingers with a smoky, magnetic base of vetiver and vanilla. A powerful woody-oriental scent crafted for unforgettable nights.",
+      "perfume-desc-armani-babel-he":
+        "A sophisticated and modern fragrance for men that blends fresh citrus and aromatic lavender with a warm heart of geranium and a smooth woody-amber base. A versatile masculine scent ideal for both day and evening wear.",
+      "perfume-desc-y-edp":
+        "A deep and confident fragrance for men that opens with fresh apple, ginger, and bergamot, evolves through an aromatic heart of sage, juniper, and geranium, and rests on a bold woody base of amberwood, cedar, and vetiver. A modern aromatic-fougère scent for the man who creates his own success.",
+      "perfume-desc-libre-edt":
+        "A bold and liberated fragrance for women that blends vibrant mandarin and lavender with a luminous heart of orange blossom and jasmine, finishing with a sensual base of ambergris and vanilla. A modern floral-aromatic scent that celebrates freedom and confidence.",
+      "perfume-desc-valentino-voce-viva":
+        "A radiant and expressive fragrance for women that opens with sparkling mandarin and fresh bergamot, blooms into a lush heart of orange blossom and gardenia, and settles into a warm, sophisticated base of crystal moss and vanilla. A vibrant floral scent that celebrates the power of voice and individuality.",
+      "perfume-desc-valentino-donna":
+        "A modern and sophisticated fragrance for women that opens with juicy blackcurrant and sparkling jasmine, unfolds into a luminous floral heart, and settles into a rich, sensual base of vanilla and bourbon. An elegant amber-floral scent that captures Roman glamour and contemporary femininity.",
+      "perfume-desc-libre-edp-intense":
+        "A deeper and more sensual interpretation of Libre that amplifies the signature lavender and orange blossom with a voluptuous orchid heart and a rich, intense base of vanilla and amber. A powerful floral-amber fragrance for women who embrace bold femininity and unapologetic freedom.",
+      "perfume-desc-valentino-donna-yellow":
+        "A radiant and luminous fragrance for women that opens with sparkling Italian lemon and juicy bergamot, blossoms into a delicate heart of rose absolute and jasmine, and melts into a warm, sunny base of vanilla and musk. A joyful floral-gourmand scent that captures the golden warmth of Roman summer.",
+      "perfume-desc-armani-my-way":
+        "A luminous and uplifting fragrance for women that opens with fresh bergamot and orange blossom from India, unfolds into an opulent heart of tuberose and jasmine from Egypt, and settles into a warm, elegant base of virginian cedar and Madagascar vanilla. An inspiring floral scent that celebrates discovery, connection, and purposeful femininity.",
+      "perfume-desc-lancome-idole":
+        "A clean and luminous fragrance for women that opens with sparkling pear, bergamot, and pink pepper, blossoms into a radiant heart of rose and jasmine, and settles into a soft, modern base of white musk and patchouli. A fresh floral scent that embodies confidence, grace, and the power of every woman.",
+      "perfume-desc-armani-in-love-with-you":
+        "A playful and seductive fragrance for women that opens with tart blackcurrant and juicy raspberry, blooms into a floral heart of rose and jasmine, and melts into a warm, addictive base of patchouli and vanilla. A sparkling fruity-floral scent that captures the thrill of falling in love.",
+      "perfume-desc-prada-luna-rossa-carbon":
+        "A bold and sophisticated fragrance for men that opens with fresh bergamot and vibrant lavender, evolves through a metallic heart of coal and watery notes, and settles into a dry, elegant base of patchouli and ambroxan. A modern aromatic-fougère scent inspired by the spirit of sailing and refined masculinity.",
+      "perfume-desc-prada-luna-rossa-black":
+        "A dark and magnetic fragrance for men that opens with luminous bergamot and angelica, deepens into an intense heart of patchouli and coumarin, and rests on a rich, sensual base of amber and musk. A sophisticated woody-aromatic scent that captures strength, mystery, and modern elegance.",
+      "perfume-desc-prada-lhomme":
+        "A refined and elegant fragrance for men that opens with crisp neroli and black pepper, unfolds into a powdery heart of iris and amber, and settles into a smooth, sophisticated base of patchouli and cedar. A modern aromatic scent that embodies understated luxury and effortless style.",
+      "perfume-desc-prada-la-femme":
+        "A sophisticated and sensual fragrance for women that opens with luminous magnolia and frangipani, blossoms into a rich floral heart of tuberose and ylang-ylang, and melts into a warm, enveloping base of beeswax and vanilla. An elegant oriental-floral scent that celebrates modern femininity with quiet confidence.",
+      "perfume-desc-armani-si-passione":
+        "A passionate and vibrant fragrance for women that opens with juicy blackcurrant and sparkling pear, blooms into a romantic heart of rose and jasmine, and settles into a warm, sensual base of vanilla and cedar. A bold floral-fruity scent that embodies confidence, allure, and the power of passion.",
+      "perfume-desc-viktor-spicebomb-extreme":
+        "A powerful and addictive fragrance for men that opens with bright grapefruit and pimento berries, builds into a fiery heart of cinnamon and saffron, and settles into a rich, intoxicating base of tobacco, vanilla, and bourbon vetiver. An intense oriental-spicy scent that radiates warmth, confidence, and seduction.",
+      "perfume-desc-viktor-bonbon":
+        "A deliciously sweet and feminine fragrance that opens with juicy orange and luminous peach, blooms into a delicate heart of caramel and jasmine, and settles into a creamy, addictive base of sandalwood and cedar. A playful gourmand-floral scent that captures indulgence, charm, and irresistible femininity.",
+      "perfume-desc-cacharel-noa":
+        "A soft and comforting fragrance for women that opens with luminous peony and white musk, unfolds into a delicate heart of coffee blossom and jasmine, and settles into a warm, powdery base of vanilla and sandalwood. A gentle floral scent that evokes serenity, purity, and timeless femininity.",
+      "perfume-desc-armani-acqua-gio-stick":
+        "A fresh and elegant fragrance stick that captures the luminous spirit of Acqua di Gioia with sparkling lemon, jasmine, and cedar notes. A convenient 75g format delivering long-lasting freshness and the signature aquatic-floral character of this beloved Armani scent.",
+      "perfume-desc-armani-black-code-stick":
+        "A sophisticated deodorant stick inspired by the iconic Armani Code fragrance, blending fresh bergamot and star anise with a warm heart of olive blossom and a sensual base of tonka bean and cedar. A convenient 75g format delivering long-lasting freshness and the signature elegant masculinity of Armani Code.",
+      "perfume-desc-armani-si-edp":
+        "A chic and modern fragrance for women that opens with luminous blackcurrant nectar and soft freesia, unfolds into an elegant heart of rose and jasmine, and rests on a warm, sensual base of vanilla, patchouli, and wood. A sophisticated chypre-fruity scent that embodies grace, strength, and contemporary femininity.",
+      "perfume-desc-diesel-brave-tattoo":
+        "A bold and rebellious fragrance for men that opens with vibrant apple and lemon zest, evolves through a leather and coriander heart, and settles on a warm, lasting base of amberwood and patchouli. An edgy aromatic-woody scent inspired by ink, attitude, and fearless individuality.",
+      "perfume-desc-lancome-lveb-body-milk":
+        "A luxurious body milk infused with the iconic La Vie Est Belle fragrance, blending luminous iris and delicate jasmine with warm vanilla and patchouli. A nourishing 200ml formula that leaves skin soft, scented, and radiant with joy.",
+      "perfume-desc-lancome-tresor-edp":
+        "A timeless and romantic fragrance for women that opens with delicate apricot blossom and peach, blooms into a lush heart of rose and lilac, and settles into a warm, sensual base of vanilla, sandalwood, and musk. An elegant floral-fruity scent that embodies love, femininity, and enduring grace.",
+      "perfume-desc-biotherm-aqp-fresh-eyes":
+        "A refreshing eye care gel that instantly cools and hydrates the delicate eye contour, helping reduce the appearance of puffiness and fatigue. Enriched with Biotherm's Life Plankton and pure mountain water, this 15ml formula leaves eyes looking rested, bright, and revitalized.",
+      "perfume-desc-biotherm-aquafitness-shower-gel":
+        "An invigorating shower gel that cleanses and refreshes the skin with a crisp aquatic scent inspired by the energy of water sports. Enriched with Biotherm's Life Plankton and moisturizing agents, this 200ml formula leaves skin feeling clean, toned, and revitalized after every shower.",
+      "perfume-desc-biotherm-aquapower-72h":
+        "An ultra-hydrating moisturizer for men that delivers up to 72 hours of continuous moisture. Enriched with Life Plankton and hyaluronic acid, this 50ml gel-cream strengthens the skin barrier and keeps skin fresh, comfortable, and energized.",
+      "perfume-desc-biotherm-biocils-waterproof":
+        "A gentle yet effective waterproof eye makeup remover that dissolves even stubborn mascara while respecting the delicate eye area. This 100ml bi-phase formula leaves lashes clean and skin soft without irritation.",
+      "perfume-desc-biotherm-blue-therapy-nuit":
+        "A luxurious anti-aging night cream that works while you sleep to regenerate skin and reduce visible signs of aging. Infused with algae extract and Life Plankton, this 50ml formula restores firmness, radiance, and comfort by morning.",
+      "perfume-desc-biotherm-blue-therapy-reno-serum":
+        "A powerful anti-aging serum that accelerates skin repair and targets wrinkles, loss of firmness, and uneven tone. With Life Plankton and blue algae technology, this 50ml serum delivers smoother, more youthful-looking skin.",
+      "perfume-desc-biotherm-deo-pure-invisible":
+        "An invisible antiperspirant roll-on offering 48-hour protection without white marks on clothing. This 75ml formula keeps underarms dry and fresh with a clean, skin-friendly scent.",
+      "perfume-desc-biotherm-lait-corporel-deo":
+        "A refreshing body deodorant roll-on inspired by the iconic Lait Corporel fragrance. This 75ml formula provides effective protection while leaving skin delicately scented and comfortable all day.",
+      "perfume-desc-biotherm-day-control-deo-72h":
+        "A long-lasting antiperspirant roll-on with 72-hour protection and a fresh, clean feel. This 75ml formula regulates perspiration while keeping skin soft and comfortable.",
+      "perfume-desc-biotherm-day-control-ecocert":
+        "An Ecocert-certified antiperspirant roll-on that combines effective protection with a naturally inspired formula. This 75ml deodorant keeps you fresh while respecting sensitive skin.",
+      "perfume-desc-biotherm-deo-ato-men":
+        "A refreshing deodorant spray for men that delivers reliable protection with an clean, aquatic scent. This 150ml formula keeps skin dry and invigorated throughout the day.",
+      "perfume-desc-biotherm-deo-pure-krem":
+        "A gentle antiperspirant cream in a convenient tube format, ideal for sensitive skin. This 75ml formula provides effective protection with a soft, invisible finish.",
+      "perfume-desc-biotherm-deo-pure-rollon":
+        "A classic antiperspirant roll-on with pure protection and a fresh, subtle fragrance. This 75ml formula keeps underarms dry and comfortable all day long.",
+      "perfume-desc-biotherm-deo-pure-stick":
+        "A solid antiperspirant stick offering 24-hour protection in a practical, travel-friendly format. Glides on smoothly without sticky residue for lasting freshness.",
+      "perfume-desc-biotherm-deo-rollon-man-pure":
+        "An antiperspirant roll-on designed for men, combining effective protection with a clean, masculine freshness. This 75ml formula keeps skin dry and comfortable.",
+      "perfume-desc-biotherm-deo-stick-man":
+        "A compact antiperspirant stick for men that delivers reliable protection on the go. This 50ml format glides on easily and leaves skin fresh without irritation.",
+      "perfume-desc-biotherm-eau-vitaminee":
+        "A revitalizing body spray infused with vitamins and citrus notes for an instant boost of energy and freshness. This 100ml mist lightly scents and refreshes skin throughout the day.",
+      "perfume-desc-biotherm-fs-liquid-eyes":
+        "A premium liquid eye care formula that gently cleanses and cares for the delicate eye area. Designed to remove eye makeup while soothing and hydrating the skin around the eyes.",
+      "perfume-desc-biotherm-lait-de-douche":
+        "A nourishing shower milk that cleanses while respecting the skin's natural moisture. Enriched with caring agents inspired by Biotherm's body care expertise, this 200ml formula leaves skin soft, smooth, and delicately scented.",
+      "perfume-desc-biotherm-biosource-nett-pnm":
+        "A refreshing cleansing gel that removes impurities and makeup while maintaining the skin's natural balance. This 150ml formula purifies normal to combination skin without dryness.",
+      "perfume-desc-biotherm-biosource-eau-mic":
+        "A gentle micellar cleansing water that removes makeup and impurities in one step without rinsing. This 200ml formula respects all skin types, including sensitive skin.",
+      "perfume-desc-biotherm-biosource-gelee-nett":
+        "An exfoliating cleansing gel that purifies skin and refines texture with gentle micro-particles. This 150ml formula leaves the complexion smooth, fresh, and radiant.",
+      "perfume-desc-biotherm-biosource-lot-adouc":
+        "A softening toning lotion for dry and sensitive skin that completes the cleansing routine. This 200ml formula soothes, hydrates, and prepares skin for moisturizer.",
+      "perfume-desc-biotherm-biosource-lotion-pnm":
+        "A purifying toning lotion for normal to combination skin that refreshes and balances after cleansing. This 200ml formula removes remaining impurities and preps skin for daily care.",
+      "perfume-desc-lancome-effacernes":
+        "Long-wear softening concealer with SPF 30. Choose your shade — the lightweight 15ml formula covers dark circles, evens skin tone and minimises fine lines for a natural, rested look.",
+      "perfume-desc-lancome-grandiose-01":
+        "Grandiôse Mascara in shade 01 Noir Mirifique with Lancôme's Swan-Neck wand. Amplifies, curls and lengthens lashes for a wide-angle fan effect with clump-free volume.",
+      "perfume-desc-lancome-hypnose-clean-volume-01":
+        "Hypnôse Clean Volume mascara in shade 01 Black. Buildable volume and lash separation with a lightweight, smudge-resistant formula for soft, supple lashes.",
+      "perfume-desc-lancome-bi-facil-125":
+        "Bi-Facil double-action eye makeup remover, available in 75ml and 125ml. The bi-phase formula gently removes all eye makeup, including waterproof mascara, without drying delicate skin.",
+      "perfume-desc-lancome-galatee-confort-200":
+        "Galatée Confort cleansing milk for dry skin in 200ml. Enriched with honey and almond extract, it removes makeup and impurities while leaving skin calm, soothed and hydrated.",
+      "perfume-desc-lancome-crayon-khol-noir":
+        "Le Crayon Khôl in Noir — a creamy, ultra-blendable eye pencil for intense definition. Perfect for sharp lines or soft smoky eyes with high colour payoff.",
+      "perfume-desc-lancome-genifique-cream-50":
+        "Advanced Génifique Youth Activating Cream in a 50ml jar. A lightweight day moisturiser that targets visible signs of ageing and fatigue for smoother, radiant skin.",
+      "perfume-desc-lancome-hypnose-doll-eyes-wp-01":
+        "Hypnôse Doll Eyes Waterproof mascara in 01 Black. Cone-shaped brush coats lashes for volume, length and lift with a bold, curved, clump-free finish.",
+      "perfume-desc-lancome-hypnose-doll-eyes-01":
+        "Hypnôse Doll Eyes mascara in shade 01. Weightless formula with a cone-shaped brush thickens, extends and lifts lashes for a dramatic wide-eye effect.",
+      "perfume-desc-lancome-creme-mousse-confort-125":
+        "Crème Mousse Confort creamy foaming cleanser for dry skin, 125ml. Infused with Rose de France, it transforms into a rich foam that removes impurities and waterproof makeup.",
+      "perfume-desc-lancome-eau-micellaire-douceur-400":
+        "Eau Micellaire Douceur express cleansing water, 400ml. Micellar technology removes makeup and impurities from face, eyes and lips while keeping skin hydrated and silky soft.",
+      "perfume-desc-lancome-renergie-multilift-night-50":
+        "Rénergie Multi-Lift Night Cream, 50ml. Anti-ageing night moisturiser with Multi-Tension Technology that firms, smooths and rejuvenates skin while you sleep.",
+      "perfume-desc-lancome-renergie-creme-50":
+        "Rénergie Multi-Lift Day Cream in a 50ml jar. Lifts, firms and plumps skin while minimising fine lines. Includes SPF 15 for daily protection and revived radiance.",
+      "perfume-desc-lancome-tonique-douceur-400":
+        "Tonique Douceur softening hydrating toner, 400ml. Alcohol-free formula with plant extracts refines pores, tones and preps normal to combination skin for moisturiser.",
+      "perfume-desc-ysl-mascara-mvefc-01":
+        "YSL Mascara Volume Effet Faux Cils in 01 Black. Iconic false-lash effect mascara delivering instant volume, length and ultra-black drama with a flexible brush.",
+      "perfume-desc-ysl-dessin-sourcils-02":
+        "YSL Dessin des Sourcils eyebrow pencil, 1.3g. Choose your shade — defines and shapes brows with natural, buildable colour for a polished, structured look, with a built-in brow brush.",
+      "perfume-desc-ysl-mascara-vefc-wp-01":
+        "YSL Volume Effet Faux Cils Waterproof mascara in 01. Delivers intense volume and length with smudge-proof, long-wearing false-lash effect.",
+      "perfume-desc-armani-babel-she-edp":
+        "A seductive and sparkling fragrance for women that opens with juicy raspberry and aromatic neroli, blooms into rose absolute and closes with creamy vanilla and warm musk. The feminine counterpart to Emporio Babel HE.",
+      "perfume-desc-lancome-monsieur-big-01":
+        "Monsieur Big mascara in shade 01 Big Is The New Black. Ultra-creamy formula with a large brush delivers up to 12x more volume, intense black pigment and up to 24-hour wear without flaking or smudging.",
+      "perfume-desc-biotherm-waterlover-spf30-200":
+        "Waterlover face and body sun milk SPF 30, 200ml. Lightweight milky texture with eco-conscious filters protects against UVA and UVB while hydrating skin with Life Plankton — no white cast, suitable for sensitive skin.",
+      "perfume-desc-biotherm-waterlover-spf50-200":
+        "Waterlover face and body sun milk SPF 50, 200ml. High broad-spectrum protection in a fast-absorbing milk that leaves no white marks. Enriched with Life Plankton for hydration; water-resistant and suitable for sensitive skin.",
+      "perfume-desc-biotherm-blue-therapy-big-eye-15":
+        "Blue Therapy Eye cream, 15ml. Anti-ageing eye care that targets crow's feet, under-eye bags and loss of firmness. Rich yet fresh texture regenerates the delicate eye contour for a brighter, younger-looking gaze.",
+      "perfume-desc-ysl-touche-eclat-3":
+        "YSL Touche Éclat Radiant Touch illuminating pen. Choose your shade — it brightens under-eyes, highlights cheekbones and adds a natural, luminous glow.",
+      "perfume-desc-ysl-primer-moisture-glow":
+        "YSL Top Secrets Instant Moisture Glow, 40ml — a hydrating primer and moisturiser in one. Up to 72 hours of hydration, blurs fine lines and imperfections, preps the skin for makeup and leaves a fresh, dewy glow.",
+      "perfume-desc-lancome-hydra-zen-spf15-50":
+        "Hydra Zen anti-stress moisturising cream with SPF 15, 50ml jar. Soothes and comforts stressed skin, delivers long-lasting hydration and protects against daily UV exposure for a calm, healthy-looking complexion.",
+      "perfume-desc-lancome-absolu-plumper":
+        "Lancôme L'Absolu Gloss Rôsy Plump, 8ml — a light-pink plumping lip gloss with a creamy, non-sticky, high-shine finish. Hyaluronic acid keeps lips hydrated for up to 6 hours, while a cooling menthol touch leaves them looking fuller. Wear it alone or over your favourite lipstick.",
+      "perfume-desc-lancome-teint-miracle":
+        "Teint Miracle hydrating foundation with SPF 15, 30ml pump bottle. Choose your shade — the lightweight, buildable formula evens the complexion and gives skin a natural, lit-from-within glow.",
+      "perfume-desc-biotherm-lait-corporel-400":
+        "Biotherm's iconic Lait Corporel anti-drying body milk in a 400ml bottle. Enriched with Life Plankton and citrus extracts, it hydrates for up to 48 hours and leaves skin soft, smooth and delicately fresh-scented.",
+      "perfume-desc-biotherm-rasage-sensitive-200":
+        "Biotherm Homme Foam Shaver for sensitive skin, 200ml. A dense, rich shaving foam that cushions the razor for a close, comfortable shave and helps prevent irritation, redness and razor burn. With soothing allantoin, moisturising glycerin and Life Plankton™.",
+      "perfume-desc-biotherm-deo-pure-ecocert":
+        "Biotherm Deo Pure Natural Protect roll-on, 75ml — Biotherm's first Ecocert-certified organic deodorant. Free from aluminium salts and parabens, it gives 24-hour odour protection with natural-origin ingredients and aloe vera to soothe the skin. Leaves no marks on clothes.",
+      "perfume-desc-viktor-spicebomb-edt":
+        "Spicebomb Eau de Toilette by Viktor&Rolf — an explosive spicy-woody fragrance for men. Fresh bergamot and grapefruit open onto a fiery heart of chilli, saffron and cinnamon, settling into a warm base of leather, tobacco and vetiver.",
+      "perfume-desc-viktor-flowerbomb-nectar":
+        "Flowerbomb Nectar Eau de Parfum by Viktor&Rolf — a richer, more intense take on the iconic Flowerbomb. Luminous orange blossom and jasmine meet a sweet, gourmand heart of vanilla and an addictive amber-woody trail.",
+      "perfume-desc-biotherm-aquasource-serum-biphase-50":
+        "Biotherm Aquasource Aura Concentrate bi-phase serum, 50ml, for dry to very dry skin. Shake to activate the moisture micro-droplets — with Life Plankton™, Medicinal Aura Leaf and macadamia oil, it gives 24-hour regenerating hydration, refines skin texture and revives the glow.",
+      "perfume-desc-biotherm-aquapower-cleanser":
+        "Biotherm Homme Aquapower ultra-cleansing face wash for men, 125ml. A fresh gel that turns into a creamy foam, removing impurities with oligo-elements and Life Plankton™ — leaves skin clean, refreshed and ready for shaving.",
+      "perfume-desc-lancome-hypnose":
+        "Lancôme Hypnôse volumising mascara. Choose your shade — the buildable formula and signature brush give up to 6x more volume for intense, defined lashes without clumps.",
+      "perfume-desc-lancome-cils-booster-xl":
+        "Lancôme Cils Booster XL enhancing lash primer, 5.5ml. A white base with XL micro-fibres and vitamins B5 and E, applied before mascara to boost length, volume and curl without clumps. Suitable for sensitive eyes and contact lens wearers.",
+      "perfume-desc-lancome-monsieur-big-wp-01":
+        "Monsieur Big Waterproof mascara in 01 Big Is The New Black. The big brush delivers bold, intense volume in a waterproof formula that resists water, sweat and humidity all day.",
+      "perfume-desc-lancome-loose-setting-powder":
+        "Lancôme Long Time No Shine loose setting powder in Translucent, 15g. A weightless powder with ultra-fine mica and silica that absorbs oil, controls shine and extends foundation wear — a smooth matte finish with no white cast.",
+      "perfume-desc-lancome-setting-spray":
+        "Lancôme Fix It Forget It setting spray, 100ml. A refreshing mist with hyaluronic acid, kiwi and moringa extracts that keeps makeup in place for up to 24 hours — sweat- and weather-proof with a natural, shine-free finish.",
+      "perfume-desc-lancome-blush-subtil":
+        "Lancôme Blush Subtil powder blush. Choose your shade — the silky, buildable powder blends seamlessly for a fresh, natural flush of colour that lasts all day.",
+      "perfume-desc-armani-ea-with-you-intensely":
+        "Emporio Armani Stronger With You Intensely Eau de Parfum for men. Spicy pink pepper and juniper open onto a warm heart of toffee, cinnamon and lavender, settling into an addictive base of vanilla, tonka bean and amber.",
+      "perfume-desc-prada-candy":
+        "Prada Candy Eau de Parfum — a playful, sensual gourmand for women. Soft white musks open onto warm benzoin and a rich caramel accord for a smooth, addictive trail.",
+      "perfume-desc-prada-la-femme-intense":
+        "Prada La Femme Intense Eau de Parfum — a deeper, more sensual interpretation of La Femme. Frangipani and ylang-ylang open onto an intensified heart of tuberose, jasmine sambac and orange blossom, resting on warm patchouli, vanilla and vetiver.",
+      "perfume-desc-prada-lhomme-intense":
+        "Prada L'Homme Intense Eau de Parfum — a richer, warmer take on L'Homme. Powdery iris and amber deepen with patchouli and tonka bean for an elegant, sensual woody signature.",
+      "perfume-desc-prada-lhomme-leau":
+        "Prada L'Homme L'Eau Eau de Toilette — a fresh, luminous version of L'Homme. Bright ginger and neroli meet the signature iris, resting on a clean base of cedar, amber and sandalwood.",
+      "perfume-desc-biotherm-life-plankton-eye-15":
+        "Biotherm Life Plankton™ Eye cream, 15ml. With Biotherm's highest concentration of Life Plankton™ and bio-fermented hyaluronic acid, it targets crow's feet, wrinkles, puffiness and dark circles. Light, creamy texture — suitable for sensitive eyes and contact lens wearers.",
+      "perfume-desc-biotherm-tpur-salty-gel-cleanser-125":
+        "Biotherm Homme T-Pur Anti-Oil & Shine cleansing gel, 125ml. An exfoliating, detoxifying gel with French sea salts that reduces shine and blemishes and removes pollution particles. Ideal for oily skin — use every morning before shaving or in the shower.",
+      "perfume-desc-biotherm-aqs-concentrate-bounce-50":
+        "Biotherm Aqua Bounce Super Concentrate, 50ml. Hyaluronic acid, glycerin and Life Plankton™ water plump and soften dry, dehydrated skin. A fast-absorbing gel-fluid with 24-hour hydration.",
+      "perfume-desc-biotherm-aqs-concentrate-pure-50":
+        "Biotherm Aqua Pure Super Concentrate, 50ml, for combination to oily skin. Salicylic acid, glycerin and Life Plankton™ water tighten pores, reduce excess sebum and control shine in a fresh, oil-free gel.",
+      "perfume-desc-biotherm-aqs-concentrate-glow-50":
+        "Biotherm Aqua Glow Super Concentrate, 50ml, for dull or uneven skin. A vitamin complex, glycerin and Life Plankton™ water brighten and even the skin tone in a light fluid with 24-hour moisture.",
+      "perfume-desc-lancome-brow-define-pencil":
+        "Lancôme Brôw Define Pencil, 0.09g. Choose your shade — an ultra-fine retractable tip draws precise, hair-like strokes, and the spoolie brush blends them for natural, defined brows. Waterproof and long-lasting.",
+      "perfume-desc-lancome-hypnose-palette":
+        "Lancôme Hypnôse Palette 5 Couleurs, 4g. Choose your shade — five coordinated shades from matte to shimmer in a soft, creamy powder that blends easily from day to night looks. Long-wearing and crease-resistant, with more intense colour when applied wet.",
+      "perfume-desc-biotherm-aquapower-deo-roll-75":
+        "Biotherm Homme Aquapower 48H Protection antiperspirant roll-on, 75ml. Self-reactive freshness technology releases freshness when it detects sweat, while Life Plankton™ water keeps skin dry and comfortable. Fluid, non-greasy texture with the fresh Aquapower scent.",
+      "perfume-desc-ysl-lhomme-nuit-edp-100":
+        "Yves Saint Laurent La Nuit de L'Homme Eau de Parfum — a seductive, intense take on the night-time classic. Spicy cardamom and lavender over a warm, sensual woody base.",
+      "perfume-desc-lancome-mademoiselle-shine":
+        "Lancôme L'Absolu Mademoiselle Shine lipstick, 3.2g. Choose your shade — a balmy, conditioning lipstick that glides on with juicy colour and a high-shine finish. Enriched with Pro-Xylane and rose oil to keep lips soft, hydrated and supple.",
+      "perfume-desc-libre-edp":
+        "Yves Saint Laurent Libre Eau de Parfum — the floral lavender of freedom. Mandarin and lavender essence open onto a sensual heart of orange blossom and jasmine, resting on warm Madagascar vanilla and musk.",
+      "perfume-desc-biotherm-amber-algae-revitalize-day":
+        "Biotherm Blue Therapy Amber Algae Revitalize day cream, 50ml. Amber algae energises the skin while calcium, plant oils and shea butter nourish and strengthen it. A velvety cream with light-reflecting micro-pearls for an instant glow — anti-ageing care for mature or dull skin.",
+      "perfume-desc-biotherm-amber-algae-revitalize-night":
+        "Biotherm Blue Therapy Amber Algae Revitalize night cream, 50ml. Amber algae with resveratrol, hyaluronic acid and shea butter in a rich, melting balm that works overnight to firm the skin and smooth crow's feet. For dry or mature skin.",
+      "perfume-desc-lancome-genifique-serum-50":
+        "Lancôme Advanced Génifique Youth Activating serum, 50ml. Pre- and probiotic fractions, hyaluronic acid and vitamin Cg strengthen the skin barrier and boost radiance, for visibly younger-looking skin in 7 days. A lightweight first step morning and night, suitable for all skin types, including sensitive.",
+      "perfume-desc-lancome-rose-sugar-scrub":
+        "Lancôme Rose Sugar Scrub, 100ml — a gentle exfoliating scrub. Fine sugar grains melt as you massage, while acacia honey, rose water and hyaluronic acid leave the skin smooth, soft and comforted. Suitable for sensitive skin; use 2–3 times a week.",
+      "perfume-desc-lancome-hydra-zen-cream-50":
+        "Lancôme Hydra Zen Cream, 50ml — a moisturising, soothing day and night cream with hyaluronic acid for normal to dry skin, including sensitive. Gives up to 48 hours of hydration and strengthens the moisture barrier for calmer, more comfortable skin.",
+      "perfume-desc-lancome-hydra-zen-nuit-50":
+        "Lancôme Hydra Zen Night Cream, 50ml. A silky night cream with hyaluronic acid, rose and moringa extracts that recharges moisture and soothes stressed, sensitive skin overnight, so it looks rested and fresh in the morning.",
+      "perfume-desc-lancome-hydra-zen-glow-50":
+        "Lancôme Hydra Zen Anti-Stress Glow Liquid Moisturizer, 50ml. A lightweight fluid with 14 amino acids, hyaluronic acid, aloe vera and rose extract for 24-hour hydration, a stronger moisture barrier and a healthy glow. Non-comedogenic and suitable for all skin types.",
+      "perfume-desc-ysl-lhomme-le-parfum-100":
+        "Yves Saint Laurent L'Homme Le Parfum, 100ml — a woody aromatic fragrance for men. Cardamom, ozonic notes and Primofiori lemon open onto a heart of basil, geranium and violet leaf, resting on cedar, vetiver and warm amberwood.",
+      "perfume-desc-biotherm-tpur-cleanser-125":
+        "Biotherm Homme T-Pur Cleanser, 125ml — an unclogging, oil-control cleanser for normal to oily skin. The white clay-like texture lathers into a foam, while sea minerals, zinc and absorbent perlite purify pores and reduce shine. Use morning (before shaving) and evening.",
+      "perfume-desc-ysl-mascara-mvefc-the-curler":
+        "YSL Mascara Volume Effet Faux Cils The Curler in 01 Rebellious Black, 6.6ml. A dual-sided brush — black fibres for volume and a pink comb to lift — curls and holds lashes all day, with a formula enriched with coconut, walnut-leaf and bamboo oils.",
+      "perfume-desc-ysl-eyeliner-couture-01":
+        "YSL Couture Eyeliner in 1 Noir Minimal Mat, 2.95ml. A liquid liner with an ultra-fine felt tip for precise lines, in a deep black, quick-drying matte finish that lasts all day without smudging.",
+      "perfume-desc-biotherm-aqua-super-mask-glow":
+        "Biotherm Aqua Glow Flash Mask, one 31g sheet mask. Life Plankton™ water and a vitamin complex deliver a boost of hydration and radiance to dull skin in 15 minutes — no rinsing needed. Suitable for all skin types.",
+      "perfume-desc-biotherm-aqua-super-mask-bounce":
+        "Biotherm Aqua Bounce Flash Mask, one 31g sheet mask. Life Plankton™ water and hyaluronic acid plump and hydrate the skin in 15 minutes for a firmer, bouncier look — no rinsing needed. Suitable for all skin types.",
+      "perfume-desc-biotherm-aqua-super-mask-pure":
+        "Biotherm Aqua Pure Flash Mask, one 31g sheet mask. Life Plankton™ water and salicylic acid hydrate while refining pores for a fresh, purified complexion in 15 minutes — no rinsing needed. Suitable for all skin types.",
+      "perfume-desc-ysl-tatouage-velvet-cream-201":
+        "YSL Tatouage Couture Velvet Cream liquid lipstick in 201 Rouge Tatouage, a vivid classic red, 6ml. A creamy matte texture with a velvety feel and high coverage that lasts without drying the lips, applied with a precise angled cushion applicator.",
+      "perfume-desc-biotherm-life-plankton-body-milk-400":
+        "Biotherm Life Plankton™ Multi-Corrective Body Milk, 400ml pump bottle. A silky, fast-absorbing milk with Life Plankton™, plant oils and shea butter that firms, nourishes and smooths the skin. Suitable for sensitive skin, with a light musky scent.",
+      "perfume-desc-ysl-satin-crush-eyeshadow-05":
+        "YSL Satin Crush mono eyeshadow in 05 Radical Rust, a rosy rust-burgundy. A powdery-creamy texture with a satin glow and buildable intensity, applied with a finger or brush, in a mirrored black-and-gold compact.",
+      "perfume-desc-lancome-cils-booster-serum":
+        "Lancôme Cils Booster Lash Revitalizing Serum, 4ml. Hyaluronic acid, an amino-acid complex and cica condition lashes from root to tip and reduce lash loss. Apply twice a day along the lash line — ophthalmologist-tested and suitable for sensitive eyes.",
+      "perfume-desc-valentino-born-in-roma-uomo-edt":
+        "Valentino Born in Roma Uomo Eau de Toilette — a woody aromatic vetiver for men. Violet leaf, ginger and lemon open onto clary sage, a fresh peppermint accord and mineral salt, resting on smoky vetiver, guaiac wood and leather.",
+      "perfume-desc-valentino-donna-edp-30":
+        "Valentino Donna Eau de Parfum — a couture floral for women in the iconic studded bottle. Grapefruit, bergamot and blackcurrant open onto a heart of rose, peach and iris, resting on patchouli, vanilla and praline.",
+      "perfume-desc-valentino-uomo-edt":
+        "Valentino Uomo Eau de Toilette — an elegant woody fragrance for men. Bergamot, lemon and cardamom open onto clary sage, lavandin and black pepper, resting on cedar, vetiver, vanilla and iris.",
+      "perfume-desc-ysl-mascara-mvefc-radical-01":
+        "YSL Mascara Volume Effet Faux Cils Radical in 01 Black Over Black, 7.5ml. An ultra-black, carbon-pigment formula with argan oil and walnut-leaf extract, and a brush mixing soft and stiff bristles for extreme false-lash volume.",
+      "perfume-desc-lancome-lash-idole-01":
+        "Lancôme Lash Idôle lash-lifting and volumising mascara in 01 Glossy Black, 8ml. Choose classic or waterproof — a lightweight gel formula with white tea extract and a curved 360-bristle wand lifts, fans out and volumises lashes without clumps, flaking or smudging for up to 24 hours.",
+      "perfume-desc-armani-stronger-with-you-absolu":
+        "Emporio Armani Stronger With You Absolutely — the most intense, addictive version of Stronger With You for men. Rum, elemi and bergamot open onto lavender and davana, resting on a warm, gourmand base of chestnut, Madagascar vanilla, cedar and patchouli.",
+      "perfume-desc-valentino-born-in-roma-uomo-yellow-dream":
+        "Valentino Born in Roma Uomo Yellow Dream Eau de Toilette, 100ml — a sunny, woody aromatic for men in the yellow Rockstud bottle. Italian mandarin and pineapple open onto a spicy gingerbread accord, resting on vanilla absolute and cedarwood.",
+      "perfume-desc-ysl-crushliner":
+        "YSL Crushliner Stylo waterproof eyeliner. Choose your shade — a retractable pencil with intense colour in one stroke that lasts up to 24 hours on the lash line, resisting water and smudging. Infused with pomegranate extract and ophthalmologist-tested.",
+      "perfume-desc-cacharel-yes-i-am":
+        "Cacharel Yes I Am Eau de Parfum — a bold amber floral for women in the iconic lipstick-shaped bottle. Raspberry, mandarin and bergamot open onto gardenia, jasmine and ginger flower, resting on a creamy milk accord with caramel, vanilla, cardamom and sandalwood.",
+      "perfume-desc-cacharel-yes-i-am-purple":
+        "Cacharel Yes I Am Fabulous Eau de Parfum, 30ml — a fruity, creamy amber-vanilla scent in the purple lipstick bottle. Juicy blackberry opens onto purple heliotrope, resting on a gourmand base of milk and hazelnut.",
+      "perfume-desc-cacharel-yes-i-am-glorious":
+        "Cacharel Yes I Am Glorious Eau de Parfum, 50ml — a luminous fruity floral in the peach lipstick bottle. Peach nectar and mandarin open onto frangipani, tiaré and magnolia, resting on a creamy milkshake accord with sandalwood and white cedar.",
+      "perfume-desc-cacharel-loulou":
+        "Cacharel LouLou Eau de Parfum — the cult 1987 oriental floral in its iconic blue bottle. Plum, iris, violet and mimosa open onto tiaré flower, tuberose and orange blossom, resting on warm vanilla, sandalwood, incense and musk.",
+      "perfume-desc-viktor-spicebomb-night-vision-edt":
+        "Viktor&Rolf Spicebomb Night Vision Eau de Toilette, 90ml — a fresh, spicy-woody fragrance for men. Bergamot, green mandarin, grapefruit, apple and cardamom open onto clary sage, geranium and lavandin, resting on roasted almond, tonka bean, patchouli and cedarwood.",
+      "perfume-desc-viktor-flowerbomb-dew":
+        "Viktor&Rolf Flowerbomb Dew Eau de Parfum, 50ml — a fresh, dewy floral for women. Bergamot, pear and ambrette open onto a dewy rose accord and iris, resting on soft white musk, cashmeran and heliotrope.",
+      "perfume-desc-diesel-bad":
+        "Diesel Bad Eau de Toilette — a woody fragrance for men in a bottle inspired by a leather biker jacket. Bergamot, cardamom and lavender open onto a caviar accord with orris and sage, resting on tobacco, tonka bean, Ambroxan and patchouli.",
+      "perfume-desc-diesel-fuel-for-life-homme":
+        "Diesel Fuel for Life Homme Eau de Toilette — an aromatic fougère for men in the retro flask bottle. Star anise and grapefruit open onto raspberry and lavender, resting on woods and heliotrope.",
+      "perfume-desc-mugler-alien-edp":
+        "Mugler Alien Eau de Parfum — a mysterious, radiant floral woody amber for women in the iconic amethyst talisman bottle. Luminous sambac jasmine meets solar cashmeran wood, resting on a warm trail of white amber. The 60ml bottle is refillable.",
+      "perfume-desc-mugler-alien-goddess":
+        "Mugler Alien Goddess Eau de Parfum, refillable — a sunny floral woody fragrance for women in a golden talisman bottle. Bergamot and coconut water open onto jasmine grandiflorum and heliotrope, resting on bourbon vanilla and cashmeran.",
+      "perfume-desc-armani-my-way-intense":
+        "Giorgio Armani My Way Eau de Parfum Intense, refillable — a deeper, more sensual take on My Way. Orange blossom opens onto an intense floral heart of tuberose and jasmine, resting on creamy sandalwood and Madagascar vanilla.",
+      "perfume-desc-prada-luna-rossa-ocean":
+        "Prada Luna Rossa Ocean Eau de Toilette — a fresh aromatic fougère for men inspired by the sea. Bergamot, pink pepper and artemisia open onto lavender, iris, sage, suede and saffron, resting on musk, caramel, vetiver and patchouli.",
+      "perfume-desc-biotherm-aquasource-gel-50":
+        "Biotherm Aquasource Hyalu Plump Gel, 50ml, for normal to combination skin. Two types of hyaluronic acid and Life Plankton™ give up to 48 hours of hydration in a light, fresh gel that plumps the skin and suits sensitive skin too.",
+      "perfume-desc-lancome-hypnose-absolu-de-noir":
+        "Lancôme Hypnôse L'Absolu de Noir mascara in 01 Extra Black, 6.2ml. The extra-black version of Hypnôse — a 30% darker, semi-matte formula with the 1,000-bristle brush for buildable, dramatic volume that doesn't flake.",
+      "perfume-desc-lancome-24h-drama-liqui-pencil":
+        "Lancôme Drama Liqui-Pencil, 1.2g. Choose your shade — a hybrid gel eyeliner pencil with the intense colour of a liquid liner. Waterproof and long-wearing for up to 24 hours without smudging, flaking or transferring; suitable for sensitive eyes and contact lens wearers.",
+      "perfume-desc-lancome-tiuw-stick":
+        "Lancôme Teint Idole Ultra Wear foundation stick, 9g. Choose your shade — a cream-to-powder formula with medium to full coverage and a natural matte finish that lasts up to 24 hours and resists transfer. Use it as foundation, concealer or contour with the built-in brush.",
+      "perfume-desc-lancome-tiuw-stick-blush-03":
+        "Lancôme Teint Idole Ultra Wear blush stick in 03 Wild Ruby, a deep red-pink, 9g. A lightweight cream-to-powder texture with buildable colour from a natural flush to bold, transfer- and smudge-resistant and non-comedogenic.",
+      "perfume-desc-lancome-tiuw-stick-highlighter":
+        "Lancôme Teint Idole Ultra Wear highlighter stick, 9g. Choose your shade — a cream-to-powder texture with light-reflecting particles for a second-skin glow, from natural radiance to dramatic, and transfer-resistant.",
+      "perfume-desc-lancome-tiuw-concealer":
+        "Lancôme Teint Idole Ultra Wear All Over Concealer, 13ml. Choose your shade — full, buildable coverage with a natural matte finish and up to 24 hours of wear and hydration without creasing. Use it as a concealer or all-over foundation; suitable for sensitive skin.",
+      "perfume-desc-viktor-spicebomb-night-vision-edp":
+        "Viktor&Rolf Spicebomb Night Vision Eau de Parfum, 90ml — the deeper, more intense Eau de Parfum version of Night Vision for men. Fresh citrus and spices meet aromatic herbs, resting on a warm, addictive base of tonka bean and woods.",
+      "perfume-desc-ralph-lauren-polo-red-edp":
+        "Ralph Lauren Polo Red Eau de Parfum, 75ml — a bold, seductive woody fragrance for men and a warmer, more intense take on Polo Red. Vibrant citrus and spicy notes open onto a rich, sensual woody base.",
+      "perfume-desc-valentino-born-in-roma-uomo-coral-fantasy":
+        "Valentino Born in Roma Uomo Coral Fantasy Eau de Toilette — a vibrant, fruity aromatic woody fragrance for men in the coral-tinted Rockstud bottle, pairing juicy fruit and aromatic notes with a smoky, woody base.",
+      "perfume-desc-valentino-born-in-roma-donna-coral-fantasy":
+        "Valentino Born in Roma Donna Coral Fantasy Eau de Parfum — a radiant fruity floral for women in the coral Rockstud bottle, with juicy fruit and blooming florals over a warm, sensual vanilla base.",
+      "perfume-desc-prada-luna-rossa-sport":
+        "Prada Luna Rossa Sport Eau de Toilette, 50ml — an energising, sporty fragrance for men in the red Luna Rossa bottle. Fresh ginger and juniper berries meet a warm, smooth heart of tonka bean and vanilla.",
+      "perfume-desc-ysl-y-edt":
+        "Yves Saint Laurent Y Eau de Toilette — a fresh, aromatic woody fragrance for men. Crisp bergamot and ginger open onto aromatic sage, resting on a clean woody base of cedarwood and vetiver.",
+      "perfume-desc-lancome-genifique-sensitive-20":
+        "Lancôme Advanced Génifique Sensitive dual concentrate, 20ml. A twist of the cap releases a blue concentrate with ferulic acid and vitamin E into the pre- and probiotic serum, to soothe, strengthen the skin barrier and reduce visible redness. For all skin types, including sensitive.",
+      "perfume-desc-lancome-absolu-rouge-drama-ink":
+        "Lancôme L'Absolu Rouge Drama Ink liquid lipstick, 6ml. Choose your shade — a semi-matte lip ink, twice as pigmented and four times thinner than a classic lipstick, applied with a curved precision tip for up to 8 hours of transfer-proof colour.",
+      "perfume-desc-lancome-le-stylo-waterproof":
+        "Lancôme Le Stylo Waterproof long-lasting eyeliner, 0.35g. Choose your shade — a creamy, waterproof pencil with a retractable fine tip and a built-in smudger, for the lash line or waterline, that lasts without flaking.",
+      "perfume-desc-lancome-liner-idole":
+        "Lancôme Idôle Liner in 01 Glossy Black, 1ml. An ultra-precise waterproof liquid liner with a flexible felt tip for lines as fine as 0.1mm, in an intense black that resists transfer, flaking and smudging for up to 24 hours.",
+      "perfume-desc-lancome-renergie-hcf-triple-serum-50":
+        "Lancôme Rénergie H.C.F. Triple Serum, 50ml. A three-chamber anti-ageing serum combining hyaluronic acid, vitamin C with niacinamide, and ferulic acid to target wrinkles, loss of firmness and volume, and dark spots. Use two pumps morning and/or evening.",
+      "perfume-desc-lancome-nutrix-face-cream":
+        "Lancôme Nutrix nourishing and soothing rich cream, 50ml — Lancôme's very first cream, created in 1936, now in a white jar. A rich formula for very dry, sensitive or fragile skin that relieves tightness and deeply nourishes and comforts.",
+      "perfume-desc-lancome-genifique-light-pearl-20":
+        "Lancôme Advanced Génifique Yeux Light-Pearl eye and lash concentrate, 20ml. Pre- and probiotic fractions, caffeine and arginine target puffiness and care for lashes, applied with a cooling 360° massaging pearl. Suitable for sensitive eyes and contact lens wearers.",
+      "perfume-desc-lancome-absolu-rouge-cream-366":
+        "Lancôme L'Absolu Rouge Cream lipstick, 3.4g. Choose your shade — enriched with 30% rose balm and hyaluronic acid for a luminous cream finish, intense colour and up to 18 hours of comfort.",
+      "perfume-desc-biotherm-tpur-gel-50":
+        "Biotherm Homme T-Pur Gel Ultra-Mattifying & Oil-Control, 50ml pump. A lightweight, non-sticky gel moisturiser for normal to oily skin with French sea salts and salicylic acid that controls oil and shine for up to 8 hours while keeping skin hydrated.",
+      "perfume-desc-biotherm-aquapower-comfort-gel-75":
+        "Biotherm Homme Aquapower Comfort Gel, 75ml pump, for dry skin. A fresh water-gel moisturiser with Life Plankton™, ceramides, shea butter and apricot kernel oil that boosts hydration and instantly cools and comforts the skin — ideal after shaving.",
+      "perfume-desc-biotherm-homme-ultra-confort-balm-75":
+        "Biotherm Homme Basics Line Comfort Balm, 75ml pump — a soothing, nourishing aftershave balm. A rich but non-greasy texture with Life Plankton™ that calms razor burn, redness and tightness, strengthens the skin barrier and hydrates for 24 hours.",
+      "perfume-desc-biotherm-blue-pro-retinol-50":
+        "Biotherm Blue Pro-Retinol Multi-Correct Cream, 50ml. An anti-wrinkle cream with pro-retinol, niacinamide and Life Plankton™ in a fresh, melting texture that visibly reduces wrinkles and refines skin texture. 92% natural-origin formula.",
+      "perfume-desc-ysl-rouge-pur-couture-the-slim-32":
+        "YSL Rouge Pur Couture The Slim leather-matte lipstick in 32 Rouge Rage, a deep, warm brick red, 2.2g. Highly pigmented, full-coverage colour in a creamy, comfortable formula, with a slanted square bullet that lines the lips precisely.",
+      "perfume-desc-ysl-lash-clash-01":
+        "YSL Lash Clash Extreme Volume Mascara. Choose your shade — an oversized double-cone brush delivers up to 200% more volume with 24-hour smudge-resistant wear, in a fragrance-free formula with iris extract to care for the lashes.",
+      "perfume-desc-lancome-absolu-rouge-drama-matte":
+        "Lancôme L'Absolu Rouge Drama Matte lipstick, 3.4g. Choose your shade — intense pure pigments give a bold, powdery matte finish with full coverage, while ceramides, hyaluronic acid and rose extracts keep lips comfortable for up to 8 hours. The petal-shaped bullet applies precisely in one stroke.",
+      "perfume-desc-biotherm-waterlover-sun-mist-spf30":
+        "Biotherm Waterlover Sun Mist SPF 30, 200ml — an invisible face and body sun mist with UVA/UVB protection. The transparent, ultra-light dual-layer texture with Life Plankton™ and vitamin E sprays on evenly, is water-resistant and leaves no white residue. Suitable for all skin types, including sensitive skin.",
+      "perfume-desc-biotherm-life-plankton-elixir-75":
+        "Biotherm Life Plankton Elixir, 75ml — a fundamental regenerating serum and the first step of the routine. With 5% Life Plankton™ (Biotherm's highest concentration), hyaluronic acid and a vitamin C complex, it strengthens and regenerates the skin, leaving it visibly smoother, firmer and more radiant.",
+      "perfume-desc-prada-luna-rossa-edt":
+        "Prada Luna Rossa Eau de Toilette — the original fresh, aromatic fragrance for men. Lavender and bitter orange open onto a cool heart of spearmint and clary sage, resting on a warm, sensual base of ambrette and ambroxan.",
+      "perfume-desc-armani-code-le-parfum":
+        "Armani Code Le Parfum for men, refillable — an intense woody-iris fragrance in the black lacquered Code bottle. Bergamot and bergamot leaf open onto a powdery heart of iris and clary sage, resting on a warm, sensual base of tonka bean absolute and cedarwood.",
+      "perfume-desc-lancome-advanced-genifique-night-cream":
+        "Lancôme Advanced Génifique Repairing Night Cream, 50ml jar. Inspired by microbiome science, it repairs the skin barrier overnight with a patented complex of 7 pre- and probiotic fractions, triple ceramides and hyaluronic acid. The melting texture leaves skin plumper, smoother and well-rested by morning; 94% natural-origin ingredients, suitable for sensitive skin.",
+      "perfume-desc-diesel-d-by-diesel-edt":
+        "D by Diesel Eau de Toilette, 50ml — a gender-fluid fragrance for everyone. Energising ginger and lavender open onto a soft denim-cotton accord, settling into a warm, sensual vanilla infusion. Refillable bottle in plastic-free packaging.",
+      "perfume-desc-ysl-libre-le-parfum":
+        "Yves Saint Laurent Libre Le Parfum — the most intense, ambery version of Libre for women. Bergamot, mandarin, ginger and saffron open onto a floral heart of orange blossom and lavender, resting on a warm, addictive base of Bourbon vanilla, honey and tonka bean.",
+      "perfume-desc-prada-paradoxe-edp":
+        "Prada Paradoxe Eau de Parfum, refillable — a modern amber-floral fragrance for women in the iconic triangle bottle. Bergamot, tangerine and pear open onto a luminous heart of neroli, orange blossom and jasmine, resting on amber, benzoin, Bourbon vanilla and white musk.",
+      "perfume-desc-lancome-bi-facil-clean-care-125":
+        "Lancôme Bi-Facil Clean & Care Eye Makeup Remover, 125ml. The bi-phase formula (55% oil, 45% water) removes even waterproof and long-wear eye makeup instantly: jojoba and almond oils dissolve makeup while nourishing, and Damascena rose water soothes the eye area and lashes. Gentle enough for sensitive eyes; at least 95% natural-origin ingredients.",
+      "perfume-desc-lancome-hypnose-gift-set":
+        "Lancôme Le 8 Hypnôse gift set — Le 8 Hypnôse volumising serum mascara in black plus a Cils Booster XL lash primer, in a gift box. The mascara's caring black balm with 8 amino acids builds bold volume while caring for the lashes and removes easily with warm water; apply the white primer first for extra volume and length.",
+      "perfume-desc-valentino-donna-yellow-dream-set":
+        "Valentino Donna Born in Roma Yellow Dream gift set — a 50ml Eau de Parfum plus a 15ml travel-size Eau de Parfum. A sunny floral-musky fragrance: Calabrian bergamot and Italian primofiore lemon open onto Damascena rose and peony, resting on white musk and Madagascan vanilla.",
+      "perfume-desc-lancome-tiuw-care-glow-foundation":
+        "Lancôme Teint Idole Ultra Wear Care & Glow foundation, 30ml, SPF 25. Choose your shade — a healthy-glow serum foundation with 82% skincare, hyaluronic and mandelic acids, giving medium, buildable coverage that lasts 24 hours without transferring, fading or settling into fine lines. Suitable for all skin types.",
+      "perfume-desc-ysl-all-hours-foundation":
+        "Yves Saint Laurent All Hours Foundation Luminous Matte, 25ml, SPF 39. Choose your shade — up to 24 hours of full coverage with a natural luminous-matte finish and a weightless, breathable feel. Transfer-proof, waterproof and sweat-proof, with a 77% skincare base including hyaluronic acid.",
+      "perfume-desc-viktor-rolf-good-fortune-edp":
+        "Viktor&Rolf Good Fortune Eau de Parfum, 50ml — an amber floral fragrance for women in the orb-shaped lilac bottle with an amethyst-like cap. Spicy fennel and gentian flower open onto a rich jasmine superinfusion, resting on creamy Madagascan bourbon vanilla.",
+      "perfume-desc-ysl-lhomme-edp":
+        "Yves Saint Laurent L'Homme Eau de Parfum, 100ml — a richer, liqueur-like take on L'Homme in a bourbon-coloured bottle. Bitter orange and bergamot open onto lavender and geranium, resting on a warm woody base of cognac-cask oak, cedar and vetiver.",
+      "perfume-desc-ysl-black-opium-le-parfum":
+        "Yves Saint Laurent Black Opium Le Parfum — the most intense, vanilla-rich Black Opium, in a glossy black couture bottle. Green mandarin, pear and cinnamon open onto jasmine sambac and orange blossom, resting on an espresso coffee accord, patchouli and four Madagascan vanillas.",
+      "perfume-desc-ysl-libre-body-balm":
+        "Yves Saint Laurent Libre Perfumed Body Balm, 200ml tube. A soft, ultra-moisturising balm with shea butter, sweet almond oil and soothing verbena that absorbs quickly without feeling greasy, leaving skin delicately scented with Libre's lavender, orange blossom and vanilla signature.",
+      "perfume-desc-armani-code-edt":
+        "Armani Code Eau de Toilette for men, refillable — an ambery-woody fragrance in the black Code bottle with silver accents. Bright green mandarin from Italy opens onto a modern, magnetic heart of lavandin, resting on a warm, comforting base of tonka bean absolute and cedarwood.",
+      "perfume-desc-valentino-born-in-roma-uomo-intense":
+        "Valentino Uomo Born in Roma Intense Eau de Parfum — a deeper, more sensual take on Born in Roma Uomo in a dark studded bottle. Creamy bourbon vanilla and a touch of ginger meet an aromatic heart of lavandin, resting on a smoky vetiver base.",
+      "perfume-desc-valentino-born-in-roma-donna-intense":
+        "Valentino Donna Born in Roma Intense Eau de Parfum — an intense amber-vanilla take on Born in Roma Donna in a deep pink studded bottle. Bourbon vanilla lifted by bergamot and blackcurrant meets a trio of jasmines, resting on warm benzoin resin.",
+      "perfume-desc-armani-my-way-le-parfum":
+        "Giorgio Armani My Way Le Parfum, refillable — the most intense My Way, in a pink-to-blue gradient bottle. Bergamot and orange blossom open onto a heart of tuberose, iris and ambrette, resting on cedarwood, bourbon vanilla and white musk.",
+      "perfume-desc-viktor-rolf-flowerbomb-ruby-orchid":
+        "Viktor&Rolf Flowerbomb Ruby Orchid Eau de Parfum — a floral-gourmand take on Flowerbomb in a ruby-pink grenade bottle. Vine peach accord and freesia open onto a heart of jasmine grandiflorum and ruby orchid, resting on red vanilla bean and a Bourbon vanilla infusion.",
+      "perfume-desc-ysl-myslf-edp":
+        "Yves Saint Laurent MYSLF Eau de Parfum for men, refillable — a woody floral fragrance in a sleek black bottle with the Cassandre logo. Calabrian bergamot opens onto a heart of Tunisian orange blossom absolute, resting on Indonesian patchouli and ambery woods.",
+      "perfume-desc-armani-si-intense-edp":
+        "Giorgio Armani Sì Eau de Parfum Intense, refillable — a richer, more sensual Sì for women. Blackcurrant nectar opens onto a heart of Damascena rose absolute and davana essential oil, resting on Madagascar Bourbon vanilla with a hint of black tea.",
+      "perfume-desc-lancome-hypnose-mascara-set":
+        "Lancôme Le 8 Hypnôse mascara gift set — the full-size Le 8 Hypnôse volumising serum mascara in black plus a travel-size L'Absolu Rouge Cream lipstick, in a gift box. The mascara's caring black balm builds bold, buildable volume and removes easily with warm water.",
+      "perfume-desc-biotherm-blue-pro-retinol-eye-cream":
+        "Biotherm Blue Pro-Retinol Eye Cream, 15ml — an anti-wrinkle eye cream with pro-retinol, peptides, caffeine and Life Plankton™. Use morning and night: the eye contour looks brighter and firmer from the first week and wrinkles are visibly reduced. 95% natural-origin, vegan and ophthalmologist-tested.",
+      "perfume-desc-prada-paradoxe-intense":
+        "Prada Paradoxe Intense Eau de Parfum, refillable — a deeper, more enveloping floral amber with a woody twist. A jasmine superinfusion meets a warm amber accord and a moss accord for an intense, sensual trail.",
+      "perfume-desc-ysl-libre-absolu-platine":
+        "Yves Saint Laurent Libre L'Absolu Platine — the most concentrated Libre, in a mirrored platinum bottle with the gold Cassandre. Bergamot, mandarin and a natural aldehyde open onto orange blossom and Diva lavender, resting on Bourbon vanilla and an ambergris accord.",
+      "perfume-desc-lancome-renergie-hpn-300-peptide":
+        "Lancôme Rénergie H.P.N. 300-Peptide Cream, 50ml — an anti-ageing cream with hyaluronic acid, over 300 peptides and niacinamide for morning and/or evening. Visibly reduces wrinkles, fine lines and dark spots while firming and lifting the skin, with first results in as little as 2 weeks.",
+      "perfume-desc-armani-prive-cuir-zerzura":
+        "Giorgio Armani Privé Cuir Zerzura Eau de Parfum — a refined leather from Armani's haute couture fragrance collection. Violet leaf, elemi and mandarin open onto iris and rose, resting on a soft leather, Bourbon vanilla and cedar base.",
+      "perfume-desc-armani-prive-musc-shamal":
+        "Giorgio Armani Privé Musc Shamal Eau de Parfum — a luminous musky amber from Armani's haute couture fragrance collection. Sparkling aldehydes and citrus open onto a heart of musk, rose and jasmine, resting on amber, vanilla and cedar.",
+      "perfume-desc-armani-prive-sable-nuit":
+        "Giorgio Armani Privé Sable Nuit Eau de Parfum — a warm, resinous amber from Armani's haute couture fragrance collection. Olibanum and pink pepper open onto cedar, benzoin, labdanum and patchouli, resting on vanilla and ambroxan.",
+      "perfume-desc-armani-prive-bois-encens":
+        "Giorgio Armani Privé Bois d'Encens Eau de Parfum — a woody incense from Armani's haute couture fragrance collection. Black pepper and vetiver frame a smoky heart of frankincense, with cedar and labdanum in the base.",
+      "perfume-desc-armani-prive-cuir-amethyste":
+        "Giorgio Armani Privé Cuir Améthyste Eau de Parfum — a floral leather from Armani's haute couture fragrance collection. Coriander, rose and bergamot open onto violet and birch leather with patchouli, resting on benzoin, labdanum and Bourbon vanilla.",
+      "perfume-desc-armani-prive-oud-royal":
+        "Giorgio Armani Privé Oud Royal Eau de Parfum — a regal oud from Armani's haute couture fragrance collection. Saffron opens onto Laotian oud and rose, resting on frankincense, myrrh, amber and sandalwood.",
+      "perfume-desc-armani-prive-cypres-pantelleria":
+        "Giorgio Armani Privé Cyprès Pantelleria Eau de Toilette — a fresh Mediterranean citrus-woody scent from Armani's haute couture fragrance collection. Citron, bergamot, neroli and mandarin open onto watery notes, cypress and clary sage, resting on oakmoss, vetiver, amberwood and patchouli.",
+      "perfume-desc-armani-prive-figuier-eden":
+        "Giorgio Armani Privé Figuier Eden Eau de Toilette — a green, juicy fig scent from Armani's haute couture fragrance collection. Bergamot, pink pepper and mandarin open onto fig, tea and green grass, resting on iris and amber.",
+      "perfume-desc-armani-prive-jasmin-kusamono":
+        "Giorgio Armani Privé Jasmin Kusamono Eau de Toilette — a delicate white floral from Armani's haute couture fragrance collection. Nashi pear and pink pepper open onto lily-of-the-valley, jasmine sambac and orange blossom, resting on sandalwood and cedar.",
+      "perfume-desc-armani-prive-rose-arabie":
+        "Giorgio Armani Privé Rose d'Arabie Eau de Parfum — an opulent oriental rose from Armani's haute couture fragrance collection. Saffron opens onto Damask rose, dark woods and patchouli, resting on warm amber.",
+      "perfume-desc-armani-prive-orangerie-venise":
+        "Giorgio Armani Privé Orangerie Venise Eau de Toilette — a sunny Venetian citrus from Armani's haute couture fragrance collection. Bitter orange, citrus and bergamot open onto neroli and buchu, resting on ambroxan, cedar and moss.",
+      "perfume-desc-armani-prive-pivoine-suzhou":
+        "Giorgio Armani Privé Pivoine Suzhou Eau de Toilette — a fresh, fruity peony from Armani's haute couture fragrance collection. Raspberry, pink pepper and mandarin open onto peony and May rose, resting on musk, amber and patchouli.",
+      "perfume-desc-armani-prive-rose-alexandrie":
+        "Giorgio Armani Privé Rose Alexandrie Eau de Toilette — a soft, powdery rose from Armani's haute couture fragrance collection. Bergamot, mandarin and neroli open onto centifolia rose and yellow mimosa, softened by benzoin and vanilla.",
+      "perfume-desc-armani-prive-rose-milano":
+        "Giorgio Armani Privé Rose Milano Eau de Toilette — a bright, modern rose from Armani's haute couture fragrance collection. Pear, bergamot and Primofiore lemon open onto Damask rose and jasmine, resting on moss and patchouli.",
+      "perfume-desc-armani-prive-the-yulong":
+        "Giorgio Armani Privé Thé Yulong Eau de Toilette — a fresh tea from Armani's haute couture fragrance collection. Mandarin, petitgrain and cardamom open onto green and black tea with orange blossom and jasmine, resting on vetiver, ambrette and iris.",
+      "perfume-desc-armani-prive-vetiver-hiver":
+        "Giorgio Armani Privé Vétiver d'Hiver Eau de Toilette — a crisp, elegant vetiver from Armani's haute couture fragrance collection. Bergamot, cedrat and mandarin open onto pink pepper, cardamom and coriander, resting on vetiver and patchouli.",
+      "perfume-desc-armani-prive-bleu-lazuli":
+        "Giorgio Armani Privé Bleu Lazuli Eau de Parfum — a precious-stone collection scent from Armani's haute couture fragrance collection. Maté, cardamom and bergamot open onto plum, osmanthus and jasmine, resting on honey, tobacco, vanilla and sandalwood.",
+      "perfume-desc-armani-prive-magenta-tanzanite":
+        "Giorgio Armani Privé Magenta Tanzanite Eau de Parfum — a spicy precious-stone collection scent from Armani's haute couture fragrance collection. Cardamom, ginger and bergamot open onto cinnamon, myrrh and coffee, resting on tobacco, vanilla and tonka.",
+      "perfume-desc-armani-prive-rouge-malachite":
+        "Giorgio Armani Privé Rouge Malachite Eau de Parfum — an opulent white-floral precious-stone collection scent from Armani's haute couture fragrance collection. Tuberose and pink pepper open onto jasmine sambac, ylang-ylang and orange blossom, resting on a warm tuberose and amber base.",
+      "perfume-desc-armani-prive-santal-dan-sha":
+        "Giorgio Armani Privé Santal Dān Shā Eau de Toilette — a creamy, luminous sandalwood from Armani's haute couture fragrance collection. Calabrian bergamot, cardamom and violet leaf open onto elemi, frankincense and musk, resting on New Caledonian sandalwood and cedar.",
+      "perfume-desc-armani-eyes-to-kill-classico":
+        "Giorgio Armani Eyes to Kill Classico mascara in black — a lengthening and volumising formula with a precise brush for defined, curled lashes. Available in the full 10ml size or a 4.8ml midi size.",
+      "perfume-desc-armani-eyes-to-kill-eccentrico":
+        "Giorgio Armani Eyes to Kill Eccentrico mascara, 10ml — a high-volume mascara with a patented elastomer brush that builds dramatic, separated lashes without clumps or flakes.",
+      "perfume-desc-armani-eyes-to-kill-stellar":
+        "Giorgio Armani Eyes to Kill Stellar mono eyeshadow, 4g — a bouncy gel-to-powder texture that applies easily with a fingertip for a sparkling, metallic-shimmer finish.",
+      "perfume-desc-armani-eye-tint":
+        "Giorgio Armani Eye Tint long-lasting liquid eyeshadow. Choose your shade — a doe-foot applicator lays down intense colour that dries crease-resistant, in shimmer (S) and matte (M) finishes.",
+      "perfume-desc-armani-smooth-silk-eye-pencil":
+        "Giorgio Armani Smooth Silk Eye Pencil, 1.05g. Choose your shade — a silky, soft waterproof kohl that glides on for precise lining or smudges into a smoky look.",
+      "perfume-desc-armani-fluid-sheer":
+        "Giorgio Armani Fluid Sheer, 18ml. Choose your shade — a liquid glow enhancer to wear alone, mix with foundation or use as a highlighter for a luminous, sheer-colour finish.",
+      "perfume-desc-armani-luminous-silk-concealer":
+        "Giorgio Armani Luminous Silk Concealer, 12ml. Choose your shade — a lightweight, hydrating multi-purpose concealer that brightens and blurs with buildable coverage and Armani's signature radiant, skin-like finish.",
+      "perfume-desc-armani-lip-power":
+        "Giorgio Armani Lip Power longwear satin lipstick. Choose your shade — oils and highly concentrated pigments give vivid, comfortable colour for up to 8 hours, with a drop-shaped bullet for precise application.",
+      "perfume-desc-armani-lip-power-matte":
+        "Giorgio Armani Lip Power Matte lipstick. Choose your shade — a cream-to-powder matte formula with jojoba and olive oils for intense colour and all-day comfort, in the red and black soft-matte case.",
+      "perfume-desc-armani-concealer-brush":
+        "Giorgio Armani Maestro Spot Concealer Brush — a small brush with a dense, pointed tip for precise spot concealing and seamless blending around the eyes and nose.",
+      "perfume-desc-armani-luminous-silk-glow-blush":
+        "Giorgio Armani Luminous Silk Glow Blush. Choose your shade — a silky powder blush that blends into a natural, radiant flush with a luminous, buildable finish.",
+      "perfume-desc-armani-power-fabric-concealer":
+        "Giorgio Armani Power Fabric+ Concealer. Choose your shade — a high-coverage liquid concealer with a natural matte finish that stays crease-resistant for up to 24 hours, with a doe-foot applicator.",
+      "perfume-desc-armani-lip-maestro":
+        "Giorgio Armani Lip Maestro liquid lipstick, 6.5ml. Choose your shade — a soft-matte 'kissed' finish from mineral matte powders, in Armani's classic red-cap tube with doe-foot applicator.",
+      "perfume-desc-armani-lip-maestro-satin":
+        "Giorgio Armani Lip Maestro Satin liquid lipstick, 4ml. Choose your shade — two gels combine stick-like colour, balm-like care and liquid wear in a satin finish that turns luminous and blurred, with a diamond-shaped applicator.",
+      "perfume-desc-armani-power-fabric-compact":
+        "Giorgio Armani Power Fabric Compact foundation, 9g — a balm-to-cream-powder compact for high, buildable coverage with a matte-velvet finish and a waterproof veil. Includes a sponge.",
+      "perfume-desc-armani-luminous-silk-glow-fusion-powder":
+        "Giorgio Armani Luminous Silk Glow Fusion Powder, 3.5g — a pressed powder with water-memory technology that melts onto the skin like a fluid, setting and blurring while keeping a natural glow.",
+      "perfume-desc-ralph-lauren-polo-red-parfum":
+        "Ralph Lauren Polo Red Parfum — the most intense Polo Red, in a deep red refillable flask. Blood orange, bergamot and pink pepper open onto absinthe, lavender and orris, resting on musk, cedar and opoponax.",
+      "perfume-desc-mugler-alien-goddess-supra-florale":
+        "Mugler Alien Goddess Supra Florale Eau de Parfum, refillable — a radiant floral take on Alien Goddess in a rose-gold talisman bottle. Prickly pear and cactus flower open onto jasmine sambac and immortelle, resting on amber, musk and desert rose.",
+      "perfume-desc-prada-luna-rossa-ocean-edp":
+        "Prada Luna Rossa Ocean Eau de Parfum — a deeper, warmer take on Luna Rossa Ocean for men, in a dark navy bottle. Grapefruit opens onto woody notes and frankincense, resting on vanilla and AmberXtreme.",
+      "perfume-desc-ysl-y-edp-intense":
+        "Yves Saint Laurent Y Eau de Parfum Intense for men — a more intense, aromatic take on Y in a night-blue bottle. Ginger, juniper berries and bergamot open onto sage, lavender and geranium, resting on vetiver, patchouli and cedar.",
+      "perfume-desc-lancome-renergie-yeux":
+        "Lancôme Rénergie Yeux eye cream, 15ml — a lifting, filling eye cream with next-generation hyaluronic acid, linseed peptides, caffeine and cocoa seed butter. Visibly reduces dark circles, puffiness and wrinkles while firming the eye contour, with 24-hour hydration. Tested under ophthalmological control.",
+      "perfume-desc-lancome-absolu-rouge-intimatte":
+        "Lancôme L'Absolu Rouge Intimatte lipstick, 3.4g. Choose your shade — a soft, blurred matte finish with up to 12 hours of wear, enriched with centifolia rose extract, ceramides and hyaluronic acid for lasting comfort.",
+      "perfume-desc-lancome-hypnose-genifique-bifacil-set":
+        "Lancôme Hypnôse gift set — the full-size Hypnôse mascara in 01 Noir, Advanced Génifique Yeux Light-Pearl eye and lash serum (5ml) and Bi-Facil eye make-up remover (30ml). Hypnôse builds up to 8× thicker lashes with its 1,000-bristle brush; Light-Pearl's cooling applicator de-puffs the eye area.",
+      "perfume-desc-lancome-genifique-happiness-set":
+        "Lancôme Advanced Génifique gift set — Advanced Génifique Serum (30ml), Advanced Génifique Yeux Light-Pearl eye and lash serum (5ml) and Advanced Génifique Yeux eye cream (5ml), in a confetti-rose gift box. The probiotic-fraction serum with hyaluronic acid strengthens the skin's moisture barrier for a radiant, healthy-looking complexion.",
+      "perfume-desc-ysl-couture-mini-clutch":
+        "Yves Saint Laurent Couture Mini Clutch eyeshadow palette. Choose your shade — four coordinated mattes, satins and shimmers in a quilted clutch case, with pigments enriched with sweet almond, coffee seed and fig cactus oils. Comes with two applicators.",
+      "perfume-desc-diesel-d-red-edp":
+        "Diesel D RED Eau de Parfum — a bold, aromatic woody fragrance in a red embossed DIESEL bottle. Grapefruit and geranium open onto lavender and aldehydes, resting on a sandalwood accord and ambery woods.",
+      "perfume-desc-ysl-black-opium-over-red":
+        "Yves Saint Laurent Black Opium Eau de Parfum Over Red — a fruity, addictive take on Black Opium in a lacquered red bottle. A cherry accord and mandarin open onto jasmine, black tea and orange blossom, resting on the signature black coffee accord, Madagascar vanilla and patchouli.",
+      "perfume-desc-armani-acqua-di-gio-edt-set":
+        "Giorgio Armani Acqua di Giò Eau de Toilette gift set for men — a 100ml Eau de Toilette, a 15ml travel spray and a 75g deodorant stick in a gift box. The iconic aquatic fragrance: Calabrian bergamot, neroli and green tangerine open onto marine notes, jasmine, rosemary and persimmon, resting on patchouli.",
+      "perfume-desc-prada-infusion-cedre":
+        "Prada Les Infusions Infusion de Cèdre Eau de Parfum, 100ml — a clean, woody-resinous scent from Prada's Les Infusions collection. Cedarwood and mandarin rest on a warm base of benzoin and incense.",
+      "perfume-desc-prada-infusion-fleur-oranger":
+        "Prada Les Infusions Infusion de Fleur d'Oranger Eau de Parfum, 100ml — a luminous white floral from Prada's Les Infusions collection. Neroli opens onto a radiant orange blossom heart, resting on jasmine and sandalwood.",
+      "perfume-desc-prada-infusion-figue":
+        "Prada Les Infusions Infusion de Figue Eau de Parfum, 100ml — a green, Mediterranean fig scent from Prada's Les Infusions collection. Mandarin opens onto a milky fig accord, resting on mastic and green galbanum.",
+      "perfume-desc-valentino-green-stravaganza-donna":
+        "Valentino Donna Born in Roma Green Stravaganza Eau de Parfum — a floral amber in a lime-green studded bottle. A smoky lapsang souchong tea accord opens onto jasmine absolute, resting on a warm vanilla extract base.",
+      "perfume-desc-valentino-green-stravaganza-uomo":
+        "Valentino Uomo Born in Roma Green Stravaganza Eau de Toilette — a fougère amber for men in a green studded bottle. Calabrian bergamot opens onto a rich coffee accord, resting on Haitian vetiver.",
+      "perfume-desc-armani-my-way-nectar":
+        "Giorgio Armani My Way Nectar Eau de Parfum, refillable — a juicy fruity floral take on My Way in an all-pink bottle. Pear, rhubarb, bergamot and orange blossom open onto tuberose absolute, resting on bourbon vanilla, cedarwood and white musk.",
+      "perfume-desc-ysl-all-hours-concealer":
+        "Yves Saint Laurent All Hours Concealer, 15ml. Choose your shade — up to 24-hour full coverage with a luminous matte finish and an 85% skincare base with caffeine and jasmine petal extract. The precise angled applicator conceals, sculpts or covers the whole face. Fragrance-free.",
+      "perfume-desc-lancome-idole-tint":
+        "Lancôme Idôle Tint liquid eyeshadow and liner, 7ml. Choose your shade — a two-sided applicator lays down shadow with the flat side and liner with the thin side; it also works as a blush or highlighter. Up to 16 hours of transfer-, crease- and smudge-resistant wear.",
+      "perfume-desc-lancome-lveb-rose-extraordinaire":
+        "Lancôme La Vie est Belle Rose Extraordinaire Eau de Parfum, refillable — a luminous rose take on La Vie est Belle in a pink rose-engraved bottle. Fresh rose water, a Space Rose accord and Rose Damascena absolute open onto iris concrete, resting on a woody musk.",
+      "perfume-desc-lancome-advanced-genifique-serum-set":
+        "Lancôme Advanced Génifique serum gift set — Advanced Génifique Serum 50ml, a 10ml travel-size serum and Advanced Génifique Eye Cream 5ml, in a holiday gift box. The probiotic-fraction serum with hyaluronic acid strengthens the skin's moisture barrier for a radiant, healthy-looking complexion.",
+      "perfume-desc-armani-stronger-with-you-edt-set":
+        "Emporio Armani Stronger With You Eau de Toilette gift set for men — 100ml Eau de Toilette, a 15ml travel spray and a 75ml all-over body shampoo. Cardamom, pink pepper and violet leaves open onto sage, resting on a glazed chestnut accord, vanilla and amberwood.",
+      "perfume-desc-ysl-touche-eclat-blur-primer":
+        "Yves Saint Laurent Touche Éclat Blur Primer, 30ml — a clear gel primer with a subtle gold shimmer that blurs pores and texture and boosts radiance. Enriched with corn, apricot kernel, passion fruit and rice bran oils; wear it alone or under foundation. Suits all skin tones.",
+      "perfume-desc-armani-prive-blanc-kogane":
+        "Giorgio Armani Privé Blanc Kogane Eau de Parfum, 100ml — a luminous white floral from the Les Terres Précieuses collection, in an ivory lacquer bottle with gold kintsugi lines. Aldehydes, lemon and pink berry open onto jasmine, mahonial and ylang-ylang, resting on white musk, vetiver and patchouli.",
+      "perfume-desc-armani-prive-noir-kogane":
+        "Giorgio Armani Privé Noir Kogane Eau de Parfum, 100ml — a dark, resinous scent from the Les Terres Précieuses collection, in a black lacquer bottle with gold kintsugi lines. Elemi, cumin and pink pepper open onto saffron, olibanum and cistus, resting on patchouli, woody leather and vetiver.",
+      "perfume-desc-mugler-alien-hypersense":
+        "Mugler Alien Hypersense Eau de Parfum, refillable — a vibrant floral woody take on Alien in a violet-to-scarlet faceted bottle. Pear and green mandarin open onto jasmine sambac and Indian jasmine, resting on cashmeran, musk, amberwood and driftwood.",
+      "perfume-desc-viktor-rolf-flowerbomb-tiger-lily":
+        "Viktor&Rolf Flowerbomb Tiger Lily Eau de Parfum — a sunny, solar floral take on Flowerbomb in an amber-orange grenade bottle. Coconut milk and bergamot open onto tiger lily, jasmine and freesia, resting on juicy mango and benzoin.",
+      "perfume-desc-azzaro-the-most-wanted-edt-intense":
+        "Azzaro The Most Wanted Eau de Toilette Intense for men — a fresh yet bold aromatic fragrance in a smoky grey revolver-style bottle. Bergamot opens onto a lavender heart, resting on a warm liquor accord and moss.",
+      "perfume-desc-azzaro-wanted-by-night":
+        "Azzaro Wanted by Night Eau de Parfum, 100ml — a seductive spicy-woody fragrance for men in a gunmetal bottle with red-amber juice. Cinnamon, mandarin and lavender open onto incense, cumin and red cedar, resting on tobacco, vanilla, leather and patchouli.",
+      "perfume-desc-ysl-y-elixir":
+        "Yves Saint Laurent Y L'Elixir, 60ml — the most intense Y, a concentrated parfum in a metallic navy bottle. Lavender opens onto geranium, resting on a deep, smoky base of frankincense and oud.",
+      "perfume-desc-lancome-uv-expert-supra-screen":
+        "Lancôme UV Expert Supra Screen SPF 50+, 40ml — an invisible, fast-absorbing serum-sunscreen with very high UVA/UVB and anti-pollution protection (PA++++). Niacinamide, vitamin E and dandelion extract give antioxidant, brightening care. Suitable for all skin types; apply as the last step of your morning routine.",
+      "perfume-desc-lancome-renergie-triple-serum-eye":
+        "Lancôme Rénergie H.C.F. Triple Serum Eye, 20ml — three actives in one bottle: vitamin C derivative and niacinamide for dark circles, vitamin F and hyaluronic acid to plump fine lines, and a firming tri-peptide. Press once to mix, then massage around the eye for a smoother, brighter, less puffy eye area.",
+      "perfume-desc-biotherm-blue-peptides-uplift-cream":
+        "Biotherm Blue Peptides Uplift Cream — a firming, plumping day cream with collagen peptide fractions and Life Plankton™ that visibly lifts the skin and reduces wrinkles, with a radiant rosy finish. Firmer-looking skin in 4 hours. 100% vegan formula, 92% natural-origin ingredients.",
+      "perfume-desc-biotherm-blue-peptides-uplift-night":
+        "Biotherm Blue Peptides Uplift Night Cream, 50ml — firms and re-plumps the skin overnight with peptides and Life Plankton™, reducing the look of wrinkles and pores for lifted, redefined contours and a rosier complexion by morning. Suitable for all skin types.",
+      "perfume-desc-ysl-rouge-pur-couture":
+        "Yves Saint Laurent Rouge Pur Couture caring satin lipstick, 3.8g. Choose your shade — full-coverage colour with a weightless, creamy satin finish and an 80% lip-care base with ceramides, tuberose and prickly pear extracts for up to 16 hours of comfort. Refillable gold case.",
+      "perfume-desc-ysl-loveshine":
+        "Yves Saint Laurent Loveshine lip oil stick, 3.2g. Choose your shade — a lipstick that melts into a lip oil, with a 60% oil base, six nourishing oils and fig pulp for up to 24 hours of hydration and a light-reflecting, buildable wet-shine finish.",
+      "perfume-desc-azzaro-wanted-edt":
+        "Azzaro Wanted Eau de Toilette for men, refillable — a fresh, spicy woody fragrance in the chrome barrel bottle. Lemon, ginger, lavender and mint open onto apple, cardamom, juniper and geranium, resting on tonka bean, amberwood and Haitian vetiver.",
+      "perfume-desc-azzaro-chrome-edt":
+        "Azzaro Chrome Eau de Toilette for men — a clean, fresh citrus-aquatic classic in the pale-blue glass bottle. Lemon, rosemary, bergamot, neroli and pineapple open onto jasmine, cyclamen and coriander, resting on musk, oakmoss, cedar, sandalwood and tonka bean.",
+      "perfume-desc-azzaro-pour-homme-edt":
+        "Azzaro Pour Homme Eau de Toilette, refillable — the iconic aromatic fougère for men in the amber octagonal bottle. Lavender, lemon, basil, bergamot, clary sage and star anise open onto vetiver, cedar, patchouli, sandalwood and cardamom, resting on oakmoss, leather, amber, musk and tonka bean.",
+      "perfume-desc-azzaro-the-most-wanted-edp-intense":
+        "Azzaro The Most Wanted Eau de Parfum Intense for men — a warm, addictive ambery fougère in a matte-black revolver-style bottle. Cardamom opens onto a toffee heart, resting on a sensual amberwood base.",
+      "perfume-desc-azzaro-the-most-wanted-parfum":
+        "Azzaro The Most Wanted Parfum for men — the most intense of The Most Wanted, in a black and amber bottle. Fiery red ginger opens onto woody notes, resting on a rich bourbon vanilla base.",
+      "perfume-desc-azzaro-chrome-edp":
+        "Azzaro Chrome Eau de Parfum for men — a deeper, woodier Chrome in a navy-to-light-blue bottle. Green mandarin opens onto a lavender heart, resting on a fresh pine base.",
+      "perfume-desc-azzaro-chrome-parfum":
+        "Azzaro Chrome Parfum for men — the most intense Chrome, in a deep-blue bottle. Bergamot opens onto aromatic sage, resting on a warm base of fir balsam and lentisk.",
+      "perfume-desc-azzaro-wanted-edp":
+        "Azzaro Wanted Eau de Parfum for men — a bold aromatic woody fragrance in a full-silver metal-jacket bottle. Juniper berries open onto sage, resting on a smoky vetiver base.",
+      "perfume-desc-lancome-hypnose-drama":
+        "Lancôme Hypnôse Drama mascara in 01 Excessive Black, 8ml — instant extreme volume of up to 17× with an S-shaped brush, onyx-black pigments and a bonding complex for up to 24-hour wear. Also available in a waterproof formula. Suitable for sensitive eyes and contact lens wearers.",
+      "perfume-desc-biotherm-homme-force-supreme-blue-serum":
+        "Biotherm Homme Force Supreme Blue Serum, 30ml — a fast-absorbing anti-ageing gel serum for men with Pro-Retinol, Life Plankton™ and Pro-Xylane that visibly reduces wrinkles and improves elasticity in 4 weeks.",
+      "perfume-desc-biotherm-life-plankton-body-oil":
+        "Biotherm Life Plankton Multi-Corrective Body Oil, 125ml — a nourishing dry oil with Life Plankton™ water and olive, canola, sweet almond and sunflower oils that targets stretch marks and dry areas, leaving skin visibly firmer and softer.",
+      "perfume-desc-biotherm-life-plankton-sensitive-balm":
+        "Biotherm Life Plankton Sensitive Balm, 50ml — a rich, soothing balm with 5% Life Plankton™ for sensitive, dry skin, in a hygienic airless jar. Hypoallergenic and non-comedogenic; visibly reduces dryness and redness.",
+      "perfume-desc-biotherm-blue-retinol-night-serum":
+        "Biotherm Blue Retinol Night Serum, 30ml — a resurfacing and repairing night serum with 0.25% pure retinol and Life Plankton™ that visibly reduces wrinkles such as crow's feet and smooths skin texture overnight. Vegan formula.",
+      "perfume-desc-biotherm-waterlover-sun-milk-spf30-400":
+        "Biotherm Waterlover Hydrating Sun Milk SPF 30, 400ml pump bottle — a water-resistant face and body sun milk with UVA/UVB protection and 24-hour hydration that leaves no white marks. Suitable for sensitive skin.",
+      "perfume-desc-armani-acqua-di-gioia-edp-intense":
+        "Giorgio Armani Acqua di Gioia Eau de Parfum Intense, refillable — a fresh floral citrus for women, more intense than the original. Bergamot and a red fruits accord open onto jasmine and Damascena rose, resting on cedarwood and musks.",
+      "perfume-desc-armani-prive-cuir-noir":
+        "Giorgio Armani Privé Cuir Noir Eau de Parfum, 100ml — a dark, refined leather from Armani's haute couture fragrance collection. Sandalwood, rose, coriander and nutmeg open onto leather, smoky guaiac wood and oud, resting on Tahitian vanilla and benzoin.",
+      "perfume-desc-armani-prive-the-yulong-soie-de-nacre":
+        "Giorgio Armani Privé Thé Yulong Soie de Nacre Eau de Toilette, 100ml — a limited edition of Thé Yulong with pearly shimmer in the juice and a mother-of-pearl cap. Mandarin, petitgrain and cardamom open onto green and black tea with jasmine and orange blossom, resting on vetiver, ambrette and iris.",
+      "perfume-desc-armani-maestro-fusion-foundation":
+        "Giorgio Armani Maestro Fusion Make Up foundation SPF 15, 30ml — a water-free, powder-free liquid foundation with a dropper and five time-released oils for an airbrushed, natural-radiant finish. Non-comedogenic.",
+      "perfume-desc-armani-prisma-glass":
+        "Giorgio Armani Prisma Glass lip gloss, 3.5ml. Choose your shade — an oil-in-gloss with 15% squalane for a mirror-like, prismatic shine, sheer colour and 24-hour hydration. Non-sticky; wear alone or over lipstick.",
+      "perfume-desc-armani-luminous-silk-cheek-tint":
+        "Giorgio Armani Luminous Silk Cheek Tint liquid blush, 12ml. Choose your shade — a water-in-oil formula with a doe-foot applicator that builds from a natural to an intense flush and wears up to 12 hours.",
+      "perfume-desc-ysl-all-hours-hyper-finish":
+        "Yves Saint Laurent All Hours Hyper Finish pressed powder, 7.5g. Choose your shade — a multi-use soft-matte powder that sets makeup for up to 24 hours, blurs imperfections and minimises the look of pores. Enriched with hyaluronic acid and niacinamide; sweat-, water- and crease-proof, in a quilted compact with mirror and two-sided applicator.",
+      "perfume-desc-armani-acqua-di-gio-profondo-parfum":
+        "Giorgio Armani Acqua di Giò Profondo Parfum for men — the deepest, most intense take on Profondo, in a gradient deep-blue bottle. Marine notes, bergamot and lemon open onto immortelle, violet leaf and lavandin, settling on cistus, vetiver, patchouli and a mineral accord.",
+      "perfume-desc-armani-stronger-with-you-tobacco":
+        "Emporio Armani Stronger With You Tobacco Eau de Parfum for men — a warm, spicy exclusive edition. Pink and black pepper, cardamom and sage lead to tobacco, chestnut and cinnamon leaf over bourbon vanilla, amber, guaiac wood and benzoin.",
+      "perfume-desc-viktor-rolf-spicebomb-infrared-edp":
+        "Viktor&Rolf Spicebomb Infrared Eau de Parfum for men — an explosive leather-amber scent in the black grenade bottle with a red band. Red, pink and chili pepper with cinnamon ignite a leather heart, drying down to resins and woods.",
+      "perfume-desc-lancome-idole-edt":
+        "Lancôme Idôle L'Eau de Toilette for women — a fresher, livelier take on the Idôle signature. A Shincha green tea accord opens onto rose water, Damascena rose and Italian bergamot, settling on Bourbon vanilla, cedarwood, patchouli and musk for a second-skin finish.",
+      "perfume-desc-lancome-tiuw-serum-bronzer":
+        "Lancôme Teint Idole Ultra Wear C.E. Skin Transforming Bronzer, 10g. Choose your shade — a serum-infused, micro-fine powder with vitamins C and E, moringa oil and pomegranate extract for a natural matte, buildable warmth that lasts up to 24 hours.",
+      "perfume-desc-lancome-tiuw-serum-highlighter":
+        "Lancôme Teint Idole Ultra Wear C.E. Skin Transforming Highlighter, 10g. Choose your shade — a silky, serum-infused powder with micro light-catching pearls for a natural, multidimensional glow that is glowy, never glittery, and lasts up to 24 hours.",
+      "perfume-desc-lancome-lip-idole-butterglow":
+        "Lancôme Lip Idôle Squalane-12 Butterglow hydrating lip balm, 3g. Choose your shade — a buttery, non-sticky balm-in-a-stick with at least 12% squalane, ceramides and shea butter for buildable sheer colour, a high-shine glow and up to 24 hours of hydration.",
+      "perfume-desc-lancome-lip-idole-liner":
+        "Lancôme Lip Idôle Lip Shaper lip liner, 1.2g. Choose your shade — a creamy, soft-matte pencil with ceramides and jojoba oil that glides on without tugging, resists smudging and feathering, and stays waterproof for up to 8 hours. Designed to pair with Lip Idôle Butterglow.",
+      "perfume-desc-prada-luna-rossa-ocean-le-parfum":
+        "Prada Luna Rossa Ocean Le Parfum for men — the most intense Luna Rossa Ocean, in a refillable bottle fading from deep blue to red. Fresh lemon contrasts with a warm saffron heart, resting on smoky oakwood and an Amber Xtreme accord.",
+      "perfume-desc-armani-acqua-di-gio-edp":
+        "Giorgio Armani Acqua di Giò Eau de Parfum for men, refillable — a deeper, more aromatic Acqua di Giò in a clear-to-black bottle. Marine notes and green mandarin open onto clary sage, lavandin and geranium, resting on vetiver and patchouli.",
+      "perfume-desc-armani-acqua-di-gio-edt":
+        "Giorgio Armani Acqua di Giò Eau de Toilette for men, in the refillable bottle — the original 1996 aquatic classic. Marine notes, bergamot, neroli and green tangerine meet rosemary and persimmon over cedarwood and patchouli.",
+      "perfume-desc-armani-acqua-di-gio-parfum":
+        "Giorgio Armani Acqua di Giò Parfum for men, refillable — the richest Acqua di Giò in a black gradient bottle. Calabrian bergamot and marine notes open onto clary sage, rosemary and geranium, settling on patchouli and incense.",
+      "perfume-desc-armani-acqua-di-gio-profondo-edp":
+        "Giorgio Armani Acqua di Giò Profondo Eau de Parfum for men, refillable — an intense marine fragrance in a deep-blue gradient bottle. Marine notes, green mandarin and bergamot open onto lavandin, rosemary and cypress, resting on patchouli, musk and mineral amber.",
+      "perfume-desc-armani-acqua-di-gio-profondo-edt":
+        "Giorgio Armani Acqua di Giò Profondo Eau de Toilette for men (2025) — a fresher, brighter Profondo in a light-blue gradient bottle. Lemon, grapefruit and spices lead to calone, lavender and cypress over mineral notes, woods and Guatemalan patchouli.",
+      "perfume-desc-armani-acqua-di-gio-elixir":
+        "Giorgio Armani Acqua di Giò Elixir for men, 50ml — the most concentrated Acqua di Giò. Bergamot, green mandarin and nutmeg meet violet leaf and an aquatic accord, deepening into leather, patchouli, vetiver and labdanum.",
+      "perfume-desc-armani-code-edp-homme":
+        "Giorgio Armani Code Eau de Parfum for men, refillable — a spicy amber fougère in the black Code bottle. Italian green mandarin opens onto nutmeg, resting on tonka bean absolute.",
+      "perfume-desc-armani-emporio-he":
+        "Emporio Armani He Eau de Toilette for men, 100ml — a woody amber in a matte black cylinder bottle. Japanese yuzu, sage and cardamom lead to nutmeg, rose and orris over vetiver, sandalwood, white musk and tonka.",
+      "perfume-desc-armani-si-passione-intense":
+        "Giorgio Armani Sì Passione Eau de Parfum Intense, refillable — a deeper Sì Passione in a red bottle fading to black. Blackcurrant and pear open onto jasmine, resting on warm vanilla and sandalwood.",
+      "perfume-desc-armani-si-passione-red-musk":
+        "Giorgio Armani Sì Passione Red Musk Eau de Parfum — a fruity floral musk in a see-through red Sì bottle. Red musk with strawberry extract opens onto rose absolute and milky notes, settling on white musks and vanilla.",
+      "perfume-desc-armani-my-way-ylang":
+        "Giorgio Armani My Way Ylang Eau de Parfum, refillable — a sunny fruity floral in a coral bottle. Mango, white flowers and bergamot open onto Madagascar ylang-ylang, coconut water and tuberose, resting on white musk, Bourbon vanilla and cedar.",
+      "perfume-desc-armani-stronger-with-you-parfum":
+        "Emporio Armani Stronger With You Parfum for men — the most intense Stronger With You, in a deep red-amber bottle. Pink pepper and lavender lead to the signature candied chestnut accord with leathery vanilla.",
+      "perfume-desc-armani-prive-vert-malachite":
+        "Armani Privé Vert Malachite Eau de Parfum, 100ml — from Les Terres Précieuses collection, in a green bottle with malachite banding. A luminous white floral built on a white lily accord with ylang-ylang, jasmine sambac, bitter orange and vanilla absolute.",
+      "perfume-desc-armani-luminous-silk-acqua-highlighter":
+        "Giorgio Armani Luminous Silk Acqua Highlighter, 12ml. Choose your shade — a water-based liquid highlighter with white and tinted micro-pearls, niacinamide and caffeine, applied with a doe-foot for a fresh, luminous glow.",
+      "perfume-desc-armani-designer-glow-foundation":
+        "Giorgio Armani Designer Glow Radiant Revitalizing Foundation SPF 15, 30ml. Choose your shade — a radiant, medium-coverage foundation with Prussian Blue pearl, hyaluronic acid and ceramides for a healthy, luminous finish.",
+      "perfume-desc-armani-vertigo-lift-mascara":
+        "Giorgio Armani Vertigo Lift Extreme Length mascara in 01 Black, 10ml — an Infinity-Loop brush lifts and lengthens lashes up to 70% visibly longer with a smudge-proof, arginine-enriched formula.",
+      "perfume-desc-armani-luminous-silk-bronzer":
+        "Giorgio Armani Luminous Silk Bronzer in 120 Sunbathed Dune, 18g — the deepest shade, a rich warm cocoa bronze with a subtle shimmer. A creamy powder with a sun-ray embossed design for a natural sun-kissed warmth.",
+      "perfume-desc-armani-luminous-silk-cheek-tint-shine":
+        "Giorgio Armani Luminous Silk Cheek Tint Shine, 12ml. Choose your shade — a pearly liquid blush that builds from a soft flush to radiant colour with a luminous sheen, wearing up to 12 hours.",
+      "perfume-desc-armani-code-edp-set":
+        "Giorgio Armani Code Eau de Parfum gift set for men — the refillable amber fougère with bergamot, iris and tonka bean, in a red holiday box with a travel spray.",
+      "perfume-desc-armani-si-edp-body-set":
+        "Giorgio Armani Sì Eau de Parfum gift set — the modern chypre of blackcurrant nectar, freesia and blond musky woods, with matching body care in a red holiday box.",
+      "perfume-desc-armani-si-passione-set":
+        "Giorgio Armani Sì Passione Eau de Parfum gift set — a vibrant fruity floral with blackcurrant, pink pepper, rose, heliotrope, vanilla and cedar, with a travel spray.",
+      "perfume-desc-armani-my-way-edp-set":
+        "Giorgio Armani My Way Eau de Parfum gift set — the refillable floral with orange blossom, bergamot, tuberose, jasmine, vanilla and cedar, with a travel spray.",
+      "perfume-desc-armani-acqua-di-gio-profondo-set":
+        "Giorgio Armani Acqua di Giò Profondo Eau de Parfum gift set — an aromatic aquatic with marine notes, green mandarin, lavender, rosemary, cedar and patchouli.",
+      "perfume-desc-armani-swy-intensely-set":
+        "Emporio Armani Stronger With You Intensely gift set — an amber woody fougère with pink pepper, chestnut, lavender, sage, amberwood and vanilla.",
+      "perfume-desc-armani-swy-parfum-set":
+        "Emporio Armani Stronger With You Parfum gift set — an amber leather fougère with pink pepper, mandarin, lavender, chestnut, vanilla and leather.",
+      "perfume-desc-armani-acqua-di-gio-edt-set-50":
+        "Giorgio Armani Acqua di Giò Eau de Toilette gift set — the fresh aquatic classic with marine notes, bergamot, rosemary and white musk, with a matching shower gel.",
+      "perfume-desc-armani-acqua-di-gio-parfum-set":
+        "Giorgio Armani Acqua di Giò Parfum gift set — the intense refillable aquatic with marine notes, bergamot, clary sage, geranium, incense and patchouli.",
+      "perfume-desc-armani-my-way-body-set":
+        "Giorgio Armani My Way Eau de Parfum gift set — the luminous floral with orange blossom, tuberose and vanilla, with perfumed body care in a pink box.",
+      "perfume-desc-armani-si-edp-spring-set":
+        "Giorgio Armani Sì Eau de Parfum gift set — the blackcurrant, freesia and musky woods chypre with a travel spray and body lotion, in a pink box.",
+      "perfume-desc-valentino-uomo-born-in-roma-edt-set":
+        "Valentino Uomo Born in Roma Eau de Toilette gift set — a woody aromatic with mineral salt, ginger, violet leaf and vetiver, in a black gift box with a travel spray.",
+      "perfume-desc-valentino-donna-born-in-roma-edp-set":
+        "Valentino Donna Born in Roma Eau de Parfum gift set — a floral amber with a jasmine trio, Bourbon vanilla and cashmeran, with a travel spray.",
+      "perfume-desc-prada-paradoxe-holiday-set":
+        "Prada Paradoxe Eau de Parfum holiday gift set — the floral amber Paradoxe (neroli, amber, white musk) in a festive ornament box, with a travel spray to take along.",
+      "perfume-desc-prada-luna-rossa-ocean-edp-set":
+        "Prada Luna Rossa Ocean Eau de Parfum gift set — an amber fougère for men with lemon, saffron and leathery oakwood, in a silver ornament box with a travel spray.",
+      "perfume-desc-prada-paradoxe-virtual-flower-set":
+        "Prada Paradoxe Virtual Flower Eau de Parfum gift set — a fresh floral musk of green bergamot, jasmine, neroli, musk and ambrette, in a saffiano-textured envelope box.",
+      "perfume-desc-prada-luna-rossa-carbon-set":
+        "Prada Luna Rossa Carbon Eau de Toilette gift set — an aromatic fougère for men with bergamot, pepper, lavender, patchouli and amber, in an envelope gift box.",
+      "perfume-desc-prada-luna-rossa-black-set":
+        "Prada Luna Rossa Black Eau de Parfum gift set — an amber woody scent for men with bergamot, angelica, patchouli, amber, musk and coumarin, in an envelope gift box.",
+      "perfume-desc-prada-paradoxe-edp-spring-set":
+        "Prada Paradoxe Eau de Parfum gift set — the floral amber Paradoxe (neroli, amber, white musk) in a mint-and-pink envelope box, with a matching travel spray.",
+      "perfume-desc-ysl-y-le-parfum-set":
+        "Yves Saint Laurent Y Le Parfum holiday gift set — the intense woody fougère for men (apple, ginger, lavender, sage, cedar, tonka) in a black lace-pattern box.",
+      "perfume-desc-ysl-myslf-le-parfum-set":
+        "Yves Saint Laurent MYSLF Le Parfum gift set — a woody amber for men with black pepper, orange blossom, Bourbon vanilla and patchouli, in a black lace-pattern box.",
+      "perfume-desc-ysl-myslf-edp-set":
+        "Yves Saint Laurent MYSLF Eau de Parfum gift set — a woody floral for men with bergamot, Tunisian orange blossom, patchouli and Ambrofix, in a brushed-silver box.",
+      "perfume-desc-ysl-black-opium-set-30":
+        "Yves Saint Laurent Black Opium Eau de Parfum gift set — the amber floral with black coffee, vanilla, white flowers and patchouli, in a nude box with the YSL logo.",
+      "perfume-desc-ysl-black-opium-set-50":
+        "Yves Saint Laurent Black Opium Eau de Parfum spring gift set — the amber floral with black coffee, vanilla and white flowers, with a mini Lash Clash mascara and a YSL pouch.",
+      "perfume-desc-lancome-idole-holiday-set":
+        "Lancôme Idôle Eau de Parfum holiday gift set — the clean floral Idôle (bergamot, pear, rose, jasmine, white musk) with a matching scented body cream and a mini Lash Idôle mascara.",
+      "perfume-desc-lancome-iconic-mascara-set":
+        "Lancôme Iconic Mascara holiday set — four full-size lash favourites for volume, length and care in one festive box.",
+      "perfume-desc-lancome-lveb-elixir-set":
+        "Lancôme La Vie Est Belle L'Elixir Eau de Parfum gift set — the rich gourmand L'Elixir (raspberry, violet leaf, rose, cocoa butter, leather) with a travel spray of the original.",
+      "perfume-desc-lancome-lveb-candle-set":
+        "Lancôme La Vie Est Belle Eau de Parfum candle set — the iconic iris, patchouli and vanilla gourmand paired with a mini scented candle in the same fragrance.",
+      "perfume-desc-lancome-hypnose-drama-set":
+        "Lancôme Hypnôse Drama set — extreme-volume mascara with a mini kohl pencil and Bi-Facil eye make-up remover for a complete dramatic eye look.",
+      "perfume-desc-viktor-rolf-spicebomb-extreme-set":
+        "Viktor&Rolf Spicebomb Extreme Eau de Parfum gift set — the explosive spicy oriental (grapefruit, black pepper, cinnamon, saffron, tobacco, vanilla) with a travel spray.",
+      "perfume-desc-cacharel-yes-i-am-set":
+        "Cacharel Yes I Am Eau de Parfum gift set — the playful raspberry, gardenia and cardamom-milk scent in the lipstick-shaped bottle, with a travel spray.",
+      "perfume-desc-mugler-angel-elixir-set":
+        "Mugler Angel Elixir Eau de Parfum gift set — a floral gourmand (pink pepper, ylang-ylang, orange blossom, sandalwood, Bourbon vanilla) in the refillable star bottle, with a travel spray.",
+      "perfume-desc-biotherm-homme-force-supreme-set":
+        "Biotherm Homme Force Supreme gift set — an anti-ageing, firming routine for men with the Force Supreme cream, a cleanser and a shaving foam.",
+      "perfume-desc-ysl-all-hours-hyper-bronze":
+        "Yves Saint Laurent All Hours Hyper Bronze bronzing powder, 7.5g. Choose your shade — a multi-use bronzer with a soft matte finish and subtle sheen that lasts up to 24 hours. Enriched with hyaluronic acid and niacinamide; fragrance-free, sweat- and water-proof.",
+      "perfume-desc-ysl-all-hours-hyper-luminize":
+        "Yves Saint Laurent All Hours Hyper Luminize highlighter, 5g. Choose your shade — an ultra-creamy powder with micro-pearls for a 12-hour glow, enriched with hyaluronic acid and niacinamide, in a quilted compact.",
+      "perfume-desc-ysl-all-hours-hyper-blur-loose-powder":
+        "Yves Saint Laurent All Hours Hyper Blur Loose Powder, 10g. Choose your shade — a loose setting powder with 1% hyaluronic acid and niacinamide that mattifies for up to 14 hours, blurs lines and pores and resists sweat and transfer. Comes with a powder puff.",
+      "perfume-desc-ysl-loveshine-balm":
+        "Yves Saint Laurent Loveshine Candy Glow Tinted Butter Balm, 3.1g. Choose your shade — a tinted lip balm with shea butter and maracuja oil whose pH-adjusting pigments give a sheer, personalised flush with a soft shine. Also works as a lip primer.",
+      "perfume-desc-ysl-lines-liberated":
+        "Yves Saint Laurent Lines Liberated waterproof eye pencil, 1.2g. Choose your shade — a smudge-resistant liner with up to 24-hour wear and a 3-in-1 angled brush to sculpt, blend and stretch the line. Enriched with cactus fig flower oil; safe for the waterline.",
+      "perfume-desc-ysl-make-me-blush-liquid":
+        "Yves Saint Laurent Make Me Blush liquid blush, 15ml. Choose your shade — a lightweight, non-sticky liquid blush with a second-skin natural-matte finish and up to 12 hours of wear. Doe-foot applicator; suitable for sensitive skin.",
+      "perfume-desc-ysl-make-me-blush-bold":
+        "Yves Saint Laurent Make Me Blush Bold Blurring powder blush, 6g. Choose your shade — a silky, pore-blurring powder with squalane and rosehip that is waterproof and sweat-proof for up to 24 hours, in a gold compact with a quilted lid.",
+      "perfume-desc-ysl-loveshine-gloss":
+        "Yves Saint Laurent Loveshine Plumping Lip Oil Gloss, 6ml. Choose your shade — a high-shine gloss made of 95% oils, with ginger and pepper oils for a tingling plumping effect, hyaluronic acid and fig pulp. Up to 8 hours of glassy shine and 24 hours of hydration.",
+      "perfume-desc-ysl-libre-flowers-flames":
+        "Yves Saint Laurent Libre Flowers & Flames Eau de Parfum Florale — a warm floral take on Libre with golden-sand juice. Lavender and bergamot open onto a desert lily accord, palm flower, orange blossom absolute and Diva lavender, over Bourbon vanilla.",
+      "perfume-desc-ysl-myslf-le-parfum":
+        "Yves Saint Laurent MYSLF Le Parfum for men, refillable — a spicy woody floral in a matte black bottle. Black pepper essence opens onto Tunisian orange blossom absolute, resting on woods and a Bourbon vanilla infusion.",
+      "perfume-desc-ysl-black-opium-glitter":
+        "Yves Saint Laurent Black Opium Eau de Parfum Glitter — a sparkling Black Opium in a silver glitter bottle. Pear, green mandarin and lemon meet orange blossom over a marshmallow musk accord, coffee, Bourbon vanilla and patchouli.",
+      "perfume-desc-ysl-libre-leau-nue":
+        "Yves Saint Laurent Libre L'Eau Nue Parfum de Peau — YSL's first alcohol-free fragrance, an oil-in-water skin scent. Green mandarin and Calabrian bergamot open onto Moroccan orange blossom and lavender, settling on vanilla, musk and ambergris.",
+      "perfume-desc-ysl-y-le-parfum":
+        "Yves Saint Laurent Y Le Parfum for men — the most intense Y, an aromatic fougère in a deep blue-black bottle. Apple, aldehydes, grapefruit and ginger lead to sage, lavender and geranium over cedar, olibanum, patchouli and tonka.",
+      "perfume-desc-prada-paradoxe-virtual-flower":
+        "Prada Paradoxe Virtual Flower Eau de Parfum Florale, refillable — a fresh floral musk in the light-pink triangle bottle. Vert de bergamot opens onto a jasmine accord and neroli, resting on musk and ambrette.",
+      "perfume-desc-prada-infusion-vanille":
+        "Prada Les Infusions Infusion de Vanille Eau de Parfum, 100ml — a unisex woody amber vanilla. Bergamot and neroli open onto a vanilla infusion and angelica seed, softened by musk.",
+      "perfume-desc-valentino-born-in-roma-the-gold-uomo":
+        "Valentino Born in Roma The Gold Uomo Eau de Toilette, 100ml — a 2024 limited edition in the Rockstud bottle dressed in gold. Solar notes, spices and nutmeg lead to Virginia cedar over a warm vanilla and amber base.",
+      "perfume-desc-valentino-born-in-roma-the-gold-donna":
+        "Valentino Born in Roma The Gold Donna Eau de Parfum — a 2024 limited edition in the gold Rockstud bottle. A fruity white floral of Italian mandarin, a golden gardenia accord and a solar coconut accord over vanilla and cedar.",
+      "perfume-desc-valentino-born-in-roma-uomo-extradose":
+        "Valentino Born in Roma Uomo Extradose Parfum — the most concentrated Born in Roma Uomo, in glossy black studded glass. Bergamot and mandarin open onto lavandin and spices, resting on an overdose of vetiver with guaiac wood.",
+      "perfume-desc-valentino-born-in-roma-donna-extradose":
+        "Valentino Born in Roma Donna Extradose Le Parfum — an intense floral amber in a bottle fading to deep fuchsia. A blackcurrant accord opens onto a rum accord and jasmine sambac, over an overdose of Madagascar Bourbon vanilla.",
+      "perfume-desc-lancome-lveb-elixir":
+        "Lancôme La Vie Est Belle L'Elixir Eau de Parfum, refillable — a deeper, richer La Vie Est Belle with red juice and a glitter ribbon. A raspberry liqueur accord and Calabrian bergamot open onto violet leaf and rose, resting on cocoa butter absolute, leather and cedar.",
+      "perfume-desc-lancome-idole-power":
+        "Lancôme Idôle Power L'Eau de Parfum Intense — the first fruity-woody Idôle, in a red-to-pink gradient bottle. A candied-apple pomarose accord meets Damascena rose over creamy Australian sandalwood.",
+      "perfume-desc-lancome-tresor-la-nuit-vanille-noire":
+        "Lancôme La Nuit Trésor Vanille Noire Eau de Parfum — Lancôme's first amber, in the diamond-cut Trésor bottle with a black leather rose. Honeyed Damascena rose meets leathery Madagascar Bourbon vanilla absolute and an oud wood accord.",
+      "perfume-desc-ralph-lauren-ralphs-club-edt":
+        "Ralph Lauren Ralph's Club Eau de Toilette for men — a refined woody aromatic scent inspired by Parisian nightlife. Lavender and clary sage open onto Virginia cedar, resting on vetiver.",
+      "perfume-desc-mugler-angel-fantasm":
+        "Mugler Angel Fantasm Eau de Parfum Sensuelle, refillable — the first black Angel star bottle. Pineapple and bergamot open onto coconut and tiaré flower, settling on patchouli, Bourbon vanilla and amber.",
+      "perfume-desc-mugler-amen-fantasm":
+        "Mugler A*Men Fantasm Eau de Parfum Sensuelle for men, 100ml — in a matte black bottle with a silver star. Pink pepper, citrus and bergamot meet dark chocolate and clary sage over a deep patchouli base.",
+      "perfume-desc-mugler-alien-extraintense":
+        "Mugler Alien Extraintense Eau de Parfum Intense, refillable — a deeper, more radiant Alien in a purple-to-black bottle. Petitgrain opens onto jasmine and tuberose, settling on vanilla, cashmeran and amberwood.",
+      "perfume-desc-cacharel-ella-ella":
+        "Cacharel Ella Ella Eau de Parfum, refillable — a joyful floral gourmand in a butterfly bottle. Coconut and bergamot open onto orange blossom and jasmine, resting on patchouli and Bourbon vanilla.",
+      "perfume-desc-viktor-rolf-spicebomb-dark-leather":
+        "Viktor&Rolf Spicebomb Dark Leather Eau de Parfum for men — a smoky, spicy leather in the matte black grenade bottle. Black pepper and nutmeg ignite incense and cinnamon over dark leather and tobacco.",
+      "perfume-desc-diesel-only-the-brave-edp":
+        "Diesel Only The Brave Eau de Parfum for men — a stronger take on the iconic fist bottle, in deep blue. Lemon, mandarin and coriander lead to clary sage and lavandin over a warm suede base.",
+      "perfume-desc-azzaro-forever-wanted-elixir":
+        "Azzaro Forever Wanted Elixir Parfum for men — an intense, long-lasting Wanted in a gold bottle. Raspberry, green mandarin and bergamot meet cardamom, lavender and clary sage over leather, vetiver and wolfwood.",
+      "perfume-desc-lancome-lip-idole-juicytreat":
+        "Lancôme Lip Idôle Juicytreat oil-in-gloss, 8.5ml. Choose your shade — a cushiony gloss with 20% squalane, hyaluronic acid and Maxi-Lip peptides for juicy, plumped-looking lips, a cooling menthol feel and up to 24 hours of hydration.",
+      "perfume-desc-lancome-lash-idole-flutter":
+        "Lancôme Lash Idôle Flutter Extension mascara in 01 True Black, 8.5ml — a lengthening wax-in-water formula with a nano-bristle brush for up to 75% visibly longer lashes and up to 24 hours of clump- and flake-free wear.",
+      "perfume-desc-lancome-tiuw-setting-powder":
+        "Lancôme Teint Idole Ultra Wear Skin Refining Setting Powder, 10g. Choose your shade — a soft-matte pressed powder with squalane, niacinamide, hyaluronic acid and vitamin E that blurs pores and sets makeup without creasing or caking. Includes a puff.",
+      "perfume-desc-lancome-tiuw-care-glow-concealer":
+        "Lancôme Teint Idole Ultra Wear Care & Glow Serum Concealer in 125W, a light beige with a warm undertone, 13ml. An 81% serum base with hyaluronic acid, ceramides and peptides gives medium, buildable coverage with a natural glow and up to 24 hours of hydration.",
+      "perfume-desc-lancome-hydra-zen-gel-cream":
+        "Lancôme Hydra Zen Gel Cream, 50ml — an oil-free moisturising gel cream for oily and combination skin, including sensitive. Centifolia rose extract, hyaluronic acid and bisabolol give up to 72 hours of hydration and visibly calm redness.",
+      "perfume-desc-lancome-genifique-ultimate":
+        "Lancôme Génifique Ultimate serum — a skin-barrier repair serum with 98% pure Beta-Glucan-CM, 7 pre- and probiotic fractions, hyaluronic acid and licorice extract. Visibly reduces redness, fine lines and pores; 97% natural-origin ingredients and tested on sensitive skin.",
+      "perfume-desc-lancome-renergie-crx-triple-serum-retinol":
+        "Lancôme Rénergie C.R.x. Triple Serum Retinol, 50ml — three chambers of pure vitamin C gel-serum, pure retinol serum-emulsion and an X-peptide cream-serum with ceramides, mixed with every pump for faster-looking skin renewal. Suitable for sensitive skin.",
+      "perfume-desc-lancome-renergie-hpn-uvmune-spf50":
+        "Lancôme Rénergie H.P.N. UVMUNE Cream SPF50, 50ml — an anti-dark-spot, anti-sagging day cream with 300-Peptide, hyaluronic acid and niacinamide, plus UVMUNE filters with Mexoryl 400 against ultra-long UVA rays.",
+      "perfume-desc-lancome-tonique-confort-200":
+        "Lancôme Tonique Confort re-hydrating toner, 200ml — for dry and sensitive skin, with Centifolia rose water, hyaluronic acid and squalane to soothe instantly and help repair the skin barrier. 97% natural-origin ingredients.",
+      "perfume-desc-biotherm-life-plankton-regenerating-serum":
+        "Biotherm Life Plankton Regenerating Serum — a full anti-ageing serum with 5% Biotech Plankton (35 micronutrients), vitamin CG and hyaluronic acid that visibly improves 10 signs of ageing. 95% natural-origin, vegan and suitable for sensitive skin.",
+      "perfume-desc-biotherm-homme-aquapower-advanced-gel":
+        "Biotherm Homme Aquapower Advanced Gel — a cooling water-gel moisturiser for men with normal to combination skin. Biotech Plankton and bio-ceramides give 48-hour hydration and strengthen the skin barrier; tested on sensitive skin.",
+      "perfume-desc-biotherm-lait-corporel-active-recovery":
+        "Biotherm Lait Corporel Active Recovery body milk, 400ml — an accelerated-repair body milk that instantly soothes tightness and roughness, with the brand's signature bergamot and almond scent. Pump bottle.",
+      "perfume-desc-biotherm-blue-peptides-eyes-lips":
+        "Biotherm Blue Peptides Eyes & Lips Contour Reshaper, 15ml — a pink balm for the eye area and lip contour with collagen peptides, green-tea caffeine and Biotech Plankton, applied with a cooling metal tip. 93% natural-origin.",
+      "perfume-desc-biotherm-aquasource-hydra-barrier-cleanser":
+        "Biotherm Aquasource Hydra Barrier Cleanser, 150ml — a soap-free cream-to-foam cleanser for sensitive skin with Biotech Plankton, bio-ceramides and niacinamide that cleanses without tightness. 99% biodegradable formula.",
+      "perfume-desc-biotherm-aquasource-hydra-barrier-cream":
+        "Biotherm Aquasource Hydra Barrier Cream — a barrier-strengthening moisturiser with Biotech Plankton, bio-ceramides, hyaluronic acid, centella and adenosine for up to 72 hours of hydration. 94% natural-origin, in a recycled-glass jar.",
+      "perfume-desc-lancome-o-de-lancome-off-now":
+        "Lancôme Ôff Now Eau de Toilette, 100ml — a calming woody citrus from the Ô de Lancôme collection by Fabrice Pellegrin. Verbena from Lancôme's Domaine de la Rose in Grasse meets a creamy sandalwood accord.",
+      "perfume-desc-lancome-o-de-lancome-over-the-top":
+        "Lancôme Ôver The Top Eau de Toilette, 100ml — a bold green floral with a fruity touch from the Ô de Lancôme collection by Carlos Benaïm. A crisp tomato-leaf accord opens onto jasmine absolute from the Domaine de la Rose.",
+      "perfume-desc-lancome-o-de-lancome-ozenith":
+        "Lancôme Ô Zénith Eau de Toilette, 100ml — a joyful floral fruity from the Ô de Lancôme collection, an 'explosion of happiness' pairing jasmine absolute from the Domaine de la Rose with an exotic monoï accord.",
+      "perfume-desc-armani-prive-iris-bleu":
+        "Armani Privé Iris Bleu Eau de Toilette from Les Eaux collection — a floral green musk inspired by the Mediterranean 'blue hour'. Galbanum, bergamot and lemon open onto orris butter and jasmine, resting on white musk, Virginia cedar and guaiac wood.",
+      "perfume-desc-armani-prive-gardenia-antigua":
+        "Armani Privé Gardénia Antigua Eau de Toilette, 100ml — a sunny unisex gardenia inspired by Giorgio Armani's Antigua retreat. Mandarin and neroli open onto gardenia and jasmine sambac, softened by a salty sea-spray accord, patchouli, Ambroxan and white musks.",
+      "perfume-desc-armani-prive-indigo-tanzanite":
+        "Armani Privé Indigo Tanzanite Eau de Parfum, 100ml, from Les Terres Précieuses collection — a woody amber inspired by Tanzanian night skies: bergamot and almond over heliotrope and a milky accord, wrapped in patchouli, benzoin, labdanum and tolu balsam.",
+      "perfume-desc-cacharel-anais-anais":
+        "Cacharel Anaïs Anaïs L'Original Eau de Toilette — the classic 1978 white floral in its pale-pink bottle. Hyacinth, honeysuckle and orange blossom open onto lily, jasmine and rose over amber, incense, sandalwood and musk.",
+      "perfume-desc-armani-code-edp-75-spring-set":
+        "Giorgio Armani Code Eau de Parfum spring gift set for men, in a plastic-free teal ginkgo-leaf box — an ambery, spicy fougère with green mandarin, nutmeg and tonka bean absolute.",
+      "perfume-desc-armani-code-edt-50-spring-set":
+        "Giorgio Armani Code Eau de Toilette spring gift set for men, in a teal ginkgo-leaf box — bergamot and lemon over olive blossom and star anise, with tonka, guaiac wood and leather.",
+      "perfume-desc-lancome-lash-idole-idole-edp-set":
+        "Lancôme Lash Idôle and Idôle gift set — the lifting, volumising Lash Idôle mascara paired with a travel spray of the rose-and-jasmine Idôle Eau de Parfum.",
+      "perfume-desc-lancome-lash-idole-flutter-extension-set":
+        "Lancôme Lash Idôle Flutter Extension gift set — the lengthening Flutter Extension mascara with up to 24-hour wear, plus a mini Lip Idôle Butterglow squalane lip balm.",
+      "perfume-desc-valentino-uomo-born-in-roma-edt-50-set":
+        "Valentino Uomo Born in Roma Eau de Toilette gift set — the woody aromatic with mineral salt, ginger, violet leaf and vetiver, in a black-and-pink floral Valentino box.",
+      "perfume-desc-biotherm-homme-aquapower-routine-set":
+        "Biotherm Homme Aquapower routine set — a men's hydrating 'Refresh. Recharge. Repeat.' routine with the Aquapower Advanced Gel moisturiser and cleanser.",
+      "perfume-desc-biotherm-homme-force-supreme-routine-set":
+        "Biotherm Homme Force Supreme routine set — an anti-ageing routine for men that targets firmness and wrinkles, with a cleanser and a shaving foam for sensitive skin.",
+      "perfume-desc-lancome-genifique-ultimate-routine-set":
+        "Lancôme Génifique Ultimate 3-step skin repair routine set — the Beta-Glucan-CM Génifique Ultimate serum with Rénergie H.P.N. 300-Peptide cream and Advanced Génifique eye cream.",
+      "perfume-desc-lancome-juicy-tubes":
+        "Lancôme Juicy Tubes Original lip gloss, 15ml. Choose your shade — the iconic high-shine, flavoured squeeze-tube gloss, relaunched with up to 4 hours of hydration for a juicy, glassy finish.",
+      "perfume-desc-lancome-skin-idole-supertint":
+        "Lancôme Skin Idôle 3 Serum Supertint, 30ml. Choose your shade — a tinted serum with an 87% skincare base (2% niacinamide, 1% hyaluronic acid and vitamin E) giving light-to-medium buildable coverage, a luminous skin-like finish and up to 24 hours of wear.",
+      "perfume-desc-lancome-genifique-eye-cream":
+        "Lancôme Génifique Ultimate eye cream, 20ml — the 2025 dual-repair eye cream with Beta-Glucan-CM and enoxolone that targets dark circles, puffiness, fine lines and wrinkles, with visibly fewer dark circles and wrinkles in 8 weeks.",
+      "perfume-desc-lancome-renergie-multi-glow-day":
+        "Lancôme Rénergie Multi-Glow rosy skin tone reviving day cream, 50ml — an anti-ageing cream for mature skin with collagen peptide fractions, niacinamide and pink pigment beads that leaves skin plumper, firmer and more radiant with a more even tone. Suitable for all skin types, including sensitive.",
+      "perfume-desc-biotherm-waterlover-sun-milk-spf50-400":
+        "Biotherm Waterlover Hydrating Sun Milk SPF 50+, 400ml pump bottle — very high UVA/UVB protection for face and body that is water-resistant, hydrates for 24 hours and leaves no white marks. With Life Plankton™, vitamin E and glycerin, in a 100% recycled bottle.",
+      "perfume-desc-biotherm-waterlover-milky-sun-spray-spf50":
+        "Biotherm Waterlover Milky Sun Spray SPF 50+, 200ml — an ultra-light, oil-free milky sun spray for face and body that is very water-resistant and suits all skin types. With Life Plankton™, in a 100% recycled bottle.",
+      "perfume-desc-biotherm-collagen-fit-body-cream":
+        "Biotherm Collagen Fit Intensive Hydra Body Cream, 200ml jar — a rich body cream with a collagen-support peptide, ceramide NP, shea and cocoa butter that tones, smooths and hydrates for up to 100 hours.",
+      "perfume-desc-biotherm-collagen-fit-body-milk":
+        "Biotherm Collagen Fit Firming Body Milk, 400ml pump bottle — a fast-absorbing firming milk with Biotech Plankton, a collagen peptide fraction and caffeine that gives an instant toning effect and up to 48 hours of hydration.",
+      "perfume-desc-biotherm-homme-force-supreme-body-reshaper":
+        "Biotherm Homme Force Supreme Body Reshaper, 125ml tube — a cooling, toning body cryo-gel for men, focused on the abdomen, with Biotech Plankton, caffeine and creatine.",
+      "perfume-desc-biotherm-homme-force-supreme-face-reshaper":
+        "Biotherm Homme Force Supreme Face Reshaper multi-reshaping and anti-wrinkle cream, 50ml — a light, non-greasy men's face cream with Biotech Plankton and Men Neo-Proxylane that firms, smooths wrinkles and redefines facial contours.",
+      "perfume-desc-armani-prisma-glass-icy-plumper":
+        "Giorgio Armani Prisma Glass Icy Plumper volumising lip gloss, 3.5ml. Choose your shade — a cooling plumping gloss with a frosted, prismatic shimmer, enriched with hyaluronic acid, squalane and peptides for up to 24 hours of hydration.",
+      "perfume-desc-ysl-loveshine-candy-glaze":
+        "Yves Saint Laurent Loveshine Candy Glaze lip gloss stick, 3.2g. Choose your shade — a sheer, juicy gloss-in-a-stick with hyaluronic acid, vitamin E, mango oil and pomegranate extract for a high-shine, plumped-looking finish.",
+      "perfume-desc-margiela-replica-beach-walk":
+        "Maison Margiela Replica Beach Walk Eau de Toilette — a sunny, salty stroll along the shore. Bergamot, lemon and pink pepper open onto ylang-ylang, coconut milk and heliotrope over musk, benzoin and cedar.",
+      "perfume-desc-margiela-replica-by-the-fireplace":
+        "Maison Margiela Replica By the Fireplace Eau de Toilette, 30ml — smoky and warm, like roasting chestnuts by a wood fire. Clove, pink pepper and orange blossom lead to chestnut, guaiac wood and juniper over vanilla, Peru balsam and cashmeran.",
+      "perfume-desc-margiela-replica-jazz-club":
+        "Maison Margiela Replica Jazz Club Eau de Toilette — the warm, spicy atmosphere of cigars and cocktails in a Brooklyn club. Pink pepper, neroli and lemon meet rum, clary sage and vetiver over tobacco leaf, vanilla and styrax.",
+      "perfume-desc-margiela-replica-lazy-sunday-morning":
+        "Maison Margiela Replica Lazy Sunday Morning Eau de Toilette — a clean floral musk of freshly washed linen. Aldehydes, pear and lily of the valley open onto iris, rose and orange blossom over white musk, patchouli and ambrette.",
+      "perfume-desc-margiela-replica-afternoon-delight":
+        "Maison Margiela Replica Afternoon Delight Eau de Toilette — a creamy gourmand built around a warm madeleine. Bitter almond and angelica lead to a madeleine accord and carrot over Madagascar vanilla, sandalwood and musk.",
+      "perfume-desc-margiela-replica-autumn-vibes":
+        "Maison Margiela Replica Autumn Vibes Eau de Toilette, 30ml — a woody, spicy walk through an autumn forest, with cardamom, carrot seed and red berries over cedarwood and a moss accord.",
+      "perfume-desc-margiela-replica-from-the-garden":
+        "Maison Margiela Replica From the Garden Eau de Toilette — fresh and green, like an afternoon in a sunny kitchen garden. Tomato leaf and green mandarin with geranium over patchouli, moss and white musk.",
+      "perfume-desc-margiela-replica-sailing-day":
+        "Maison Margiela Replica Sailing Day Eau de Toilette, 100ml — an aquatic sea-breeze scent. Sea notes, aldehydes, coriander and red pepper meet juniper and iris over seaweed, ambergris, cedar and amberwood.",
+      "perfume-desc-margiela-replica-on-a-date":
+        "Maison Margiela Replica On a Date Eau de Toilette, 30ml — a fruity chypre of sun-warmed grapes and roses. Blackcurrant liqueur, bergamot and pink pepper open onto Isparta rose, geranium and davana over patchouli, vetiver, moss and musks.",
+      "perfume-desc-margiela-replica-when-the-rain-stops":
+        "Maison Margiela Replica When the Rain Stops Eau de Toilette — an aromatic aquatic that captures fresh air after a spring shower. Green notes, bergamot and pink pepper meet a rain accord with rose and jasmine over pine, moss and patchouli.",
+      "perfume-desc-margiela-replica-under-the-stars":
+        "Maison Margiela Replica Under the Stars Eau de Toilette — a warm, smoky woody scent of a night around a campfire. Black pepper and cinnamon leaf lead to cypriol and cedar over labdanum, oud and a leather accord.",
+      "perfume-desc-margiela-replica-coffee-break":
+        "Maison Margiela Replica Coffee Break Eau de Toilette, 100ml — an amber-vanilla moment of calm. Pepper, orange blossom and patchouli open onto lavender, coffee, milk and tonka over vanilla, cedar and vetiver.",
+      "perfume-desc-margiela-replica-flying":
+        "Maison Margiela Replica Flying Eau de Parfum, 100ml, from the black-bottle Replica Dreams collection — a fresh, airy citrus with petitgrain, orange blossom, bergamot and neroli over an ozonic cloud accord, musk and moss.",
+      "perfume-desc-margiela-replica-ideal-one":
+        "Maison Margiela Replica Ideal One Eau de Parfum, 100ml, from the Replica Dreams collection — an amber-woody skin scent of elemi, bergamot and orange with orange blossom and lavender over musk, oud, guaiac wood, styrax and vanilla.",
+      "perfume-desc-margiela-replica-dancing-on-the-moon":
+        "Maison Margiela Replica Dancing on the Moon Eau de Parfum, 100ml, from the Replica Dreams collection — a powdery white floral of aldehydes, frangipani, jasmine sambac and iris over cashmeran, ambergris and musk, with a 'moon dust' note.",
+      "perfume-desc-margiela-replica-celestial-whispers":
+        "Maison Margiela Replica Celestial Whispers Eau de Parfum, 100ml, from the Replica Dreams collection — a smoky amber-woody scent of incense and metallic aldehydes with iris and myrrh over vanilla, musks and cedar.",
+      "perfume-desc-margiela-replica-under-the-lemon-trees":
+        "Maison Margiela Replica Under the Lemon Trees Eau de Toilette, 100ml — a sparkling woody citrus of a lazy afternoon on a Mediterranean terrace. Lime, petitgrain and cardamom with coriander, mate and green tea over cedar, cistus and white musk.",
+      "perfume-desc-margiela-replica-bubble-bath":
+        "Maison Margiela Replica Bubble Bath Eau de Toilette, 100ml — a clean floral musk inspired by a warm, foamy bath. A soap accord, bergamot and lavender meet jasmine and rose over coconut, white musk and patchouli.",
+      "perfume-desc-margiela-replica-lazy-sunday-morning-candle":
+        "Maison Margiela Replica Lazy Sunday Morning scented candle, 165g (about 41 hours of burn time) — the soft-skin-and-clean-linen scent of aldehydes, lily of the valley and pear with iris, orange blossom and rose over ambrette, patchouli and white musk.",
+      "perfume-desc-mugler-amen-stellar":
+        "Mugler A*Men Stellar Eau de Parfum Lumineuse for men (2025) — an amber aromatic gourmand that reworks A*Men around a creamy pistachio accord, with bergamot and lavender over a woody base.",
+      "perfume-desc-mugler-angel-stellar":
+        "Mugler Angel Stellar Eau de Parfum Lumineuse (2025), in a refillable cobalt-blue star — a powdery amber gourmand of creamy pistachio and sparkling bergamot over Madagascar Bourbon vanilla and woods.",
+      "perfume-desc-mugler-angel-edp":
+        "Mugler Angel Eau de Parfum in the refillable star bottle — the original 1992 amber gourmand. Calabrian bergamot, praline, red fruits and caramel over patchouli and vanilla. The 100ml comes as the standing star.",
+      "perfume-desc-mugler-angel-nova":
+        "Mugler Angel Nova Eau de Parfum, 25ml refillable — a fruity floral woody scent of raspberry and Damascena rose over Akigalawood.",
+      "perfume-desc-ralph-lauren-big-pony-1":
+        "Ralph Lauren Polo Big Pony #1 Eau de Toilette for men, 100ml, in the blue bottle — a fresh, sporty scent of lime, lemon, grapefruit and aquatic notes over a woody, musky base.",
+      "perfume-desc-ralph-lauren-polo-blue-parfum":
+        "Ralph Lauren Polo Blue Parfum, 75ml — a fresh woody scent of mandarin, cardamom and pink pepper with clary sage, smoky vetiver and jasmine over upcycled oakwood, olibanum and patchouli.",
+      "perfume-desc-ralph-lauren-polo-67-edt":
+        "Ralph Lauren Polo 67 Eau de Toilette (2024) — a woody aromatic of pineapple, bergamot and lemon with sage, juniper and rose hip over vetiver, patchouli and goldenrod.",
+      "perfume-desc-ralph-lauren-polo-67-edp":
+        "Ralph Lauren Polo 67 Eau de Parfum — a warmer, richer Polo 67 with pineapple, green mandarin, bergamot and cardamom, a touch of cypress and lavandin, over cedar, benzoin and vetiver.",
+      "perfume-desc-viktor-rolf-spicebomb-metallic-musk":
+        "Viktor&Rolf Spicebomb Metallic Musk Eau de Parfum for men (2025) — an amber spicy scent of black pepper, bergamot, elemi and aldehydes with cinnamon, chili and lavender over ambrette, cistus, a suede-leather accord and musk.",
+      "perfume-desc-viktor-rolf-flowerbomb-extreme":
+        "Viktor&Rolf Flowerbomb Extreme Eau de Parfum Intense (2025), in a matte-pink bottle — a vanilla-boosted floral of raspberry, bergamot and tea with jasmine sambac, rose, orange blossom and freesia over vanilla bean, patchouli and Peru balsam.",
+      "perfume-desc-prada-paradoxe-radical-essence":
+        "Prada Paradoxe Radical Essence Parfum (2025) — the most concentrated Paradoxe, in a deep-pink lacquered refillable bottle. Neroli and orange flower absolute meet a salted pistachio accord over creamy sandalwood.",
+      "perfume-desc-prada-paradoxe-hair-mist":
+        "Prada Paradoxe Hair Mist, 30ml — a lighter take on Paradoxe for the hair, with bergamot, neroli and jasmine over musks and ambrette, plus argan oil and rice vinegar for a silky finish.",
+      "perfume-desc-prada-paradoxe-intense-90-set":
+        "Prada Paradoxe Intense Eau de Parfum gift set in a mint-green Saffiano envelope box — the amber floral with neroli, jasmine, Ambrofix and a moss accord.",
+      "perfume-desc-ysl-myslf-labsolu":
+        "Yves Saint Laurent MYSLF L'Absolu Parfum (2025), in a mirror-silver bottle — a woody spicy scent of ginger, bergamot and cardamom with Moroccan orange blossom over Indonesian patchouli.",
+      "perfume-desc-valentino-born-in-roma-body-shimmer":
+        "Valentino Born in Roma Donna Perfumed Body Shimmer, 125ml — a shimmering gel lotion in the Donna scent with pearl and mother-of-pearl and hyaluronic acid for up to 12 hours of glow and hydration.",
+      "perfume-desc-valentino-born-in-roma-hair-body-mist":
+        "Valentino Born in Roma Donna Perfumed Hair & Body Mist, 90ml — bergamot, jasmine, woods and bourbon vanilla in a light mist with argan oil.",
+      "perfume-desc-armani-code-elixir":
+        "Giorgio Armani Code Elixir for men, 50ml (2025) — the most concentrated scent in the Code range. A Calabrian green mandarin opening leads to a spicy liquor accord and smoky leather over grilled tonka bean.",
+      "perfume-desc-armani-si-parfum":
+        "Giorgio Armani Sì Parfum (2025) — a gourmand leather chypre built around smoky vanilla. Blackcurrant nectar and a saffron accord open onto Damask rose over vanilla, a suede-like leather accord and patchouli.",
+      "perfume-desc-armani-swy-intensely-edp-50-set":
+        "Emporio Armani Stronger With You Intensely gift set for men, in a teal ginkgo-pattern box — the warm amber fougère with pink pepper, toffee, cinnamon, lavender, vanilla and tonka bean.",
+      "perfume-desc-lancome-lveb-vanille-nude":
+        "Lancôme La vie est belle Vanille Nude Eau de Parfum (2025) — Lancôme's first vanilla-musk, a 'glazed vanilla and creamy musk' of grandiflorum jasmine from the Domaine de la Rose, Madagascar bourbon vanilla, an overdose of white musk and sandalwood.",
+      "perfume-desc-lancome-absolue-longevity-soft-cream":
+        "Lancôme Absolue Longevity The Soft Cream, 60ml jar — Lancôme's first PDRN cream, with rose-derived Absolue PDRN, Perpetual Rose extract and Pro-Xylane to firm, redefine facial contours and hydrate for up to 24 hours. Melts into a light, serum-like texture; suits all skin types, including sensitive.",
+      "perfume-desc-biotherm-aquascreen-uv-daily-spf50":
+        "Biotherm Aquascreen Activewear Daily UV Fluid SPF 50+ (PA++++), 40ml — an ultra-light, invisible face sunscreen that resists sweat, sebum and friction, with peptides, vitamins B3 and E and Biotech Plankton.",
+      "perfume-desc-lancome-skin-idole-juicy-blush":
+        "Lancôme Skin Idôle Juicy Blush liquid blush, 9ml. Choose your shade — a buildable soft-matte liquid blush with an 85% skincare base, niacinamide and vitamins B5 and E, for a fresh flush that lasts up to 12 hours.",
+      "perfume-desc-ysl-the-inks-blur":
+        "Yves Saint Laurent The Inks Blur blurring matte lip stain, 5.5ml. Choose your shade — a weightless liquid stain with a soft-focus matte finish, up to 12 hours of wear and up to 24 hours of moisture.",
+      "perfume-desc-ysl-the-inks-vinyl-cream":
+        "Yves Saint Laurent The Inks Vinyl Cream high-shine lip stain, 5.5ml. Choose your shade — a lacquered, mirror-shine liquid stain with about 90% care ingredients (tuberose and prickly pear) and up to 24 hours of moisture.",
+      "perfume-desc-ysl-the-slim-couture-matte":
+        "Yves Saint Laurent The Slim Couture Matte Lipstick, 2.2g — the 2025 relaunch in a gold Cassandre case. Choose your shade — a velvety matte colour with a square, angled tip that lines and fills in one stroke, on a 67% care base with ceramides, rosehip and jojoba oils, for up to 10 hours of colour.",
+      "perfume-desc-ysl-all-hours-glow-foundation":
+        "Yves Saint Laurent All Hours Glow Foundation, 25ml — the radiant-finish All Hours (2025). Choose your shade — a serum-based formula with hyaluronic acid, niacinamide, macadamia oil and jasmine petal extract for buildable medium-to-full coverage, a skin-like glow and up to 24-hour wear.",
+      "perfume-desc-armani-skin-tint":
+        "Giorgio Armani Skin Tint long-wear & care skin tint, 30ml. Choose your shade — a 92% serum formula with Golden Hour Pearls, hyaluronic acid and niacinamide for buildable sheer-to-medium coverage, a radiant finish and 24-hour hydration.",
+      "perfume-desc-armani-luminous-silk-foundation":
+        "Giorgio Armani Luminous Silk Foundation, 30ml — the reformulated natural-glow blurring foundation. Choose your shade — medium buildable coverage with a silky natural glow, niacinamide, 24-hour wear and hydration; non-comedogenic and suitable for all skin types.",
+      "perfume-desc-armani-luminous-silk-glow-primer":
+        "Giorgio Armani Luminous Silk Illuminating Primer, 30ml — a glow-extending, water-based face base with Golden Hour pearls and hyaluronic acid. Wear alone for a dewy glow, under foundation, or mixed in; 24-hour hydration in one universal shade.",
+      "perfume-desc-armani-prive-cuir-nu":
+        "Armani/Privé Cuir Nu Eau de Parfum Intense — from Les Mille et Une Nuits collection (2025, Delphine Lebeau). An ambery leather inspired by Venetian tanneries: blue cardamom and dark-roasted Arabica coffee, Damask rose and nappa leather, over amber, labdanum and toasted tonka.",
+      "perfume-desc-armani-power-of-you":
+        "Emporio Armani Power of You Eau de Parfum for women (2026), in a ruby bottle with rose-gold rings — a floral fruity gourmand of passionfruit, bitter orange and lemon, frangipani and solar notes, over Madagascar vanilla, benzoin and labdanum.",
+      "perfume-desc-armani-stronger-with-you-amber":
+        "Emporio Armani Stronger With You Amber Eau de Parfum, 100ml — the first unisex scent of the line (2023, Cécile Matton). An ambery fougère of Provençal lavender, a rich amber accord and Madagascar bourbon vanilla.",
+      "perfume-desc-lancome-magie-noire":
+        "Lancôme Magie Noire Eau de Toilette, 75ml — the legendary 1978 oriental chypre. Blackcurrant bud, bergamot and galbanum open onto Bulgarian rose, jasmine and tuberose, over a mysterious base of patchouli, oakmoss, sandalwood, vetiver and amber.",
+      "perfume-desc-lancome-absolue-lextrait-cream":
+        "Lancôme Absolue L'Extrait Elixir Cream, 50ml — Lancôme's most exceptional regenerating cream, concentrated with Lancôme rose native cells and rose extracts from its Valensole gardens. A rich, melting texture that visibly regenerates, firms and restores radiance, in the black-and-gold jar.",
+      "perfume-desc-lancome-absolue-lextrait-yeux":
+        "Lancôme Absolue L'Extrait Yeux eye cream, 15ml — the ultimate regenerating eye elixir with Lancôme rose native cells, to visibly smooth lines, reduce puffiness and dark circles and illuminate the eye contour.",
+      "perfume-desc-biotherm-aquasource-vitamin-glow-gel":
+        "Biotherm Aquasource+ Vitamin Glow Gel, 50ml — a fresh, vitamin-rich gel moisturiser with vitamin C and Life Plankton™ that deeply hydrates and boosts radiance for a healthy-looking glow.",
+      "perfume-desc-biotherm-aquasource-cica-nutri-cream":
+        "Biotherm Aquasource Cica Nutri Cream, 30ml tube — a nourishing, soothing cream for dry and sensitive skin with cica (centella asiatica) and Life Plankton™, to comfort, repair the skin barrier and hydrate.",
+      "perfume-desc-prada-paradigme-edp":
+        "Prada Paradigme Eau de Parfum for men (2025), in a refillable green-to-black bottle — an ambery woody scent of Calabrian bergamot and airy musks over rosy-green Bourbon geranium, on Peru balsam, benzoin and guaiac wood.",
+      "perfume-desc-valentino-born-in-roma-rendez-vous-uomo":
+        "Valentino Uomo Born in Roma Rendez-Vous Ivory Eau de Toilette, 100ml — a 2025 limited edition in an ivory-lacquered studded bottle. Bergamot and lavandin over a smoky open-hearth accord.",
+      "perfume-desc-valentino-born-in-roma-rendez-vous-donna":
+        "Valentino Donna Born in Roma Rendez-Vous Ivory Eau de Parfum — a 2025 limited edition in an ivory-lacquered studded bottle. Green mandarin and orange blossom with a marshmallow heart over Madagascar vanilla and musk.",
+      "perfume-desc-valentino-born-in-roma-purple-melancholia-uomo":
+        "Valentino Uomo Born in Roma Purple Melancholia Eau de Toilette (2026) — an ambery aromatic woody scent of cardamom and lavandin over ambery woods and a creamy coconut accord.",
+      "perfume-desc-valentino-born-in-roma-purple-melancholia-donna":
+        "Valentino Donna Born in Roma Purple Melancholia Eau de Parfum (2026) — a fruity chypre of juicy plum and osmanthus over rich vanilla extract.",
+      "perfume-desc-ysl-libre-vanille-couture":
+        "Yves Saint Laurent Libre Vanille Couture Eau de Parfum, 50ml — a 2025 limited edition in a textured metallic-gold Libre bottle. Libre's lavender and orange blossom turned gourmand by a vanilla caviar accord dipped in golden liquor, with rum facets.",
+      "perfume-desc-margiela-untitled-l-eau":
+        "Maison Margiela (untitled) L'eau Eau de Toilette, 100ml — a fresh, green unisex citrus of mandarin, lemon, galbanum, buchu and spearmint over orange blossom, incense, patchouli and white musk.",
+      "perfume-desc-margiela-untitled-edp":
+        "Maison Margiela (untitled) Eau de Parfum, 100ml — the house's debut fragrance (2010), a green floral evoking a spring morning: galbanum, bitter orange and box-tree green, jasmine and lentisk, on incense, white musk and cedar.",
+      "perfume-desc-margiela-replica-beach-vibes-candle":
+        "Maison Margiela Replica Beach Vibes scented candle, 165g — \"Calvi, 1972: sun-kissed salty skin\". Bergamot, pink pepper and lemon over ylang-ylang, sunflower and coconut milk, on cedar, benzoin and musk; about 40 hours of burn time.",
+      "perfume-desc-margiela-replica-jazz-club-diffuser":
+        "Maison Margiela Replica Jazz Club reed diffuser, 185ml — \"Brooklyn, 2013: heady cocktails and cigars\". Pink pepper, lemon and neroli, a rum accord with clary sage, then vanilla, tonka, styrax, vetiver and tobacco leaf; white bottle with white reeds.",
+      "perfume-desc-margiela-replica-from-the-garden-candle":
+        "Maison Margiela Replica From the Garden scented candle, 165g — \"Puglia, 1998: earth and tomato leaves\". Tomato leaf and green mandarin with patchouli and geranium; over 40 hours of burn time.",
+      "perfume-desc-margiela-replica-lazy-sunday-morning-shower-gel":
+        "Maison Margiela Replica Lazy Sunday Morning perfumed shower gel, 200ml — a gentle foaming gel with plant glycerin in the clean-linen scent of lily of the valley, iris, ambrette and white musk.",
+      "perfume-desc-margiela-replica-lazy-sunday-morning-body-lotion":
+        "Maison Margiela Replica Lazy Sunday Morning perfumed body lotion, 200ml — a fast-absorbing lotion with shea butter, rapeseed oil and plant glycerin in the clean-linen scent; helps the matching eau de toilette last longer.",
+      "perfume-desc-dkny-be-delicious":
+        "DKNY Be Delicious Eau de Parfum (2004, Maurice Roucel), in the iconic green apple bottle — a fresh floral-fruity scent of crisp apple, cucumber and grapefruit over magnolia, rose and violet, on sandalwood and white amber.",
+      "perfume-desc-dkny-be-100-delicious":
+        "DKNY Be 100% Delicious Eau de Parfum (2021) — a juicy fruity floral of pear, pistachio, blackcurrant and mandarin, with magnolia, rose water and orange blossom over sandalwood, tonka and white woods.",
+      "perfume-desc-dkny-be-delicious-fresh-blossom":
+        "DKNY Be Delicious Fresh Blossom Eau de Parfum (2009), in the pink apple bottle — a soft floral inspired by apple blossom in Central Park: grapefruit, cassis and apricot, lily of the valley, rose and jasmine, over blonde woods.",
+      "perfume-desc-dkny-be-extra-delicious":
+        "DKNY Be Extra Delicious Eau de Parfum (2020) — a floral gourmand of crisp pear, gardenia and creamy caramel with raspberry and ambroxan, made to wear alone or layered over Be Delicious.",
+      "perfume-desc-dkny-women-edp":
+        "DKNY Women Energizing Eau de Parfum, in the tall skyscraper bottle — an urban floral of blood orange, chilled vodka and tomato leaf, water lily, orchid and daffodil, over white birch and tulip-tree bark.",
+      "perfume-desc-dkny-be-delicious-orchard-street":
+        "DKNY Be Delicious Orchard St. Eau de Parfum (2023), inspired by New York's Lower East Side — Pink Lady apple and pink grapefruit, jasmine, raspberry and pomegranate, over cedarwood and leather.",
+      "perfume-desc-cavalli-paradiso":
+        "Roberto Cavalli Paradiso Eau de Parfum — a luminous floral-woody musk of neroli and mandarin, a wild jasmine heart, and cypress and musk in the base.",
+      "perfume-desc-just-cavalli-her":
+        "Just Cavalli for Her Eau de Toilette — a creamy floral of neroli and Tahitian tiare flower over rosewood.",
+      "perfume-desc-just-cavalli-him":
+        "Just Cavalli for Him Eau de Toilette — a leather fragrance with pepper and vetiver on a leather base.",
+      "perfume-desc-cavalli-signature":
+        "Roberto Cavalli Signature Eau de Parfum — an oriental floral of green mandarin, pink pepper and ambrette, orange blossom, jasmine sambac and mirabelle plum, on benzoin, patchouli and vanilla.",
+      "perfume-desc-cavalli-nero-assoluto":
+        "Roberto Cavalli Nero Assoluto Eau de Parfum, 75ml — an oriental floral of mandarin, peach and orchid, orange flower, cedarwood and black vanilla, on sandalwood, musk and ebony wood.",
+      "perfume-desc-cavalli-sweet-ferocious":
+        "Roberto Cavalli Signature Sweet Ferocious Eau de Parfum (2024) — an oriental woody scent of pomelo, saffron, orange peel and elemi, a vanilla, tonka, amber and oud heart, on cypriol, guaiac wood and sandalwood.",
+      "perfume-desc-just-cavalli-wild-heart-her":
+        "Just Cavalli Wild Heart for Her Eau de Parfum (2024) — a fruity floral of red currant, apricot and bergamot, peony, mimosa and violet leaf, on cedar, coconut water and musk.",
+      "perfume-desc-just-cavalli-wild-heart-him":
+        "Just Cavalli Wild Heart for Him Eau de Toilette (2024) — a spicy woody amber of bergamot, saffron and boxwood, pepper, nutmeg and geranium, on cedar, tobacco and vetiver.",
+      "perfume-desc-cavalli-paradiso-rosa":
+        "Roberto Cavalli Paradiso Rosa Eau de Parfum (2025) — a fruity floral of raspberry, pink grapefruit, bergamot and pink pepper, peony, water jasmine and plumeria, on coconut water, benzoin, sandalwood and musk.",
+      "perfume-desc-cavalli-serpentine":
+        "Roberto Cavalli Serpentine Parfum (2025 relaunch), in a white bottle coiled with a gold snake — pink pepper, bergamot and blackcurrant, jasmine sambac, lavender, saffron and rose, over Madagascar vanilla, tonka and patchouli.",
+      "perfume-desc-just-cavalli-give-me-magic-him":
+        "Just Cavalli Give Me Magic for Him Eau de Toilette (2025) — a woody spicy scent of cardamom, pink pepper and lavender, cedarwood, hinoki and incense, on leather, tobacco, vanilla and guaiac wood.",
+      "perfume-desc-just-cavalli-give-me-magic-her":
+        "Just Cavalli Give Me Magic for Her Eau de Parfum (2025) — a spicy amber of nutmeg and jasmine, saffron, incense and oud, on patchouli, oakmoss and vetiver.",
+      "perfume-desc-ysl-libre-edp-loveshine-set":
+        "Yves Saint Laurent Libre Eau de Parfum holiday gift set (2025) — the lavender and orange blossom floral paired with a Loveshine lipstick.",
+      "perfume-desc-ysl-black-opium-holiday-set-50":
+        "Yves Saint Laurent Black Opium Eau de Parfum holiday gift set (2025) — the coffee and vanilla floral with a travel spray and a mini Lash Clash mascara.",
+      "perfume-desc-ysl-myslf-le-parfum-holiday-set":
+        "Yves Saint Laurent MYSLF Le Parfum holiday gift set (2025) — the intense woody floral with a MYSLF Eau de Parfum travel spray.",
+      "perfume-desc-ysl-myslf-edp-holiday-set-60":
+        "Yves Saint Laurent MYSLF Eau de Parfum holiday gift set (2025) — the orange blossom woody floral for men with a travel spray.",
+      "perfume-desc-ysl-myslf-edp-holiday-set-40":
+        "Yves Saint Laurent MYSLF Eau de Parfum holiday gift set (2025) — the orange blossom woody floral for men with a travel spray.",
+      "perfume-desc-ysl-libre-edp-intense-holiday-set":
+        "Yves Saint Laurent Libre Eau de Parfum Intense holiday gift set (2025) — the richer lavender, orange blossom and vanilla Libre with a travel spray.",
+      "perfume-desc-prada-paradoxe-intense-holiday-set":
+        "Prada Paradoxe Intense Eau de Parfum holiday gift set (2025) — the ambery floral with jasmine and vanilla, with a travel spray.",
+      "perfume-desc-prada-paradoxe-holiday-set-2025":
+        "Prada Paradoxe Eau de Parfum holiday gift set (2025) — neroli, orange blossom and amber in the refillable bottle, with a travel spray.",
+      "perfume-desc-prada-paradigme-set":
+        "Prada Paradigme Eau de Parfum gift set — the ambery woody men's scent of bergamot, geranium and benzoin, with a travel spray.",
+      "perfume-desc-prada-luna-rossa-black-set-100":
+        "Prada Luna Rossa Black Eau de Parfum gift set — the ambery woody scent of bergamot, patchouli and amber, with a travel spray.",
+      "perfume-desc-armani-si-passione-holiday-set":
+        "Armani Sì Passione Eau de Parfum holiday gift set (2025) — the fruity floral of blackcurrant, rose and vanilla, with a travel spray.",
+      "perfume-desc-armani-stronger-with-you-intensely-set-100":
+        "Emporio Armani Stronger With You Intensely Eau de Parfum holiday gift set (2025) — spicy, ambery and vanilla-rich, with a travel spray.",
+      "perfume-desc-armani-stronger-with-you-intensely-set-50":
+        "Emporio Armani Stronger With You Intensely Eau de Parfum holiday gift set (2025) — spicy, ambery and vanilla-rich, with a shower gel.",
+      "perfume-desc-armani-si-edp-holiday-set":
+        "Armani Sì Eau de Parfum holiday gift set (2025) — the blackcurrant, rose and vanilla chypre with matching body care.",
+      "perfume-desc-armani-code-edt-holiday-set":
+        "Armani Code Eau de Toilette holiday gift set (2025) — the refillable men's classic of bergamot, olive blossom and tonka, with a shower gel.",
+      "perfume-desc-armani-my-way-holiday-set":
+        "Armani My Way Eau de Parfum holiday gift set (2025) — the orange blossom, tuberose and white musk floral with matching body care.",
+      "perfume-desc-armani-stronger-with-you-edt-holiday-set":
+        "Emporio Armani Stronger With You Eau de Toilette holiday gift set (2025, blue-silver box) — cardamom, sage and chestnut accord, with a travel spray and shower gel.",
+      "perfume-desc-lancome-la-vie-est-belle-edp-30-set":
+        "Lancôme La Vie est Belle Eau de Parfum gift set (Holiday 2025) in the pink 90th-anniversary box — the iris, praline and vanilla scent with matching body care.",
+      "perfume-desc-lancome-juicy-tubes-mini-set":
+        "Lancôme \"The Juicy Gift\" (Holiday 2025) — three mini Juicy Tubes glosses for a high-shine, non-sticky lip.",
+      "perfume-desc-lancome-idole-edp-25-set":
+        "Lancôme Idôle Eau de Parfum gift set (Holiday 2025) — the clean rose, jasmine and white musk scent with a travel spray and a mini mascara.",
+      "perfume-desc-lancome-idole-edp-50-set":
+        "Lancôme Idôle Eau de Parfum gift set (Holiday 2025) — the clean rose, jasmine and white musk scent with a scented body cream and a mini mascara.",
+      "perfume-desc-lancome-la-vie-est-belle-edp-50-set":
+        "Lancôme La Vie est Belle Eau de Parfum gift set (Holiday 2025) — the refillable 50ml bottle with a travel spray and a mini Lash Idôle mascara.",
+      "perfume-desc-lancome-la-vie-est-belle-vanille-nude-set":
+        "Lancôme La Vie est Belle Vanille Nude Eau de Parfum gift set (Holiday 2025) — the creamy vanilla take on La Vie est Belle with a matching shower gel.",
+      "perfume-desc-lancome-renergie-triple-serum-20-set":
+        "Lancôme Rénergie Triple Serum gift set (Holiday 2025) — face and eye Triple Serums with a mini eye cream for firmer, more even-looking skin.",
+      "perfume-desc-lancome-renergie-crx-triple-serum-50-set":
+        "Lancôme Rénergie gift set (Holiday 2025) built around the C.R.x. Triple Serum with retinol, plus peptide cream and eye cream minis in a pink pouch.",
+      "perfume-desc-lancome-la-vie-est-belle-edp-100-set":
+        "Lancôme La Vie est Belle Eau de Parfum gift set (Holiday 2025) — the full 100ml bottle with a generous body lotion and a purse-size mini.",
+      "perfume-desc-lancome-la-vie-est-belle-elixir-petit-theatre":
+        "Lancôme La Vie est Belle L'Elixir Eau de Parfum 50ml, Holiday 2025 limited edition — presented in the collectible pink \"Lancôme Express\" train-carriage box (\"Petit Théâtre\") designed by Safia Ouares for Lancôme's 90th anniversary.",
+      "perfume-desc-lancome-la-vie-est-belle-petit-theatre":
+        "Lancôme La Vie est Belle Eau de Parfum 50ml, Holiday 2025 limited edition — the refillable bottle presented in the collectible pink \"Lancôme Express\" train-carriage box (\"Petit Théâtre\") designed by Safia Ouares for Lancôme's 90th anniversary.",
+      "perfume-desc-lancome-renergie-hpn-300-peptide-50-set":
+        "Lancôme Rénergie H.P.N. 300-Peptide Cream gift set (Holiday 2025) — the lifting, firming peptide cream with a travel size and a mini eye cream.",
+      "perfume-desc-lancome-hypnose-drama-mascara-set":
+        "Lancôme Hypnôse Drama mascara gift set (Christmas 2025) — the extreme-volume mascara plus three travel-size Hypnôse mascaras to try.",
+      "perfume-desc-lancome-monsieur-big-set":
+        "Lancôme Monsieur Big mascara holiday set — big-volume mascara with a dual-phase eye make-up remover and a mini kohl pencil.",
+      "perfume-desc-biotherm-homme-aquafitness-set":
+        "Biotherm Homme Aquafitness holiday set (2025) — an energising hair and body wash with a 48-hour roll-on antiperspirant.",
+      "perfume-desc-biotherm-homme-force-supreme-reshaper-set":
+        "Biotherm Homme Force Supreme holiday set (2025) — the anti-ageing Face Reshaper cream with a cleanser and a 48-hour roll-on.",
+      "perfume-desc-biotherm-deo-pure-duo-set":
+        "Biotherm Deo Pure duo holiday set (limited edition 2025) — two 48-hour antiperspirant roll-ons.",
+      "perfume-desc-biotherm-aqua-drop-set":
+        "Biotherm Aqua Drop set from The Drop Collection — Biotherm essentials with a reusable 1-litre mint sports bottle.",
+      "perfume-desc-biotherm-homme-power-drop-set":
+        "Biotherm Homme Power Drop set from The Drop Collection — men's essentials with a reusable 1-litre blue sports bottle.",
+      "perfume-desc-valentino-uomo-born-in-roma-edt-holiday-set":
+        "Valentino Uomo Born in Roma Eau de Toilette holiday gift set — the woody-spicy scent of violet leaf, sage, ginger and vetiver, with a travel spray.",
+      "perfume-desc-valentino-donna-born-in-roma-intense-set":
+        "Valentino Donna Born in Roma Intense Eau de Parfum holiday gift set — the floral ambery scent of bourbon vanilla, jasmine and benzoin, with a travel spray.",
+      "perfume-desc-valentino-donna-born-in-roma-edp-holiday-set":
+        "Valentino Donna Born in Roma Eau de Parfum holiday gift set (2025) — blackcurrant, jasmine and bourbon vanilla, with a pink studded travel spray.",
+      "perfume-desc-valentino-uomo-born-in-roma-extradose-set":
+        "Valentino Uomo Born in Roma Extradose Parfum gift set — a woody ambery fougère of spices, lavandin and vetiver, with a travel spray.",
+      "perfume-desc-valentino-donna-born-in-roma-extradose-set":
+        "Valentino Donna Born in Roma Extradose Parfum gift set — a floral ambery scent of cassis, rum accord and vanilla extract, with a travel spray.",
+      "perfume-desc-guess-seductive-edt":
+        "Guess Seductive Eau de Toilette for women (2010) — a floral-fruity woody scent: pear, bergamot and blackcurrant over jasmine, orange blossom and iris, settling on vanilla, frankincense and cashmere wood.",
+      "perfume-desc-guess-seductive-noir-edt":
+        "Guess Seductive Noir Eau de Toilette for women (2019) — an oriental floral in a lacquered black bottle: bergamot, sage and peony over iris, jasmine sambac and lily of the valley, on vanilla, vetiver and suede.",
+      "perfume-desc-guess-seductive-red-edt":
+        "Guess Seductive Red Eau de Toilette for women (2021) — a floral-fruity gourmand: cherry, almond and pink pepper over cherry blossom, magnolia and violet, on tonka bean, vanilla and sandalwood.",
+      "perfume-desc-guess-seductive-red-mist":
+        "Guess Seductive Red fragrance mist, 250ml — a light all-over body spray of the Seductive Red scent: cherry, almond and pink pepper, cherry blossom, magnolia and violet, on sandalwood, tonka and vanilla.",
+      "perfume-desc-guess-iconic-edp":
+        "Guess Iconic Eau de Parfum for women (2024) — a bright floral: pink pepper and mandarin over orange blossom, ylang-ylang and geranium with a marine accord, on amber, moss and musk.",
+      "perfume-desc-guess-iconic-men-edp":
+        "Guess Iconic Eau de Parfum for men (2025) — a woody aromatic: Sichuan and black pepper with mandarin over mate, clary sage and geranium, on vetiver, labdanum and suede.",
+      "perfume-desc-guess-bella-vita-edp":
+        "Guess Bella Vita Eau de Parfum (2020) — a fruity floral oriental for women: Italian lemon, cassis and black cherry over jasmine, tuberose and vanilla orchid, on amberwood, tonka bean, praline and musk.",
+      "perfume-desc-guess-bella-vita-mist":
+        "Guess Bella Vita fragrance mists, 250ml — the black cherry, tuberose and praline scent of Bella Vita as a light all-over body spray, also available with fine gold shimmer.",
+      "perfume-desc-guess-bella-vita-rosa-edt":
+        "Guess Bella Vita Rosa Eau de Toilette (2022) — a fruity floral of Italian lemon, blackcurrant and quince over jasmine, magnolia and lily of the valley, on orris, moss, sandalwood and musk.",
+      "perfume-desc-guess-bella-vita-rosa-mist":
+        "Guess Bella Vita Rosa fragrance mists, 250ml — the lemon, magnolia and moss scent of Bella Vita Rosa as a light all-over body spray, also available with shimmer.",
+      "perfume-desc-guess-bella-vita-paradiso-edp":
+        "Guess Bella Vita Paradiso Eau de Parfum (2023) — a floral amber gourmand of Italian mandarin, pear blossom and red berries over jasmine, gardenia and tuberose, on patchouli, amber and musk, in a glittering Bella Vita bottle.",
+      "perfume-desc-guess-love-fragrance-mist":
+        "Guess Love fragrance mists, 250ml — light, fruity-floral body sprays for an all-over veil of scent. Choose your fragrance.",
+      "perfume-desc-guess-sexy-skin-fragrance-mist":
+        "Guess Sexy Skin fragrance mists, 250ml — playful fruity body sprays in colour-coded bottles. Choose your fragrance.",
+      "perfume-desc-armani-prive-les-eaux-holiday-discovery-set":
+        "Armani/Privé Les Eaux holiday discovery set (2025) — four fresh haute couture Eaux de Toilette in a gold-to-silver glitter coffret, from delicate peony and cardamom sandalwood to smoky tea and zesty vetiver.",
+      "perfume-desc-biotherm-homme-aquapower-essentials-set":
+        "Biotherm Homme Aquapower holiday set (2025) — a three-step men's routine to cleanse, hydrate with Life Plankton™ and stay fresh with 48-hour protection.",
+      "perfume-desc-lancome-la-nuit-tresor-holiday-set":
+        "Lancôme La Nuit Trésor Eau de Parfum holiday gift set (2025) — the gourmand woody floral of raspberry, black rose, praline and vanilla orchid with matching perfumed body care.",
+      "perfume-desc-lancome-absolue-soft-cream-holiday-set":
+        "Lancôme Absolue holiday set (2025) — the full-size Absolue Longevity Soft Cream with deluxe minis of the serum, eye cream and Rich Cream, in a 90th-anniversary box illustrated by Safia Ouares.",
+      "perfume-desc-prada-luna-rossa-ocean-edt-set":
+        "Prada Luna Rossa Ocean Eau de Toilette gift set (2025) — the aromatic fougère of bergamot, lavender, iris and suede over vetiver and musk, with a travel spray.",
+      "perfume-desc-ysl-libre-berry-crush":
+        "Yves Saint Laurent Libre Berry Crush Eau de Parfum (2026) — the first fruity-floral Libre: a tangy raspberry accord and mandarin over French lavender and Moroccan orange blossom, melting into creamy coconut, Bourbon vanilla, amber and musks, in a berry-red Libre bottle.",
+      "perfume-desc-lancome-lash-idole-curl-goddess":
+        "Lancôme Lash Idôle Curl Goddess Mascara in 01 Divine Black — a fast-setting curl-and-volume mascara with a 40° twisted brush: up to 1.5× curl, up to +800% volume and up to 30-hour wear without clumps or smudges. Ophthalmologist-tested, suitable for sensitive eyes and contact-lens wearers.",
+      "perfume-desc-guess-iconic-mist":
+        "Guess Iconic fragrance mist for women, 250ml — a light all-over body spray of the Iconic amber floral: pink pepper and mandarin over orange blossom, ylang-ylang and a marine accord, on amber, moss and musk.",
+      "perfume-desc-guess-iconic-sublime-edp":
+        "Guess Iconic Sublime Eau de Parfum (2026) — a fresher floral amber companion to Iconic: mandarin, cardamom and an aquatic accord over blue lotus, jasmine and magnolia, on vanilla, sandalwood and amber, in a pale aqua Iconic bottle.",
+      "perfume-desc-guess-iconic-sublime-mist":
+        "Guess Iconic Sublime fragrance mist, 250ml — a light all-over body spray of Iconic Sublime: mandarin and an aquatic accord over blue lotus and jasmine, on vanilla and sandalwood.",
+      "perfume-desc-guess-seductive-noir-homme-edt":
+        "Guess Seductive Homme Noir Eau de Toilette for men (2019) — an oriental fougère in a matte black bottle: nutmeg, black pepper and grapefruit over apple, lavender and orange blossom, on tonka bean, sandalwood and amber.",
+      "perfume-desc-azzaro-forever-wanted-absolu":
+        "Azzaro Forever Wanted Absolu Parfum (2026) — a smoky, boozy amber fougère for men: incense over a whisky accord and warm vanilla, in the barrel-shaped Wanted bottle.",
+      "perfume-desc-mugler-alien-pulp":
+        "Mugler Alien Pulp Eau de Parfum Fruitée (2026) by Dominique Ropion — the first fruity-floral Alien: a raspberry accord and lemon peel over jasmine, sweet orange and green mandarin, on musk, vanillin and Cashmeran, in a refillable pink-to-clear faceted bottle.",
+      "perfume-desc-armani-acqua-di-gio-edp-intense":
+        "Giorgio Armani Acqua di Giò Eau de Parfum Intense (2026) — a deeper, longer-lasting aromatic aquatic: Calabrian bergamot and green apple over marine notes and clary sage, on amber and woods, in a black-to-clear bottle.",
+      "perfume-desc-armani-stronger-with-you-powerfully":
+        "Emporio Armani Stronger With You Powerfully Eau de Parfum (2026) by Cécile Matton — an ambery gourmand fougère: cherry, mandarin and bergamot over lavender and spices, on vanilla, amberwood and sugared chestnut.",
+      "perfume-desc-lancome-goddess-dimension-eyeshadow":
+        "Lancôme Idôle Goddess Dimension Mono Eyeshadow, 1.2g — a highly pigmented pressed powder with a smooth, creamy glide and intense colour in one swipe, in matte, shimmer and sparkle finishes. Buildable, easy to blend and crease-resistant. Choose your shade.",
+      "perfume-desc-biotherm-aquasource-electrolyte-dewy-gel":
+        "Biotherm Aquasource+ Electrolyte Dewy Gel 100H, 100ml — a lightweight gel moisturiser inspired by sports hydration, with an electrolyte complex and Hyalu B3 for up to 100 hours of hydration and visibly smoother fine lines; silicone- and alcohol-free.",
+      "perfume-desc-lancome-mascara-melter":
+        "Lancôme Mascara Melter caring mascara remover (2026, Lash Idôle line) — a two-sided wand coats lashes in a 93% skincare formula with jojoba oil and squalane that dissolves even waterproof mascara in about a minute. Suitable for sensitive eyes and contact-lens wearers.",
+      "perfume-desc-lancome-o-juicy-hair-body-mist":
+        "Lancôme Ô Juicy Hair & Body Mists, 100ml (2026) — light, fruity scents from the Ô de Lancôme family to spray on skin, hair or clothes. Choose your fragrance.",
+      "perfume-desc-lancome-idole-peach-n-roses":
+        "Lancôme Idôle Peach 'N Roses Eau de Parfum (2026) — a fruity floral Idôle: red berries and pink pepper over a natural Peach Orpur™ extract, on Damascena rose absolute, in a peachy-orange lacquered Idôle bottle.",
+      "perfume-desc-miu-miu-edp":
+        "Miu Miu Eau de Parfum (2015, Daniela Andrier) — the house's first fragrance, a green floral woody: lily of the valley with bergamot over a green accord, dog rose and jasmine, on Akigalawood and white musk, in the quilted turquoise bottle with a red cap.",
+      "perfume-desc-miu-miu-eau-bleue":
+        "Miu Miu L'Eau Bleue Eau de Parfum (2017, Daniela Andrier) — a fresher green floral take on the original: lily of the valley over violet leaf, jasmine and wild rose, on white musk and Akigalawood, in a clear turquoise quilted bottle with a yellow cap.",
+      "perfume-desc-miu-miu-eau-rosee":
+        "Miu Miu L'Eau Rosée Eau de Toilette (2018) — a dewy floral chypre: lychee over lily of the valley on soft white musk, in a light-pink quilted bottle with an ivory cap.",
+      "perfume-desc-miu-miu-fleur-de-lait":
+        "Miu Miu Fleur de Lait Eau de Parfum (2023, Daniela Andrier) — a fruity floral gourmand inspired by a mango pomelo dessert: juicy mango over apricot-like osmanthus, on creamy coconut milk, in a milk-white quilted bottle with a blue cap.",
+      "perfume-desc-miu-miu-miutine":
+        "Miu Miu Miutine Eau de Parfum (2025, Dominique Ropion) — a rebellious fruity gourmand chypre: wild strawberry and citrus over gardenia, jasmine and rose, on brown sugar, bourbon vanilla, patchouli and oakmoss, in a toffee-toned quilted bottle.",
+      "perfume-desc-lancome-renergie-nano-resurfacer-starter":
+        "Lancôme Rénergie Nano-Resurfacer 400 Booster — an at-home device inspired by microneedling. Single-use cartridges with 484 nano-tips create invisible micro-channels that boost absorption of Rénergie H.C.F. Triple Serum (sold separately), with no pain or downtime.",
+      "perfume-desc-lancome-renergie-nano-resurfacer-refill":
+        "Lancôme Rénergie Nano-Resurfacer 400 Booster refill — replacement single-use cartridges with 484 nano-tips each for the Nano-Resurfacer device (sold separately).",
+      "perfume-desc-lancome-renergie-collagen-lift-xtend-cream":
+        "Lancôme Rénergie Collagen+ Lift-Xtend Cream, 50ml — a highly tightening and firming cream inspired by thread lifts, combining collagen fibres with a collagen peptide and copper tripeptide in a stretchy, thread-like texture.",
+      "perfume-desc-lancome-renergie-yeux-lifting-20":
+        "Lancôme Rénergie Yeux lifting eye cream, 20ml — small-molecule hyaluronic acid with French linseed peptides for an immediate hydration boost and, over 8 weeks, fewer wrinkles, lifted-looking eyelids and softened dark circles.",
+      "perfume-desc-lancome-la-nuit-tresor-rouge-drama":
+        "Lancôme La Nuit Trésor Rouge Drama Eau de Parfum Intense, 50ml — a floral fruity inspired by the Louvre's Red Rooms: strawberry coulis over Damask rose absolute and a red-rose accord, on patchouli, in a smoky black diamond-cut bottle with a ruby-red heart.",
+      "perfume-desc-lancome-la-vie-est-belle-edp-30-body-lotion-set-s26":
+        "Lancôme La Vie est Belle Eau de Parfum gift set (Mother's Day 2026) — the iconic iris, patchouli and vanilla floral gourmand in a refillable bottle, with matching perfumed body lotion, in a limited 'Garden of Dreams' box illustrated by Barbara Cox.",
+      "perfume-desc-prada-paradigme-edp-50-set-s26":
+        "Prada Paradigme Eau de Parfum gift set (Spring 2026) — Prada's ambery woody men's signature with green Bourbon geranium and Calabrian bergamot over warm ambery woods, with a travel spray.",
+      "perfume-desc-prada-paradoxe-edp-30-set-s26":
+        "Prada Paradoxe Eau de Parfum gift set (Spring 2026) — the floral amber of neroli bud, Ambrofix™ amber and Serenolide™ musk in the refillable triangle bottle, with a travel spray.",
+      "perfume-desc-valentino-uomo-born-in-roma-intense-50-set-s26":
+        "Valentino Uomo Born in Roma Intense Eau de Parfum gift set (Spring 2026) — an intense vanilla infusion with smoked vetiver and fresh lavandin in the studded Rockstud bottle, with a travel spray.",
+      "perfume-desc-ysl-myslf-edp-60-shower-gel-set-s26":
+        "Yves Saint Laurent MYSLF Eau de Parfum gift set (Spring 2026) — the refillable woody floral of Calabrian bergamot, orange blossom absolute and warm woods, with matching shower gel.",
+      "perfume-desc-ysl-libre-edp-90-body-balm-set-s26":
+        "Yves Saint Laurent Libre Eau de Parfum gift set (Spring 2026) — the floral lavender of French lavender, Moroccan orange blossom, musk and warm vanilla, with a travel spray and nourishing perfumed body balm.",
+      "perfume-desc-ysl-libre-edp-50-mirror-set-s26":
+        "Yves Saint Laurent Libre Eau de Parfum gift set (Spring 2026) — the floral lavender of French lavender, Moroccan orange blossom, musk and warm vanilla, with a travel spray and a gold YSL Beauté mirror.",
+      "perfume-desc-ysl-libre-edp-30-set-s26":
+        "Yves Saint Laurent Libre Eau de Parfum gift set (Spring 2026) — the floral lavender of French lavender, Moroccan orange blossom, musk and warm vanilla, with a travel spray.",
+      "perfume-desc-ysl-libre-edp-50-candy-glaze-set-s26":
+        "Yves Saint Laurent Libre Eau de Parfum gift set (Spring 2026) — the floral lavender of French lavender, Moroccan orange blossom, musk and warm vanilla, with a travel spray and a Loveshine Candy Glaze lip gloss stick.",
+      "perfume-desc-armani-prive-orange-mediterranee":
+        "Giorgio Armani Privé Orange Méditerranée Eau de Toilette (2025, Daniela Andrier) — a citrus aromatic from Armani's Les Eaux haute couture collection. Italian bitter orange purified by molecular distillation meets cedrat, fennel seed and a tea accord.",
+      "perfume-desc-armani-prive-oud-nacre":
+        "Giorgio Armani Privé Oud Nacré Eau de Parfum (2025, Alberto Morillas) — from Les Terres Précieuses, inspired by the Armani Privé 'Perles' haute couture collection. A saffron accord and jasmine grandiflorum over an oud accord and chocolatey Guatemalan patchouli, on Ambrox, in a mother-of-pearl-effect bottle.",
+      "perfume-desc-armani-si-nude-bloom":
+        "Giorgio Armani Sì Nude Bloom Eau de Parfum, 50ml (2026 limited edition) — a floral chypre: a blackcurrant accord with mandarin, lemon, bergamot and black pepper opens onto a trio of roses including May rose absolute, on patchouli and Bourbon vanilla.",
+      "perfume-desc-armani-si-passione-red-bloom":
+        "Giorgio Armani Sì Passione Red Bloom Eau de Parfum, 50ml (2026) — a floral ambery fruity: a raspberry accord, bergamot and blackcurrant bud absolute over iris pallida and a two-faceted rose, on Bourbon vanilla and cashmeran.",
+      "perfume-desc-ysl-y-iced-cologne":
+        "Yves Saint Laurent Y Iced Cologne Eau de Toilette Intense (2025, Dominique Ropion) — an icy aromatic fougère for men. Ice mint with a cooling Arctical accord, mint and blue sage from YSL's Ourika gardens, on ambroxan and patchouli, with up to a 12-hour trail.",
+      "perfume-desc-ysl-lash-latex":
+        "YSL Lash Latex Lengthening & Lift-Sculpting Mascara in black, 8.5ml (2025) — a 496 micro-bristle brush gives up to 1.6× longer lashes with up to 24-hour lift, in a sweat- and smudge-resistant formula with hyaluronic acid and iris florentina, suitable for sensitive eyes and contact lens wearers.",
+      "perfume-desc-ysl-lovenude-kiss-shaper":
+        "YSL Lovenude Kiss Shaper sculpting lip liner, 1.2g (2026). Choose your shade — a creamy matte pencil that glides on to shape and define for a visibly fuller look, with 12-hour second-skin wear, enriched with nigella sativa seed extract, coffee seed oil, jojoba and vitamin E.",
+      "perfume-desc-ysl-lovenude-lip-blusher":
+        "YSL Lovenude Lip Blusher sheer blur balm, 3g (2026). Choose your shade — a balm-lipstick hybrid with a sheer, buildable soft-matte blur finish, 12-hour blur and 24-hour hydration, in a 90% balm base with Pro-Xylane, nigella sativa, coffee oil and blueberry extracts.",
+      "perfume-desc-guess-iconic-blue-men-edp":
+        "Guess Iconic Blue for Men Eau de Parfum (2026, Christine Hassan) — a salty woody aromatic fougère inspired by an Italian speedboat ride. Italian bergamot, lemon and sea salt open onto blue lavender, black pepper and geranium, on cedarwood, vetiver and tonka, in a deep-blue square bottle with a stitched leather-look cap and gold 'G' buckle.",
+      "perfume-desc-guess-seductive-desire-men-edt":
+        "Guess Seductive Desire for Men Eau de Toilette (2026) — an oriental fougère: pineapple, orange, blackcurrant and elemi open onto sage, lavender, verbena and coriander, on Bourbon vanilla, amber, patchouli, labdanum and moss, in a bronze-metal bottle with a gold GUESS band.",
+      "perfume-desc-guess-seductive-desire-women-edt":
+        "Guess Seductive Desire for Women Eau de Toilette (2026) — an amber woody fruity floral: watery notes, pear, melon, mandarin and apricot open onto jasmine, osmanthus and cypress, on amber, woods, musk, vanilla and pink pepper, in the Seductive bottle in luminous gold with a brown stitched label.",
+      "perfume-desc-guess-seductive-desire-women-mist":
+        "Guess Seductive Desire for Women Fragrance Mist, 250ml — a light body mist of the amber woody fruity floral: pear, melon and apricot over jasmine and osmanthus, on amber, musk and vanilla, in a gold bottle.",
+      "perfume-desc-cavalli-florence":
+        "Roberto Cavalli Florence Eau de Parfum (2017) — a floral chypre for women: tangerine and blackcurrant open onto orange blossom, grapefruit blossom and hibiscus seed, on patchouli, musk and amber.",
+      "perfume-desc-cavalli-paradiso-assoluto":
+        "Roberto Cavalli Paradiso Assoluto Eau de Parfum (2016) — a more seductive floral take on Paradiso: pink peppercorn and wisteria open onto wild jasmine and red lily, on sandalwood, patchouli and vanilla.",
+      "perfume-desc-cavalli-paradiso-azzurro":
+        "Roberto Cavalli Paradiso Azzurro Eau de Parfum, 75ml — an aquatic floral aromatic: bergamot and lavender open onto wild jasmine, on cypress and cashmere wood.",
+      "perfume-desc-just-cavalli-wild-blue-him":
+        "Just Cavalli Wild Blue for Him Eau de Toilette (2026) — a green citrus aromatic fougère: bergamot opens onto mint, lychee and pepper, on hyacinth and artemisia.",
+      "perfume-desc-just-cavalli-wild-pink-her":
+        "Just Cavalli Wild Pink for Her Eau de Parfum (2026) — a floral fruity: hibiscus, lily and peach open onto peony, Bulgarian rose and tiaré, on musk, ambergris and rosewood.",
+      "perfume-desc-armani-stronger-with-you-spices":
+        "Emporio Armani Stronger With You Spices Eau de Parfum, 100ml (2026 limited edition) — an intense amber spicy fougère in a metallic terracotta bottle: black pepper, a saffron accord with spices and lavender, the signature candied chestnut, Madagascar Bourbon vanilla and amberwood.",
+      "perfume-desc-armani-my-way-sunny-vanilla":
+        "Giorgio Armani My Way Sunny Vanilla Eau de Parfum (2025) — a gourmand floral fruity My Way in a bright yellow bottle: pineapple and bergamot open onto tuberose and jasmine, on Madagascar vanilla and creamy musk.",
+      "perfume-desc-prada-paradoxe-hand-cream":
+        "Prada Paradoxe Hand Cream, 50ml — a triple-care cream for hands, nails and cuticles, scented with Paradoxe's neroli, amber and musk, in a pink triangular tube.",
+      "perfume-desc-prada-luna-rossa-ocean-le-parfum-set":
+        "Prada Luna Rossa Ocean Le Parfum gift set — the most intense Luna Rossa Ocean with a travel spray, in an envelope-style gift box.",
+      "perfume-desc-armani-stronger-with-you-edt-valentines-set":
+        "Emporio Armani Stronger With You Eau de Toilette gift set (Valentine's Day 2026 limited edition) — the spicy, candied-chestnut fougère with a travel spray, in a backgammon-motif box.",
+      "perfume-desc-armani-stronger-with-you-intensely-valentines-set":
+        "Emporio Armani Stronger With You Intensely Eau de Parfum gift set (Valentine's Day 2026 limited edition) — the amber, toffee and vanilla fougère with a travel spray, in a backgammon-motif box.",
+      "perfume-desc-prada-paradigme-edp-30-set":
+        "Prada Paradigme Eau de Parfum gift set — Prada's ambery woody men's signature with green Bourbon geranium and Calabrian bergamot, with a travel spray, in a box patterned from Prada's archive.",
+      "perfume-desc-ysl-lash-clash-loveshine-set-s26":
+        "Yves Saint Laurent makeup gift set (Spring 2026) — Lash Clash extreme volume mascara with a Loveshine lipstick, in a red chevron box.",
+      "perfume-desc-ysl-myslf-edp-100-set-s26":
+        "Yves Saint Laurent MYSLF Eau de Parfum gift set (Spring 2026) — the refillable woody floral of Calabrian bergamot, orange blossom absolute and warm woods, with a travel spray, in a blue chevron box.",
+      "perfume-desc-ysl-lash-clash-libre-set-s26":
+        "Yves Saint Laurent gift set (Spring 2026) — Lash Clash extreme volume mascara with a Libre Eau de Parfum travel spray, in a red chevron box.",
+      "perfume-desc-lancome-tiuw-shape-stick":
+        "Lancôme Teint Idôle Ultra Wear Shape Stick, 9g (2026). Choose your shade — a creamy multi-use stick for foundation, concealer and contour with a 19° slanted bullet, medium-to-full buildable coverage, a natural matte finish and up to 24-hour wear, with squalane and vitamin E.",
+      "perfume-desc-lancome-tiuw-shape-stick-blush":
+        "Lancôme Teint Idôle Shape Stick Blush (2026). Choose your shade — a creamy, buildable blush stick with jojoba oil for a dewy, skin-like flush and up to 24-hour wear.",
+      "perfume-desc-lancome-tiuw-shape-stick-highlighter":
+        "Lancôme Teint Idôle Shape Stick Highlighter (Glass Glow), 6g (2026) — a universal, glitter-free balm highlighter for a dewy glass-skin glow.",
+      "perfume-desc-lancome-lip-idole-cuddle-blur":
+        "Lancôme Lip Idôle CuddleBlur™ Inflatable Lip Velvet, 8.5ml (2026). Choose your shade — a cushiony, squalane-enriched liquid matte that blurs lip lines for up to 12 hours, with a curved lip-cuddling applicator.",
+      "perfume-desc-margiela-replica-chasing-sunsets":
+        "Maison Margiela Replica Chasing Sunsets Eau de Toilette, 100ml (2026) — 'Ipanema, 1965': a woody fruity sunset on the beach. A mango accord and cardamom over solar tuberose, on creamy sandalwood, vanilla and crystal moss.",
+      "perfume-desc-margiela-replica-up-at-dawn":
+        "Maison Margiela Replica Up at Dawn Eau de Toilette (Juliette Karagueuzoglou) — 'Windsor, 2025': an English rose garden at daybreak. Pink pepper, elemi and a soil accord open onto rose absolute, orris and ambrette, on musks, patchouli moss and cashmeran.",
+      "perfume-desc-mugler-angel-blush":
+        "Mugler Angel Blush Eau de Parfum (2026, Louise Turner and Jacques Huclier) — an ambery gourmand musky Angel: an almond milk accord with creamy musk, sandalwood, Bourbon vanilla and patchouli, in the refillable star bottle with a blush-pink heart.",
+      "perfume-desc-ralph-lauren-polo-67-extreme":
+        "Ralph Lauren Polo 67 Eau de Parfum Extreme (2026) — a woody aromatic for men: bergamot, lemon and cardamom open onto a pineapple accord, clary sage, Bourbon geranium and a solar accord, on leather, Virginia cedar, vetiver and sandalwood, in a refillable matte-silver flask.",
+      "perfume-desc-ralph-lauren-polo-red-extreme-edp":
+        "Ralph Lauren Polo Red Eau de Parfum Extreme (2026) — the most intense Polo Red, an ambery woody leather: bitter orange, red apple and cardamom over clary sage, leather and coffee, on vanilla, patchouli, benzoin and cedar, in a refillable deep-burgundy bottle.",
+      "perfume-desc-prada-luna-rossa-carbon-edp":
+        "Prada Luna Rossa Carbon Eau de Parfum (2026, Daniela Andrier) — a dark gourmand aromatic fougère: lavender, a liquorice accord and cypress with a warm amber base, in a refillable soft-matte black bottle with the red Prada stripe.",
+      "perfume-desc-lancome-absolue-longevity-md-anticipate-cream":
+        "Lancôme Absolue Longevity MD (2026) — a dermatologist-validated longevity skincare range built on Mitopure® (98.5% pure Urolithin A). Anticipate The Cream, 50ml pump — for under-35s, to anticipate visible signs of ageing, with Epigenomyl, Ectoin, Rose Pro-Xylane and taurine.",
+      "perfume-desc-lancome-absolue-longevity-md-intercept-cream":
+        "Lancôme Absolue Longevity MD (2026) — a dermatologist-validated longevity skincare range built on Mitopure® (98.5% pure Urolithin A). Intercept The Cream, 50ml jar — for ages 35–55, to target signs of ageing as they appear, with LHA, Matrixyl, niacinamide, Rose Pro-Xylane and taurine.",
+      "perfume-desc-lancome-absolue-longevity-md-intercept-serum":
+        "Lancôme Absolue Longevity MD (2026) — a dermatologist-validated longevity skincare range built on Mitopure® (98.5% pure Urolithin A). Intercept The Serum, 50ml — the serum partner to Intercept The Cream for ages 35–55, with the same Mitopure® and Intercept compound.",
+      "perfume-desc-lancome-absolue-longevity-md-reset-cream":
+        "Lancôme Absolue Longevity MD (2026) — a dermatologist-validated longevity skincare range built on Mitopure® (98.5% pure Urolithin A). Reset The Cream, 50ml jar — for 55+, to visibly reverse signs of ageing, with Senevisium, rhamnose, niacinamide, Rose Pro-Xylane and taurine.",
+      "perfume-desc-lancome-absolue-longevity-md-reset-serum":
+        "Lancôme Absolue Longevity MD (2026) — a dermatologist-validated longevity skincare range built on Mitopure® (98.5% pure Urolithin A). Reset The Serum, 50ml — for 55+, the serum partner to Reset The Cream for firmer, more toned-looking skin.",
+      "perfume-desc-lancome-lveb-hair-body-mist":
+        "Lancôme La vie est belle Hair & Body Mist, 100ml — a lighter take on La vie est belle for hair and body, in a bag-size bottle with a golden wing. Choose your scent.",
+      "perfume-desc-armani-si-passione-intense-set":
+        "Giorgio Armani Sì Passione Intense Eau de Parfum gift set — the floral ambery woody of pear, jasmine and vanilla with a miniature, in a glittering red and white box.",
+      "perfume-desc-nishane-ani-x":
+        "Nishane Ani X Extrait de Parfum (2023, Cécile Zarokian) — a citrus spicy vanilla from the X Collection: bergamot, lemon, honeydew melon, blue ginger and cardamom over lavender, green apple and rose, on vanilla, cashmere wood and ambergris.",
+      "perfume-desc-nishane-fan-your-flames-x":
+        "Nishane Fan Your Flames X Extrait de Parfum, 50ml (2023) — a softer, tropical take on Fan Your Flames from the X Collection: coconut, rum and lentisque over tobacco, tonka and thyme, on cedar, oakmoss and patchouli.",
+      "perfume-desc-nishane-hacivat-x":
+        "Nishane Hacivat X Extrait de Parfum (2023) — a citrus woody chypre reworking of Hacivat from the X Collection: pineapple, bergamot and pink pepper, then lime, jasmine and orange blossom, on patchouli, cedarwood and Haitian vetiver.",
+      "perfume-desc-nishane-hacivat":
+        "Nishane Hacivat Extrait de Parfum, 100ml (2017, Jorge Lee) — a fruity woody chypre from the Shadow Play collection: pineapple, grapefruit and bergamot over cedar, patchouli and jasmine, on oakmoss.",
+      "perfume-desc-nishane-hundred-silent-ways":
+        "Nishane Hundred Silent Ways Extrait de Parfum (2016) — a floral gourmand musk from the Rumi collection: tuberose, peach and mandarin, then gardenia, jasmine and orris, on vanilla, sandalwood and vetiver.",
+      "perfume-desc-nishane-zenne":
+        "Nishane Zenne Extrait de Parfum, 50ml (2017, Jorge Lee) — a fruity floral oriental: blackcurrant, rhubarb and grapefruit, then Turkish rose and gardenia, on vanilla, ambergris and musk.",
+      "perfume-desc-nishane-ani":
+        "Nishane Ani Extrait de Parfum, 50ml (2019, Cécile Zarokian) — a warm spicy vanilla: blue ginger, bergamot and pink pepper, then cardamom, blackcurrant and rose, on vanilla, benzoin and sandalwood.",
+      "perfume-desc-nishane-ege":
+        "Nishane Ege / Αιγαίο Extrait de Parfum, 50ml (2020, Ilias Ermenidis) — a green aquatic aromatic inspired by the Aegean: yuzu, violet leaf and anise, then basil, mint and cardamom, on liquorice and olibanum.",
+      "perfume-desc-nishane-tempfluo":
+        "Nishane Tempfluo Extrait de Parfum, 50ml (2022, Anne Flipo) — a floral gourmand woody from the Time Capsule collection: saffron, bergamot and mandarin, then jasmine sambac, orange blossom and praline, on cashmere wood, cedar and vanilla.",
+      "perfume-desc-nishane-wulong-cha":
+        "Nishane Wulong Chá Extrait de Parfum, 50ml (2015) — a fresh citrus green tea from Nishane's first collection: bergamot and citrus with oolong tea, over fig and musk.",
+      "perfume-desc-mancera-wild-fruits":
+        "Mancera Wild Fruits Eau de Parfum (2011, Pierre Montale) — a fruity woody: citrus opens onto violet with blackcurrant, peach and apple, on cedarwood and white musk.",
+      "perfume-desc-mancera-aoud-blue-notes":
+        "Mancera Aoud Blue Notes Eau de Parfum, 120ml (Pierre Montale) — a fresh oud: bergamot, mandarin and Calabrian lemon over ylang-ylang, violet, rose and iris, drying down to amber, leather, sandalwood and vanilla.",
+      "perfume-desc-mancera-lemon-line":
+        "Mancera Lemon Line Eau de Parfum, 60ml (Pierre Montale) — a cologne-like citrus fougère: lemon and lavender over white flowers, geranium and amber, on white musk and oakmoss.",
+      "perfume-desc-mancera-amore-caffe":
+        "Mancera Amore Caffè Eau de Parfum, 120ml (2023, Pierre Montale) — a coffee and vanilla gourmand: black coffee and amaretto over vanilla ice cream and speculoos, on brown sugar, vanilla and grey amber.",
+      "perfume-desc-mancera-french-riviera":
+        "Mancera French Riviera Eau de Parfum, 120ml (2022, Pierre Montale) — an aromatic aquatic: citrus, ginger and pepper over sea notes, tiaré, pine and mimosa, on sea salt, white musk and amber.",
+      "perfume-desc-mancera-cherry-cherry":
+        "Mancera Cherry Cherry Eau de Parfum (2024, Pierre Montale) — a fruity oriental: black cherry, bergamot and lemon over iris, jasmine, heliotrope and patchouli, on white musk and vanilla.",
+      "perfume-desc-mancera-fig-me-up":
+        "Mancera Fig Me Up Eau de Parfum (Pierre Montale) — a fruity green fig: fig leaf, rhubarb and violet over fig milk, plum, oud and sandalwood, finishing on toffee, tonka, tobacco and musk.",
+      "perfume-desc-mancera-amberful":
+        "Mancera Amberful Eau de Parfum (2024, Pierre Montale) — an amber woody: pink pepper, yuzu, bergamot and nutmeg over amberwood, violet and patchouli, on amber, cedar and moss.",
+      "perfume-desc-mancera-cinque-terre":
+        "Mancera Cinque Terre Eau de Parfum (Pierre Montale) — a woody marine: rosemary, lemon and cardamom over sea salt, fig leaf, cedar and pine, on oakmoss, tonka, sandalwood and labdanum.",
+      "perfume-desc-mancera-eternal-wood":
+        "Mancera Eternal Wood Eau de Parfum (2024, Pierre Montale) — a woody aromatic: oud, davana and saffron over palo santo, copal, guaiac and cashmere wood, on toffee, tonka, amber and oakmoss.",
+      "perfume-desc-mancera-intense-red-tobacco":
+        "Mancera Intense Red Tobacco (2023, Pierre Montale) — the stronger, extrait-strength version of Red Tobacco, a spicy woody: saffron, cinnamon, incense and oud over tobacco and leather, on vanilla, amber, sandalwood and musk.",
+      "perfume-desc-mancera-tonka-cola":
+        "Mancera Tonka Cola Eau de Parfum (2022, Pierre Montale) — a spicy gourmand: lemon, cinnamon and black cherry over fizzy cola, patchouli and orange blossom, on tonka, benzoin, labdanum and vanilla.",
+      "perfume-desc-montale-day-dreams":
+        "Montale Day Dreams Eau de Parfum (2017, Pierre Montale) — a floral fruity gourmand: orange blossom and mandarin over gardenia, jasmine and neroli, on sandalwood, vanilla and coconut.",
+      "perfume-desc-montale-bubble-forever":
+        "Montale Bubble Forever Eau de Parfum (2024, Pierre Montale) — a bubble-gum floral fruity gourmand: pear, grapefruit and lemon over orange blossom, rose and cinnamon, on toffee, vanilla, musk and amber.",
+      "perfume-desc-montale-crazy-in-love":
+        "Montale Crazy In Love Eau de Parfum (2021, Pierre Montale) — an amber floral: saffron, rose petals and cardamom over rose, violet and sandalwood, on amber, vanilla, brown sugar and musk.",
+      "perfume-desc-montale-arabians-musk":
+        "Montale Arabians Musk Eau de Parfum (Pierre Montale) — a powdery oriental musk: honey and bergamot over Medjool date and orange blossom, on vanilla sugar, tonka and musk.",
+      "perfume-desc-montale-arabians":
+        "Montale Arabians Eau de Parfum, 100ml (2017, Pierre Montale) — a leathery spicy oriental: cardamom, lavender and red thyme over rose, patchouli and vetiver, on oud, leather, amber and musk.",
+      "perfume-desc-xerjoff-erba-gold":
+        "Xerjoff Erba Gold Eau de Parfum (Vibe collection) — a unisex fruity citrus twist on Erba Pura: lemon, orange, bergamot and ginger over green apple, melon, pear, cardamom and cloves, on amber, vanilla, musk and woods.",
+      "perfume-desc-xerjoff-erba-pura":
+        "Xerjoff Erba Pura Eau de Parfum (2019, Christian Carbonnel & Laura Santander) — a unisex fruity amber: Sicilian orange, lemon and Calabrian bergamot over a heart of Mediterranean fruits, on white musk, amber and Madagascar vanilla.",
+      "perfume-desc-xerjoff-accento-overdose":
+        "Xerjoff Accento Overdose Eau de Parfum, 100ml (2019, Christian Carbonnel) — a floral aldehyde: fruity green notes and aldehydes over Egyptian jasmine, lily-of-the-valley and Bulgarian rose, with eucalyptus and pine.",
+      "perfume-desc-xerjoff-accento":
+        "Xerjoff Accento Eau de Parfum, 100ml (Vibe collection) — a fresh, musky fruity floral: pineapple and hyacinth over iris, jasmine and pink pepper, on amber, musk, vanilla, patchouli and vetiver.",
+      "perfume-desc-xerjoff-purple-accento":
+        "Xerjoff Purple Accento Eau de Parfum, 100ml (Vibe collection) — Accento with an oud twist: pineapple, bergamot, mandarin and hyacinth over loganberry, orris, jasmine and pink pepper, on oud, amber, musk, vanilla and sandalwood.",
+      "perfume-desc-xerjoff-opera":
+        "Xerjoff Opera Eau de Parfum, 100ml (2019, Chris Maurice) — a woody floral musk: fruits and Turkish rose over ylang-ylang, nutmeg, leather and amber, on vanilla, patchouli, musk, cedar and Haitian vetiver.",
+      "perfume-desc-xerjoff-torino21":
+        "Xerjoff Torino21 Eau de Parfum (2021, Join The Club) — created for the Nitto ATP Finals in Turin; an aromatic green: mint, lemon, basil and thyme over blackcurrant, lavender, rosemary and jasmine, on musk and verbena.",
+      "perfume-desc-xerjoff-alexandria-ii":
+        "Xerjoff Alexandria II Parfum (2012, Chris Maurice, Oud Stars) — an amber woody: rosewood, lavender, cinnamon and apple over rose, cedar and lily-of-the-valley, on Laotian oud, sandalwood, vanilla, amber and musk.",
+      "perfume-desc-xerjoff-alexandria-ii-anniversary":
+        "Xerjoff Alexandria II Anniversary Parfum, 100ml (2024) — a richer oud take on Alexandria II: lavender, Bulgarian rose, cumin and cardamom over oud, orris, amber, civet and sage, on Australian sandalwood, Madagascar vanilla and musk.",
+      "perfume-desc-xerjoff-coro":
+        "Xerjoff Coro Eau de Parfum, 100ml (2025, Vibe collection) — a floral fruity: tropical fruits, mango, pineapple and jasmine on vanilla, amber, musk and sandalwood.",
+      "perfume-desc-xerjoff-neorio":
+        "Xerjoff × Duran Duran NeoRio Parfum, 50ml (2025) — an oriental: candied fig, rum, elemi and cistus over maple syrup, saffron and rose oil, on patchouli, tonka and Peru balsam. One scent in four coloured bottles; choose your colour.",
+      "perfume-desc-xerjoff-black-moonlight":
+        "Xerjoff × Duran Duran Black Moonlight Parfum, 50ml (2025) — a woody oriental: bergamot, mandarin, cardamom and saffron over lavender, myrrh, sambac jasmine and ylang-ylang, on labdanum, patchouli, tonka and tolu balsam.",
+      "perfume-desc-tiziana-terenzi-kirke-overdose":
+        "Tiziana Terenzi Kirkè Overdose Extrait de Parfum, 100ml (2025) — the 10th-anniversary extrait of Kirkè in a gold bottle: passionfruit, peach, raspberry and Bulgarian rose over gardenia, sand accord, jasmine sambac and lily-of-the-valley, on vanilla, musk, ambergris, heliotrope, sandalwood and patchouli.",
+      "perfume-desc-btso-dirty-heaven":
+        "BORNTOSTANDOUT Dirty Heaven Eau de Parfum, 50ml (2023, Margaux Le Paih Guérin) — a unisex amber floral: jasmine, neroli and white flowers over saffron, tonka, vanilla and ambroxan.",
+      "perfume-desc-btso-dirty-rice":
+        "BORNTOSTANDOUT Dirty Rice Eau de Parfum, 50ml (2022, Olivier Cresp) — a milky, woody skin scent: almond and bergamot open onto basmati rice, milk and peony, on sandalwood, cedar, vetiver and musk.",
+      "perfume-desc-btso-angels-powder":
+        "BORNTOSTANDOUT Angels' Powder Eau de Parfum, 50ml — a sweet, powdery unisex gourmand with a soft cotton-candy cloud of sugar, powder and musk.",
+      "perfume-desc-btso-filthy-musk":
+        "BORNTOSTANDOUT Filthy Musk Eau de Parfum, 50ml (2024, Margaux Le Paih Guérin) — an animalic vanilla musk: pineapple and honey over jasmine, nutmeg and patchouli, on civet, caramel, tonka, rum and ambergris.",
+      "perfume-desc-btso-fig-porn":
+        "BORNTOSTANDOUT Fig Porn Eau de Parfum, 50ml (2022, Florian Gallo) — a fruity floral: fig, pear and bergamot with Turkish rose and peony, on vanilla, sandalwood, amber and musk.",
+      "perfume-desc-btso-indecent-cherry":
+        "BORNTOSTANDOUT Indecent Cherry Eau de Parfum, 50ml (2022, Florian Gallo) — a boozy cherry gourmand: cherry, almond and saffron over sour cherry, strawberry, rose and mimosa, on vanilla, benzoin and patchouli.",
+      "perfume-desc-btso-mud":
+        "BORNTOSTANDOUT Mud Eau de Parfum, 50ml (2022, Nathalie Lorson) — an amber vanilla evoking wet earth and dark chocolate: milk and almond, chocolate, plum and rose, on vanilla, elemi and sandalwood.",
+      "perfume-desc-btso-nanatopia":
+        "BORNTOSTANDOUT Nanatopia Eau de Parfum, 50ml (2023, Alex Lee) — a rum-soaked banana bread gourmand: rum, cinnamon and nutmeg over banana bread and melted caramel, on tonka, cypriol and Orcanox.",
+      "perfume-desc-btso-black-mango":
+        "BORNTOSTANDOUT Black Mango Extrait Extrême, 50ml (2025) — a 55–62% concentration extrait aged in Korean Onggi pots; an amber woody: mango and orange with tolu balsam and Bourbon vanilla, on oud, leather, cypriol and sandalwood.",
+      "perfume-desc-btso-oud-candy":
+        "BORNTOSTANDOUT Oud Candy Extrait Extrême, 50ml — a 55–62% concentration extrait aged in Korean Onggi pots: brown sugar, candy, nuts and milk with white flowers, over oud, saffron, black woods, caramel, vanilla and leather.",
+      "perfume-desc-btso-black-guava":
+        "BORNTOSTANDOUT Black Guava Extrait Extrême, 50ml — a 55–62% concentration extrait aged in Korean Onggi pots: guava, cardamom and Madagascar mandarin over rose, geranium and oud, on patchouli, cypriol and ambergris.",
+      "perfume-desc-btso-drunk-lovers-cream":
+        "BORNTOSTANDOUT Drunk Lovers Hand & Body Cream, 350ml — a rich unisex cream with sweet almond and jojoba oil, scented with Drunk Lovers: citrus, red berries and juniper over cognac and spices, on amber, sandalwood, vanilla and musk. Made in Korea.",
+      "perfume-desc-btso-drunk-lovers-wash":
+        "BORNTOSTANDOUT Drunk Lovers Hand & Body Wash, 350ml — a pH-balanced amino-acid wash with jojoba, scented with Drunk Lovers: citrus, red berries and juniper over cognac and spices, on amber, sandalwood, vanilla and musk. Made in Korea.",
+      "perfume-desc-jhag-ego-stratis":
+        "Juliette Has a Gun Ego Stratis Eau de Parfum (2022, Romano Ricci) — an aquatic citrus 'modern cologne': tangerine, bergamot and lemon over calone, blueberry and neroli, on cedar, ambroxan and musk.",
+      "perfume-desc-jhag-lust-for-sun":
+        "Juliette Has a Gun Lust for Sun Eau de Parfum (2023) — a solar floral: freesia, coconut and bergamot over ylang-ylang, jasmine, orange blossom and gardenia, on vanilla, ambroxan and white musk.",
+      "perfume-desc-jhag-ode-to-dullness":
+        "Juliette Has a Gun Ode to Dullness Eau de Parfum, 50ml (2023) — a creamy, comforting musky floral: star anise and freesia over cashmere flower and sandalwood, on tonka and musk.",
+      "perfume-desc-mancera-instant-crush":
+        "Mancera Instant Crush Eau de Parfum (2019, Pierre Montale) — an amber floral: saffron, ginger, Sicilian mandarin and bergamot over amberwood, Moroccan rose, Egyptian jasmine and patchouli, on Madagascar vanilla, white musk, sandalwood and oakmoss.",
+      "perfume-desc-mancera-jardin-exclusif":
+        "Mancera Jardin Exclusif Eau de Parfum (2018, Pierre Montale) — a fruity floral gourmand: pear, white peach, green apple, blackcurrant and caramel over jasmine, violet, Bulgarian rose and ambergris, on white musk, Madagascar vanilla and sandalwood.",
+      "perfume-desc-mancera-red-tobacco":
+        "Mancera Red Tobacco Eau de Parfum (2017, Pierre Montale) — a spicy sweet tobacco: cinnamon, saffron, nutmeg, green apple, incense and oud over patchouli and jasmine, on tobacco, vanilla, amber, guaiac wood and white musk.",
+      "perfume-desc-mancera-holidays":
+        "Mancera Holidays Eau de Parfum (Pierre Montale) — a sunny tropical floral: coconut and bergamot over Tahitian gardenia (tiaré), ylang-ylang and sea notes, on sandalwood, vanilla and white musk.",
+      "perfume-desc-mancera-intense-cedrat-boise":
+        "Mancera Intense Cedrat Boise (2021, Pierre Montale) — the richer, extrait-strength version of Cedrat Boise, a fruity leathery woody: Sicilian citrus, blackcurrant and spices over leather, white sandalwood, Cambodian oud, patchouli and jasmine, on oakmoss, ambergris, white musk and vanilla.",
+      "perfume-desc-montale-dark-vanilla":
+        "Montale Dark Vanilla Eau de Parfum, 100ml (Pierre Montale) — a dark, carnal vanilla: pink pepper, saffron, cumin, cardamom, lemon and coriander over sandalwood, leather, oud and patchouli, on vanilla and amber.",
+      "perfume-desc-xerjoff-40-knots":
+        "Xerjoff 40 Knots Eau de Parfum, 100ml (Join The Club collection) — inspired by yacht-club life on the Mediterranean: a fresh, salty marine woody that opens like a sea breeze, with woody nuances and cedarwood in the drydown.",
+      "perfume-desc-xerjoff-don":
+        "Xerjoff Don Eau de Parfum (Join The Club collection) — a dark, intense woody oriental inspired by Hollywood gangster epics: smoky bars and late-night alleys, with tobacco, whisky, molasses and a gunpowder accord.",
+      "perfume-desc-xerjoff-comandante":
+        "Xerjoff Comandante! Eau de Parfum, 100ml (2021, Join The Club collection) — a woody scent inspired by the classic gentlemen's smoking clubs: dimly lit rooms, worn leather armchairs and fine cigars.",
+      "perfume-desc-xerjoff-more-than-words":
+        "Xerjoff More Than Words Eau de Parfum (Join The Club collection) — a woody floral inspired by a secret society of writers and poets: cinnamon, cardamom, nutmeg and fruits over rose, cedarwood, vetiver and dried fruits, on oud, ambergris, labdanum, amber and vanilla.",
+      "perfume-desc-xerjoff-decas":
+        "Xerjoff Decas Eau de Parfum, 100ml (1861 collection) — named after the Latin for 'ten', a softly sweet amber: Brazilian mandarin, tuberose and tobacco over benzoin, opoponax and Tuscan orris, on musk, tolu balsam and Bourbon vanilla.",
+      "perfume-desc-xerjoff-naxos":
+        "Xerjoff Naxos Eau de Parfum, 100ml (1861 collection) — a tribute to Sicily, an aromatic spicy gourmand: bergamot, lemon and lavender over jasmine sambac, cinnamon, honey and cashmere, on tobacco leaf, tonka bean and vanilla.",
+      "perfume-desc-xerjoff-renaissance":
+        "Xerjoff Renaissance Eau de Parfum, 100ml (1861 collection) — a fresh citrus homage to Italian artistry: Amalfi lemon, mandarin, Calabrian bergamot and petitgrain over mint, lily-of-the-valley and Bulgarian rose, on musk, cedarwood, amber and patchouli.",
+      "perfume-desc-xerjoff-la-capitale":
+        "Xerjoff La Capitale Parfum, 50ml (2018, Chris Maurice) — a sweet fruity oriental: strawberry, peach, caramel and labdanum over leather, amber, Iranian saffron, rose and ginger, on oud, benzoin and Bourbon vanilla.",
+      "perfume-desc-xerjoff-nio":
+        "Xerjoff Nio Parfum, 50ml (Shooting Stars collection) — a fresh woody spicy named after a meteorite that fell over Japan: bergamot, Tunisian neroli, pink pepper, cardamom and nutmeg over green leaves and jasmine, on amber, cedarwood, guaiac wood and Haitian vetiver.",
+      "perfume-desc-xerjoff-golden-dallah":
+        "Xerjoff Golden Dallah Parfum, 50ml (Coffee Break collection) — a warm spiced coffee inspired by Gulf hospitality: fresh exotic spices over coffee absolute, incense, amber, Cambodian oud and rose absolute, on cocoa and tonka bean.",
+      "perfume-desc-tiziana-terenzi-nero-oudh":
+        "Tiziana Terenzi Nero Oudh Extrait de Parfum, 100ml (2019, Paolo Terenzi) — an oriental floral oud: saffron, cypriol, rose geranium, ylang-ylang and magnolia over Bulgarian rose, gurjan balsam, guaiac wood, cedar and orris, on Indian oud, patchouli, ambergris, musk and vanilla.",
+      "perfume-desc-tiziana-terenzi-delox":
+        "Tiziana Terenzi Delox Extrait de Parfum, 100ml (2017, Paolo Terenzi) — a floral woody musk: coffee, iris and white hyacinth over Turkish rose, vanilla and opoponax, on honey, white musk, amber and cedar.",
+      "perfume-desc-tiziana-terenzi-dionisio":
+        "Tiziana Terenzi Dionisio Extrait de Parfum, 100ml (Anniversary Collection, Paolo Terenzi) — an oriental vanilla inspired by the Masque of Dionysus: grey amber and musk over Tahitian vanilla, jasmine and lily-of-the-valley, on oud, musk and Madagascar vanilla.",
+      "perfume-desc-tiziana-terenzi-leo":
+        "Tiziana Terenzi Leo Extrait de Parfum, 100ml (2022, Luna collection) — inspired by the lion of the zodiac, a citrus floral woody: kumquat, Brazilian orange, Sicilian mandarin and bergamot over jasmine sambac, Bulgarian rose, magnolia, violet leaf and myrrh, on oak, cedar, sandalwood, musk, benzoin and tonka.",
+      "perfume-desc-tiziana-terenzi-libra":
+        "Tiziana Terenzi Libra Extrait de Parfum, 100ml (Luna collection) — Tiziana Terenzi's own star sign, an oriental floral: Sorrento lemon, bergamot, grapefruit, tuberose and rose over Atlas cedar, Tuscan orris, grey amber and jasmine sambac, on patchouli, vanilla flower, musk, vetiver, benzoin and oakmoss.",
+      "perfume-desc-bond-no9-gold-coast":
+        "Bond No. 9 Gold Coast Eau de Parfum, 100ml — a soft yet energetic modern rose celebrating New York's historic Gold Coast: lychee, apricot and red apple over rose essence, watermelon and rose absolute, on cedarwood, vanilla and musk.",
+      "perfume-desc-jhag-lili-fantasy":
+        "Juliette Has a Gun Lili Fantasy Eau de Parfum, 100ml — an ambery floral with a gourmand twist: a bubble-gum accord over jasmine and tuberose absolutes, on an ambery accord and ambroxan.",
+      "perfume-desc-jhag-magnolia-bliss":
+        "Juliette Has a Gun Magnolia Bliss Eau de Parfum — a fresh, peaceful fruity floral: bergamot over magnolia essence and juicy mirabelle plum, on ambroxan and musks.",
+      "perfume-desc-mancera-aoud-vanille":
+        "Mancera Aoud Vanille Eau de Parfum (Pierre Montale) — a smooth oud gourmand: saffron and spices over Cambodian oud and rose, on creamy Madagascar vanilla, amber and white musk.",
+      "perfume-desc-mancera-cedrat-boise":
+        "Mancera Cedrat Boise Eau de Parfum (2011, Pierre Montale) — a fruity woody chypre: Sicilian lemon, bergamot, blackcurrant and spices over water fruits, patchouli and jasmine, on cedarwood, leather, sandalwood, oakmoss, vanilla and white musk.",
+      "perfume-desc-mancera-choco-violet":
+        "Mancera Choco Violet Eau de Parfum (Pierre Montale) — a powdery floral gourmand: violet and soft spices over dark chocolate and rose, on vanilla, amber, sandalwood and white musk.",
+      "perfume-desc-mancera-gold-prestigium":
+        "Mancera Gold Prestigium Eau de Parfum (Pierre Montale) — a luminous oriental floral: saffron, bergamot and fruits over rose, jasmine and orange blossom, on amber, oud, vanilla and white musk.",
+      "perfume-desc-mancera-gold-intensive-aoud":
+        "Mancera Gold Intensive Aoud Eau de Parfum, 60ml (Pierre Montale) — a rich golden oud: saffron, rose and spices over Cambodian oud, on amber, sandalwood, vanilla and white musk.",
+      "perfume-desc-mancera-roses-greedy":
+        "Mancera Roses Greedy Eau de Parfum (2014, Pierre Montale) — a fruity rose gourmand: grapefruit and blood orange over Turkish rose, jasmine and raspberry, on vanilla, white musk, sandalwood and amber.",
+      "perfume-desc-mancera-roses-vanille":
+        "Mancera Roses Vanille Eau de Parfum (2010, Pierre Montale) — a sweet rose gourmand: lemon and water notes over Turkish rose and sugar, on Madagascar vanilla, cedarwood and white musk.",
+      "perfume-desc-mancera-velvet-vanilla":
+        "Mancera Velvet Vanilla Eau de Parfum, 60ml (Pierre Montale) — a soft, velvety vanilla: bergamot and spices over vanilla absolute and florals, on tonka bean, sandalwood and white musk.",
+      "perfume-desc-mancera-wind-wood":
+        "Mancera Wind Wood Eau de Parfum, 120ml (2013, Pierre Montale) — a fresh aromatic woody: Calabrian bergamot, Sicilian lemon and pink pepper over Atlas cedar and vetiver, on ambergris, white musk and oakmoss.",
+      "perfume-desc-mancera-black-line":
+        "Mancera Black Line Eau de Parfum, 60ml (2012, Pierre Montale) — a dark spicy oriental: saffron, cinnamon and nutmeg over Bulgarian rose and patchouli, on oud, incense, amber and white musk.",
+      "perfume-desc-mancera-black-gold":
+        "Mancera Black Gold Eau de Parfum, 60ml (2017, Pierre Montale) — an aromatic woody: lavender, bergamot and spices over iris and leather, on oud, amber, vanilla and white musk.",
+      "perfume-desc-mancera-aoud-lemon-mint":
+        "Mancera Aoud Lemon Mint Eau de Parfum, 60ml (2013, Pierre Montale) — a fresh oud: Sicilian lemon and mint over rose and spices, on Cambodian oud, sandalwood, amber and white musk.",
+      "perfume-desc-montale-aoud-lime":
+        "Montale Aoud Lime Eau de Parfum, 100ml (2011, Pierre Montale) — a zesty citrus oud: lime, lemon and bergamot over aromatic herbs and rose, on oud, cedarwood and white musk.",
+      "perfume-desc-montale-aoud-night":
+        "Montale Aoud Night Eau de Parfum, 100ml (2016, Pierre Montale) — a dark woody oud: grapefruit and bergamot over Turkish rose and jasmine, on Indonesian oud, guaiac wood and vanilla.",
+      "perfume-desc-montale-black-aoud":
+        "Montale Black Aoud Eau de Parfum (2006, Pierre Montale) — a classic rose-oud: mandarin over Turkish rose, on oud, patchouli and musk.",
+      "perfume-desc-montale-black-aoud-intense":
+        "Montale Black Aoud Intense Eau de Parfum, 100ml (Pierre Montale) — a deeper, more concentrated take on Black Aoud: Turkish rose and spices over dark oud and patchouli, on amber, leather and musk.",
+      "perfume-desc-montale-chocolate-greedy":
+        "Montale Chocolate Greedy Eau de Parfum (2008, Pierre Montale) — a gourmand chocolate: bitter orange and coffee over cocoa, tonka bean and dried fruits, on vanilla and musk.",
+      "perfume-desc-montale-dark-purple":
+        "Montale Dark Purple Eau de Parfum, 100ml (2013, Pierre Montale) — a fruity floral chypre: plum, blackcurrant and orange over Bulgarian rose and geranium, on patchouli, vanilla and amber.",
+      "perfume-desc-montale-intense-pepper":
+        "Montale Intense Pepper Eau de Parfum (Pierre Montale) — a spicy woody: black, pink and Sichuan pepper over saffron and incense, on oud, tonka bean, vanilla and amber.",
+      "perfume-desc-montale-intense-cafe":
+        "Montale Intense Cafe Eau de Parfum (2013, Pierre Montale) — a rose-coffee gourmand: coffee over Bulgarian rose and floral notes, on vanilla, amber and white musk.",
+      "perfume-desc-montale-intense-roses-musk":
+        "Montale Intense Roses Musk Extrait de Parfum (Pierre Montale) — a richer, extrait-strength version of Roses Musk: Moroccan rose and jasmine over amber, on white musk.",
+      "perfume-desc-montale-intense-tiare":
+        "Montale Intense Tiare Eau de Parfum, 100ml (2010, Pierre Montale) — a sunny tropical floral: bergamot and lemon over Tahitian tiaré (gardenia) and coconut, on vanilla and musk.",
+      "perfume-desc-montale-oudmazing":
+        "Montale Oudmazing Eau de Parfum (2017, Pierre Montale) — a spicy woody oud: saffron, cardamom and pink pepper over leather and Turkish rose, on oud, patchouli, amber and musk.",
+      "perfume-desc-montale-rose-elixir":
+        "Montale Rose Elixir Eau de Parfum (2010, Pierre Montale) — a radiant fruity rose: bergamot, mandarin and pink pepper over Turkish rose and lily-of-the-valley, on patchouli, white musk and vanilla.",
+      "perfume-desc-montale-santal-wood":
+        "Montale Santal Wood Eau de Parfum, 100ml (Pierre Montale) — a creamy woody: bergamot and spices over sandalwood and cedarwood, on vanilla, amber and musk.",
+      "perfume-desc-montale-soleil-de-capri":
+        "Montale Soleil de Capri Eau de Parfum (2014, Pierre Montale) — a bright summer citrus floral: bergamot, mandarin and orange over jasmine and tiaré, on coconut, vanilla, sandalwood and white musk.",
+      "perfume-desc-montale-starry-nights":
+        "Montale Starry Nights Eau de Parfum (2017, Pierre Montale) — a fruity floral: bergamot, apple and black pepper over Turkish rose and iris, on patchouli, vanilla, white musk and woods.",
+      "perfume-desc-montale-sweet-vanilla":
+        "Montale Sweet Vanilla Eau de Parfum (Pierre Montale) — a sweet gourmand vanilla: bergamot and almond over orange blossom and caramel, on Madagascar vanilla, tonka bean and white musk.",
+      "perfume-desc-montale-vanilla-extasy":
+        "Montale Vanilla Extasy Eau de Parfum, 100ml (2008, Pierre Montale) — a floral vanilla: orange and bergamot over jasmine and violet, on Madagascar vanilla and white musk.",
+      "perfume-desc-montale-vanille-absolu":
+        "Montale Vanille Absolu Eau de Parfum (2006, Pierre Montale) — a dark, smoky vanilla: bergamot over vanilla and spices, on oud, patchouli and white musk.",
+      "perfume-desc-montale-white-musk":
+        "Montale White Musk Eau de Parfum, 100ml (Pierre Montale) — a clean powdery musk: white flowers and rose over iris, on white musk and amber.",
+      "perfume-desc-montale-wood-spices":
+        "Montale Wood & Spices Eau de Parfum (Pierre Montale) — a warm spicy woody: cardamom, ginger and cinnamon over cedarwood and vetiver, on oud, sandalwood, amber and musk.",
+      "perfume-desc-montale-sweet-peony":
+        "Montale Sweet Peony Eau de Parfum (Pierre Montale) — a soft fruity floral: lychee and pink pepper over peony and rose, on vanilla, white musk and woods.",
+      "perfume-desc-montale-oud-dream":
+        "Montale Oud Dream Eau de Parfum (Pierre Montale) — a smooth woody oud: bergamot and saffron over rose and jasmine, on oud, sandalwood, vanilla and amber.",
+      "perfume-desc-montale-sensual-instinct":
+        "Montale Sensual Instinct Eau de Parfum (Pierre Montale) — a warm amber floral: pink pepper and red fruits over rose and jasmine, on vanilla, benzoin, amber and white musk.",
+      "perfume-desc-montale-arabians-tonka":
+        "Montale Arabians Tonka Eau de Parfum, 100ml (2019, Pierre Montale) — a rich oriental gourmand: saffron and bergamot over Bulgarian rose and oud, on tonka bean, amber, sugar and white musk.",
+      "perfume-desc-montale-oud-tobacco":
+        "Montale Oud Tobacco Eau de Parfum (Pierre Montale) — a smoky woody: spices and dried fruits over tobacco leaf and incense, on oud, vanilla, amber and leather.",
+      "perfume-desc-tiziana-terenzi-ursa":
+        "Tiziana Terenzi Ursa Extrait de Parfum, 100ml (Luna collection, Paolo Terenzi) — a fresh green floral: bergamot, lemon and green notes over jasmine, lily-of-the-valley and rose, on cedarwood, white musk and amber.",
+      "perfume-desc-tiziana-terenzi-al-contrario":
+        "Tiziana Terenzi Al Contrario Extrait de Parfum, 50ml (2015, Paolo Terenzi) — a woody gourmand about the journey home: cocoa beans, malt and ebony wood over vanilla, orchid and tonka bean, on cane sugar, hazelnut, sandalwood and benzoin.",
+      "perfume-desc-tiziana-terenzi-cassiopea":
+        "Tiziana Terenzi Cassiopea Extrait de Parfum, 100ml (Luna collection, Paolo Terenzi) — a fruity amber: blackberry, blackcurrant and plum over rose and jasmine, on vanilla, patchouli, amber and musk.",
+      "perfume-desc-tiziana-terenzi-draco":
+        "Tiziana Terenzi Draco Extrait de Parfum, 100ml (Luna collection, Paolo Terenzi) — a fruity gourmand: peach, pear, plum and almond over jasmine and rose, on vanilla, praline, cedarwood and musk.",
+      "perfume-desc-tiziana-terenzi-orion":
+        "Tiziana Terenzi Orion Extrait de Parfum, 100ml (Luna collection, Paolo Terenzi) — a woody fruity: bergamot, mandarin and fruits over jasmine and orange blossom, on sandalwood, vetiver, amber and musk.",
+      "perfume-desc-tiziana-terenzi-andromeda":
+        "Tiziana Terenzi Andromeda Extrait de Parfum, 100ml (Luna collection, Paolo Terenzi) — a soft floral gourmand: bergamot, cut grass and ylang-ylang over lily, Damask rose, pear nectar, heliotrope and peach, on coconut, amber, vanilla, cashmere, ebony, tonka bean and powdered sugar.",
+      "perfume-desc-tiziana-terenzi-andromeda-body-lotion":
+        "Tiziana Terenzi Andromeda Parfum Body Lotion, 250ml — a nourishing body lotion with shea butter, almond oil and vitamin E, scented with Andromeda: bergamot and ylang-ylang over lily, rose and pear, on vanilla, amber and tonka bean.",
+      "perfume-desc-tiziana-terenzi-kirke":
+        "Tiziana Terenzi Kirke Extrait de Parfum, 100ml (2015, Paolo Terenzi) — a juicy fruity musk: passion fruit, peach, raspberry, blackcurrant and pear over lily-of-the-valley, on sandalwood, musk, vanilla, patchouli and heliotrope.",
+      "perfume-desc-tiziana-terenzi-borea":
+        "Tiziana Terenzi Borea Extrait de Parfum, 100ml (Paolo Terenzi) — named after the northern wind, a fresh aromatic woody: bergamot, mandarin and juniper over lavender and herbs, on vetiver, cedarwood, amber and musk.",
+      "perfume-desc-tiziana-terenzi-spirito-fiorentino":
+        "Tiziana Terenzi Spirito Fiorentino Extrait de Parfum, 100ml (Paolo Terenzi) — a tribute to Florence, a fruity floral: blackcurrant, bergamot and berries over rose and jasmine, on patchouli, vanilla, amber and musk.",
+      "perfume-desc-xerjoff-casamorati-regio":
+        "Xerjoff Casamorati Regio Eau de Parfum, 100ml (Casamorati 1888 collection) — a regal aromatic woody: bergamot, mandarin and spices over iris and floral notes, on sandalwood, amber, vanilla and musk.",
+      "perfume-desc-xerjoff-casamorati-bouquet-ideale":
+        "Xerjoff Casamorati Bouquet Ideale Eau de Parfum (Casamorati 1888 collection) — a sweet fruity floral: raspberry, blackcurrant and bergamot over Bulgarian rose, jasmine and heliotrope, on vanilla, tonka bean, amber and musk.",
+      "perfume-desc-xerjoff-casamorati-1888":
+        "Xerjoff Casamorati 1888 Eau de Parfum, 100ml (Casamorati 1888 collection) — a warm spicy oriental: bergamot, mandarin and cinnamon over cardamom, jasmine and rose, on sandalwood, vanilla, amber and musk.",
+      "perfume-desc-xerjoff-casamorati-dama-bianca":
+        "Xerjoff Casamorati Dama Bianca Eau de Parfum (Casamorati 1888 collection) — an elegant powdery floral: bergamot and mandarin over orange blossom, jasmine and iris, on vanilla, sandalwood, amber and musk.",
+      "perfume-desc-xerjoff-casamorati-fiero":
+        "Xerjoff Casamorati Fiero Eau de Parfum, 100ml (Casamorati 1888 collection) — a fresh aromatic fougère: bergamot, grapefruit and green notes over lavender and geranium, on vetiver, cedarwood, amber and musk.",
+      "perfume-desc-xerjoff-casamorati-fiore-d-ulivo":
+        "Xerjoff Casamorati Fiore d'Ulivo Eau de Parfum, 100ml (Casamorati 1888 collection) — a sunny Mediterranean floral: bergamot, lemon and pink pepper over olive blossom, jasmine and rose, on sandalwood, amber, vanilla and musk.",
+      "perfume-desc-xerjoff-casamorati-gran-ballo":
+        "Xerjoff Casamorati Gran Ballo Eau de Parfum, 100ml (Casamorati 1888 collection) — inspired by a grand Viennese ball, a fruity floral: bergamot, orange and pear over jasmine, rose and orange blossom, on vanilla, sandalwood and musk.",
+      "perfume-desc-xerjoff-casamorati-la-tosca":
+        "Xerjoff Casamorati La Tosca Eau de Parfum (Casamorati 1888 collection) — a tribute to Puccini's opera, a fruity floral gourmand: bergamot and mandarin over Bulgarian rose and jasmine, on vanilla, almond, amber and musk.",
+      "perfume-desc-xerjoff-casamorati-lira":
+        "Xerjoff Casamorati Lira Eau de Parfum, 100ml (Casamorati 1888 collection) — a caramel citrus gourmand: blood orange, bergamot and lavender over cinnamon, liquorice and jasmine, on caramel, vanilla and musk.",
+      "perfume-desc-xerjoff-casamorati-dolce-amalfi":
+        "Xerjoff Casamorati Dolce Amalfi Eau de Parfum (Casamorati 1888 collection) — a sweet sunny floral of the Amalfi coast: bergamot, lemon and mandarin over orange blossom, jasmine and rose, on vanilla, amber, sandalwood and musk.",
+      "perfume-desc-jhag-mmmm":
+        "Juliette Has A Gun Mmmm... Eau de Parfum, 100ml — a playful gourmand: jasmine and blackcurrant over vanilla, on caramel and musk.",
+      "perfume-desc-jhag-another-oud":
+        "Juliette Has A Gun Another Oud Eau de Parfum, 100ml (2019, Romano Ricci) — a light, unconventional oud: raspberry and pink pepper over Turkish rose, on synthetic oud, ambroxan and musk.",
+      "perfume-desc-jhag-sunny-side-up":
+        "Juliette Has A Gun Sunny Side Up Eau de Parfum, 100ml (2017, Romano Ricci) — a creamy solar woody: sandalwood and ambrette over coconut milk, vanilla and clean musk.",
+      "perfume-desc-jhag-vanilla-vibes":
+        "Juliette Has A Gun Vanilla Vibes Eau de Parfum, 100ml (2018, Romano Ricci) — a salty beach vanilla: sea salt and orchid over Tahitian vanilla, on tonka bean, benzoin and sandalwood.",
+      "perfume-desc-jhag-musc-invisible":
+        "Juliette Has A Gun Musc Invisible Eau de Parfum, 100ml (2019, Romano Ricci) — a soft skin musk: bergamot and pink pepper over jasmine and lily-of-the-valley, on white musk and ambrette.",
+      "perfume-desc-bond-no9-lafayette-street":
+        "Bond No.9 Lafayette Street Eau de Parfum, 100ml — an urban spicy woody: bergamot and spices over leather, tobacco and floral notes, on oud, sandalwood, amber and musk.",
+      "perfume-desc-bond-no9-tribeca":
+        "Bond No.9 Tribeca Eau de Parfum, 100ml (2014) — a sweet oriental gourmand: bergamot and violet over heliotrope, praline and tonka, on vanilla, sandalwood and musk.",
+      "perfume-desc-shiseido-fslx-cleansing-foam":
+        "Shiseido Future Solution LX Extra Rich Cleansing Foam, 125ml — a luxurious, creamy foam that gently removes impurities while keeping skin soft and moist, the first step of the Future Solution LX ritual.",
+      "perfume-desc-shiseido-fslx-eye-lip-cream":
+        "Shiseido Future Solution LX Eye and Lip Contour Regenerating Cream, 17ml — a rich regenerating cream for the delicate eye and lip areas that visibly smooths wrinkles, firms and brightens.",
+      "perfume-desc-shiseido-fslx-total-protective-cream":
+        "Shiseido Future Solution LX Total Protective Cream SPF30, 50ml — a luxurious day cream that hydrates, firms and protects from UV and daily environmental damage for radiant, youthful-looking skin.",
+      "perfume-desc-shiseido-fslx-total-regenerating-cream":
+        "Shiseido Future Solution LX Total Regenerating Cream, 50ml — a rich night cream that works while you sleep to regenerate, firm and smooth, revealing radiant, resilient skin by morning.",
+      "perfume-desc-shiseido-fslx-brightening-softener":
+        "Shiseido Future Solution LX Concentrated Brightening Softener, 150ml — a silky softening lotion that deeply hydrates, refines texture and preps skin for the treatments that follow.",
+      "perfume-desc-shiseido-legendary-enmei-cream":
+        "Shiseido Future Solution LX Legendary Enmei Ultimate Renewing Cream, 50ml — Shiseido's most prestigious cream, with rare Enmei herb, that visibly renews, firms and brings deep, lasting radiance.",
+      "perfume-desc-shiseido-legendary-enmei-serum":
+        "Shiseido Future Solution LX Legendary Enmei Ultimate Luminance Serum, 30ml — a prestigious serum with Enmei herb that visibly firms, smooths and gives skin an inner luminance.",
+      "perfume-desc-shiseido-legendary-enmei-eye-cream":
+        "Shiseido Future Solution LX Legendary Enmei Ultimate Radiance Eye Cream, 15ml — a luxurious eye cream that visibly reduces wrinkles, dark circles and puffiness for a bright, lifted eye area.",
+      "perfume-desc-shiseido-vp-advanced-cream":
+        "Shiseido Vital Perfection Uplifting and Firming Advanced Cream, 50ml — a lifting and firming cream that visibly smooths wrinkles, reduces dark spots and redefines facial contours. Choose your texture: Advanced Cream, Soft or Enriched.",
+      "perfume-desc-shiseido-vp-day-cream-spf30":
+        "Shiseido Vital Perfection Uplifting and Firming Advanced Day Cream SPF30, 50ml — a lifting, firming day cream that targets wrinkles and dark spots while protecting skin from UV damage.",
+      "perfume-desc-shiseido-vp-eye-cream":
+        "Shiseido Vital Perfection Uplifting and Firming Advanced Eye Cream, 15ml — an eye cream that visibly lifts, firms and reduces wrinkles and dark circles around the eyes.",
+      "perfume-desc-shiseido-vp-wrinklespot-treatment":
+        "Shiseido Vital Perfection Intensive WrinkleSpot Treatment, 20ml — a targeted treatment that visibly reduces deep wrinkles and dark spots for smoother, more even-toned skin.",
+      "perfume-desc-shiseido-vp-overnight-firming-treatment":
+        "Shiseido Vital Perfection Overnight Firming Treatment, 50ml — a night gel-cream that works with skin's overnight renewal to firm, lift and restore radiance by morning.",
+      "perfume-desc-shiseido-vp-concentrated-supreme-cream":
+        "Shiseido Vital Perfection Concentrated Supreme Cream, 50ml — an ultra-rich, concentrated cream that intensely nourishes, firms and visibly lifts mature skin.",
+      "perfume-desc-shiseido-bop-micro-click-concentrate":
+        "Shiseido Bio-Performance Micro-Click Concentrate, 1.4ml — an at-home micro-needle-inspired treatment that delivers concentrated actives to visibly plump and smooth deep wrinkles.",
+      "perfume-desc-shiseido-bop-skin-hiforce-cream":
+        "Shiseido Bio-Performance Skin HiForce Cream, 50ml — a high-performance firming cream that visibly smooths wrinkles, firms and restores radiance and bounce.",
+      "perfume-desc-shiseido-bop-super-revitalizing-cream":
+        "Shiseido Bio-Performance Advanced Super Revitalizing Cream — a rich revitalizing cream that visibly reduces wrinkles and restores firmness, smoothness and radiance.",
+      "perfume-desc-shiseido-ultimune-serum":
+        "Shiseido Ultimune Power Infusing Serum — Shiseido's iconic red serum that strengthens skin's defences, boosts hydration and leaves skin smooth, resilient and radiant.",
+      "perfume-desc-shiseido-ultimune-oil":
+        "Shiseido Ultimune Power Infusing Oil, 75ml — a lightweight, fast-absorbing face oil that nourishes, strengthens and gives skin a healthy, supple glow.",
+      "perfume-desc-shiseido-ultimune-hand-cream":
+        "Shiseido Ultimune Power Infusing Hand Cream, 50ml — a nourishing hand cream that hydrates, softens and protects hands from daily dryness.",
+      "perfume-desc-shiseido-ultimune-future-power-shot":
+        "Shiseido Ultimune Future Power Shot, 15ml — an intensive serum with 15x the concentration of Ultimune's key ingredients (reishi mushroom, iris root, tsubaki seed) for smoother, more radiant, resilient skin; use twice a week.",
+      "perfume-desc-shiseido-men-total-revitalizer-cream":
+        "Shiseido Men Total Revitalizer Cream, 50ml — an anti-ageing cream for men that hydrates, firms and visibly reduces wrinkles and signs of fatigue.",
+      "perfume-desc-shiseido-men-total-revitalizer-eye":
+        "Shiseido Men Total Revitalizer Eye, 15ml — an eye cream for men that reduces the look of dark circles, puffiness and wrinkles.",
+      "perfume-desc-shiseido-men-total-revitalizer-light-fluid":
+        "Shiseido Men Total Revitalizer Light Fluid, 70ml — a lightweight anti-ageing fluid for men that hydrates, firms and energises skin without shine.",
+      "perfume-desc-shiseido-men-skin-empowering-cream":
+        "Shiseido Men Skin Empowering Cream, 50ml — a strengthening anti-wrinkle cream for men that firms, energises and restores skin's vitality.",
+      "perfume-desc-shiseido-refreshing-cleansing-water":
+        "Shiseido Refreshing Cleansing Water, 180ml — a gentle micellar-style cleansing water that removes makeup and impurities, leaving skin fresh and comfortable.",
+      "perfume-desc-shiseido-complete-cleansing-microfoam":
+        "Shiseido Complete Cleansing Microfoam, 180ml — a fine, dense micro-foam that removes makeup and impurities in one step, leaving skin clean and soft.",
+      "perfume-desc-shiseido-benefiance-contour-serum":
+        "Shiseido Benefiance Wrinkle Smoothing Contour Serum, 30ml — a serum that visibly smooths wrinkles and redefines facial contours for firmer, more youthful-looking skin.",
+      "perfume-desc-shiseido-benefiance-eye-cream":
+        "Shiseido Benefiance Wrinkle Smoothing Eye Cream, 15ml — a rich eye cream that visibly smooths wrinkles and fine lines and hydrates the delicate eye area.",
+      "perfume-desc-shiseido-eudermine-activating-essence":
+        "Shiseido Eudermine Activating Essence, 145ml — Shiseido's legendary red lotion (since 1897) that hydrates, softens and preps skin for the rest of the routine.",
+      "perfume-desc-shiseido-eye-lip-makeup-remover":
+        "Shiseido Instant Eye and Lip Makeup Remover, 125ml — a bi-phase remover that quickly dissolves waterproof eye and lip makeup without rubbing.",
+      "perfume-desc-shiseido-clear-sun-stick-spf50":
+        "Shiseido Expert Sun Protector Clear Stick SPF50+, 20g — a transparent, invisible sunscreen stick for face and body, water-resistant and easy to apply on the go.",
+      "perfume-desc-shiseido-expert-sun-lotion-spf50":
+        "Shiseido Expert Sun Protector Lotion SPF50+, 150ml — a very high protection face and body lotion that becomes more effective on contact with water and heat.",
+      "perfume-desc-shiseido-expert-sun-cream-spf50":
+        "Shiseido Expert Sun Protector Cream SPF50+, 50ml — a very high protection face cream, water-resistant and suitable for daily wear and outdoor activities.",
+      "perfume-desc-shiseido-expert-sun-lotion-spf30":
+        "Shiseido Expert Sun Protector Lotion SPF30, 150ml — a high protection face and body lotion that becomes more effective on contact with water and heat.",
+      "perfume-desc-shiseido-zen-essence":
+        "Shiseido Zen Essence Eau de Parfum — a serene floral woody from the Zen line: fresh citrus and bright florals over a soft, meditative heart, on warm woods and musk.",
+      "perfume-desc-shiseido-ginza-datura":
+        "Shiseido Ginza Datura Eau de Parfum — a mysterious white floral inspired by Tokyo's Ginza district at dusk: datura and jasmine over creamy woods and soft musk.",
+      "perfume-desc-shiseido-ginza-intense":
+        "Shiseido Ginza Intense Eau de Parfum — a deeper, warmer version of Ginza: pink pepper and pomegranate over jasmine, orchid and magnolia, on hinoki wood, sandalwood and patchouli.",
+      "perfume-desc-shiseido-ginza-night-intense":
+        "Shiseido Ginza Night Eau de Parfum Intense — the nocturnal side of Ginza: a dark, sensual floral of black pepper and jasmine over orchid, on vanilla, patchouli and woods.",
+      "perfume-desc-shiseido-synchro-skin-radiant-lifting-foundation":
+        "Shiseido Synchro Skin Radiant Lifting Foundation SPF30, 30ml. Choose your shade — a hydrating, medium-to-full buildable coverage foundation with Light-Adjusting Technology for a luminous, lifted finish, 24-hour wear and hydration.",
+      "perfume-desc-shiseido-synchro-skin-self-refreshing-foundation":
+        "Shiseido Synchro Skin Self-Refreshing Foundation SPF30, 30ml. Choose your shade — a long-wearing, medium buildable coverage foundation with a natural satin finish that stays fresh for 24 hours and resists heat, humidity and sweat.",
+      "perfume-desc-shiseido-revitalessence-skin-glow-foundation":
+        "Shiseido Revitalessence Skin Glow Foundation SPF30, 30ml. Choose your shade — a lightweight, skincare-infused foundation with light-to-medium buildable coverage and a fresh, dewy glow that visibly improves skin over time.",
+      "perfume-desc-shiseido-technosatin-gel-lipstick":
+        "Shiseido Technosatin Gel Lipstick, 3.3g. Choose your shade — a high-impact, satin-finish gel lipstick with full colour in one swipe, a comfortable cushiony feel and long-lasting hydration.",
+      "perfume-desc-shiseido-controlledchaos-mascaraink":
+        "Shiseido ControlledChaos MascaraInk, 11.5ml. Choose your shade — a volumising mascara with a dual-sided brush for dramatic volume and length with precise, smudge-proof definition.",
+      "perfume-desc-shiseido-sports-bb":
+        "Shiseido Sports BB SPF50+, 30ml. Choose your shade — a sweat- and water-resistant BB cream with WetForce technology that evens skin tone with light coverage while giving very high sun protection.",
+      "perfume-desc-shiseido-sports-bb-compact":
+        "Shiseido Sports BB Compact SPF50+, 12g. Choose your shade — a cushion-style BB compact with WetForce technology for sweat- and water-resistant coverage and very high sun protection on the go.",
+      "perfume-desc-bond-no9-sutton-place":
+        "Bond No.9 Sutton Place Eau de Parfum, 100ml (2015) — an elegant chypre named after Manhattan's riverside enclave: bergamot, black pepper and grapefruit over rose, freesia and iris, on patchouli, leather and musk.",
+      "perfume-desc-shiseido-lipliner-inkduo":
+        "Shiseido LipLiner InkDuo (Prime + Line), 1.1g. Choose your shade — a 2-in-1 lip primer and liner: one end smooths and preps lips, the other defines with long-wearing, transfer-resistant colour.",
+      "perfume-desc-shiseido-benefiance-overnight-cream":
+        "Shiseido Benefiance Overnight Wrinkle Resisting Cream, 50ml — a rich night cream that works while you sleep to visibly reduce wrinkles and restore firmness and hydration by morning.",
+      "perfume-desc-shiseido-synchro-skin-soft-blurring-primer":
+        "Shiseido Synchro Skin Soft Blurring Primer, 30ml — a lightweight primer that blurs pores and fine lines, controls shine and helps makeup last all day.",
+      "perfume-desc-shiseido-vp-liftdefine-mask":
+        "Shiseido Vital Perfection LiftDefine Radiance Face Mask, 6 pairs — two-piece sheet masks that visibly lift, firm and brighten the face in 10 minutes.",
+      "perfume-desc-shiseido-ginza":
+        "Shiseido Ginza Eau de Parfum (2021) — a floral chypre inspired by Tokyo's Ginza district: pink pepper and pomegranate over jasmine, orchid and magnolia, on hinoki wood, sandalwood and patchouli.",
+      "perfume-desc-shiseido-ginza-body-lotion":
+        "Shiseido Ginza Perfumed Body Lotion, 200ml — a lightweight, moisturising body lotion scented with Ginza's floral chypre of jasmine, magnolia and hinoki wood.",
+      "perfume-desc-shiseido-ginza-murasaki":
+        "Shiseido Ginza Murasaki Eau de Parfum (2023) — a deep, luminous floral: violet leaf and fruity notes over jasmine and orchid, on hinoki wood, patchouli and musk.",
+      "perfume-desc-shiseido-zen":
+        "Shiseido Zen Eau de Parfum (2007) — a serene floral oriental: bergamot and freesia over lotus, jasmine and peony, on amber, sandalwood and musk.",
+      "perfume-desc-shiseido-men-face-cleanser":
+        "Shiseido Men Face Cleanser, 125ml — a rich, foaming cleanser for men that removes dirt and excess oil while keeping skin comfortable and hydrated.",
+      "perfume-desc-shiseido-men-energizing-moisturizer-fluid":
+        "Shiseido Men Energizing Moisturizer Extra Light Fluid, 100ml — an ultra-light, oil-free fluid that hydrates, controls shine and energises tired skin.",
+      "perfume-desc-shiseido-microliner-ink":
+        "Shiseido MicroLiner Ink, 0.08g. Choose your shade — an ultra-fine eyeliner pencil with an ink-like formula for precise, smudge-proof and waterproof definition.",
+      "perfume-desc-shiseido-waso-gel-to-oil-cleanser":
+        "Shiseido Waso Shikulime Gel-to-Oil Cleanser, 125ml — a 2-in-1 cleanser that starts as a cushiony gel and turns into a silky oil to remove impurities and waterproof makeup without drying skin.",
+      "perfume-desc-shiseido-waso-yuzu-c-sleeping-mask":
+        "Shiseido Waso Yuzu-C Beauty Sleeping Mask, 50ml — an overnight gel mask with vitamin C-rich yuzu that brightens, hydrates and revives dull skin by morning.",
+      "perfume-desc-shiseido-waso-color-control-moisturizer":
+        "Shiseido Waso Shikulime Color Control Oil-Free Moisturizer SPF30, 50ml — a tinted, oil-free moisturiser that evens skin tone, controls shine and protects from UV.",
+      "perfume-desc-shiseido-waso-mega-hydrating-moisturizer":
+        "Shiseido Waso Shikulime Mega Hydrating Moisturizer, 50ml — a rich gel-cream that floods skin with long-lasting moisture and supports its barrier.",
+      "perfume-desc-shiseido-ee-hydrating-cream":
+        "Shiseido Essential Energy Hydrating Cream, 50ml — a light, refreshing cream that delivers 48-hour hydration and restores skin's energy and radiance.",
+      "perfume-desc-shiseido-ee-hydrating-day-cream-spf20":
+        "Shiseido Essential Energy Hydrating Day Cream SPF20, 50ml — a moisturising day cream that hydrates, energises and protects skin from UV.",
+      "perfume-desc-shiseido-bop-skin-filler":
+        "Shiseido Bio-Performance Skin Filler, 2 x 30ml — a two-step serum duo that visibly fills and plumps wrinkles from within for smoother, fuller-looking skin.",
+      "perfume-desc-shiseido-clarifying-cleansing-foam":
+        "Shiseido Clarifying Cleansing Foam, 125ml — a rich, creamy foam that removes excess oil and impurities for clear, refreshed skin.",
+      "perfume-desc-shiseido-extra-rich-cleansing-milk":
+        "Shiseido Extra Rich Cleansing Milk, 125ml — a rich, creamy cleansing milk that gently removes makeup and impurities, ideal for dry skin.",
+      "perfume-desc-shiseido-deep-cleansing-foam":
+        "Shiseido Deep Cleansing Foam, 125ml — a dense foam that deeply cleanses pores and removes excess sebum, ideal for oily skin.",
+      "perfume-desc-shiseido-treatment-softener":
+        "Shiseido Treatment Softener, 150ml — a hydrating softening lotion that preps skin to absorb the treatments that follow. Choose your texture: Treatment Softener or Enriched.",
+      "perfume-desc-shiseido-revitalizing-treatment-softener":
+        "Shiseido Revitalizing Treatment Softener, 150ml — a rich, all-in-one softener with Kirishima mineral spring water that gives 24-hour hydration and helps fight the signs of ageing.",
+      "perfume-desc-shiseido-benefiance-day-cream-spf25":
+        "Shiseido Benefiance Wrinkle Smoothing Day Cream SPF25, 50ml — a day cream that visibly smooths wrinkles, hydrates and protects skin from UV.",
+      "perfume-desc-shiseido-benefiance-wrinkle-smoothing-cream":
+        "Shiseido Benefiance Wrinkle Smoothing Cream, 50ml — a cream that visibly reduces wrinkles and restores firmness and hydration. Choose your texture: Cream or Enriched.",
+      "perfume-desc-shiseido-fslx-total-radiance-foundation":
+        "Shiseido Future Solution LX Total Radiance Foundation SPF20, 30ml. Choose your shade — a luxurious cream foundation that gives natural coverage and radiance while caring for skin like an anti-ageing cream.",
+      "perfume-desc-shiseido-maru-fude-brush":
+        "Shiseido Maru Fude Multi Face Brush — a dense, rounded brush inspired by Japanese calligraphy for seamless application of powder, liquid or cream products.",
+      "perfume-desc-shiseido-naname-fude-brush":
+        "Shiseido Naname Fude Multi Eye Brush — an angled brush for precise application and blending of eyeshadow and liner.",
+      "perfume-desc-shiseido-hasu-fude-brush":
+        "Shiseido Hasu Fude Foundation Brush — a flat, lotus-leaf-shaped brush for smooth, streak-free foundation application.",
+      "perfume-desc-shiseido-daiya-fude-brush":
+        "Shiseido Daiya Fude Face Duo — a dual-ended brush with a dense end for contouring and a soft end for blending powders.",
+      "perfume-desc-shiseido-tsutsu-fude-brush":
+        "Shiseido Tsutsu Fude Concealer Brush — a small, dense brush for precise concealer application and flawless blending.",
+      "perfume-desc-shiseido-hanatsubaki-hake-brush":
+        "Shiseido Hanatsubaki Hake Polishing Face Brush — a camellia-shaped brush with petal-like bristle clusters that buffs foundation and powder to a polished finish.",
+      "perfume-desc-shiseido-colorgel-lipbalm":
+        "Shiseido ColorGel LipBalm, 2g. Choose your shade — a tinted lip balm with sheer, buildable colour and 8-hour hydration for soft, healthy-looking lips.",
+      "perfume-desc-shiseido-synchro-skin-powder-foundation":
+        "Shiseido Synchro Skin Self-Refreshing Custom Finish Powder Foundation, 9g. Choose your shade — a long-wearing powder foundation that can be applied dry for a matte finish or wet for more coverage, staying fresh all day.",
+      "perfume-desc-shiseido-benefiance-nutriperfect-day-cream":
+        "Shiseido Benefiance NutriPerfect Day Cream SPF15, 50ml — a nourishing day cream for mature skin that restores density, firmness and radiance while protecting from UV.",
+      "perfume-desc-shiseido-benefiance-nutriperfect-night-cream":
+        "Shiseido Benefiance NutriPerfect Night Cream, 50ml — a rich night cream for mature skin that nourishes, firms and revitalises while you sleep.",
+      "perfume-desc-shiseido-archliner-ink":
+        "Shiseido ArchLiner Ink, 0.4ml, shade 01 Shibui Black — a liquid eyeliner with a flexible, arched tip for precise lines and wings, waterproof and smudge-proof.",
+      "perfume-desc-shiseido-brow-inktrio":
+        "Shiseido Brow InkTrio, 0.31g. Choose your shade — a 3-in-1 brow tool with a precision pencil, a powder and a spoolie to define, fill and set brows.",
+      "perfume-desc-shiseido-imperiallash-mascaraink":
+        "Shiseido ImperialLash MascaraInk, 8.5g, shade 01 Sumi Black — a lengthening, volumising mascara with a dual-sided brush for dramatic, separated lashes.",
       "perfume-desc-diesel":
         "An addictive oriental-woody fragrance blending bold star anise and juicy mandarin over a rich, sweet base of liquorice and vanilla.",
-      "perfume-desc-dkny":
-        "A refreshing floral-fruity fragrance blending crisp green apple and juicy cucumber over a soft, sophisticated base of magnolia and sandalwood.",
-      "perfume-desc-juliet":
-        "A delicious floral-gourmand fragrance blending sweet raspberry and powdery iris over a rich, creamy base of vanilla and sandalwood.",
-      "perfume-desc-prada":
-        "An indulgent amber-gourmand fragrance blending powdery white musk and warm benzoin over a rich, sweet base of pure caramel.",
-      "perfume-desc-roberto":
-        "A provocative floral fragrance blending luminous neroli and tahitian tiare flower over a warm, seductive base of palisander rosewood.",
       "perfume-desc-valentino":
         "A modern amber-floral fragrance blending sparkling blackcurrant and luminous jasmine trio over a rich, edgy base of bourbon vanilla.",
-      "perfume-desc-thierry":
-        "A vibrant amber-floral fragrance blending juicy raspberry and upcycled rose over a rich, sensual base of akigalawood.",
-      "perfume-desc-ralph":
-        "A refreshing aromatic-aquatic fragrance blending crisp cantaloupe melon and juicy cucumber over a smooth, masculine base of washed suede.",
-      "perfume-desc-montale":
-        "A captivating woody-floral fragrance blending exotic Pakistani oud and fresh, tart lime over a rich, sensual base of precious rose and patchouli.",
       "perfume-desc-viktor":
         "An explosive amber-floral fragrance blending luminous cattleya orchid and sensual centifolia rose over a warm, addictive base of patchouli and vanilla.",
-      "perfume-desc-yves":
-        "A powerful aromatic-woody fragrance blending fresh green apple and vibrant sage over a deep, masculine base of amberwood and tonka bean.",
       "chocolate-desc-tog":
         "A rich, curated journey of our finest flavors. This collection balances deep dark chocolate creams and smooth milk chocolate textures in perfect harmony\u2014crafted to share a piece of Kosovo\u2019s history and national essence.",
       "chocolate-desc-tog1":
@@ -226,7 +1992,7 @@
       "extra-checkout-payment-sending":
         "Payment confirmed. Sending your order...",
       "extra-checkout-payment-sent":
-        "Payment completed. Your order details were sent to hotel reception.",
+        "Payment completed. Your order details were sent to hotel reception. Please allow up to 30 minutes for delivery to your room.",
       "extra-checkout-payment-email-fail":
         "Payment completed, but we could not send order details automatically. Please email {email}.",
       "extra-form-sending": "Sending\u2026",
@@ -311,18 +2077,897 @@
         "Sweater \u2014 professional wash and press, or ironing only, returned to your room.",
       "laundry-desc-jacket":
         "Jacket \u2014 professional wash and press, or ironing only, returned to your room.",
-      "perfume-name-armani": "Giorgio Armani",
+      "perfume-name-armani": "ARMANI ACQUA DI GIOIA F.EDP",
+      "perfume-name-cacharel": "CACHAREL AMOR AMOR EDT VAPO F",
+      "perfume-name-armani-code": "ARMANI CODE FEME EDP",
+      "perfume-name-lancome": "LANCOME LA VIE EST BELLE EDP",
+      "perfume-name-mon-paris": "YVES SAINT LAU MON PARIS EDP",
+      "perfume-name-black-opium": "YVES SAINT LAU BLACK OPIUM",
+      "perfume-name-diesel-brave": "DIESEL ONLY THE BRAVE MEN EDT",
+      "perfume-name-lhomme-nuit": "YVES SAINT LAU L'HOMME NUIT LE PARFUM VAPO",
+      "perfume-name-armani-babel-he": "ARMANI EMPORIO BABEL HE EDT",
+      "perfume-name-y-edp": "YVES SAINT LAU Y EDP",
+      "perfume-name-libre-edt": "YVES SAINT LAU LIBRE EDT",
+      "perfume-name-valentino-voce-viva": "VALENTINO VOCE VIVA EAU DE PARFUM",
+      "perfume-name-valentino-donna": "VALENTINO BORN IN ROMA DONNA EAU DE PARFUM",
+      "perfume-name-libre-edp-intense": "YVES SAINT LAU LIBRE EDP INTENSE",
+      "perfume-name-valentino-donna-yellow": "VALENTINO BORN IN ROMA DONNA YELLOW DREAM EAU DE PARFUM",
+      "perfume-name-armani-my-way": "ARMANI MY WAY EDP",
+      "perfume-name-lancome-idole": "LANCOME IDOLE EDP",
+      "perfume-name-armani-in-love-with-you": "ARMANI EMPORIO IN LOVE WITH YOU EDP",
+      "perfume-name-prada-luna-rossa-carbon": "PRADA LUNA ROSSA CARBON EDT",
+      "perfume-name-prada-luna-rossa-black": "PRADA LUNA ROSSA BLACK EDP",
+      "perfume-name-prada-lhomme": "PRADA L'HOMME EDT",
+      "perfume-name-prada-la-femme": "PRADA LA FEMME EDP",
+      "perfume-name-armani-si-passione": "ARMANI SI PASSIONE EDP",
+      "perfume-name-viktor-spicebomb-extreme": "SPB EXTREME EDP",
+      "perfume-name-viktor-bonbon": "BONBON EDP SPRAY",
+      "perfume-name-cacharel-noa": "CACHAREL NOA EDT",
+      "perfume-name-armani-acqua-gio-stick": "ARMANI ACQUA DI GIO H.STICK 75",
+      "perfume-name-armani-black-code-stick": "ARMANI BLACK CODE DEO STICK 75",
+      "perfume-name-armani-si-edp": "ARMANI SI EDP",
+      "perfume-name-diesel-brave-tattoo": "DIESEL ONLY THE BRAVE TATTOO EDT",
+      "perfume-name-lancome-lveb-body-milk": "LANCOME LVEB BODY MILK 200ML",
+      "perfume-name-lancome-tresor-edp": "LANCOME TRESOR EDP",
+      "perfume-name-biotherm-aqp-fresh-eyes": "BIOTHERM BIO AQS FRESH EYE 15ML",
+      "perfume-name-biotherm-aquafitness-shower-gel": "BIOTHERM BIO AQUAFITNESS SHOWER GEL T200",
+      "perfume-name-biotherm-aquapower-72h": "BIOTHERM BIO AQUAPOWER 72H POT 50ML",
+      "perfume-name-biotherm-biocils-waterproof": "BIOTHERM BIO BIOCILS WATERPROOF F100ML 2016",
+      "perfume-name-biotherm-blue-therapy-nuit": "BIOTHERM BIO BLUE THERAPY NUIT SPB 50ML",
+      "perfume-name-biotherm-blue-therapy-reno-serum": "BIOTHERM BIO BLUE THERAPY RENO SERUM FL50ML",
+      "perfume-name-biotherm-deo-pure-invisible": "BIOTHERM BIO DEO PURE INVISIBLE ROLL ON 48H 75ML",
+      "perfume-name-biotherm-lait-corporel-deo": "BIOTHERM BIO-LAIT CORPOREL DEO ROLL ON 75ML",
+      "perfume-name-biotherm-day-control-deo-72h": "BIOTHERM BIO DAY CONTROL DEO 72H ROLL ON 75ML",
+      "perfume-name-biotherm-day-control-ecocert": "BIOTHERM BIO DAY CONTROL ECOCERT ROLL ON 75ML",
+      "perfume-name-biotherm-deo-ato-men": "BIOTHERM BIO DEO ATO 150 ML MEN",
+      "perfume-name-biotherm-deo-pure-krem": "BIOTHERM BIO DEO PURE KREM 75 ML TUBE",
+      "perfume-name-biotherm-deo-pure-rollon": "BIOTHERM BIO DEO PURE ROLLON ON 75ML",
+      "perfume-name-biotherm-deo-pure-stick": "BIOTHERM DEO PURE STICK 24H ANTIPERSPIRANT STICK",
+      "perfume-name-biotherm-deo-rollon-man-pure": "BIOTHERM BIO DEO ROLL ON 75 ML MAN PURE",
+      "perfume-name-biotherm-deo-stick-man": "BIOTHERM BIO DEO STICK 50 ML MAN",
+      "perfume-name-biotherm-eau-vitaminee": "BIOTHERM BIO EAU VITAMINEE SPRAY 100ML",
+      "perfume-name-biotherm-fs-liquid-eyes": "BIOTHERM BIO FS LIQUID EYES",
+      "perfume-name-biotherm-lait-de-douche": "BIOTHERM BIO LAIT DE DOUCHE 200ML",
+      "perfume-name-biotherm-biosource-nett-pnm": "BIOTHERM BIO SOURCE NETT PNM T150ML",
+      "perfume-name-biotherm-biosource-eau-mic": "BIOTHERM BIOSOURCE EAU MIC TTP FL200ML",
+      "perfume-name-biotherm-biosource-gelee-nett": "BIOTHERM BIOSOURCE GELEE NETT EXF 150ML",
+      "perfume-name-biotherm-biosource-lot-adouc": "BIOTHERM BIOSOURCE LOT ADOUC PS FL200ML",
+      "perfume-name-biotherm-biosource-lotion-pnm": "BIOTHERM BIOSOURCE LOTION PNM 200 ML FL",
+      "perfume-name-lancome-effacernes": "LANCOME EFFACERNES 15ML",
+      "perfume-name-lancome-grandiose-01": "LANCOME GRANDIOSE 01",
+      "perfume-name-lancome-hypnose-clean-volume-01": "LANCOME HYPNOSE CLEAN VOLUME 01",
+      "perfume-name-lancome-bi-facil-125": "LANCOME LC BI FACIL EYES",
+      "perfume-name-lancome-galatee-confort-200": "LANCOME LC CONFORT GALATEE 200 ML",
+      "perfume-name-lancome-crayon-khol-noir": "LANCOME LC CRAYON KHOL NOIR",
+      "perfume-name-lancome-genifique-cream-50": "LANCOME LC GENEFIQUE ACT JEUNESSE CR P50ML",
+      "perfume-name-lancome-hypnose-doll-eyes-wp-01": "LANCOME LC HYPNOSE DOLL EYES MASCARA 01 6ML WP",
+      "perfume-name-lancome-hypnose-doll-eyes-01": "LANCOME LC HYPNOSE MASCARA DOLL EYES 01",
+      "perfume-name-lancome-creme-mousse-confort-125": "LANCOME LC PR CONFORT CR MOUSSE T 125ML",
+      "perfume-name-lancome-eau-micellaire-douceur-400": "LANCOME LC PR DOUCEUR EAU MIC FL P 400ML",
+      "perfume-name-lancome-renergie-multilift-night-50": "LANCOME LC RENER MPLIFT NIGHT 50ML",
+      "perfume-name-lancome-renergie-creme-50": "LANCOME LC RENERGIE CREME 50 ML POT",
+      "perfume-name-lancome-tonique-douceur-400": "LANCOME LC TONIQUE DOUCEUR 400 ML FLAC",
+      "perfume-name-ysl-mascara-mvefc-01": "YVES SAINT LAU YSL EYE MASCARA MVEFC 01 black",
+      "perfume-name-ysl-dessin-sourcils-02": "YVES SAINT LAURENT DESSIN DES SOURCILS EYEBROW PENCIL",
+      "perfume-name-ysl-mascara-vefc-wp-01": "YVES SAINT LAU YSL MASCARA VEFC WP 01",
+      "perfume-name-armani-babel-she-edp": "ARMANI EMPORIO BABEL SHE EDP",
+      "perfume-name-lancome-monsieur-big-01": "LANCOME Monsieur Big Mascara 01",
+      "perfume-name-biotherm-waterlover-spf30-200": "BIOTHERM BIO WATERLOVER SUN MILK SPF30 200M",
+      "perfume-name-biotherm-waterlover-spf50-200": "BIOTHERM BIO WATERLOVER SUN MILK SPF50 200M",
+      "perfume-name-biotherm-blue-therapy-big-eye-15": "BIOTHERM BIO BLUE THERAPY BIG EYE 16 5ML",
+      "perfume-name-ysl-touche-eclat-3": "YVES SAINT LAURENT TOUCHE ECLAT RADIANT TOUCH",
+      "perfume-name-ysl-primer-moisture-glow": "YVES SAINT LAU YSL PRIMER INSTANT MOISTURE GLOW",
+      "perfume-name-lancome-hydra-zen-spf15-50": "LANCOME LC HYDRAZEN CREME 50ML SPF15",
+      "perfume-name-lancome-absolu-plumper": "LANCOME L ABSOLU PLUMPER",
+      "perfume-name-lancome-teint-miracle": "LANCOME TEINT MIRACLE F P30ML",
+      "perfume-name-biotherm-lait-corporel-400": "BIOTHERM LAIT CORPOREL L'ORIGINAL",
+      "perfume-name-biotherm-rasage-sensitive-200": "BIOTHERM BIO RASAGE PX SENS 200 ML",
+      "perfume-name-biotherm-deo-pure-ecocert": "BIOTHERM BIO DEO PURE ECOCERT ROLL ON 75ML",
+      "perfume-name-viktor-spicebomb-edt": "VIKTOR&ROLF SPB EDT SPRAY",
+      "perfume-name-viktor-flowerbomb-nectar": "VIKTOR&ROLF FBB NECTAR EDP",
+      "perfume-name-biotherm-aquasource-serum-biphase-50": "BIOTHERM AQUASOURCE SERUM BIPHASE F50ML",
+      "perfume-name-biotherm-aquapower-cleanser": "BIOTHERM AQUAPOWER OLIGO-THERMAL FRESH ULTRA CLEANSER",
+      "perfume-name-lancome-hypnose": "LANCOME HYPNOSE MASCARA",
+      "perfume-name-lancome-cils-booster-xl": "LANCOME CILS BOOSTER XL ENHANCING LASH PRIMER",
+      "perfume-name-lancome-monsieur-big-wp-01": "LANCOME MONSIEUR BIG WATERPROOF MASCARA 01",
+      "perfume-name-lancome-loose-setting-powder": "LANCOME LOOSE SETTING POWDER TRANSLUCENT",
+      "perfume-name-lancome-setting-spray": "LANCOME SETTING SPRAY",
+      "perfume-name-lancome-blush-subtil": "LANCOME BLUSH SUBTIL",
+      "perfume-name-armani-ea-with-you-intensely": "ARMANI EMPORIO STRONGER WITH YOU INTENSELY EDP",
+      "perfume-name-prada-candy": "PRADA CANDY EDP",
+      "perfume-name-prada-la-femme-intense": "PRADA LA FEMME INTENSE EDP",
+      "perfume-name-prada-lhomme-intense": "PRADA L'HOMME INTENSE EDP",
+      "perfume-name-prada-lhomme-leau": "PRADA L'HOMME L'EAU EDT",
+      "perfume-name-biotherm-life-plankton-eye-15": "BIOTHERM LIFE PLANKTON EYE 15ML",
+      "perfume-name-biotherm-tpur-salty-gel-cleanser-125": "BIOTHERM HOMME T-PUR SALTY GEL CLEANSER 125ML",
+      "perfume-name-biotherm-aqs-concentrate-bounce-50": "BIOTHERM AQUASOURCE CONCENTRATE BOUNCE 50ML",
+      "perfume-name-biotherm-aqs-concentrate-pure-50": "BIOTHERM AQUASOURCE CONCENTRATE PURE 50ML",
+      "perfume-name-biotherm-aqs-concentrate-glow-50": "BIOTHERM AQUASOURCE CONCENTRATE GLOW 50ML",
+      "perfume-name-lancome-brow-define-pencil": "LANCOME BROW DEFINE PENCIL",
+      "perfume-name-lancome-hypnose-palette": "LANCOME HYPNOSE PALETTE 5 COULEURS",
+      "perfume-name-biotherm-aquapower-deo-roll-75": "BIOTHERM HOMME AQUAPOWER 48H DEO ROLL ON 75ML",
+      "perfume-name-ysl-lhomme-nuit-edp-100": "YVES SAINT LAU L'HOMME NUIT EDP 100ML",
+      "perfume-name-lancome-mademoiselle-shine": "LANCOME MADEMOISELLE SHINE",
+      "perfume-name-libre-edp": "YVES SAINT LAU LIBRE EDP",
+      "perfume-name-biotherm-amber-algae-revitalize-day": "BIOTHERM BLUE THERAPY AMBER ALGAE REVITALIZE DAY",
+      "perfume-name-biotherm-amber-algae-revitalize-night": "BIOTHERM BLUE THERAPY AMBER ALGAE REVITALIZE NIGHT",
+      "perfume-name-lancome-genifique-serum-50": "LANCOME GENIFIQUE SERUM 50ML",
+      "perfume-name-lancome-rose-sugar-scrub": "LANCOME ROSE SUGAR SCRUB",
+      "perfume-name-lancome-hydra-zen-cream-50": "LANCOME HYDRA ZEN CREAM",
+      "perfume-name-lancome-hydra-zen-nuit-50": "LANCOME HYDRA ZEN NUIT 50ML",
+      "perfume-name-lancome-hydra-zen-glow-50": "LANCOME HYDRA ZEN GLOW 50ML",
+      "perfume-name-ysl-lhomme-le-parfum-100": "YVES SAINT LAU L'HOMME LE PARFUM 100ML",
+      "perfume-name-biotherm-tpur-cleanser-125": "BIOTHERM HOMME T-PUR CLEANSER 125ML",
+      "perfume-name-ysl-mascara-mvefc-the-curler": "YVES SAINT LAU YSL MASCARA MVEFC THE CURLER BLACK",
+      "perfume-name-ysl-eyeliner-couture-01": "YVES SAINT LAU YSL EYELINER COUTURE 1",
+      "perfume-name-biotherm-aqua-super-mask-glow": "BIOTHERM AQUA SUPER MASK GLOW",
+      "perfume-name-biotherm-aqua-super-mask-bounce": "BIOTHERM AQUA SUPER MASK BOUNCE",
+      "perfume-name-biotherm-aqua-super-mask-pure": "BIOTHERM AQUA SUPER MASK PURE",
+      "perfume-name-ysl-tatouage-velvet-cream-201": "YVES SAINT LAU YSL TATOUAGE COUTURE VELVET CREAM 201",
+      "perfume-name-biotherm-life-plankton-body-milk-400": "BIOTHERM LIFE PLANKTON BODY MILK 400ML",
+      "perfume-name-ysl-satin-crush-eyeshadow-05": "YVES SAINT LAU YSL SATIN CRUSH EYESHADOW 05",
+      "perfume-name-lancome-cils-booster-serum": "LANCOME CILS BOOSTER LASH REVITALIZING SERUM",
+      "perfume-name-valentino-born-in-roma-uomo-edt": "VALENTINO BORN IN ROMA UOMO EAU DE TOILETTE",
+      "perfume-name-valentino-donna-edp-30": "VALENTINO DONNA EAU DE PARFUM",
+      "perfume-name-valentino-uomo-edt": "VALENTINO UOMO EAU DE TOILETTE",
+      "perfume-name-ysl-mascara-mvefc-radical-01": "YVES SAINT LAU YSL MASCARA MVEFC RADICAL 01 BLACK",
+      "perfume-name-lancome-lash-idole-01": "LANCOME LASH IDOLE MASCARA",
+      "perfume-name-armani-stronger-with-you-absolu": "ARMANI EMPORIO STRONGER WITH YOU ABSOLUTELY EDP",
+      "perfume-name-valentino-born-in-roma-uomo-yellow-dream": "VALENTINO BORN IN ROMA UOMO YELLOW DREAM EDT 100ML",
+      "perfume-name-ysl-crushliner": "YVES SAINT LAU YSL CRUSHLINER EYELINER",
+      "perfume-name-cacharel-yes-i-am": "CACHAREL YES I AM EDP",
+      "perfume-name-cacharel-yes-i-am-purple": "CACHAREL YES I AM FABULOUS EDP 30ML",
+      "perfume-name-cacharel-yes-i-am-glorious": "CACHAREL YES I AM GLORIOUS EDP 50ML",
+      "perfume-name-cacharel-loulou": "CACHAREL LOULOU EDP",
+      "perfume-name-viktor-spicebomb-night-vision-edt": "VIKTOR&ROLF SPICEBOMB NIGHT VISION EDT 90ML",
+      "perfume-name-viktor-flowerbomb-dew": "VIKTOR&ROLF FLOWERBOMB DEW EDP 50ML",
+      "perfume-name-diesel-bad": "DIESEL BAD EDT",
+      "perfume-name-diesel-fuel-for-life-homme": "DIESEL FUEL FOR LIFE HOMME EDT",
+      "perfume-name-mugler-alien-edp": "THIERRY MUGLER ALIEN EDP",
+      "perfume-name-mugler-alien-goddess": "THIERRY MUGLER ALIEN GODDESS EDP",
+      "perfume-name-armani-my-way-intense": "ARMANI MY WAY EDP INTENSE",
+      "perfume-name-prada-luna-rossa-ocean": "PRADA LUNA ROSSA OCEAN EDT",
+      "perfume-name-biotherm-aquasource-gel-50": "BIOTHERM AQUASOURCE HYALU PLUMP GEL 50ML",
+      "perfume-name-lancome-hypnose-absolu-de-noir": "LANCOME HYPNOSE MASCARA ABSOLU DE NOIR",
+      "perfume-name-lancome-24h-drama-liqui-pencil": "LANCOME 24H DRAMA LIQUI-PENCIL",
+      "perfume-name-lancome-tiuw-stick": "LANCOME TEINT IDOLE ULTRA WEAR STICK",
+      "perfume-name-lancome-tiuw-stick-blush-03": "LANCOME TEINT IDOLE ULTRA WEAR STICK BLUSH 03 WILD RUBY",
+      "perfume-name-lancome-tiuw-stick-highlighter": "LANCOME TEINT IDOLE ULTRA WEAR STICK HIGHLIGHTER",
+      "perfume-name-lancome-tiuw-concealer": "LANCOME TEINT IDOLE ULTRA WEAR ALL OVER CONCEALER",
+      "perfume-name-viktor-spicebomb-night-vision-edp": "VIKTOR&ROLF SPICEBOMB NIGHT VISION EDP 90ML",
+      "perfume-name-ralph-lauren-polo-red-edp": "RALPH LAUREN POLO RED EAU DE PARFUM 75ML",
+      "perfume-name-valentino-born-in-roma-uomo-coral-fantasy": "VALENTINO BORN IN ROMA UOMO CORAL FANTASY EDT",
+      "perfume-name-valentino-born-in-roma-donna-coral-fantasy": "VALENTINO BORN IN ROMA DONNA CORAL FANTASY EDP",
+      "perfume-name-prada-luna-rossa-sport": "PRADA LUNA ROSSA SPORT EDT 50ML",
+      "perfume-name-ysl-y-edt": "YVES SAINT LAU Y EDT",
+      "perfume-name-lancome-genifique-sensitive-20": "LANCOME GENIFIQUE SENSITIVE 20ML",
+      "perfume-name-lancome-absolu-rouge-drama-ink": "LANCOME L'ABSOLU ROUGE DRAMA INK",
+      "perfume-name-lancome-le-stylo-waterproof": "LANCOME LE STYLO WATERPROOF",
+      "perfume-name-lancome-liner-idole": "LANCOME LINER IDOLE 01 GLOSSY BLACK",
+      "perfume-name-lancome-renergie-hcf-triple-serum-50": "LANCOME RENERGIE H.C.F. TRIPLE SERUM",
+      "perfume-name-lancome-nutrix-face-cream": "LANCOME NUTRIX FACE CREAM 50ML",
+      "perfume-name-lancome-genifique-light-pearl-20": "LANCOME GENIFIQUE LIGHT PEARL 20ML",
+      "perfume-name-lancome-absolu-rouge-cream-366": "LANCOME L'ABSOLU ROUGE CREAM",
+      "perfume-name-biotherm-tpur-gel-50": "BIOTHERM HOMME T-PUR ANTI-OIL & SHINE GEL 50ML",
+      "perfume-name-biotherm-aquapower-comfort-gel-75": "BIOTHERM HOMME AQUAPOWER COMFORT GEL 75ML",
+      "perfume-name-biotherm-homme-ultra-confort-balm-75": "BIOTHERM HOMME ULTRA CONFORT BALM 75ML",
+      "perfume-name-biotherm-blue-pro-retinol-50": "BIOTHERM BLUE PRO-RETINOL MULTI-CORRECT CREAM 50ML",
+      "perfume-name-ysl-rouge-pur-couture-the-slim-32": "YVES SAINT LAU YSL ROUGE PUR COUTURE THE SLIM 32",
+      "perfume-name-ysl-lash-clash-01": "YVES SAINT LAURENT LASH CLASH MASCARA",
+      "perfume-name-lancome-absolu-rouge-drama-matte": "LANCOME L'ABSOLU ROUGE DRAMA MATTE",
+      "perfume-name-biotherm-waterlover-sun-mist-spf30": "BIOTHERM WATERLOVER SUN MIST SPF30 200ML",
+      "perfume-name-biotherm-life-plankton-elixir-75": "BIOTHERM LIFE PLANKTON ELIXIR 75ML",
+      "perfume-name-prada-luna-rossa-edt": "PRADA LUNA ROSSA EDT",
+      "perfume-name-armani-code-le-parfum": "ARMANI CODE LE PARFUM",
+      "perfume-name-lancome-advanced-genifique-night-cream": "LANCOME ADVANCED GENIFIQUE NIGHT CREAM 50ML",
+      "perfume-name-diesel-d-by-diesel-edt": "D BY DIESEL EDT 50ML",
+      "perfume-name-ysl-libre-le-parfum": "YVES SAINT LAU LIBRE LE PARFUM",
+      "perfume-name-prada-paradoxe-edp": "PRADA PARADOXE EDP",
+      "perfume-name-lancome-bi-facil-clean-care-125": "LANCOME BI-FACIL CLEAN & CARE MAKE-UP REMOVER 125ML",
+      "perfume-name-lancome-hypnose-gift-set": "LANCOME LE 8 HYPNOSE GIFT SET",
+      "perfume-name-valentino-donna-yellow-dream-set": "VALENTINO DONNA BORN IN ROMA YELLOW DREAM GIFT SET",
+      "perfume-name-lancome-tiuw-care-glow-foundation": "LANCOME TEINT IDOLE ULTRA WEAR CARE & GLOW FOUNDATION 30ML",
+      "perfume-name-ysl-all-hours-foundation": "YVES SAINT LAU YSL ALL HOURS FOUNDATION 25ML",
+      "perfume-name-viktor-rolf-good-fortune-edp": "VIKTOR&ROLF GOOD FORTUNE EDP 50ML",
+      "perfume-name-ysl-lhomme-edp": "YVES SAINT LAU L'HOMME EDP 100ML",
+      "perfume-name-ysl-black-opium-le-parfum": "YVES SAINT LAU BLACK OPIUM LE PARFUM",
+      "perfume-name-ysl-libre-body-balm": "YVES SAINT LAURENT LIBRE BODY BALM 200ML",
+      "perfume-name-armani-code-edt": "ARMANI CODE EDT",
+      "perfume-name-valentino-born-in-roma-uomo-intense": "VALENTINO BORN IN ROMA UOMO INTENSE EDP",
+      "perfume-name-valentino-born-in-roma-donna-intense": "VALENTINO BORN IN ROMA DONNA INTENSE EDP",
+      "perfume-name-armani-my-way-le-parfum": "ARMANI MY WAY LE PARFUM",
+      "perfume-name-viktor-rolf-flowerbomb-ruby-orchid": "VIKTOR&ROLF FLOWERBOMB RUBY ORCHID EDP",
+      "perfume-name-ysl-myslf-edp": "YVES SAINT LAURENT MYSLF EDP",
+      "perfume-name-armani-si-intense-edp": "ARMANI SI EDP INTENSE",
+      "perfume-name-lancome-hypnose-mascara-set": "LANCOME LE 8 HYPNOSE MASCARA SET",
+      "perfume-name-biotherm-blue-pro-retinol-eye-cream": "BIOTHERM BLUE PRO-RETINOL EYE CREAM 15ML",
+      "perfume-name-prada-paradoxe-intense": "PRADA PARADOXE INTENSE EDP",
+      "perfume-name-ysl-libre-absolu-platine": "YVES SAINT LAURENT LIBRE L'ABSOLU PLATINE",
+      "perfume-name-lancome-renergie-hpn-300-peptide": "LANCOME RENERGIE H.P.N. 300-PEPTIDE CREAM 50ML",
+      "perfume-name-armani-prive-cuir-zerzura": "ARMANI PRIVE CUIR ZERZURA EDP",
+      "perfume-name-armani-prive-musc-shamal": "ARMANI PRIVE MUSC SHAMAL EDP",
+      "perfume-name-armani-prive-sable-nuit": "ARMANI PRIVE SABLE NUIT EDP",
+      "perfume-name-armani-prive-bois-encens": "ARMANI PRIVE BOIS D'ENCENS EDP",
+      "perfume-name-armani-prive-cuir-amethyste": "ARMANI PRIVE CUIR AMETHYSTE EDP",
+      "perfume-name-armani-prive-oud-royal": "ARMANI PRIVE OUD ROYAL EDP",
+      "perfume-name-armani-prive-cypres-pantelleria": "ARMANI PRIVE CYPRES PANTELLERIA EDT",
+      "perfume-name-armani-prive-figuier-eden": "ARMANI PRIVE FIGUIER EDEN EDT",
+      "perfume-name-armani-prive-jasmin-kusamono": "ARMANI PRIVE JASMIN KUSAMONO EDT",
+      "perfume-name-armani-prive-rose-arabie": "ARMANI PRIVE ROSE D'ARABIE EDP",
+      "perfume-name-armani-prive-orangerie-venise": "ARMANI PRIVE ORANGERIE VENISE EDT",
+      "perfume-name-armani-prive-pivoine-suzhou": "ARMANI PRIVE PIVOINE SUZHOU EDT",
+      "perfume-name-armani-prive-rose-alexandrie": "ARMANI PRIVE ROSE ALEXANDRIE EDT",
+      "perfume-name-armani-prive-rose-milano": "ARMANI PRIVE ROSE MILANO EDT",
+      "perfume-name-armani-prive-the-yulong": "ARMANI PRIVE THE YULONG EDT",
+      "perfume-name-armani-prive-vetiver-hiver": "ARMANI PRIVE VETIVER D'HIVER EDT",
+      "perfume-name-armani-prive-bleu-lazuli": "ARMANI PRIVE BLEU LAZULI EDP",
+      "perfume-name-armani-prive-magenta-tanzanite": "ARMANI PRIVE MAGENTA TANZANITE EDP",
+      "perfume-name-armani-prive-rouge-malachite": "ARMANI PRIVE ROUGE MALACHITE EDP",
+      "perfume-name-armani-prive-santal-dan-sha": "ARMANI PRIVE SANTAL DAN SHA EDT",
+      "perfume-name-armani-eyes-to-kill-classico": "GIORGIO ARMANI EYES TO KILL CLASSICO MASCARA",
+      "perfume-name-armani-eyes-to-kill-eccentrico": "GIORGIO ARMANI EYES TO KILL ECCENTRICO MASCARA",
+      "perfume-name-armani-eyes-to-kill-stellar": "GIORGIO ARMANI EYES TO KILL STELLAR EYESHADOW",
+      "perfume-name-armani-eye-tint": "GIORGIO ARMANI EYE TINT LIQUID EYESHADOW",
+      "perfume-name-armani-smooth-silk-eye-pencil": "GIORGIO ARMANI SMOOTH SILK EYE PENCIL",
+      "perfume-name-armani-fluid-sheer": "GIORGIO ARMANI FLUID SHEER",
+      "perfume-name-armani-luminous-silk-concealer": "GIORGIO ARMANI LUMINOUS SILK CONCEALER 12ML",
+      "perfume-name-armani-lip-power": "GIORGIO ARMANI LIP POWER LIPSTICK",
+      "perfume-name-armani-lip-power-matte": "GIORGIO ARMANI LIP POWER MATTE LIPSTICK",
+      "perfume-name-armani-concealer-brush": "GIORGIO ARMANI CONCEALER BRUSH",
+      "perfume-name-armani-luminous-silk-glow-blush": "GIORGIO ARMANI LUMINOUS SILK GLOW BLUSH",
+      "perfume-name-armani-power-fabric-concealer": "GIORGIO ARMANI POWER FABRIC+ CONCEALER",
+      "perfume-name-armani-lip-maestro": "GIORGIO ARMANI LIP MAESTRO LIQUID LIPSTICK",
+      "perfume-name-armani-lip-maestro-satin": "GIORGIO ARMANI LIP MAESTRO SATIN",
+      "perfume-name-armani-power-fabric-compact": "GIORGIO ARMANI POWER FABRIC COMPACT FOUNDATION",
+      "perfume-name-armani-luminous-silk-glow-fusion-powder": "GIORGIO ARMANI LUMINOUS SILK GLOW FUSION POWDER",
+      "perfume-name-ralph-lauren-polo-red-parfum": "RALPH LAUREN POLO RED PARFUM",
+      "perfume-name-mugler-alien-goddess-supra-florale": "THIERRY MUGLER ALIEN GODDESS SUPRA FLORALE EDP",
+      "perfume-name-prada-luna-rossa-ocean-edp": "PRADA LUNA ROSSA OCEAN EDP",
+      "perfume-name-ysl-y-edp-intense": "YVES SAINT LAURENT Y EDP INTENSE",
+      "perfume-name-lancome-renergie-yeux": "LANCOME RENERGIE YEUX EYE CREAM 15ML",
+      "perfume-name-lancome-absolu-rouge-intimatte": "LANCOME L'ABSOLU ROUGE INTIMATTE",
+      "perfume-name-lancome-hypnose-genifique-bifacil-set": "LANCOME HYPNOSE MASCARA SET (GENIFIQUE + BI-FACIL)",
+      "perfume-name-lancome-genifique-happiness-set": "LANCOME ADVANCED GENIFIQUE HAPPINESS GIFT SET",
+      "perfume-name-ysl-couture-mini-clutch": "YVES SAINT LAURENT COUTURE MINI CLUTCH EYESHADOW PALETTE",
+      "perfume-name-diesel-d-red-edp": "DIESEL D RED EDP",
+      "perfume-name-ysl-black-opium-over-red": "YVES SAINT LAURENT BLACK OPIUM EDP OVER RED",
+      "perfume-name-armani-acqua-di-gio-edt-set": "ARMANI ACQUA DI GIO EDT GIFT SET",
+      "perfume-name-prada-infusion-cedre": "PRADA LES INFUSIONS INFUSION DE CÈDRE EDP 100ML",
+      "perfume-name-prada-infusion-fleur-oranger": "PRADA LES INFUSIONS INFUSION DE FLEUR D'ORANGER EDP 100ML",
+      "perfume-name-prada-infusion-figue": "PRADA LES INFUSIONS INFUSION DE FIGUE EDP 100ML",
+      "perfume-name-valentino-green-stravaganza-donna": "VALENTINO BORN IN ROMA GREEN STRAVAGANZA DONNA EDP",
+      "perfume-name-valentino-green-stravaganza-uomo": "VALENTINO BORN IN ROMA GREEN STRAVAGANZA UOMO EDT",
+      "perfume-name-armani-my-way-nectar": "ARMANI MY WAY NECTAR EDP",
+      "perfume-name-ysl-all-hours-concealer": "YVES SAINT LAURENT ALL HOURS CONCEALER 15ML",
+      "perfume-name-lancome-idole-tint": "LANCOME IDOLE TINT LIQUID EYEBLUSHER",
+      "perfume-name-lancome-lveb-rose-extraordinaire": "LANCOME LA VIE EST BELLE ROSE EXTRAORDINAIRE EDP",
+      "perfume-name-lancome-advanced-genifique-serum-set": "LANCOME ADVANCED GENIFIQUE SERUM GIFT SET",
+      "perfume-name-armani-stronger-with-you-edt-set": "ARMANI EMPORIO STRONGER WITH YOU EDT GIFT SET",
+      "perfume-name-ysl-touche-eclat-blur-primer": "YVES SAINT LAURENT TOUCHE ECLAT BLUR PRIMER 30ML",
+      "perfume-name-armani-prive-blanc-kogane": "ARMANI PRIVE BLANC KOGANE EDP",
+      "perfume-name-armani-prive-noir-kogane": "ARMANI PRIVE NOIR KOGANE EDP",
+      "perfume-name-mugler-alien-hypersense": "THIERRY MUGLER ALIEN HYPERSENSE EDP",
+      "perfume-name-viktor-rolf-flowerbomb-tiger-lily": "VIKTOR&ROLF FLOWERBOMB TIGER LILY EDP",
+      "perfume-name-azzaro-the-most-wanted-edt-intense": "AZZARO THE MOST WANTED EDT INTENSE",
+      "perfume-name-azzaro-wanted-by-night": "AZZARO WANTED BY NIGHT EDP 100ML",
+      "perfume-name-ysl-y-elixir": "YVES SAINT LAURENT Y ELIXIR 60ML",
+      "perfume-name-lancome-uv-expert-supra-screen": "LANCOME UV EXPERT SUPRA SCREEN SPF50+",
+      "perfume-name-lancome-renergie-triple-serum-eye": "LANCOME RENERGIE H.C.F. TRIPLE SERUM EYE 20ML",
+      "perfume-name-biotherm-blue-peptides-uplift-cream": "BIOTHERM BLUE PEPTIDES UPLIFT CREAM",
+      "perfume-name-biotherm-blue-peptides-uplift-night": "BIOTHERM BLUE PEPTIDES UPLIFT NIGHT CREAM 50ML",
+      "perfume-name-ysl-rouge-pur-couture": "YVES SAINT LAURENT ROUGE PUR COUTURE LIPSTICK",
+      "perfume-name-ysl-loveshine": "YVES SAINT LAURENT LOVESHINE LIPSTICK",
+      "perfume-name-azzaro-wanted-edt": "AZZARO WANTED EDT",
+      "perfume-name-azzaro-chrome-edt": "AZZARO CHROME EDT",
+      "perfume-name-azzaro-pour-homme-edt": "AZZARO POUR HOMME EDT",
+      "perfume-name-azzaro-the-most-wanted-edp-intense": "AZZARO THE MOST WANTED EDP INTENSE",
+      "perfume-name-azzaro-the-most-wanted-parfum": "AZZARO THE MOST WANTED PARFUM",
+      "perfume-name-azzaro-chrome-edp": "AZZARO CHROME EDP",
+      "perfume-name-azzaro-chrome-parfum": "AZZARO CHROME PARFUM",
+      "perfume-name-azzaro-wanted-edp": "AZZARO WANTED EDP",
+      "perfume-name-lancome-hypnose-drama": "LANCOME HYPNOSE DRAMA MASCARA 01 EXCESSIVE BLACK",
+      "perfume-name-biotherm-homme-force-supreme-blue-serum": "BIOTHERM HOMME FORCE SUPREME BLUE SERUM 30ML",
+      "perfume-name-biotherm-life-plankton-body-oil": "BIOTHERM LIFE PLANKTON MULTI-CORRECTIVE BODY OIL 125ML",
+      "perfume-name-biotherm-life-plankton-sensitive-balm": "BIOTHERM LIFE PLANKTON SENSITIVE BALM 50ML",
+      "perfume-name-biotherm-blue-retinol-night-serum": "BIOTHERM BLUE RETINOL NIGHT SERUM 30ML",
+      "perfume-name-biotherm-waterlover-sun-milk-spf30-400": "BIOTHERM WATERLOVER HYDRATING SUN MILK SPF30 400ML",
+      "perfume-name-armani-acqua-di-gioia-edp-intense": "ARMANI ACQUA DI GIOIA EDP INTENSE",
+      "perfume-name-armani-prive-cuir-noir": "ARMANI PRIVE CUIR NOIR EDP",
+      "perfume-name-armani-prive-the-yulong-soie-de-nacre": "ARMANI PRIVE THE YULONG SOIE DE NACRE EDT",
+      "perfume-name-armani-maestro-fusion-foundation": "GIORGIO ARMANI MAESTRO FUSION MAKE UP FOUNDATION 30ML",
+      "perfume-name-armani-prisma-glass": "GIORGIO ARMANI PRISMA GLASS LIP GLOSS",
+      "perfume-name-armani-luminous-silk-cheek-tint": "GIORGIO ARMANI LUMINOUS SILK CHEEK TINT",
+      "perfume-name-ysl-all-hours-hyper-finish": "YSL ALL HOURS HYPER FINISH POWDER",
+      "perfume-name-armani-acqua-di-gio-profondo-parfum": "GIORGIO ARMANI ACQUA DI GIÒ PROFONDO PARFUM",
+      "perfume-name-armani-stronger-with-you-tobacco": "EMPORIO ARMANI STRONGER WITH YOU TOBACCO EDP",
+      "perfume-name-viktor-rolf-spicebomb-infrared-edp": "VIKTOR&ROLF SPICEBOMB INFRARED EDP",
+      "perfume-name-lancome-idole-edt": "LANCOME IDOLE EDT",
+      "perfume-name-lancome-tiuw-serum-bronzer": "LANCOME TEINT IDOLE ULTRA WEAR SKIN TRANSFORMING BRONZER",
+      "perfume-name-lancome-tiuw-serum-highlighter": "LANCOME TEINT IDOLE ULTRA WEAR SKIN TRANSFORMING HIGHLIGHTER",
+      "perfume-name-lancome-lip-idole-butterglow": "LANCOME LIP IDOLE BUTTERGLOW",
+      "perfume-name-lancome-lip-idole-liner": "LANCOME LIP IDOLE LINER",
+      "perfume-name-prada-luna-rossa-ocean-le-parfum": "PRADA LUNA ROSSA OCEAN LE PARFUM",
+      "perfume-name-armani-acqua-di-gio-edp": "GIORGIO ARMANI ACQUA DI GIÒ EDP",
+      "perfume-name-armani-acqua-di-gio-edt": "GIORGIO ARMANI ACQUA DI GIÒ EDT",
+      "perfume-name-armani-acqua-di-gio-parfum": "GIORGIO ARMANI ACQUA DI GIÒ PARFUM",
+      "perfume-name-armani-acqua-di-gio-profondo-edp": "GIORGIO ARMANI ACQUA DI GIÒ PROFONDO EDP",
+      "perfume-name-armani-acqua-di-gio-profondo-edt": "GIORGIO ARMANI ACQUA DI GIÒ PROFONDO EDT",
+      "perfume-name-armani-acqua-di-gio-elixir": "GIORGIO ARMANI ACQUA DI GIÒ ELIXIR 50ML",
+      "perfume-name-armani-code-edp-homme": "ARMANI CODE EDP",
+      "perfume-name-armani-emporio-he": "EMPORIO ARMANI HE EDT 100ML",
+      "perfume-name-armani-si-passione-intense": "ARMANI SI PASSIONE EDP INTENSE",
+      "perfume-name-armani-si-passione-red-musk": "ARMANI SI PASSIONE RED MUSK EDP",
+      "perfume-name-armani-my-way-ylang": "ARMANI MY WAY YLANG EDP",
+      "perfume-name-armani-stronger-with-you-parfum": "EMPORIO ARMANI STRONGER WITH YOU PARFUM",
+      "perfume-name-armani-prive-vert-malachite": "ARMANI PRIVE VERT MALACHITE EDP",
+      "perfume-name-armani-luminous-silk-acqua-highlighter": "GIORGIO ARMANI LUMINOUS SILK ACQUA HIGHLIGHTER",
+      "perfume-name-armani-designer-glow-foundation": "GIORGIO ARMANI DESIGNER GLOW FOUNDATION 30ML",
+      "perfume-name-armani-vertigo-lift-mascara": "GIORGIO ARMANI VERTIGO LIFT MASCARA 01 BLACK",
+      "perfume-name-armani-luminous-silk-bronzer": "GIORGIO ARMANI LUMINOUS SILK BRONZER 120 SUNBATHED DUNE",
+      "perfume-name-armani-luminous-silk-cheek-tint-shine": "GIORGIO ARMANI LUMINOUS SILK CHEEK TINT SHINE",
+      "perfume-name-armani-code-edp-set": "ARMANI CODE EDP GIFT SET",
+      "perfume-name-armani-si-edp-body-set": "ARMANI SI EDP GIFT SET WITH BODY LOTION & SHOWER GEL",
+      "perfume-name-armani-si-passione-set": "ARMANI SI PASSIONE EDP GIFT SET",
+      "perfume-name-armani-my-way-edp-set": "ARMANI MY WAY EDP GIFT SET 50ML + 10ML",
+      "perfume-name-armani-acqua-di-gio-profondo-set": "ARMANI ACQUA DI GIO PROFONDO EDP GIFT SET",
+      "perfume-name-armani-swy-intensely-set": "EMPORIO ARMANI STRONGER WITH YOU INTENSELY GIFT SET",
+      "perfume-name-armani-swy-parfum-set": "EMPORIO ARMANI STRONGER WITH YOU PARFUM GIFT SET",
+      "perfume-name-armani-acqua-di-gio-edt-set-50": "ARMANI ACQUA DI GIO EDT GIFT SET 50ML + SHOWER GEL",
+      "perfume-name-armani-acqua-di-gio-parfum-set": "ARMANI ACQUA DI GIO PARFUM GIFT SET",
+      "perfume-name-armani-my-way-body-set": "ARMANI MY WAY EDP GIFT SET WITH BODY LOTION & SHOWER GEL",
+      "perfume-name-armani-si-edp-spring-set": "ARMANI SI EDP GIFT SET 50ML + 10ML + BODY LOTION",
+      "perfume-name-valentino-uomo-born-in-roma-edt-set": "VALENTINO UOMO BORN IN ROMA EDT GIFT SET",
+      "perfume-name-valentino-donna-born-in-roma-edp-set": "VALENTINO DONNA BORN IN ROMA EDP GIFT SET",
+      "perfume-name-prada-paradoxe-holiday-set": "PRADA PARADOXE EDP HOLIDAY GIFT SET",
+      "perfume-name-prada-luna-rossa-ocean-edp-set": "PRADA LUNA ROSSA OCEAN EDP GIFT SET",
+      "perfume-name-prada-paradoxe-virtual-flower-set": "PRADA PARADOXE VIRTUAL FLOWER EDP GIFT SET",
+      "perfume-name-prada-luna-rossa-carbon-set": "PRADA LUNA ROSSA CARBON EDT GIFT SET",
+      "perfume-name-prada-luna-rossa-black-set": "PRADA LUNA ROSSA BLACK EDP GIFT SET",
+      "perfume-name-prada-paradoxe-edp-spring-set": "PRADA PARADOXE EDP GIFT SET 50ML + 10ML",
+      "perfume-name-ysl-y-le-parfum-set": "YVES SAINT LAURENT Y LE PARFUM GIFT SET",
+      "perfume-name-ysl-myslf-le-parfum-set": "YVES SAINT LAURENT MYSLF LE PARFUM GIFT SET",
+      "perfume-name-ysl-myslf-edp-set": "YVES SAINT LAURENT MYSLF EDP GIFT SET",
+      "perfume-name-ysl-black-opium-set-30": "YVES SAINT LAURENT BLACK OPIUM EDP GIFT SET 30ML + 10ML",
+      "perfume-name-ysl-black-opium-set-50": "YVES SAINT LAURENT BLACK OPIUM EDP GIFT SET 50ML + MASCARA",
+      "perfume-name-lancome-idole-holiday-set": "LANCOME IDOLE EDP 50ML HOLIDAY GIFT SET",
+      "perfume-name-lancome-iconic-mascara-set": "LANCOME ICONIC MASCARA HOLIDAY SET",
+      "perfume-name-lancome-lveb-elixir-set": "LANCOME LA VIE EST BELLE L'ELIXIR EDP GIFT SET",
+      "perfume-name-lancome-lveb-candle-set": "LANCOME LA VIE EST BELLE EDP 50ML + CANDLE SET",
+      "perfume-name-lancome-hypnose-drama-set": "LANCOME HYPNOSE DRAMA MASCARA SET",
+      "perfume-name-viktor-rolf-spicebomb-extreme-set": "VIKTOR&ROLF SPICEBOMB EXTREME EDP GIFT SET",
+      "perfume-name-cacharel-yes-i-am-set": "CACHAREL YES I AM EDP GIFT SET",
+      "perfume-name-mugler-angel-elixir-set": "MUGLER ANGEL ELIXIR EDP GIFT SET",
+      "perfume-name-biotherm-homme-force-supreme-set": "BIOTHERM HOMME FORCE SUPREME GIFT SET",
+      "perfume-name-ysl-all-hours-hyper-bronze": "YSL ALL HOURS HYPER BRONZE",
+      "perfume-name-ysl-all-hours-hyper-luminize": "YSL ALL HOURS HYPER LUMINIZE HIGHLIGHTER",
+      "perfume-name-ysl-all-hours-hyper-blur-loose-powder": "YSL ALL HOURS HYPER BLUR LOOSE POWDER",
+      "perfume-name-ysl-loveshine-balm": "YSL LOVESHINE CANDY GLOW TINTED BUTTER BALM",
+      "perfume-name-ysl-lines-liberated": "YSL LINES LIBERATED WATERPROOF EYE PENCIL",
+      "perfume-name-ysl-make-me-blush-liquid": "YSL MAKE ME BLUSH LIQUID BLUSH",
+      "perfume-name-ysl-make-me-blush-bold": "YSL MAKE ME BLUSH BOLD BLURRING POWDER BLUSH",
+      "perfume-name-ysl-loveshine-gloss": "YSL LOVESHINE PLUMPING LIP OIL GLOSS",
+      "perfume-name-ysl-libre-flowers-flames": "YVES SAINT LAURENT LIBRE FLOWERS & FLAMES EDP FLORALE",
+      "perfume-name-ysl-myslf-le-parfum": "YVES SAINT LAURENT MYSLF LE PARFUM",
+      "perfume-name-ysl-black-opium-glitter": "YVES SAINT LAURENT BLACK OPIUM EDP GLITTER",
+      "perfume-name-ysl-libre-leau-nue": "YVES SAINT LAURENT LIBRE L'EAU NUE",
+      "perfume-name-ysl-y-le-parfum": "YVES SAINT LAURENT Y LE PARFUM",
+      "perfume-name-prada-paradoxe-virtual-flower": "PRADA PARADOXE VIRTUAL FLOWER EDP",
+      "perfume-name-prada-infusion-vanille": "PRADA LES INFUSIONS INFUSION DE VANILLE EDP 100ML",
+      "perfume-name-valentino-born-in-roma-the-gold-uomo": "VALENTINO BORN IN ROMA THE GOLD UOMO EDT 100ML",
+      "perfume-name-valentino-born-in-roma-the-gold-donna": "VALENTINO BORN IN ROMA THE GOLD DONNA EDP",
+      "perfume-name-valentino-born-in-roma-uomo-extradose": "VALENTINO BORN IN ROMA UOMO EXTRADOSE PARFUM",
+      "perfume-name-valentino-born-in-roma-donna-extradose": "VALENTINO BORN IN ROMA DONNA EXTRADOSE PARFUM",
+      "perfume-name-lancome-lveb-elixir": "LANCOME LA VIE EST BELLE L'ELIXIR EDP",
+      "perfume-name-lancome-idole-power": "LANCOME IDOLE POWER EDP INTENSE",
+      "perfume-name-lancome-tresor-la-nuit-vanille-noire": "LANCOME LA NUIT TRESOR VANILLE NOIRE EDP",
+      "perfume-name-ralph-lauren-ralphs-club-edt": "RALPH LAUREN RALPH'S CLUB EDT",
+      "perfume-name-mugler-angel-fantasm": "MUGLER ANGEL FANTASM EDP",
+      "perfume-name-mugler-amen-fantasm": "MUGLER A*MEN FANTASM EDP 100ML",
+      "perfume-name-mugler-alien-extraintense": "MUGLER ALIEN EXTRAINTENSE EDP INTENSE",
+      "perfume-name-cacharel-ella-ella": "CACHAREL ELLA ELLA EDP",
+      "perfume-name-viktor-rolf-spicebomb-dark-leather": "VIKTOR&ROLF SPICEBOMB DARK LEATHER EDP",
+      "perfume-name-diesel-only-the-brave-edp": "DIESEL ONLY THE BRAVE EDP",
+      "perfume-name-azzaro-forever-wanted-elixir": "AZZARO FOREVER WANTED ELIXIR",
+      "perfume-name-lancome-lip-idole-juicytreat": "LANCOME LIP IDOLE JUICYTREAT OIL-IN-GLOSS",
+      "perfume-name-lancome-lash-idole-flutter": "LANCOME LASH IDOLE FLUTTER EXTENSION MASCARA 01",
+      "perfume-name-lancome-tiuw-setting-powder": "LANCOME TEINT IDOLE ULTRA WEAR SKIN REFINING SETTING POWDER",
+      "perfume-name-lancome-tiuw-care-glow-concealer": "LANCOME TEINT IDOLE ULTRA WEAR CARE & GLOW SERUM CONCEALER 125W",
+      "perfume-name-lancome-hydra-zen-gel-cream": "LANCOME HYDRA ZEN GEL CREAM",
+      "perfume-name-lancome-genifique-ultimate": "LANCOME ADVANCED GENIFIQUE ULTIMATE SERUM",
+      "perfume-name-lancome-renergie-crx-triple-serum-retinol": "LANCOME RENERGIE C.R.X. TRIPLE SERUM RETINOL 50ML",
+      "perfume-name-lancome-renergie-hpn-uvmune-spf50": "LANCOME RENERGIE H.P.N. UVMUNE CREAM SPF50 50ML",
+      "perfume-name-lancome-tonique-confort-200": "LANCOME TONIQUE CONFORT 200ML",
+      "perfume-name-biotherm-life-plankton-regenerating-serum": "BIOTHERM LIFE PLANKTON REGENERATING SERUM",
+      "perfume-name-biotherm-homme-aquapower-advanced-gel": "BIOTHERM HOMME AQUAPOWER ADVANCED GEL",
+      "perfume-name-biotherm-lait-corporel-active-recovery": "BIOTHERM LAIT CORPOREL ACTIVE RECOVERY 400ML",
+      "perfume-name-biotherm-blue-peptides-eyes-lips": "BIOTHERM BLUE PEPTIDES EYES & LIPS CONTOUR RESHAPER 15ML",
+      "perfume-name-biotherm-aquasource-hydra-barrier-cleanser": "BIOTHERM AQUASOURCE HYDRA BARRIER CLEANSER 150ML",
+      "perfume-name-biotherm-aquasource-hydra-barrier-cream": "BIOTHERM AQUASOURCE HYDRA BARRIER CREAM",
+      "perfume-name-lancome-o-de-lancome-off-now": "LANCOME LES O DE LANCOME OFF NOW EDT 100ML",
+      "perfume-name-lancome-o-de-lancome-over-the-top": "LANCOME LES O DE LANCOME OVER THE TOP EDT 100ML",
+      "perfume-name-lancome-o-de-lancome-ozenith": "LANCOME LES O DE LANCOME O ZENITH EDT 100ML",
+      "perfume-name-armani-prive-iris-bleu": "ARMANI PRIVE IRIS BLEU EDT",
+      "perfume-name-armani-prive-gardenia-antigua": "ARMANI PRIVE GARDENIA ANTIGUA EDT 100ML",
+      "perfume-name-armani-prive-indigo-tanzanite": "ARMANI PRIVE INDIGO TANZANITE EDP 100ML",
+      "perfume-name-cacharel-anais-anais": "CACHAREL ANAIS ANAIS EDT",
+      "perfume-name-armani-code-edp-75-spring-set": "ARMANI CODE EDP 75ML + 15ML GIFT SET",
+      "perfume-name-armani-code-edt-50-spring-set": "ARMANI CODE EDT 50ML + BODY SHAMPOO GIFT SET",
+      "perfume-name-lancome-lash-idole-idole-edp-set": "LANCOME LASH IDOLE MASCARA + IDOLE EDP 10ML SET",
+      "perfume-name-lancome-lash-idole-flutter-extension-set": "LANCOME LASH IDOLE FLUTTER EXTENSION + LIP IDOLE MINI SET",
+      "perfume-name-valentino-uomo-born-in-roma-edt-50-set": "VALENTINO UOMO BORN IN ROMA EDT 50ML + 15ML SET",
+      "perfume-name-biotherm-homme-aquapower-routine-set": "BIOTHERM HOMME AQUAPOWER ROUTINE SET",
+      "perfume-name-biotherm-homme-force-supreme-routine-set": "BIOTHERM HOMME FORCE SUPREME ROUTINE SET",
+      "perfume-name-lancome-genifique-ultimate-routine-set": "LANCOME GENIFIQUE ULTIMATE SERUM 30ML ROUTINE SET",
+      "perfume-name-lancome-juicy-tubes": "LANCOME JUICY TUBES LIP GLOSS 15ML",
+      "perfume-name-lancome-skin-idole-supertint": "LANCOME SKIN IDOLE 3 SERUM SUPERTINT 30ML",
+      "perfume-name-lancome-genifique-eye-cream": "LANCOME GENIFIQUE ULTIMATE EYE CREAM 20ML",
+      "perfume-name-lancome-renergie-multi-glow-day": "LANCOME RENERGIE MULTI GLOW DAY CREAM 50ML",
+      "perfume-name-biotherm-waterlover-sun-milk-spf50-400": "BIOTHERM WATERLOVER HYDRATING SUN MILK SPF50+ 400ML",
+      "perfume-name-biotherm-waterlover-milky-sun-spray-spf50": "BIOTHERM WATERLOVER MILKY SUN SPRAY SPF50+ 200ML",
+      "perfume-name-biotherm-collagen-fit-body-cream": "BIOTHERM COLLAGEN FIT INTENSIVE HYDRA BODY CREAM 200ML",
+      "perfume-name-biotherm-collagen-fit-body-milk": "BIOTHERM COLLAGEN FIT FIRMING BODY MILK 400ML",
+      "perfume-name-biotherm-homme-force-supreme-body-reshaper": "BIOTHERM HOMME FORCE SUPREME BODY RESHAPER 125ML",
+      "perfume-name-biotherm-homme-force-supreme-face-reshaper": "BIOTHERM HOMME FORCE SUPREME FACE RESHAPER CREAM 50ML",
+      "perfume-name-armani-prisma-glass-icy-plumper": "GIORGIO ARMANI PRISMA GLASS ICY PLUMPER",
+      "perfume-name-ysl-loveshine-candy-glaze": "YSL LOVESHINE CANDY GLAZE LIP GLOSS STICK",
+      "perfume-name-margiela-replica-beach-walk": "MAISON MARGIELA REPLICA BEACH WALK EDT",
+      "perfume-name-margiela-replica-by-the-fireplace": "MAISON MARGIELA REPLICA BY THE FIREPLACE EDT 30ML",
+      "perfume-name-margiela-replica-jazz-club": "MAISON MARGIELA REPLICA JAZZ CLUB EDT",
+      "perfume-name-margiela-replica-lazy-sunday-morning": "MAISON MARGIELA REPLICA LAZY SUNDAY MORNING EDT",
+      "perfume-name-margiela-replica-afternoon-delight": "MAISON MARGIELA REPLICA AFTERNOON DELIGHT EDT",
+      "perfume-name-margiela-replica-autumn-vibes": "MAISON MARGIELA REPLICA AUTUMN VIBES EDT 30ML",
+      "perfume-name-margiela-replica-from-the-garden": "MAISON MARGIELA REPLICA FROM THE GARDEN EDT",
+      "perfume-name-margiela-replica-sailing-day": "MAISON MARGIELA REPLICA SAILING DAY EDT 100ML",
+      "perfume-name-margiela-replica-on-a-date": "MAISON MARGIELA REPLICA ON A DATE EDT 30ML",
+      "perfume-name-margiela-replica-when-the-rain-stops": "MAISON MARGIELA REPLICA WHEN THE RAIN STOPS EDT",
+      "perfume-name-margiela-replica-under-the-stars": "MAISON MARGIELA REPLICA UNDER THE STARS EDT",
+      "perfume-name-margiela-replica-coffee-break": "MAISON MARGIELA REPLICA COFFEE BREAK EDT 100ML",
+      "perfume-name-margiela-replica-flying": "MAISON MARGIELA REPLICA FLYING EDP 100ML",
+      "perfume-name-margiela-replica-ideal-one": "MAISON MARGIELA REPLICA IDEAL ONE EDP 100ML",
+      "perfume-name-margiela-replica-dancing-on-the-moon": "MAISON MARGIELA REPLICA DANCING ON THE MOON EDP 100ML",
+      "perfume-name-margiela-replica-celestial-whispers": "MAISON MARGIELA REPLICA CELESTIAL WHISPERS EDP 100ML",
+      "perfume-name-margiela-replica-under-the-lemon-trees": "MAISON MARGIELA REPLICA UNDER THE LEMON TREES EDT 100ML",
+      "perfume-name-margiela-replica-bubble-bath": "MAISON MARGIELA REPLICA BUBBLE BATH EDT 100ML",
+      "perfume-name-margiela-replica-lazy-sunday-morning-candle": "MAISON MARGIELA REPLICA LAZY SUNDAY MORNING CANDLE 165G",
+      "perfume-name-mugler-amen-stellar": "MUGLER A*MEN STELLAR EDP",
+      "perfume-name-mugler-angel-stellar": "MUGLER ANGEL STELLAR EDP",
+      "perfume-name-mugler-angel-edp": "MUGLER ANGEL EDP",
+      "perfume-name-mugler-angel-nova": "MUGLER ANGEL NOVA EDP 25ML",
+      "perfume-name-ralph-lauren-big-pony-1": "RALPH LAUREN POLO BIG PONY #1 BLUE EDT 100ML",
+      "perfume-name-ralph-lauren-polo-blue-parfum": "RALPH LAUREN POLO BLUE PARFUM 75ML",
+      "perfume-name-ralph-lauren-polo-67-edt": "RALPH LAUREN POLO 67 EDT",
+      "perfume-name-ralph-lauren-polo-67-edp": "RALPH LAUREN POLO 67 EDP",
+      "perfume-name-viktor-rolf-spicebomb-metallic-musk": "VIKTOR&ROLF SPICEBOMB METALLIC MUSK EDP",
+      "perfume-name-viktor-rolf-flowerbomb-extreme": "VIKTOR&ROLF FLOWERBOMB EXTREME EDP INTENSE",
+      "perfume-name-prada-paradoxe-radical-essence": "PRADA PARADOXE RADICAL ESSENCE PARFUM",
+      "perfume-name-prada-paradoxe-hair-mist": "PRADA PARADOXE HAIR MIST 30ML",
+      "perfume-name-prada-paradoxe-intense-90-set": "PRADA PARADOXE INTENSE EDP 90ML + 10ML GIFT SET",
+      "perfume-name-ysl-myslf-labsolu": "YVES SAINT LAURENT MYSLF L'ABSOLU PARFUM",
+      "perfume-name-valentino-born-in-roma-body-shimmer": "VALENTINO BORN IN ROMA DONNA PERFUMED BODY SHIMMER 125ML",
+      "perfume-name-valentino-born-in-roma-hair-body-mist": "VALENTINO BORN IN ROMA DONNA PERFUMED HAIR & BODY MIST 90ML",
+      "perfume-name-armani-code-elixir": "ARMANI CODE ELIXIR 50ML",
+      "perfume-name-armani-si-parfum": "ARMANI SI PARFUM",
+      "perfume-name-armani-swy-intensely-edp-50-set": "EMPORIO ARMANI STRONGER WITH YOU INTENSELY EDP 50ML + SHOWER GEL SET",
+      "perfume-name-lancome-lveb-vanille-nude": "LANCOME LA VIE EST BELLE VANILLE NUDE EDP",
+      "perfume-name-lancome-absolue-longevity-soft-cream": "LANCOME ABSOLUE LONGEVITY THE SOFT CREAM 60ML",
+      "perfume-name-biotherm-aquascreen-uv-daily-spf50": "BIOTHERM AQUASCREEN ACTIVEWEAR DAILY UV FLUID SPF50+ 40ML",
+      "perfume-name-lancome-skin-idole-juicy-blush": "LANCOME SKIN IDOLE JUICY LIQUID BLUSH",
+      "perfume-name-ysl-the-inks-blur": "YSL THE INKS BLUR MATTE LIP STAIN",
+      "perfume-name-ysl-the-inks-vinyl-cream": "YSL THE INKS VINYL CREAM LIP STAIN",
+      "perfume-name-ysl-the-slim-couture-matte": "YSL ROUGE PUR COUTURE THE SLIM MATTE LIPSTICK",
+      "perfume-name-ysl-all-hours-glow-foundation": "YSL ALL HOURS GLOW FOUNDATION 25ML",
+      "perfume-name-armani-skin-tint": "GIORGIO ARMANI SKIN TINT 30ML",
+      "perfume-name-armani-luminous-silk-foundation": "GIORGIO ARMANI LUMINOUS SILK FOUNDATION 30ML",
+      "perfume-name-armani-luminous-silk-glow-primer": "GIORGIO ARMANI LUMINOUS SILK ILLUMINATING PRIMER",
+      "perfume-name-armani-prive-cuir-nu": "ARMANI PRIVE CUIR NU EDP INTENSE",
+      "perfume-name-armani-power-of-you": "EMPORIO ARMANI POWER OF YOU EDP",
+      "perfume-name-armani-stronger-with-you-amber": "EMPORIO ARMANI STRONGER WITH YOU AMBER EDP 100ML",
+      "perfume-name-lancome-magie-noire": "LANCOME MAGIE NOIRE EDT 75ML",
+      "perfume-name-lancome-absolue-lextrait-cream": "LANCOME ABSOLUE L'EXTRAIT ELIXIR CREAM 50ML",
+      "perfume-name-lancome-absolue-lextrait-yeux": "LANCOME ABSOLUE L'EXTRAIT EYE CREAM 15ML",
+      "perfume-name-biotherm-aquasource-vitamin-glow-gel": "BIOTHERM AQUASOURCE+ VITAMIN GLOW GEL 50ML",
+      "perfume-name-biotherm-aquasource-cica-nutri-cream": "BIOTHERM AQUASOURCE CICA NUTRI CREAM 30ML",
+      "perfume-name-prada-paradigme-edp": "PRADA PARADIGME EDP",
+      "perfume-name-valentino-born-in-roma-rendez-vous-uomo": "VALENTINO UOMO BORN IN ROMA RENDEZ-VOUS IVORY EDT 100ML",
+      "perfume-name-valentino-born-in-roma-rendez-vous-donna": "VALENTINO DONNA BORN IN ROMA RENDEZ-VOUS IVORY EDP",
+      "perfume-name-valentino-born-in-roma-purple-melancholia-uomo": "VALENTINO UOMO BORN IN ROMA PURPLE MELANCHOLIA EDT",
+      "perfume-name-valentino-born-in-roma-purple-melancholia-donna": "VALENTINO DONNA BORN IN ROMA PURPLE MELANCHOLIA EDP",
+      "perfume-name-ysl-libre-vanille-couture": "YVES SAINT LAURENT LIBRE VANILLE COUTURE EDP 50ML",
+      "perfume-name-margiela-untitled-l-eau": "MAISON MARGIELA (UNTITLED) L'EAU EDT 100ML",
+      "perfume-name-margiela-untitled-edp": "MAISON MARGIELA (UNTITLED) EDP 100ML",
+      "perfume-name-margiela-replica-beach-vibes-candle": "MAISON MARGIELA REPLICA BEACH VIBES CANDLE 165G",
+      "perfume-name-margiela-replica-jazz-club-diffuser": "MAISON MARGIELA REPLICA JAZZ CLUB DIFFUSER 185ML",
+      "perfume-name-margiela-replica-from-the-garden-candle": "MAISON MARGIELA REPLICA FROM THE GARDEN CANDLE 165G",
+      "perfume-name-margiela-replica-lazy-sunday-morning-shower-gel": "MAISON MARGIELA REPLICA LAZY SUNDAY MORNING SHOWER GEL 200ML",
+      "perfume-name-margiela-replica-lazy-sunday-morning-body-lotion": "MAISON MARGIELA REPLICA LAZY SUNDAY MORNING BODY LOTION 200ML",
+      "perfume-name-dkny-be-delicious": "DKNY BE DELICIOUS EDP",
+      "perfume-name-dkny-be-100-delicious": "DKNY BE 100% DELICIOUS EDP",
+      "perfume-name-dkny-be-delicious-fresh-blossom": "DKNY BE DELICIOUS FRESH BLOSSOM EDP",
+      "perfume-name-dkny-be-extra-delicious": "DKNY BE EXTRA DELICIOUS EDP",
+      "perfume-name-dkny-women-edp": "DKNY WOMEN ENERGIZING EDP",
+      "perfume-name-dkny-be-delicious-orchard-street": "DKNY BE DELICIOUS ORCHARD ST. EDP",
+      "perfume-name-cavalli-paradiso": "ROBERTO CAVALLI PARADISO EDP",
+      "perfume-name-just-cavalli-her": "JUST CAVALLI FOR HER EDT",
+      "perfume-name-just-cavalli-him": "JUST CAVALLI FOR HIM EDT",
+      "perfume-name-cavalli-signature": "ROBERTO CAVALLI SIGNATURE EDP",
+      "perfume-name-cavalli-nero-assoluto": "ROBERTO CAVALLI NERO ASSOLUTO EDP 75ML",
+      "perfume-name-cavalli-sweet-ferocious": "ROBERTO CAVALLI SIGNATURE SWEET FEROCIOUS EDP",
+      "perfume-name-just-cavalli-wild-heart-her": "JUST CAVALLI WILD HEART FOR HER EDP",
+      "perfume-name-just-cavalli-wild-heart-him": "JUST CAVALLI WILD HEART FOR HIM EDT",
+      "perfume-name-cavalli-paradiso-rosa": "ROBERTO CAVALLI PARADISO ROSA EDP",
+      "perfume-name-cavalli-serpentine": "ROBERTO CAVALLI SERPENTINE PARFUM",
+      "perfume-name-just-cavalli-give-me-magic-him": "JUST CAVALLI GIVE ME MAGIC FOR HIM EDT",
+      "perfume-name-just-cavalli-give-me-magic-her": "JUST CAVALLI GIVE ME MAGIC FOR HER EDP",
+      "perfume-name-ysl-libre-edp-loveshine-set": "YVES SAINT LAURENT LIBRE EDP 30ML + LOVESHINE GIFT SET",
+      "perfume-name-ysl-black-opium-holiday-set-50": "YVES SAINT LAURENT BLACK OPIUM EDP 50ML HOLIDAY GIFT SET",
+      "perfume-name-ysl-myslf-le-parfum-holiday-set": "YVES SAINT LAURENT MYSLF LE PARFUM 60ML HOLIDAY GIFT SET",
+      "perfume-name-ysl-myslf-edp-holiday-set-60": "YVES SAINT LAURENT MYSLF EDP 60ML HOLIDAY GIFT SET",
+      "perfume-name-ysl-myslf-edp-holiday-set-40": "YVES SAINT LAURENT MYSLF EDP 40ML HOLIDAY GIFT SET",
+      "perfume-name-ysl-libre-edp-intense-holiday-set": "YVES SAINT LAURENT LIBRE EDP INTENSE 90ML HOLIDAY GIFT SET",
+      "perfume-name-prada-paradoxe-intense-holiday-set": "PRADA PARADOXE INTENSE EDP 50ML HOLIDAY GIFT SET",
+      "perfume-name-prada-paradoxe-holiday-set-2025": "PRADA PARADOXE EDP 50ML HOLIDAY GIFT SET 2025",
+      "perfume-name-prada-paradigme-set": "PRADA PARADIGME EDP 100ML GIFT SET",
+      "perfume-name-prada-luna-rossa-black-set-100": "PRADA LUNA ROSSA BLACK EDP 100ML GIFT SET",
+      "perfume-name-armani-si-passione-holiday-set": "ARMANI SI PASSIONE EDP 50ML HOLIDAY GIFT SET",
+      "perfume-name-armani-stronger-with-you-intensely-set-100": "ARMANI EMPORIO STRONGER WITH YOU INTENSELY EDP 100ML HOLIDAY GIFT SET",
+      "perfume-name-armani-stronger-with-you-intensely-set-50": "ARMANI EMPORIO STRONGER WITH YOU INTENSELY EDP 50ML HOLIDAY GIFT SET",
+      "perfume-name-armani-si-edp-holiday-set": "ARMANI SI EDP 50ML HOLIDAY GIFT SET",
+      "perfume-name-armani-code-edt-holiday-set": "ARMANI CODE EDT 50ML HOLIDAY GIFT SET",
+      "perfume-name-armani-my-way-holiday-set": "ARMANI MY WAY EDP 50ML HOLIDAY GIFT SET",
+      "perfume-name-armani-stronger-with-you-edt-holiday-set": "ARMANI EMPORIO STRONGER WITH YOU EDT 100ML HOLIDAY GIFT SET",
+      "perfume-name-lancome-la-vie-est-belle-edp-30-set": "LANCOME LA VIE EST BELLE EDP 30ML GIFT SET",
+      "perfume-name-lancome-juicy-tubes-mini-set": "LANCOME JUICY TUBES MINI GIFT SET",
+      "perfume-name-lancome-idole-edp-25-set": "LANCOME IDOLE EDP 25ML GIFT SET",
+      "perfume-name-lancome-idole-edp-50-set": "LANCOME IDOLE EDP 50ML GIFT SET",
+      "perfume-name-lancome-la-vie-est-belle-edp-50-set": "LANCOME LA VIE EST BELLE EDP 50ML GIFT SET",
+      "perfume-name-lancome-la-vie-est-belle-vanille-nude-set": "LANCOME LA VIE EST BELLE VANILLE NUDE EDP 50ML GIFT SET",
+      "perfume-name-lancome-renergie-triple-serum-20-set": "LANCOME RENERGIE TRIPLE SERUM 20ML GIFT SET",
+      "perfume-name-lancome-renergie-crx-triple-serum-50-set": "LANCOME RENERGIE C.R.X. TRIPLE SERUM 50ML GIFT SET",
+      "perfume-name-lancome-la-vie-est-belle-edp-100-set": "LANCOME LA VIE EST BELLE EDP 100ML GIFT SET",
+      "perfume-name-lancome-la-vie-est-belle-elixir-petit-theatre": "LANCOME LA VIE EST BELLE L'ELIXIR 50ML PETIT THEATRE",
+      "perfume-name-lancome-la-vie-est-belle-petit-theatre": "LANCOME LA VIE EST BELLE EDP 50ML PETIT THEATRE",
+      "perfume-name-lancome-renergie-hpn-300-peptide-50-set": "LANCOME RENERGIE H.P.N. 300-PEPTIDE CREAM 50ML GIFT SET",
+      "perfume-name-lancome-hypnose-drama-mascara-set": "LANCOME HYPNOSE DRAMA MASCARA GIFT SET",
+      "perfume-name-lancome-monsieur-big-set": "LANCOME MONSIEUR BIG MASCARA GIFT SET",
+      "perfume-name-biotherm-homme-aquafitness-set": "BIOTHERM HOMME AQUAFITNESS GIFT SET",
+      "perfume-name-biotherm-homme-force-supreme-reshaper-set": "BIOTHERM HOMME FORCE SUPREME RESHAPER GIFT SET",
+      "perfume-name-biotherm-deo-pure-duo-set": "BIOTHERM DEO PURE DUO GIFT SET",
+      "perfume-name-biotherm-aqua-drop-set": "BIOTHERM AQUA DROP GIFT SET",
+      "perfume-name-biotherm-homme-power-drop-set": "BIOTHERM HOMME POWER DROP GIFT SET",
+      "perfume-name-valentino-uomo-born-in-roma-edt-holiday-set": "VALENTINO UOMO BORN IN ROMA EDT HOLIDAY GIFT SET",
+      "perfume-name-valentino-donna-born-in-roma-intense-set": "VALENTINO DONNA BORN IN ROMA INTENSE EDP GIFT SET",
+      "perfume-name-valentino-donna-born-in-roma-edp-holiday-set": "VALENTINO DONNA BORN IN ROMA EDP HOLIDAY GIFT SET",
+      "perfume-name-valentino-uomo-born-in-roma-extradose-set": "VALENTINO UOMO BORN IN ROMA EXTRADOSE GIFT SET",
+      "perfume-name-valentino-donna-born-in-roma-extradose-set": "VALENTINO DONNA BORN IN ROMA EXTRADOSE GIFT SET",
+      "perfume-name-guess-seductive-edt": "GUESS SEDUCTIVE FOR WOMEN EDT",
+      "perfume-name-guess-seductive-noir-edt": "GUESS SEDUCTIVE NOIR FOR WOMEN EDT",
+      "perfume-name-guess-seductive-red-edt": "GUESS SEDUCTIVE RED FOR WOMEN EDT",
+      "perfume-name-guess-seductive-red-mist": "GUESS SEDUCTIVE RED FRAGRANCE MIST 250ML",
+      "perfume-name-guess-iconic-edp": "GUESS ICONIC FOR WOMEN EDP",
+      "perfume-name-guess-iconic-men-edp": "GUESS ICONIC FOR MEN EDP",
+      "perfume-name-guess-bella-vita-edp": "GUESS BELLA VITA EDP",
+      "perfume-name-guess-bella-vita-mist": "GUESS BELLA VITA FRAGRANCE MIST 250ML",
+      "perfume-name-guess-bella-vita-rosa-edt": "GUESS BELLA VITA ROSA EDT",
+      "perfume-name-guess-bella-vita-rosa-mist": "GUESS BELLA VITA ROSA FRAGRANCE MIST 250ML",
+      "perfume-name-guess-bella-vita-paradiso-edp": "GUESS BELLA VITA PARADISO EDP",
+      "perfume-name-guess-love-fragrance-mist": "GUESS LOVE FRAGRANCE MIST 250ML",
+      "perfume-name-guess-sexy-skin-fragrance-mist": "GUESS SEXY SKIN FRAGRANCE MIST 250ML",
+      "perfume-name-armani-prive-les-eaux-holiday-discovery-set": "ARMANI PRIVE LES EAUX HOLIDAY DISCOVERY SET 4 X 7.5ML",
+      "perfume-name-biotherm-homme-aquapower-essentials-set": "BIOTHERM HOMME AQUAPOWER ADVANCED GEL 75ML HOLIDAY SET",
+      "perfume-name-lancome-la-nuit-tresor-holiday-set": "LANCOME LA NUIT TRESOR EDP 30ML HOLIDAY GIFT SET",
+      "perfume-name-lancome-absolue-soft-cream-holiday-set": "LANCOME ABSOLUE LONGEVITY SOFT CREAM 60ML HOLIDAY SET",
+      "perfume-name-prada-luna-rossa-ocean-edt-set": "PRADA LUNA ROSSA OCEAN EDT 100ML GIFT SET",
+      "perfume-name-ysl-libre-berry-crush": "YVES SAINT LAURENT LIBRE BERRY CRUSH EDP",
+      "perfume-name-lancome-lash-idole-curl-goddess": "LANCOME LASH IDOLE CURL GODDESS MASCARA 01 DIVINE BLACK",
+      "perfume-name-guess-iconic-mist": "GUESS ICONIC FOR WOMEN FRAGRANCE MIST 250ML",
+      "perfume-name-guess-iconic-sublime-edp": "GUESS ICONIC SUBLIME EDP",
+      "perfume-name-guess-iconic-sublime-mist": "GUESS ICONIC SUBLIME FRAGRANCE MIST 250ML",
+      "perfume-name-guess-seductive-noir-homme-edt": "GUESS SEDUCTIVE HOMME NOIR EDT",
+      "perfume-name-azzaro-forever-wanted-absolu": "AZZARO FOREVER WANTED ABSOLU PARFUM",
+      "perfume-name-mugler-alien-pulp": "MUGLER ALIEN PULP EDP",
+      "perfume-name-armani-acqua-di-gio-edp-intense": "GIORGIO ARMANI ACQUA DI GIO EDP INTENSE",
+      "perfume-name-armani-stronger-with-you-powerfully": "EMPORIO ARMANI STRONGER WITH YOU POWERFULLY EDP",
+      "perfume-name-lancome-goddess-dimension-eyeshadow": "LANCOME IDOLE GODDESS DIMENSION MONO EYESHADOW",
+      "perfume-name-biotherm-aquasource-electrolyte-dewy-gel": "BIOTHERM AQUASOURCE+ ELECTROLYTE DEWY GEL 100H 100ML",
+      "perfume-name-lancome-mascara-melter": "LANCOME MASCARA MELTER CARING MASCARA REMOVER",
+      "perfume-name-lancome-o-juicy-hair-body-mist": "LANCOME O JUICY HAIR & BODY MIST 100ML",
+      "perfume-name-lancome-idole-peach-n-roses": "LANCOME IDOLE PEACH 'N ROSES EDP",
+      "perfume-name-miu-miu-edp": "MIU MIU EDP",
+      "perfume-name-miu-miu-eau-bleue": "MIU MIU L'EAU BLEUE EDP",
+      "perfume-name-miu-miu-eau-rosee": "MIU MIU L'EAU ROSEE EDT",
+      "perfume-name-miu-miu-fleur-de-lait": "MIU MIU FLEUR DE LAIT EDP",
+      "perfume-name-miu-miu-miutine": "MIU MIU MIUTINE EDP",
+      "perfume-name-lancome-renergie-nano-resurfacer-starter": "LANCOME RENERGIE NANO-RESURFACER 400 BOOSTER STARTER KIT",
+      "perfume-name-lancome-renergie-nano-resurfacer-refill": "LANCOME RENERGIE NANO-RESURFACER 400 BOOSTER REFILL",
+      "perfume-name-lancome-renergie-collagen-lift-xtend-cream": "LANCOME RENERGIE COLLAGEN+ LIFT-XTEND CREAM 50ML",
+      "perfume-name-lancome-renergie-yeux-lifting-20": "LANCOME RENERGIE YEUX LIFTING EYE CREAM 20ML",
+      "perfume-name-lancome-la-nuit-tresor-rouge-drama": "LANCOME LA NUIT TRESOR ROUGE DRAMA EDP INTENSE 50ML",
+      "perfume-name-lancome-la-vie-est-belle-edp-30-body-lotion-set-s26": "LANCOME LA VIE EST BELLE EDP 30ML + BODY LOTION 50ML GIFT SET",
+      "perfume-name-prada-paradigme-edp-50-set-s26": "PRADA PARADIGME EDP 50ML + 10ML GIFT SET",
+      "perfume-name-prada-paradoxe-edp-30-set-s26": "PRADA PARADOXE EDP 30ML + 10ML GIFT SET",
+      "perfume-name-valentino-uomo-born-in-roma-intense-50-set-s26": "VALENTINO UOMO BORN IN ROMA INTENSE EDP 50ML + 10ML GIFT SET",
+      "perfume-name-ysl-myslf-edp-60-shower-gel-set-s26": "YVES SAINT LAURENT MYSLF EDP 60ML + SHOWER GEL 50ML GIFT SET",
+      "perfume-name-ysl-libre-edp-90-body-balm-set-s26": "YVES SAINT LAURENT LIBRE EDP 90ML + 10ML + BODY BALM 50ML GIFT SET",
+      "perfume-name-ysl-libre-edp-50-mirror-set-s26": "YVES SAINT LAURENT LIBRE EDP 50ML + 10ML + MIRROR GIFT SET",
+      "perfume-name-ysl-libre-edp-30-set-s26": "YVES SAINT LAURENT LIBRE EDP 30ML + 10ML GIFT SET",
+      "perfume-name-ysl-libre-edp-50-candy-glaze-set-s26": "YVES SAINT LAURENT LIBRE EDP 50ML + 10ML + CANDY GLAZE 15 GIFT SET",
+      "perfume-name-armani-prive-orange-mediterranee": "ARMANI PRIVE ORANGE MEDITERRANEE EDT",
+      "perfume-name-armani-prive-oud-nacre": "ARMANI PRIVE OUD NACRE EDP",
+      "perfume-name-armani-si-nude-bloom": "ARMANI SI NUDE BLOOM EDP 50ML",
+      "perfume-name-armani-si-passione-red-bloom": "ARMANI SI PASSIONE RED BLOOM EDP 50ML",
+      "perfume-name-ysl-y-iced-cologne": "YVES SAINT LAURENT Y ICED COLOGNE EDT INTENSE",
+      "perfume-name-ysl-lash-latex": "YVES SAINT LAURENT LASH LATEX MASCARA",
+      "perfume-name-ysl-lovenude-kiss-shaper": "YVES SAINT LAURENT LOVENUDE KISS SHAPER LIP LINER",
+      "perfume-name-ysl-lovenude-lip-blusher": "YVES SAINT LAURENT LOVENUDE LIP BLUSHER BALM",
+      "perfume-name-guess-iconic-blue-men-edp": "GUESS ICONIC BLUE FOR MEN EDP",
+      "perfume-name-guess-seductive-desire-men-edt": "GUESS SEDUCTIVE DESIRE FOR MEN EDT",
+      "perfume-name-guess-seductive-desire-women-edt": "GUESS SEDUCTIVE DESIRE FOR WOMEN EDT",
+      "perfume-name-guess-seductive-desire-women-mist": "GUESS SEDUCTIVE DESIRE FOR WOMEN FRAGRANCE MIST 250ML",
+      "perfume-name-cavalli-florence": "ROBERTO CAVALLI FLORENCE EDP",
+      "perfume-name-cavalli-paradiso-assoluto": "ROBERTO CAVALLI PARADISO ASSOLUTO EDP",
+      "perfume-name-cavalli-paradiso-azzurro": "ROBERTO CAVALLI PARADISO AZZURRO EDP 75ML",
+      "perfume-name-just-cavalli-wild-blue-him": "JUST CAVALLI WILD BLUE FOR HIM EDT",
+      "perfume-name-just-cavalli-wild-pink-her": "JUST CAVALLI WILD PINK FOR HER EDP",
+      "perfume-name-armani-stronger-with-you-spices": "EMPORIO ARMANI STRONGER WITH YOU SPICES EDP 100ML",
+      "perfume-name-armani-my-way-sunny-vanilla": "ARMANI MY WAY SUNNY VANILLA EDP",
+      "perfume-name-prada-paradoxe-hand-cream": "PRADA PARADOXE HAND CREAM 50ML",
+      "perfume-name-prada-luna-rossa-ocean-le-parfum-set": "PRADA LUNA ROSSA OCEAN LE PARFUM 50ML + 10ML GIFT SET",
+      "perfume-name-armani-stronger-with-you-edt-valentines-set": "ARMANI EMPORIO STRONGER WITH YOU EDT 100ML + 15ML GIFT SET",
+      "perfume-name-armani-stronger-with-you-intensely-valentines-set": "ARMANI EMPORIO STRONGER WITH YOU INTENSELY EDP 100ML + 15ML GIFT SET",
+      "perfume-name-prada-paradigme-edp-30-set": "PRADA PARADIGME EDP 30ML + 10ML GIFT SET",
+      "perfume-name-ysl-lash-clash-loveshine-set-s26": "YVES SAINT LAURENT LASH CLASH MASCARA + LOVESHINE 44 GIFT SET",
+      "perfume-name-ysl-myslf-edp-100-set-s26": "YVES SAINT LAURENT MYSLF EDP 100ML + 10ML GIFT SET",
+      "perfume-name-ysl-lash-clash-libre-set-s26": "YVES SAINT LAURENT LASH CLASH MASCARA + LIBRE EDP 10ML GIFT SET",
+      "perfume-name-lancome-tiuw-shape-stick": "LANCOME TEINT IDOLE ULTRA WEAR SHAPE STICK FOUNDATION",
+      "perfume-name-lancome-tiuw-shape-stick-blush": "LANCOME TEINT IDOLE SHAPE STICK BLUSH",
+      "perfume-name-lancome-tiuw-shape-stick-highlighter": "LANCOME TEINT IDOLE SHAPE STICK HIGHLIGHTER 01 FLEXING LAVENDER",
+      "perfume-name-lancome-lip-idole-cuddle-blur": "LANCOME LIP IDOLE CUDDLEBLUR LIP VELVET",
+      "perfume-name-margiela-replica-chasing-sunsets": "MAISON MARGIELA REPLICA CHASING SUNSETS EDT 100ML",
+      "perfume-name-margiela-replica-up-at-dawn": "MAISON MARGIELA REPLICA UP AT DAWN EDT",
+      "perfume-name-mugler-angel-blush": "MUGLER ANGEL BLUSH EDP",
+      "perfume-name-ralph-lauren-polo-67-extreme": "RALPH LAUREN POLO 67 EDP EXTREME",
+      "perfume-name-ralph-lauren-polo-red-extreme-edp": "RALPH LAUREN POLO RED EDP EXTREME",
+      "perfume-name-prada-luna-rossa-carbon-edp": "PRADA LUNA ROSSA CARBON EDP",
+      "perfume-name-lancome-absolue-longevity-md-anticipate-cream": "LANCOME ABSOLUE LONGEVITY MD ANTICIPATE THE CREAM 50ML",
+      "perfume-name-lancome-absolue-longevity-md-intercept-cream": "LANCOME ABSOLUE LONGEVITY MD INTERCEPT THE CREAM 50ML",
+      "perfume-name-lancome-absolue-longevity-md-intercept-serum": "LANCOME ABSOLUE LONGEVITY MD INTERCEPT THE SERUM 50ML",
+      "perfume-name-lancome-absolue-longevity-md-reset-cream": "LANCOME ABSOLUE LONGEVITY MD RESET THE CREAM 50ML",
+      "perfume-name-lancome-absolue-longevity-md-reset-serum": "LANCOME ABSOLUE LONGEVITY MD RESET THE SERUM 50ML",
+      "perfume-name-lancome-lveb-hair-body-mist": "LANCOME LA VIE EST BELLE HAIR & BODY MIST 100ML",
+      "perfume-name-armani-si-passione-intense-set": "ARMANI SI PASSIONE INTENSE EDP 50ML + 7ML GIFT SET",
+      "perfume-name-nishane-ani-x": "NISHANE ANI X EXTRAIT DE PARFUM",
+      "perfume-name-nishane-fan-your-flames-x": "NISHANE FAN YOUR FLAMES X EXTRAIT DE PARFUM 50ML",
+      "perfume-name-nishane-hacivat-x": "NISHANE HACIVAT X EXTRAIT DE PARFUM",
+      "perfume-name-nishane-hacivat": "NISHANE HACIVAT EXTRAIT DE PARFUM 100ML",
+      "perfume-name-nishane-hundred-silent-ways": "NISHANE HUNDRED SILENT WAYS EXTRAIT DE PARFUM",
+      "perfume-name-nishane-zenne": "NISHANE ZENNE EXTRAIT DE PARFUM 50ML",
+      "perfume-name-nishane-ani": "NISHANE ANI EXTRAIT DE PARFUM 50ML",
+      "perfume-name-nishane-ege": "NISHANE EGE EXTRAIT DE PARFUM 50ML",
+      "perfume-name-nishane-tempfluo": "NISHANE TEMPFLUO EXTRAIT DE PARFUM 50ML",
+      "perfume-name-nishane-wulong-cha": "NISHANE WULONG CHA EXTRAIT DE PARFUM 50ML",
+      "perfume-name-mancera-wild-fruits": "MANCERA WILD FRUITS EDP",
+      "perfume-name-mancera-aoud-blue-notes": "MANCERA AOUD BLUE NOTES EDP 120ML",
+      "perfume-name-mancera-lemon-line": "MANCERA LEMON LINE EDP 60ML",
+      "perfume-name-mancera-amore-caffe": "MANCERA AMORE CAFFE EDP 120ML",
+      "perfume-name-mancera-french-riviera": "MANCERA FRENCH RIVIERA EDP 120ML",
+      "perfume-name-mancera-cherry-cherry": "MANCERA CHERRY CHERRY EDP",
+      "perfume-name-mancera-fig-me-up": "MANCERA FIG ME UP EDP",
+      "perfume-name-mancera-amberful": "MANCERA AMBERFUL EDP",
+      "perfume-name-mancera-cinque-terre": "MANCERA CINQUE TERRE EDP",
+      "perfume-name-mancera-eternal-wood": "MANCERA ETERNAL WOOD EDP",
+      "perfume-name-mancera-intense-red-tobacco": "MANCERA INTENSE RED TOBACCO",
+      "perfume-name-mancera-tonka-cola": "MANCERA TONKA COLA EDP",
+      "perfume-name-montale-day-dreams": "MONTALE DAY DREAMS EDP",
+      "perfume-name-montale-bubble-forever": "MONTALE BUBBLE FOREVER EDP",
+      "perfume-name-montale-crazy-in-love": "MONTALE CRAZY IN LOVE EDP",
+      "perfume-name-montale-arabians-musk": "MONTALE ARABIANS MUSK EDP",
+      "perfume-name-montale-arabians": "MONTALE ARABIANS EDP 100ML",
+      "perfume-name-xerjoff-erba-gold": "XERJOFF ERBA GOLD EDP",
+      "perfume-name-xerjoff-erba-pura": "XERJOFF ERBA PURA EDP",
+      "perfume-name-xerjoff-accento-overdose": "XERJOFF ACCENTO OVERDOSE EDP 100ML",
+      "perfume-name-xerjoff-accento": "XERJOFF ACCENTO EDP 100ML",
+      "perfume-name-xerjoff-purple-accento": "XERJOFF PURPLE ACCENTO EDP 100ML",
+      "perfume-name-xerjoff-opera": "XERJOFF OPERA EDP 100ML",
+      "perfume-name-xerjoff-torino21": "XERJOFF TORINO21 EDP",
+      "perfume-name-xerjoff-alexandria-ii": "XERJOFF ALEXANDRIA II PARFUM",
+      "perfume-name-xerjoff-alexandria-ii-anniversary": "XERJOFF ALEXANDRIA II ANNIVERSARY PARFUM 100ML",
+      "perfume-name-xerjoff-coro": "XERJOFF CORO EDP 100ML",
+      "perfume-name-xerjoff-neorio": "XERJOFF X DURAN DURAN NEORIO PARFUM 50ML",
+      "perfume-name-xerjoff-black-moonlight": "XERJOFF X DURAN DURAN BLACK MOONLIGHT PARFUM 50ML",
+      "perfume-name-tiziana-terenzi-kirke-overdose": "TIZIANA TERENZI KIRKE OVERDOSE EXTRAIT DE PARFUM 100ML",
+      "perfume-name-btso-dirty-heaven": "BORNTOSTANDOUT DIRTY HEAVEN EDP 50ML",
+      "perfume-name-btso-dirty-rice": "BORNTOSTANDOUT DIRTY RICE EDP 50ML",
+      "perfume-name-btso-angels-powder": "BORNTOSTANDOUT ANGELS' POWDER EDP 50ML",
+      "perfume-name-btso-filthy-musk": "BORNTOSTANDOUT FILTHY MUSK EDP 50ML",
+      "perfume-name-btso-fig-porn": "BORNTOSTANDOUT FIG PORN EDP 50ML",
+      "perfume-name-btso-indecent-cherry": "BORNTOSTANDOUT INDECENT CHERRY EDP 50ML",
+      "perfume-name-btso-mud": "BORNTOSTANDOUT MUD EDP 50ML",
+      "perfume-name-btso-nanatopia": "BORNTOSTANDOUT NANATOPIA EDP 50ML",
+      "perfume-name-btso-black-mango": "BORNTOSTANDOUT BLACK MANGO EXTRAIT EXTREME 50ML",
+      "perfume-name-btso-oud-candy": "BORNTOSTANDOUT OUD CANDY EXTRAIT EXTREME 50ML",
+      "perfume-name-btso-black-guava": "BORNTOSTANDOUT BLACK GUAVA EXTRAIT EXTREME 50ML",
+      "perfume-name-btso-drunk-lovers-cream": "BORNTOSTANDOUT DRUNK LOVERS HAND & BODY CREAM 350ML",
+      "perfume-name-btso-drunk-lovers-wash": "BORNTOSTANDOUT DRUNK LOVERS HAND & BODY WASH 350ML",
+      "perfume-name-jhag-ego-stratis": "JULIETTE HAS A GUN EGO STRATIS EDP",
+      "perfume-name-jhag-lust-for-sun": "JULIETTE HAS A GUN LUST FOR SUN EDP",
+      "perfume-name-jhag-ode-to-dullness": "JULIETTE HAS A GUN ODE TO DULLNESS EDP 50ML",
+      "perfume-name-mancera-instant-crush": "MANCERA INSTANT CRUSH EDP",
+      "perfume-name-mancera-jardin-exclusif": "MANCERA JARDIN EXCLUSIF EDP",
+      "perfume-name-mancera-red-tobacco": "MANCERA RED TOBACCO EDP",
+      "perfume-name-mancera-holidays": "MANCERA HOLIDAYS EDP",
+      "perfume-name-mancera-intense-cedrat-boise": "MANCERA INTENSE CEDRAT BOISE",
+      "perfume-name-montale-dark-vanilla": "MONTALE DARK VANILLA EDP 100ML",
+      "perfume-name-xerjoff-40-knots": "XERJOFF JTC 40 KNOTS EDP 100ML",
+      "perfume-name-xerjoff-don": "XERJOFF JTC DON EDP",
+      "perfume-name-xerjoff-comandante": "XERJOFF JTC COMANDANTE! EDP 100ML",
+      "perfume-name-xerjoff-more-than-words": "XERJOFF JTC MORE THAN WORDS EDP",
+      "perfume-name-xerjoff-decas": "XERJOFF 1861 DECAS EDP 100ML",
+      "perfume-name-xerjoff-naxos": "XERJOFF 1861 NAXOS EDP 100ML",
+      "perfume-name-xerjoff-renaissance": "XERJOFF 1861 RENAISSANCE EDP 100ML",
+      "perfume-name-xerjoff-la-capitale": "XERJOFF LA CAPITALE PARFUM 50ML",
+      "perfume-name-xerjoff-nio": "XERJOFF NIO PARFUM 50ML",
+      "perfume-name-xerjoff-golden-dallah": "XERJOFF GOLDEN DALLAH PARFUM 50ML",
+      "perfume-name-tiziana-terenzi-nero-oudh": "TIZIANA TERENZI NERO OUDH EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-delox": "TIZIANA TERENZI DELOX EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-dionisio": "TIZIANA TERENZI DIONISIO EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-leo": "TIZIANA TERENZI LEO EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-libra": "TIZIANA TERENZI LIBRA EXTRAIT DE PARFUM 100ML",
+      "perfume-name-bond-no9-gold-coast": "BOND NO. 9 GOLD COAST EDP 100ML",
+      "perfume-name-jhag-lili-fantasy": "JULIETTE HAS A GUN LILI FANTASY EDP 100ML",
+      "perfume-name-jhag-magnolia-bliss": "JULIETTE HAS A GUN MAGNOLIA BLISS EDP",
+      "perfume-name-mancera-aoud-vanille": "MANCERA AOUD VANILLE EDP",
+      "perfume-name-mancera-cedrat-boise": "MANCERA CEDRAT BOISE EDP",
+      "perfume-name-mancera-choco-violet": "MANCERA CHOCO VIOLET EDP",
+      "perfume-name-mancera-gold-prestigium": "MANCERA GOLD PRESTIGIUM EDP",
+      "perfume-name-mancera-gold-intensive-aoud": "MANCERA GOLD INTENSIVE AOUD EDP 60ML",
+      "perfume-name-mancera-roses-greedy": "MANCERA ROSES GREEDY EDP",
+      "perfume-name-mancera-roses-vanille": "MANCERA ROSES VANILLE EDP",
+      "perfume-name-mancera-velvet-vanilla": "MANCERA VELVET VANILLA EDP 60ML",
+      "perfume-name-mancera-wind-wood": "MANCERA WIND WOOD EDP 120ML",
+      "perfume-name-mancera-black-line": "MANCERA BLACK LINE EDP 60ML",
+      "perfume-name-mancera-black-gold": "MANCERA BLACK GOLD EDP 60ML",
+      "perfume-name-mancera-aoud-lemon-mint": "MANCERA AOUD LEMON MINT EDP 60ML",
+      "perfume-name-montale-aoud-lime": "MONTALE AOUD LIME EDP 100ML",
+      "perfume-name-montale-aoud-night": "MONTALE AOUD NIGHT EDP 100ML",
+      "perfume-name-montale-black-aoud": "MONTALE BLACK AOUD EDP",
+      "perfume-name-montale-black-aoud-intense": "MONTALE BLACK AOUD INTENSE EDP 100ML",
+      "perfume-name-montale-chocolate-greedy": "MONTALE CHOCOLATE GREEDY EDP",
+      "perfume-name-montale-dark-purple": "MONTALE DARK PURPLE EDP 100ML",
+      "perfume-name-montale-intense-pepper": "MONTALE INTENSE PEPPER EDP",
+      "perfume-name-montale-intense-cafe": "MONTALE INTENSE CAFE EDP",
+      "perfume-name-montale-intense-roses-musk": "MONTALE INTENSE ROSES MUSK EXTRAIT DE PARFUM",
+      "perfume-name-montale-intense-tiare": "MONTALE INTENSE TIARE EDP 100ML",
+      "perfume-name-montale-oudmazing": "MONTALE OUDMAZING EDP",
+      "perfume-name-montale-rose-elixir": "MONTALE ROSE ELIXIR EDP",
+      "perfume-name-montale-santal-wood": "MONTALE SANTAL WOOD EDP 100ML",
+      "perfume-name-montale-soleil-de-capri": "MONTALE SOLEIL DE CAPRI EDP",
+      "perfume-name-montale-starry-nights": "MONTALE STARRY NIGHTS EDP",
+      "perfume-name-montale-sweet-vanilla": "MONTALE SWEET VANILLA EDP",
+      "perfume-name-montale-vanilla-extasy": "MONTALE VANILLA EXTASY EDP 100ML",
+      "perfume-name-montale-vanille-absolu": "MONTALE VANILLE ABSOLU EDP",
+      "perfume-name-montale-white-musk": "MONTALE WHITE MUSK EDP 100ML",
+      "perfume-name-montale-wood-spices": "MONTALE WOOD & SPICES EDP",
+      "perfume-name-montale-sweet-peony": "MONTALE SWEET PEONY EDP",
+      "perfume-name-montale-oud-dream": "MONTALE OUD DREAM EDP",
+      "perfume-name-montale-sensual-instinct": "MONTALE SENSUAL INSTINCT EDP",
+      "perfume-name-montale-arabians-tonka": "MONTALE ARABIANS TONKA EDP 100ML",
+      "perfume-name-montale-oud-tobacco": "MONTALE OUD TOBACCO EDP",
+      "perfume-name-tiziana-terenzi-ursa": "TIZIANA TERENZI URSA EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-al-contrario": "TIZIANA TERENZI AL CONTRARIO EXTRAIT DE PARFUM 50ML",
+      "perfume-name-tiziana-terenzi-cassiopea": "TIZIANA TERENZI CASSIOPEA EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-draco": "TIZIANA TERENZI DRACO EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-orion": "TIZIANA TERENZI ORION EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-andromeda": "TIZIANA TERENZI ANDROMEDA EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-andromeda-body-lotion": "TIZIANA TERENZI ANDROMEDA BODY LOTION 250ML",
+      "perfume-name-tiziana-terenzi-kirke": "TIZIANA TERENZI KIRKE EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-borea": "TIZIANA TERENZI BOREA EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-spirito-fiorentino": "TIZIANA TERENZI SPIRITO FIORENTINO EXTRAIT DE PARFUM 100ML",
+      "perfume-name-xerjoff-casamorati-regio": "XERJOFF CASAMORATI REGIO EDP 100ML",
+      "perfume-name-xerjoff-casamorati-bouquet-ideale": "XERJOFF CASAMORATI BOUQUET IDEALE EDP",
+      "perfume-name-xerjoff-casamorati-1888": "XERJOFF CASAMORATI 1888 EDP 100ML",
+      "perfume-name-xerjoff-casamorati-dama-bianca": "XERJOFF CASAMORATI DAMA BIANCA EDP",
+      "perfume-name-xerjoff-casamorati-fiero": "XERJOFF CASAMORATI FIERO EDP 100ML",
+      "perfume-name-xerjoff-casamorati-fiore-d-ulivo": "XERJOFF CASAMORATI FIORE D'ULIVO EDP 100ML",
+      "perfume-name-xerjoff-casamorati-gran-ballo": "XERJOFF CASAMORATI GRAN BALLO EDP 100ML",
+      "perfume-name-xerjoff-casamorati-la-tosca": "XERJOFF CASAMORATI LA TOSCA EDP",
+      "perfume-name-xerjoff-casamorati-lira": "XERJOFF CASAMORATI LIRA EDP 100ML",
+      "perfume-name-xerjoff-casamorati-dolce-amalfi": "XERJOFF CASAMORATI DOLCE AMALFI EDP",
+      "perfume-name-jhag-mmmm": "JHAG MMMM... EDP 100ML",
+      "perfume-name-jhag-another-oud": "JHAG ANOTHER OUD EDP 100ML",
+      "perfume-name-jhag-sunny-side-up": "JHAG SUNNY SIDE UP EDP 100ML",
+      "perfume-name-jhag-vanilla-vibes": "JHAG VANILLA VIBES EDP 100ML",
+      "perfume-name-jhag-musc-invisible": "JHAG MUSC INVISIBLE EDP 100ML",
+      "perfume-name-bond-no9-lafayette-street": "BOND NO.9 LAFAYETTE STREET EDP 100ML",
+      "perfume-name-bond-no9-tribeca": "BOND NO.9 TRIBECA EDP 100ML",
+      "perfume-name-shiseido-fslx-cleansing-foam": "SHISEIDO FUTURE SOLUTION LX EXTRA RICH CLEANSING FOAM 125ML",
+      "perfume-name-shiseido-fslx-eye-lip-cream": "SHISEIDO FUTURE SOLUTION LX EYE AND LIP CONTOUR REGENERATING CREAM 17ML",
+      "perfume-name-shiseido-fslx-total-protective-cream": "SHISEIDO FUTURE SOLUTION LX TOTAL PROTECTIVE CREAM SPF30 50ML",
+      "perfume-name-shiseido-fslx-total-regenerating-cream": "SHISEIDO FUTURE SOLUTION LX TOTAL REGENERATING CREAM 50ML",
+      "perfume-name-shiseido-fslx-brightening-softener": "SHISEIDO FUTURE SOLUTION LX CONCENTRATED BRIGHTENING SOFTENER 150ML",
+      "perfume-name-shiseido-legendary-enmei-cream": "SHISEIDO FUTURE SOLUTION LX LEGENDARY ENMEI ULTIMATE RENEWING CREAM 50ML",
+      "perfume-name-shiseido-legendary-enmei-serum": "SHISEIDO FUTURE SOLUTION LX LEGENDARY ENMEI ULTIMATE LUMINANCE SERUM 30ML",
+      "perfume-name-shiseido-legendary-enmei-eye-cream": "SHISEIDO FUTURE SOLUTION LX LEGENDARY ENMEI ULTIMATE RADIANCE EYE CREAM 15ML",
+      "perfume-name-shiseido-vp-advanced-cream": "SHISEIDO VITAL PERFECTION UPLIFTING AND FIRMING ADVANCED CREAM 50ML",
+      "perfume-name-shiseido-vp-day-cream-spf30": "SHISEIDO VITAL PERFECTION UPLIFTING AND FIRMING ADVANCED DAY CREAM SPF30 50ML",
+      "perfume-name-shiseido-vp-eye-cream": "SHISEIDO VITAL PERFECTION UPLIFTING AND FIRMING ADVANCED EYE CREAM 15ML",
+      "perfume-name-shiseido-vp-wrinklespot-treatment": "SHISEIDO VITAL PERFECTION INTENSIVE WRINKLESPOT TREATMENT 20ML",
+      "perfume-name-shiseido-vp-overnight-firming-treatment": "SHISEIDO VITAL PERFECTION OVERNIGHT FIRMING TREATMENT 50ML",
+      "perfume-name-shiseido-vp-concentrated-supreme-cream": "SHISEIDO VITAL PERFECTION CONCENTRATED SUPREME CREAM 50ML",
+      "perfume-name-shiseido-bop-micro-click-concentrate": "SHISEIDO BIO-PERFORMANCE MICRO-CLICK CONCENTRATE",
+      "perfume-name-shiseido-bop-skin-hiforce-cream": "SHISEIDO BIO-PERFORMANCE SKIN HIFORCE CREAM 50ML",
+      "perfume-name-shiseido-bop-super-revitalizing-cream": "SHISEIDO BIO-PERFORMANCE ADVANCED SUPER REVITALIZING CREAM",
+      "perfume-name-shiseido-ultimune-serum": "SHISEIDO ULTIMUNE POWER INFUSING SERUM",
+      "perfume-name-shiseido-ultimune-oil": "SHISEIDO ULTIMUNE POWER INFUSING OIL 75ML",
+      "perfume-name-shiseido-ultimune-hand-cream": "SHISEIDO ULTIMUNE POWER INFUSING HAND CREAM 50ML",
+      "perfume-name-shiseido-ultimune-future-power-shot": "SHISEIDO ULTIMUNE FUTURE POWER SHOT 15ML",
+      "perfume-name-shiseido-men-total-revitalizer-cream": "SHISEIDO MEN TOTAL REVITALIZER CREAM 50ML",
+      "perfume-name-shiseido-men-total-revitalizer-eye": "SHISEIDO MEN TOTAL REVITALIZER EYE 15ML",
+      "perfume-name-shiseido-men-total-revitalizer-light-fluid": "SHISEIDO MEN TOTAL REVITALIZER LIGHT FLUID 70ML",
+      "perfume-name-shiseido-men-skin-empowering-cream": "SHISEIDO MEN SKIN EMPOWERING CREAM 50ML",
+      "perfume-name-shiseido-refreshing-cleansing-water": "SHISEIDO REFRESHING CLEANSING WATER 180ML",
+      "perfume-name-shiseido-complete-cleansing-microfoam": "SHISEIDO COMPLETE CLEANSING MICROFOAM 180ML",
+      "perfume-name-shiseido-benefiance-contour-serum": "SHISEIDO BENEFIANCE WRINKLE SMOOTHING CONTOUR SERUM 30ML",
+      "perfume-name-shiseido-benefiance-eye-cream": "SHISEIDO BENEFIANCE WRINKLE SMOOTHING EYE CREAM 15ML",
+      "perfume-name-shiseido-eudermine-activating-essence": "SHISEIDO EUDERMINE ACTIVATING ESSENCE 145ML",
+      "perfume-name-shiseido-eye-lip-makeup-remover": "SHISEIDO INSTANT EYE AND LIP MAKEUP REMOVER 125ML",
+      "perfume-name-shiseido-clear-sun-stick-spf50": "SHISEIDO EXPERT SUN PROTECTOR CLEAR STICK SPF50+ 20G",
+      "perfume-name-shiseido-expert-sun-lotion-spf50": "SHISEIDO EXPERT SUN PROTECTOR LOTION SPF50+ 150ML",
+      "perfume-name-shiseido-expert-sun-cream-spf50": "SHISEIDO EXPERT SUN PROTECTOR CREAM SPF50+ 50ML",
+      "perfume-name-shiseido-expert-sun-lotion-spf30": "SHISEIDO EXPERT SUN PROTECTOR LOTION SPF30 150ML",
+      "perfume-name-shiseido-zen-essence": "SHISEIDO ZEN ESSENCE EDP",
+      "perfume-name-shiseido-ginza-datura": "SHISEIDO GINZA DATURA EDP",
+      "perfume-name-shiseido-ginza-intense": "SHISEIDO GINZA INTENSE EDP",
+      "perfume-name-shiseido-ginza-night-intense": "SHISEIDO GINZA NIGHT EDP INTENSE",
+      "perfume-name-shiseido-synchro-skin-radiant-lifting-foundation": "SHISEIDO SYNCHRO SKIN RADIANT LIFTING FOUNDATION SPF30 30ML",
+      "perfume-name-shiseido-synchro-skin-self-refreshing-foundation": "SHISEIDO SYNCHRO SKIN SELF-REFRESHING FOUNDATION SPF30 30ML",
+      "perfume-name-shiseido-revitalessence-skin-glow-foundation": "SHISEIDO REVITALESSENCE SKIN GLOW FOUNDATION SPF30 30ML",
+      "perfume-name-shiseido-technosatin-gel-lipstick": "SHISEIDO TECHNOSATIN GEL LIPSTICK",
+      "perfume-name-shiseido-controlledchaos-mascaraink": "SHISEIDO CONTROLLEDCHAOS MASCARAINK",
+      "perfume-name-shiseido-sports-bb": "SHISEIDO SPORTS BB SPF50+ 30ML",
+      "perfume-name-shiseido-sports-bb-compact": "SHISEIDO SPORTS BB COMPACT SPF50+ 12G",
+      "perfume-name-bond-no9-sutton-place": "BOND NO.9 SUTTON PLACE EDP 100ML",
+      "perfume-name-shiseido-lipliner-inkduo": "SHISEIDO LIPLINER INKDUO PRIME + LINE",
+      "perfume-name-shiseido-benefiance-overnight-cream": "SHISEIDO BENEFIANCE OVERNIGHT WRINKLE RESISTING CREAM 50ML",
+      "perfume-name-shiseido-synchro-skin-soft-blurring-primer": "SHISEIDO SYNCHRO SKIN SOFT BLURRING PRIMER 30ML",
+      "perfume-name-shiseido-vp-liftdefine-mask": "SHISEIDO VITAL PERFECTION LIFTDEFINE RADIANCE FACE MASK (6 PAIRS)",
+      "perfume-name-shiseido-ginza": "SHISEIDO GINZA EDP",
+      "perfume-name-shiseido-ginza-body-lotion": "SHISEIDO GINZA PERFUMED BODY LOTION 200ML",
+      "perfume-name-shiseido-ginza-murasaki": "SHISEIDO GINZA MURASAKI EDP",
+      "perfume-name-shiseido-zen": "SHISEIDO ZEN EDP",
+      "perfume-name-shiseido-men-face-cleanser": "SHISEIDO MEN FACE CLEANSER 125ML",
+      "perfume-name-shiseido-men-energizing-moisturizer-fluid": "SHISEIDO MEN ENERGIZING MOISTURIZER EXTRA LIGHT FLUID 100ML",
+      "perfume-name-shiseido-microliner-ink": "SHISEIDO MICROLINER INK",
+      "perfume-name-shiseido-waso-gel-to-oil-cleanser": "SHISEIDO WASO SHIKULIME GEL-TO-OIL CLEANSER 125ML",
+      "perfume-name-shiseido-waso-yuzu-c-sleeping-mask": "SHISEIDO WASO YUZU-C BEAUTY SLEEPING MASK 50ML",
+      "perfume-name-shiseido-waso-color-control-moisturizer": "SHISEIDO WASO SHIKULIME COLOR CONTROL OIL-FREE MOISTURIZER SPF30 50ML",
+      "perfume-name-shiseido-waso-mega-hydrating-moisturizer": "SHISEIDO WASO SHIKULIME MEGA HYDRATING MOISTURIZER 50ML",
+      "perfume-name-shiseido-ee-hydrating-cream": "SHISEIDO ESSENTIAL ENERGY HYDRATING CREAM 50ML",
+      "perfume-name-shiseido-ee-hydrating-day-cream-spf20": "SHISEIDO ESSENTIAL ENERGY HYDRATING DAY CREAM SPF20 50ML",
+      "perfume-name-shiseido-bop-skin-filler": "SHISEIDO BIO-PERFORMANCE SKIN FILLER SERUMS (2 X 30ML)",
+      "perfume-name-shiseido-clarifying-cleansing-foam": "SHISEIDO CLARIFYING CLEANSING FOAM 125ML",
+      "perfume-name-shiseido-extra-rich-cleansing-milk": "SHISEIDO EXTRA RICH CLEANSING MILK 125ML",
+      "perfume-name-shiseido-deep-cleansing-foam": "SHISEIDO DEEP CLEANSING FOAM 125ML",
+      "perfume-name-shiseido-treatment-softener": "SHISEIDO TREATMENT SOFTENER 150ML",
+      "perfume-name-shiseido-revitalizing-treatment-softener": "SHISEIDO REVITALIZING TREATMENT SOFTENER 150ML",
+      "perfume-name-shiseido-benefiance-day-cream-spf25": "SHISEIDO BENEFIANCE WRINKLE SMOOTHING DAY CREAM SPF25 50ML",
+      "perfume-name-shiseido-benefiance-wrinkle-smoothing-cream": "SHISEIDO BENEFIANCE WRINKLE SMOOTHING CREAM 50ML",
+      "perfume-name-shiseido-fslx-total-radiance-foundation": "SHISEIDO FUTURE SOLUTION LX TOTAL RADIANCE FOUNDATION SPF20 30ML",
+      "perfume-name-shiseido-maru-fude-brush": "SHISEIDO MARU FUDE MULTI FACE BRUSH",
+      "perfume-name-shiseido-naname-fude-brush": "SHISEIDO NANAME FUDE MULTI EYE BRUSH",
+      "perfume-name-shiseido-hasu-fude-brush": "SHISEIDO HASU FUDE FOUNDATION BRUSH",
+      "perfume-name-shiseido-daiya-fude-brush": "SHISEIDO DAIYA FUDE FACE DUO BRUSH",
+      "perfume-name-shiseido-tsutsu-fude-brush": "SHISEIDO TSUTSU FUDE CONCEALER BRUSH",
+      "perfume-name-shiseido-hanatsubaki-hake-brush": "SHISEIDO HANATSUBAKI HAKE POLISHING FACE BRUSH",
+      "perfume-name-shiseido-colorgel-lipbalm": "SHISEIDO COLORGEL LIPBALM",
+      "perfume-name-shiseido-synchro-skin-powder-foundation": "SHISEIDO SYNCHRO SKIN SELF-REFRESHING CUSTOM FINISH POWDER FOUNDATION 9G",
+      "perfume-name-shiseido-benefiance-nutriperfect-day-cream": "SHISEIDO BENEFIANCE NUTRIPERFECT DAY CREAM SPF15 50ML",
+      "perfume-name-shiseido-benefiance-nutriperfect-night-cream": "SHISEIDO BENEFIANCE NUTRIPERFECT NIGHT CREAM 50ML",
+      "perfume-name-shiseido-archliner-ink": "SHISEIDO ARCHLINER INK 01 SHIBUI BLACK",
+      "perfume-name-shiseido-brow-inktrio": "SHISEIDO BROW INKTRIO",
+      "perfume-name-shiseido-imperiallash-mascaraink": "SHISEIDO IMPERIALLASH MASCARAINK 01 SUMI BLACK",
       "perfume-name-diesel": "DIESEL LOVERDOSE",
-      "perfume-name-dkny": "DKNY BE DELICIOUS",
-      "perfume-name-juliet": "JULIET HAS A GUN",
-      "perfume-name-prada": "Prada Candy",
-      "perfume-name-roberto": "Roberto Cavalli Just Cavalli For Her",
       "perfume-name-valentino": "Valentino Born In Roma",
-      "perfume-name-thierry": "Thierry Mugler MU ANG NOVA",
-      "perfume-name-ralph": "Ralph Lauren Polo Blue",
-      "perfume-name-montale": "MONTALE AOUD LIME",
       "perfume-name-viktor": "FLBB EDP SPRAY",
-      "perfume-name-yves": "YVES SAINT LAURENT",
       "decor-alt-valentine": "Valentine\u2019s room decor",
       "decor-alt-birthday": "Birthday room decor",
       "decor-alt-custom": "Custom room decor",
@@ -338,7 +2983,7 @@
       "decor-story-birthday-price": "Birthday room decor \u2014 60\u20ac",
     },
     de: {
-      "extra-page-title": "Concierge | Hotel in Pristina",
+      "extra-page-title": "Concierge-Extras & Geschenke | Derand Hotel Prishtina",
       "extra-meta-description":
         "Derand Hotel Extra bietet kuratierte \u00dcberraschungen und Premium-Zusatzleistungen auf dem Zimmer in Pristina.",
       "extra-hero-title": "Gestalten Sie Ihre perfekten Momente.",
@@ -428,10 +3073,18 @@
       "extra-cart-delivery-title": "Lieferdetails",
       "extra-cart-delivery-hint":
         "Teilen Sie uns mit, wann wir Ihre Bestellung auf Ihr Zimmer bringen sollen.",
-      "extra-cart-delivery-24h":
-        "Blumen und Parf\u00fcm erfordern mindestens 24 Stunden Vorlaufzeit f\u00fcr die Lieferung.",
+      "extra-cart-delivery-30min":
+        "Bitte rechnen Sie mit bis zu 30 Minuten, bis Ihre Bestellung auf Ihr Zimmer geliefert wird.",
       "extra-cart-delivery-24h-error":
-        "Die Lieferung von Blumen oder Parf\u00fcm muss mindestens 24 Stunden ab jetzt liegen. Bitte w\u00e4hlen Sie ein sp\u00e4teres Datum und eine sp\u00e4tere Uhrzeit.",
+        "Die Lieferung ben\u00f6tigt mindestens 30 Minuten ab jetzt. Bitte w\u00e4hlen Sie eine sp\u00e4tere Uhrzeit.",
+      "extra-cart-night-tomorrow":
+        "Die Zimmerlieferung erfolgt von 09:00 bis 21:00 Uhr. Jetzt aufgegebene Bestellungen werden morgen fr\u00fch um 09:00 Uhr geliefert.",
+      "extra-cart-night-today":
+        "Die Zimmerlieferung beginnt um 09:00 Uhr. Jetzt aufgegebene Bestellungen werden heute Morgen um 09:00 Uhr geliefert.",
+      "extra-cart-delivery-hours-error":
+        "Die Zimmerlieferung ist von 09:00 bis 21:00 Uhr m\u00f6glich. Bitte w\u00e4hlen Sie eine Uhrzeit in diesem Zeitraum.",
+      "extra-cart-delivery-night-error":
+        "Nach 21:00 Uhr aufgegebene Bestellungen werden ab 09:00 Uhr geliefert. Bitte w\u00e4hlen Sie 09:00 Uhr oder sp\u00e4ter.",
       "extra-cart-name-label": "Name der Reservierung",
       "extra-cart-name-placeholder": "Wie in Ihrer Buchung",
       "extra-cart-room-label": "Zimmernummer",
@@ -520,29 +3173,1743 @@
       "spirit-desc-jager":
         "Kr\u00e4uterlik\u00f6r gek\u00fchlt auf Ihrem Zimmer mit Premium-Glasware.",
       "perfume-desc-armani":
-        "Eine legend\u00e4re aquatische Komposition mit marinen Noten und Bergamotte auf warmer Zedernbasis.",
+        "Ein eleganter und erfrischender Duft f\u00fcr Frauen, der die Frische von Zitrone und Minze mit warmen Noten von Jasmin und Zedernholz verbindet. Ein ikonischer floral-aquatischer Duft, perfekt f\u00fcr den Alltag.",
+      "perfume-desc-cacharel":
+        "Ein bezaubernder und leidenschaftlicher Duft f\u00fcr Frauen, der lebendige Noten von rosa Grapefruit und Mandarine mit einem Herz aus roter Rose und einer warmen Vanille-Amber-Basis verbindet. Ein jugendlicher und romantischer floral-fruchtiger Duft, perfekt f\u00fcr jeden Anlass.",
+      "perfume-desc-armani-code":
+        "Ein eleganter und verf\u00fchrerischer Duft f\u00fcr Frauen mit Kopfnoten aus italienischer Orange und Jasmin, einem Herz aus Orangenbl\u00fcte und einer warmen, sinnlichen Basis aus Honig und Vanille. Ein sophistizierter floral-orientalischer Duft, perfekt f\u00fcr Abendgarderobe und besondere Anl\u00e4sse.",
+      "perfume-desc-lancome":
+        "Ein strahlender und freudvoller Duft f\u00fcr Frauen, der mit leuchtender schwarzer Johannisbeere und Birne er\u00f6ffnet, in ein Herz aus Iris und Jasmin \u00fcbergeht und in einer k\u00f6stlichen Gourmand-Basis aus Pralin\u00e9, Patchouli und Vanille endet. Ein erhebender floral-gourmand Duft, der die sch\u00f6nen Momente des Lebens feiert.",
+      "perfume-desc-mon-paris":
+        "Ein fesselnder und romantischer Duft f\u00fcr Frauen, der mit saftiger kalabrische Bergamotte, Erdbeere und Himbeere er\u00f6ffnet, in ein leuchtendes Herz aus Datura-Bl\u00fcte und Pfingstrose \u00fcbergeht und mit einer sinnlichen Chypre-Basis aus Patchouli und wei\u00dfem Moschus verweilt. Ein lebendiger floral-fruchtiger Duft, inspiriert von der Magie von Paris.",
+      "perfume-desc-black-opium":
+        "Ein s\u00fcdlicher und verf\u00fchrerischer Duft f\u00fcr Frauen, der mit einem kr\u00e4ftigen Auftritt von reichem Kaffee und s\u00fc\u00dfem rosa Pfeffer er\u00f6ffnet, in ein leuchtendes Herz aus Jasmin und Orangenbl\u00fcte \u00fcbergeht und in einer warmen, umh\u00fcllenden Basis aus Vanille und Patchouli endet. Ein fesselnder oriental-gourmand Duft, perfekt f\u00fcr Abendgarderobe.",
+      "perfume-desc-diesel-brave":
+        "Ein k\u00fchnes und charismatisches Herrenduft, der mit frischer Zitrone und Mandarine er\u00f6ffnet, mit einem Herz aus Zedernholz und Koriander an St\u00e4rke gewinnt und mit einer tiefen, maskulinen Basis aus Amber und Benzoe endet. Ein selbstbewusster aromatisch-holziger Duft f\u00fcr den modernen Mann.",
+      "perfume-desc-lhomme-nuit":
+        "Ein verf\u00fchrerischer und intensiver Herrenduft, der mit w\u00fcrzigem schwarzem Pfeffer und Kardamom er\u00f6ffnet, mit einem reichen Herz aus Labdanum und Patchouli vertieft und mit einer rauchigen, magnetischen Basis aus Vetiver und Vanille verweilt. Ein kraftvoller holzig-orientalischer Duft f\u00fcr unvergessliche N\u00e4chte.",
+      "perfume-desc-armani-babel-he":
+        "Ein sophistizierter und moderner Herrenduft, der frische Zitrusnoten und aromatischen Lavendel mit einem warmen Herz aus Geranie und einer weichen holzig-amber Basis verbindet. Ein vielseitiger maskuliner Duft f\u00fcr Tag und Abend.",
+      "perfume-desc-y-edp":
+        "Ein tiefer und selbstbewusster Herrenduft, der mit frischem Apfel, Ingwer und Bergamotte er\u00f6ffnet, \u00fcber ein aromatisches Herz aus Salbei, Wacholder und Geranie verl\u00e4uft und auf einer kraftvollen holzigen Basis aus Amberwood, Zeder und Vetiver ruht. Ein moderner aromatisch-foug\u00e8re Duft f\u00fcr den Mann, der seinen eigenen Erfolg gestaltet.",
+      "perfume-desc-libre-edt":
+        "Ein k\u00fchner und befreiter Damenduft, der lebendige Mandarine und Lavendel mit einem leuchtenden Herz aus Orangenbl\u00fcte und Jasmin verbindet und mit einer sinnlichen Basis aus Ambergris und Vanille endet. Ein moderner floral-aromatischer Duft, der Freiheit und Selbstvertrauen feiert.",
+      "perfume-desc-valentino-voce-viva":
+        "Ein strahlender und ausdrucksstarker Damenduft, der mit spritziger Mandarine und frischer Bergamotte er\u00f6ffnet, in ein \u00fcppiges Herz aus Orangenbl\u00fcte und Gardenie erbl\u00fcht und in einer warmen, sophistizierten Basis aus Crystal Moss und Vanille endet. Ein lebendiger floraler Duft, der die Kraft der Stimme und Individualit\u00e4t feiert.",
+      "perfume-desc-valentino-donna":
+        "Ein moderner und sophistizierter Damenduft, der mit saftiger schwarzer Johannisbeere und spritzigem Jasmin er\u00f6ffnet, sich zu einem leuchtenden floralen Herzen entfaltet und in einer reichen, sinnlichen Basis aus Vanille und Bourbon endet. Ein eleganter Amber-Floral-Duft, der r\u00f6mischen Glamour und zeitgen\u00f6ssische Weiblichkeit einf\u00e4ngt.",
+      "perfume-desc-libre-edp-intense":
+        "Eine tiefere und sinnlichere Interpretation von Libre, die die charakteristische Lavendel- und Orangenbl\u00fcten-Komposition mit einem \u00fcppigen Orchideen-Herz und einer reichen, intensiven Basis aus Vanille und Amber verst\u00e4rkt. Ein kraftvoller Floral-Amber-Duft f\u00fcr Frauen, die mutige Weiblichkeit und uneingeschr\u00e4nkte Freiheit feiern.",
+      "perfume-desc-valentino-donna-yellow":
+        "Ein strahlender und leuchtender Damenduft, der mit spritziger italienischer Zitrone und saftiger Bergamotte er\u00f6ffnet, in ein zartes Herz aus Rosenabsolue und Jasmin erbl\u00fcht und in einer warmen, sonnigen Basis aus Vanille und Moschus endet. Ein freudiger Floral-Gourmand-Duft, der die goldene W\u00e4rme des r\u00f6mischen Sommers einf\u00e4ngt.",
+      "perfume-desc-armani-my-way":
+        "Ein leuchtender und erhebender Damenduft, der mit frischer Bergamotte und Orangenbl\u00fcte aus Indien er\u00f6ffnet, sich zu einem opulenten Herz aus Tuberose und Jasmin aus \u00c4gypten entfaltet und in einer warmen, eleganten Basis aus Virginian-Zeder und Vanille aus Madagaskar endet. Ein inspirierender Floralduft, der Entdeckung, Verbundenheit und bewusste Weiblichkeit feiert.",
+      "perfume-desc-lancome-idole":
+        "Ein klarer und leuchtender Damenduft, der mit spritziger Birne, Bergamotte und rosa Pfeffer er\u00f6ffnet, in ein strahlendes Herz aus Rose und Jasmin erbl\u00fcht und in einer weichen, modernen Basis aus wei\u00dfem Moschus und Patchouli endet. Ein frischer Floralduft, der Selbstvertrauen, Anmut und die Kraft jeder Frau verk\u00f6rpert.",
+      "perfume-desc-armani-in-love-with-you":
+        "Ein verspielter und verf\u00fchrerischer Damenduft, der mit herb-s\u00fc\u00dfer schwarzer Johannisbeere und saftiger Himbeere er\u00f6ffnet, in ein florales Herz aus Rose und Jasmin erbl\u00fcht und in einer warmen, s\u00fc\u00dfen Basis aus Patchouli und Vanille endet. Ein spritziger Frucht-Floral-Duft, der die Aufregung der Verliebtheit einf\u00e4ngt.",
+      "perfume-desc-prada-luna-rossa-carbon":
+        "Ein k\u00fchner und sophistizierter Herrenduft, der mit frischer Bergamotte und lebendigem Lavendel er\u00f6ffnet, \u00fcber ein metallisches Herz aus Kohle und w\u00e4ssrigen Noten verl\u00e4uft und in einer trockenen, eleganten Basis aus Patchouli und Ambroxan endet. Ein moderner aromatisch-foug\u00e8re Duft, inspiriert vom Segelgeist und maskuliner Eleganz.",
+      "perfume-desc-prada-luna-rossa-black":
+        "Ein dunkler und magnetischer Herrenduft, der mit leuchtender Bergamotte und Angelika er\u00f6ffnet, in ein intensives Herz aus Patchouli und Cumarin \u00fcbergeht und auf einer reichen, sinnlichen Basis aus Amber und Moschus ruht. Ein sophistizierter holzig-aromatischer Duft, der St\u00e4rke, Mystik und moderne Eleganz einf\u00e4ngt.",
+      "perfume-desc-prada-lhomme":
+        "Ein raffinierter und eleganter Herrenduft, der mit frischem Neroli und schwarzem Pfeffer er\u00f6ffnet, sich zu einem pudrigen Herz aus Iris und Amber entfaltet und in einer weichen, sophistizierten Basis aus Patchouli und Zeder endet. Ein moderner aromatischer Duft, der dezenten Luxus und m\u00fchelosen Stil verk\u00f6rpert.",
+      "perfume-desc-prada-la-femme":
+        "Ein sophistizierter und sinnlicher Damenduft, der mit leuchtender Magnolie und Frangipani er\u00f6ffnet, in ein reiches florales Herz aus Tuberose und Ylang-Ylang erbl\u00fcht und in einer warmen, umh\u00fcllenden Basis aus Bienenwachs und Vanille endet. Ein eleganter Oriental-Floral-Duft, der moderne Weiblichkeit mit stiller Selbstsicherheit feiert.",
+      "perfume-desc-armani-si-passione":
+        "Ein leidenschaftlicher und lebendiger Damenduft, der mit saftiger schwarzer Johannisbeere und spritziger Birne er\u00f6ffnet, in ein romantisches Herz aus Rose und Jasmin erbl\u00fcht und in einer warmen, sinnlichen Basis aus Vanille und Zeder endet. Ein k\u00fchner Frucht-Floral-Duft, der Selbstvertrauen, Anziehungskraft und die Kraft der Leidenschaft verk\u00f6rpert.",
+      "perfume-desc-viktor-spicebomb-extreme":
+        "Ein kraftvoller und s\u00fcchtig machender Herrenduft, der mit heller Grapefruit und Pimentbeeren er\u00f6ffnet, in ein feuriges Herz aus Zimt und Safran \u00fcbergeht und in einer reichen, berauschenden Basis aus Tabak, Vanille und Bourbon-Vetiver endet. Ein intensiver Oriental-Spicy-Duft, der W\u00e4rme, Selbstvertrauen und Verf\u00fchrung ausstrahlt.",
+      "perfume-desc-viktor-bonbon":
+        "Ein k\u00f6stlich s\u00fc\u00dfer und femininer Duft, der mit saftiger Orange und leuchtendem Pfirsich er\u00f6ffnet, in ein zartes Herz aus Karamell und Jasmin erbl\u00fcht und in einer cremigen, s\u00fcchtig machenden Basis aus Sandelholz und Zeder endet. Ein verspielter Gourmand-Floral-Duft, der Genuss, Charme und unwiderstehliche Weiblichkeit einf\u00e4ngt.",
+      "perfume-desc-cacharel-noa":
+        "Ein weicher und tr\u00f6stlicher Damenduft, der mit leuchtender Pfingstrose und wei\u00dfem Moschus er\u00f6ffnet, sich zu einem zarten Herz aus Kaffeebl\u00fcte und Jasmin entfaltet und in einer warmen, pudrigen Basis aus Vanille und Sandelholz endet. Ein sanfter Floralduft, der Gelassenheit, Reinheit und zeitlose Weiblichkeit evoziert.",
+      "perfume-desc-armani-acqua-gio-stick":
+        "Ein frischer und eleganter Duftstick, der den leuchtenden Geist von Acqua di Gioia mit spritziger Zitrone, Jasmin und Zedernnoten einf\u00e4ngt. Ein praktisches 75g-Format f\u00fcr langanhaltende Frische und den charakteristischen aquatisch-floralen Charakter dieses beliebten Armani-Duftes.",
+      "perfume-desc-armani-black-code-stick":
+        "Ein sophistizierter Deodorant-Stick, inspiriert vom ikonischen Armani Code Duft, der frische Bergamotte und Sternanis mit einem warmen Herz aus Olivenbl\u00fcte und einer sinnlichen Basis aus Tonkabohne und Zeder verbindet. Ein praktisches 75g-Format f\u00fcr langanhaltende Frische und die charakteristische elegante M\u00e4nnlichkeit von Armani Code.",
+      "perfume-desc-armani-si-edp":
+        "Ein schicker und moderner Damenduft, der mit leuchtendem schwarzen Johannisbeer-Nektar und softer Freesie er\u00f6ffnet, sich zu einem eleganten Herz aus Rose und Jasmin entfaltet und auf einer warmen, sinnlichen Basis aus Vanille, Patchouli und Holz ruht. Ein sophistizierter Chypre-Frucht-Duft, der Anmut, St\u00e4rke und zeitgen\u00f6ssische Weiblichkeit verk\u00f6rpert.",
+      "perfume-desc-diesel-brave-tattoo":
+        "Ein k\u00fchner und rebellischer Herrenduft, der mit lebendigem Apfel und Zitronenzeste er\u00f6ffnet, \u00fcber ein Herz aus Leder und Koriander verl\u00e4uft und in einer warmen, best\u00e4ndigen Basis aus Amberwood und Patchouli endet. Ein kantiger aromatisch-holziger Duft, inspiriert von Tinte, Haltung und furchtloser Individualit\u00e4t.",
+      "perfume-desc-lancome-lveb-body-milk":
+        "Eine luxuri\u00f6se K\u00f6rpermilch mit dem ikonischen La Vie Est Belle-Duft, die strahlende Iris und zarte Jasmin mit warmer Vanille und Patchouli verbindet. Eine pflegende 200ml-Formel, die die Haut weich, duftend und strahlend vor Freude hinterl\u00e4sst.",
+      "perfume-desc-lancome-tresor-edp":
+        "Ein zeitloser und romantischer Damenduft, der mit zartem Aprikosenbl\u00fcte und Pfirsich er\u00f6ffnet, in ein \u00fcppiges Herz aus Rose und Flieder erbl\u00fcht und in einer warmen, sinnlichen Basis aus Vanille, Sandelholz und Moschus endet. Ein eleganter Floral-Frucht-Duft, der Liebe, Weiblichkeit und best\u00e4ndige Anmut verk\u00f6rpert.",
+      "perfume-desc-biotherm-aqp-fresh-eyes":
+        "Ein erfrischendes Augenpflege-Gel, das die empfindliche Augenkontur sofort k\u00fchlend und feuchtigkeitsspendend pflegt und Schwellungen und M\u00fcdigkeit mildert. Angereichert mit Biotherms Life Plankton und purem Bergwasser hinterl\u00e4sst diese 15ml-Formel die Augen ausgeruht, strahlend und revitalisiert.",
+      "perfume-desc-biotherm-aquafitness-shower-gel":
+        "Ein belebendes Duschgel, das die Haut mit einem frischen aquatischen Duft reinigt und erfrischt, inspiriert von der Energie des Wassersports. Angereichert mit Biotherms Life Plankton und feuchtigkeitsspendenden Wirkstoffen hinterl\u00e4sst diese 200ml-Formel die Haut nach jeder Dusche sauber, gestrafft und revitalisiert.",
+      "perfume-desc-lancome-effacernes":
+        "Long-wear softening concealer with SPF 30. Choose your shade — the lightweight 15ml formula covers dark circles, evens skin tone and minimises fine lines for a natural, rested look.",
+      "perfume-desc-lancome-grandiose-01":
+        "Grandiôse Mascara in shade 01 Noir Mirifique with Lancôme's Swan-Neck wand. Amplifies, curls and lengthens lashes for a wide-angle fan effect with clump-free volume.",
+      "perfume-desc-lancome-hypnose-clean-volume-01":
+        "Hypnôse Clean Volume mascara in shade 01 Black. Buildable volume and lash separation with a lightweight, smudge-resistant formula for soft, supple lashes.",
+      "perfume-desc-lancome-bi-facil-125":
+        "Bi-Facil double-action eye makeup remover, available in 75ml and 125ml. The bi-phase formula gently removes all eye makeup, including waterproof mascara, without drying delicate skin.",
+      "perfume-desc-lancome-galatee-confort-200":
+        "Galatée Confort cleansing milk for dry skin in 200ml. Enriched with honey and almond extract, it removes makeup and impurities while leaving skin calm, soothed and hydrated.",
+      "perfume-desc-lancome-crayon-khol-noir":
+        "Le Crayon Khôl in Noir — a creamy, ultra-blendable eye pencil for intense definition. Perfect for sharp lines or soft smoky eyes with high colour payoff.",
+      "perfume-desc-lancome-genifique-cream-50":
+        "Advanced Génifique Youth Activating Cream in a 50ml jar. A lightweight day moisturiser that targets visible signs of ageing and fatigue for smoother, radiant skin.",
+      "perfume-desc-lancome-hypnose-doll-eyes-wp-01":
+        "Hypnôse Doll Eyes Waterproof mascara in 01 Black. Cone-shaped brush coats lashes for volume, length and lift with a bold, curved, clump-free finish.",
+      "perfume-desc-lancome-hypnose-doll-eyes-01":
+        "Hypnôse Doll Eyes mascara in shade 01. Weightless formula with a cone-shaped brush thickens, extends and lifts lashes for a dramatic wide-eye effect.",
+      "perfume-desc-lancome-creme-mousse-confort-125":
+        "Crème Mousse Confort creamy foaming cleanser for dry skin, 125ml. Infused with Rose de France, it transforms into a rich foam that removes impurities and waterproof makeup.",
+      "perfume-desc-lancome-eau-micellaire-douceur-400":
+        "Eau Micellaire Douceur express cleansing water, 400ml. Micellar technology removes makeup and impurities from face, eyes and lips while keeping skin hydrated and silky soft.",
+      "perfume-desc-lancome-renergie-multilift-night-50":
+        "Rénergie Multi-Lift Night Cream, 50ml. Anti-ageing night moisturiser with Multi-Tension Technology that firms, smooths and rejuvenates skin while you sleep.",
+      "perfume-desc-lancome-renergie-creme-50":
+        "Rénergie Multi-Lift Day Cream in a 50ml jar. Lifts, firms and plumps skin while minimising fine lines. Includes SPF 15 for daily protection and revived radiance.",
+      "perfume-desc-lancome-tonique-douceur-400":
+        "Tonique Douceur softening hydrating toner, 400ml. Alcohol-free formula with plant extracts refines pores, tones and preps normal to combination skin for moisturiser.",
+      "perfume-desc-ysl-mascara-mvefc-01":
+        "YSL Mascara Volume Effet Faux Cils in 01 Black. Iconic false-lash effect mascara delivering instant volume, length and ultra-black drama with a flexible brush.",
+      "perfume-desc-ysl-dessin-sourcils-02":
+        "YSL Dessin des Sourcils eyebrow pencil, 1.3g. Choose your shade — defines and shapes brows with natural, buildable colour for a polished, structured look, with a built-in brow brush.",
+      "perfume-desc-ysl-mascara-vefc-wp-01":
+        "YSL Volume Effet Faux Cils Waterproof mascara in 01. Delivers intense volume and length with smudge-proof, long-wearing false-lash effect.",
+      "perfume-desc-armani-babel-she-edp":
+        "A seductive and sparkling fragrance for women that opens with juicy raspberry and aromatic neroli, blooms into rose absolute and closes with creamy vanilla and warm musk. The feminine counterpart to Emporio Babel HE.",
+      "perfume-desc-lancome-monsieur-big-01":
+        "Monsieur Big mascara in shade 01 Big Is The New Black. Ultra-creamy formula with a large brush delivers up to 12x more volume, intense black pigment and up to 24-hour wear without flaking or smudging.",
+      "perfume-desc-biotherm-waterlover-spf30-200":
+        "Waterlover face and body sun milk SPF 30, 200ml. Lightweight milky texture with eco-conscious filters protects against UVA and UVB while hydrating skin with Life Plankton — no white cast, suitable for sensitive skin.",
+      "perfume-desc-biotherm-waterlover-spf50-200":
+        "Waterlover face and body sun milk SPF 50, 200ml. High broad-spectrum protection in a fast-absorbing milk that leaves no white marks. Enriched with Life Plankton for hydration; water-resistant and suitable for sensitive skin.",
+      "perfume-desc-biotherm-blue-therapy-big-eye-15":
+        "Blue Therapy Eye cream, 15ml. Anti-ageing eye care that targets crow's feet, under-eye bags and loss of firmness. Rich yet fresh texture regenerates the delicate eye contour for a brighter, younger-looking gaze.",
+      "perfume-desc-ysl-touche-eclat-3":
+        "YSL Touche Éclat Radiant Touch illuminating pen. Choose your shade — it brightens under-eyes, highlights cheekbones and adds a natural, luminous glow.",
+      "perfume-desc-ysl-primer-moisture-glow":
+        "YSL Top Secrets Instant Moisture Glow, 40ml — a hydrating primer and moisturiser in one. Up to 72 hours of hydration, blurs fine lines and imperfections, preps the skin for makeup and leaves a fresh, dewy glow.",
+      "perfume-desc-lancome-hydra-zen-spf15-50":
+        "Hydra Zen anti-stress moisturising cream with SPF 15, 50ml jar. Soothes and comforts stressed skin, delivers long-lasting hydration and protects against daily UV exposure for a calm, healthy-looking complexion.",
+      "perfume-desc-lancome-absolu-plumper":
+        "Lancôme L'Absolu Gloss Rôsy Plump, 8ml — a light-pink plumping lip gloss with a creamy, non-sticky, high-shine finish. Hyaluronic acid keeps lips hydrated for up to 6 hours, while a cooling menthol touch leaves them looking fuller. Wear it alone or over your favourite lipstick.",
+      "perfume-desc-lancome-teint-miracle":
+        "Teint Miracle hydrating foundation with SPF 15, 30ml pump bottle. Choose your shade — the lightweight, buildable formula evens the complexion and gives skin a natural, lit-from-within glow.",
+      "perfume-desc-biotherm-lait-corporel-400":
+        "Biotherm's iconic Lait Corporel anti-drying body milk in a 400ml bottle. Enriched with Life Plankton and citrus extracts, it hydrates for up to 48 hours and leaves skin soft, smooth and delicately fresh-scented.",
+      "perfume-desc-biotherm-rasage-sensitive-200":
+        "Biotherm Homme Foam Shaver for sensitive skin, 200ml. A dense, rich shaving foam that cushions the razor for a close, comfortable shave and helps prevent irritation, redness and razor burn. With soothing allantoin, moisturising glycerin and Life Plankton™.",
+      "perfume-desc-biotherm-deo-pure-ecocert":
+        "Biotherm Deo Pure Natural Protect roll-on, 75ml — Biotherm's first Ecocert-certified organic deodorant. Free from aluminium salts and parabens, it gives 24-hour odour protection with natural-origin ingredients and aloe vera to soothe the skin. Leaves no marks on clothes.",
+      "perfume-desc-viktor-spicebomb-edt":
+        "Spicebomb Eau de Toilette by Viktor&Rolf — an explosive spicy-woody fragrance for men. Fresh bergamot and grapefruit open onto a fiery heart of chilli, saffron and cinnamon, settling into a warm base of leather, tobacco and vetiver.",
+      "perfume-desc-viktor-flowerbomb-nectar":
+        "Flowerbomb Nectar Eau de Parfum by Viktor&Rolf — a richer, more intense take on the iconic Flowerbomb. Luminous orange blossom and jasmine meet a sweet, gourmand heart of vanilla and an addictive amber-woody trail.",
+      "perfume-desc-biotherm-aquasource-serum-biphase-50":
+        "Biotherm Aquasource Aura Concentrate bi-phase serum, 50ml, for dry to very dry skin. Shake to activate the moisture micro-droplets — with Life Plankton™, Medicinal Aura Leaf and macadamia oil, it gives 24-hour regenerating hydration, refines skin texture and revives the glow.",
+      "perfume-desc-biotherm-aquapower-cleanser":
+        "Biotherm Homme Aquapower ultra-cleansing face wash for men, 125ml. A fresh gel that turns into a creamy foam, removing impurities with oligo-elements and Life Plankton™ — leaves skin clean, refreshed and ready for shaving.",
+      "perfume-desc-lancome-hypnose":
+        "Lancôme Hypnôse volumising mascara. Choose your shade — the buildable formula and signature brush give up to 6x more volume for intense, defined lashes without clumps.",
+      "perfume-desc-lancome-cils-booster-xl":
+        "Lancôme Cils Booster XL enhancing lash primer, 5.5ml. A white base with XL micro-fibres and vitamins B5 and E, applied before mascara to boost length, volume and curl without clumps. Suitable for sensitive eyes and contact lens wearers.",
+      "perfume-desc-lancome-monsieur-big-wp-01":
+        "Monsieur Big Waterproof mascara in 01 Big Is The New Black. The big brush delivers bold, intense volume in a waterproof formula that resists water, sweat and humidity all day.",
+      "perfume-desc-lancome-loose-setting-powder":
+        "Lancôme Long Time No Shine loose setting powder in Translucent, 15g. A weightless powder with ultra-fine mica and silica that absorbs oil, controls shine and extends foundation wear — a smooth matte finish with no white cast.",
+      "perfume-desc-lancome-setting-spray":
+        "Lancôme Fix It Forget It setting spray, 100ml. A refreshing mist with hyaluronic acid, kiwi and moringa extracts that keeps makeup in place for up to 24 hours — sweat- and weather-proof with a natural, shine-free finish.",
+      "perfume-desc-lancome-blush-subtil":
+        "Lancôme Blush Subtil powder blush. Choose your shade — the silky, buildable powder blends seamlessly for a fresh, natural flush of colour that lasts all day.",
+      "perfume-desc-armani-ea-with-you-intensely":
+        "Emporio Armani Stronger With You Intensely Eau de Parfum for men. Spicy pink pepper and juniper open onto a warm heart of toffee, cinnamon and lavender, settling into an addictive base of vanilla, tonka bean and amber.",
+      "perfume-desc-prada-candy":
+        "Prada Candy Eau de Parfum — a playful, sensual gourmand for women. Soft white musks open onto warm benzoin and a rich caramel accord for a smooth, addictive trail.",
+      "perfume-desc-prada-la-femme-intense":
+        "Prada La Femme Intense Eau de Parfum — a deeper, more sensual interpretation of La Femme. Frangipani and ylang-ylang open onto an intensified heart of tuberose, jasmine sambac and orange blossom, resting on warm patchouli, vanilla and vetiver.",
+      "perfume-desc-prada-lhomme-intense":
+        "Prada L'Homme Intense Eau de Parfum — a richer, warmer take on L'Homme. Powdery iris and amber deepen with patchouli and tonka bean for an elegant, sensual woody signature.",
+      "perfume-desc-prada-lhomme-leau":
+        "Prada L'Homme L'Eau Eau de Toilette — a fresh, luminous version of L'Homme. Bright ginger and neroli meet the signature iris, resting on a clean base of cedar, amber and sandalwood.",
+      "perfume-desc-biotherm-life-plankton-eye-15":
+        "Biotherm Life Plankton™ Eye cream, 15ml. With Biotherm's highest concentration of Life Plankton™ and bio-fermented hyaluronic acid, it targets crow's feet, wrinkles, puffiness and dark circles. Light, creamy texture — suitable for sensitive eyes and contact lens wearers.",
+      "perfume-desc-biotherm-tpur-salty-gel-cleanser-125":
+        "Biotherm Homme T-Pur Anti-Oil & Shine cleansing gel, 125ml. An exfoliating, detoxifying gel with French sea salts that reduces shine and blemishes and removes pollution particles. Ideal for oily skin — use every morning before shaving or in the shower.",
+      "perfume-desc-biotherm-aqs-concentrate-bounce-50":
+        "Biotherm Aqua Bounce Super Concentrate, 50ml. Hyaluronic acid, glycerin and Life Plankton™ water plump and soften dry, dehydrated skin. A fast-absorbing gel-fluid with 24-hour hydration.",
+      "perfume-desc-biotherm-aqs-concentrate-pure-50":
+        "Biotherm Aqua Pure Super Concentrate, 50ml, for combination to oily skin. Salicylic acid, glycerin and Life Plankton™ water tighten pores, reduce excess sebum and control shine in a fresh, oil-free gel.",
+      "perfume-desc-biotherm-aqs-concentrate-glow-50":
+        "Biotherm Aqua Glow Super Concentrate, 50ml, for dull or uneven skin. A vitamin complex, glycerin and Life Plankton™ water brighten and even the skin tone in a light fluid with 24-hour moisture.",
+      "perfume-desc-lancome-brow-define-pencil":
+        "Lancôme Brôw Define Pencil, 0.09g. Choose your shade — an ultra-fine retractable tip draws precise, hair-like strokes, and the spoolie brush blends them for natural, defined brows. Waterproof and long-lasting.",
+      "perfume-desc-lancome-hypnose-palette":
+        "Lancôme Hypnôse Palette 5 Couleurs, 4g. Choose your shade — five coordinated shades from matte to shimmer in a soft, creamy powder that blends easily from day to night looks. Long-wearing and crease-resistant, with more intense colour when applied wet.",
+      "perfume-desc-biotherm-aquapower-deo-roll-75":
+        "Biotherm Homme Aquapower 48H Protection antiperspirant roll-on, 75ml. Self-reactive freshness technology releases freshness when it detects sweat, while Life Plankton™ water keeps skin dry and comfortable. Fluid, non-greasy texture with the fresh Aquapower scent.",
+      "perfume-desc-ysl-lhomme-nuit-edp-100":
+        "Yves Saint Laurent La Nuit de L'Homme Eau de Parfum — a seductive, intense take on the night-time classic. Spicy cardamom and lavender over a warm, sensual woody base.",
+      "perfume-desc-lancome-mademoiselle-shine":
+        "Lancôme L'Absolu Mademoiselle Shine lipstick, 3.2g. Choose your shade — a balmy, conditioning lipstick that glides on with juicy colour and a high-shine finish. Enriched with Pro-Xylane and rose oil to keep lips soft, hydrated and supple.",
+      "perfume-desc-libre-edp":
+        "Yves Saint Laurent Libre Eau de Parfum — the floral lavender of freedom. Mandarin and lavender essence open onto a sensual heart of orange blossom and jasmine, resting on warm Madagascar vanilla and musk.",
+      "perfume-desc-biotherm-amber-algae-revitalize-day":
+        "Biotherm Blue Therapy Amber Algae Revitalize day cream, 50ml. Amber algae energises the skin while calcium, plant oils and shea butter nourish and strengthen it. A velvety cream with light-reflecting micro-pearls for an instant glow — anti-ageing care for mature or dull skin.",
+      "perfume-desc-biotherm-amber-algae-revitalize-night":
+        "Biotherm Blue Therapy Amber Algae Revitalize night cream, 50ml. Amber algae with resveratrol, hyaluronic acid and shea butter in a rich, melting balm that works overnight to firm the skin and smooth crow's feet. For dry or mature skin.",
+      "perfume-desc-lancome-genifique-serum-50":
+        "Lancôme Advanced Génifique Youth Activating serum, 50ml. Pre- and probiotic fractions, hyaluronic acid and vitamin Cg strengthen the skin barrier and boost radiance, for visibly younger-looking skin in 7 days. A lightweight first step morning and night, suitable for all skin types, including sensitive.",
+      "perfume-desc-lancome-rose-sugar-scrub":
+        "Lancôme Rose Sugar Scrub, 100ml — a gentle exfoliating scrub. Fine sugar grains melt as you massage, while acacia honey, rose water and hyaluronic acid leave the skin smooth, soft and comforted. Suitable for sensitive skin; use 2–3 times a week.",
+      "perfume-desc-lancome-hydra-zen-cream-50":
+        "Lancôme Hydra Zen Cream, 50ml — a moisturising, soothing day and night cream with hyaluronic acid for normal to dry skin, including sensitive. Gives up to 48 hours of hydration and strengthens the moisture barrier for calmer, more comfortable skin.",
+      "perfume-desc-lancome-hydra-zen-nuit-50":
+        "Lancôme Hydra Zen Night Cream, 50ml. A silky night cream with hyaluronic acid, rose and moringa extracts that recharges moisture and soothes stressed, sensitive skin overnight, so it looks rested and fresh in the morning.",
+      "perfume-desc-lancome-hydra-zen-glow-50":
+        "Lancôme Hydra Zen Anti-Stress Glow Liquid Moisturizer, 50ml. A lightweight fluid with 14 amino acids, hyaluronic acid, aloe vera and rose extract for 24-hour hydration, a stronger moisture barrier and a healthy glow. Non-comedogenic and suitable for all skin types.",
+      "perfume-desc-ysl-lhomme-le-parfum-100":
+        "Yves Saint Laurent L'Homme Le Parfum, 100ml — a woody aromatic fragrance for men. Cardamom, ozonic notes and Primofiori lemon open onto a heart of basil, geranium and violet leaf, resting on cedar, vetiver and warm amberwood.",
+      "perfume-desc-biotherm-tpur-cleanser-125":
+        "Biotherm Homme T-Pur Cleanser, 125ml — an unclogging, oil-control cleanser for normal to oily skin. The white clay-like texture lathers into a foam, while sea minerals, zinc and absorbent perlite purify pores and reduce shine. Use morning (before shaving) and evening.",
+      "perfume-desc-ysl-mascara-mvefc-the-curler":
+        "YSL Mascara Volume Effet Faux Cils The Curler in 01 Rebellious Black, 6.6ml. A dual-sided brush — black fibres for volume and a pink comb to lift — curls and holds lashes all day, with a formula enriched with coconut, walnut-leaf and bamboo oils.",
+      "perfume-desc-ysl-eyeliner-couture-01":
+        "YSL Couture Eyeliner in 1 Noir Minimal Mat, 2.95ml. A liquid liner with an ultra-fine felt tip for precise lines, in a deep black, quick-drying matte finish that lasts all day without smudging.",
+      "perfume-desc-biotherm-aqua-super-mask-glow":
+        "Biotherm Aqua Glow Flash Mask, one 31g sheet mask. Life Plankton™ water and a vitamin complex deliver a boost of hydration and radiance to dull skin in 15 minutes — no rinsing needed. Suitable for all skin types.",
+      "perfume-desc-biotherm-aqua-super-mask-bounce":
+        "Biotherm Aqua Bounce Flash Mask, one 31g sheet mask. Life Plankton™ water and hyaluronic acid plump and hydrate the skin in 15 minutes for a firmer, bouncier look — no rinsing needed. Suitable for all skin types.",
+      "perfume-desc-biotherm-aqua-super-mask-pure":
+        "Biotherm Aqua Pure Flash Mask, one 31g sheet mask. Life Plankton™ water and salicylic acid hydrate while refining pores for a fresh, purified complexion in 15 minutes — no rinsing needed. Suitable for all skin types.",
+      "perfume-desc-ysl-tatouage-velvet-cream-201":
+        "YSL Tatouage Couture Velvet Cream liquid lipstick in 201 Rouge Tatouage, a vivid classic red, 6ml. A creamy matte texture with a velvety feel and high coverage that lasts without drying the lips, applied with a precise angled cushion applicator.",
+      "perfume-desc-biotherm-life-plankton-body-milk-400":
+        "Biotherm Life Plankton™ Multi-Corrective Body Milk, 400ml pump bottle. A silky, fast-absorbing milk with Life Plankton™, plant oils and shea butter that firms, nourishes and smooths the skin. Suitable for sensitive skin, with a light musky scent.",
+      "perfume-desc-ysl-satin-crush-eyeshadow-05":
+        "YSL Satin Crush mono eyeshadow in 05 Radical Rust, a rosy rust-burgundy. A powdery-creamy texture with a satin glow and buildable intensity, applied with a finger or brush, in a mirrored black-and-gold compact.",
+      "perfume-desc-lancome-cils-booster-serum":
+        "Lancôme Cils Booster Lash Revitalizing Serum, 4ml. Hyaluronic acid, an amino-acid complex and cica condition lashes from root to tip and reduce lash loss. Apply twice a day along the lash line — ophthalmologist-tested and suitable for sensitive eyes.",
+      "perfume-desc-valentino-born-in-roma-uomo-edt":
+        "Valentino Born in Roma Uomo Eau de Toilette — a woody aromatic vetiver for men. Violet leaf, ginger and lemon open onto clary sage, a fresh peppermint accord and mineral salt, resting on smoky vetiver, guaiac wood and leather.",
+      "perfume-desc-valentino-donna-edp-30":
+        "Valentino Donna Eau de Parfum — a couture floral for women in the iconic studded bottle. Grapefruit, bergamot and blackcurrant open onto a heart of rose, peach and iris, resting on patchouli, vanilla and praline.",
+      "perfume-desc-valentino-uomo-edt":
+        "Valentino Uomo Eau de Toilette — an elegant woody fragrance for men. Bergamot, lemon and cardamom open onto clary sage, lavandin and black pepper, resting on cedar, vetiver, vanilla and iris.",
+      "perfume-desc-ysl-mascara-mvefc-radical-01":
+        "YSL Mascara Volume Effet Faux Cils Radical in 01 Black Over Black, 7.5ml. An ultra-black, carbon-pigment formula with argan oil and walnut-leaf extract, and a brush mixing soft and stiff bristles for extreme false-lash volume.",
+      "perfume-desc-lancome-lash-idole-01":
+        "Lancôme Lash Idôle lash-lifting and volumising mascara in 01 Glossy Black, 8ml. Choose classic or waterproof — a lightweight gel formula with white tea extract and a curved 360-bristle wand lifts, fans out and volumises lashes without clumps, flaking or smudging for up to 24 hours.",
+      "perfume-desc-armani-stronger-with-you-absolu":
+        "Emporio Armani Stronger With You Absolutely — the most intense, addictive version of Stronger With You for men. Rum, elemi and bergamot open onto lavender and davana, resting on a warm, gourmand base of chestnut, Madagascar vanilla, cedar and patchouli.",
+      "perfume-desc-valentino-born-in-roma-uomo-yellow-dream":
+        "Valentino Born in Roma Uomo Yellow Dream Eau de Toilette, 100ml — a sunny, woody aromatic for men in the yellow Rockstud bottle. Italian mandarin and pineapple open onto a spicy gingerbread accord, resting on vanilla absolute and cedarwood.",
+      "perfume-desc-ysl-crushliner":
+        "YSL Crushliner Stylo waterproof eyeliner. Choose your shade — a retractable pencil with intense colour in one stroke that lasts up to 24 hours on the lash line, resisting water and smudging. Infused with pomegranate extract and ophthalmologist-tested.",
+      "perfume-desc-cacharel-yes-i-am":
+        "Cacharel Yes I Am Eau de Parfum — a bold amber floral for women in the iconic lipstick-shaped bottle. Raspberry, mandarin and bergamot open onto gardenia, jasmine and ginger flower, resting on a creamy milk accord with caramel, vanilla, cardamom and sandalwood.",
+      "perfume-desc-cacharel-yes-i-am-purple":
+        "Cacharel Yes I Am Fabulous Eau de Parfum, 30ml — a fruity, creamy amber-vanilla scent in the purple lipstick bottle. Juicy blackberry opens onto purple heliotrope, resting on a gourmand base of milk and hazelnut.",
+      "perfume-desc-cacharel-yes-i-am-glorious":
+        "Cacharel Yes I Am Glorious Eau de Parfum, 50ml — a luminous fruity floral in the peach lipstick bottle. Peach nectar and mandarin open onto frangipani, tiaré and magnolia, resting on a creamy milkshake accord with sandalwood and white cedar.",
+      "perfume-desc-cacharel-loulou":
+        "Cacharel LouLou Eau de Parfum — the cult 1987 oriental floral in its iconic blue bottle. Plum, iris, violet and mimosa open onto tiaré flower, tuberose and orange blossom, resting on warm vanilla, sandalwood, incense and musk.",
+      "perfume-desc-viktor-spicebomb-night-vision-edt":
+        "Viktor&Rolf Spicebomb Night Vision Eau de Toilette, 90ml — a fresh, spicy-woody fragrance for men. Bergamot, green mandarin, grapefruit, apple and cardamom open onto clary sage, geranium and lavandin, resting on roasted almond, tonka bean, patchouli and cedarwood.",
+      "perfume-desc-viktor-flowerbomb-dew":
+        "Viktor&Rolf Flowerbomb Dew Eau de Parfum, 50ml — a fresh, dewy floral for women. Bergamot, pear and ambrette open onto a dewy rose accord and iris, resting on soft white musk, cashmeran and heliotrope.",
+      "perfume-desc-diesel-bad":
+        "Diesel Bad Eau de Toilette — a woody fragrance for men in a bottle inspired by a leather biker jacket. Bergamot, cardamom and lavender open onto a caviar accord with orris and sage, resting on tobacco, tonka bean, Ambroxan and patchouli.",
+      "perfume-desc-diesel-fuel-for-life-homme":
+        "Diesel Fuel for Life Homme Eau de Toilette — an aromatic fougère for men in the retro flask bottle. Star anise and grapefruit open onto raspberry and lavender, resting on woods and heliotrope.",
+      "perfume-desc-mugler-alien-edp":
+        "Mugler Alien Eau de Parfum — a mysterious, radiant floral woody amber for women in the iconic amethyst talisman bottle. Luminous sambac jasmine meets solar cashmeran wood, resting on a warm trail of white amber. The 60ml bottle is refillable.",
+      "perfume-desc-mugler-alien-goddess":
+        "Mugler Alien Goddess Eau de Parfum, refillable — a sunny floral woody fragrance for women in a golden talisman bottle. Bergamot and coconut water open onto jasmine grandiflorum and heliotrope, resting on bourbon vanilla and cashmeran.",
+      "perfume-desc-armani-my-way-intense":
+        "Giorgio Armani My Way Eau de Parfum Intense, refillable — a deeper, more sensual take on My Way. Orange blossom opens onto an intense floral heart of tuberose and jasmine, resting on creamy sandalwood and Madagascar vanilla.",
+      "perfume-desc-prada-luna-rossa-ocean":
+        "Prada Luna Rossa Ocean Eau de Toilette — a fresh aromatic fougère for men inspired by the sea. Bergamot, pink pepper and artemisia open onto lavender, iris, sage, suede and saffron, resting on musk, caramel, vetiver and patchouli.",
+      "perfume-desc-biotherm-aquasource-gel-50":
+        "Biotherm Aquasource Hyalu Plump Gel, 50ml, for normal to combination skin. Two types of hyaluronic acid and Life Plankton™ give up to 48 hours of hydration in a light, fresh gel that plumps the skin and suits sensitive skin too.",
+      "perfume-desc-lancome-hypnose-absolu-de-noir":
+        "Lancôme Hypnôse L'Absolu de Noir mascara in 01 Extra Black, 6.2ml. The extra-black version of Hypnôse — a 30% darker, semi-matte formula with the 1,000-bristle brush for buildable, dramatic volume that doesn't flake.",
+      "perfume-desc-lancome-24h-drama-liqui-pencil":
+        "Lancôme Drama Liqui-Pencil, 1.2g. Choose your shade — a hybrid gel eyeliner pencil with the intense colour of a liquid liner. Waterproof and long-wearing for up to 24 hours without smudging, flaking or transferring; suitable for sensitive eyes and contact lens wearers.",
+      "perfume-desc-lancome-tiuw-stick":
+        "Lancôme Teint Idole Ultra Wear foundation stick, 9g. Choose your shade — a cream-to-powder formula with medium to full coverage and a natural matte finish that lasts up to 24 hours and resists transfer. Use it as foundation, concealer or contour with the built-in brush.",
+      "perfume-desc-lancome-tiuw-stick-blush-03":
+        "Lancôme Teint Idole Ultra Wear blush stick in 03 Wild Ruby, a deep red-pink, 9g. A lightweight cream-to-powder texture with buildable colour from a natural flush to bold, transfer- and smudge-resistant and non-comedogenic.",
+      "perfume-desc-lancome-tiuw-stick-highlighter":
+        "Lancôme Teint Idole Ultra Wear highlighter stick, 9g. Choose your shade — a cream-to-powder texture with light-reflecting particles for a second-skin glow, from natural radiance to dramatic, and transfer-resistant.",
+      "perfume-desc-lancome-tiuw-concealer":
+        "Lancôme Teint Idole Ultra Wear All Over Concealer, 13ml. Choose your shade — full, buildable coverage with a natural matte finish and up to 24 hours of wear and hydration without creasing. Use it as a concealer or all-over foundation; suitable for sensitive skin.",
+      "perfume-desc-viktor-spicebomb-night-vision-edp":
+        "Viktor&Rolf Spicebomb Night Vision Eau de Parfum, 90ml — the deeper, more intense Eau de Parfum version of Night Vision for men. Fresh citrus and spices meet aromatic herbs, resting on a warm, addictive base of tonka bean and woods.",
+      "perfume-desc-ralph-lauren-polo-red-edp":
+        "Ralph Lauren Polo Red Eau de Parfum, 75ml — a bold, seductive woody fragrance for men and a warmer, more intense take on Polo Red. Vibrant citrus and spicy notes open onto a rich, sensual woody base.",
+      "perfume-desc-valentino-born-in-roma-uomo-coral-fantasy":
+        "Valentino Born in Roma Uomo Coral Fantasy Eau de Toilette — a vibrant, fruity aromatic woody fragrance for men in the coral-tinted Rockstud bottle, pairing juicy fruit and aromatic notes with a smoky, woody base.",
+      "perfume-desc-valentino-born-in-roma-donna-coral-fantasy":
+        "Valentino Born in Roma Donna Coral Fantasy Eau de Parfum — a radiant fruity floral for women in the coral Rockstud bottle, with juicy fruit and blooming florals over a warm, sensual vanilla base.",
+      "perfume-desc-prada-luna-rossa-sport":
+        "Prada Luna Rossa Sport Eau de Toilette, 50ml — an energising, sporty fragrance for men in the red Luna Rossa bottle. Fresh ginger and juniper berries meet a warm, smooth heart of tonka bean and vanilla.",
+      "perfume-desc-ysl-y-edt":
+        "Yves Saint Laurent Y Eau de Toilette — a fresh, aromatic woody fragrance for men. Crisp bergamot and ginger open onto aromatic sage, resting on a clean woody base of cedarwood and vetiver.",
+      "perfume-desc-lancome-genifique-sensitive-20":
+        "Lancôme Advanced Génifique Sensitive dual concentrate, 20ml. A twist of the cap releases a blue concentrate with ferulic acid and vitamin E into the pre- and probiotic serum, to soothe, strengthen the skin barrier and reduce visible redness. For all skin types, including sensitive.",
+      "perfume-desc-lancome-absolu-rouge-drama-ink":
+        "Lancôme L'Absolu Rouge Drama Ink liquid lipstick, 6ml. Choose your shade — a semi-matte lip ink, twice as pigmented and four times thinner than a classic lipstick, applied with a curved precision tip for up to 8 hours of transfer-proof colour.",
+      "perfume-desc-lancome-le-stylo-waterproof":
+        "Lancôme Le Stylo Waterproof long-lasting eyeliner, 0.35g. Choose your shade — a creamy, waterproof pencil with a retractable fine tip and a built-in smudger, for the lash line or waterline, that lasts without flaking.",
+      "perfume-desc-lancome-liner-idole":
+        "Lancôme Idôle Liner in 01 Glossy Black, 1ml. An ultra-precise waterproof liquid liner with a flexible felt tip for lines as fine as 0.1mm, in an intense black that resists transfer, flaking and smudging for up to 24 hours.",
+      "perfume-desc-lancome-renergie-hcf-triple-serum-50":
+        "Lancôme Rénergie H.C.F. Triple Serum, 50ml. A three-chamber anti-ageing serum combining hyaluronic acid, vitamin C with niacinamide, and ferulic acid to target wrinkles, loss of firmness and volume, and dark spots. Use two pumps morning and/or evening.",
+      "perfume-desc-lancome-nutrix-face-cream":
+        "Lancôme Nutrix nourishing and soothing rich cream, 50ml — Lancôme's very first cream, created in 1936, now in a white jar. A rich formula for very dry, sensitive or fragile skin that relieves tightness and deeply nourishes and comforts.",
+      "perfume-desc-lancome-genifique-light-pearl-20":
+        "Lancôme Advanced Génifique Yeux Light-Pearl eye and lash concentrate, 20ml. Pre- and probiotic fractions, caffeine and arginine target puffiness and care for lashes, applied with a cooling 360° massaging pearl. Suitable for sensitive eyes and contact lens wearers.",
+      "perfume-desc-lancome-absolu-rouge-cream-366":
+        "Lancôme L'Absolu Rouge Cream lipstick, 3.4g. Choose your shade — enriched with 30% rose balm and hyaluronic acid for a luminous cream finish, intense colour and up to 18 hours of comfort.",
+      "perfume-desc-biotherm-tpur-gel-50":
+        "Biotherm Homme T-Pur Gel Ultra-Mattifying & Oil-Control, 50ml pump. A lightweight, non-sticky gel moisturiser for normal to oily skin with French sea salts and salicylic acid that controls oil and shine for up to 8 hours while keeping skin hydrated.",
+      "perfume-desc-biotherm-aquapower-comfort-gel-75":
+        "Biotherm Homme Aquapower Comfort Gel, 75ml pump, for dry skin. A fresh water-gel moisturiser with Life Plankton™, ceramides, shea butter and apricot kernel oil that boosts hydration and instantly cools and comforts the skin — ideal after shaving.",
+      "perfume-desc-biotherm-homme-ultra-confort-balm-75":
+        "Biotherm Homme Basics Line Comfort Balm, 75ml pump — a soothing, nourishing aftershave balm. A rich but non-greasy texture with Life Plankton™ that calms razor burn, redness and tightness, strengthens the skin barrier and hydrates for 24 hours.",
+      "perfume-desc-biotherm-blue-pro-retinol-50":
+        "Biotherm Blue Pro-Retinol Multi-Correct Cream, 50ml. An anti-wrinkle cream with pro-retinol, niacinamide and Life Plankton™ in a fresh, melting texture that visibly reduces wrinkles and refines skin texture. 92% natural-origin formula.",
+      "perfume-desc-ysl-rouge-pur-couture-the-slim-32":
+        "YSL Rouge Pur Couture The Slim leather-matte lipstick in 32 Rouge Rage, a deep, warm brick red, 2.2g. Highly pigmented, full-coverage colour in a creamy, comfortable formula, with a slanted square bullet that lines the lips precisely.",
+      "perfume-desc-ysl-lash-clash-01":
+        "YSL Lash Clash Extreme Volume Mascara. Choose your shade — an oversized double-cone brush delivers up to 200% more volume with 24-hour smudge-resistant wear, in a fragrance-free formula with iris extract to care for the lashes.",
+      "perfume-desc-lancome-absolu-rouge-drama-matte":
+        "Lancôme L'Absolu Rouge Drama Matte lipstick, 3.4g. Choose your shade — intense pure pigments give a bold, powdery matte finish with full coverage, while ceramides, hyaluronic acid and rose extracts keep lips comfortable for up to 8 hours. The petal-shaped bullet applies precisely in one stroke.",
+      "perfume-desc-biotherm-waterlover-sun-mist-spf30":
+        "Biotherm Waterlover Sun Mist SPF 30, 200ml — an invisible face and body sun mist with UVA/UVB protection. The transparent, ultra-light dual-layer texture with Life Plankton™ and vitamin E sprays on evenly, is water-resistant and leaves no white residue. Suitable for all skin types, including sensitive skin.",
+      "perfume-desc-biotherm-life-plankton-elixir-75":
+        "Biotherm Life Plankton Elixir, 75ml — a fundamental regenerating serum and the first step of the routine. With 5% Life Plankton™ (Biotherm's highest concentration), hyaluronic acid and a vitamin C complex, it strengthens and regenerates the skin, leaving it visibly smoother, firmer and more radiant.",
+      "perfume-desc-prada-luna-rossa-edt":
+        "Prada Luna Rossa Eau de Toilette — the original fresh, aromatic fragrance for men. Lavender and bitter orange open onto a cool heart of spearmint and clary sage, resting on a warm, sensual base of ambrette and ambroxan.",
+      "perfume-desc-armani-code-le-parfum":
+        "Armani Code Le Parfum for men, refillable — an intense woody-iris fragrance in the black lacquered Code bottle. Bergamot and bergamot leaf open onto a powdery heart of iris and clary sage, resting on a warm, sensual base of tonka bean absolute and cedarwood.",
+      "perfume-desc-lancome-advanced-genifique-night-cream":
+        "Lancôme Advanced Génifique Repairing Night Cream, 50ml jar. Inspired by microbiome science, it repairs the skin barrier overnight with a patented complex of 7 pre- and probiotic fractions, triple ceramides and hyaluronic acid. The melting texture leaves skin plumper, smoother and well-rested by morning; 94% natural-origin ingredients, suitable for sensitive skin.",
+      "perfume-desc-diesel-d-by-diesel-edt":
+        "D by Diesel Eau de Toilette, 50ml — a gender-fluid fragrance for everyone. Energising ginger and lavender open onto a soft denim-cotton accord, settling into a warm, sensual vanilla infusion. Refillable bottle in plastic-free packaging.",
+      "perfume-desc-ysl-libre-le-parfum":
+        "Yves Saint Laurent Libre Le Parfum — the most intense, ambery version of Libre for women. Bergamot, mandarin, ginger and saffron open onto a floral heart of orange blossom and lavender, resting on a warm, addictive base of Bourbon vanilla, honey and tonka bean.",
+      "perfume-desc-prada-paradoxe-edp":
+        "Prada Paradoxe Eau de Parfum, refillable — a modern amber-floral fragrance for women in the iconic triangle bottle. Bergamot, tangerine and pear open onto a luminous heart of neroli, orange blossom and jasmine, resting on amber, benzoin, Bourbon vanilla and white musk.",
+      "perfume-desc-lancome-bi-facil-clean-care-125":
+        "Lancôme Bi-Facil Clean & Care Eye Makeup Remover, 125ml. The bi-phase formula (55% oil, 45% water) removes even waterproof and long-wear eye makeup instantly: jojoba and almond oils dissolve makeup while nourishing, and Damascena rose water soothes the eye area and lashes. Gentle enough for sensitive eyes; at least 95% natural-origin ingredients.",
+      "perfume-desc-lancome-hypnose-gift-set":
+        "Lancôme Le 8 Hypnôse gift set — Le 8 Hypnôse volumising serum mascara in black plus a Cils Booster XL lash primer, in a gift box. The mascara's caring black balm with 8 amino acids builds bold volume while caring for the lashes and removes easily with warm water; apply the white primer first for extra volume and length.",
+      "perfume-desc-valentino-donna-yellow-dream-set":
+        "Valentino Donna Born in Roma Yellow Dream gift set — a 50ml Eau de Parfum plus a 15ml travel-size Eau de Parfum. A sunny floral-musky fragrance: Calabrian bergamot and Italian primofiore lemon open onto Damascena rose and peony, resting on white musk and Madagascan vanilla.",
+      "perfume-desc-lancome-tiuw-care-glow-foundation":
+        "Lancôme Teint Idole Ultra Wear Care & Glow foundation, 30ml, SPF 25. Choose your shade — a healthy-glow serum foundation with 82% skincare, hyaluronic and mandelic acids, giving medium, buildable coverage that lasts 24 hours without transferring, fading or settling into fine lines. Suitable for all skin types.",
+      "perfume-desc-ysl-all-hours-foundation":
+        "Yves Saint Laurent All Hours Foundation Luminous Matte, 25ml, SPF 39. Choose your shade — up to 24 hours of full coverage with a natural luminous-matte finish and a weightless, breathable feel. Transfer-proof, waterproof and sweat-proof, with a 77% skincare base including hyaluronic acid.",
+      "perfume-desc-viktor-rolf-good-fortune-edp":
+        "Viktor&Rolf Good Fortune Eau de Parfum, 50ml — an amber floral fragrance for women in the orb-shaped lilac bottle with an amethyst-like cap. Spicy fennel and gentian flower open onto a rich jasmine superinfusion, resting on creamy Madagascan bourbon vanilla.",
+      "perfume-desc-ysl-lhomme-edp":
+        "Yves Saint Laurent L'Homme Eau de Parfum, 100ml — a richer, liqueur-like take on L'Homme in a bourbon-coloured bottle. Bitter orange and bergamot open onto lavender and geranium, resting on a warm woody base of cognac-cask oak, cedar and vetiver.",
+      "perfume-desc-ysl-black-opium-le-parfum":
+        "Yves Saint Laurent Black Opium Le Parfum — the most intense, vanilla-rich Black Opium, in a glossy black couture bottle. Green mandarin, pear and cinnamon open onto jasmine sambac and orange blossom, resting on an espresso coffee accord, patchouli and four Madagascan vanillas.",
+      "perfume-desc-ysl-libre-body-balm":
+        "Yves Saint Laurent Libre Perfumed Body Balm, 200ml tube. A soft, ultra-moisturising balm with shea butter, sweet almond oil and soothing verbena that absorbs quickly without feeling greasy, leaving skin delicately scented with Libre's lavender, orange blossom and vanilla signature.",
+      "perfume-desc-armani-code-edt":
+        "Armani Code Eau de Toilette for men, refillable — an ambery-woody fragrance in the black Code bottle with silver accents. Bright green mandarin from Italy opens onto a modern, magnetic heart of lavandin, resting on a warm, comforting base of tonka bean absolute and cedarwood.",
+      "perfume-desc-valentino-born-in-roma-uomo-intense":
+        "Valentino Uomo Born in Roma Intense Eau de Parfum — a deeper, more sensual take on Born in Roma Uomo in a dark studded bottle. Creamy bourbon vanilla and a touch of ginger meet an aromatic heart of lavandin, resting on a smoky vetiver base.",
+      "perfume-desc-valentino-born-in-roma-donna-intense":
+        "Valentino Donna Born in Roma Intense Eau de Parfum — an intense amber-vanilla take on Born in Roma Donna in a deep pink studded bottle. Bourbon vanilla lifted by bergamot and blackcurrant meets a trio of jasmines, resting on warm benzoin resin.",
+      "perfume-desc-armani-my-way-le-parfum":
+        "Giorgio Armani My Way Le Parfum, refillable — the most intense My Way, in a pink-to-blue gradient bottle. Bergamot and orange blossom open onto a heart of tuberose, iris and ambrette, resting on cedarwood, bourbon vanilla and white musk.",
+      "perfume-desc-viktor-rolf-flowerbomb-ruby-orchid":
+        "Viktor&Rolf Flowerbomb Ruby Orchid Eau de Parfum — a floral-gourmand take on Flowerbomb in a ruby-pink grenade bottle. Vine peach accord and freesia open onto a heart of jasmine grandiflorum and ruby orchid, resting on red vanilla bean and a Bourbon vanilla infusion.",
+      "perfume-desc-ysl-myslf-edp":
+        "Yves Saint Laurent MYSLF Eau de Parfum for men, refillable — a woody floral fragrance in a sleek black bottle with the Cassandre logo. Calabrian bergamot opens onto a heart of Tunisian orange blossom absolute, resting on Indonesian patchouli and ambery woods.",
+      "perfume-desc-armani-si-intense-edp":
+        "Giorgio Armani Sì Eau de Parfum Intense, refillable — a richer, more sensual Sì for women. Blackcurrant nectar opens onto a heart of Damascena rose absolute and davana essential oil, resting on Madagascar Bourbon vanilla with a hint of black tea.",
+      "perfume-desc-lancome-hypnose-mascara-set":
+        "Lancôme Le 8 Hypnôse mascara gift set — the full-size Le 8 Hypnôse volumising serum mascara in black plus a travel-size L'Absolu Rouge Cream lipstick, in a gift box. The mascara's caring black balm builds bold, buildable volume and removes easily with warm water.",
+      "perfume-desc-biotherm-blue-pro-retinol-eye-cream":
+        "Biotherm Blue Pro-Retinol Eye Cream, 15ml — an anti-wrinkle eye cream with pro-retinol, peptides, caffeine and Life Plankton™. Use morning and night: the eye contour looks brighter and firmer from the first week and wrinkles are visibly reduced. 95% natural-origin, vegan and ophthalmologist-tested.",
+      "perfume-desc-prada-paradoxe-intense":
+        "Prada Paradoxe Intense Eau de Parfum, refillable — a deeper, more enveloping floral amber with a woody twist. A jasmine superinfusion meets a warm amber accord and a moss accord for an intense, sensual trail.",
+      "perfume-desc-ysl-libre-absolu-platine":
+        "Yves Saint Laurent Libre L'Absolu Platine — the most concentrated Libre, in a mirrored platinum bottle with the gold Cassandre. Bergamot, mandarin and a natural aldehyde open onto orange blossom and Diva lavender, resting on Bourbon vanilla and an ambergris accord.",
+      "perfume-desc-lancome-renergie-hpn-300-peptide":
+        "Lancôme Rénergie H.P.N. 300-Peptide Cream, 50ml — an anti-ageing cream with hyaluronic acid, over 300 peptides and niacinamide for morning and/or evening. Visibly reduces wrinkles, fine lines and dark spots while firming and lifting the skin, with first results in as little as 2 weeks.",
+      "perfume-desc-armani-prive-cuir-zerzura":
+        "Giorgio Armani Privé Cuir Zerzura Eau de Parfum — a refined leather from Armani's haute couture fragrance collection. Violet leaf, elemi and mandarin open onto iris and rose, resting on a soft leather, Bourbon vanilla and cedar base.",
+      "perfume-desc-armani-prive-musc-shamal":
+        "Giorgio Armani Privé Musc Shamal Eau de Parfum — a luminous musky amber from Armani's haute couture fragrance collection. Sparkling aldehydes and citrus open onto a heart of musk, rose and jasmine, resting on amber, vanilla and cedar.",
+      "perfume-desc-armani-prive-sable-nuit":
+        "Giorgio Armani Privé Sable Nuit Eau de Parfum — a warm, resinous amber from Armani's haute couture fragrance collection. Olibanum and pink pepper open onto cedar, benzoin, labdanum and patchouli, resting on vanilla and ambroxan.",
+      "perfume-desc-armani-prive-bois-encens":
+        "Giorgio Armani Privé Bois d'Encens Eau de Parfum — a woody incense from Armani's haute couture fragrance collection. Black pepper and vetiver frame a smoky heart of frankincense, with cedar and labdanum in the base.",
+      "perfume-desc-armani-prive-cuir-amethyste":
+        "Giorgio Armani Privé Cuir Améthyste Eau de Parfum — a floral leather from Armani's haute couture fragrance collection. Coriander, rose and bergamot open onto violet and birch leather with patchouli, resting on benzoin, labdanum and Bourbon vanilla.",
+      "perfume-desc-armani-prive-oud-royal":
+        "Giorgio Armani Privé Oud Royal Eau de Parfum — a regal oud from Armani's haute couture fragrance collection. Saffron opens onto Laotian oud and rose, resting on frankincense, myrrh, amber and sandalwood.",
+      "perfume-desc-armani-prive-cypres-pantelleria":
+        "Giorgio Armani Privé Cyprès Pantelleria Eau de Toilette — a fresh Mediterranean citrus-woody scent from Armani's haute couture fragrance collection. Citron, bergamot, neroli and mandarin open onto watery notes, cypress and clary sage, resting on oakmoss, vetiver, amberwood and patchouli.",
+      "perfume-desc-armani-prive-figuier-eden":
+        "Giorgio Armani Privé Figuier Eden Eau de Toilette — a green, juicy fig scent from Armani's haute couture fragrance collection. Bergamot, pink pepper and mandarin open onto fig, tea and green grass, resting on iris and amber.",
+      "perfume-desc-armani-prive-jasmin-kusamono":
+        "Giorgio Armani Privé Jasmin Kusamono Eau de Toilette — a delicate white floral from Armani's haute couture fragrance collection. Nashi pear and pink pepper open onto lily-of-the-valley, jasmine sambac and orange blossom, resting on sandalwood and cedar.",
+      "perfume-desc-armani-prive-rose-arabie":
+        "Giorgio Armani Privé Rose d'Arabie Eau de Parfum — an opulent oriental rose from Armani's haute couture fragrance collection. Saffron opens onto Damask rose, dark woods and patchouli, resting on warm amber.",
+      "perfume-desc-armani-prive-orangerie-venise":
+        "Giorgio Armani Privé Orangerie Venise Eau de Toilette — a sunny Venetian citrus from Armani's haute couture fragrance collection. Bitter orange, citrus and bergamot open onto neroli and buchu, resting on ambroxan, cedar and moss.",
+      "perfume-desc-armani-prive-pivoine-suzhou":
+        "Giorgio Armani Privé Pivoine Suzhou Eau de Toilette — a fresh, fruity peony from Armani's haute couture fragrance collection. Raspberry, pink pepper and mandarin open onto peony and May rose, resting on musk, amber and patchouli.",
+      "perfume-desc-armani-prive-rose-alexandrie":
+        "Giorgio Armani Privé Rose Alexandrie Eau de Toilette — a soft, powdery rose from Armani's haute couture fragrance collection. Bergamot, mandarin and neroli open onto centifolia rose and yellow mimosa, softened by benzoin and vanilla.",
+      "perfume-desc-armani-prive-rose-milano":
+        "Giorgio Armani Privé Rose Milano Eau de Toilette — a bright, modern rose from Armani's haute couture fragrance collection. Pear, bergamot and Primofiore lemon open onto Damask rose and jasmine, resting on moss and patchouli.",
+      "perfume-desc-armani-prive-the-yulong":
+        "Giorgio Armani Privé Thé Yulong Eau de Toilette — a fresh tea from Armani's haute couture fragrance collection. Mandarin, petitgrain and cardamom open onto green and black tea with orange blossom and jasmine, resting on vetiver, ambrette and iris.",
+      "perfume-desc-armani-prive-vetiver-hiver":
+        "Giorgio Armani Privé Vétiver d'Hiver Eau de Toilette — a crisp, elegant vetiver from Armani's haute couture fragrance collection. Bergamot, cedrat and mandarin open onto pink pepper, cardamom and coriander, resting on vetiver and patchouli.",
+      "perfume-desc-armani-prive-bleu-lazuli":
+        "Giorgio Armani Privé Bleu Lazuli Eau de Parfum — a precious-stone collection scent from Armani's haute couture fragrance collection. Maté, cardamom and bergamot open onto plum, osmanthus and jasmine, resting on honey, tobacco, vanilla and sandalwood.",
+      "perfume-desc-armani-prive-magenta-tanzanite":
+        "Giorgio Armani Privé Magenta Tanzanite Eau de Parfum — a spicy precious-stone collection scent from Armani's haute couture fragrance collection. Cardamom, ginger and bergamot open onto cinnamon, myrrh and coffee, resting on tobacco, vanilla and tonka.",
+      "perfume-desc-armani-prive-rouge-malachite":
+        "Giorgio Armani Privé Rouge Malachite Eau de Parfum — an opulent white-floral precious-stone collection scent from Armani's haute couture fragrance collection. Tuberose and pink pepper open onto jasmine sambac, ylang-ylang and orange blossom, resting on a warm tuberose and amber base.",
+      "perfume-desc-armani-prive-santal-dan-sha":
+        "Giorgio Armani Privé Santal Dān Shā Eau de Toilette — a creamy, luminous sandalwood from Armani's haute couture fragrance collection. Calabrian bergamot, cardamom and violet leaf open onto elemi, frankincense and musk, resting on New Caledonian sandalwood and cedar.",
+      "perfume-desc-armani-eyes-to-kill-classico":
+        "Giorgio Armani Eyes to Kill Classico mascara in black — a lengthening and volumising formula with a precise brush for defined, curled lashes. Available in the full 10ml size or a 4.8ml midi size.",
+      "perfume-desc-armani-eyes-to-kill-eccentrico":
+        "Giorgio Armani Eyes to Kill Eccentrico mascara, 10ml — a high-volume mascara with a patented elastomer brush that builds dramatic, separated lashes without clumps or flakes.",
+      "perfume-desc-armani-eyes-to-kill-stellar":
+        "Giorgio Armani Eyes to Kill Stellar mono eyeshadow, 4g — a bouncy gel-to-powder texture that applies easily with a fingertip for a sparkling, metallic-shimmer finish.",
+      "perfume-desc-armani-eye-tint":
+        "Giorgio Armani Eye Tint long-lasting liquid eyeshadow. Choose your shade — a doe-foot applicator lays down intense colour that dries crease-resistant, in shimmer (S) and matte (M) finishes.",
+      "perfume-desc-armani-smooth-silk-eye-pencil":
+        "Giorgio Armani Smooth Silk Eye Pencil, 1.05g. Choose your shade — a silky, soft waterproof kohl that glides on for precise lining or smudges into a smoky look.",
+      "perfume-desc-armani-fluid-sheer":
+        "Giorgio Armani Fluid Sheer, 18ml. Choose your shade — a liquid glow enhancer to wear alone, mix with foundation or use as a highlighter for a luminous, sheer-colour finish.",
+      "perfume-desc-armani-luminous-silk-concealer":
+        "Giorgio Armani Luminous Silk Concealer, 12ml. Choose your shade — a lightweight, hydrating multi-purpose concealer that brightens and blurs with buildable coverage and Armani's signature radiant, skin-like finish.",
+      "perfume-desc-armani-lip-power":
+        "Giorgio Armani Lip Power longwear satin lipstick. Choose your shade — oils and highly concentrated pigments give vivid, comfortable colour for up to 8 hours, with a drop-shaped bullet for precise application.",
+      "perfume-desc-armani-lip-power-matte":
+        "Giorgio Armani Lip Power Matte lipstick. Choose your shade — a cream-to-powder matte formula with jojoba and olive oils for intense colour and all-day comfort, in the red and black soft-matte case.",
+      "perfume-desc-armani-concealer-brush":
+        "Giorgio Armani Maestro Spot Concealer Brush — a small brush with a dense, pointed tip for precise spot concealing and seamless blending around the eyes and nose.",
+      "perfume-desc-armani-luminous-silk-glow-blush":
+        "Giorgio Armani Luminous Silk Glow Blush. Choose your shade — a silky powder blush that blends into a natural, radiant flush with a luminous, buildable finish.",
+      "perfume-desc-armani-power-fabric-concealer":
+        "Giorgio Armani Power Fabric+ Concealer. Choose your shade — a high-coverage liquid concealer with a natural matte finish that stays crease-resistant for up to 24 hours, with a doe-foot applicator.",
+      "perfume-desc-armani-lip-maestro":
+        "Giorgio Armani Lip Maestro liquid lipstick, 6.5ml. Choose your shade — a soft-matte 'kissed' finish from mineral matte powders, in Armani's classic red-cap tube with doe-foot applicator.",
+      "perfume-desc-armani-lip-maestro-satin":
+        "Giorgio Armani Lip Maestro Satin liquid lipstick, 4ml. Choose your shade — two gels combine stick-like colour, balm-like care and liquid wear in a satin finish that turns luminous and blurred, with a diamond-shaped applicator.",
+      "perfume-desc-armani-power-fabric-compact":
+        "Giorgio Armani Power Fabric Compact foundation, 9g — a balm-to-cream-powder compact for high, buildable coverage with a matte-velvet finish and a waterproof veil. Includes a sponge.",
+      "perfume-desc-armani-luminous-silk-glow-fusion-powder":
+        "Giorgio Armani Luminous Silk Glow Fusion Powder, 3.5g — a pressed powder with water-memory technology that melts onto the skin like a fluid, setting and blurring while keeping a natural glow.",
+      "perfume-desc-ralph-lauren-polo-red-parfum":
+        "Ralph Lauren Polo Red Parfum — the most intense Polo Red, in a deep red refillable flask. Blood orange, bergamot and pink pepper open onto absinthe, lavender and orris, resting on musk, cedar and opoponax.",
+      "perfume-desc-mugler-alien-goddess-supra-florale":
+        "Mugler Alien Goddess Supra Florale Eau de Parfum, refillable — a radiant floral take on Alien Goddess in a rose-gold talisman bottle. Prickly pear and cactus flower open onto jasmine sambac and immortelle, resting on amber, musk and desert rose.",
+      "perfume-desc-prada-luna-rossa-ocean-edp":
+        "Prada Luna Rossa Ocean Eau de Parfum — a deeper, warmer take on Luna Rossa Ocean for men, in a dark navy bottle. Grapefruit opens onto woody notes and frankincense, resting on vanilla and AmberXtreme.",
+      "perfume-desc-ysl-y-edp-intense":
+        "Yves Saint Laurent Y Eau de Parfum Intense for men — a more intense, aromatic take on Y in a night-blue bottle. Ginger, juniper berries and bergamot open onto sage, lavender and geranium, resting on vetiver, patchouli and cedar.",
+      "perfume-desc-lancome-renergie-yeux":
+        "Lancôme Rénergie Yeux eye cream, 15ml — a lifting, filling eye cream with next-generation hyaluronic acid, linseed peptides, caffeine and cocoa seed butter. Visibly reduces dark circles, puffiness and wrinkles while firming the eye contour, with 24-hour hydration. Tested under ophthalmological control.",
+      "perfume-desc-lancome-absolu-rouge-intimatte":
+        "Lancôme L'Absolu Rouge Intimatte lipstick, 3.4g. Choose your shade — a soft, blurred matte finish with up to 12 hours of wear, enriched with centifolia rose extract, ceramides and hyaluronic acid for lasting comfort.",
+      "perfume-desc-lancome-hypnose-genifique-bifacil-set":
+        "Lancôme Hypnôse gift set — the full-size Hypnôse mascara in 01 Noir, Advanced Génifique Yeux Light-Pearl eye and lash serum (5ml) and Bi-Facil eye make-up remover (30ml). Hypnôse builds up to 8× thicker lashes with its 1,000-bristle brush; Light-Pearl's cooling applicator de-puffs the eye area.",
+      "perfume-desc-lancome-genifique-happiness-set":
+        "Lancôme Advanced Génifique gift set — Advanced Génifique Serum (30ml), Advanced Génifique Yeux Light-Pearl eye and lash serum (5ml) and Advanced Génifique Yeux eye cream (5ml), in a confetti-rose gift box. The probiotic-fraction serum with hyaluronic acid strengthens the skin's moisture barrier for a radiant, healthy-looking complexion.",
+      "perfume-desc-ysl-couture-mini-clutch":
+        "Yves Saint Laurent Couture Mini Clutch eyeshadow palette. Choose your shade — four coordinated mattes, satins and shimmers in a quilted clutch case, with pigments enriched with sweet almond, coffee seed and fig cactus oils. Comes with two applicators.",
+      "perfume-desc-diesel-d-red-edp":
+        "Diesel D RED Eau de Parfum — a bold, aromatic woody fragrance in a red embossed DIESEL bottle. Grapefruit and geranium open onto lavender and aldehydes, resting on a sandalwood accord and ambery woods.",
+      "perfume-desc-ysl-black-opium-over-red":
+        "Yves Saint Laurent Black Opium Eau de Parfum Over Red — a fruity, addictive take on Black Opium in a lacquered red bottle. A cherry accord and mandarin open onto jasmine, black tea and orange blossom, resting on the signature black coffee accord, Madagascar vanilla and patchouli.",
+      "perfume-desc-armani-acqua-di-gio-edt-set":
+        "Giorgio Armani Acqua di Giò Eau de Toilette gift set for men — a 100ml Eau de Toilette, a 15ml travel spray and a 75g deodorant stick in a gift box. The iconic aquatic fragrance: Calabrian bergamot, neroli and green tangerine open onto marine notes, jasmine, rosemary and persimmon, resting on patchouli.",
+      "perfume-desc-prada-infusion-cedre":
+        "Prada Les Infusions Infusion de Cèdre Eau de Parfum, 100ml — a clean, woody-resinous scent from Prada's Les Infusions collection. Cedarwood and mandarin rest on a warm base of benzoin and incense.",
+      "perfume-desc-prada-infusion-fleur-oranger":
+        "Prada Les Infusions Infusion de Fleur d'Oranger Eau de Parfum, 100ml — a luminous white floral from Prada's Les Infusions collection. Neroli opens onto a radiant orange blossom heart, resting on jasmine and sandalwood.",
+      "perfume-desc-prada-infusion-figue":
+        "Prada Les Infusions Infusion de Figue Eau de Parfum, 100ml — a green, Mediterranean fig scent from Prada's Les Infusions collection. Mandarin opens onto a milky fig accord, resting on mastic and green galbanum.",
+      "perfume-desc-valentino-green-stravaganza-donna":
+        "Valentino Donna Born in Roma Green Stravaganza Eau de Parfum — a floral amber in a lime-green studded bottle. A smoky lapsang souchong tea accord opens onto jasmine absolute, resting on a warm vanilla extract base.",
+      "perfume-desc-valentino-green-stravaganza-uomo":
+        "Valentino Uomo Born in Roma Green Stravaganza Eau de Toilette — a fougère amber for men in a green studded bottle. Calabrian bergamot opens onto a rich coffee accord, resting on Haitian vetiver.",
+      "perfume-desc-armani-my-way-nectar":
+        "Giorgio Armani My Way Nectar Eau de Parfum, refillable — a juicy fruity floral take on My Way in an all-pink bottle. Pear, rhubarb, bergamot and orange blossom open onto tuberose absolute, resting on bourbon vanilla, cedarwood and white musk.",
+      "perfume-desc-ysl-all-hours-concealer":
+        "Yves Saint Laurent All Hours Concealer, 15ml. Choose your shade — up to 24-hour full coverage with a luminous matte finish and an 85% skincare base with caffeine and jasmine petal extract. The precise angled applicator conceals, sculpts or covers the whole face. Fragrance-free.",
+      "perfume-desc-lancome-idole-tint":
+        "Lancôme Idôle Tint liquid eyeshadow and liner, 7ml. Choose your shade — a two-sided applicator lays down shadow with the flat side and liner with the thin side; it also works as a blush or highlighter. Up to 16 hours of transfer-, crease- and smudge-resistant wear.",
+      "perfume-desc-lancome-lveb-rose-extraordinaire":
+        "Lancôme La Vie est Belle Rose Extraordinaire Eau de Parfum, refillable — a luminous rose take on La Vie est Belle in a pink rose-engraved bottle. Fresh rose water, a Space Rose accord and Rose Damascena absolute open onto iris concrete, resting on a woody musk.",
+      "perfume-desc-lancome-advanced-genifique-serum-set":
+        "Lancôme Advanced Génifique serum gift set — Advanced Génifique Serum 50ml, a 10ml travel-size serum and Advanced Génifique Eye Cream 5ml, in a holiday gift box. The probiotic-fraction serum with hyaluronic acid strengthens the skin's moisture barrier for a radiant, healthy-looking complexion.",
+      "perfume-desc-armani-stronger-with-you-edt-set":
+        "Emporio Armani Stronger With You Eau de Toilette gift set for men — 100ml Eau de Toilette, a 15ml travel spray and a 75ml all-over body shampoo. Cardamom, pink pepper and violet leaves open onto sage, resting on a glazed chestnut accord, vanilla and amberwood.",
+      "perfume-desc-ysl-touche-eclat-blur-primer":
+        "Yves Saint Laurent Touche Éclat Blur Primer, 30ml — a clear gel primer with a subtle gold shimmer that blurs pores and texture and boosts radiance. Enriched with corn, apricot kernel, passion fruit and rice bran oils; wear it alone or under foundation. Suits all skin tones.",
+      "perfume-desc-armani-prive-blanc-kogane":
+        "Giorgio Armani Privé Blanc Kogane Eau de Parfum, 100ml — a luminous white floral from the Les Terres Précieuses collection, in an ivory lacquer bottle with gold kintsugi lines. Aldehydes, lemon and pink berry open onto jasmine, mahonial and ylang-ylang, resting on white musk, vetiver and patchouli.",
+      "perfume-desc-armani-prive-noir-kogane":
+        "Giorgio Armani Privé Noir Kogane Eau de Parfum, 100ml — a dark, resinous scent from the Les Terres Précieuses collection, in a black lacquer bottle with gold kintsugi lines. Elemi, cumin and pink pepper open onto saffron, olibanum and cistus, resting on patchouli, woody leather and vetiver.",
+      "perfume-desc-mugler-alien-hypersense":
+        "Mugler Alien Hypersense Eau de Parfum, refillable — a vibrant floral woody take on Alien in a violet-to-scarlet faceted bottle. Pear and green mandarin open onto jasmine sambac and Indian jasmine, resting on cashmeran, musk, amberwood and driftwood.",
+      "perfume-desc-viktor-rolf-flowerbomb-tiger-lily":
+        "Viktor&Rolf Flowerbomb Tiger Lily Eau de Parfum — a sunny, solar floral take on Flowerbomb in an amber-orange grenade bottle. Coconut milk and bergamot open onto tiger lily, jasmine and freesia, resting on juicy mango and benzoin.",
+      "perfume-desc-azzaro-the-most-wanted-edt-intense":
+        "Azzaro The Most Wanted Eau de Toilette Intense for men — a fresh yet bold aromatic fragrance in a smoky grey revolver-style bottle. Bergamot opens onto a lavender heart, resting on a warm liquor accord and moss.",
+      "perfume-desc-azzaro-wanted-by-night":
+        "Azzaro Wanted by Night Eau de Parfum, 100ml — a seductive spicy-woody fragrance for men in a gunmetal bottle with red-amber juice. Cinnamon, mandarin and lavender open onto incense, cumin and red cedar, resting on tobacco, vanilla, leather and patchouli.",
+      "perfume-desc-ysl-y-elixir":
+        "Yves Saint Laurent Y L'Elixir, 60ml — the most intense Y, a concentrated parfum in a metallic navy bottle. Lavender opens onto geranium, resting on a deep, smoky base of frankincense and oud.",
+      "perfume-desc-lancome-uv-expert-supra-screen":
+        "Lancôme UV Expert Supra Screen SPF 50+, 40ml — an invisible, fast-absorbing serum-sunscreen with very high UVA/UVB and anti-pollution protection (PA++++). Niacinamide, vitamin E and dandelion extract give antioxidant, brightening care. Suitable for all skin types; apply as the last step of your morning routine.",
+      "perfume-desc-lancome-renergie-triple-serum-eye":
+        "Lancôme Rénergie H.C.F. Triple Serum Eye, 20ml — three actives in one bottle: vitamin C derivative and niacinamide for dark circles, vitamin F and hyaluronic acid to plump fine lines, and a firming tri-peptide. Press once to mix, then massage around the eye for a smoother, brighter, less puffy eye area.",
+      "perfume-desc-biotherm-blue-peptides-uplift-cream":
+        "Biotherm Blue Peptides Uplift Cream — a firming, plumping day cream with collagen peptide fractions and Life Plankton™ that visibly lifts the skin and reduces wrinkles, with a radiant rosy finish. Firmer-looking skin in 4 hours. 100% vegan formula, 92% natural-origin ingredients.",
+      "perfume-desc-biotherm-blue-peptides-uplift-night":
+        "Biotherm Blue Peptides Uplift Night Cream, 50ml — firms and re-plumps the skin overnight with peptides and Life Plankton™, reducing the look of wrinkles and pores for lifted, redefined contours and a rosier complexion by morning. Suitable for all skin types.",
+      "perfume-desc-ysl-rouge-pur-couture":
+        "Yves Saint Laurent Rouge Pur Couture caring satin lipstick, 3.8g. Choose your shade — full-coverage colour with a weightless, creamy satin finish and an 80% lip-care base with ceramides, tuberose and prickly pear extracts for up to 16 hours of comfort. Refillable gold case.",
+      "perfume-desc-ysl-loveshine":
+        "Yves Saint Laurent Loveshine lip oil stick, 3.2g. Choose your shade — a lipstick that melts into a lip oil, with a 60% oil base, six nourishing oils and fig pulp for up to 24 hours of hydration and a light-reflecting, buildable wet-shine finish.",
+      "perfume-desc-azzaro-wanted-edt":
+        "Azzaro Wanted Eau de Toilette for men, refillable — a fresh, spicy woody fragrance in the chrome barrel bottle. Lemon, ginger, lavender and mint open onto apple, cardamom, juniper and geranium, resting on tonka bean, amberwood and Haitian vetiver.",
+      "perfume-desc-azzaro-chrome-edt":
+        "Azzaro Chrome Eau de Toilette for men — a clean, fresh citrus-aquatic classic in the pale-blue glass bottle. Lemon, rosemary, bergamot, neroli and pineapple open onto jasmine, cyclamen and coriander, resting on musk, oakmoss, cedar, sandalwood and tonka bean.",
+      "perfume-desc-azzaro-pour-homme-edt":
+        "Azzaro Pour Homme Eau de Toilette, refillable — the iconic aromatic fougère for men in the amber octagonal bottle. Lavender, lemon, basil, bergamot, clary sage and star anise open onto vetiver, cedar, patchouli, sandalwood and cardamom, resting on oakmoss, leather, amber, musk and tonka bean.",
+      "perfume-desc-azzaro-the-most-wanted-edp-intense":
+        "Azzaro The Most Wanted Eau de Parfum Intense for men — a warm, addictive ambery fougère in a matte-black revolver-style bottle. Cardamom opens onto a toffee heart, resting on a sensual amberwood base.",
+      "perfume-desc-azzaro-the-most-wanted-parfum":
+        "Azzaro The Most Wanted Parfum for men — the most intense of The Most Wanted, in a black and amber bottle. Fiery red ginger opens onto woody notes, resting on a rich bourbon vanilla base.",
+      "perfume-desc-azzaro-chrome-edp":
+        "Azzaro Chrome Eau de Parfum for men — a deeper, woodier Chrome in a navy-to-light-blue bottle. Green mandarin opens onto a lavender heart, resting on a fresh pine base.",
+      "perfume-desc-azzaro-chrome-parfum":
+        "Azzaro Chrome Parfum for men — the most intense Chrome, in a deep-blue bottle. Bergamot opens onto aromatic sage, resting on a warm base of fir balsam and lentisk.",
+      "perfume-desc-azzaro-wanted-edp":
+        "Azzaro Wanted Eau de Parfum for men — a bold aromatic woody fragrance in a full-silver metal-jacket bottle. Juniper berries open onto sage, resting on a smoky vetiver base.",
+      "perfume-desc-lancome-hypnose-drama":
+        "Lancôme Hypnôse Drama mascara in 01 Excessive Black, 8ml — instant extreme volume of up to 17× with an S-shaped brush, onyx-black pigments and a bonding complex for up to 24-hour wear. Also available in a waterproof formula. Suitable for sensitive eyes and contact lens wearers.",
+      "perfume-desc-biotherm-homme-force-supreme-blue-serum":
+        "Biotherm Homme Force Supreme Blue Serum, 30ml — a fast-absorbing anti-ageing gel serum for men with Pro-Retinol, Life Plankton™ and Pro-Xylane that visibly reduces wrinkles and improves elasticity in 4 weeks.",
+      "perfume-desc-biotherm-life-plankton-body-oil":
+        "Biotherm Life Plankton Multi-Corrective Body Oil, 125ml — a nourishing dry oil with Life Plankton™ water and olive, canola, sweet almond and sunflower oils that targets stretch marks and dry areas, leaving skin visibly firmer and softer.",
+      "perfume-desc-biotherm-life-plankton-sensitive-balm":
+        "Biotherm Life Plankton Sensitive Balm, 50ml — a rich, soothing balm with 5% Life Plankton™ for sensitive, dry skin, in a hygienic airless jar. Hypoallergenic and non-comedogenic; visibly reduces dryness and redness.",
+      "perfume-desc-biotherm-blue-retinol-night-serum":
+        "Biotherm Blue Retinol Night Serum, 30ml — a resurfacing and repairing night serum with 0.25% pure retinol and Life Plankton™ that visibly reduces wrinkles such as crow's feet and smooths skin texture overnight. Vegan formula.",
+      "perfume-desc-biotherm-waterlover-sun-milk-spf30-400":
+        "Biotherm Waterlover Hydrating Sun Milk SPF 30, 400ml pump bottle — a water-resistant face and body sun milk with UVA/UVB protection and 24-hour hydration that leaves no white marks. Suitable for sensitive skin.",
+      "perfume-desc-armani-acqua-di-gioia-edp-intense":
+        "Giorgio Armani Acqua di Gioia Eau de Parfum Intense, refillable — a fresh floral citrus for women, more intense than the original. Bergamot and a red fruits accord open onto jasmine and Damascena rose, resting on cedarwood and musks.",
+      "perfume-desc-armani-prive-cuir-noir":
+        "Giorgio Armani Privé Cuir Noir Eau de Parfum, 100ml — a dark, refined leather from Armani's haute couture fragrance collection. Sandalwood, rose, coriander and nutmeg open onto leather, smoky guaiac wood and oud, resting on Tahitian vanilla and benzoin.",
+      "perfume-desc-armani-prive-the-yulong-soie-de-nacre":
+        "Giorgio Armani Privé Thé Yulong Soie de Nacre Eau de Toilette, 100ml — a limited edition of Thé Yulong with pearly shimmer in the juice and a mother-of-pearl cap. Mandarin, petitgrain and cardamom open onto green and black tea with jasmine and orange blossom, resting on vetiver, ambrette and iris.",
+      "perfume-desc-armani-maestro-fusion-foundation":
+        "Giorgio Armani Maestro Fusion Make Up foundation SPF 15, 30ml — a water-free, powder-free liquid foundation with a dropper and five time-released oils for an airbrushed, natural-radiant finish. Non-comedogenic.",
+      "perfume-desc-armani-prisma-glass":
+        "Giorgio Armani Prisma Glass lip gloss, 3.5ml. Choose your shade — an oil-in-gloss with 15% squalane for a mirror-like, prismatic shine, sheer colour and 24-hour hydration. Non-sticky; wear alone or over lipstick.",
+      "perfume-desc-armani-luminous-silk-cheek-tint":
+        "Giorgio Armani Luminous Silk Cheek Tint liquid blush, 12ml. Choose your shade — a water-in-oil formula with a doe-foot applicator that builds from a natural to an intense flush and wears up to 12 hours.",
+      "perfume-desc-ysl-all-hours-hyper-finish":
+        "Yves Saint Laurent All Hours Hyper Finish pressed powder, 7.5g. Choose your shade — a multi-use soft-matte powder that sets makeup for up to 24 hours, blurs imperfections and minimises the look of pores. Enriched with hyaluronic acid and niacinamide; sweat-, water- and crease-proof, in a quilted compact with mirror and two-sided applicator.",
+      "perfume-desc-armani-acqua-di-gio-profondo-parfum":
+        "Giorgio Armani Acqua di Giò Profondo Parfum for men — the deepest, most intense take on Profondo, in a gradient deep-blue bottle. Marine notes, bergamot and lemon open onto immortelle, violet leaf and lavandin, settling on cistus, vetiver, patchouli and a mineral accord.",
+      "perfume-desc-armani-stronger-with-you-tobacco":
+        "Emporio Armani Stronger With You Tobacco Eau de Parfum for men — a warm, spicy exclusive edition. Pink and black pepper, cardamom and sage lead to tobacco, chestnut and cinnamon leaf over bourbon vanilla, amber, guaiac wood and benzoin.",
+      "perfume-desc-viktor-rolf-spicebomb-infrared-edp":
+        "Viktor&Rolf Spicebomb Infrared Eau de Parfum for men — an explosive leather-amber scent in the black grenade bottle with a red band. Red, pink and chili pepper with cinnamon ignite a leather heart, drying down to resins and woods.",
+      "perfume-desc-lancome-idole-edt":
+        "Lancôme Idôle L'Eau de Toilette for women — a fresher, livelier take on the Idôle signature. A Shincha green tea accord opens onto rose water, Damascena rose and Italian bergamot, settling on Bourbon vanilla, cedarwood, patchouli and musk for a second-skin finish.",
+      "perfume-desc-lancome-tiuw-serum-bronzer":
+        "Lancôme Teint Idole Ultra Wear C.E. Skin Transforming Bronzer, 10g. Choose your shade — a serum-infused, micro-fine powder with vitamins C and E, moringa oil and pomegranate extract for a natural matte, buildable warmth that lasts up to 24 hours.",
+      "perfume-desc-lancome-tiuw-serum-highlighter":
+        "Lancôme Teint Idole Ultra Wear C.E. Skin Transforming Highlighter, 10g. Choose your shade — a silky, serum-infused powder with micro light-catching pearls for a natural, multidimensional glow that is glowy, never glittery, and lasts up to 24 hours.",
+      "perfume-desc-lancome-lip-idole-butterglow":
+        "Lancôme Lip Idôle Squalane-12 Butterglow hydrating lip balm, 3g. Choose your shade — a buttery, non-sticky balm-in-a-stick with at least 12% squalane, ceramides and shea butter for buildable sheer colour, a high-shine glow and up to 24 hours of hydration.",
+      "perfume-desc-lancome-lip-idole-liner":
+        "Lancôme Lip Idôle Lip Shaper lip liner, 1.2g. Choose your shade — a creamy, soft-matte pencil with ceramides and jojoba oil that glides on without tugging, resists smudging and feathering, and stays waterproof for up to 8 hours. Designed to pair with Lip Idôle Butterglow.",
+      "perfume-desc-prada-luna-rossa-ocean-le-parfum":
+        "Prada Luna Rossa Ocean Le Parfum for men — the most intense Luna Rossa Ocean, in a refillable bottle fading from deep blue to red. Fresh lemon contrasts with a warm saffron heart, resting on smoky oakwood and an Amber Xtreme accord.",
+      "perfume-desc-armani-acqua-di-gio-edp":
+        "Giorgio Armani Acqua di Giò Eau de Parfum for men, refillable — a deeper, more aromatic Acqua di Giò in a clear-to-black bottle. Marine notes and green mandarin open onto clary sage, lavandin and geranium, resting on vetiver and patchouli.",
+      "perfume-desc-armani-acqua-di-gio-edt":
+        "Giorgio Armani Acqua di Giò Eau de Toilette for men, in the refillable bottle — the original 1996 aquatic classic. Marine notes, bergamot, neroli and green tangerine meet rosemary and persimmon over cedarwood and patchouli.",
+      "perfume-desc-armani-acqua-di-gio-parfum":
+        "Giorgio Armani Acqua di Giò Parfum for men, refillable — the richest Acqua di Giò in a black gradient bottle. Calabrian bergamot and marine notes open onto clary sage, rosemary and geranium, settling on patchouli and incense.",
+      "perfume-desc-armani-acqua-di-gio-profondo-edp":
+        "Giorgio Armani Acqua di Giò Profondo Eau de Parfum for men, refillable — an intense marine fragrance in a deep-blue gradient bottle. Marine notes, green mandarin and bergamot open onto lavandin, rosemary and cypress, resting on patchouli, musk and mineral amber.",
+      "perfume-desc-armani-acqua-di-gio-profondo-edt":
+        "Giorgio Armani Acqua di Giò Profondo Eau de Toilette for men (2025) — a fresher, brighter Profondo in a light-blue gradient bottle. Lemon, grapefruit and spices lead to calone, lavender and cypress over mineral notes, woods and Guatemalan patchouli.",
+      "perfume-desc-armani-acqua-di-gio-elixir":
+        "Giorgio Armani Acqua di Giò Elixir for men, 50ml — the most concentrated Acqua di Giò. Bergamot, green mandarin and nutmeg meet violet leaf and an aquatic accord, deepening into leather, patchouli, vetiver and labdanum.",
+      "perfume-desc-armani-code-edp-homme":
+        "Giorgio Armani Code Eau de Parfum for men, refillable — a spicy amber fougère in the black Code bottle. Italian green mandarin opens onto nutmeg, resting on tonka bean absolute.",
+      "perfume-desc-armani-emporio-he":
+        "Emporio Armani He Eau de Toilette for men, 100ml — a woody amber in a matte black cylinder bottle. Japanese yuzu, sage and cardamom lead to nutmeg, rose and orris over vetiver, sandalwood, white musk and tonka.",
+      "perfume-desc-armani-si-passione-intense":
+        "Giorgio Armani Sì Passione Eau de Parfum Intense, refillable — a deeper Sì Passione in a red bottle fading to black. Blackcurrant and pear open onto jasmine, resting on warm vanilla and sandalwood.",
+      "perfume-desc-armani-si-passione-red-musk":
+        "Giorgio Armani Sì Passione Red Musk Eau de Parfum — a fruity floral musk in a see-through red Sì bottle. Red musk with strawberry extract opens onto rose absolute and milky notes, settling on white musks and vanilla.",
+      "perfume-desc-armani-my-way-ylang":
+        "Giorgio Armani My Way Ylang Eau de Parfum, refillable — a sunny fruity floral in a coral bottle. Mango, white flowers and bergamot open onto Madagascar ylang-ylang, coconut water and tuberose, resting on white musk, Bourbon vanilla and cedar.",
+      "perfume-desc-armani-stronger-with-you-parfum":
+        "Emporio Armani Stronger With You Parfum for men — the most intense Stronger With You, in a deep red-amber bottle. Pink pepper and lavender lead to the signature candied chestnut accord with leathery vanilla.",
+      "perfume-desc-armani-prive-vert-malachite":
+        "Armani Privé Vert Malachite Eau de Parfum, 100ml — from Les Terres Précieuses collection, in a green bottle with malachite banding. A luminous white floral built on a white lily accord with ylang-ylang, jasmine sambac, bitter orange and vanilla absolute.",
+      "perfume-desc-armani-luminous-silk-acqua-highlighter":
+        "Giorgio Armani Luminous Silk Acqua Highlighter, 12ml. Choose your shade — a water-based liquid highlighter with white and tinted micro-pearls, niacinamide and caffeine, applied with a doe-foot for a fresh, luminous glow.",
+      "perfume-desc-armani-designer-glow-foundation":
+        "Giorgio Armani Designer Glow Radiant Revitalizing Foundation SPF 15, 30ml. Choose your shade — a radiant, medium-coverage foundation with Prussian Blue pearl, hyaluronic acid and ceramides for a healthy, luminous finish.",
+      "perfume-desc-armani-vertigo-lift-mascara":
+        "Giorgio Armani Vertigo Lift Extreme Length mascara in 01 Black, 10ml — an Infinity-Loop brush lifts and lengthens lashes up to 70% visibly longer with a smudge-proof, arginine-enriched formula.",
+      "perfume-desc-armani-luminous-silk-bronzer":
+        "Giorgio Armani Luminous Silk Bronzer in 120 Sunbathed Dune, 18g — the deepest shade, a rich warm cocoa bronze with a subtle shimmer. A creamy powder with a sun-ray embossed design for a natural sun-kissed warmth.",
+      "perfume-desc-armani-luminous-silk-cheek-tint-shine":
+        "Giorgio Armani Luminous Silk Cheek Tint Shine, 12ml. Choose your shade — a pearly liquid blush that builds from a soft flush to radiant colour with a luminous sheen, wearing up to 12 hours.",
+      "perfume-desc-armani-code-edp-set":
+        "Giorgio Armani Code Eau de Parfum gift set for men — the refillable amber fougère with bergamot, iris and tonka bean, in a red holiday box with a travel spray.",
+      "perfume-desc-armani-si-edp-body-set":
+        "Giorgio Armani Sì Eau de Parfum gift set — the modern chypre of blackcurrant nectar, freesia and blond musky woods, with matching body care in a red holiday box.",
+      "perfume-desc-armani-si-passione-set":
+        "Giorgio Armani Sì Passione Eau de Parfum gift set — a vibrant fruity floral with blackcurrant, pink pepper, rose, heliotrope, vanilla and cedar, with a travel spray.",
+      "perfume-desc-armani-my-way-edp-set":
+        "Giorgio Armani My Way Eau de Parfum gift set — the refillable floral with orange blossom, bergamot, tuberose, jasmine, vanilla and cedar, with a travel spray.",
+      "perfume-desc-armani-acqua-di-gio-profondo-set":
+        "Giorgio Armani Acqua di Giò Profondo Eau de Parfum gift set — an aromatic aquatic with marine notes, green mandarin, lavender, rosemary, cedar and patchouli.",
+      "perfume-desc-armani-swy-intensely-set":
+        "Emporio Armani Stronger With You Intensely gift set — an amber woody fougère with pink pepper, chestnut, lavender, sage, amberwood and vanilla.",
+      "perfume-desc-armani-swy-parfum-set":
+        "Emporio Armani Stronger With You Parfum gift set — an amber leather fougère with pink pepper, mandarin, lavender, chestnut, vanilla and leather.",
+      "perfume-desc-armani-acqua-di-gio-edt-set-50":
+        "Giorgio Armani Acqua di Giò Eau de Toilette gift set — the fresh aquatic classic with marine notes, bergamot, rosemary and white musk, with a matching shower gel.",
+      "perfume-desc-armani-acqua-di-gio-parfum-set":
+        "Giorgio Armani Acqua di Giò Parfum gift set — the intense refillable aquatic with marine notes, bergamot, clary sage, geranium, incense and patchouli.",
+      "perfume-desc-armani-my-way-body-set":
+        "Giorgio Armani My Way Eau de Parfum gift set — the luminous floral with orange blossom, tuberose and vanilla, with perfumed body care in a pink box.",
+      "perfume-desc-armani-si-edp-spring-set":
+        "Giorgio Armani Sì Eau de Parfum gift set — the blackcurrant, freesia and musky woods chypre with a travel spray and body lotion, in a pink box.",
+      "perfume-desc-valentino-uomo-born-in-roma-edt-set":
+        "Valentino Uomo Born in Roma Eau de Toilette gift set — a woody aromatic with mineral salt, ginger, violet leaf and vetiver, in a black gift box with a travel spray.",
+      "perfume-desc-valentino-donna-born-in-roma-edp-set":
+        "Valentino Donna Born in Roma Eau de Parfum gift set — a floral amber with a jasmine trio, Bourbon vanilla and cashmeran, with a travel spray.",
+      "perfume-desc-prada-paradoxe-holiday-set":
+        "Prada Paradoxe Eau de Parfum holiday gift set — the floral amber Paradoxe (neroli, amber, white musk) in a festive ornament box, with a travel spray to take along.",
+      "perfume-desc-prada-luna-rossa-ocean-edp-set":
+        "Prada Luna Rossa Ocean Eau de Parfum gift set — an amber fougère for men with lemon, saffron and leathery oakwood, in a silver ornament box with a travel spray.",
+      "perfume-desc-prada-paradoxe-virtual-flower-set":
+        "Prada Paradoxe Virtual Flower Eau de Parfum gift set — a fresh floral musk of green bergamot, jasmine, neroli, musk and ambrette, in a saffiano-textured envelope box.",
+      "perfume-desc-prada-luna-rossa-carbon-set":
+        "Prada Luna Rossa Carbon Eau de Toilette gift set — an aromatic fougère for men with bergamot, pepper, lavender, patchouli and amber, in an envelope gift box.",
+      "perfume-desc-prada-luna-rossa-black-set":
+        "Prada Luna Rossa Black Eau de Parfum gift set — an amber woody scent for men with bergamot, angelica, patchouli, amber, musk and coumarin, in an envelope gift box.",
+      "perfume-desc-prada-paradoxe-edp-spring-set":
+        "Prada Paradoxe Eau de Parfum gift set — the floral amber Paradoxe (neroli, amber, white musk) in a mint-and-pink envelope box, with a matching travel spray.",
+      "perfume-desc-ysl-y-le-parfum-set":
+        "Yves Saint Laurent Y Le Parfum holiday gift set — the intense woody fougère for men (apple, ginger, lavender, sage, cedar, tonka) in a black lace-pattern box.",
+      "perfume-desc-ysl-myslf-le-parfum-set":
+        "Yves Saint Laurent MYSLF Le Parfum gift set — a woody amber for men with black pepper, orange blossom, Bourbon vanilla and patchouli, in a black lace-pattern box.",
+      "perfume-desc-ysl-myslf-edp-set":
+        "Yves Saint Laurent MYSLF Eau de Parfum gift set — a woody floral for men with bergamot, Tunisian orange blossom, patchouli and Ambrofix, in a brushed-silver box.",
+      "perfume-desc-ysl-black-opium-set-30":
+        "Yves Saint Laurent Black Opium Eau de Parfum gift set — the amber floral with black coffee, vanilla, white flowers and patchouli, in a nude box with the YSL logo.",
+      "perfume-desc-ysl-black-opium-set-50":
+        "Yves Saint Laurent Black Opium Eau de Parfum spring gift set — the amber floral with black coffee, vanilla and white flowers, with a mini Lash Clash mascara and a YSL pouch.",
+      "perfume-desc-lancome-idole-holiday-set":
+        "Lancôme Idôle Eau de Parfum holiday gift set — the clean floral Idôle (bergamot, pear, rose, jasmine, white musk) with a matching scented body cream and a mini Lash Idôle mascara.",
+      "perfume-desc-lancome-iconic-mascara-set":
+        "Lancôme Iconic Mascara holiday set — four full-size lash favourites for volume, length and care in one festive box.",
+      "perfume-desc-lancome-lveb-elixir-set":
+        "Lancôme La Vie Est Belle L'Elixir Eau de Parfum gift set — the rich gourmand L'Elixir (raspberry, violet leaf, rose, cocoa butter, leather) with a travel spray of the original.",
+      "perfume-desc-lancome-lveb-candle-set":
+        "Lancôme La Vie Est Belle Eau de Parfum candle set — the iconic iris, patchouli and vanilla gourmand paired with a mini scented candle in the same fragrance.",
+      "perfume-desc-lancome-hypnose-drama-set":
+        "Lancôme Hypnôse Drama set — extreme-volume mascara with a mini kohl pencil and Bi-Facil eye make-up remover for a complete dramatic eye look.",
+      "perfume-desc-viktor-rolf-spicebomb-extreme-set":
+        "Viktor&Rolf Spicebomb Extreme Eau de Parfum gift set — the explosive spicy oriental (grapefruit, black pepper, cinnamon, saffron, tobacco, vanilla) with a travel spray.",
+      "perfume-desc-cacharel-yes-i-am-set":
+        "Cacharel Yes I Am Eau de Parfum gift set — the playful raspberry, gardenia and cardamom-milk scent in the lipstick-shaped bottle, with a travel spray.",
+      "perfume-desc-mugler-angel-elixir-set":
+        "Mugler Angel Elixir Eau de Parfum gift set — a floral gourmand (pink pepper, ylang-ylang, orange blossom, sandalwood, Bourbon vanilla) in the refillable star bottle, with a travel spray.",
+      "perfume-desc-biotherm-homme-force-supreme-set":
+        "Biotherm Homme Force Supreme gift set — an anti-ageing, firming routine for men with the Force Supreme cream, a cleanser and a shaving foam.",
+      "perfume-desc-ysl-all-hours-hyper-bronze":
+        "Yves Saint Laurent All Hours Hyper Bronze bronzing powder, 7.5g. Choose your shade — a multi-use bronzer with a soft matte finish and subtle sheen that lasts up to 24 hours. Enriched with hyaluronic acid and niacinamide; fragrance-free, sweat- and water-proof.",
+      "perfume-desc-ysl-all-hours-hyper-luminize":
+        "Yves Saint Laurent All Hours Hyper Luminize highlighter, 5g. Choose your shade — an ultra-creamy powder with micro-pearls for a 12-hour glow, enriched with hyaluronic acid and niacinamide, in a quilted compact.",
+      "perfume-desc-ysl-all-hours-hyper-blur-loose-powder":
+        "Yves Saint Laurent All Hours Hyper Blur Loose Powder, 10g. Choose your shade — a loose setting powder with 1% hyaluronic acid and niacinamide that mattifies for up to 14 hours, blurs lines and pores and resists sweat and transfer. Comes with a powder puff.",
+      "perfume-desc-ysl-loveshine-balm":
+        "Yves Saint Laurent Loveshine Candy Glow Tinted Butter Balm, 3.1g. Choose your shade — a tinted lip balm with shea butter and maracuja oil whose pH-adjusting pigments give a sheer, personalised flush with a soft shine. Also works as a lip primer.",
+      "perfume-desc-ysl-lines-liberated":
+        "Yves Saint Laurent Lines Liberated waterproof eye pencil, 1.2g. Choose your shade — a smudge-resistant liner with up to 24-hour wear and a 3-in-1 angled brush to sculpt, blend and stretch the line. Enriched with cactus fig flower oil; safe for the waterline.",
+      "perfume-desc-ysl-make-me-blush-liquid":
+        "Yves Saint Laurent Make Me Blush liquid blush, 15ml. Choose your shade — a lightweight, non-sticky liquid blush with a second-skin natural-matte finish and up to 12 hours of wear. Doe-foot applicator; suitable for sensitive skin.",
+      "perfume-desc-ysl-make-me-blush-bold":
+        "Yves Saint Laurent Make Me Blush Bold Blurring powder blush, 6g. Choose your shade — a silky, pore-blurring powder with squalane and rosehip that is waterproof and sweat-proof for up to 24 hours, in a gold compact with a quilted lid.",
+      "perfume-desc-ysl-loveshine-gloss":
+        "Yves Saint Laurent Loveshine Plumping Lip Oil Gloss, 6ml. Choose your shade — a high-shine gloss made of 95% oils, with ginger and pepper oils for a tingling plumping effect, hyaluronic acid and fig pulp. Up to 8 hours of glassy shine and 24 hours of hydration.",
+      "perfume-desc-ysl-libre-flowers-flames":
+        "Yves Saint Laurent Libre Flowers & Flames Eau de Parfum Florale — a warm floral take on Libre with golden-sand juice. Lavender and bergamot open onto a desert lily accord, palm flower, orange blossom absolute and Diva lavender, over Bourbon vanilla.",
+      "perfume-desc-ysl-myslf-le-parfum":
+        "Yves Saint Laurent MYSLF Le Parfum for men, refillable — a spicy woody floral in a matte black bottle. Black pepper essence opens onto Tunisian orange blossom absolute, resting on woods and a Bourbon vanilla infusion.",
+      "perfume-desc-ysl-black-opium-glitter":
+        "Yves Saint Laurent Black Opium Eau de Parfum Glitter — a sparkling Black Opium in a silver glitter bottle. Pear, green mandarin and lemon meet orange blossom over a marshmallow musk accord, coffee, Bourbon vanilla and patchouli.",
+      "perfume-desc-ysl-libre-leau-nue":
+        "Yves Saint Laurent Libre L'Eau Nue Parfum de Peau — YSL's first alcohol-free fragrance, an oil-in-water skin scent. Green mandarin and Calabrian bergamot open onto Moroccan orange blossom and lavender, settling on vanilla, musk and ambergris.",
+      "perfume-desc-ysl-y-le-parfum":
+        "Yves Saint Laurent Y Le Parfum for men — the most intense Y, an aromatic fougère in a deep blue-black bottle. Apple, aldehydes, grapefruit and ginger lead to sage, lavender and geranium over cedar, olibanum, patchouli and tonka.",
+      "perfume-desc-prada-paradoxe-virtual-flower":
+        "Prada Paradoxe Virtual Flower Eau de Parfum Florale, refillable — a fresh floral musk in the light-pink triangle bottle. Vert de bergamot opens onto a jasmine accord and neroli, resting on musk and ambrette.",
+      "perfume-desc-prada-infusion-vanille":
+        "Prada Les Infusions Infusion de Vanille Eau de Parfum, 100ml — a unisex woody amber vanilla. Bergamot and neroli open onto a vanilla infusion and angelica seed, softened by musk.",
+      "perfume-desc-valentino-born-in-roma-the-gold-uomo":
+        "Valentino Born in Roma The Gold Uomo Eau de Toilette, 100ml — a 2024 limited edition in the Rockstud bottle dressed in gold. Solar notes, spices and nutmeg lead to Virginia cedar over a warm vanilla and amber base.",
+      "perfume-desc-valentino-born-in-roma-the-gold-donna":
+        "Valentino Born in Roma The Gold Donna Eau de Parfum — a 2024 limited edition in the gold Rockstud bottle. A fruity white floral of Italian mandarin, a golden gardenia accord and a solar coconut accord over vanilla and cedar.",
+      "perfume-desc-valentino-born-in-roma-uomo-extradose":
+        "Valentino Born in Roma Uomo Extradose Parfum — the most concentrated Born in Roma Uomo, in glossy black studded glass. Bergamot and mandarin open onto lavandin and spices, resting on an overdose of vetiver with guaiac wood.",
+      "perfume-desc-valentino-born-in-roma-donna-extradose":
+        "Valentino Born in Roma Donna Extradose Le Parfum — an intense floral amber in a bottle fading to deep fuchsia. A blackcurrant accord opens onto a rum accord and jasmine sambac, over an overdose of Madagascar Bourbon vanilla.",
+      "perfume-desc-lancome-lveb-elixir":
+        "Lancôme La Vie Est Belle L'Elixir Eau de Parfum, refillable — a deeper, richer La Vie Est Belle with red juice and a glitter ribbon. A raspberry liqueur accord and Calabrian bergamot open onto violet leaf and rose, resting on cocoa butter absolute, leather and cedar.",
+      "perfume-desc-lancome-idole-power":
+        "Lancôme Idôle Power L'Eau de Parfum Intense — the first fruity-woody Idôle, in a red-to-pink gradient bottle. A candied-apple pomarose accord meets Damascena rose over creamy Australian sandalwood.",
+      "perfume-desc-lancome-tresor-la-nuit-vanille-noire":
+        "Lancôme La Nuit Trésor Vanille Noire Eau de Parfum — Lancôme's first amber, in the diamond-cut Trésor bottle with a black leather rose. Honeyed Damascena rose meets leathery Madagascar Bourbon vanilla absolute and an oud wood accord.",
+      "perfume-desc-ralph-lauren-ralphs-club-edt":
+        "Ralph Lauren Ralph's Club Eau de Toilette for men — a refined woody aromatic scent inspired by Parisian nightlife. Lavender and clary sage open onto Virginia cedar, resting on vetiver.",
+      "perfume-desc-mugler-angel-fantasm":
+        "Mugler Angel Fantasm Eau de Parfum Sensuelle, refillable — the first black Angel star bottle. Pineapple and bergamot open onto coconut and tiaré flower, settling on patchouli, Bourbon vanilla and amber.",
+      "perfume-desc-mugler-amen-fantasm":
+        "Mugler A*Men Fantasm Eau de Parfum Sensuelle for men, 100ml — in a matte black bottle with a silver star. Pink pepper, citrus and bergamot meet dark chocolate and clary sage over a deep patchouli base.",
+      "perfume-desc-mugler-alien-extraintense":
+        "Mugler Alien Extraintense Eau de Parfum Intense, refillable — a deeper, more radiant Alien in a purple-to-black bottle. Petitgrain opens onto jasmine and tuberose, settling on vanilla, cashmeran and amberwood.",
+      "perfume-desc-cacharel-ella-ella":
+        "Cacharel Ella Ella Eau de Parfum, refillable — a joyful floral gourmand in a butterfly bottle. Coconut and bergamot open onto orange blossom and jasmine, resting on patchouli and Bourbon vanilla.",
+      "perfume-desc-viktor-rolf-spicebomb-dark-leather":
+        "Viktor&Rolf Spicebomb Dark Leather Eau de Parfum for men — a smoky, spicy leather in the matte black grenade bottle. Black pepper and nutmeg ignite incense and cinnamon over dark leather and tobacco.",
+      "perfume-desc-diesel-only-the-brave-edp":
+        "Diesel Only The Brave Eau de Parfum for men — a stronger take on the iconic fist bottle, in deep blue. Lemon, mandarin and coriander lead to clary sage and lavandin over a warm suede base.",
+      "perfume-desc-azzaro-forever-wanted-elixir":
+        "Azzaro Forever Wanted Elixir Parfum for men — an intense, long-lasting Wanted in a gold bottle. Raspberry, green mandarin and bergamot meet cardamom, lavender and clary sage over leather, vetiver and wolfwood.",
+      "perfume-desc-lancome-lip-idole-juicytreat":
+        "Lancôme Lip Idôle Juicytreat oil-in-gloss, 8.5ml. Choose your shade — a cushiony gloss with 20% squalane, hyaluronic acid and Maxi-Lip peptides for juicy, plumped-looking lips, a cooling menthol feel and up to 24 hours of hydration.",
+      "perfume-desc-lancome-lash-idole-flutter":
+        "Lancôme Lash Idôle Flutter Extension mascara in 01 True Black, 8.5ml — a lengthening wax-in-water formula with a nano-bristle brush for up to 75% visibly longer lashes and up to 24 hours of clump- and flake-free wear.",
+      "perfume-desc-lancome-tiuw-setting-powder":
+        "Lancôme Teint Idole Ultra Wear Skin Refining Setting Powder, 10g. Choose your shade — a soft-matte pressed powder with squalane, niacinamide, hyaluronic acid and vitamin E that blurs pores and sets makeup without creasing or caking. Includes a puff.",
+      "perfume-desc-lancome-tiuw-care-glow-concealer":
+        "Lancôme Teint Idole Ultra Wear Care & Glow Serum Concealer in 125W, a light beige with a warm undertone, 13ml. An 81% serum base with hyaluronic acid, ceramides and peptides gives medium, buildable coverage with a natural glow and up to 24 hours of hydration.",
+      "perfume-desc-lancome-hydra-zen-gel-cream":
+        "Lancôme Hydra Zen Gel Cream, 50ml — an oil-free moisturising gel cream for oily and combination skin, including sensitive. Centifolia rose extract, hyaluronic acid and bisabolol give up to 72 hours of hydration and visibly calm redness.",
+      "perfume-desc-lancome-genifique-ultimate":
+        "Lancôme Génifique Ultimate serum — a skin-barrier repair serum with 98% pure Beta-Glucan-CM, 7 pre- and probiotic fractions, hyaluronic acid and licorice extract. Visibly reduces redness, fine lines and pores; 97% natural-origin ingredients and tested on sensitive skin.",
+      "perfume-desc-lancome-renergie-crx-triple-serum-retinol":
+        "Lancôme Rénergie C.R.x. Triple Serum Retinol, 50ml — three chambers of pure vitamin C gel-serum, pure retinol serum-emulsion and an X-peptide cream-serum with ceramides, mixed with every pump for faster-looking skin renewal. Suitable for sensitive skin.",
+      "perfume-desc-lancome-renergie-hpn-uvmune-spf50":
+        "Lancôme Rénergie H.P.N. UVMUNE Cream SPF50, 50ml — an anti-dark-spot, anti-sagging day cream with 300-Peptide, hyaluronic acid and niacinamide, plus UVMUNE filters with Mexoryl 400 against ultra-long UVA rays.",
+      "perfume-desc-lancome-tonique-confort-200":
+        "Lancôme Tonique Confort re-hydrating toner, 200ml — for dry and sensitive skin, with Centifolia rose water, hyaluronic acid and squalane to soothe instantly and help repair the skin barrier. 97% natural-origin ingredients.",
+      "perfume-desc-biotherm-life-plankton-regenerating-serum":
+        "Biotherm Life Plankton Regenerating Serum — a full anti-ageing serum with 5% Biotech Plankton (35 micronutrients), vitamin CG and hyaluronic acid that visibly improves 10 signs of ageing. 95% natural-origin, vegan and suitable for sensitive skin.",
+      "perfume-desc-biotherm-homme-aquapower-advanced-gel":
+        "Biotherm Homme Aquapower Advanced Gel — a cooling water-gel moisturiser for men with normal to combination skin. Biotech Plankton and bio-ceramides give 48-hour hydration and strengthen the skin barrier; tested on sensitive skin.",
+      "perfume-desc-biotherm-lait-corporel-active-recovery":
+        "Biotherm Lait Corporel Active Recovery body milk, 400ml — an accelerated-repair body milk that instantly soothes tightness and roughness, with the brand's signature bergamot and almond scent. Pump bottle.",
+      "perfume-desc-biotherm-blue-peptides-eyes-lips":
+        "Biotherm Blue Peptides Eyes & Lips Contour Reshaper, 15ml — a pink balm for the eye area and lip contour with collagen peptides, green-tea caffeine and Biotech Plankton, applied with a cooling metal tip. 93% natural-origin.",
+      "perfume-desc-biotherm-aquasource-hydra-barrier-cleanser":
+        "Biotherm Aquasource Hydra Barrier Cleanser, 150ml — a soap-free cream-to-foam cleanser for sensitive skin with Biotech Plankton, bio-ceramides and niacinamide that cleanses without tightness. 99% biodegradable formula.",
+      "perfume-desc-biotherm-aquasource-hydra-barrier-cream":
+        "Biotherm Aquasource Hydra Barrier Cream — a barrier-strengthening moisturiser with Biotech Plankton, bio-ceramides, hyaluronic acid, centella and adenosine for up to 72 hours of hydration. 94% natural-origin, in a recycled-glass jar.",
+      "perfume-desc-lancome-o-de-lancome-off-now":
+        "Lancôme Ôff Now Eau de Toilette, 100ml — a calming woody citrus from the Ô de Lancôme collection by Fabrice Pellegrin. Verbena from Lancôme's Domaine de la Rose in Grasse meets a creamy sandalwood accord.",
+      "perfume-desc-lancome-o-de-lancome-over-the-top":
+        "Lancôme Ôver The Top Eau de Toilette, 100ml — a bold green floral with a fruity touch from the Ô de Lancôme collection by Carlos Benaïm. A crisp tomato-leaf accord opens onto jasmine absolute from the Domaine de la Rose.",
+      "perfume-desc-lancome-o-de-lancome-ozenith":
+        "Lancôme Ô Zénith Eau de Toilette, 100ml — a joyful floral fruity from the Ô de Lancôme collection, an 'explosion of happiness' pairing jasmine absolute from the Domaine de la Rose with an exotic monoï accord.",
+      "perfume-desc-armani-prive-iris-bleu":
+        "Armani Privé Iris Bleu Eau de Toilette from Les Eaux collection — a floral green musk inspired by the Mediterranean 'blue hour'. Galbanum, bergamot and lemon open onto orris butter and jasmine, resting on white musk, Virginia cedar and guaiac wood.",
+      "perfume-desc-armani-prive-gardenia-antigua":
+        "Armani Privé Gardénia Antigua Eau de Toilette, 100ml — a sunny unisex gardenia inspired by Giorgio Armani's Antigua retreat. Mandarin and neroli open onto gardenia and jasmine sambac, softened by a salty sea-spray accord, patchouli, Ambroxan and white musks.",
+      "perfume-desc-armani-prive-indigo-tanzanite":
+        "Armani Privé Indigo Tanzanite Eau de Parfum, 100ml, from Les Terres Précieuses collection — a woody amber inspired by Tanzanian night skies: bergamot and almond over heliotrope and a milky accord, wrapped in patchouli, benzoin, labdanum and tolu balsam.",
+      "perfume-desc-cacharel-anais-anais":
+        "Cacharel Anaïs Anaïs L'Original Eau de Toilette — the classic 1978 white floral in its pale-pink bottle. Hyacinth, honeysuckle and orange blossom open onto lily, jasmine and rose over amber, incense, sandalwood and musk.",
+      "perfume-desc-armani-code-edp-75-spring-set":
+        "Giorgio Armani Code Eau de Parfum spring gift set for men, in a plastic-free teal ginkgo-leaf box — an ambery, spicy fougère with green mandarin, nutmeg and tonka bean absolute.",
+      "perfume-desc-armani-code-edt-50-spring-set":
+        "Giorgio Armani Code Eau de Toilette spring gift set for men, in a teal ginkgo-leaf box — bergamot and lemon over olive blossom and star anise, with tonka, guaiac wood and leather.",
+      "perfume-desc-lancome-lash-idole-idole-edp-set":
+        "Lancôme Lash Idôle and Idôle gift set — the lifting, volumising Lash Idôle mascara paired with a travel spray of the rose-and-jasmine Idôle Eau de Parfum.",
+      "perfume-desc-lancome-lash-idole-flutter-extension-set":
+        "Lancôme Lash Idôle Flutter Extension gift set — the lengthening Flutter Extension mascara with up to 24-hour wear, plus a mini Lip Idôle Butterglow squalane lip balm.",
+      "perfume-desc-valentino-uomo-born-in-roma-edt-50-set":
+        "Valentino Uomo Born in Roma Eau de Toilette gift set — the woody aromatic with mineral salt, ginger, violet leaf and vetiver, in a black-and-pink floral Valentino box.",
+      "perfume-desc-biotherm-homme-aquapower-routine-set":
+        "Biotherm Homme Aquapower routine set — a men's hydrating 'Refresh. Recharge. Repeat.' routine with the Aquapower Advanced Gel moisturiser and cleanser.",
+      "perfume-desc-biotherm-homme-force-supreme-routine-set":
+        "Biotherm Homme Force Supreme routine set — an anti-ageing routine for men that targets firmness and wrinkles, with a cleanser and a shaving foam for sensitive skin.",
+      "perfume-desc-lancome-genifique-ultimate-routine-set":
+        "Lancôme Génifique Ultimate 3-step skin repair routine set — the Beta-Glucan-CM Génifique Ultimate serum with Rénergie H.P.N. 300-Peptide cream and Advanced Génifique eye cream.",
+      "perfume-desc-lancome-juicy-tubes":
+        "Lancôme Juicy Tubes Original lip gloss, 15ml. Choose your shade — the iconic high-shine, flavoured squeeze-tube gloss, relaunched with up to 4 hours of hydration for a juicy, glassy finish.",
+      "perfume-desc-lancome-skin-idole-supertint":
+        "Lancôme Skin Idôle 3 Serum Supertint, 30ml. Choose your shade — a tinted serum with an 87% skincare base (2% niacinamide, 1% hyaluronic acid and vitamin E) giving light-to-medium buildable coverage, a luminous skin-like finish and up to 24 hours of wear.",
+      "perfume-desc-lancome-genifique-eye-cream":
+        "Lancôme Génifique Ultimate eye cream, 20ml — the 2025 dual-repair eye cream with Beta-Glucan-CM and enoxolone that targets dark circles, puffiness, fine lines and wrinkles, with visibly fewer dark circles and wrinkles in 8 weeks.",
+      "perfume-desc-lancome-renergie-multi-glow-day":
+        "Lancôme Rénergie Multi-Glow rosy skin tone reviving day cream, 50ml — an anti-ageing cream for mature skin with collagen peptide fractions, niacinamide and pink pigment beads that leaves skin plumper, firmer and more radiant with a more even tone. Suitable for all skin types, including sensitive.",
+      "perfume-desc-biotherm-waterlover-sun-milk-spf50-400":
+        "Biotherm Waterlover Hydrating Sun Milk SPF 50+, 400ml pump bottle — very high UVA/UVB protection for face and body that is water-resistant, hydrates for 24 hours and leaves no white marks. With Life Plankton™, vitamin E and glycerin, in a 100% recycled bottle.",
+      "perfume-desc-biotherm-waterlover-milky-sun-spray-spf50":
+        "Biotherm Waterlover Milky Sun Spray SPF 50+, 200ml — an ultra-light, oil-free milky sun spray for face and body that is very water-resistant and suits all skin types. With Life Plankton™, in a 100% recycled bottle.",
+      "perfume-desc-biotherm-collagen-fit-body-cream":
+        "Biotherm Collagen Fit Intensive Hydra Body Cream, 200ml jar — a rich body cream with a collagen-support peptide, ceramide NP, shea and cocoa butter that tones, smooths and hydrates for up to 100 hours.",
+      "perfume-desc-biotherm-collagen-fit-body-milk":
+        "Biotherm Collagen Fit Firming Body Milk, 400ml pump bottle — a fast-absorbing firming milk with Biotech Plankton, a collagen peptide fraction and caffeine that gives an instant toning effect and up to 48 hours of hydration.",
+      "perfume-desc-biotherm-homme-force-supreme-body-reshaper":
+        "Biotherm Homme Force Supreme Body Reshaper, 125ml tube — a cooling, toning body cryo-gel for men, focused on the abdomen, with Biotech Plankton, caffeine and creatine.",
+      "perfume-desc-biotherm-homme-force-supreme-face-reshaper":
+        "Biotherm Homme Force Supreme Face Reshaper multi-reshaping and anti-wrinkle cream, 50ml — a light, non-greasy men's face cream with Biotech Plankton and Men Neo-Proxylane that firms, smooths wrinkles and redefines facial contours.",
+      "perfume-desc-armani-prisma-glass-icy-plumper":
+        "Giorgio Armani Prisma Glass Icy Plumper volumising lip gloss, 3.5ml. Choose your shade — a cooling plumping gloss with a frosted, prismatic shimmer, enriched with hyaluronic acid, squalane and peptides for up to 24 hours of hydration.",
+      "perfume-desc-ysl-loveshine-candy-glaze":
+        "Yves Saint Laurent Loveshine Candy Glaze lip gloss stick, 3.2g. Choose your shade — a sheer, juicy gloss-in-a-stick with hyaluronic acid, vitamin E, mango oil and pomegranate extract for a high-shine, plumped-looking finish.",
+      "perfume-desc-margiela-replica-beach-walk":
+        "Maison Margiela Replica Beach Walk Eau de Toilette — a sunny, salty stroll along the shore. Bergamot, lemon and pink pepper open onto ylang-ylang, coconut milk and heliotrope over musk, benzoin and cedar.",
+      "perfume-desc-margiela-replica-by-the-fireplace":
+        "Maison Margiela Replica By the Fireplace Eau de Toilette, 30ml — smoky and warm, like roasting chestnuts by a wood fire. Clove, pink pepper and orange blossom lead to chestnut, guaiac wood and juniper over vanilla, Peru balsam and cashmeran.",
+      "perfume-desc-margiela-replica-jazz-club":
+        "Maison Margiela Replica Jazz Club Eau de Toilette — the warm, spicy atmosphere of cigars and cocktails in a Brooklyn club. Pink pepper, neroli and lemon meet rum, clary sage and vetiver over tobacco leaf, vanilla and styrax.",
+      "perfume-desc-margiela-replica-lazy-sunday-morning":
+        "Maison Margiela Replica Lazy Sunday Morning Eau de Toilette — a clean floral musk of freshly washed linen. Aldehydes, pear and lily of the valley open onto iris, rose and orange blossom over white musk, patchouli and ambrette.",
+      "perfume-desc-margiela-replica-afternoon-delight":
+        "Maison Margiela Replica Afternoon Delight Eau de Toilette — a creamy gourmand built around a warm madeleine. Bitter almond and angelica lead to a madeleine accord and carrot over Madagascar vanilla, sandalwood and musk.",
+      "perfume-desc-margiela-replica-autumn-vibes":
+        "Maison Margiela Replica Autumn Vibes Eau de Toilette, 30ml — a woody, spicy walk through an autumn forest, with cardamom, carrot seed and red berries over cedarwood and a moss accord.",
+      "perfume-desc-margiela-replica-from-the-garden":
+        "Maison Margiela Replica From the Garden Eau de Toilette — fresh and green, like an afternoon in a sunny kitchen garden. Tomato leaf and green mandarin with geranium over patchouli, moss and white musk.",
+      "perfume-desc-margiela-replica-sailing-day":
+        "Maison Margiela Replica Sailing Day Eau de Toilette, 100ml — an aquatic sea-breeze scent. Sea notes, aldehydes, coriander and red pepper meet juniper and iris over seaweed, ambergris, cedar and amberwood.",
+      "perfume-desc-margiela-replica-on-a-date":
+        "Maison Margiela Replica On a Date Eau de Toilette, 30ml — a fruity chypre of sun-warmed grapes and roses. Blackcurrant liqueur, bergamot and pink pepper open onto Isparta rose, geranium and davana over patchouli, vetiver, moss and musks.",
+      "perfume-desc-margiela-replica-when-the-rain-stops":
+        "Maison Margiela Replica When the Rain Stops Eau de Toilette — an aromatic aquatic that captures fresh air after a spring shower. Green notes, bergamot and pink pepper meet a rain accord with rose and jasmine over pine, moss and patchouli.",
+      "perfume-desc-margiela-replica-under-the-stars":
+        "Maison Margiela Replica Under the Stars Eau de Toilette — a warm, smoky woody scent of a night around a campfire. Black pepper and cinnamon leaf lead to cypriol and cedar over labdanum, oud and a leather accord.",
+      "perfume-desc-margiela-replica-coffee-break":
+        "Maison Margiela Replica Coffee Break Eau de Toilette, 100ml — an amber-vanilla moment of calm. Pepper, orange blossom and patchouli open onto lavender, coffee, milk and tonka over vanilla, cedar and vetiver.",
+      "perfume-desc-margiela-replica-flying":
+        "Maison Margiela Replica Flying Eau de Parfum, 100ml, from the black-bottle Replica Dreams collection — a fresh, airy citrus with petitgrain, orange blossom, bergamot and neroli over an ozonic cloud accord, musk and moss.",
+      "perfume-desc-margiela-replica-ideal-one":
+        "Maison Margiela Replica Ideal One Eau de Parfum, 100ml, from the Replica Dreams collection — an amber-woody skin scent of elemi, bergamot and orange with orange blossom and lavender over musk, oud, guaiac wood, styrax and vanilla.",
+      "perfume-desc-margiela-replica-dancing-on-the-moon":
+        "Maison Margiela Replica Dancing on the Moon Eau de Parfum, 100ml, from the Replica Dreams collection — a powdery white floral of aldehydes, frangipani, jasmine sambac and iris over cashmeran, ambergris and musk, with a 'moon dust' note.",
+      "perfume-desc-margiela-replica-celestial-whispers":
+        "Maison Margiela Replica Celestial Whispers Eau de Parfum, 100ml, from the Replica Dreams collection — a smoky amber-woody scent of incense and metallic aldehydes with iris and myrrh over vanilla, musks and cedar.",
+      "perfume-desc-margiela-replica-under-the-lemon-trees":
+        "Maison Margiela Replica Under the Lemon Trees Eau de Toilette, 100ml — a sparkling woody citrus of a lazy afternoon on a Mediterranean terrace. Lime, petitgrain and cardamom with coriander, mate and green tea over cedar, cistus and white musk.",
+      "perfume-desc-margiela-replica-bubble-bath":
+        "Maison Margiela Replica Bubble Bath Eau de Toilette, 100ml — a clean floral musk inspired by a warm, foamy bath. A soap accord, bergamot and lavender meet jasmine and rose over coconut, white musk and patchouli.",
+      "perfume-desc-margiela-replica-lazy-sunday-morning-candle":
+        "Maison Margiela Replica Lazy Sunday Morning scented candle, 165g (about 41 hours of burn time) — the soft-skin-and-clean-linen scent of aldehydes, lily of the valley and pear with iris, orange blossom and rose over ambrette, patchouli and white musk.",
+      "perfume-desc-mugler-amen-stellar":
+        "Mugler A*Men Stellar Eau de Parfum Lumineuse for men (2025) — an amber aromatic gourmand that reworks A*Men around a creamy pistachio accord, with bergamot and lavender over a woody base.",
+      "perfume-desc-mugler-angel-stellar":
+        "Mugler Angel Stellar Eau de Parfum Lumineuse (2025), in a refillable cobalt-blue star — a powdery amber gourmand of creamy pistachio and sparkling bergamot over Madagascar Bourbon vanilla and woods.",
+      "perfume-desc-mugler-angel-edp":
+        "Mugler Angel Eau de Parfum in the refillable star bottle — the original 1992 amber gourmand. Calabrian bergamot, praline, red fruits and caramel over patchouli and vanilla. The 100ml comes as the standing star.",
+      "perfume-desc-mugler-angel-nova":
+        "Mugler Angel Nova Eau de Parfum, 25ml refillable — a fruity floral woody scent of raspberry and Damascena rose over Akigalawood.",
+      "perfume-desc-ralph-lauren-big-pony-1":
+        "Ralph Lauren Polo Big Pony #1 Eau de Toilette for men, 100ml, in the blue bottle — a fresh, sporty scent of lime, lemon, grapefruit and aquatic notes over a woody, musky base.",
+      "perfume-desc-ralph-lauren-polo-blue-parfum":
+        "Ralph Lauren Polo Blue Parfum, 75ml — a fresh woody scent of mandarin, cardamom and pink pepper with clary sage, smoky vetiver and jasmine over upcycled oakwood, olibanum and patchouli.",
+      "perfume-desc-ralph-lauren-polo-67-edt":
+        "Ralph Lauren Polo 67 Eau de Toilette (2024) — a woody aromatic of pineapple, bergamot and lemon with sage, juniper and rose hip over vetiver, patchouli and goldenrod.",
+      "perfume-desc-ralph-lauren-polo-67-edp":
+        "Ralph Lauren Polo 67 Eau de Parfum — a warmer, richer Polo 67 with pineapple, green mandarin, bergamot and cardamom, a touch of cypress and lavandin, over cedar, benzoin and vetiver.",
+      "perfume-desc-viktor-rolf-spicebomb-metallic-musk":
+        "Viktor&Rolf Spicebomb Metallic Musk Eau de Parfum for men (2025) — an amber spicy scent of black pepper, bergamot, elemi and aldehydes with cinnamon, chili and lavender over ambrette, cistus, a suede-leather accord and musk.",
+      "perfume-desc-viktor-rolf-flowerbomb-extreme":
+        "Viktor&Rolf Flowerbomb Extreme Eau de Parfum Intense (2025), in a matte-pink bottle — a vanilla-boosted floral of raspberry, bergamot and tea with jasmine sambac, rose, orange blossom and freesia over vanilla bean, patchouli and Peru balsam.",
+      "perfume-desc-prada-paradoxe-radical-essence":
+        "Prada Paradoxe Radical Essence Parfum (2025) — the most concentrated Paradoxe, in a deep-pink lacquered refillable bottle. Neroli and orange flower absolute meet a salted pistachio accord over creamy sandalwood.",
+      "perfume-desc-prada-paradoxe-hair-mist":
+        "Prada Paradoxe Hair Mist, 30ml — a lighter take on Paradoxe for the hair, with bergamot, neroli and jasmine over musks and ambrette, plus argan oil and rice vinegar for a silky finish.",
+      "perfume-desc-prada-paradoxe-intense-90-set":
+        "Prada Paradoxe Intense Eau de Parfum gift set in a mint-green Saffiano envelope box — the amber floral with neroli, jasmine, Ambrofix and a moss accord.",
+      "perfume-desc-ysl-myslf-labsolu":
+        "Yves Saint Laurent MYSLF L'Absolu Parfum (2025), in a mirror-silver bottle — a woody spicy scent of ginger, bergamot and cardamom with Moroccan orange blossom over Indonesian patchouli.",
+      "perfume-desc-valentino-born-in-roma-body-shimmer":
+        "Valentino Born in Roma Donna Perfumed Body Shimmer, 125ml — a shimmering gel lotion in the Donna scent with pearl and mother-of-pearl and hyaluronic acid for up to 12 hours of glow and hydration.",
+      "perfume-desc-valentino-born-in-roma-hair-body-mist":
+        "Valentino Born in Roma Donna Perfumed Hair & Body Mist, 90ml — bergamot, jasmine, woods and bourbon vanilla in a light mist with argan oil.",
+      "perfume-desc-armani-code-elixir":
+        "Giorgio Armani Code Elixir for men, 50ml (2025) — the most concentrated scent in the Code range. A Calabrian green mandarin opening leads to a spicy liquor accord and smoky leather over grilled tonka bean.",
+      "perfume-desc-armani-si-parfum":
+        "Giorgio Armani Sì Parfum (2025) — a gourmand leather chypre built around smoky vanilla. Blackcurrant nectar and a saffron accord open onto Damask rose over vanilla, a suede-like leather accord and patchouli.",
+      "perfume-desc-armani-swy-intensely-edp-50-set":
+        "Emporio Armani Stronger With You Intensely gift set for men, in a teal ginkgo-pattern box — the warm amber fougère with pink pepper, toffee, cinnamon, lavender, vanilla and tonka bean.",
+      "perfume-desc-lancome-lveb-vanille-nude":
+        "Lancôme La vie est belle Vanille Nude Eau de Parfum (2025) — Lancôme's first vanilla-musk, a 'glazed vanilla and creamy musk' of grandiflorum jasmine from the Domaine de la Rose, Madagascar bourbon vanilla, an overdose of white musk and sandalwood.",
+      "perfume-desc-lancome-absolue-longevity-soft-cream":
+        "Lancôme Absolue Longevity The Soft Cream, 60ml jar — Lancôme's first PDRN cream, with rose-derived Absolue PDRN, Perpetual Rose extract and Pro-Xylane to firm, redefine facial contours and hydrate for up to 24 hours. Melts into a light, serum-like texture; suits all skin types, including sensitive.",
+      "perfume-desc-biotherm-aquascreen-uv-daily-spf50":
+        "Biotherm Aquascreen Activewear Daily UV Fluid SPF 50+ (PA++++), 40ml — an ultra-light, invisible face sunscreen that resists sweat, sebum and friction, with peptides, vitamins B3 and E and Biotech Plankton.",
+      "perfume-desc-lancome-skin-idole-juicy-blush":
+        "Lancôme Skin Idôle Juicy Blush liquid blush, 9ml. Choose your shade — a buildable soft-matte liquid blush with an 85% skincare base, niacinamide and vitamins B5 and E, for a fresh flush that lasts up to 12 hours.",
+      "perfume-desc-ysl-the-inks-blur":
+        "Yves Saint Laurent The Inks Blur blurring matte lip stain, 5.5ml. Choose your shade — a weightless liquid stain with a soft-focus matte finish, up to 12 hours of wear and up to 24 hours of moisture.",
+      "perfume-desc-ysl-the-inks-vinyl-cream":
+        "Yves Saint Laurent The Inks Vinyl Cream high-shine lip stain, 5.5ml. Choose your shade — a lacquered, mirror-shine liquid stain with about 90% care ingredients (tuberose and prickly pear) and up to 24 hours of moisture.",
+      "perfume-desc-ysl-the-slim-couture-matte":
+        "Yves Saint Laurent The Slim Couture Matte Lipstick, 2.2g — the 2025 relaunch in a gold Cassandre case. Choose your shade — a velvety matte colour with a square, angled tip that lines and fills in one stroke, on a 67% care base with ceramides, rosehip and jojoba oils, for up to 10 hours of colour.",
+      "perfume-desc-ysl-all-hours-glow-foundation":
+        "Yves Saint Laurent All Hours Glow Foundation, 25ml — the radiant-finish All Hours (2025). Choose your shade — a serum-based formula with hyaluronic acid, niacinamide, macadamia oil and jasmine petal extract for buildable medium-to-full coverage, a skin-like glow and up to 24-hour wear.",
+      "perfume-desc-armani-skin-tint":
+        "Giorgio Armani Skin Tint long-wear & care skin tint, 30ml. Choose your shade — a 92% serum formula with Golden Hour Pearls, hyaluronic acid and niacinamide for buildable sheer-to-medium coverage, a radiant finish and 24-hour hydration.",
+      "perfume-desc-armani-luminous-silk-foundation":
+        "Giorgio Armani Luminous Silk Foundation, 30ml — the reformulated natural-glow blurring foundation. Choose your shade — medium buildable coverage with a silky natural glow, niacinamide, 24-hour wear and hydration; non-comedogenic and suitable for all skin types.",
+      "perfume-desc-armani-luminous-silk-glow-primer":
+        "Giorgio Armani Luminous Silk Illuminating Primer, 30ml — a glow-extending, water-based face base with Golden Hour pearls and hyaluronic acid. Wear alone for a dewy glow, under foundation, or mixed in; 24-hour hydration in one universal shade.",
+      "perfume-desc-armani-prive-cuir-nu":
+        "Armani/Privé Cuir Nu Eau de Parfum Intense — from Les Mille et Une Nuits collection (2025, Delphine Lebeau). An ambery leather inspired by Venetian tanneries: blue cardamom and dark-roasted Arabica coffee, Damask rose and nappa leather, over amber, labdanum and toasted tonka.",
+      "perfume-desc-armani-power-of-you":
+        "Emporio Armani Power of You Eau de Parfum for women (2026), in a ruby bottle with rose-gold rings — a floral fruity gourmand of passionfruit, bitter orange and lemon, frangipani and solar notes, over Madagascar vanilla, benzoin and labdanum.",
+      "perfume-desc-armani-stronger-with-you-amber":
+        "Emporio Armani Stronger With You Amber Eau de Parfum, 100ml — the first unisex scent of the line (2023, Cécile Matton). An ambery fougère of Provençal lavender, a rich amber accord and Madagascar bourbon vanilla.",
+      "perfume-desc-lancome-magie-noire":
+        "Lancôme Magie Noire Eau de Toilette, 75ml — the legendary 1978 oriental chypre. Blackcurrant bud, bergamot and galbanum open onto Bulgarian rose, jasmine and tuberose, over a mysterious base of patchouli, oakmoss, sandalwood, vetiver and amber.",
+      "perfume-desc-lancome-absolue-lextrait-cream":
+        "Lancôme Absolue L'Extrait Elixir Cream, 50ml — Lancôme's most exceptional regenerating cream, concentrated with Lancôme rose native cells and rose extracts from its Valensole gardens. A rich, melting texture that visibly regenerates, firms and restores radiance, in the black-and-gold jar.",
+      "perfume-desc-lancome-absolue-lextrait-yeux":
+        "Lancôme Absolue L'Extrait Yeux eye cream, 15ml — the ultimate regenerating eye elixir with Lancôme rose native cells, to visibly smooth lines, reduce puffiness and dark circles and illuminate the eye contour.",
+      "perfume-desc-biotherm-aquasource-vitamin-glow-gel":
+        "Biotherm Aquasource+ Vitamin Glow Gel, 50ml — a fresh, vitamin-rich gel moisturiser with vitamin C and Life Plankton™ that deeply hydrates and boosts radiance for a healthy-looking glow.",
+      "perfume-desc-biotherm-aquasource-cica-nutri-cream":
+        "Biotherm Aquasource Cica Nutri Cream, 30ml tube — a nourishing, soothing cream for dry and sensitive skin with cica (centella asiatica) and Life Plankton™, to comfort, repair the skin barrier and hydrate.",
+      "perfume-desc-prada-paradigme-edp":
+        "Prada Paradigme Eau de Parfum for men (2025), in a refillable green-to-black bottle — an ambery woody scent of Calabrian bergamot and airy musks over rosy-green Bourbon geranium, on Peru balsam, benzoin and guaiac wood.",
+      "perfume-desc-valentino-born-in-roma-rendez-vous-uomo":
+        "Valentino Uomo Born in Roma Rendez-Vous Ivory Eau de Toilette, 100ml — a 2025 limited edition in an ivory-lacquered studded bottle. Bergamot and lavandin over a smoky open-hearth accord.",
+      "perfume-desc-valentino-born-in-roma-rendez-vous-donna":
+        "Valentino Donna Born in Roma Rendez-Vous Ivory Eau de Parfum — a 2025 limited edition in an ivory-lacquered studded bottle. Green mandarin and orange blossom with a marshmallow heart over Madagascar vanilla and musk.",
+      "perfume-desc-valentino-born-in-roma-purple-melancholia-uomo":
+        "Valentino Uomo Born in Roma Purple Melancholia Eau de Toilette (2026) — an ambery aromatic woody scent of cardamom and lavandin over ambery woods and a creamy coconut accord.",
+      "perfume-desc-valentino-born-in-roma-purple-melancholia-donna":
+        "Valentino Donna Born in Roma Purple Melancholia Eau de Parfum (2026) — a fruity chypre of juicy plum and osmanthus over rich vanilla extract.",
+      "perfume-desc-ysl-libre-vanille-couture":
+        "Yves Saint Laurent Libre Vanille Couture Eau de Parfum, 50ml — a 2025 limited edition in a textured metallic-gold Libre bottle. Libre's lavender and orange blossom turned gourmand by a vanilla caviar accord dipped in golden liquor, with rum facets.",
+      "perfume-desc-margiela-untitled-l-eau":
+        "Maison Margiela (untitled) L'eau Eau de Toilette, 100ml — a fresh, green unisex citrus of mandarin, lemon, galbanum, buchu and spearmint over orange blossom, incense, patchouli and white musk.",
+      "perfume-desc-margiela-untitled-edp":
+        "Maison Margiela (untitled) Eau de Parfum, 100ml — the house's debut fragrance (2010), a green floral evoking a spring morning: galbanum, bitter orange and box-tree green, jasmine and lentisk, on incense, white musk and cedar.",
+      "perfume-desc-margiela-replica-beach-vibes-candle":
+        "Maison Margiela Replica Beach Vibes scented candle, 165g — \"Calvi, 1972: sun-kissed salty skin\". Bergamot, pink pepper and lemon over ylang-ylang, sunflower and coconut milk, on cedar, benzoin and musk; about 40 hours of burn time.",
+      "perfume-desc-margiela-replica-jazz-club-diffuser":
+        "Maison Margiela Replica Jazz Club reed diffuser, 185ml — \"Brooklyn, 2013: heady cocktails and cigars\". Pink pepper, lemon and neroli, a rum accord with clary sage, then vanilla, tonka, styrax, vetiver and tobacco leaf; white bottle with white reeds.",
+      "perfume-desc-margiela-replica-from-the-garden-candle":
+        "Maison Margiela Replica From the Garden scented candle, 165g — \"Puglia, 1998: earth and tomato leaves\". Tomato leaf and green mandarin with patchouli and geranium; over 40 hours of burn time.",
+      "perfume-desc-margiela-replica-lazy-sunday-morning-shower-gel":
+        "Maison Margiela Replica Lazy Sunday Morning perfumed shower gel, 200ml — a gentle foaming gel with plant glycerin in the clean-linen scent of lily of the valley, iris, ambrette and white musk.",
+      "perfume-desc-margiela-replica-lazy-sunday-morning-body-lotion":
+        "Maison Margiela Replica Lazy Sunday Morning perfumed body lotion, 200ml — a fast-absorbing lotion with shea butter, rapeseed oil and plant glycerin in the clean-linen scent; helps the matching eau de toilette last longer.",
+      "perfume-desc-dkny-be-delicious":
+        "DKNY Be Delicious Eau de Parfum (2004, Maurice Roucel), in the iconic green apple bottle — a fresh floral-fruity scent of crisp apple, cucumber and grapefruit over magnolia, rose and violet, on sandalwood and white amber.",
+      "perfume-desc-dkny-be-100-delicious":
+        "DKNY Be 100% Delicious Eau de Parfum (2021) — a juicy fruity floral of pear, pistachio, blackcurrant and mandarin, with magnolia, rose water and orange blossom over sandalwood, tonka and white woods.",
+      "perfume-desc-dkny-be-delicious-fresh-blossom":
+        "DKNY Be Delicious Fresh Blossom Eau de Parfum (2009), in the pink apple bottle — a soft floral inspired by apple blossom in Central Park: grapefruit, cassis and apricot, lily of the valley, rose and jasmine, over blonde woods.",
+      "perfume-desc-dkny-be-extra-delicious":
+        "DKNY Be Extra Delicious Eau de Parfum (2020) — a floral gourmand of crisp pear, gardenia and creamy caramel with raspberry and ambroxan, made to wear alone or layered over Be Delicious.",
+      "perfume-desc-dkny-women-edp":
+        "DKNY Women Energizing Eau de Parfum, in the tall skyscraper bottle — an urban floral of blood orange, chilled vodka and tomato leaf, water lily, orchid and daffodil, over white birch and tulip-tree bark.",
+      "perfume-desc-dkny-be-delicious-orchard-street":
+        "DKNY Be Delicious Orchard St. Eau de Parfum (2023), inspired by New York's Lower East Side — Pink Lady apple and pink grapefruit, jasmine, raspberry and pomegranate, over cedarwood and leather.",
+      "perfume-desc-cavalli-paradiso":
+        "Roberto Cavalli Paradiso Eau de Parfum — a luminous floral-woody musk of neroli and mandarin, a wild jasmine heart, and cypress and musk in the base.",
+      "perfume-desc-just-cavalli-her":
+        "Just Cavalli for Her Eau de Toilette — a creamy floral of neroli and Tahitian tiare flower over rosewood.",
+      "perfume-desc-just-cavalli-him":
+        "Just Cavalli for Him Eau de Toilette — a leather fragrance with pepper and vetiver on a leather base.",
+      "perfume-desc-cavalli-signature":
+        "Roberto Cavalli Signature Eau de Parfum — an oriental floral of green mandarin, pink pepper and ambrette, orange blossom, jasmine sambac and mirabelle plum, on benzoin, patchouli and vanilla.",
+      "perfume-desc-cavalli-nero-assoluto":
+        "Roberto Cavalli Nero Assoluto Eau de Parfum, 75ml — an oriental floral of mandarin, peach and orchid, orange flower, cedarwood and black vanilla, on sandalwood, musk and ebony wood.",
+      "perfume-desc-cavalli-sweet-ferocious":
+        "Roberto Cavalli Signature Sweet Ferocious Eau de Parfum (2024) — an oriental woody scent of pomelo, saffron, orange peel and elemi, a vanilla, tonka, amber and oud heart, on cypriol, guaiac wood and sandalwood.",
+      "perfume-desc-just-cavalli-wild-heart-her":
+        "Just Cavalli Wild Heart for Her Eau de Parfum (2024) — a fruity floral of red currant, apricot and bergamot, peony, mimosa and violet leaf, on cedar, coconut water and musk.",
+      "perfume-desc-just-cavalli-wild-heart-him":
+        "Just Cavalli Wild Heart for Him Eau de Toilette (2024) — a spicy woody amber of bergamot, saffron and boxwood, pepper, nutmeg and geranium, on cedar, tobacco and vetiver.",
+      "perfume-desc-cavalli-paradiso-rosa":
+        "Roberto Cavalli Paradiso Rosa Eau de Parfum (2025) — a fruity floral of raspberry, pink grapefruit, bergamot and pink pepper, peony, water jasmine and plumeria, on coconut water, benzoin, sandalwood and musk.",
+      "perfume-desc-cavalli-serpentine":
+        "Roberto Cavalli Serpentine Parfum (2025 relaunch), in a white bottle coiled with a gold snake — pink pepper, bergamot and blackcurrant, jasmine sambac, lavender, saffron and rose, over Madagascar vanilla, tonka and patchouli.",
+      "perfume-desc-just-cavalli-give-me-magic-him":
+        "Just Cavalli Give Me Magic for Him Eau de Toilette (2025) — a woody spicy scent of cardamom, pink pepper and lavender, cedarwood, hinoki and incense, on leather, tobacco, vanilla and guaiac wood.",
+      "perfume-desc-just-cavalli-give-me-magic-her":
+        "Just Cavalli Give Me Magic for Her Eau de Parfum (2025) — a spicy amber of nutmeg and jasmine, saffron, incense and oud, on patchouli, oakmoss and vetiver.",
+      "perfume-desc-ysl-libre-edp-loveshine-set":
+        "Yves Saint Laurent Libre Eau de Parfum holiday gift set (2025) — the lavender and orange blossom floral paired with a Loveshine lipstick.",
+      "perfume-desc-ysl-black-opium-holiday-set-50":
+        "Yves Saint Laurent Black Opium Eau de Parfum holiday gift set (2025) — the coffee and vanilla floral with a travel spray and a mini Lash Clash mascara.",
+      "perfume-desc-ysl-myslf-le-parfum-holiday-set":
+        "Yves Saint Laurent MYSLF Le Parfum holiday gift set (2025) — the intense woody floral with a MYSLF Eau de Parfum travel spray.",
+      "perfume-desc-ysl-myslf-edp-holiday-set-60":
+        "Yves Saint Laurent MYSLF Eau de Parfum holiday gift set (2025) — the orange blossom woody floral for men with a travel spray.",
+      "perfume-desc-ysl-myslf-edp-holiday-set-40":
+        "Yves Saint Laurent MYSLF Eau de Parfum holiday gift set (2025) — the orange blossom woody floral for men with a travel spray.",
+      "perfume-desc-ysl-libre-edp-intense-holiday-set":
+        "Yves Saint Laurent Libre Eau de Parfum Intense holiday gift set (2025) — the richer lavender, orange blossom and vanilla Libre with a travel spray.",
+      "perfume-desc-prada-paradoxe-intense-holiday-set":
+        "Prada Paradoxe Intense Eau de Parfum holiday gift set (2025) — the ambery floral with jasmine and vanilla, with a travel spray.",
+      "perfume-desc-prada-paradoxe-holiday-set-2025":
+        "Prada Paradoxe Eau de Parfum holiday gift set (2025) — neroli, orange blossom and amber in the refillable bottle, with a travel spray.",
+      "perfume-desc-prada-paradigme-set":
+        "Prada Paradigme Eau de Parfum gift set — the ambery woody men's scent of bergamot, geranium and benzoin, with a travel spray.",
+      "perfume-desc-prada-luna-rossa-black-set-100":
+        "Prada Luna Rossa Black Eau de Parfum gift set — the ambery woody scent of bergamot, patchouli and amber, with a travel spray.",
+      "perfume-desc-armani-si-passione-holiday-set":
+        "Armani Sì Passione Eau de Parfum holiday gift set (2025) — the fruity floral of blackcurrant, rose and vanilla, with a travel spray.",
+      "perfume-desc-armani-stronger-with-you-intensely-set-100":
+        "Emporio Armani Stronger With You Intensely Eau de Parfum holiday gift set (2025) — spicy, ambery and vanilla-rich, with a travel spray.",
+      "perfume-desc-armani-stronger-with-you-intensely-set-50":
+        "Emporio Armani Stronger With You Intensely Eau de Parfum holiday gift set (2025) — spicy, ambery and vanilla-rich, with a shower gel.",
+      "perfume-desc-armani-si-edp-holiday-set":
+        "Armani Sì Eau de Parfum holiday gift set (2025) — the blackcurrant, rose and vanilla chypre with matching body care.",
+      "perfume-desc-armani-code-edt-holiday-set":
+        "Armani Code Eau de Toilette holiday gift set (2025) — the refillable men's classic of bergamot, olive blossom and tonka, with a shower gel.",
+      "perfume-desc-armani-my-way-holiday-set":
+        "Armani My Way Eau de Parfum holiday gift set (2025) — the orange blossom, tuberose and white musk floral with matching body care.",
+      "perfume-desc-armani-stronger-with-you-edt-holiday-set":
+        "Emporio Armani Stronger With You Eau de Toilette holiday gift set (2025, blue-silver box) — cardamom, sage and chestnut accord, with a travel spray and shower gel.",
+      "perfume-desc-lancome-la-vie-est-belle-edp-30-set":
+        "Lancôme La Vie est Belle Eau de Parfum gift set (Holiday 2025) in the pink 90th-anniversary box — the iris, praline and vanilla scent with matching body care.",
+      "perfume-desc-lancome-juicy-tubes-mini-set":
+        "Lancôme \"The Juicy Gift\" (Holiday 2025) — three mini Juicy Tubes glosses for a high-shine, non-sticky lip.",
+      "perfume-desc-lancome-idole-edp-25-set":
+        "Lancôme Idôle Eau de Parfum gift set (Holiday 2025) — the clean rose, jasmine and white musk scent with a travel spray and a mini mascara.",
+      "perfume-desc-lancome-idole-edp-50-set":
+        "Lancôme Idôle Eau de Parfum gift set (Holiday 2025) — the clean rose, jasmine and white musk scent with a scented body cream and a mini mascara.",
+      "perfume-desc-lancome-la-vie-est-belle-edp-50-set":
+        "Lancôme La Vie est Belle Eau de Parfum gift set (Holiday 2025) — the refillable 50ml bottle with a travel spray and a mini Lash Idôle mascara.",
+      "perfume-desc-lancome-la-vie-est-belle-vanille-nude-set":
+        "Lancôme La Vie est Belle Vanille Nude Eau de Parfum gift set (Holiday 2025) — the creamy vanilla take on La Vie est Belle with a matching shower gel.",
+      "perfume-desc-lancome-renergie-triple-serum-20-set":
+        "Lancôme Rénergie Triple Serum gift set (Holiday 2025) — face and eye Triple Serums with a mini eye cream for firmer, more even-looking skin.",
+      "perfume-desc-lancome-renergie-crx-triple-serum-50-set":
+        "Lancôme Rénergie gift set (Holiday 2025) built around the C.R.x. Triple Serum with retinol, plus peptide cream and eye cream minis in a pink pouch.",
+      "perfume-desc-lancome-la-vie-est-belle-edp-100-set":
+        "Lancôme La Vie est Belle Eau de Parfum gift set (Holiday 2025) — the full 100ml bottle with a generous body lotion and a purse-size mini.",
+      "perfume-desc-lancome-la-vie-est-belle-elixir-petit-theatre":
+        "Lancôme La Vie est Belle L'Elixir Eau de Parfum 50ml, Holiday 2025 limited edition — presented in the collectible pink \"Lancôme Express\" train-carriage box (\"Petit Théâtre\") designed by Safia Ouares for Lancôme's 90th anniversary.",
+      "perfume-desc-lancome-la-vie-est-belle-petit-theatre":
+        "Lancôme La Vie est Belle Eau de Parfum 50ml, Holiday 2025 limited edition — the refillable bottle presented in the collectible pink \"Lancôme Express\" train-carriage box (\"Petit Théâtre\") designed by Safia Ouares for Lancôme's 90th anniversary.",
+      "perfume-desc-lancome-renergie-hpn-300-peptide-50-set":
+        "Lancôme Rénergie H.P.N. 300-Peptide Cream gift set (Holiday 2025) — the lifting, firming peptide cream with a travel size and a mini eye cream.",
+      "perfume-desc-lancome-hypnose-drama-mascara-set":
+        "Lancôme Hypnôse Drama mascara gift set (Christmas 2025) — the extreme-volume mascara plus three travel-size Hypnôse mascaras to try.",
+      "perfume-desc-lancome-monsieur-big-set":
+        "Lancôme Monsieur Big mascara holiday set — big-volume mascara with a dual-phase eye make-up remover and a mini kohl pencil.",
+      "perfume-desc-biotherm-homme-aquafitness-set":
+        "Biotherm Homme Aquafitness holiday set (2025) — an energising hair and body wash with a 48-hour roll-on antiperspirant.",
+      "perfume-desc-biotherm-homme-force-supreme-reshaper-set":
+        "Biotherm Homme Force Supreme holiday set (2025) — the anti-ageing Face Reshaper cream with a cleanser and a 48-hour roll-on.",
+      "perfume-desc-biotherm-deo-pure-duo-set":
+        "Biotherm Deo Pure duo holiday set (limited edition 2025) — two 48-hour antiperspirant roll-ons.",
+      "perfume-desc-biotherm-aqua-drop-set":
+        "Biotherm Aqua Drop set from The Drop Collection — Biotherm essentials with a reusable 1-litre mint sports bottle.",
+      "perfume-desc-biotherm-homme-power-drop-set":
+        "Biotherm Homme Power Drop set from The Drop Collection — men's essentials with a reusable 1-litre blue sports bottle.",
+      "perfume-desc-valentino-uomo-born-in-roma-edt-holiday-set":
+        "Valentino Uomo Born in Roma Eau de Toilette holiday gift set — the woody-spicy scent of violet leaf, sage, ginger and vetiver, with a travel spray.",
+      "perfume-desc-valentino-donna-born-in-roma-intense-set":
+        "Valentino Donna Born in Roma Intense Eau de Parfum holiday gift set — the floral ambery scent of bourbon vanilla, jasmine and benzoin, with a travel spray.",
+      "perfume-desc-valentino-donna-born-in-roma-edp-holiday-set":
+        "Valentino Donna Born in Roma Eau de Parfum holiday gift set (2025) — blackcurrant, jasmine and bourbon vanilla, with a pink studded travel spray.",
+      "perfume-desc-valentino-uomo-born-in-roma-extradose-set":
+        "Valentino Uomo Born in Roma Extradose Parfum gift set — a woody ambery fougère of spices, lavandin and vetiver, with a travel spray.",
+      "perfume-desc-valentino-donna-born-in-roma-extradose-set":
+        "Valentino Donna Born in Roma Extradose Parfum gift set — a floral ambery scent of cassis, rum accord and vanilla extract, with a travel spray.",
+      "perfume-desc-guess-seductive-edt":
+        "Guess Seductive Eau de Toilette for women (2010) — a floral-fruity woody scent: pear, bergamot and blackcurrant over jasmine, orange blossom and iris, settling on vanilla, frankincense and cashmere wood.",
+      "perfume-desc-guess-seductive-noir-edt":
+        "Guess Seductive Noir Eau de Toilette for women (2019) — an oriental floral in a lacquered black bottle: bergamot, sage and peony over iris, jasmine sambac and lily of the valley, on vanilla, vetiver and suede.",
+      "perfume-desc-guess-seductive-red-edt":
+        "Guess Seductive Red Eau de Toilette for women (2021) — a floral-fruity gourmand: cherry, almond and pink pepper over cherry blossom, magnolia and violet, on tonka bean, vanilla and sandalwood.",
+      "perfume-desc-guess-seductive-red-mist":
+        "Guess Seductive Red fragrance mist, 250ml — a light all-over body spray of the Seductive Red scent: cherry, almond and pink pepper, cherry blossom, magnolia and violet, on sandalwood, tonka and vanilla.",
+      "perfume-desc-guess-iconic-edp":
+        "Guess Iconic Eau de Parfum for women (2024) — a bright floral: pink pepper and mandarin over orange blossom, ylang-ylang and geranium with a marine accord, on amber, moss and musk.",
+      "perfume-desc-guess-iconic-men-edp":
+        "Guess Iconic Eau de Parfum for men (2025) — a woody aromatic: Sichuan and black pepper with mandarin over mate, clary sage and geranium, on vetiver, labdanum and suede.",
+      "perfume-desc-guess-bella-vita-edp":
+        "Guess Bella Vita Eau de Parfum (2020) — a fruity floral oriental for women: Italian lemon, cassis and black cherry over jasmine, tuberose and vanilla orchid, on amberwood, tonka bean, praline and musk.",
+      "perfume-desc-guess-bella-vita-mist":
+        "Guess Bella Vita fragrance mists, 250ml — the black cherry, tuberose and praline scent of Bella Vita as a light all-over body spray, also available with fine gold shimmer.",
+      "perfume-desc-guess-bella-vita-rosa-edt":
+        "Guess Bella Vita Rosa Eau de Toilette (2022) — a fruity floral of Italian lemon, blackcurrant and quince over jasmine, magnolia and lily of the valley, on orris, moss, sandalwood and musk.",
+      "perfume-desc-guess-bella-vita-rosa-mist":
+        "Guess Bella Vita Rosa fragrance mists, 250ml — the lemon, magnolia and moss scent of Bella Vita Rosa as a light all-over body spray, also available with shimmer.",
+      "perfume-desc-guess-bella-vita-paradiso-edp":
+        "Guess Bella Vita Paradiso Eau de Parfum (2023) — a floral amber gourmand of Italian mandarin, pear blossom and red berries over jasmine, gardenia and tuberose, on patchouli, amber and musk, in a glittering Bella Vita bottle.",
+      "perfume-desc-guess-love-fragrance-mist":
+        "Guess Love fragrance mists, 250ml — light, fruity-floral body sprays for an all-over veil of scent. Choose your fragrance.",
+      "perfume-desc-guess-sexy-skin-fragrance-mist":
+        "Guess Sexy Skin fragrance mists, 250ml — playful fruity body sprays in colour-coded bottles. Choose your fragrance.",
+      "perfume-desc-armani-prive-les-eaux-holiday-discovery-set":
+        "Armani/Privé Les Eaux holiday discovery set (2025) — four fresh haute couture Eaux de Toilette in a gold-to-silver glitter coffret, from delicate peony and cardamom sandalwood to smoky tea and zesty vetiver.",
+      "perfume-desc-biotherm-homme-aquapower-essentials-set":
+        "Biotherm Homme Aquapower holiday set (2025) — a three-step men's routine to cleanse, hydrate with Life Plankton™ and stay fresh with 48-hour protection.",
+      "perfume-desc-lancome-la-nuit-tresor-holiday-set":
+        "Lancôme La Nuit Trésor Eau de Parfum holiday gift set (2025) — the gourmand woody floral of raspberry, black rose, praline and vanilla orchid with matching perfumed body care.",
+      "perfume-desc-lancome-absolue-soft-cream-holiday-set":
+        "Lancôme Absolue holiday set (2025) — the full-size Absolue Longevity Soft Cream with deluxe minis of the serum, eye cream and Rich Cream, in a 90th-anniversary box illustrated by Safia Ouares.",
+      "perfume-desc-prada-luna-rossa-ocean-edt-set":
+        "Prada Luna Rossa Ocean Eau de Toilette gift set (2025) — the aromatic fougère of bergamot, lavender, iris and suede over vetiver and musk, with a travel spray.",
+      "perfume-desc-ysl-libre-berry-crush":
+        "Yves Saint Laurent Libre Berry Crush Eau de Parfum (2026) — the first fruity-floral Libre: a tangy raspberry accord and mandarin over French lavender and Moroccan orange blossom, melting into creamy coconut, Bourbon vanilla, amber and musks, in a berry-red Libre bottle.",
+      "perfume-desc-lancome-lash-idole-curl-goddess":
+        "Lancôme Lash Idôle Curl Goddess Mascara in 01 Divine Black — a fast-setting curl-and-volume mascara with a 40° twisted brush: up to 1.5× curl, up to +800% volume and up to 30-hour wear without clumps or smudges. Ophthalmologist-tested, suitable for sensitive eyes and contact-lens wearers.",
+      "perfume-desc-guess-iconic-mist":
+        "Guess Iconic fragrance mist for women, 250ml — a light all-over body spray of the Iconic amber floral: pink pepper and mandarin over orange blossom, ylang-ylang and a marine accord, on amber, moss and musk.",
+      "perfume-desc-guess-iconic-sublime-edp":
+        "Guess Iconic Sublime Eau de Parfum (2026) — a fresher floral amber companion to Iconic: mandarin, cardamom and an aquatic accord over blue lotus, jasmine and magnolia, on vanilla, sandalwood and amber, in a pale aqua Iconic bottle.",
+      "perfume-desc-guess-iconic-sublime-mist":
+        "Guess Iconic Sublime fragrance mist, 250ml — a light all-over body spray of Iconic Sublime: mandarin and an aquatic accord over blue lotus and jasmine, on vanilla and sandalwood.",
+      "perfume-desc-guess-seductive-noir-homme-edt":
+        "Guess Seductive Homme Noir Eau de Toilette for men (2019) — an oriental fougère in a matte black bottle: nutmeg, black pepper and grapefruit over apple, lavender and orange blossom, on tonka bean, sandalwood and amber.",
+      "perfume-desc-azzaro-forever-wanted-absolu":
+        "Azzaro Forever Wanted Absolu Parfum (2026) — a smoky, boozy amber fougère for men: incense over a whisky accord and warm vanilla, in the barrel-shaped Wanted bottle.",
+      "perfume-desc-mugler-alien-pulp":
+        "Mugler Alien Pulp Eau de Parfum Fruitée (2026) by Dominique Ropion — the first fruity-floral Alien: a raspberry accord and lemon peel over jasmine, sweet orange and green mandarin, on musk, vanillin and Cashmeran, in a refillable pink-to-clear faceted bottle.",
+      "perfume-desc-armani-acqua-di-gio-edp-intense":
+        "Giorgio Armani Acqua di Giò Eau de Parfum Intense (2026) — a deeper, longer-lasting aromatic aquatic: Calabrian bergamot and green apple over marine notes and clary sage, on amber and woods, in a black-to-clear bottle.",
+      "perfume-desc-armani-stronger-with-you-powerfully":
+        "Emporio Armani Stronger With You Powerfully Eau de Parfum (2026) by Cécile Matton — an ambery gourmand fougère: cherry, mandarin and bergamot over lavender and spices, on vanilla, amberwood and sugared chestnut.",
+      "perfume-desc-lancome-goddess-dimension-eyeshadow":
+        "Lancôme Idôle Goddess Dimension Mono Eyeshadow, 1.2g — a highly pigmented pressed powder with a smooth, creamy glide and intense colour in one swipe, in matte, shimmer and sparkle finishes. Buildable, easy to blend and crease-resistant. Choose your shade.",
+      "perfume-desc-biotherm-aquasource-electrolyte-dewy-gel":
+        "Biotherm Aquasource+ Electrolyte Dewy Gel 100H, 100ml — a lightweight gel moisturiser inspired by sports hydration, with an electrolyte complex and Hyalu B3 for up to 100 hours of hydration and visibly smoother fine lines; silicone- and alcohol-free.",
+      "perfume-desc-lancome-mascara-melter":
+        "Lancôme Mascara Melter caring mascara remover (2026, Lash Idôle line) — a two-sided wand coats lashes in a 93% skincare formula with jojoba oil and squalane that dissolves even waterproof mascara in about a minute. Suitable for sensitive eyes and contact-lens wearers.",
+      "perfume-desc-lancome-o-juicy-hair-body-mist":
+        "Lancôme Ô Juicy Hair & Body Mists, 100ml (2026) — light, fruity scents from the Ô de Lancôme family to spray on skin, hair or clothes. Choose your fragrance.",
+      "perfume-desc-lancome-idole-peach-n-roses":
+        "Lancôme Idôle Peach 'N Roses Eau de Parfum (2026) — a fruity floral Idôle: red berries and pink pepper over a natural Peach Orpur™ extract, on Damascena rose absolute, in a peachy-orange lacquered Idôle bottle.",
+      "perfume-desc-miu-miu-edp":
+        "Miu Miu Eau de Parfum (2015, Daniela Andrier) — the house's first fragrance, a green floral woody: lily of the valley with bergamot over a green accord, dog rose and jasmine, on Akigalawood and white musk, in the quilted turquoise bottle with a red cap.",
+      "perfume-desc-miu-miu-eau-bleue":
+        "Miu Miu L'Eau Bleue Eau de Parfum (2017, Daniela Andrier) — a fresher green floral take on the original: lily of the valley over violet leaf, jasmine and wild rose, on white musk and Akigalawood, in a clear turquoise quilted bottle with a yellow cap.",
+      "perfume-desc-miu-miu-eau-rosee":
+        "Miu Miu L'Eau Rosée Eau de Toilette (2018) — a dewy floral chypre: lychee over lily of the valley on soft white musk, in a light-pink quilted bottle with an ivory cap.",
+      "perfume-desc-miu-miu-fleur-de-lait":
+        "Miu Miu Fleur de Lait Eau de Parfum (2023, Daniela Andrier) — a fruity floral gourmand inspired by a mango pomelo dessert: juicy mango over apricot-like osmanthus, on creamy coconut milk, in a milk-white quilted bottle with a blue cap.",
+      "perfume-desc-miu-miu-miutine":
+        "Miu Miu Miutine Eau de Parfum (2025, Dominique Ropion) — a rebellious fruity gourmand chypre: wild strawberry and citrus over gardenia, jasmine and rose, on brown sugar, bourbon vanilla, patchouli and oakmoss, in a toffee-toned quilted bottle.",
+      "perfume-desc-lancome-renergie-nano-resurfacer-starter":
+        "Lancôme Rénergie Nano-Resurfacer 400 Booster — an at-home device inspired by microneedling. Single-use cartridges with 484 nano-tips create invisible micro-channels that boost absorption of Rénergie H.C.F. Triple Serum (sold separately), with no pain or downtime.",
+      "perfume-desc-lancome-renergie-nano-resurfacer-refill":
+        "Lancôme Rénergie Nano-Resurfacer 400 Booster refill — replacement single-use cartridges with 484 nano-tips each for the Nano-Resurfacer device (sold separately).",
+      "perfume-desc-lancome-renergie-collagen-lift-xtend-cream":
+        "Lancôme Rénergie Collagen+ Lift-Xtend Cream, 50ml — a highly tightening and firming cream inspired by thread lifts, combining collagen fibres with a collagen peptide and copper tripeptide in a stretchy, thread-like texture.",
+      "perfume-desc-lancome-renergie-yeux-lifting-20":
+        "Lancôme Rénergie Yeux lifting eye cream, 20ml — small-molecule hyaluronic acid with French linseed peptides for an immediate hydration boost and, over 8 weeks, fewer wrinkles, lifted-looking eyelids and softened dark circles.",
+      "perfume-desc-lancome-la-nuit-tresor-rouge-drama":
+        "Lancôme La Nuit Trésor Rouge Drama Eau de Parfum Intense, 50ml — a floral fruity inspired by the Louvre's Red Rooms: strawberry coulis over Damask rose absolute and a red-rose accord, on patchouli, in a smoky black diamond-cut bottle with a ruby-red heart.",
+      "perfume-desc-lancome-la-vie-est-belle-edp-30-body-lotion-set-s26":
+        "Lancôme La Vie est Belle Eau de Parfum gift set (Mother's Day 2026) — the iconic iris, patchouli and vanilla floral gourmand in a refillable bottle, with matching perfumed body lotion, in a limited 'Garden of Dreams' box illustrated by Barbara Cox.",
+      "perfume-desc-prada-paradigme-edp-50-set-s26":
+        "Prada Paradigme Eau de Parfum gift set (Spring 2026) — Prada's ambery woody men's signature with green Bourbon geranium and Calabrian bergamot over warm ambery woods, with a travel spray.",
+      "perfume-desc-prada-paradoxe-edp-30-set-s26":
+        "Prada Paradoxe Eau de Parfum gift set (Spring 2026) — the floral amber of neroli bud, Ambrofix™ amber and Serenolide™ musk in the refillable triangle bottle, with a travel spray.",
+      "perfume-desc-valentino-uomo-born-in-roma-intense-50-set-s26":
+        "Valentino Uomo Born in Roma Intense Eau de Parfum gift set (Spring 2026) — an intense vanilla infusion with smoked vetiver and fresh lavandin in the studded Rockstud bottle, with a travel spray.",
+      "perfume-desc-ysl-myslf-edp-60-shower-gel-set-s26":
+        "Yves Saint Laurent MYSLF Eau de Parfum gift set (Spring 2026) — the refillable woody floral of Calabrian bergamot, orange blossom absolute and warm woods, with matching shower gel.",
+      "perfume-desc-ysl-libre-edp-90-body-balm-set-s26":
+        "Yves Saint Laurent Libre Eau de Parfum gift set (Spring 2026) — the floral lavender of French lavender, Moroccan orange blossom, musk and warm vanilla, with a travel spray and nourishing perfumed body balm.",
+      "perfume-desc-ysl-libre-edp-50-mirror-set-s26":
+        "Yves Saint Laurent Libre Eau de Parfum gift set (Spring 2026) — the floral lavender of French lavender, Moroccan orange blossom, musk and warm vanilla, with a travel spray and a gold YSL Beauté mirror.",
+      "perfume-desc-ysl-libre-edp-30-set-s26":
+        "Yves Saint Laurent Libre Eau de Parfum gift set (Spring 2026) — the floral lavender of French lavender, Moroccan orange blossom, musk and warm vanilla, with a travel spray.",
+      "perfume-desc-ysl-libre-edp-50-candy-glaze-set-s26":
+        "Yves Saint Laurent Libre Eau de Parfum gift set (Spring 2026) — the floral lavender of French lavender, Moroccan orange blossom, musk and warm vanilla, with a travel spray and a Loveshine Candy Glaze lip gloss stick.",
+      "perfume-desc-armani-prive-orange-mediterranee":
+        "Giorgio Armani Privé Orange Méditerranée Eau de Toilette (2025, Daniela Andrier) — a citrus aromatic from Armani's Les Eaux haute couture collection. Italian bitter orange purified by molecular distillation meets cedrat, fennel seed and a tea accord.",
+      "perfume-desc-armani-prive-oud-nacre":
+        "Giorgio Armani Privé Oud Nacré Eau de Parfum (2025, Alberto Morillas) — from Les Terres Précieuses, inspired by the Armani Privé 'Perles' haute couture collection. A saffron accord and jasmine grandiflorum over an oud accord and chocolatey Guatemalan patchouli, on Ambrox, in a mother-of-pearl-effect bottle.",
+      "perfume-desc-armani-si-nude-bloom":
+        "Giorgio Armani Sì Nude Bloom Eau de Parfum, 50ml (2026 limited edition) — a floral chypre: a blackcurrant accord with mandarin, lemon, bergamot and black pepper opens onto a trio of roses including May rose absolute, on patchouli and Bourbon vanilla.",
+      "perfume-desc-armani-si-passione-red-bloom":
+        "Giorgio Armani Sì Passione Red Bloom Eau de Parfum, 50ml (2026) — a floral ambery fruity: a raspberry accord, bergamot and blackcurrant bud absolute over iris pallida and a two-faceted rose, on Bourbon vanilla and cashmeran.",
+      "perfume-desc-ysl-y-iced-cologne":
+        "Yves Saint Laurent Y Iced Cologne Eau de Toilette Intense (2025, Dominique Ropion) — an icy aromatic fougère for men. Ice mint with a cooling Arctical accord, mint and blue sage from YSL's Ourika gardens, on ambroxan and patchouli, with up to a 12-hour trail.",
+      "perfume-desc-ysl-lash-latex":
+        "YSL Lash Latex Lengthening & Lift-Sculpting Mascara in black, 8.5ml (2025) — a 496 micro-bristle brush gives up to 1.6× longer lashes with up to 24-hour lift, in a sweat- and smudge-resistant formula with hyaluronic acid and iris florentina, suitable for sensitive eyes and contact lens wearers.",
+      "perfume-desc-ysl-lovenude-kiss-shaper":
+        "YSL Lovenude Kiss Shaper sculpting lip liner, 1.2g (2026). Choose your shade — a creamy matte pencil that glides on to shape and define for a visibly fuller look, with 12-hour second-skin wear, enriched with nigella sativa seed extract, coffee seed oil, jojoba and vitamin E.",
+      "perfume-desc-ysl-lovenude-lip-blusher":
+        "YSL Lovenude Lip Blusher sheer blur balm, 3g (2026). Choose your shade — a balm-lipstick hybrid with a sheer, buildable soft-matte blur finish, 12-hour blur and 24-hour hydration, in a 90% balm base with Pro-Xylane, nigella sativa, coffee oil and blueberry extracts.",
+      "perfume-desc-guess-iconic-blue-men-edp":
+        "Guess Iconic Blue for Men Eau de Parfum (2026, Christine Hassan) — a salty woody aromatic fougère inspired by an Italian speedboat ride. Italian bergamot, lemon and sea salt open onto blue lavender, black pepper and geranium, on cedarwood, vetiver and tonka, in a deep-blue square bottle with a stitched leather-look cap and gold 'G' buckle.",
+      "perfume-desc-guess-seductive-desire-men-edt":
+        "Guess Seductive Desire for Men Eau de Toilette (2026) — an oriental fougère: pineapple, orange, blackcurrant and elemi open onto sage, lavender, verbena and coriander, on Bourbon vanilla, amber, patchouli, labdanum and moss, in a bronze-metal bottle with a gold GUESS band.",
+      "perfume-desc-guess-seductive-desire-women-edt":
+        "Guess Seductive Desire for Women Eau de Toilette (2026) — an amber woody fruity floral: watery notes, pear, melon, mandarin and apricot open onto jasmine, osmanthus and cypress, on amber, woods, musk, vanilla and pink pepper, in the Seductive bottle in luminous gold with a brown stitched label.",
+      "perfume-desc-guess-seductive-desire-women-mist":
+        "Guess Seductive Desire for Women Fragrance Mist, 250ml — a light body mist of the amber woody fruity floral: pear, melon and apricot over jasmine and osmanthus, on amber, musk and vanilla, in a gold bottle.",
+      "perfume-desc-cavalli-florence":
+        "Roberto Cavalli Florence Eau de Parfum (2017) — a floral chypre for women: tangerine and blackcurrant open onto orange blossom, grapefruit blossom and hibiscus seed, on patchouli, musk and amber.",
+      "perfume-desc-cavalli-paradiso-assoluto":
+        "Roberto Cavalli Paradiso Assoluto Eau de Parfum (2016) — a more seductive floral take on Paradiso: pink peppercorn and wisteria open onto wild jasmine and red lily, on sandalwood, patchouli and vanilla.",
+      "perfume-desc-cavalli-paradiso-azzurro":
+        "Roberto Cavalli Paradiso Azzurro Eau de Parfum, 75ml — an aquatic floral aromatic: bergamot and lavender open onto wild jasmine, on cypress and cashmere wood.",
+      "perfume-desc-just-cavalli-wild-blue-him":
+        "Just Cavalli Wild Blue for Him Eau de Toilette (2026) — a green citrus aromatic fougère: bergamot opens onto mint, lychee and pepper, on hyacinth and artemisia.",
+      "perfume-desc-just-cavalli-wild-pink-her":
+        "Just Cavalli Wild Pink for Her Eau de Parfum (2026) — a floral fruity: hibiscus, lily and peach open onto peony, Bulgarian rose and tiaré, on musk, ambergris and rosewood.",
+      "perfume-desc-armani-stronger-with-you-spices":
+        "Emporio Armani Stronger With You Spices Eau de Parfum, 100ml (2026 limited edition) — an intense amber spicy fougère in a metallic terracotta bottle: black pepper, a saffron accord with spices and lavender, the signature candied chestnut, Madagascar Bourbon vanilla and amberwood.",
+      "perfume-desc-armani-my-way-sunny-vanilla":
+        "Giorgio Armani My Way Sunny Vanilla Eau de Parfum (2025) — a gourmand floral fruity My Way in a bright yellow bottle: pineapple and bergamot open onto tuberose and jasmine, on Madagascar vanilla and creamy musk.",
+      "perfume-desc-prada-paradoxe-hand-cream":
+        "Prada Paradoxe Hand Cream, 50ml — a triple-care cream for hands, nails and cuticles, scented with Paradoxe's neroli, amber and musk, in a pink triangular tube.",
+      "perfume-desc-prada-luna-rossa-ocean-le-parfum-set":
+        "Prada Luna Rossa Ocean Le Parfum gift set — the most intense Luna Rossa Ocean with a travel spray, in an envelope-style gift box.",
+      "perfume-desc-armani-stronger-with-you-edt-valentines-set":
+        "Emporio Armani Stronger With You Eau de Toilette gift set (Valentine's Day 2026 limited edition) — the spicy, candied-chestnut fougère with a travel spray, in a backgammon-motif box.",
+      "perfume-desc-armani-stronger-with-you-intensely-valentines-set":
+        "Emporio Armani Stronger With You Intensely Eau de Parfum gift set (Valentine's Day 2026 limited edition) — the amber, toffee and vanilla fougère with a travel spray, in a backgammon-motif box.",
+      "perfume-desc-prada-paradigme-edp-30-set":
+        "Prada Paradigme Eau de Parfum gift set — Prada's ambery woody men's signature with green Bourbon geranium and Calabrian bergamot, with a travel spray, in a box patterned from Prada's archive.",
+      "perfume-desc-ysl-lash-clash-loveshine-set-s26":
+        "Yves Saint Laurent makeup gift set (Spring 2026) — Lash Clash extreme volume mascara with a Loveshine lipstick, in a red chevron box.",
+      "perfume-desc-ysl-myslf-edp-100-set-s26":
+        "Yves Saint Laurent MYSLF Eau de Parfum gift set (Spring 2026) — the refillable woody floral of Calabrian bergamot, orange blossom absolute and warm woods, with a travel spray, in a blue chevron box.",
+      "perfume-desc-ysl-lash-clash-libre-set-s26":
+        "Yves Saint Laurent gift set (Spring 2026) — Lash Clash extreme volume mascara with a Libre Eau de Parfum travel spray, in a red chevron box.",
+      "perfume-desc-lancome-tiuw-shape-stick":
+        "Lancôme Teint Idôle Ultra Wear Shape Stick, 9g (2026). Choose your shade — a creamy multi-use stick for foundation, concealer and contour with a 19° slanted bullet, medium-to-full buildable coverage, a natural matte finish and up to 24-hour wear, with squalane and vitamin E.",
+      "perfume-desc-lancome-tiuw-shape-stick-blush":
+        "Lancôme Teint Idôle Shape Stick Blush (2026). Choose your shade — a creamy, buildable blush stick with jojoba oil for a dewy, skin-like flush and up to 24-hour wear.",
+      "perfume-desc-lancome-tiuw-shape-stick-highlighter":
+        "Lancôme Teint Idôle Shape Stick Highlighter (Glass Glow), 6g (2026) — a universal, glitter-free balm highlighter for a dewy glass-skin glow.",
+      "perfume-desc-lancome-lip-idole-cuddle-blur":
+        "Lancôme Lip Idôle CuddleBlur™ Inflatable Lip Velvet, 8.5ml (2026). Choose your shade — a cushiony, squalane-enriched liquid matte that blurs lip lines for up to 12 hours, with a curved lip-cuddling applicator.",
+      "perfume-desc-margiela-replica-chasing-sunsets":
+        "Maison Margiela Replica Chasing Sunsets Eau de Toilette, 100ml (2026) — 'Ipanema, 1965': a woody fruity sunset on the beach. A mango accord and cardamom over solar tuberose, on creamy sandalwood, vanilla and crystal moss.",
+      "perfume-desc-margiela-replica-up-at-dawn":
+        "Maison Margiela Replica Up at Dawn Eau de Toilette (Juliette Karagueuzoglou) — 'Windsor, 2025': an English rose garden at daybreak. Pink pepper, elemi and a soil accord open onto rose absolute, orris and ambrette, on musks, patchouli moss and cashmeran.",
+      "perfume-desc-mugler-angel-blush":
+        "Mugler Angel Blush Eau de Parfum (2026, Louise Turner and Jacques Huclier) — an ambery gourmand musky Angel: an almond milk accord with creamy musk, sandalwood, Bourbon vanilla and patchouli, in the refillable star bottle with a blush-pink heart.",
+      "perfume-desc-ralph-lauren-polo-67-extreme":
+        "Ralph Lauren Polo 67 Eau de Parfum Extreme (2026) — a woody aromatic for men: bergamot, lemon and cardamom open onto a pineapple accord, clary sage, Bourbon geranium and a solar accord, on leather, Virginia cedar, vetiver and sandalwood, in a refillable matte-silver flask.",
+      "perfume-desc-ralph-lauren-polo-red-extreme-edp":
+        "Ralph Lauren Polo Red Eau de Parfum Extreme (2026) — the most intense Polo Red, an ambery woody leather: bitter orange, red apple and cardamom over clary sage, leather and coffee, on vanilla, patchouli, benzoin and cedar, in a refillable deep-burgundy bottle.",
+      "perfume-desc-prada-luna-rossa-carbon-edp":
+        "Prada Luna Rossa Carbon Eau de Parfum (2026, Daniela Andrier) — a dark gourmand aromatic fougère: lavender, a liquorice accord and cypress with a warm amber base, in a refillable soft-matte black bottle with the red Prada stripe.",
+      "perfume-desc-lancome-absolue-longevity-md-anticipate-cream":
+        "Lancôme Absolue Longevity MD (2026) — a dermatologist-validated longevity skincare range built on Mitopure® (98.5% pure Urolithin A). Anticipate The Cream, 50ml pump — for under-35s, to anticipate visible signs of ageing, with Epigenomyl, Ectoin, Rose Pro-Xylane and taurine.",
+      "perfume-desc-lancome-absolue-longevity-md-intercept-cream":
+        "Lancôme Absolue Longevity MD (2026) — a dermatologist-validated longevity skincare range built on Mitopure® (98.5% pure Urolithin A). Intercept The Cream, 50ml jar — for ages 35–55, to target signs of ageing as they appear, with LHA, Matrixyl, niacinamide, Rose Pro-Xylane and taurine.",
+      "perfume-desc-lancome-absolue-longevity-md-intercept-serum":
+        "Lancôme Absolue Longevity MD (2026) — a dermatologist-validated longevity skincare range built on Mitopure® (98.5% pure Urolithin A). Intercept The Serum, 50ml — the serum partner to Intercept The Cream for ages 35–55, with the same Mitopure® and Intercept compound.",
+      "perfume-desc-lancome-absolue-longevity-md-reset-cream":
+        "Lancôme Absolue Longevity MD (2026) — a dermatologist-validated longevity skincare range built on Mitopure® (98.5% pure Urolithin A). Reset The Cream, 50ml jar — for 55+, to visibly reverse signs of ageing, with Senevisium, rhamnose, niacinamide, Rose Pro-Xylane and taurine.",
+      "perfume-desc-lancome-absolue-longevity-md-reset-serum":
+        "Lancôme Absolue Longevity MD (2026) — a dermatologist-validated longevity skincare range built on Mitopure® (98.5% pure Urolithin A). Reset The Serum, 50ml — for 55+, the serum partner to Reset The Cream for firmer, more toned-looking skin.",
+      "perfume-desc-lancome-lveb-hair-body-mist":
+        "Lancôme La vie est belle Hair & Body Mist, 100ml — a lighter take on La vie est belle for hair and body, in a bag-size bottle with a golden wing. Choose your scent.",
+      "perfume-desc-armani-si-passione-intense-set":
+        "Giorgio Armani Sì Passione Intense Eau de Parfum gift set — the floral ambery woody of pear, jasmine and vanilla with a miniature, in a glittering red and white box.",
+      "perfume-desc-nishane-ani-x":
+        "Nishane Ani X Extrait de Parfum (2023, Cécile Zarokian) — a citrus spicy vanilla from the X Collection: bergamot, lemon, honeydew melon, blue ginger and cardamom over lavender, green apple and rose, on vanilla, cashmere wood and ambergris.",
+      "perfume-desc-nishane-fan-your-flames-x":
+        "Nishane Fan Your Flames X Extrait de Parfum, 50ml (2023) — a softer, tropical take on Fan Your Flames from the X Collection: coconut, rum and lentisque over tobacco, tonka and thyme, on cedar, oakmoss and patchouli.",
+      "perfume-desc-nishane-hacivat-x":
+        "Nishane Hacivat X Extrait de Parfum (2023) — a citrus woody chypre reworking of Hacivat from the X Collection: pineapple, bergamot and pink pepper, then lime, jasmine and orange blossom, on patchouli, cedarwood and Haitian vetiver.",
+      "perfume-desc-nishane-hacivat":
+        "Nishane Hacivat Extrait de Parfum, 100ml (2017, Jorge Lee) — a fruity woody chypre from the Shadow Play collection: pineapple, grapefruit and bergamot over cedar, patchouli and jasmine, on oakmoss.",
+      "perfume-desc-nishane-hundred-silent-ways":
+        "Nishane Hundred Silent Ways Extrait de Parfum (2016) — a floral gourmand musk from the Rumi collection: tuberose, peach and mandarin, then gardenia, jasmine and orris, on vanilla, sandalwood and vetiver.",
+      "perfume-desc-nishane-zenne":
+        "Nishane Zenne Extrait de Parfum, 50ml (2017, Jorge Lee) — a fruity floral oriental: blackcurrant, rhubarb and grapefruit, then Turkish rose and gardenia, on vanilla, ambergris and musk.",
+      "perfume-desc-nishane-ani":
+        "Nishane Ani Extrait de Parfum, 50ml (2019, Cécile Zarokian) — a warm spicy vanilla: blue ginger, bergamot and pink pepper, then cardamom, blackcurrant and rose, on vanilla, benzoin and sandalwood.",
+      "perfume-desc-nishane-ege":
+        "Nishane Ege / Αιγαίο Extrait de Parfum, 50ml (2020, Ilias Ermenidis) — a green aquatic aromatic inspired by the Aegean: yuzu, violet leaf and anise, then basil, mint and cardamom, on liquorice and olibanum.",
+      "perfume-desc-nishane-tempfluo":
+        "Nishane Tempfluo Extrait de Parfum, 50ml (2022, Anne Flipo) — a floral gourmand woody from the Time Capsule collection: saffron, bergamot and mandarin, then jasmine sambac, orange blossom and praline, on cashmere wood, cedar and vanilla.",
+      "perfume-desc-nishane-wulong-cha":
+        "Nishane Wulong Chá Extrait de Parfum, 50ml (2015) — a fresh citrus green tea from Nishane's first collection: bergamot and citrus with oolong tea, over fig and musk.",
+      "perfume-desc-mancera-wild-fruits":
+        "Mancera Wild Fruits Eau de Parfum (2011, Pierre Montale) — a fruity woody: citrus opens onto violet with blackcurrant, peach and apple, on cedarwood and white musk.",
+      "perfume-desc-mancera-aoud-blue-notes":
+        "Mancera Aoud Blue Notes Eau de Parfum, 120ml (Pierre Montale) — a fresh oud: bergamot, mandarin and Calabrian lemon over ylang-ylang, violet, rose and iris, drying down to amber, leather, sandalwood and vanilla.",
+      "perfume-desc-mancera-lemon-line":
+        "Mancera Lemon Line Eau de Parfum, 60ml (Pierre Montale) — a cologne-like citrus fougère: lemon and lavender over white flowers, geranium and amber, on white musk and oakmoss.",
+      "perfume-desc-mancera-amore-caffe":
+        "Mancera Amore Caffè Eau de Parfum, 120ml (2023, Pierre Montale) — a coffee and vanilla gourmand: black coffee and amaretto over vanilla ice cream and speculoos, on brown sugar, vanilla and grey amber.",
+      "perfume-desc-mancera-french-riviera":
+        "Mancera French Riviera Eau de Parfum, 120ml (2022, Pierre Montale) — an aromatic aquatic: citrus, ginger and pepper over sea notes, tiaré, pine and mimosa, on sea salt, white musk and amber.",
+      "perfume-desc-mancera-cherry-cherry":
+        "Mancera Cherry Cherry Eau de Parfum (2024, Pierre Montale) — a fruity oriental: black cherry, bergamot and lemon over iris, jasmine, heliotrope and patchouli, on white musk and vanilla.",
+      "perfume-desc-mancera-fig-me-up":
+        "Mancera Fig Me Up Eau de Parfum (Pierre Montale) — a fruity green fig: fig leaf, rhubarb and violet over fig milk, plum, oud and sandalwood, finishing on toffee, tonka, tobacco and musk.",
+      "perfume-desc-mancera-amberful":
+        "Mancera Amberful Eau de Parfum (2024, Pierre Montale) — an amber woody: pink pepper, yuzu, bergamot and nutmeg over amberwood, violet and patchouli, on amber, cedar and moss.",
+      "perfume-desc-mancera-cinque-terre":
+        "Mancera Cinque Terre Eau de Parfum (Pierre Montale) — a woody marine: rosemary, lemon and cardamom over sea salt, fig leaf, cedar and pine, on oakmoss, tonka, sandalwood and labdanum.",
+      "perfume-desc-mancera-eternal-wood":
+        "Mancera Eternal Wood Eau de Parfum (2024, Pierre Montale) — a woody aromatic: oud, davana and saffron over palo santo, copal, guaiac and cashmere wood, on toffee, tonka, amber and oakmoss.",
+      "perfume-desc-mancera-intense-red-tobacco":
+        "Mancera Intense Red Tobacco (2023, Pierre Montale) — the stronger, extrait-strength version of Red Tobacco, a spicy woody: saffron, cinnamon, incense and oud over tobacco and leather, on vanilla, amber, sandalwood and musk.",
+      "perfume-desc-mancera-tonka-cola":
+        "Mancera Tonka Cola Eau de Parfum (2022, Pierre Montale) — a spicy gourmand: lemon, cinnamon and black cherry over fizzy cola, patchouli and orange blossom, on tonka, benzoin, labdanum and vanilla.",
+      "perfume-desc-montale-day-dreams":
+        "Montale Day Dreams Eau de Parfum (2017, Pierre Montale) — a floral fruity gourmand: orange blossom and mandarin over gardenia, jasmine and neroli, on sandalwood, vanilla and coconut.",
+      "perfume-desc-montale-bubble-forever":
+        "Montale Bubble Forever Eau de Parfum (2024, Pierre Montale) — a bubble-gum floral fruity gourmand: pear, grapefruit and lemon over orange blossom, rose and cinnamon, on toffee, vanilla, musk and amber.",
+      "perfume-desc-montale-crazy-in-love":
+        "Montale Crazy In Love Eau de Parfum (2021, Pierre Montale) — an amber floral: saffron, rose petals and cardamom over rose, violet and sandalwood, on amber, vanilla, brown sugar and musk.",
+      "perfume-desc-montale-arabians-musk":
+        "Montale Arabians Musk Eau de Parfum (Pierre Montale) — a powdery oriental musk: honey and bergamot over Medjool date and orange blossom, on vanilla sugar, tonka and musk.",
+      "perfume-desc-montale-arabians":
+        "Montale Arabians Eau de Parfum, 100ml (2017, Pierre Montale) — a leathery spicy oriental: cardamom, lavender and red thyme over rose, patchouli and vetiver, on oud, leather, amber and musk.",
+      "perfume-desc-xerjoff-erba-gold":
+        "Xerjoff Erba Gold Eau de Parfum (Vibe collection) — a unisex fruity citrus twist on Erba Pura: lemon, orange, bergamot and ginger over green apple, melon, pear, cardamom and cloves, on amber, vanilla, musk and woods.",
+      "perfume-desc-xerjoff-erba-pura":
+        "Xerjoff Erba Pura Eau de Parfum (2019, Christian Carbonnel & Laura Santander) — a unisex fruity amber: Sicilian orange, lemon and Calabrian bergamot over a heart of Mediterranean fruits, on white musk, amber and Madagascar vanilla.",
+      "perfume-desc-xerjoff-accento-overdose":
+        "Xerjoff Accento Overdose Eau de Parfum, 100ml (2019, Christian Carbonnel) — a floral aldehyde: fruity green notes and aldehydes over Egyptian jasmine, lily-of-the-valley and Bulgarian rose, with eucalyptus and pine.",
+      "perfume-desc-xerjoff-accento":
+        "Xerjoff Accento Eau de Parfum, 100ml (Vibe collection) — a fresh, musky fruity floral: pineapple and hyacinth over iris, jasmine and pink pepper, on amber, musk, vanilla, patchouli and vetiver.",
+      "perfume-desc-xerjoff-purple-accento":
+        "Xerjoff Purple Accento Eau de Parfum, 100ml (Vibe collection) — Accento with an oud twist: pineapple, bergamot, mandarin and hyacinth over loganberry, orris, jasmine and pink pepper, on oud, amber, musk, vanilla and sandalwood.",
+      "perfume-desc-xerjoff-opera":
+        "Xerjoff Opera Eau de Parfum, 100ml (2019, Chris Maurice) — a woody floral musk: fruits and Turkish rose over ylang-ylang, nutmeg, leather and amber, on vanilla, patchouli, musk, cedar and Haitian vetiver.",
+      "perfume-desc-xerjoff-torino21":
+        "Xerjoff Torino21 Eau de Parfum (2021, Join The Club) — created for the Nitto ATP Finals in Turin; an aromatic green: mint, lemon, basil and thyme over blackcurrant, lavender, rosemary and jasmine, on musk and verbena.",
+      "perfume-desc-xerjoff-alexandria-ii":
+        "Xerjoff Alexandria II Parfum (2012, Chris Maurice, Oud Stars) — an amber woody: rosewood, lavender, cinnamon and apple over rose, cedar and lily-of-the-valley, on Laotian oud, sandalwood, vanilla, amber and musk.",
+      "perfume-desc-xerjoff-alexandria-ii-anniversary":
+        "Xerjoff Alexandria II Anniversary Parfum, 100ml (2024) — a richer oud take on Alexandria II: lavender, Bulgarian rose, cumin and cardamom over oud, orris, amber, civet and sage, on Australian sandalwood, Madagascar vanilla and musk.",
+      "perfume-desc-xerjoff-coro":
+        "Xerjoff Coro Eau de Parfum, 100ml (2025, Vibe collection) — a floral fruity: tropical fruits, mango, pineapple and jasmine on vanilla, amber, musk and sandalwood.",
+      "perfume-desc-xerjoff-neorio":
+        "Xerjoff × Duran Duran NeoRio Parfum, 50ml (2025) — an oriental: candied fig, rum, elemi and cistus over maple syrup, saffron and rose oil, on patchouli, tonka and Peru balsam. One scent in four coloured bottles; choose your colour.",
+      "perfume-desc-xerjoff-black-moonlight":
+        "Xerjoff × Duran Duran Black Moonlight Parfum, 50ml (2025) — a woody oriental: bergamot, mandarin, cardamom and saffron over lavender, myrrh, sambac jasmine and ylang-ylang, on labdanum, patchouli, tonka and tolu balsam.",
+      "perfume-desc-tiziana-terenzi-kirke-overdose":
+        "Tiziana Terenzi Kirkè Overdose Extrait de Parfum, 100ml (2025) — the 10th-anniversary extrait of Kirkè in a gold bottle: passionfruit, peach, raspberry and Bulgarian rose over gardenia, sand accord, jasmine sambac and lily-of-the-valley, on vanilla, musk, ambergris, heliotrope, sandalwood and patchouli.",
+      "perfume-desc-btso-dirty-heaven":
+        "BORNTOSTANDOUT Dirty Heaven Eau de Parfum, 50ml (2023, Margaux Le Paih Guérin) — a unisex amber floral: jasmine, neroli and white flowers over saffron, tonka, vanilla and ambroxan.",
+      "perfume-desc-btso-dirty-rice":
+        "BORNTOSTANDOUT Dirty Rice Eau de Parfum, 50ml (2022, Olivier Cresp) — a milky, woody skin scent: almond and bergamot open onto basmati rice, milk and peony, on sandalwood, cedar, vetiver and musk.",
+      "perfume-desc-btso-angels-powder":
+        "BORNTOSTANDOUT Angels' Powder Eau de Parfum, 50ml — a sweet, powdery unisex gourmand with a soft cotton-candy cloud of sugar, powder and musk.",
+      "perfume-desc-btso-filthy-musk":
+        "BORNTOSTANDOUT Filthy Musk Eau de Parfum, 50ml (2024, Margaux Le Paih Guérin) — an animalic vanilla musk: pineapple and honey over jasmine, nutmeg and patchouli, on civet, caramel, tonka, rum and ambergris.",
+      "perfume-desc-btso-fig-porn":
+        "BORNTOSTANDOUT Fig Porn Eau de Parfum, 50ml (2022, Florian Gallo) — a fruity floral: fig, pear and bergamot with Turkish rose and peony, on vanilla, sandalwood, amber and musk.",
+      "perfume-desc-btso-indecent-cherry":
+        "BORNTOSTANDOUT Indecent Cherry Eau de Parfum, 50ml (2022, Florian Gallo) — a boozy cherry gourmand: cherry, almond and saffron over sour cherry, strawberry, rose and mimosa, on vanilla, benzoin and patchouli.",
+      "perfume-desc-btso-mud":
+        "BORNTOSTANDOUT Mud Eau de Parfum, 50ml (2022, Nathalie Lorson) — an amber vanilla evoking wet earth and dark chocolate: milk and almond, chocolate, plum and rose, on vanilla, elemi and sandalwood.",
+      "perfume-desc-btso-nanatopia":
+        "BORNTOSTANDOUT Nanatopia Eau de Parfum, 50ml (2023, Alex Lee) — a rum-soaked banana bread gourmand: rum, cinnamon and nutmeg over banana bread and melted caramel, on tonka, cypriol and Orcanox.",
+      "perfume-desc-btso-black-mango":
+        "BORNTOSTANDOUT Black Mango Extrait Extrême, 50ml (2025) — a 55–62% concentration extrait aged in Korean Onggi pots; an amber woody: mango and orange with tolu balsam and Bourbon vanilla, on oud, leather, cypriol and sandalwood.",
+      "perfume-desc-btso-oud-candy":
+        "BORNTOSTANDOUT Oud Candy Extrait Extrême, 50ml — a 55–62% concentration extrait aged in Korean Onggi pots: brown sugar, candy, nuts and milk with white flowers, over oud, saffron, black woods, caramel, vanilla and leather.",
+      "perfume-desc-btso-black-guava":
+        "BORNTOSTANDOUT Black Guava Extrait Extrême, 50ml — a 55–62% concentration extrait aged in Korean Onggi pots: guava, cardamom and Madagascar mandarin over rose, geranium and oud, on patchouli, cypriol and ambergris.",
+      "perfume-desc-btso-drunk-lovers-cream":
+        "BORNTOSTANDOUT Drunk Lovers Hand & Body Cream, 350ml — a rich unisex cream with sweet almond and jojoba oil, scented with Drunk Lovers: citrus, red berries and juniper over cognac and spices, on amber, sandalwood, vanilla and musk. Made in Korea.",
+      "perfume-desc-btso-drunk-lovers-wash":
+        "BORNTOSTANDOUT Drunk Lovers Hand & Body Wash, 350ml — a pH-balanced amino-acid wash with jojoba, scented with Drunk Lovers: citrus, red berries and juniper over cognac and spices, on amber, sandalwood, vanilla and musk. Made in Korea.",
+      "perfume-desc-jhag-ego-stratis":
+        "Juliette Has a Gun Ego Stratis Eau de Parfum (2022, Romano Ricci) — an aquatic citrus 'modern cologne': tangerine, bergamot and lemon over calone, blueberry and neroli, on cedar, ambroxan and musk.",
+      "perfume-desc-jhag-lust-for-sun":
+        "Juliette Has a Gun Lust for Sun Eau de Parfum (2023) — a solar floral: freesia, coconut and bergamot over ylang-ylang, jasmine, orange blossom and gardenia, on vanilla, ambroxan and white musk.",
+      "perfume-desc-jhag-ode-to-dullness":
+        "Juliette Has a Gun Ode to Dullness Eau de Parfum, 50ml (2023) — a creamy, comforting musky floral: star anise and freesia over cashmere flower and sandalwood, on tonka and musk.",
+      "perfume-desc-mancera-instant-crush":
+        "Mancera Instant Crush Eau de Parfum (2019, Pierre Montale) — an amber floral: saffron, ginger, Sicilian mandarin and bergamot over amberwood, Moroccan rose, Egyptian jasmine and patchouli, on Madagascar vanilla, white musk, sandalwood and oakmoss.",
+      "perfume-desc-mancera-jardin-exclusif":
+        "Mancera Jardin Exclusif Eau de Parfum (2018, Pierre Montale) — a fruity floral gourmand: pear, white peach, green apple, blackcurrant and caramel over jasmine, violet, Bulgarian rose and ambergris, on white musk, Madagascar vanilla and sandalwood.",
+      "perfume-desc-mancera-red-tobacco":
+        "Mancera Red Tobacco Eau de Parfum (2017, Pierre Montale) — a spicy sweet tobacco: cinnamon, saffron, nutmeg, green apple, incense and oud over patchouli and jasmine, on tobacco, vanilla, amber, guaiac wood and white musk.",
+      "perfume-desc-mancera-holidays":
+        "Mancera Holidays Eau de Parfum (Pierre Montale) — a sunny tropical floral: coconut and bergamot over Tahitian gardenia (tiaré), ylang-ylang and sea notes, on sandalwood, vanilla and white musk.",
+      "perfume-desc-mancera-intense-cedrat-boise":
+        "Mancera Intense Cedrat Boise (2021, Pierre Montale) — the richer, extrait-strength version of Cedrat Boise, a fruity leathery woody: Sicilian citrus, blackcurrant and spices over leather, white sandalwood, Cambodian oud, patchouli and jasmine, on oakmoss, ambergris, white musk and vanilla.",
+      "perfume-desc-montale-dark-vanilla":
+        "Montale Dark Vanilla Eau de Parfum, 100ml (Pierre Montale) — a dark, carnal vanilla: pink pepper, saffron, cumin, cardamom, lemon and coriander over sandalwood, leather, oud and patchouli, on vanilla and amber.",
+      "perfume-desc-xerjoff-40-knots":
+        "Xerjoff 40 Knots Eau de Parfum, 100ml (Join The Club collection) — inspired by yacht-club life on the Mediterranean: a fresh, salty marine woody that opens like a sea breeze, with woody nuances and cedarwood in the drydown.",
+      "perfume-desc-xerjoff-don":
+        "Xerjoff Don Eau de Parfum (Join The Club collection) — a dark, intense woody oriental inspired by Hollywood gangster epics: smoky bars and late-night alleys, with tobacco, whisky, molasses and a gunpowder accord.",
+      "perfume-desc-xerjoff-comandante":
+        "Xerjoff Comandante! Eau de Parfum, 100ml (2021, Join The Club collection) — a woody scent inspired by the classic gentlemen's smoking clubs: dimly lit rooms, worn leather armchairs and fine cigars.",
+      "perfume-desc-xerjoff-more-than-words":
+        "Xerjoff More Than Words Eau de Parfum (Join The Club collection) — a woody floral inspired by a secret society of writers and poets: cinnamon, cardamom, nutmeg and fruits over rose, cedarwood, vetiver and dried fruits, on oud, ambergris, labdanum, amber and vanilla.",
+      "perfume-desc-xerjoff-decas":
+        "Xerjoff Decas Eau de Parfum, 100ml (1861 collection) — named after the Latin for 'ten', a softly sweet amber: Brazilian mandarin, tuberose and tobacco over benzoin, opoponax and Tuscan orris, on musk, tolu balsam and Bourbon vanilla.",
+      "perfume-desc-xerjoff-naxos":
+        "Xerjoff Naxos Eau de Parfum, 100ml (1861 collection) — a tribute to Sicily, an aromatic spicy gourmand: bergamot, lemon and lavender over jasmine sambac, cinnamon, honey and cashmere, on tobacco leaf, tonka bean and vanilla.",
+      "perfume-desc-xerjoff-renaissance":
+        "Xerjoff Renaissance Eau de Parfum, 100ml (1861 collection) — a fresh citrus homage to Italian artistry: Amalfi lemon, mandarin, Calabrian bergamot and petitgrain over mint, lily-of-the-valley and Bulgarian rose, on musk, cedarwood, amber and patchouli.",
+      "perfume-desc-xerjoff-la-capitale":
+        "Xerjoff La Capitale Parfum, 50ml (2018, Chris Maurice) — a sweet fruity oriental: strawberry, peach, caramel and labdanum over leather, amber, Iranian saffron, rose and ginger, on oud, benzoin and Bourbon vanilla.",
+      "perfume-desc-xerjoff-nio":
+        "Xerjoff Nio Parfum, 50ml (Shooting Stars collection) — a fresh woody spicy named after a meteorite that fell over Japan: bergamot, Tunisian neroli, pink pepper, cardamom and nutmeg over green leaves and jasmine, on amber, cedarwood, guaiac wood and Haitian vetiver.",
+      "perfume-desc-xerjoff-golden-dallah":
+        "Xerjoff Golden Dallah Parfum, 50ml (Coffee Break collection) — a warm spiced coffee inspired by Gulf hospitality: fresh exotic spices over coffee absolute, incense, amber, Cambodian oud and rose absolute, on cocoa and tonka bean.",
+      "perfume-desc-tiziana-terenzi-nero-oudh":
+        "Tiziana Terenzi Nero Oudh Extrait de Parfum, 100ml (2019, Paolo Terenzi) — an oriental floral oud: saffron, cypriol, rose geranium, ylang-ylang and magnolia over Bulgarian rose, gurjan balsam, guaiac wood, cedar and orris, on Indian oud, patchouli, ambergris, musk and vanilla.",
+      "perfume-desc-tiziana-terenzi-delox":
+        "Tiziana Terenzi Delox Extrait de Parfum, 100ml (2017, Paolo Terenzi) — a floral woody musk: coffee, iris and white hyacinth over Turkish rose, vanilla and opoponax, on honey, white musk, amber and cedar.",
+      "perfume-desc-tiziana-terenzi-dionisio":
+        "Tiziana Terenzi Dionisio Extrait de Parfum, 100ml (Anniversary Collection, Paolo Terenzi) — an oriental vanilla inspired by the Masque of Dionysus: grey amber and musk over Tahitian vanilla, jasmine and lily-of-the-valley, on oud, musk and Madagascar vanilla.",
+      "perfume-desc-tiziana-terenzi-leo":
+        "Tiziana Terenzi Leo Extrait de Parfum, 100ml (2022, Luna collection) — inspired by the lion of the zodiac, a citrus floral woody: kumquat, Brazilian orange, Sicilian mandarin and bergamot over jasmine sambac, Bulgarian rose, magnolia, violet leaf and myrrh, on oak, cedar, sandalwood, musk, benzoin and tonka.",
+      "perfume-desc-tiziana-terenzi-libra":
+        "Tiziana Terenzi Libra Extrait de Parfum, 100ml (Luna collection) — Tiziana Terenzi's own star sign, an oriental floral: Sorrento lemon, bergamot, grapefruit, tuberose and rose over Atlas cedar, Tuscan orris, grey amber and jasmine sambac, on patchouli, vanilla flower, musk, vetiver, benzoin and oakmoss.",
+      "perfume-desc-bond-no9-gold-coast":
+        "Bond No. 9 Gold Coast Eau de Parfum, 100ml — a soft yet energetic modern rose celebrating New York's historic Gold Coast: lychee, apricot and red apple over rose essence, watermelon and rose absolute, on cedarwood, vanilla and musk.",
+      "perfume-desc-jhag-lili-fantasy":
+        "Juliette Has a Gun Lili Fantasy Eau de Parfum, 100ml — an ambery floral with a gourmand twist: a bubble-gum accord over jasmine and tuberose absolutes, on an ambery accord and ambroxan.",
+      "perfume-desc-jhag-magnolia-bliss":
+        "Juliette Has a Gun Magnolia Bliss Eau de Parfum — a fresh, peaceful fruity floral: bergamot over magnolia essence and juicy mirabelle plum, on ambroxan and musks.",
+      "perfume-desc-mancera-aoud-vanille":
+        "Mancera Aoud Vanille Eau de Parfum (Pierre Montale) — a smooth oud gourmand: saffron and spices over Cambodian oud and rose, on creamy Madagascar vanilla, amber and white musk.",
+      "perfume-desc-mancera-cedrat-boise":
+        "Mancera Cedrat Boise Eau de Parfum (2011, Pierre Montale) — a fruity woody chypre: Sicilian lemon, bergamot, blackcurrant and spices over water fruits, patchouli and jasmine, on cedarwood, leather, sandalwood, oakmoss, vanilla and white musk.",
+      "perfume-desc-mancera-choco-violet":
+        "Mancera Choco Violet Eau de Parfum (Pierre Montale) — a powdery floral gourmand: violet and soft spices over dark chocolate and rose, on vanilla, amber, sandalwood and white musk.",
+      "perfume-desc-mancera-gold-prestigium":
+        "Mancera Gold Prestigium Eau de Parfum (Pierre Montale) — a luminous oriental floral: saffron, bergamot and fruits over rose, jasmine and orange blossom, on amber, oud, vanilla and white musk.",
+      "perfume-desc-mancera-gold-intensive-aoud":
+        "Mancera Gold Intensive Aoud Eau de Parfum, 60ml (Pierre Montale) — a rich golden oud: saffron, rose and spices over Cambodian oud, on amber, sandalwood, vanilla and white musk.",
+      "perfume-desc-mancera-roses-greedy":
+        "Mancera Roses Greedy Eau de Parfum (2014, Pierre Montale) — a fruity rose gourmand: grapefruit and blood orange over Turkish rose, jasmine and raspberry, on vanilla, white musk, sandalwood and amber.",
+      "perfume-desc-mancera-roses-vanille":
+        "Mancera Roses Vanille Eau de Parfum (2010, Pierre Montale) — a sweet rose gourmand: lemon and water notes over Turkish rose and sugar, on Madagascar vanilla, cedarwood and white musk.",
+      "perfume-desc-mancera-velvet-vanilla":
+        "Mancera Velvet Vanilla Eau de Parfum, 60ml (Pierre Montale) — a soft, velvety vanilla: bergamot and spices over vanilla absolute and florals, on tonka bean, sandalwood and white musk.",
+      "perfume-desc-mancera-wind-wood":
+        "Mancera Wind Wood Eau de Parfum, 120ml (2013, Pierre Montale) — a fresh aromatic woody: Calabrian bergamot, Sicilian lemon and pink pepper over Atlas cedar and vetiver, on ambergris, white musk and oakmoss.",
+      "perfume-desc-mancera-black-line":
+        "Mancera Black Line Eau de Parfum, 60ml (2012, Pierre Montale) — a dark spicy oriental: saffron, cinnamon and nutmeg over Bulgarian rose and patchouli, on oud, incense, amber and white musk.",
+      "perfume-desc-mancera-black-gold":
+        "Mancera Black Gold Eau de Parfum, 60ml (2017, Pierre Montale) — an aromatic woody: lavender, bergamot and spices over iris and leather, on oud, amber, vanilla and white musk.",
+      "perfume-desc-mancera-aoud-lemon-mint":
+        "Mancera Aoud Lemon Mint Eau de Parfum, 60ml (2013, Pierre Montale) — a fresh oud: Sicilian lemon and mint over rose and spices, on Cambodian oud, sandalwood, amber and white musk.",
+      "perfume-desc-montale-aoud-lime":
+        "Montale Aoud Lime Eau de Parfum, 100ml (2011, Pierre Montale) — a zesty citrus oud: lime, lemon and bergamot over aromatic herbs and rose, on oud, cedarwood and white musk.",
+      "perfume-desc-montale-aoud-night":
+        "Montale Aoud Night Eau de Parfum, 100ml (2016, Pierre Montale) — a dark woody oud: grapefruit and bergamot over Turkish rose and jasmine, on Indonesian oud, guaiac wood and vanilla.",
+      "perfume-desc-montale-black-aoud":
+        "Montale Black Aoud Eau de Parfum (2006, Pierre Montale) — a classic rose-oud: mandarin over Turkish rose, on oud, patchouli and musk.",
+      "perfume-desc-montale-black-aoud-intense":
+        "Montale Black Aoud Intense Eau de Parfum, 100ml (Pierre Montale) — a deeper, more concentrated take on Black Aoud: Turkish rose and spices over dark oud and patchouli, on amber, leather and musk.",
+      "perfume-desc-montale-chocolate-greedy":
+        "Montale Chocolate Greedy Eau de Parfum (2008, Pierre Montale) — a gourmand chocolate: bitter orange and coffee over cocoa, tonka bean and dried fruits, on vanilla and musk.",
+      "perfume-desc-montale-dark-purple":
+        "Montale Dark Purple Eau de Parfum, 100ml (2013, Pierre Montale) — a fruity floral chypre: plum, blackcurrant and orange over Bulgarian rose and geranium, on patchouli, vanilla and amber.",
+      "perfume-desc-montale-intense-pepper":
+        "Montale Intense Pepper Eau de Parfum (Pierre Montale) — a spicy woody: black, pink and Sichuan pepper over saffron and incense, on oud, tonka bean, vanilla and amber.",
+      "perfume-desc-montale-intense-cafe":
+        "Montale Intense Cafe Eau de Parfum (2013, Pierre Montale) — a rose-coffee gourmand: coffee over Bulgarian rose and floral notes, on vanilla, amber and white musk.",
+      "perfume-desc-montale-intense-roses-musk":
+        "Montale Intense Roses Musk Extrait de Parfum (Pierre Montale) — a richer, extrait-strength version of Roses Musk: Moroccan rose and jasmine over amber, on white musk.",
+      "perfume-desc-montale-intense-tiare":
+        "Montale Intense Tiare Eau de Parfum, 100ml (2010, Pierre Montale) — a sunny tropical floral: bergamot and lemon over Tahitian tiaré (gardenia) and coconut, on vanilla and musk.",
+      "perfume-desc-montale-oudmazing":
+        "Montale Oudmazing Eau de Parfum (2017, Pierre Montale) — a spicy woody oud: saffron, cardamom and pink pepper over leather and Turkish rose, on oud, patchouli, amber and musk.",
+      "perfume-desc-montale-rose-elixir":
+        "Montale Rose Elixir Eau de Parfum (2010, Pierre Montale) — a radiant fruity rose: bergamot, mandarin and pink pepper over Turkish rose and lily-of-the-valley, on patchouli, white musk and vanilla.",
+      "perfume-desc-montale-santal-wood":
+        "Montale Santal Wood Eau de Parfum, 100ml (Pierre Montale) — a creamy woody: bergamot and spices over sandalwood and cedarwood, on vanilla, amber and musk.",
+      "perfume-desc-montale-soleil-de-capri":
+        "Montale Soleil de Capri Eau de Parfum (2014, Pierre Montale) — a bright summer citrus floral: bergamot, mandarin and orange over jasmine and tiaré, on coconut, vanilla, sandalwood and white musk.",
+      "perfume-desc-montale-starry-nights":
+        "Montale Starry Nights Eau de Parfum (2017, Pierre Montale) — a fruity floral: bergamot, apple and black pepper over Turkish rose and iris, on patchouli, vanilla, white musk and woods.",
+      "perfume-desc-montale-sweet-vanilla":
+        "Montale Sweet Vanilla Eau de Parfum (Pierre Montale) — a sweet gourmand vanilla: bergamot and almond over orange blossom and caramel, on Madagascar vanilla, tonka bean and white musk.",
+      "perfume-desc-montale-vanilla-extasy":
+        "Montale Vanilla Extasy Eau de Parfum, 100ml (2008, Pierre Montale) — a floral vanilla: orange and bergamot over jasmine and violet, on Madagascar vanilla and white musk.",
+      "perfume-desc-montale-vanille-absolu":
+        "Montale Vanille Absolu Eau de Parfum (2006, Pierre Montale) — a dark, smoky vanilla: bergamot over vanilla and spices, on oud, patchouli and white musk.",
+      "perfume-desc-montale-white-musk":
+        "Montale White Musk Eau de Parfum, 100ml (Pierre Montale) — a clean powdery musk: white flowers and rose over iris, on white musk and amber.",
+      "perfume-desc-montale-wood-spices":
+        "Montale Wood & Spices Eau de Parfum (Pierre Montale) — a warm spicy woody: cardamom, ginger and cinnamon over cedarwood and vetiver, on oud, sandalwood, amber and musk.",
+      "perfume-desc-montale-sweet-peony":
+        "Montale Sweet Peony Eau de Parfum (Pierre Montale) — a soft fruity floral: lychee and pink pepper over peony and rose, on vanilla, white musk and woods.",
+      "perfume-desc-montale-oud-dream":
+        "Montale Oud Dream Eau de Parfum (Pierre Montale) — a smooth woody oud: bergamot and saffron over rose and jasmine, on oud, sandalwood, vanilla and amber.",
+      "perfume-desc-montale-sensual-instinct":
+        "Montale Sensual Instinct Eau de Parfum (Pierre Montale) — a warm amber floral: pink pepper and red fruits over rose and jasmine, on vanilla, benzoin, amber and white musk.",
+      "perfume-desc-montale-arabians-tonka":
+        "Montale Arabians Tonka Eau de Parfum, 100ml (2019, Pierre Montale) — a rich oriental gourmand: saffron and bergamot over Bulgarian rose and oud, on tonka bean, amber, sugar and white musk.",
+      "perfume-desc-montale-oud-tobacco":
+        "Montale Oud Tobacco Eau de Parfum (Pierre Montale) — a smoky woody: spices and dried fruits over tobacco leaf and incense, on oud, vanilla, amber and leather.",
+      "perfume-desc-tiziana-terenzi-ursa":
+        "Tiziana Terenzi Ursa Extrait de Parfum, 100ml (Luna collection, Paolo Terenzi) — a fresh green floral: bergamot, lemon and green notes over jasmine, lily-of-the-valley and rose, on cedarwood, white musk and amber.",
+      "perfume-desc-tiziana-terenzi-al-contrario":
+        "Tiziana Terenzi Al Contrario Extrait de Parfum, 50ml (2015, Paolo Terenzi) — a woody gourmand about the journey home: cocoa beans, malt and ebony wood over vanilla, orchid and tonka bean, on cane sugar, hazelnut, sandalwood and benzoin.",
+      "perfume-desc-tiziana-terenzi-cassiopea":
+        "Tiziana Terenzi Cassiopea Extrait de Parfum, 100ml (Luna collection, Paolo Terenzi) — a fruity amber: blackberry, blackcurrant and plum over rose and jasmine, on vanilla, patchouli, amber and musk.",
+      "perfume-desc-tiziana-terenzi-draco":
+        "Tiziana Terenzi Draco Extrait de Parfum, 100ml (Luna collection, Paolo Terenzi) — a fruity gourmand: peach, pear, plum and almond over jasmine and rose, on vanilla, praline, cedarwood and musk.",
+      "perfume-desc-tiziana-terenzi-orion":
+        "Tiziana Terenzi Orion Extrait de Parfum, 100ml (Luna collection, Paolo Terenzi) — a woody fruity: bergamot, mandarin and fruits over jasmine and orange blossom, on sandalwood, vetiver, amber and musk.",
+      "perfume-desc-tiziana-terenzi-andromeda":
+        "Tiziana Terenzi Andromeda Extrait de Parfum, 100ml (Luna collection, Paolo Terenzi) — a soft floral gourmand: bergamot, cut grass and ylang-ylang over lily, Damask rose, pear nectar, heliotrope and peach, on coconut, amber, vanilla, cashmere, ebony, tonka bean and powdered sugar.",
+      "perfume-desc-tiziana-terenzi-andromeda-body-lotion":
+        "Tiziana Terenzi Andromeda Parfum Body Lotion, 250ml — a nourishing body lotion with shea butter, almond oil and vitamin E, scented with Andromeda: bergamot and ylang-ylang over lily, rose and pear, on vanilla, amber and tonka bean.",
+      "perfume-desc-tiziana-terenzi-kirke":
+        "Tiziana Terenzi Kirke Extrait de Parfum, 100ml (2015, Paolo Terenzi) — a juicy fruity musk: passion fruit, peach, raspberry, blackcurrant and pear over lily-of-the-valley, on sandalwood, musk, vanilla, patchouli and heliotrope.",
+      "perfume-desc-tiziana-terenzi-borea":
+        "Tiziana Terenzi Borea Extrait de Parfum, 100ml (Paolo Terenzi) — named after the northern wind, a fresh aromatic woody: bergamot, mandarin and juniper over lavender and herbs, on vetiver, cedarwood, amber and musk.",
+      "perfume-desc-tiziana-terenzi-spirito-fiorentino":
+        "Tiziana Terenzi Spirito Fiorentino Extrait de Parfum, 100ml (Paolo Terenzi) — a tribute to Florence, a fruity floral: blackcurrant, bergamot and berries over rose and jasmine, on patchouli, vanilla, amber and musk.",
+      "perfume-desc-xerjoff-casamorati-regio":
+        "Xerjoff Casamorati Regio Eau de Parfum, 100ml (Casamorati 1888 collection) — a regal aromatic woody: bergamot, mandarin and spices over iris and floral notes, on sandalwood, amber, vanilla and musk.",
+      "perfume-desc-xerjoff-casamorati-bouquet-ideale":
+        "Xerjoff Casamorati Bouquet Ideale Eau de Parfum (Casamorati 1888 collection) — a sweet fruity floral: raspberry, blackcurrant and bergamot over Bulgarian rose, jasmine and heliotrope, on vanilla, tonka bean, amber and musk.",
+      "perfume-desc-xerjoff-casamorati-1888":
+        "Xerjoff Casamorati 1888 Eau de Parfum, 100ml (Casamorati 1888 collection) — a warm spicy oriental: bergamot, mandarin and cinnamon over cardamom, jasmine and rose, on sandalwood, vanilla, amber and musk.",
+      "perfume-desc-xerjoff-casamorati-dama-bianca":
+        "Xerjoff Casamorati Dama Bianca Eau de Parfum (Casamorati 1888 collection) — an elegant powdery floral: bergamot and mandarin over orange blossom, jasmine and iris, on vanilla, sandalwood, amber and musk.",
+      "perfume-desc-xerjoff-casamorati-fiero":
+        "Xerjoff Casamorati Fiero Eau de Parfum, 100ml (Casamorati 1888 collection) — a fresh aromatic fougère: bergamot, grapefruit and green notes over lavender and geranium, on vetiver, cedarwood, amber and musk.",
+      "perfume-desc-xerjoff-casamorati-fiore-d-ulivo":
+        "Xerjoff Casamorati Fiore d'Ulivo Eau de Parfum, 100ml (Casamorati 1888 collection) — a sunny Mediterranean floral: bergamot, lemon and pink pepper over olive blossom, jasmine and rose, on sandalwood, amber, vanilla and musk.",
+      "perfume-desc-xerjoff-casamorati-gran-ballo":
+        "Xerjoff Casamorati Gran Ballo Eau de Parfum, 100ml (Casamorati 1888 collection) — inspired by a grand Viennese ball, a fruity floral: bergamot, orange and pear over jasmine, rose and orange blossom, on vanilla, sandalwood and musk.",
+      "perfume-desc-xerjoff-casamorati-la-tosca":
+        "Xerjoff Casamorati La Tosca Eau de Parfum (Casamorati 1888 collection) — a tribute to Puccini's opera, a fruity floral gourmand: bergamot and mandarin over Bulgarian rose and jasmine, on vanilla, almond, amber and musk.",
+      "perfume-desc-xerjoff-casamorati-lira":
+        "Xerjoff Casamorati Lira Eau de Parfum, 100ml (Casamorati 1888 collection) — a caramel citrus gourmand: blood orange, bergamot and lavender over cinnamon, liquorice and jasmine, on caramel, vanilla and musk.",
+      "perfume-desc-xerjoff-casamorati-dolce-amalfi":
+        "Xerjoff Casamorati Dolce Amalfi Eau de Parfum (Casamorati 1888 collection) — a sweet sunny floral of the Amalfi coast: bergamot, lemon and mandarin over orange blossom, jasmine and rose, on vanilla, amber, sandalwood and musk.",
+      "perfume-desc-jhag-mmmm":
+        "Juliette Has A Gun Mmmm... Eau de Parfum, 100ml — a playful gourmand: jasmine and blackcurrant over vanilla, on caramel and musk.",
+      "perfume-desc-jhag-another-oud":
+        "Juliette Has A Gun Another Oud Eau de Parfum, 100ml (2019, Romano Ricci) — a light, unconventional oud: raspberry and pink pepper over Turkish rose, on synthetic oud, ambroxan and musk.",
+      "perfume-desc-jhag-sunny-side-up":
+        "Juliette Has A Gun Sunny Side Up Eau de Parfum, 100ml (2017, Romano Ricci) — a creamy solar woody: sandalwood and ambrette over coconut milk, vanilla and clean musk.",
+      "perfume-desc-jhag-vanilla-vibes":
+        "Juliette Has A Gun Vanilla Vibes Eau de Parfum, 100ml (2018, Romano Ricci) — a salty beach vanilla: sea salt and orchid over Tahitian vanilla, on tonka bean, benzoin and sandalwood.",
+      "perfume-desc-jhag-musc-invisible":
+        "Juliette Has A Gun Musc Invisible Eau de Parfum, 100ml (2019, Romano Ricci) — a soft skin musk: bergamot and pink pepper over jasmine and lily-of-the-valley, on white musk and ambrette.",
+      "perfume-desc-bond-no9-lafayette-street":
+        "Bond No.9 Lafayette Street Eau de Parfum, 100ml — an urban spicy woody: bergamot and spices over leather, tobacco and floral notes, on oud, sandalwood, amber and musk.",
+      "perfume-desc-bond-no9-tribeca":
+        "Bond No.9 Tribeca Eau de Parfum, 100ml (2014) — a sweet oriental gourmand: bergamot and violet over heliotrope, praline and tonka, on vanilla, sandalwood and musk.",
+      "perfume-desc-shiseido-fslx-cleansing-foam":
+        "Shiseido Future Solution LX Extra Rich Cleansing Foam, 125ml — a luxurious, creamy foam that gently removes impurities while keeping skin soft and moist, the first step of the Future Solution LX ritual.",
+      "perfume-desc-shiseido-fslx-eye-lip-cream":
+        "Shiseido Future Solution LX Eye and Lip Contour Regenerating Cream, 17ml — a rich regenerating cream for the delicate eye and lip areas that visibly smooths wrinkles, firms and brightens.",
+      "perfume-desc-shiseido-fslx-total-protective-cream":
+        "Shiseido Future Solution LX Total Protective Cream SPF30, 50ml — a luxurious day cream that hydrates, firms and protects from UV and daily environmental damage for radiant, youthful-looking skin.",
+      "perfume-desc-shiseido-fslx-total-regenerating-cream":
+        "Shiseido Future Solution LX Total Regenerating Cream, 50ml — a rich night cream that works while you sleep to regenerate, firm and smooth, revealing radiant, resilient skin by morning.",
+      "perfume-desc-shiseido-fslx-brightening-softener":
+        "Shiseido Future Solution LX Concentrated Brightening Softener, 150ml — a silky softening lotion that deeply hydrates, refines texture and preps skin for the treatments that follow.",
+      "perfume-desc-shiseido-legendary-enmei-cream":
+        "Shiseido Future Solution LX Legendary Enmei Ultimate Renewing Cream, 50ml — Shiseido's most prestigious cream, with rare Enmei herb, that visibly renews, firms and brings deep, lasting radiance.",
+      "perfume-desc-shiseido-legendary-enmei-serum":
+        "Shiseido Future Solution LX Legendary Enmei Ultimate Luminance Serum, 30ml — a prestigious serum with Enmei herb that visibly firms, smooths and gives skin an inner luminance.",
+      "perfume-desc-shiseido-legendary-enmei-eye-cream":
+        "Shiseido Future Solution LX Legendary Enmei Ultimate Radiance Eye Cream, 15ml — a luxurious eye cream that visibly reduces wrinkles, dark circles and puffiness for a bright, lifted eye area.",
+      "perfume-desc-shiseido-vp-advanced-cream":
+        "Shiseido Vital Perfection Uplifting and Firming Advanced Cream, 50ml — a lifting and firming cream that visibly smooths wrinkles, reduces dark spots and redefines facial contours. Choose your texture: Advanced Cream, Soft or Enriched.",
+      "perfume-desc-shiseido-vp-day-cream-spf30":
+        "Shiseido Vital Perfection Uplifting and Firming Advanced Day Cream SPF30, 50ml — a lifting, firming day cream that targets wrinkles and dark spots while protecting skin from UV damage.",
+      "perfume-desc-shiseido-vp-eye-cream":
+        "Shiseido Vital Perfection Uplifting and Firming Advanced Eye Cream, 15ml — an eye cream that visibly lifts, firms and reduces wrinkles and dark circles around the eyes.",
+      "perfume-desc-shiseido-vp-wrinklespot-treatment":
+        "Shiseido Vital Perfection Intensive WrinkleSpot Treatment, 20ml — a targeted treatment that visibly reduces deep wrinkles and dark spots for smoother, more even-toned skin.",
+      "perfume-desc-shiseido-vp-overnight-firming-treatment":
+        "Shiseido Vital Perfection Overnight Firming Treatment, 50ml — a night gel-cream that works with skin's overnight renewal to firm, lift and restore radiance by morning.",
+      "perfume-desc-shiseido-vp-concentrated-supreme-cream":
+        "Shiseido Vital Perfection Concentrated Supreme Cream, 50ml — an ultra-rich, concentrated cream that intensely nourishes, firms and visibly lifts mature skin.",
+      "perfume-desc-shiseido-bop-micro-click-concentrate":
+        "Shiseido Bio-Performance Micro-Click Concentrate, 1.4ml — an at-home micro-needle-inspired treatment that delivers concentrated actives to visibly plump and smooth deep wrinkles.",
+      "perfume-desc-shiseido-bop-skin-hiforce-cream":
+        "Shiseido Bio-Performance Skin HiForce Cream, 50ml — a high-performance firming cream that visibly smooths wrinkles, firms and restores radiance and bounce.",
+      "perfume-desc-shiseido-bop-super-revitalizing-cream":
+        "Shiseido Bio-Performance Advanced Super Revitalizing Cream — a rich revitalizing cream that visibly reduces wrinkles and restores firmness, smoothness and radiance.",
+      "perfume-desc-shiseido-ultimune-serum":
+        "Shiseido Ultimune Power Infusing Serum — Shiseido's iconic red serum that strengthens skin's defences, boosts hydration and leaves skin smooth, resilient and radiant.",
+      "perfume-desc-shiseido-ultimune-oil":
+        "Shiseido Ultimune Power Infusing Oil, 75ml — a lightweight, fast-absorbing face oil that nourishes, strengthens and gives skin a healthy, supple glow.",
+      "perfume-desc-shiseido-ultimune-hand-cream":
+        "Shiseido Ultimune Power Infusing Hand Cream, 50ml — a nourishing hand cream that hydrates, softens and protects hands from daily dryness.",
+      "perfume-desc-shiseido-ultimune-future-power-shot":
+        "Shiseido Ultimune Future Power Shot, 15ml — an intensive serum with 15x the concentration of Ultimune's key ingredients (reishi mushroom, iris root, tsubaki seed) for smoother, more radiant, resilient skin; use twice a week.",
+      "perfume-desc-shiseido-men-total-revitalizer-cream":
+        "Shiseido Men Total Revitalizer Cream, 50ml — an anti-ageing cream for men that hydrates, firms and visibly reduces wrinkles and signs of fatigue.",
+      "perfume-desc-shiseido-men-total-revitalizer-eye":
+        "Shiseido Men Total Revitalizer Eye, 15ml — an eye cream for men that reduces the look of dark circles, puffiness and wrinkles.",
+      "perfume-desc-shiseido-men-total-revitalizer-light-fluid":
+        "Shiseido Men Total Revitalizer Light Fluid, 70ml — a lightweight anti-ageing fluid for men that hydrates, firms and energises skin without shine.",
+      "perfume-desc-shiseido-men-skin-empowering-cream":
+        "Shiseido Men Skin Empowering Cream, 50ml — a strengthening anti-wrinkle cream for men that firms, energises and restores skin's vitality.",
+      "perfume-desc-shiseido-refreshing-cleansing-water":
+        "Shiseido Refreshing Cleansing Water, 180ml — a gentle micellar-style cleansing water that removes makeup and impurities, leaving skin fresh and comfortable.",
+      "perfume-desc-shiseido-complete-cleansing-microfoam":
+        "Shiseido Complete Cleansing Microfoam, 180ml — a fine, dense micro-foam that removes makeup and impurities in one step, leaving skin clean and soft.",
+      "perfume-desc-shiseido-benefiance-contour-serum":
+        "Shiseido Benefiance Wrinkle Smoothing Contour Serum, 30ml — a serum that visibly smooths wrinkles and redefines facial contours for firmer, more youthful-looking skin.",
+      "perfume-desc-shiseido-benefiance-eye-cream":
+        "Shiseido Benefiance Wrinkle Smoothing Eye Cream, 15ml — a rich eye cream that visibly smooths wrinkles and fine lines and hydrates the delicate eye area.",
+      "perfume-desc-shiseido-eudermine-activating-essence":
+        "Shiseido Eudermine Activating Essence, 145ml — Shiseido's legendary red lotion (since 1897) that hydrates, softens and preps skin for the rest of the routine.",
+      "perfume-desc-shiseido-eye-lip-makeup-remover":
+        "Shiseido Instant Eye and Lip Makeup Remover, 125ml — a bi-phase remover that quickly dissolves waterproof eye and lip makeup without rubbing.",
+      "perfume-desc-shiseido-clear-sun-stick-spf50":
+        "Shiseido Expert Sun Protector Clear Stick SPF50+, 20g — a transparent, invisible sunscreen stick for face and body, water-resistant and easy to apply on the go.",
+      "perfume-desc-shiseido-expert-sun-lotion-spf50":
+        "Shiseido Expert Sun Protector Lotion SPF50+, 150ml — a very high protection face and body lotion that becomes more effective on contact with water and heat.",
+      "perfume-desc-shiseido-expert-sun-cream-spf50":
+        "Shiseido Expert Sun Protector Cream SPF50+, 50ml — a very high protection face cream, water-resistant and suitable for daily wear and outdoor activities.",
+      "perfume-desc-shiseido-expert-sun-lotion-spf30":
+        "Shiseido Expert Sun Protector Lotion SPF30, 150ml — a high protection face and body lotion that becomes more effective on contact with water and heat.",
+      "perfume-desc-shiseido-zen-essence":
+        "Shiseido Zen Essence Eau de Parfum — a serene floral woody from the Zen line: fresh citrus and bright florals over a soft, meditative heart, on warm woods and musk.",
+      "perfume-desc-shiseido-ginza-datura":
+        "Shiseido Ginza Datura Eau de Parfum — a mysterious white floral inspired by Tokyo's Ginza district at dusk: datura and jasmine over creamy woods and soft musk.",
+      "perfume-desc-shiseido-ginza-intense":
+        "Shiseido Ginza Intense Eau de Parfum — a deeper, warmer version of Ginza: pink pepper and pomegranate over jasmine, orchid and magnolia, on hinoki wood, sandalwood and patchouli.",
+      "perfume-desc-shiseido-ginza-night-intense":
+        "Shiseido Ginza Night Eau de Parfum Intense — the nocturnal side of Ginza: a dark, sensual floral of black pepper and jasmine over orchid, on vanilla, patchouli and woods.",
+      "perfume-desc-shiseido-synchro-skin-radiant-lifting-foundation":
+        "Shiseido Synchro Skin Radiant Lifting Foundation SPF30, 30ml. Choose your shade — a hydrating, medium-to-full buildable coverage foundation with Light-Adjusting Technology for a luminous, lifted finish, 24-hour wear and hydration.",
+      "perfume-desc-shiseido-synchro-skin-self-refreshing-foundation":
+        "Shiseido Synchro Skin Self-Refreshing Foundation SPF30, 30ml. Choose your shade — a long-wearing, medium buildable coverage foundation with a natural satin finish that stays fresh for 24 hours and resists heat, humidity and sweat.",
+      "perfume-desc-shiseido-revitalessence-skin-glow-foundation":
+        "Shiseido Revitalessence Skin Glow Foundation SPF30, 30ml. Choose your shade — a lightweight, skincare-infused foundation with light-to-medium buildable coverage and a fresh, dewy glow that visibly improves skin over time.",
+      "perfume-desc-shiseido-technosatin-gel-lipstick":
+        "Shiseido Technosatin Gel Lipstick, 3.3g. Choose your shade — a high-impact, satin-finish gel lipstick with full colour in one swipe, a comfortable cushiony feel and long-lasting hydration.",
+      "perfume-desc-shiseido-controlledchaos-mascaraink":
+        "Shiseido ControlledChaos MascaraInk, 11.5ml. Choose your shade — a volumising mascara with a dual-sided brush for dramatic volume and length with precise, smudge-proof definition.",
+      "perfume-desc-shiseido-sports-bb":
+        "Shiseido Sports BB SPF50+, 30ml. Choose your shade — a sweat- and water-resistant BB cream with WetForce technology that evens skin tone with light coverage while giving very high sun protection.",
+      "perfume-desc-shiseido-sports-bb-compact":
+        "Shiseido Sports BB Compact SPF50+, 12g. Choose your shade — a cushion-style BB compact with WetForce technology for sweat- and water-resistant coverage and very high sun protection on the go.",
+      "perfume-desc-bond-no9-sutton-place":
+        "Bond No.9 Sutton Place Eau de Parfum, 100ml (2015) — an elegant chypre named after Manhattan's riverside enclave: bergamot, black pepper and grapefruit over rose, freesia and iris, on patchouli, leather and musk.",
+      "perfume-desc-shiseido-lipliner-inkduo":
+        "Shiseido LipLiner InkDuo (Prime + Line), 1.1g. Choose your shade — a 2-in-1 lip primer and liner: one end smooths and preps lips, the other defines with long-wearing, transfer-resistant colour.",
+      "perfume-desc-shiseido-benefiance-overnight-cream":
+        "Shiseido Benefiance Overnight Wrinkle Resisting Cream, 50ml — a rich night cream that works while you sleep to visibly reduce wrinkles and restore firmness and hydration by morning.",
+      "perfume-desc-shiseido-synchro-skin-soft-blurring-primer":
+        "Shiseido Synchro Skin Soft Blurring Primer, 30ml — a lightweight primer that blurs pores and fine lines, controls shine and helps makeup last all day.",
+      "perfume-desc-shiseido-vp-liftdefine-mask":
+        "Shiseido Vital Perfection LiftDefine Radiance Face Mask, 6 pairs — two-piece sheet masks that visibly lift, firm and brighten the face in 10 minutes.",
+      "perfume-desc-shiseido-ginza":
+        "Shiseido Ginza Eau de Parfum (2021) — a floral chypre inspired by Tokyo's Ginza district: pink pepper and pomegranate over jasmine, orchid and magnolia, on hinoki wood, sandalwood and patchouli.",
+      "perfume-desc-shiseido-ginza-body-lotion":
+        "Shiseido Ginza Perfumed Body Lotion, 200ml — a lightweight, moisturising body lotion scented with Ginza's floral chypre of jasmine, magnolia and hinoki wood.",
+      "perfume-desc-shiseido-ginza-murasaki":
+        "Shiseido Ginza Murasaki Eau de Parfum (2023) — a deep, luminous floral: violet leaf and fruity notes over jasmine and orchid, on hinoki wood, patchouli and musk.",
+      "perfume-desc-shiseido-zen":
+        "Shiseido Zen Eau de Parfum (2007) — a serene floral oriental: bergamot and freesia over lotus, jasmine and peony, on amber, sandalwood and musk.",
+      "perfume-desc-shiseido-men-face-cleanser":
+        "Shiseido Men Face Cleanser, 125ml — a rich, foaming cleanser for men that removes dirt and excess oil while keeping skin comfortable and hydrated.",
+      "perfume-desc-shiseido-men-energizing-moisturizer-fluid":
+        "Shiseido Men Energizing Moisturizer Extra Light Fluid, 100ml — an ultra-light, oil-free fluid that hydrates, controls shine and energises tired skin.",
+      "perfume-desc-shiseido-microliner-ink":
+        "Shiseido MicroLiner Ink, 0.08g. Choose your shade — an ultra-fine eyeliner pencil with an ink-like formula for precise, smudge-proof and waterproof definition.",
+      "perfume-desc-shiseido-waso-gel-to-oil-cleanser":
+        "Shiseido Waso Shikulime Gel-to-Oil Cleanser, 125ml — a 2-in-1 cleanser that starts as a cushiony gel and turns into a silky oil to remove impurities and waterproof makeup without drying skin.",
+      "perfume-desc-shiseido-waso-yuzu-c-sleeping-mask":
+        "Shiseido Waso Yuzu-C Beauty Sleeping Mask, 50ml — an overnight gel mask with vitamin C-rich yuzu that brightens, hydrates and revives dull skin by morning.",
+      "perfume-desc-shiseido-waso-color-control-moisturizer":
+        "Shiseido Waso Shikulime Color Control Oil-Free Moisturizer SPF30, 50ml — a tinted, oil-free moisturiser that evens skin tone, controls shine and protects from UV.",
+      "perfume-desc-shiseido-waso-mega-hydrating-moisturizer":
+        "Shiseido Waso Shikulime Mega Hydrating Moisturizer, 50ml — a rich gel-cream that floods skin with long-lasting moisture and supports its barrier.",
+      "perfume-desc-shiseido-ee-hydrating-cream":
+        "Shiseido Essential Energy Hydrating Cream, 50ml — a light, refreshing cream that delivers 48-hour hydration and restores skin's energy and radiance.",
+      "perfume-desc-shiseido-ee-hydrating-day-cream-spf20":
+        "Shiseido Essential Energy Hydrating Day Cream SPF20, 50ml — a moisturising day cream that hydrates, energises and protects skin from UV.",
+      "perfume-desc-shiseido-bop-skin-filler":
+        "Shiseido Bio-Performance Skin Filler, 2 x 30ml — a two-step serum duo that visibly fills and plumps wrinkles from within for smoother, fuller-looking skin.",
+      "perfume-desc-shiseido-clarifying-cleansing-foam":
+        "Shiseido Clarifying Cleansing Foam, 125ml — a rich, creamy foam that removes excess oil and impurities for clear, refreshed skin.",
+      "perfume-desc-shiseido-extra-rich-cleansing-milk":
+        "Shiseido Extra Rich Cleansing Milk, 125ml — a rich, creamy cleansing milk that gently removes makeup and impurities, ideal for dry skin.",
+      "perfume-desc-shiseido-deep-cleansing-foam":
+        "Shiseido Deep Cleansing Foam, 125ml — a dense foam that deeply cleanses pores and removes excess sebum, ideal for oily skin.",
+      "perfume-desc-shiseido-treatment-softener":
+        "Shiseido Treatment Softener, 150ml — a hydrating softening lotion that preps skin to absorb the treatments that follow. Choose your texture: Treatment Softener or Enriched.",
+      "perfume-desc-shiseido-revitalizing-treatment-softener":
+        "Shiseido Revitalizing Treatment Softener, 150ml — a rich, all-in-one softener with Kirishima mineral spring water that gives 24-hour hydration and helps fight the signs of ageing.",
+      "perfume-desc-shiseido-benefiance-day-cream-spf25":
+        "Shiseido Benefiance Wrinkle Smoothing Day Cream SPF25, 50ml — a day cream that visibly smooths wrinkles, hydrates and protects skin from UV.",
+      "perfume-desc-shiseido-benefiance-wrinkle-smoothing-cream":
+        "Shiseido Benefiance Wrinkle Smoothing Cream, 50ml — a cream that visibly reduces wrinkles and restores firmness and hydration. Choose your texture: Cream or Enriched.",
+      "perfume-desc-shiseido-fslx-total-radiance-foundation":
+        "Shiseido Future Solution LX Total Radiance Foundation SPF20, 30ml. Choose your shade — a luxurious cream foundation that gives natural coverage and radiance while caring for skin like an anti-ageing cream.",
+      "perfume-desc-shiseido-maru-fude-brush":
+        "Shiseido Maru Fude Multi Face Brush — a dense, rounded brush inspired by Japanese calligraphy for seamless application of powder, liquid or cream products.",
+      "perfume-desc-shiseido-naname-fude-brush":
+        "Shiseido Naname Fude Multi Eye Brush — an angled brush for precise application and blending of eyeshadow and liner.",
+      "perfume-desc-shiseido-hasu-fude-brush":
+        "Shiseido Hasu Fude Foundation Brush — a flat, lotus-leaf-shaped brush for smooth, streak-free foundation application.",
+      "perfume-desc-shiseido-daiya-fude-brush":
+        "Shiseido Daiya Fude Face Duo — a dual-ended brush with a dense end for contouring and a soft end for blending powders.",
+      "perfume-desc-shiseido-tsutsu-fude-brush":
+        "Shiseido Tsutsu Fude Concealer Brush — a small, dense brush for precise concealer application and flawless blending.",
+      "perfume-desc-shiseido-hanatsubaki-hake-brush":
+        "Shiseido Hanatsubaki Hake Polishing Face Brush — a camellia-shaped brush with petal-like bristle clusters that buffs foundation and powder to a polished finish.",
+      "perfume-desc-shiseido-colorgel-lipbalm":
+        "Shiseido ColorGel LipBalm, 2g. Choose your shade — a tinted lip balm with sheer, buildable colour and 8-hour hydration for soft, healthy-looking lips.",
+      "perfume-desc-shiseido-synchro-skin-powder-foundation":
+        "Shiseido Synchro Skin Self-Refreshing Custom Finish Powder Foundation, 9g. Choose your shade — a long-wearing powder foundation that can be applied dry for a matte finish or wet for more coverage, staying fresh all day.",
+      "perfume-desc-shiseido-benefiance-nutriperfect-day-cream":
+        "Shiseido Benefiance NutriPerfect Day Cream SPF15, 50ml — a nourishing day cream for mature skin that restores density, firmness and radiance while protecting from UV.",
+      "perfume-desc-shiseido-benefiance-nutriperfect-night-cream":
+        "Shiseido Benefiance NutriPerfect Night Cream, 50ml — a rich night cream for mature skin that nourishes, firms and revitalises while you sleep.",
+      "perfume-desc-shiseido-archliner-ink":
+        "Shiseido ArchLiner Ink, 0.4ml, shade 01 Shibui Black — a liquid eyeliner with a flexible, arched tip for precise lines and wings, waterproof and smudge-proof.",
+      "perfume-desc-shiseido-brow-inktrio":
+        "Shiseido Brow InkTrio, 0.31g. Choose your shade — a 3-in-1 brow tool with a precision pencil, a powder and a spoolie to define, fill and set brows.",
+      "perfume-desc-shiseido-imperiallash-mascaraink":
+        "Shiseido ImperialLash MascaraInk, 8.5g, shade 01 Sumi Black — a lengthening, volumising mascara with a dual-sided brush for dramatic, separated lashes.",
       "perfume-desc-diesel":
         "S\u00fcdliches Orient-Holz mit Sternanis und Mandarine \u00fcber S\u00fc\u00dfholz und Vanille.",
-      "perfume-desc-dkny":
-        "Erfrischend floral-fruchtig mit gr\u00fcnem Apfel und Gurke auf Magnolie und Sandelholz.",
-      "perfume-desc-juliet":
-        "Floral-gourmand mit Himbeere und Iris \u00fcber Vanille und Sandelholz.",
-      "perfume-desc-prada":
-        "Amber-Gourmand mit wei\u00dfem Moschus und Benzoe \u00fcber reiner Karamellbasis.",
-      "perfume-desc-roberto":
-        "Provokanter Floralduft mit Neroli und Tiar\u00e9 auf Palisander-Rosenholz.",
       "perfume-desc-valentino":
         "Modern amber-floral mit Cassis und Jasmin-Trio \u00fcber Bourbon-Vanille.",
-      "perfume-desc-thierry":
-        "Lebendig amber-floral mit Himbeere und Rose \u00fcber Akigalawood.",
-      "perfume-desc-ralph":
-        "Aromatisch-aquatisch mit Melone und Gurke auf Wildleder-Basis.",
-      "perfume-desc-montale":
-        "Holzig-floral mit pakistanischem Oud und Limette \u00fcber Rose und Patchouli.",
       "perfume-desc-viktor":
         "Amber-floral mit Cattleya-Orchidee und Rose \u00fcber Patchouli und Vanille.",
-      "perfume-desc-yves":
-        "Aromatisch-holzig mit gr\u00fcnem Apfel und Salbei \u00fcber Amberwood und Tonkabohne.",
       "chocolate-desc-tog":
         "Eine reichhaltige, kuratierte Reise durch unsere feinsten Aromen. Diese Kollektion vereint tiefe dunkle Schokoladencremes und samtige Milchschokoladen-Texturen in perfekter Harmonie \u2013 geschaffen, um ein St\u00fcck kosovarischer Geschichte und nationaler Essenz zu teilen.",
       "chocolate-desc-tog1":
@@ -565,7 +4932,7 @@
       "extra-checkout-payment-sending":
         "Zahlung best\u00e4tigt. Ihre Bestellung wird gesendet\u2026",
       "extra-checkout-payment-sent":
-        "Zahlung abgeschlossen. Ihre Bestelldetails wurden an die Hotelrezeption gesendet.",
+        "Zahlung abgeschlossen. Ihre Bestelldetails wurden an die Hotelrezeption gesendet. Bitte rechnen Sie mit bis zu 30 Minuten f\u00fcr die Lieferung auf Ihr Zimmer.",
       "extra-checkout-payment-email-fail":
         "Zahlung abgeschlossen, aber die Bestelldetails konnten nicht automatisch gesendet werden. Bitte schreiben Sie an {email}.",
       "extra-form-sending": "Wird gesendet\u2026",
@@ -650,18 +5017,897 @@
         "Pullover \u2014 professionelles Waschen und B\u00fcgeln oder nur B\u00fcgeln, zur\u00fcck auf Ihr Zimmer.",
       "laundry-desc-jacket":
         "Jacke \u2014 professionelles Waschen und B\u00fcgeln oder nur B\u00fcgeln, zur\u00fcck auf Ihr Zimmer.",
-      "perfume-name-armani": "Giorgio Armani",
+      "perfume-name-armani": "ARMANI ACQUA DI GIOIA F.EDP",
+      "perfume-name-cacharel": "CACHAREL AMOR AMOR EDT VAPO F",
+      "perfume-name-armani-code": "ARMANI CODE FEME EDP",
+      "perfume-name-lancome": "LANCOME LA VIE EST BELLE EDP",
+      "perfume-name-mon-paris": "YVES SAINT LAU MON PARIS EDP",
+      "perfume-name-black-opium": "YVES SAINT LAU BLACK OPIUM",
+      "perfume-name-diesel-brave": "DIESEL ONLY THE BRAVE MEN EDT",
+      "perfume-name-lhomme-nuit": "YVES SAINT LAU L'HOMME NUIT LE PARFUM VAPO",
+      "perfume-name-armani-babel-he": "ARMANI EMPORIO BABEL HE EDT",
+      "perfume-name-y-edp": "YVES SAINT LAU Y EDP",
+      "perfume-name-libre-edt": "YVES SAINT LAU LIBRE EDT",
+      "perfume-name-valentino-voce-viva": "VALENTINO VOCE VIVA EAU DE PARFUM",
+      "perfume-name-valentino-donna": "VALENTINO BORN IN ROMA DONNA EAU DE PARFUM",
+      "perfume-name-libre-edp-intense": "YVES SAINT LAU LIBRE EDP INTENSE",
+      "perfume-name-valentino-donna-yellow": "VALENTINO BORN IN ROMA DONNA YELLOW DREAM EAU DE PARFUM",
+      "perfume-name-armani-my-way": "ARMANI MY WAY EDP",
+      "perfume-name-lancome-idole": "LANCOME IDOLE EDP",
+      "perfume-name-armani-in-love-with-you": "ARMANI EMPORIO IN LOVE WITH YOU EDP",
+      "perfume-name-prada-luna-rossa-carbon": "PRADA LUNA ROSSA CARBON EDT",
+      "perfume-name-prada-luna-rossa-black": "PRADA LUNA ROSSA BLACK EDP",
+      "perfume-name-prada-lhomme": "PRADA L'HOMME EDT",
+      "perfume-name-prada-la-femme": "PRADA LA FEMME EDP",
+      "perfume-name-armani-si-passione": "ARMANI SI PASSIONE EDP",
+      "perfume-name-viktor-spicebomb-extreme": "SPB EXTREME EDP",
+      "perfume-name-viktor-bonbon": "BONBON EDP SPRAY",
+      "perfume-name-cacharel-noa": "CACHAREL NOA EDT",
+      "perfume-name-armani-acqua-gio-stick": "ARMANI ACQUA DI GIO H.STICK 75",
+      "perfume-name-armani-black-code-stick": "ARMANI BLACK CODE DEO STICK 75",
+      "perfume-name-armani-si-edp": "ARMANI SI EDP",
+      "perfume-name-diesel-brave-tattoo": "DIESEL ONLY THE BRAVE TATTOO EDT",
+      "perfume-name-lancome-lveb-body-milk": "LANCOME LVEB BODY MILK 200ML",
+      "perfume-name-lancome-tresor-edp": "LANCOME TRESOR EDP",
+      "perfume-name-biotherm-aqp-fresh-eyes": "BIOTHERM BIO AQS FRESH EYE 15ML",
+      "perfume-name-biotherm-aquafitness-shower-gel": "BIOTHERM BIO AQUAFITNESS SHOWER GEL T200",
+      "perfume-name-biotherm-aquapower-72h": "BIOTHERM BIO AQUAPOWER 72H POT 50ML",
+      "perfume-name-biotherm-biocils-waterproof": "BIOTHERM BIO BIOCILS WATERPROOF F100ML 2016",
+      "perfume-name-biotherm-blue-therapy-nuit": "BIOTHERM BIO BLUE THERAPY NUIT SPB 50ML",
+      "perfume-name-biotherm-blue-therapy-reno-serum": "BIOTHERM BIO BLUE THERAPY RENO SERUM FL50ML",
+      "perfume-name-biotherm-deo-pure-invisible": "BIOTHERM BIO DEO PURE INVISIBLE ROLL ON 48H 75ML",
+      "perfume-name-biotherm-lait-corporel-deo": "BIOTHERM BIO-LAIT CORPOREL DEO ROLL ON 75ML",
+      "perfume-name-biotherm-day-control-deo-72h": "BIOTHERM BIO DAY CONTROL DEO 72H ROLL ON 75ML",
+      "perfume-name-biotherm-day-control-ecocert": "BIOTHERM BIO DAY CONTROL ECOCERT ROLL ON 75ML",
+      "perfume-name-biotherm-deo-ato-men": "BIOTHERM BIO DEO ATO 150 ML MEN",
+      "perfume-name-biotherm-deo-pure-krem": "BIOTHERM BIO DEO PURE KREM 75 ML TUBE",
+      "perfume-name-biotherm-deo-pure-rollon": "BIOTHERM BIO DEO PURE ROLLON ON 75ML",
+      "perfume-name-biotherm-deo-pure-stick": "BIOTHERM DEO PURE STICK 24H ANTIPERSPIRANT STICK",
+      "perfume-name-biotherm-deo-rollon-man-pure": "BIOTHERM BIO DEO ROLL ON 75 ML MAN PURE",
+      "perfume-name-biotherm-deo-stick-man": "BIOTHERM BIO DEO STICK 50 ML MAN",
+      "perfume-name-biotherm-eau-vitaminee": "BIOTHERM BIO EAU VITAMINEE SPRAY 100ML",
+      "perfume-name-biotherm-fs-liquid-eyes": "BIOTHERM BIO FS LIQUID EYES",
+      "perfume-name-biotherm-lait-de-douche": "BIOTHERM BIO LAIT DE DOUCHE 200ML",
+      "perfume-name-biotherm-biosource-nett-pnm": "BIOTHERM BIO SOURCE NETT PNM T150ML",
+      "perfume-name-biotherm-biosource-eau-mic": "BIOTHERM BIOSOURCE EAU MIC TTP FL200ML",
+      "perfume-name-biotherm-biosource-gelee-nett": "BIOTHERM BIOSOURCE GELEE NETT EXF 150ML",
+      "perfume-name-biotherm-biosource-lot-adouc": "BIOTHERM BIOSOURCE LOT ADOUC PS FL200ML",
+      "perfume-name-biotherm-biosource-lotion-pnm": "BIOTHERM BIOSOURCE LOTION PNM 200 ML FL",
+      "perfume-name-lancome-effacernes": "LANCOME EFFACERNES 15ML",
+      "perfume-name-lancome-grandiose-01": "LANCOME GRANDIOSE 01",
+      "perfume-name-lancome-hypnose-clean-volume-01": "LANCOME HYPNOSE CLEAN VOLUME 01",
+      "perfume-name-lancome-bi-facil-125": "LANCOME LC BI FACIL EYES",
+      "perfume-name-lancome-galatee-confort-200": "LANCOME LC CONFORT GALATEE 200 ML",
+      "perfume-name-lancome-crayon-khol-noir": "LANCOME LC CRAYON KHOL NOIR",
+      "perfume-name-lancome-genifique-cream-50": "LANCOME LC GENEFIQUE ACT JEUNESSE CR P50ML",
+      "perfume-name-lancome-hypnose-doll-eyes-wp-01": "LANCOME LC HYPNOSE DOLL EYES MASCARA 01 6ML WP",
+      "perfume-name-lancome-hypnose-doll-eyes-01": "LANCOME LC HYPNOSE MASCARA DOLL EYES 01",
+      "perfume-name-lancome-creme-mousse-confort-125": "LANCOME LC PR CONFORT CR MOUSSE T 125ML",
+      "perfume-name-lancome-eau-micellaire-douceur-400": "LANCOME LC PR DOUCEUR EAU MIC FL P 400ML",
+      "perfume-name-lancome-renergie-multilift-night-50": "LANCOME LC RENER MPLIFT NIGHT 50ML",
+      "perfume-name-lancome-renergie-creme-50": "LANCOME LC RENERGIE CREME 50 ML POT",
+      "perfume-name-lancome-tonique-douceur-400": "LANCOME LC TONIQUE DOUCEUR 400 ML FLAC",
+      "perfume-name-ysl-mascara-mvefc-01": "YVES SAINT LAU YSL EYE MASCARA MVEFC 01 black",
+      "perfume-name-ysl-dessin-sourcils-02": "YVES SAINT LAURENT DESSIN DES SOURCILS EYEBROW PENCIL",
+      "perfume-name-ysl-mascara-vefc-wp-01": "YVES SAINT LAU YSL MASCARA VEFC WP 01",
+      "perfume-name-armani-babel-she-edp": "ARMANI EMPORIO BABEL SHE EDP",
+      "perfume-name-lancome-monsieur-big-01": "LANCOME Monsieur Big Mascara 01",
+      "perfume-name-biotherm-waterlover-spf30-200": "BIOTHERM BIO WATERLOVER SUN MILK SPF30 200M",
+      "perfume-name-biotherm-waterlover-spf50-200": "BIOTHERM BIO WATERLOVER SUN MILK SPF50 200M",
+      "perfume-name-biotherm-blue-therapy-big-eye-15": "BIOTHERM BIO BLUE THERAPY BIG EYE 16 5ML",
+      "perfume-name-ysl-touche-eclat-3": "YVES SAINT LAURENT TOUCHE ECLAT RADIANT TOUCH",
+      "perfume-name-ysl-primer-moisture-glow": "YVES SAINT LAU YSL PRIMER INSTANT MOISTURE GLOW",
+      "perfume-name-lancome-hydra-zen-spf15-50": "LANCOME LC HYDRAZEN CREME 50ML SPF15",
+      "perfume-name-lancome-absolu-plumper": "LANCOME L ABSOLU PLUMPER",
+      "perfume-name-lancome-teint-miracle": "LANCOME TEINT MIRACLE F P30ML",
+      "perfume-name-biotherm-lait-corporel-400": "BIOTHERM LAIT CORPOREL L'ORIGINAL",
+      "perfume-name-biotherm-rasage-sensitive-200": "BIOTHERM BIO RASAGE PX SENS 200 ML",
+      "perfume-name-biotherm-deo-pure-ecocert": "BIOTHERM BIO DEO PURE ECOCERT ROLL ON 75ML",
+      "perfume-name-viktor-spicebomb-edt": "VIKTOR&ROLF SPB EDT SPRAY",
+      "perfume-name-viktor-flowerbomb-nectar": "VIKTOR&ROLF FBB NECTAR EDP",
+      "perfume-name-biotherm-aquasource-serum-biphase-50": "BIOTHERM AQUASOURCE SERUM BIPHASE F50ML",
+      "perfume-name-biotherm-aquapower-cleanser": "BIOTHERM AQUAPOWER OLIGO-THERMAL FRESH ULTRA CLEANSER",
+      "perfume-name-lancome-hypnose": "LANCOME HYPNOSE MASCARA",
+      "perfume-name-lancome-cils-booster-xl": "LANCOME CILS BOOSTER XL ENHANCING LASH PRIMER",
+      "perfume-name-lancome-monsieur-big-wp-01": "LANCOME MONSIEUR BIG WATERPROOF MASCARA 01",
+      "perfume-name-lancome-loose-setting-powder": "LANCOME LOOSE SETTING POWDER TRANSLUCENT",
+      "perfume-name-lancome-setting-spray": "LANCOME SETTING SPRAY",
+      "perfume-name-lancome-blush-subtil": "LANCOME BLUSH SUBTIL",
+      "perfume-name-armani-ea-with-you-intensely": "ARMANI EMPORIO STRONGER WITH YOU INTENSELY EDP",
+      "perfume-name-prada-candy": "PRADA CANDY EDP",
+      "perfume-name-prada-la-femme-intense": "PRADA LA FEMME INTENSE EDP",
+      "perfume-name-prada-lhomme-intense": "PRADA L'HOMME INTENSE EDP",
+      "perfume-name-prada-lhomme-leau": "PRADA L'HOMME L'EAU EDT",
+      "perfume-name-biotherm-life-plankton-eye-15": "BIOTHERM LIFE PLANKTON EYE 15ML",
+      "perfume-name-biotherm-tpur-salty-gel-cleanser-125": "BIOTHERM HOMME T-PUR SALTY GEL CLEANSER 125ML",
+      "perfume-name-biotherm-aqs-concentrate-bounce-50": "BIOTHERM AQUASOURCE CONCENTRATE BOUNCE 50ML",
+      "perfume-name-biotherm-aqs-concentrate-pure-50": "BIOTHERM AQUASOURCE CONCENTRATE PURE 50ML",
+      "perfume-name-biotherm-aqs-concentrate-glow-50": "BIOTHERM AQUASOURCE CONCENTRATE GLOW 50ML",
+      "perfume-name-lancome-brow-define-pencil": "LANCOME BROW DEFINE PENCIL",
+      "perfume-name-lancome-hypnose-palette": "LANCOME HYPNOSE PALETTE 5 COULEURS",
+      "perfume-name-biotherm-aquapower-deo-roll-75": "BIOTHERM HOMME AQUAPOWER 48H DEO ROLL ON 75ML",
+      "perfume-name-ysl-lhomme-nuit-edp-100": "YVES SAINT LAU L'HOMME NUIT EDP 100ML",
+      "perfume-name-lancome-mademoiselle-shine": "LANCOME MADEMOISELLE SHINE",
+      "perfume-name-libre-edp": "YVES SAINT LAU LIBRE EDP",
+      "perfume-name-biotherm-amber-algae-revitalize-day": "BIOTHERM BLUE THERAPY AMBER ALGAE REVITALIZE DAY",
+      "perfume-name-biotherm-amber-algae-revitalize-night": "BIOTHERM BLUE THERAPY AMBER ALGAE REVITALIZE NIGHT",
+      "perfume-name-lancome-genifique-serum-50": "LANCOME GENIFIQUE SERUM 50ML",
+      "perfume-name-lancome-rose-sugar-scrub": "LANCOME ROSE SUGAR SCRUB",
+      "perfume-name-lancome-hydra-zen-cream-50": "LANCOME HYDRA ZEN CREAM",
+      "perfume-name-lancome-hydra-zen-nuit-50": "LANCOME HYDRA ZEN NUIT 50ML",
+      "perfume-name-lancome-hydra-zen-glow-50": "LANCOME HYDRA ZEN GLOW 50ML",
+      "perfume-name-ysl-lhomme-le-parfum-100": "YVES SAINT LAU L'HOMME LE PARFUM 100ML",
+      "perfume-name-biotherm-tpur-cleanser-125": "BIOTHERM HOMME T-PUR CLEANSER 125ML",
+      "perfume-name-ysl-mascara-mvefc-the-curler": "YVES SAINT LAU YSL MASCARA MVEFC THE CURLER BLACK",
+      "perfume-name-ysl-eyeliner-couture-01": "YVES SAINT LAU YSL EYELINER COUTURE 1",
+      "perfume-name-biotherm-aqua-super-mask-glow": "BIOTHERM AQUA SUPER MASK GLOW",
+      "perfume-name-biotherm-aqua-super-mask-bounce": "BIOTHERM AQUA SUPER MASK BOUNCE",
+      "perfume-name-biotherm-aqua-super-mask-pure": "BIOTHERM AQUA SUPER MASK PURE",
+      "perfume-name-ysl-tatouage-velvet-cream-201": "YVES SAINT LAU YSL TATOUAGE COUTURE VELVET CREAM 201",
+      "perfume-name-biotherm-life-plankton-body-milk-400": "BIOTHERM LIFE PLANKTON BODY MILK 400ML",
+      "perfume-name-ysl-satin-crush-eyeshadow-05": "YVES SAINT LAU YSL SATIN CRUSH EYESHADOW 05",
+      "perfume-name-lancome-cils-booster-serum": "LANCOME CILS BOOSTER LASH REVITALIZING SERUM",
+      "perfume-name-valentino-born-in-roma-uomo-edt": "VALENTINO BORN IN ROMA UOMO EAU DE TOILETTE",
+      "perfume-name-valentino-donna-edp-30": "VALENTINO DONNA EAU DE PARFUM",
+      "perfume-name-valentino-uomo-edt": "VALENTINO UOMO EAU DE TOILETTE",
+      "perfume-name-ysl-mascara-mvefc-radical-01": "YVES SAINT LAU YSL MASCARA MVEFC RADICAL 01 BLACK",
+      "perfume-name-lancome-lash-idole-01": "LANCOME LASH IDOLE MASCARA",
+      "perfume-name-armani-stronger-with-you-absolu": "ARMANI EMPORIO STRONGER WITH YOU ABSOLUTELY EDP",
+      "perfume-name-valentino-born-in-roma-uomo-yellow-dream": "VALENTINO BORN IN ROMA UOMO YELLOW DREAM EDT 100ML",
+      "perfume-name-ysl-crushliner": "YVES SAINT LAU YSL CRUSHLINER EYELINER",
+      "perfume-name-cacharel-yes-i-am": "CACHAREL YES I AM EDP",
+      "perfume-name-cacharel-yes-i-am-purple": "CACHAREL YES I AM FABULOUS EDP 30ML",
+      "perfume-name-cacharel-yes-i-am-glorious": "CACHAREL YES I AM GLORIOUS EDP 50ML",
+      "perfume-name-cacharel-loulou": "CACHAREL LOULOU EDP",
+      "perfume-name-viktor-spicebomb-night-vision-edt": "VIKTOR&ROLF SPICEBOMB NIGHT VISION EDT 90ML",
+      "perfume-name-viktor-flowerbomb-dew": "VIKTOR&ROLF FLOWERBOMB DEW EDP 50ML",
+      "perfume-name-diesel-bad": "DIESEL BAD EDT",
+      "perfume-name-diesel-fuel-for-life-homme": "DIESEL FUEL FOR LIFE HOMME EDT",
+      "perfume-name-mugler-alien-edp": "THIERRY MUGLER ALIEN EDP",
+      "perfume-name-mugler-alien-goddess": "THIERRY MUGLER ALIEN GODDESS EDP",
+      "perfume-name-armani-my-way-intense": "ARMANI MY WAY EDP INTENSE",
+      "perfume-name-prada-luna-rossa-ocean": "PRADA LUNA ROSSA OCEAN EDT",
+      "perfume-name-biotherm-aquasource-gel-50": "BIOTHERM AQUASOURCE HYALU PLUMP GEL 50ML",
+      "perfume-name-lancome-hypnose-absolu-de-noir": "LANCOME HYPNOSE MASCARA ABSOLU DE NOIR",
+      "perfume-name-lancome-24h-drama-liqui-pencil": "LANCOME 24H DRAMA LIQUI-PENCIL",
+      "perfume-name-lancome-tiuw-stick": "LANCOME TEINT IDOLE ULTRA WEAR STICK",
+      "perfume-name-lancome-tiuw-stick-blush-03": "LANCOME TEINT IDOLE ULTRA WEAR STICK BLUSH 03 WILD RUBY",
+      "perfume-name-lancome-tiuw-stick-highlighter": "LANCOME TEINT IDOLE ULTRA WEAR STICK HIGHLIGHTER",
+      "perfume-name-lancome-tiuw-concealer": "LANCOME TEINT IDOLE ULTRA WEAR ALL OVER CONCEALER",
+      "perfume-name-viktor-spicebomb-night-vision-edp": "VIKTOR&ROLF SPICEBOMB NIGHT VISION EDP 90ML",
+      "perfume-name-ralph-lauren-polo-red-edp": "RALPH LAUREN POLO RED EAU DE PARFUM 75ML",
+      "perfume-name-valentino-born-in-roma-uomo-coral-fantasy": "VALENTINO BORN IN ROMA UOMO CORAL FANTASY EDT",
+      "perfume-name-valentino-born-in-roma-donna-coral-fantasy": "VALENTINO BORN IN ROMA DONNA CORAL FANTASY EDP",
+      "perfume-name-prada-luna-rossa-sport": "PRADA LUNA ROSSA SPORT EDT 50ML",
+      "perfume-name-ysl-y-edt": "YVES SAINT LAU Y EDT",
+      "perfume-name-lancome-genifique-sensitive-20": "LANCOME GENIFIQUE SENSITIVE 20ML",
+      "perfume-name-lancome-absolu-rouge-drama-ink": "LANCOME L'ABSOLU ROUGE DRAMA INK",
+      "perfume-name-lancome-le-stylo-waterproof": "LANCOME LE STYLO WATERPROOF",
+      "perfume-name-lancome-liner-idole": "LANCOME LINER IDOLE 01 GLOSSY BLACK",
+      "perfume-name-lancome-renergie-hcf-triple-serum-50": "LANCOME RENERGIE H.C.F. TRIPLE SERUM",
+      "perfume-name-lancome-nutrix-face-cream": "LANCOME NUTRIX FACE CREAM 50ML",
+      "perfume-name-lancome-genifique-light-pearl-20": "LANCOME GENIFIQUE LIGHT PEARL 20ML",
+      "perfume-name-lancome-absolu-rouge-cream-366": "LANCOME L'ABSOLU ROUGE CREAM",
+      "perfume-name-biotherm-tpur-gel-50": "BIOTHERM HOMME T-PUR ANTI-OIL & SHINE GEL 50ML",
+      "perfume-name-biotherm-aquapower-comfort-gel-75": "BIOTHERM HOMME AQUAPOWER COMFORT GEL 75ML",
+      "perfume-name-biotherm-homme-ultra-confort-balm-75": "BIOTHERM HOMME ULTRA CONFORT BALM 75ML",
+      "perfume-name-biotherm-blue-pro-retinol-50": "BIOTHERM BLUE PRO-RETINOL MULTI-CORRECT CREAM 50ML",
+      "perfume-name-ysl-rouge-pur-couture-the-slim-32": "YVES SAINT LAU YSL ROUGE PUR COUTURE THE SLIM 32",
+      "perfume-name-ysl-lash-clash-01": "YVES SAINT LAURENT LASH CLASH MASCARA",
+      "perfume-name-lancome-absolu-rouge-drama-matte": "LANCOME L'ABSOLU ROUGE DRAMA MATTE",
+      "perfume-name-biotherm-waterlover-sun-mist-spf30": "BIOTHERM WATERLOVER SUN MIST SPF30 200ML",
+      "perfume-name-biotherm-life-plankton-elixir-75": "BIOTHERM LIFE PLANKTON ELIXIR 75ML",
+      "perfume-name-prada-luna-rossa-edt": "PRADA LUNA ROSSA EDT",
+      "perfume-name-armani-code-le-parfum": "ARMANI CODE LE PARFUM",
+      "perfume-name-lancome-advanced-genifique-night-cream": "LANCOME ADVANCED GENIFIQUE NIGHT CREAM 50ML",
+      "perfume-name-diesel-d-by-diesel-edt": "D BY DIESEL EDT 50ML",
+      "perfume-name-ysl-libre-le-parfum": "YVES SAINT LAU LIBRE LE PARFUM",
+      "perfume-name-prada-paradoxe-edp": "PRADA PARADOXE EDP",
+      "perfume-name-lancome-bi-facil-clean-care-125": "LANCOME BI-FACIL CLEAN & CARE MAKE-UP REMOVER 125ML",
+      "perfume-name-lancome-hypnose-gift-set": "LANCOME LE 8 HYPNOSE GIFT SET",
+      "perfume-name-valentino-donna-yellow-dream-set": "VALENTINO DONNA BORN IN ROMA YELLOW DREAM GIFT SET",
+      "perfume-name-lancome-tiuw-care-glow-foundation": "LANCOME TEINT IDOLE ULTRA WEAR CARE & GLOW FOUNDATION 30ML",
+      "perfume-name-ysl-all-hours-foundation": "YVES SAINT LAU YSL ALL HOURS FOUNDATION 25ML",
+      "perfume-name-viktor-rolf-good-fortune-edp": "VIKTOR&ROLF GOOD FORTUNE EDP 50ML",
+      "perfume-name-ysl-lhomme-edp": "YVES SAINT LAU L'HOMME EDP 100ML",
+      "perfume-name-ysl-black-opium-le-parfum": "YVES SAINT LAU BLACK OPIUM LE PARFUM",
+      "perfume-name-ysl-libre-body-balm": "YVES SAINT LAURENT LIBRE BODY BALM 200ML",
+      "perfume-name-armani-code-edt": "ARMANI CODE EDT",
+      "perfume-name-valentino-born-in-roma-uomo-intense": "VALENTINO BORN IN ROMA UOMO INTENSE EDP",
+      "perfume-name-valentino-born-in-roma-donna-intense": "VALENTINO BORN IN ROMA DONNA INTENSE EDP",
+      "perfume-name-armani-my-way-le-parfum": "ARMANI MY WAY LE PARFUM",
+      "perfume-name-viktor-rolf-flowerbomb-ruby-orchid": "VIKTOR&ROLF FLOWERBOMB RUBY ORCHID EDP",
+      "perfume-name-ysl-myslf-edp": "YVES SAINT LAURENT MYSLF EDP",
+      "perfume-name-armani-si-intense-edp": "ARMANI SI EDP INTENSE",
+      "perfume-name-lancome-hypnose-mascara-set": "LANCOME LE 8 HYPNOSE MASCARA SET",
+      "perfume-name-biotherm-blue-pro-retinol-eye-cream": "BIOTHERM BLUE PRO-RETINOL EYE CREAM 15ML",
+      "perfume-name-prada-paradoxe-intense": "PRADA PARADOXE INTENSE EDP",
+      "perfume-name-ysl-libre-absolu-platine": "YVES SAINT LAURENT LIBRE L'ABSOLU PLATINE",
+      "perfume-name-lancome-renergie-hpn-300-peptide": "LANCOME RENERGIE H.P.N. 300-PEPTIDE CREAM 50ML",
+      "perfume-name-armani-prive-cuir-zerzura": "ARMANI PRIVE CUIR ZERZURA EDP",
+      "perfume-name-armani-prive-musc-shamal": "ARMANI PRIVE MUSC SHAMAL EDP",
+      "perfume-name-armani-prive-sable-nuit": "ARMANI PRIVE SABLE NUIT EDP",
+      "perfume-name-armani-prive-bois-encens": "ARMANI PRIVE BOIS D'ENCENS EDP",
+      "perfume-name-armani-prive-cuir-amethyste": "ARMANI PRIVE CUIR AMETHYSTE EDP",
+      "perfume-name-armani-prive-oud-royal": "ARMANI PRIVE OUD ROYAL EDP",
+      "perfume-name-armani-prive-cypres-pantelleria": "ARMANI PRIVE CYPRES PANTELLERIA EDT",
+      "perfume-name-armani-prive-figuier-eden": "ARMANI PRIVE FIGUIER EDEN EDT",
+      "perfume-name-armani-prive-jasmin-kusamono": "ARMANI PRIVE JASMIN KUSAMONO EDT",
+      "perfume-name-armani-prive-rose-arabie": "ARMANI PRIVE ROSE D'ARABIE EDP",
+      "perfume-name-armani-prive-orangerie-venise": "ARMANI PRIVE ORANGERIE VENISE EDT",
+      "perfume-name-armani-prive-pivoine-suzhou": "ARMANI PRIVE PIVOINE SUZHOU EDT",
+      "perfume-name-armani-prive-rose-alexandrie": "ARMANI PRIVE ROSE ALEXANDRIE EDT",
+      "perfume-name-armani-prive-rose-milano": "ARMANI PRIVE ROSE MILANO EDT",
+      "perfume-name-armani-prive-the-yulong": "ARMANI PRIVE THE YULONG EDT",
+      "perfume-name-armani-prive-vetiver-hiver": "ARMANI PRIVE VETIVER D'HIVER EDT",
+      "perfume-name-armani-prive-bleu-lazuli": "ARMANI PRIVE BLEU LAZULI EDP",
+      "perfume-name-armani-prive-magenta-tanzanite": "ARMANI PRIVE MAGENTA TANZANITE EDP",
+      "perfume-name-armani-prive-rouge-malachite": "ARMANI PRIVE ROUGE MALACHITE EDP",
+      "perfume-name-armani-prive-santal-dan-sha": "ARMANI PRIVE SANTAL DAN SHA EDT",
+      "perfume-name-armani-eyes-to-kill-classico": "GIORGIO ARMANI EYES TO KILL CLASSICO MASCARA",
+      "perfume-name-armani-eyes-to-kill-eccentrico": "GIORGIO ARMANI EYES TO KILL ECCENTRICO MASCARA",
+      "perfume-name-armani-eyes-to-kill-stellar": "GIORGIO ARMANI EYES TO KILL STELLAR EYESHADOW",
+      "perfume-name-armani-eye-tint": "GIORGIO ARMANI EYE TINT LIQUID EYESHADOW",
+      "perfume-name-armani-smooth-silk-eye-pencil": "GIORGIO ARMANI SMOOTH SILK EYE PENCIL",
+      "perfume-name-armani-fluid-sheer": "GIORGIO ARMANI FLUID SHEER",
+      "perfume-name-armani-luminous-silk-concealer": "GIORGIO ARMANI LUMINOUS SILK CONCEALER 12ML",
+      "perfume-name-armani-lip-power": "GIORGIO ARMANI LIP POWER LIPSTICK",
+      "perfume-name-armani-lip-power-matte": "GIORGIO ARMANI LIP POWER MATTE LIPSTICK",
+      "perfume-name-armani-concealer-brush": "GIORGIO ARMANI CONCEALER BRUSH",
+      "perfume-name-armani-luminous-silk-glow-blush": "GIORGIO ARMANI LUMINOUS SILK GLOW BLUSH",
+      "perfume-name-armani-power-fabric-concealer": "GIORGIO ARMANI POWER FABRIC+ CONCEALER",
+      "perfume-name-armani-lip-maestro": "GIORGIO ARMANI LIP MAESTRO LIQUID LIPSTICK",
+      "perfume-name-armani-lip-maestro-satin": "GIORGIO ARMANI LIP MAESTRO SATIN",
+      "perfume-name-armani-power-fabric-compact": "GIORGIO ARMANI POWER FABRIC COMPACT FOUNDATION",
+      "perfume-name-armani-luminous-silk-glow-fusion-powder": "GIORGIO ARMANI LUMINOUS SILK GLOW FUSION POWDER",
+      "perfume-name-ralph-lauren-polo-red-parfum": "RALPH LAUREN POLO RED PARFUM",
+      "perfume-name-mugler-alien-goddess-supra-florale": "THIERRY MUGLER ALIEN GODDESS SUPRA FLORALE EDP",
+      "perfume-name-prada-luna-rossa-ocean-edp": "PRADA LUNA ROSSA OCEAN EDP",
+      "perfume-name-ysl-y-edp-intense": "YVES SAINT LAURENT Y EDP INTENSE",
+      "perfume-name-lancome-renergie-yeux": "LANCOME RENERGIE YEUX EYE CREAM 15ML",
+      "perfume-name-lancome-absolu-rouge-intimatte": "LANCOME L'ABSOLU ROUGE INTIMATTE",
+      "perfume-name-lancome-hypnose-genifique-bifacil-set": "LANCOME HYPNOSE MASCARA SET (GENIFIQUE + BI-FACIL)",
+      "perfume-name-lancome-genifique-happiness-set": "LANCOME ADVANCED GENIFIQUE HAPPINESS GIFT SET",
+      "perfume-name-ysl-couture-mini-clutch": "YVES SAINT LAURENT COUTURE MINI CLUTCH EYESHADOW PALETTE",
+      "perfume-name-diesel-d-red-edp": "DIESEL D RED EDP",
+      "perfume-name-ysl-black-opium-over-red": "YVES SAINT LAURENT BLACK OPIUM EDP OVER RED",
+      "perfume-name-armani-acqua-di-gio-edt-set": "ARMANI ACQUA DI GIO EDT GIFT SET",
+      "perfume-name-prada-infusion-cedre": "PRADA LES INFUSIONS INFUSION DE CÈDRE EDP 100ML",
+      "perfume-name-prada-infusion-fleur-oranger": "PRADA LES INFUSIONS INFUSION DE FLEUR D'ORANGER EDP 100ML",
+      "perfume-name-prada-infusion-figue": "PRADA LES INFUSIONS INFUSION DE FIGUE EDP 100ML",
+      "perfume-name-valentino-green-stravaganza-donna": "VALENTINO BORN IN ROMA GREEN STRAVAGANZA DONNA EDP",
+      "perfume-name-valentino-green-stravaganza-uomo": "VALENTINO BORN IN ROMA GREEN STRAVAGANZA UOMO EDT",
+      "perfume-name-armani-my-way-nectar": "ARMANI MY WAY NECTAR EDP",
+      "perfume-name-ysl-all-hours-concealer": "YVES SAINT LAURENT ALL HOURS CONCEALER 15ML",
+      "perfume-name-lancome-idole-tint": "LANCOME IDOLE TINT LIQUID EYEBLUSHER",
+      "perfume-name-lancome-lveb-rose-extraordinaire": "LANCOME LA VIE EST BELLE ROSE EXTRAORDINAIRE EDP",
+      "perfume-name-lancome-advanced-genifique-serum-set": "LANCOME ADVANCED GENIFIQUE SERUM GIFT SET",
+      "perfume-name-armani-stronger-with-you-edt-set": "ARMANI EMPORIO STRONGER WITH YOU EDT GIFT SET",
+      "perfume-name-ysl-touche-eclat-blur-primer": "YVES SAINT LAURENT TOUCHE ECLAT BLUR PRIMER 30ML",
+      "perfume-name-armani-prive-blanc-kogane": "ARMANI PRIVE BLANC KOGANE EDP",
+      "perfume-name-armani-prive-noir-kogane": "ARMANI PRIVE NOIR KOGANE EDP",
+      "perfume-name-mugler-alien-hypersense": "THIERRY MUGLER ALIEN HYPERSENSE EDP",
+      "perfume-name-viktor-rolf-flowerbomb-tiger-lily": "VIKTOR&ROLF FLOWERBOMB TIGER LILY EDP",
+      "perfume-name-azzaro-the-most-wanted-edt-intense": "AZZARO THE MOST WANTED EDT INTENSE",
+      "perfume-name-azzaro-wanted-by-night": "AZZARO WANTED BY NIGHT EDP 100ML",
+      "perfume-name-ysl-y-elixir": "YVES SAINT LAURENT Y ELIXIR 60ML",
+      "perfume-name-lancome-uv-expert-supra-screen": "LANCOME UV EXPERT SUPRA SCREEN SPF50+",
+      "perfume-name-lancome-renergie-triple-serum-eye": "LANCOME RENERGIE H.C.F. TRIPLE SERUM EYE 20ML",
+      "perfume-name-biotherm-blue-peptides-uplift-cream": "BIOTHERM BLUE PEPTIDES UPLIFT CREAM",
+      "perfume-name-biotherm-blue-peptides-uplift-night": "BIOTHERM BLUE PEPTIDES UPLIFT NIGHT CREAM 50ML",
+      "perfume-name-ysl-rouge-pur-couture": "YVES SAINT LAURENT ROUGE PUR COUTURE LIPSTICK",
+      "perfume-name-ysl-loveshine": "YVES SAINT LAURENT LOVESHINE LIPSTICK",
+      "perfume-name-azzaro-wanted-edt": "AZZARO WANTED EDT",
+      "perfume-name-azzaro-chrome-edt": "AZZARO CHROME EDT",
+      "perfume-name-azzaro-pour-homme-edt": "AZZARO POUR HOMME EDT",
+      "perfume-name-azzaro-the-most-wanted-edp-intense": "AZZARO THE MOST WANTED EDP INTENSE",
+      "perfume-name-azzaro-the-most-wanted-parfum": "AZZARO THE MOST WANTED PARFUM",
+      "perfume-name-azzaro-chrome-edp": "AZZARO CHROME EDP",
+      "perfume-name-azzaro-chrome-parfum": "AZZARO CHROME PARFUM",
+      "perfume-name-azzaro-wanted-edp": "AZZARO WANTED EDP",
+      "perfume-name-lancome-hypnose-drama": "LANCOME HYPNOSE DRAMA MASCARA 01 EXCESSIVE BLACK",
+      "perfume-name-biotherm-homme-force-supreme-blue-serum": "BIOTHERM HOMME FORCE SUPREME BLUE SERUM 30ML",
+      "perfume-name-biotherm-life-plankton-body-oil": "BIOTHERM LIFE PLANKTON MULTI-CORRECTIVE BODY OIL 125ML",
+      "perfume-name-biotherm-life-plankton-sensitive-balm": "BIOTHERM LIFE PLANKTON SENSITIVE BALM 50ML",
+      "perfume-name-biotherm-blue-retinol-night-serum": "BIOTHERM BLUE RETINOL NIGHT SERUM 30ML",
+      "perfume-name-biotherm-waterlover-sun-milk-spf30-400": "BIOTHERM WATERLOVER HYDRATING SUN MILK SPF30 400ML",
+      "perfume-name-armani-acqua-di-gioia-edp-intense": "ARMANI ACQUA DI GIOIA EDP INTENSE",
+      "perfume-name-armani-prive-cuir-noir": "ARMANI PRIVE CUIR NOIR EDP",
+      "perfume-name-armani-prive-the-yulong-soie-de-nacre": "ARMANI PRIVE THE YULONG SOIE DE NACRE EDT",
+      "perfume-name-armani-maestro-fusion-foundation": "GIORGIO ARMANI MAESTRO FUSION MAKE UP FOUNDATION 30ML",
+      "perfume-name-armani-prisma-glass": "GIORGIO ARMANI PRISMA GLASS LIP GLOSS",
+      "perfume-name-armani-luminous-silk-cheek-tint": "GIORGIO ARMANI LUMINOUS SILK CHEEK TINT",
+      "perfume-name-ysl-all-hours-hyper-finish": "YSL ALL HOURS HYPER FINISH POWDER",
+      "perfume-name-armani-acqua-di-gio-profondo-parfum": "GIORGIO ARMANI ACQUA DI GIÒ PROFONDO PARFUM",
+      "perfume-name-armani-stronger-with-you-tobacco": "EMPORIO ARMANI STRONGER WITH YOU TOBACCO EDP",
+      "perfume-name-viktor-rolf-spicebomb-infrared-edp": "VIKTOR&ROLF SPICEBOMB INFRARED EDP",
+      "perfume-name-lancome-idole-edt": "LANCOME IDOLE EDT",
+      "perfume-name-lancome-tiuw-serum-bronzer": "LANCOME TEINT IDOLE ULTRA WEAR SKIN TRANSFORMING BRONZER",
+      "perfume-name-lancome-tiuw-serum-highlighter": "LANCOME TEINT IDOLE ULTRA WEAR SKIN TRANSFORMING HIGHLIGHTER",
+      "perfume-name-lancome-lip-idole-butterglow": "LANCOME LIP IDOLE BUTTERGLOW",
+      "perfume-name-lancome-lip-idole-liner": "LANCOME LIP IDOLE LINER",
+      "perfume-name-prada-luna-rossa-ocean-le-parfum": "PRADA LUNA ROSSA OCEAN LE PARFUM",
+      "perfume-name-armani-acqua-di-gio-edp": "GIORGIO ARMANI ACQUA DI GIÒ EDP",
+      "perfume-name-armani-acqua-di-gio-edt": "GIORGIO ARMANI ACQUA DI GIÒ EDT",
+      "perfume-name-armani-acqua-di-gio-parfum": "GIORGIO ARMANI ACQUA DI GIÒ PARFUM",
+      "perfume-name-armani-acqua-di-gio-profondo-edp": "GIORGIO ARMANI ACQUA DI GIÒ PROFONDO EDP",
+      "perfume-name-armani-acqua-di-gio-profondo-edt": "GIORGIO ARMANI ACQUA DI GIÒ PROFONDO EDT",
+      "perfume-name-armani-acqua-di-gio-elixir": "GIORGIO ARMANI ACQUA DI GIÒ ELIXIR 50ML",
+      "perfume-name-armani-code-edp-homme": "ARMANI CODE EDP",
+      "perfume-name-armani-emporio-he": "EMPORIO ARMANI HE EDT 100ML",
+      "perfume-name-armani-si-passione-intense": "ARMANI SI PASSIONE EDP INTENSE",
+      "perfume-name-armani-si-passione-red-musk": "ARMANI SI PASSIONE RED MUSK EDP",
+      "perfume-name-armani-my-way-ylang": "ARMANI MY WAY YLANG EDP",
+      "perfume-name-armani-stronger-with-you-parfum": "EMPORIO ARMANI STRONGER WITH YOU PARFUM",
+      "perfume-name-armani-prive-vert-malachite": "ARMANI PRIVE VERT MALACHITE EDP",
+      "perfume-name-armani-luminous-silk-acqua-highlighter": "GIORGIO ARMANI LUMINOUS SILK ACQUA HIGHLIGHTER",
+      "perfume-name-armani-designer-glow-foundation": "GIORGIO ARMANI DESIGNER GLOW FOUNDATION 30ML",
+      "perfume-name-armani-vertigo-lift-mascara": "GIORGIO ARMANI VERTIGO LIFT MASCARA 01 BLACK",
+      "perfume-name-armani-luminous-silk-bronzer": "GIORGIO ARMANI LUMINOUS SILK BRONZER 120 SUNBATHED DUNE",
+      "perfume-name-armani-luminous-silk-cheek-tint-shine": "GIORGIO ARMANI LUMINOUS SILK CHEEK TINT SHINE",
+      "perfume-name-armani-code-edp-set": "ARMANI CODE EDP GIFT SET",
+      "perfume-name-armani-si-edp-body-set": "ARMANI SI EDP GIFT SET WITH BODY LOTION & SHOWER GEL",
+      "perfume-name-armani-si-passione-set": "ARMANI SI PASSIONE EDP GIFT SET",
+      "perfume-name-armani-my-way-edp-set": "ARMANI MY WAY EDP GIFT SET 50ML + 10ML",
+      "perfume-name-armani-acqua-di-gio-profondo-set": "ARMANI ACQUA DI GIO PROFONDO EDP GIFT SET",
+      "perfume-name-armani-swy-intensely-set": "EMPORIO ARMANI STRONGER WITH YOU INTENSELY GIFT SET",
+      "perfume-name-armani-swy-parfum-set": "EMPORIO ARMANI STRONGER WITH YOU PARFUM GIFT SET",
+      "perfume-name-armani-acqua-di-gio-edt-set-50": "ARMANI ACQUA DI GIO EDT GIFT SET 50ML + SHOWER GEL",
+      "perfume-name-armani-acqua-di-gio-parfum-set": "ARMANI ACQUA DI GIO PARFUM GIFT SET",
+      "perfume-name-armani-my-way-body-set": "ARMANI MY WAY EDP GIFT SET WITH BODY LOTION & SHOWER GEL",
+      "perfume-name-armani-si-edp-spring-set": "ARMANI SI EDP GIFT SET 50ML + 10ML + BODY LOTION",
+      "perfume-name-valentino-uomo-born-in-roma-edt-set": "VALENTINO UOMO BORN IN ROMA EDT GIFT SET",
+      "perfume-name-valentino-donna-born-in-roma-edp-set": "VALENTINO DONNA BORN IN ROMA EDP GIFT SET",
+      "perfume-name-prada-paradoxe-holiday-set": "PRADA PARADOXE EDP HOLIDAY GIFT SET",
+      "perfume-name-prada-luna-rossa-ocean-edp-set": "PRADA LUNA ROSSA OCEAN EDP GIFT SET",
+      "perfume-name-prada-paradoxe-virtual-flower-set": "PRADA PARADOXE VIRTUAL FLOWER EDP GIFT SET",
+      "perfume-name-prada-luna-rossa-carbon-set": "PRADA LUNA ROSSA CARBON EDT GIFT SET",
+      "perfume-name-prada-luna-rossa-black-set": "PRADA LUNA ROSSA BLACK EDP GIFT SET",
+      "perfume-name-prada-paradoxe-edp-spring-set": "PRADA PARADOXE EDP GIFT SET 50ML + 10ML",
+      "perfume-name-ysl-y-le-parfum-set": "YVES SAINT LAURENT Y LE PARFUM GIFT SET",
+      "perfume-name-ysl-myslf-le-parfum-set": "YVES SAINT LAURENT MYSLF LE PARFUM GIFT SET",
+      "perfume-name-ysl-myslf-edp-set": "YVES SAINT LAURENT MYSLF EDP GIFT SET",
+      "perfume-name-ysl-black-opium-set-30": "YVES SAINT LAURENT BLACK OPIUM EDP GIFT SET 30ML + 10ML",
+      "perfume-name-ysl-black-opium-set-50": "YVES SAINT LAURENT BLACK OPIUM EDP GIFT SET 50ML + MASCARA",
+      "perfume-name-lancome-idole-holiday-set": "LANCOME IDOLE EDP 50ML HOLIDAY GIFT SET",
+      "perfume-name-lancome-iconic-mascara-set": "LANCOME ICONIC MASCARA HOLIDAY SET",
+      "perfume-name-lancome-lveb-elixir-set": "LANCOME LA VIE EST BELLE L'ELIXIR EDP GIFT SET",
+      "perfume-name-lancome-lveb-candle-set": "LANCOME LA VIE EST BELLE EDP 50ML + CANDLE SET",
+      "perfume-name-lancome-hypnose-drama-set": "LANCOME HYPNOSE DRAMA MASCARA SET",
+      "perfume-name-viktor-rolf-spicebomb-extreme-set": "VIKTOR&ROLF SPICEBOMB EXTREME EDP GIFT SET",
+      "perfume-name-cacharel-yes-i-am-set": "CACHAREL YES I AM EDP GIFT SET",
+      "perfume-name-mugler-angel-elixir-set": "MUGLER ANGEL ELIXIR EDP GIFT SET",
+      "perfume-name-biotherm-homme-force-supreme-set": "BIOTHERM HOMME FORCE SUPREME GIFT SET",
+      "perfume-name-ysl-all-hours-hyper-bronze": "YSL ALL HOURS HYPER BRONZE",
+      "perfume-name-ysl-all-hours-hyper-luminize": "YSL ALL HOURS HYPER LUMINIZE HIGHLIGHTER",
+      "perfume-name-ysl-all-hours-hyper-blur-loose-powder": "YSL ALL HOURS HYPER BLUR LOOSE POWDER",
+      "perfume-name-ysl-loveshine-balm": "YSL LOVESHINE CANDY GLOW TINTED BUTTER BALM",
+      "perfume-name-ysl-lines-liberated": "YSL LINES LIBERATED WATERPROOF EYE PENCIL",
+      "perfume-name-ysl-make-me-blush-liquid": "YSL MAKE ME BLUSH LIQUID BLUSH",
+      "perfume-name-ysl-make-me-blush-bold": "YSL MAKE ME BLUSH BOLD BLURRING POWDER BLUSH",
+      "perfume-name-ysl-loveshine-gloss": "YSL LOVESHINE PLUMPING LIP OIL GLOSS",
+      "perfume-name-ysl-libre-flowers-flames": "YVES SAINT LAURENT LIBRE FLOWERS & FLAMES EDP FLORALE",
+      "perfume-name-ysl-myslf-le-parfum": "YVES SAINT LAURENT MYSLF LE PARFUM",
+      "perfume-name-ysl-black-opium-glitter": "YVES SAINT LAURENT BLACK OPIUM EDP GLITTER",
+      "perfume-name-ysl-libre-leau-nue": "YVES SAINT LAURENT LIBRE L'EAU NUE",
+      "perfume-name-ysl-y-le-parfum": "YVES SAINT LAURENT Y LE PARFUM",
+      "perfume-name-prada-paradoxe-virtual-flower": "PRADA PARADOXE VIRTUAL FLOWER EDP",
+      "perfume-name-prada-infusion-vanille": "PRADA LES INFUSIONS INFUSION DE VANILLE EDP 100ML",
+      "perfume-name-valentino-born-in-roma-the-gold-uomo": "VALENTINO BORN IN ROMA THE GOLD UOMO EDT 100ML",
+      "perfume-name-valentino-born-in-roma-the-gold-donna": "VALENTINO BORN IN ROMA THE GOLD DONNA EDP",
+      "perfume-name-valentino-born-in-roma-uomo-extradose": "VALENTINO BORN IN ROMA UOMO EXTRADOSE PARFUM",
+      "perfume-name-valentino-born-in-roma-donna-extradose": "VALENTINO BORN IN ROMA DONNA EXTRADOSE PARFUM",
+      "perfume-name-lancome-lveb-elixir": "LANCOME LA VIE EST BELLE L'ELIXIR EDP",
+      "perfume-name-lancome-idole-power": "LANCOME IDOLE POWER EDP INTENSE",
+      "perfume-name-lancome-tresor-la-nuit-vanille-noire": "LANCOME LA NUIT TRESOR VANILLE NOIRE EDP",
+      "perfume-name-ralph-lauren-ralphs-club-edt": "RALPH LAUREN RALPH'S CLUB EDT",
+      "perfume-name-mugler-angel-fantasm": "MUGLER ANGEL FANTASM EDP",
+      "perfume-name-mugler-amen-fantasm": "MUGLER A*MEN FANTASM EDP 100ML",
+      "perfume-name-mugler-alien-extraintense": "MUGLER ALIEN EXTRAINTENSE EDP INTENSE",
+      "perfume-name-cacharel-ella-ella": "CACHAREL ELLA ELLA EDP",
+      "perfume-name-viktor-rolf-spicebomb-dark-leather": "VIKTOR&ROLF SPICEBOMB DARK LEATHER EDP",
+      "perfume-name-diesel-only-the-brave-edp": "DIESEL ONLY THE BRAVE EDP",
+      "perfume-name-azzaro-forever-wanted-elixir": "AZZARO FOREVER WANTED ELIXIR",
+      "perfume-name-lancome-lip-idole-juicytreat": "LANCOME LIP IDOLE JUICYTREAT OIL-IN-GLOSS",
+      "perfume-name-lancome-lash-idole-flutter": "LANCOME LASH IDOLE FLUTTER EXTENSION MASCARA 01",
+      "perfume-name-lancome-tiuw-setting-powder": "LANCOME TEINT IDOLE ULTRA WEAR SKIN REFINING SETTING POWDER",
+      "perfume-name-lancome-tiuw-care-glow-concealer": "LANCOME TEINT IDOLE ULTRA WEAR CARE & GLOW SERUM CONCEALER 125W",
+      "perfume-name-lancome-hydra-zen-gel-cream": "LANCOME HYDRA ZEN GEL CREAM",
+      "perfume-name-lancome-genifique-ultimate": "LANCOME ADVANCED GENIFIQUE ULTIMATE SERUM",
+      "perfume-name-lancome-renergie-crx-triple-serum-retinol": "LANCOME RENERGIE C.R.X. TRIPLE SERUM RETINOL 50ML",
+      "perfume-name-lancome-renergie-hpn-uvmune-spf50": "LANCOME RENERGIE H.P.N. UVMUNE CREAM SPF50 50ML",
+      "perfume-name-lancome-tonique-confort-200": "LANCOME TONIQUE CONFORT 200ML",
+      "perfume-name-biotherm-life-plankton-regenerating-serum": "BIOTHERM LIFE PLANKTON REGENERATING SERUM",
+      "perfume-name-biotherm-homme-aquapower-advanced-gel": "BIOTHERM HOMME AQUAPOWER ADVANCED GEL",
+      "perfume-name-biotherm-lait-corporel-active-recovery": "BIOTHERM LAIT CORPOREL ACTIVE RECOVERY 400ML",
+      "perfume-name-biotherm-blue-peptides-eyes-lips": "BIOTHERM BLUE PEPTIDES EYES & LIPS CONTOUR RESHAPER 15ML",
+      "perfume-name-biotherm-aquasource-hydra-barrier-cleanser": "BIOTHERM AQUASOURCE HYDRA BARRIER CLEANSER 150ML",
+      "perfume-name-biotherm-aquasource-hydra-barrier-cream": "BIOTHERM AQUASOURCE HYDRA BARRIER CREAM",
+      "perfume-name-lancome-o-de-lancome-off-now": "LANCOME LES O DE LANCOME OFF NOW EDT 100ML",
+      "perfume-name-lancome-o-de-lancome-over-the-top": "LANCOME LES O DE LANCOME OVER THE TOP EDT 100ML",
+      "perfume-name-lancome-o-de-lancome-ozenith": "LANCOME LES O DE LANCOME O ZENITH EDT 100ML",
+      "perfume-name-armani-prive-iris-bleu": "ARMANI PRIVE IRIS BLEU EDT",
+      "perfume-name-armani-prive-gardenia-antigua": "ARMANI PRIVE GARDENIA ANTIGUA EDT 100ML",
+      "perfume-name-armani-prive-indigo-tanzanite": "ARMANI PRIVE INDIGO TANZANITE EDP 100ML",
+      "perfume-name-cacharel-anais-anais": "CACHAREL ANAIS ANAIS EDT",
+      "perfume-name-armani-code-edp-75-spring-set": "ARMANI CODE EDP 75ML + 15ML GIFT SET",
+      "perfume-name-armani-code-edt-50-spring-set": "ARMANI CODE EDT 50ML + BODY SHAMPOO GIFT SET",
+      "perfume-name-lancome-lash-idole-idole-edp-set": "LANCOME LASH IDOLE MASCARA + IDOLE EDP 10ML SET",
+      "perfume-name-lancome-lash-idole-flutter-extension-set": "LANCOME LASH IDOLE FLUTTER EXTENSION + LIP IDOLE MINI SET",
+      "perfume-name-valentino-uomo-born-in-roma-edt-50-set": "VALENTINO UOMO BORN IN ROMA EDT 50ML + 15ML SET",
+      "perfume-name-biotherm-homme-aquapower-routine-set": "BIOTHERM HOMME AQUAPOWER ROUTINE SET",
+      "perfume-name-biotherm-homme-force-supreme-routine-set": "BIOTHERM HOMME FORCE SUPREME ROUTINE SET",
+      "perfume-name-lancome-genifique-ultimate-routine-set": "LANCOME GENIFIQUE ULTIMATE SERUM 30ML ROUTINE SET",
+      "perfume-name-lancome-juicy-tubes": "LANCOME JUICY TUBES LIP GLOSS 15ML",
+      "perfume-name-lancome-skin-idole-supertint": "LANCOME SKIN IDOLE 3 SERUM SUPERTINT 30ML",
+      "perfume-name-lancome-genifique-eye-cream": "LANCOME GENIFIQUE ULTIMATE EYE CREAM 20ML",
+      "perfume-name-lancome-renergie-multi-glow-day": "LANCOME RENERGIE MULTI GLOW DAY CREAM 50ML",
+      "perfume-name-biotherm-waterlover-sun-milk-spf50-400": "BIOTHERM WATERLOVER HYDRATING SUN MILK SPF50+ 400ML",
+      "perfume-name-biotherm-waterlover-milky-sun-spray-spf50": "BIOTHERM WATERLOVER MILKY SUN SPRAY SPF50+ 200ML",
+      "perfume-name-biotherm-collagen-fit-body-cream": "BIOTHERM COLLAGEN FIT INTENSIVE HYDRA BODY CREAM 200ML",
+      "perfume-name-biotherm-collagen-fit-body-milk": "BIOTHERM COLLAGEN FIT FIRMING BODY MILK 400ML",
+      "perfume-name-biotherm-homme-force-supreme-body-reshaper": "BIOTHERM HOMME FORCE SUPREME BODY RESHAPER 125ML",
+      "perfume-name-biotherm-homme-force-supreme-face-reshaper": "BIOTHERM HOMME FORCE SUPREME FACE RESHAPER CREAM 50ML",
+      "perfume-name-armani-prisma-glass-icy-plumper": "GIORGIO ARMANI PRISMA GLASS ICY PLUMPER",
+      "perfume-name-ysl-loveshine-candy-glaze": "YSL LOVESHINE CANDY GLAZE LIP GLOSS STICK",
+      "perfume-name-margiela-replica-beach-walk": "MAISON MARGIELA REPLICA BEACH WALK EDT",
+      "perfume-name-margiela-replica-by-the-fireplace": "MAISON MARGIELA REPLICA BY THE FIREPLACE EDT 30ML",
+      "perfume-name-margiela-replica-jazz-club": "MAISON MARGIELA REPLICA JAZZ CLUB EDT",
+      "perfume-name-margiela-replica-lazy-sunday-morning": "MAISON MARGIELA REPLICA LAZY SUNDAY MORNING EDT",
+      "perfume-name-margiela-replica-afternoon-delight": "MAISON MARGIELA REPLICA AFTERNOON DELIGHT EDT",
+      "perfume-name-margiela-replica-autumn-vibes": "MAISON MARGIELA REPLICA AUTUMN VIBES EDT 30ML",
+      "perfume-name-margiela-replica-from-the-garden": "MAISON MARGIELA REPLICA FROM THE GARDEN EDT",
+      "perfume-name-margiela-replica-sailing-day": "MAISON MARGIELA REPLICA SAILING DAY EDT 100ML",
+      "perfume-name-margiela-replica-on-a-date": "MAISON MARGIELA REPLICA ON A DATE EDT 30ML",
+      "perfume-name-margiela-replica-when-the-rain-stops": "MAISON MARGIELA REPLICA WHEN THE RAIN STOPS EDT",
+      "perfume-name-margiela-replica-under-the-stars": "MAISON MARGIELA REPLICA UNDER THE STARS EDT",
+      "perfume-name-margiela-replica-coffee-break": "MAISON MARGIELA REPLICA COFFEE BREAK EDT 100ML",
+      "perfume-name-margiela-replica-flying": "MAISON MARGIELA REPLICA FLYING EDP 100ML",
+      "perfume-name-margiela-replica-ideal-one": "MAISON MARGIELA REPLICA IDEAL ONE EDP 100ML",
+      "perfume-name-margiela-replica-dancing-on-the-moon": "MAISON MARGIELA REPLICA DANCING ON THE MOON EDP 100ML",
+      "perfume-name-margiela-replica-celestial-whispers": "MAISON MARGIELA REPLICA CELESTIAL WHISPERS EDP 100ML",
+      "perfume-name-margiela-replica-under-the-lemon-trees": "MAISON MARGIELA REPLICA UNDER THE LEMON TREES EDT 100ML",
+      "perfume-name-margiela-replica-bubble-bath": "MAISON MARGIELA REPLICA BUBBLE BATH EDT 100ML",
+      "perfume-name-margiela-replica-lazy-sunday-morning-candle": "MAISON MARGIELA REPLICA LAZY SUNDAY MORNING CANDLE 165G",
+      "perfume-name-mugler-amen-stellar": "MUGLER A*MEN STELLAR EDP",
+      "perfume-name-mugler-angel-stellar": "MUGLER ANGEL STELLAR EDP",
+      "perfume-name-mugler-angel-edp": "MUGLER ANGEL EDP",
+      "perfume-name-mugler-angel-nova": "MUGLER ANGEL NOVA EDP 25ML",
+      "perfume-name-ralph-lauren-big-pony-1": "RALPH LAUREN POLO BIG PONY #1 BLUE EDT 100ML",
+      "perfume-name-ralph-lauren-polo-blue-parfum": "RALPH LAUREN POLO BLUE PARFUM 75ML",
+      "perfume-name-ralph-lauren-polo-67-edt": "RALPH LAUREN POLO 67 EDT",
+      "perfume-name-ralph-lauren-polo-67-edp": "RALPH LAUREN POLO 67 EDP",
+      "perfume-name-viktor-rolf-spicebomb-metallic-musk": "VIKTOR&ROLF SPICEBOMB METALLIC MUSK EDP",
+      "perfume-name-viktor-rolf-flowerbomb-extreme": "VIKTOR&ROLF FLOWERBOMB EXTREME EDP INTENSE",
+      "perfume-name-prada-paradoxe-radical-essence": "PRADA PARADOXE RADICAL ESSENCE PARFUM",
+      "perfume-name-prada-paradoxe-hair-mist": "PRADA PARADOXE HAIR MIST 30ML",
+      "perfume-name-prada-paradoxe-intense-90-set": "PRADA PARADOXE INTENSE EDP 90ML + 10ML GIFT SET",
+      "perfume-name-ysl-myslf-labsolu": "YVES SAINT LAURENT MYSLF L'ABSOLU PARFUM",
+      "perfume-name-valentino-born-in-roma-body-shimmer": "VALENTINO BORN IN ROMA DONNA PERFUMED BODY SHIMMER 125ML",
+      "perfume-name-valentino-born-in-roma-hair-body-mist": "VALENTINO BORN IN ROMA DONNA PERFUMED HAIR & BODY MIST 90ML",
+      "perfume-name-armani-code-elixir": "ARMANI CODE ELIXIR 50ML",
+      "perfume-name-armani-si-parfum": "ARMANI SI PARFUM",
+      "perfume-name-armani-swy-intensely-edp-50-set": "EMPORIO ARMANI STRONGER WITH YOU INTENSELY EDP 50ML + SHOWER GEL SET",
+      "perfume-name-lancome-lveb-vanille-nude": "LANCOME LA VIE EST BELLE VANILLE NUDE EDP",
+      "perfume-name-lancome-absolue-longevity-soft-cream": "LANCOME ABSOLUE LONGEVITY THE SOFT CREAM 60ML",
+      "perfume-name-biotherm-aquascreen-uv-daily-spf50": "BIOTHERM AQUASCREEN ACTIVEWEAR DAILY UV FLUID SPF50+ 40ML",
+      "perfume-name-lancome-skin-idole-juicy-blush": "LANCOME SKIN IDOLE JUICY LIQUID BLUSH",
+      "perfume-name-ysl-the-inks-blur": "YSL THE INKS BLUR MATTE LIP STAIN",
+      "perfume-name-ysl-the-inks-vinyl-cream": "YSL THE INKS VINYL CREAM LIP STAIN",
+      "perfume-name-ysl-the-slim-couture-matte": "YSL ROUGE PUR COUTURE THE SLIM MATTE LIPSTICK",
+      "perfume-name-ysl-all-hours-glow-foundation": "YSL ALL HOURS GLOW FOUNDATION 25ML",
+      "perfume-name-armani-skin-tint": "GIORGIO ARMANI SKIN TINT 30ML",
+      "perfume-name-armani-luminous-silk-foundation": "GIORGIO ARMANI LUMINOUS SILK FOUNDATION 30ML",
+      "perfume-name-armani-luminous-silk-glow-primer": "GIORGIO ARMANI LUMINOUS SILK ILLUMINATING PRIMER",
+      "perfume-name-armani-prive-cuir-nu": "ARMANI PRIVE CUIR NU EDP INTENSE",
+      "perfume-name-armani-power-of-you": "EMPORIO ARMANI POWER OF YOU EDP",
+      "perfume-name-armani-stronger-with-you-amber": "EMPORIO ARMANI STRONGER WITH YOU AMBER EDP 100ML",
+      "perfume-name-lancome-magie-noire": "LANCOME MAGIE NOIRE EDT 75ML",
+      "perfume-name-lancome-absolue-lextrait-cream": "LANCOME ABSOLUE L'EXTRAIT ELIXIR CREAM 50ML",
+      "perfume-name-lancome-absolue-lextrait-yeux": "LANCOME ABSOLUE L'EXTRAIT EYE CREAM 15ML",
+      "perfume-name-biotherm-aquasource-vitamin-glow-gel": "BIOTHERM AQUASOURCE+ VITAMIN GLOW GEL 50ML",
+      "perfume-name-biotherm-aquasource-cica-nutri-cream": "BIOTHERM AQUASOURCE CICA NUTRI CREAM 30ML",
+      "perfume-name-prada-paradigme-edp": "PRADA PARADIGME EDP",
+      "perfume-name-valentino-born-in-roma-rendez-vous-uomo": "VALENTINO UOMO BORN IN ROMA RENDEZ-VOUS IVORY EDT 100ML",
+      "perfume-name-valentino-born-in-roma-rendez-vous-donna": "VALENTINO DONNA BORN IN ROMA RENDEZ-VOUS IVORY EDP",
+      "perfume-name-valentino-born-in-roma-purple-melancholia-uomo": "VALENTINO UOMO BORN IN ROMA PURPLE MELANCHOLIA EDT",
+      "perfume-name-valentino-born-in-roma-purple-melancholia-donna": "VALENTINO DONNA BORN IN ROMA PURPLE MELANCHOLIA EDP",
+      "perfume-name-ysl-libre-vanille-couture": "YVES SAINT LAURENT LIBRE VANILLE COUTURE EDP 50ML",
+      "perfume-name-margiela-untitled-l-eau": "MAISON MARGIELA (UNTITLED) L'EAU EDT 100ML",
+      "perfume-name-margiela-untitled-edp": "MAISON MARGIELA (UNTITLED) EDP 100ML",
+      "perfume-name-margiela-replica-beach-vibes-candle": "MAISON MARGIELA REPLICA BEACH VIBES CANDLE 165G",
+      "perfume-name-margiela-replica-jazz-club-diffuser": "MAISON MARGIELA REPLICA JAZZ CLUB DIFFUSER 185ML",
+      "perfume-name-margiela-replica-from-the-garden-candle": "MAISON MARGIELA REPLICA FROM THE GARDEN CANDLE 165G",
+      "perfume-name-margiela-replica-lazy-sunday-morning-shower-gel": "MAISON MARGIELA REPLICA LAZY SUNDAY MORNING SHOWER GEL 200ML",
+      "perfume-name-margiela-replica-lazy-sunday-morning-body-lotion": "MAISON MARGIELA REPLICA LAZY SUNDAY MORNING BODY LOTION 200ML",
+      "perfume-name-dkny-be-delicious": "DKNY BE DELICIOUS EDP",
+      "perfume-name-dkny-be-100-delicious": "DKNY BE 100% DELICIOUS EDP",
+      "perfume-name-dkny-be-delicious-fresh-blossom": "DKNY BE DELICIOUS FRESH BLOSSOM EDP",
+      "perfume-name-dkny-be-extra-delicious": "DKNY BE EXTRA DELICIOUS EDP",
+      "perfume-name-dkny-women-edp": "DKNY WOMEN ENERGIZING EDP",
+      "perfume-name-dkny-be-delicious-orchard-street": "DKNY BE DELICIOUS ORCHARD ST. EDP",
+      "perfume-name-cavalli-paradiso": "ROBERTO CAVALLI PARADISO EDP",
+      "perfume-name-just-cavalli-her": "JUST CAVALLI FOR HER EDT",
+      "perfume-name-just-cavalli-him": "JUST CAVALLI FOR HIM EDT",
+      "perfume-name-cavalli-signature": "ROBERTO CAVALLI SIGNATURE EDP",
+      "perfume-name-cavalli-nero-assoluto": "ROBERTO CAVALLI NERO ASSOLUTO EDP 75ML",
+      "perfume-name-cavalli-sweet-ferocious": "ROBERTO CAVALLI SIGNATURE SWEET FEROCIOUS EDP",
+      "perfume-name-just-cavalli-wild-heart-her": "JUST CAVALLI WILD HEART FOR HER EDP",
+      "perfume-name-just-cavalli-wild-heart-him": "JUST CAVALLI WILD HEART FOR HIM EDT",
+      "perfume-name-cavalli-paradiso-rosa": "ROBERTO CAVALLI PARADISO ROSA EDP",
+      "perfume-name-cavalli-serpentine": "ROBERTO CAVALLI SERPENTINE PARFUM",
+      "perfume-name-just-cavalli-give-me-magic-him": "JUST CAVALLI GIVE ME MAGIC FOR HIM EDT",
+      "perfume-name-just-cavalli-give-me-magic-her": "JUST CAVALLI GIVE ME MAGIC FOR HER EDP",
+      "perfume-name-ysl-libre-edp-loveshine-set": "YVES SAINT LAURENT LIBRE EDP 30ML + LOVESHINE GIFT SET",
+      "perfume-name-ysl-black-opium-holiday-set-50": "YVES SAINT LAURENT BLACK OPIUM EDP 50ML HOLIDAY GIFT SET",
+      "perfume-name-ysl-myslf-le-parfum-holiday-set": "YVES SAINT LAURENT MYSLF LE PARFUM 60ML HOLIDAY GIFT SET",
+      "perfume-name-ysl-myslf-edp-holiday-set-60": "YVES SAINT LAURENT MYSLF EDP 60ML HOLIDAY GIFT SET",
+      "perfume-name-ysl-myslf-edp-holiday-set-40": "YVES SAINT LAURENT MYSLF EDP 40ML HOLIDAY GIFT SET",
+      "perfume-name-ysl-libre-edp-intense-holiday-set": "YVES SAINT LAURENT LIBRE EDP INTENSE 90ML HOLIDAY GIFT SET",
+      "perfume-name-prada-paradoxe-intense-holiday-set": "PRADA PARADOXE INTENSE EDP 50ML HOLIDAY GIFT SET",
+      "perfume-name-prada-paradoxe-holiday-set-2025": "PRADA PARADOXE EDP 50ML HOLIDAY GIFT SET 2025",
+      "perfume-name-prada-paradigme-set": "PRADA PARADIGME EDP 100ML GIFT SET",
+      "perfume-name-prada-luna-rossa-black-set-100": "PRADA LUNA ROSSA BLACK EDP 100ML GIFT SET",
+      "perfume-name-armani-si-passione-holiday-set": "ARMANI SI PASSIONE EDP 50ML HOLIDAY GIFT SET",
+      "perfume-name-armani-stronger-with-you-intensely-set-100": "ARMANI EMPORIO STRONGER WITH YOU INTENSELY EDP 100ML HOLIDAY GIFT SET",
+      "perfume-name-armani-stronger-with-you-intensely-set-50": "ARMANI EMPORIO STRONGER WITH YOU INTENSELY EDP 50ML HOLIDAY GIFT SET",
+      "perfume-name-armani-si-edp-holiday-set": "ARMANI SI EDP 50ML HOLIDAY GIFT SET",
+      "perfume-name-armani-code-edt-holiday-set": "ARMANI CODE EDT 50ML HOLIDAY GIFT SET",
+      "perfume-name-armani-my-way-holiday-set": "ARMANI MY WAY EDP 50ML HOLIDAY GIFT SET",
+      "perfume-name-armani-stronger-with-you-edt-holiday-set": "ARMANI EMPORIO STRONGER WITH YOU EDT 100ML HOLIDAY GIFT SET",
+      "perfume-name-lancome-la-vie-est-belle-edp-30-set": "LANCOME LA VIE EST BELLE EDP 30ML GIFT SET",
+      "perfume-name-lancome-juicy-tubes-mini-set": "LANCOME JUICY TUBES MINI GIFT SET",
+      "perfume-name-lancome-idole-edp-25-set": "LANCOME IDOLE EDP 25ML GIFT SET",
+      "perfume-name-lancome-idole-edp-50-set": "LANCOME IDOLE EDP 50ML GIFT SET",
+      "perfume-name-lancome-la-vie-est-belle-edp-50-set": "LANCOME LA VIE EST BELLE EDP 50ML GIFT SET",
+      "perfume-name-lancome-la-vie-est-belle-vanille-nude-set": "LANCOME LA VIE EST BELLE VANILLE NUDE EDP 50ML GIFT SET",
+      "perfume-name-lancome-renergie-triple-serum-20-set": "LANCOME RENERGIE TRIPLE SERUM 20ML GIFT SET",
+      "perfume-name-lancome-renergie-crx-triple-serum-50-set": "LANCOME RENERGIE C.R.X. TRIPLE SERUM 50ML GIFT SET",
+      "perfume-name-lancome-la-vie-est-belle-edp-100-set": "LANCOME LA VIE EST BELLE EDP 100ML GIFT SET",
+      "perfume-name-lancome-la-vie-est-belle-elixir-petit-theatre": "LANCOME LA VIE EST BELLE L'ELIXIR 50ML PETIT THEATRE",
+      "perfume-name-lancome-la-vie-est-belle-petit-theatre": "LANCOME LA VIE EST BELLE EDP 50ML PETIT THEATRE",
+      "perfume-name-lancome-renergie-hpn-300-peptide-50-set": "LANCOME RENERGIE H.P.N. 300-PEPTIDE CREAM 50ML GIFT SET",
+      "perfume-name-lancome-hypnose-drama-mascara-set": "LANCOME HYPNOSE DRAMA MASCARA GIFT SET",
+      "perfume-name-lancome-monsieur-big-set": "LANCOME MONSIEUR BIG MASCARA GIFT SET",
+      "perfume-name-biotherm-homme-aquafitness-set": "BIOTHERM HOMME AQUAFITNESS GIFT SET",
+      "perfume-name-biotherm-homme-force-supreme-reshaper-set": "BIOTHERM HOMME FORCE SUPREME RESHAPER GIFT SET",
+      "perfume-name-biotherm-deo-pure-duo-set": "BIOTHERM DEO PURE DUO GIFT SET",
+      "perfume-name-biotherm-aqua-drop-set": "BIOTHERM AQUA DROP GIFT SET",
+      "perfume-name-biotherm-homme-power-drop-set": "BIOTHERM HOMME POWER DROP GIFT SET",
+      "perfume-name-valentino-uomo-born-in-roma-edt-holiday-set": "VALENTINO UOMO BORN IN ROMA EDT HOLIDAY GIFT SET",
+      "perfume-name-valentino-donna-born-in-roma-intense-set": "VALENTINO DONNA BORN IN ROMA INTENSE EDP GIFT SET",
+      "perfume-name-valentino-donna-born-in-roma-edp-holiday-set": "VALENTINO DONNA BORN IN ROMA EDP HOLIDAY GIFT SET",
+      "perfume-name-valentino-uomo-born-in-roma-extradose-set": "VALENTINO UOMO BORN IN ROMA EXTRADOSE GIFT SET",
+      "perfume-name-valentino-donna-born-in-roma-extradose-set": "VALENTINO DONNA BORN IN ROMA EXTRADOSE GIFT SET",
+      "perfume-name-guess-seductive-edt": "GUESS SEDUCTIVE FOR WOMEN EDT",
+      "perfume-name-guess-seductive-noir-edt": "GUESS SEDUCTIVE NOIR FOR WOMEN EDT",
+      "perfume-name-guess-seductive-red-edt": "GUESS SEDUCTIVE RED FOR WOMEN EDT",
+      "perfume-name-guess-seductive-red-mist": "GUESS SEDUCTIVE RED FRAGRANCE MIST 250ML",
+      "perfume-name-guess-iconic-edp": "GUESS ICONIC FOR WOMEN EDP",
+      "perfume-name-guess-iconic-men-edp": "GUESS ICONIC FOR MEN EDP",
+      "perfume-name-guess-bella-vita-edp": "GUESS BELLA VITA EDP",
+      "perfume-name-guess-bella-vita-mist": "GUESS BELLA VITA FRAGRANCE MIST 250ML",
+      "perfume-name-guess-bella-vita-rosa-edt": "GUESS BELLA VITA ROSA EDT",
+      "perfume-name-guess-bella-vita-rosa-mist": "GUESS BELLA VITA ROSA FRAGRANCE MIST 250ML",
+      "perfume-name-guess-bella-vita-paradiso-edp": "GUESS BELLA VITA PARADISO EDP",
+      "perfume-name-guess-love-fragrance-mist": "GUESS LOVE FRAGRANCE MIST 250ML",
+      "perfume-name-guess-sexy-skin-fragrance-mist": "GUESS SEXY SKIN FRAGRANCE MIST 250ML",
+      "perfume-name-armani-prive-les-eaux-holiday-discovery-set": "ARMANI PRIVE LES EAUX HOLIDAY DISCOVERY SET 4 X 7.5ML",
+      "perfume-name-biotherm-homme-aquapower-essentials-set": "BIOTHERM HOMME AQUAPOWER ADVANCED GEL 75ML HOLIDAY SET",
+      "perfume-name-lancome-la-nuit-tresor-holiday-set": "LANCOME LA NUIT TRESOR EDP 30ML HOLIDAY GIFT SET",
+      "perfume-name-lancome-absolue-soft-cream-holiday-set": "LANCOME ABSOLUE LONGEVITY SOFT CREAM 60ML HOLIDAY SET",
+      "perfume-name-prada-luna-rossa-ocean-edt-set": "PRADA LUNA ROSSA OCEAN EDT 100ML GIFT SET",
+      "perfume-name-ysl-libre-berry-crush": "YVES SAINT LAURENT LIBRE BERRY CRUSH EDP",
+      "perfume-name-lancome-lash-idole-curl-goddess": "LANCOME LASH IDOLE CURL GODDESS MASCARA 01 DIVINE BLACK",
+      "perfume-name-guess-iconic-mist": "GUESS ICONIC FOR WOMEN FRAGRANCE MIST 250ML",
+      "perfume-name-guess-iconic-sublime-edp": "GUESS ICONIC SUBLIME EDP",
+      "perfume-name-guess-iconic-sublime-mist": "GUESS ICONIC SUBLIME FRAGRANCE MIST 250ML",
+      "perfume-name-guess-seductive-noir-homme-edt": "GUESS SEDUCTIVE HOMME NOIR EDT",
+      "perfume-name-azzaro-forever-wanted-absolu": "AZZARO FOREVER WANTED ABSOLU PARFUM",
+      "perfume-name-mugler-alien-pulp": "MUGLER ALIEN PULP EDP",
+      "perfume-name-armani-acqua-di-gio-edp-intense": "GIORGIO ARMANI ACQUA DI GIO EDP INTENSE",
+      "perfume-name-armani-stronger-with-you-powerfully": "EMPORIO ARMANI STRONGER WITH YOU POWERFULLY EDP",
+      "perfume-name-lancome-goddess-dimension-eyeshadow": "LANCOME IDOLE GODDESS DIMENSION MONO EYESHADOW",
+      "perfume-name-biotherm-aquasource-electrolyte-dewy-gel": "BIOTHERM AQUASOURCE+ ELECTROLYTE DEWY GEL 100H 100ML",
+      "perfume-name-lancome-mascara-melter": "LANCOME MASCARA MELTER CARING MASCARA REMOVER",
+      "perfume-name-lancome-o-juicy-hair-body-mist": "LANCOME O JUICY HAIR & BODY MIST 100ML",
+      "perfume-name-lancome-idole-peach-n-roses": "LANCOME IDOLE PEACH 'N ROSES EDP",
+      "perfume-name-miu-miu-edp": "MIU MIU EDP",
+      "perfume-name-miu-miu-eau-bleue": "MIU MIU L'EAU BLEUE EDP",
+      "perfume-name-miu-miu-eau-rosee": "MIU MIU L'EAU ROSEE EDT",
+      "perfume-name-miu-miu-fleur-de-lait": "MIU MIU FLEUR DE LAIT EDP",
+      "perfume-name-miu-miu-miutine": "MIU MIU MIUTINE EDP",
+      "perfume-name-lancome-renergie-nano-resurfacer-starter": "LANCOME RENERGIE NANO-RESURFACER 400 BOOSTER STARTER KIT",
+      "perfume-name-lancome-renergie-nano-resurfacer-refill": "LANCOME RENERGIE NANO-RESURFACER 400 BOOSTER REFILL",
+      "perfume-name-lancome-renergie-collagen-lift-xtend-cream": "LANCOME RENERGIE COLLAGEN+ LIFT-XTEND CREAM 50ML",
+      "perfume-name-lancome-renergie-yeux-lifting-20": "LANCOME RENERGIE YEUX LIFTING EYE CREAM 20ML",
+      "perfume-name-lancome-la-nuit-tresor-rouge-drama": "LANCOME LA NUIT TRESOR ROUGE DRAMA EDP INTENSE 50ML",
+      "perfume-name-lancome-la-vie-est-belle-edp-30-body-lotion-set-s26": "LANCOME LA VIE EST BELLE EDP 30ML + BODY LOTION 50ML GIFT SET",
+      "perfume-name-prada-paradigme-edp-50-set-s26": "PRADA PARADIGME EDP 50ML + 10ML GIFT SET",
+      "perfume-name-prada-paradoxe-edp-30-set-s26": "PRADA PARADOXE EDP 30ML + 10ML GIFT SET",
+      "perfume-name-valentino-uomo-born-in-roma-intense-50-set-s26": "VALENTINO UOMO BORN IN ROMA INTENSE EDP 50ML + 10ML GIFT SET",
+      "perfume-name-ysl-myslf-edp-60-shower-gel-set-s26": "YVES SAINT LAURENT MYSLF EDP 60ML + SHOWER GEL 50ML GIFT SET",
+      "perfume-name-ysl-libre-edp-90-body-balm-set-s26": "YVES SAINT LAURENT LIBRE EDP 90ML + 10ML + BODY BALM 50ML GIFT SET",
+      "perfume-name-ysl-libre-edp-50-mirror-set-s26": "YVES SAINT LAURENT LIBRE EDP 50ML + 10ML + MIRROR GIFT SET",
+      "perfume-name-ysl-libre-edp-30-set-s26": "YVES SAINT LAURENT LIBRE EDP 30ML + 10ML GIFT SET",
+      "perfume-name-ysl-libre-edp-50-candy-glaze-set-s26": "YVES SAINT LAURENT LIBRE EDP 50ML + 10ML + CANDY GLAZE 15 GIFT SET",
+      "perfume-name-armani-prive-orange-mediterranee": "ARMANI PRIVE ORANGE MEDITERRANEE EDT",
+      "perfume-name-armani-prive-oud-nacre": "ARMANI PRIVE OUD NACRE EDP",
+      "perfume-name-armani-si-nude-bloom": "ARMANI SI NUDE BLOOM EDP 50ML",
+      "perfume-name-armani-si-passione-red-bloom": "ARMANI SI PASSIONE RED BLOOM EDP 50ML",
+      "perfume-name-ysl-y-iced-cologne": "YVES SAINT LAURENT Y ICED COLOGNE EDT INTENSE",
+      "perfume-name-ysl-lash-latex": "YVES SAINT LAURENT LASH LATEX MASCARA",
+      "perfume-name-ysl-lovenude-kiss-shaper": "YVES SAINT LAURENT LOVENUDE KISS SHAPER LIP LINER",
+      "perfume-name-ysl-lovenude-lip-blusher": "YVES SAINT LAURENT LOVENUDE LIP BLUSHER BALM",
+      "perfume-name-guess-iconic-blue-men-edp": "GUESS ICONIC BLUE FOR MEN EDP",
+      "perfume-name-guess-seductive-desire-men-edt": "GUESS SEDUCTIVE DESIRE FOR MEN EDT",
+      "perfume-name-guess-seductive-desire-women-edt": "GUESS SEDUCTIVE DESIRE FOR WOMEN EDT",
+      "perfume-name-guess-seductive-desire-women-mist": "GUESS SEDUCTIVE DESIRE FOR WOMEN FRAGRANCE MIST 250ML",
+      "perfume-name-cavalli-florence": "ROBERTO CAVALLI FLORENCE EDP",
+      "perfume-name-cavalli-paradiso-assoluto": "ROBERTO CAVALLI PARADISO ASSOLUTO EDP",
+      "perfume-name-cavalli-paradiso-azzurro": "ROBERTO CAVALLI PARADISO AZZURRO EDP 75ML",
+      "perfume-name-just-cavalli-wild-blue-him": "JUST CAVALLI WILD BLUE FOR HIM EDT",
+      "perfume-name-just-cavalli-wild-pink-her": "JUST CAVALLI WILD PINK FOR HER EDP",
+      "perfume-name-armani-stronger-with-you-spices": "EMPORIO ARMANI STRONGER WITH YOU SPICES EDP 100ML",
+      "perfume-name-armani-my-way-sunny-vanilla": "ARMANI MY WAY SUNNY VANILLA EDP",
+      "perfume-name-prada-paradoxe-hand-cream": "PRADA PARADOXE HAND CREAM 50ML",
+      "perfume-name-prada-luna-rossa-ocean-le-parfum-set": "PRADA LUNA ROSSA OCEAN LE PARFUM 50ML + 10ML GIFT SET",
+      "perfume-name-armani-stronger-with-you-edt-valentines-set": "ARMANI EMPORIO STRONGER WITH YOU EDT 100ML + 15ML GIFT SET",
+      "perfume-name-armani-stronger-with-you-intensely-valentines-set": "ARMANI EMPORIO STRONGER WITH YOU INTENSELY EDP 100ML + 15ML GIFT SET",
+      "perfume-name-prada-paradigme-edp-30-set": "PRADA PARADIGME EDP 30ML + 10ML GIFT SET",
+      "perfume-name-ysl-lash-clash-loveshine-set-s26": "YVES SAINT LAURENT LASH CLASH MASCARA + LOVESHINE 44 GIFT SET",
+      "perfume-name-ysl-myslf-edp-100-set-s26": "YVES SAINT LAURENT MYSLF EDP 100ML + 10ML GIFT SET",
+      "perfume-name-ysl-lash-clash-libre-set-s26": "YVES SAINT LAURENT LASH CLASH MASCARA + LIBRE EDP 10ML GIFT SET",
+      "perfume-name-lancome-tiuw-shape-stick": "LANCOME TEINT IDOLE ULTRA WEAR SHAPE STICK FOUNDATION",
+      "perfume-name-lancome-tiuw-shape-stick-blush": "LANCOME TEINT IDOLE SHAPE STICK BLUSH",
+      "perfume-name-lancome-tiuw-shape-stick-highlighter": "LANCOME TEINT IDOLE SHAPE STICK HIGHLIGHTER 01 FLEXING LAVENDER",
+      "perfume-name-lancome-lip-idole-cuddle-blur": "LANCOME LIP IDOLE CUDDLEBLUR LIP VELVET",
+      "perfume-name-margiela-replica-chasing-sunsets": "MAISON MARGIELA REPLICA CHASING SUNSETS EDT 100ML",
+      "perfume-name-margiela-replica-up-at-dawn": "MAISON MARGIELA REPLICA UP AT DAWN EDT",
+      "perfume-name-mugler-angel-blush": "MUGLER ANGEL BLUSH EDP",
+      "perfume-name-ralph-lauren-polo-67-extreme": "RALPH LAUREN POLO 67 EDP EXTREME",
+      "perfume-name-ralph-lauren-polo-red-extreme-edp": "RALPH LAUREN POLO RED EDP EXTREME",
+      "perfume-name-prada-luna-rossa-carbon-edp": "PRADA LUNA ROSSA CARBON EDP",
+      "perfume-name-lancome-absolue-longevity-md-anticipate-cream": "LANCOME ABSOLUE LONGEVITY MD ANTICIPATE THE CREAM 50ML",
+      "perfume-name-lancome-absolue-longevity-md-intercept-cream": "LANCOME ABSOLUE LONGEVITY MD INTERCEPT THE CREAM 50ML",
+      "perfume-name-lancome-absolue-longevity-md-intercept-serum": "LANCOME ABSOLUE LONGEVITY MD INTERCEPT THE SERUM 50ML",
+      "perfume-name-lancome-absolue-longevity-md-reset-cream": "LANCOME ABSOLUE LONGEVITY MD RESET THE CREAM 50ML",
+      "perfume-name-lancome-absolue-longevity-md-reset-serum": "LANCOME ABSOLUE LONGEVITY MD RESET THE SERUM 50ML",
+      "perfume-name-lancome-lveb-hair-body-mist": "LANCOME LA VIE EST BELLE HAIR & BODY MIST 100ML",
+      "perfume-name-armani-si-passione-intense-set": "ARMANI SI PASSIONE INTENSE EDP 50ML + 7ML GIFT SET",
+      "perfume-name-nishane-ani-x": "NISHANE ANI X EXTRAIT DE PARFUM",
+      "perfume-name-nishane-fan-your-flames-x": "NISHANE FAN YOUR FLAMES X EXTRAIT DE PARFUM 50ML",
+      "perfume-name-nishane-hacivat-x": "NISHANE HACIVAT X EXTRAIT DE PARFUM",
+      "perfume-name-nishane-hacivat": "NISHANE HACIVAT EXTRAIT DE PARFUM 100ML",
+      "perfume-name-nishane-hundred-silent-ways": "NISHANE HUNDRED SILENT WAYS EXTRAIT DE PARFUM",
+      "perfume-name-nishane-zenne": "NISHANE ZENNE EXTRAIT DE PARFUM 50ML",
+      "perfume-name-nishane-ani": "NISHANE ANI EXTRAIT DE PARFUM 50ML",
+      "perfume-name-nishane-ege": "NISHANE EGE EXTRAIT DE PARFUM 50ML",
+      "perfume-name-nishane-tempfluo": "NISHANE TEMPFLUO EXTRAIT DE PARFUM 50ML",
+      "perfume-name-nishane-wulong-cha": "NISHANE WULONG CHA EXTRAIT DE PARFUM 50ML",
+      "perfume-name-mancera-wild-fruits": "MANCERA WILD FRUITS EDP",
+      "perfume-name-mancera-aoud-blue-notes": "MANCERA AOUD BLUE NOTES EDP 120ML",
+      "perfume-name-mancera-lemon-line": "MANCERA LEMON LINE EDP 60ML",
+      "perfume-name-mancera-amore-caffe": "MANCERA AMORE CAFFE EDP 120ML",
+      "perfume-name-mancera-french-riviera": "MANCERA FRENCH RIVIERA EDP 120ML",
+      "perfume-name-mancera-cherry-cherry": "MANCERA CHERRY CHERRY EDP",
+      "perfume-name-mancera-fig-me-up": "MANCERA FIG ME UP EDP",
+      "perfume-name-mancera-amberful": "MANCERA AMBERFUL EDP",
+      "perfume-name-mancera-cinque-terre": "MANCERA CINQUE TERRE EDP",
+      "perfume-name-mancera-eternal-wood": "MANCERA ETERNAL WOOD EDP",
+      "perfume-name-mancera-intense-red-tobacco": "MANCERA INTENSE RED TOBACCO",
+      "perfume-name-mancera-tonka-cola": "MANCERA TONKA COLA EDP",
+      "perfume-name-montale-day-dreams": "MONTALE DAY DREAMS EDP",
+      "perfume-name-montale-bubble-forever": "MONTALE BUBBLE FOREVER EDP",
+      "perfume-name-montale-crazy-in-love": "MONTALE CRAZY IN LOVE EDP",
+      "perfume-name-montale-arabians-musk": "MONTALE ARABIANS MUSK EDP",
+      "perfume-name-montale-arabians": "MONTALE ARABIANS EDP 100ML",
+      "perfume-name-xerjoff-erba-gold": "XERJOFF ERBA GOLD EDP",
+      "perfume-name-xerjoff-erba-pura": "XERJOFF ERBA PURA EDP",
+      "perfume-name-xerjoff-accento-overdose": "XERJOFF ACCENTO OVERDOSE EDP 100ML",
+      "perfume-name-xerjoff-accento": "XERJOFF ACCENTO EDP 100ML",
+      "perfume-name-xerjoff-purple-accento": "XERJOFF PURPLE ACCENTO EDP 100ML",
+      "perfume-name-xerjoff-opera": "XERJOFF OPERA EDP 100ML",
+      "perfume-name-xerjoff-torino21": "XERJOFF TORINO21 EDP",
+      "perfume-name-xerjoff-alexandria-ii": "XERJOFF ALEXANDRIA II PARFUM",
+      "perfume-name-xerjoff-alexandria-ii-anniversary": "XERJOFF ALEXANDRIA II ANNIVERSARY PARFUM 100ML",
+      "perfume-name-xerjoff-coro": "XERJOFF CORO EDP 100ML",
+      "perfume-name-xerjoff-neorio": "XERJOFF X DURAN DURAN NEORIO PARFUM 50ML",
+      "perfume-name-xerjoff-black-moonlight": "XERJOFF X DURAN DURAN BLACK MOONLIGHT PARFUM 50ML",
+      "perfume-name-tiziana-terenzi-kirke-overdose": "TIZIANA TERENZI KIRKE OVERDOSE EXTRAIT DE PARFUM 100ML",
+      "perfume-name-btso-dirty-heaven": "BORNTOSTANDOUT DIRTY HEAVEN EDP 50ML",
+      "perfume-name-btso-dirty-rice": "BORNTOSTANDOUT DIRTY RICE EDP 50ML",
+      "perfume-name-btso-angels-powder": "BORNTOSTANDOUT ANGELS' POWDER EDP 50ML",
+      "perfume-name-btso-filthy-musk": "BORNTOSTANDOUT FILTHY MUSK EDP 50ML",
+      "perfume-name-btso-fig-porn": "BORNTOSTANDOUT FIG PORN EDP 50ML",
+      "perfume-name-btso-indecent-cherry": "BORNTOSTANDOUT INDECENT CHERRY EDP 50ML",
+      "perfume-name-btso-mud": "BORNTOSTANDOUT MUD EDP 50ML",
+      "perfume-name-btso-nanatopia": "BORNTOSTANDOUT NANATOPIA EDP 50ML",
+      "perfume-name-btso-black-mango": "BORNTOSTANDOUT BLACK MANGO EXTRAIT EXTREME 50ML",
+      "perfume-name-btso-oud-candy": "BORNTOSTANDOUT OUD CANDY EXTRAIT EXTREME 50ML",
+      "perfume-name-btso-black-guava": "BORNTOSTANDOUT BLACK GUAVA EXTRAIT EXTREME 50ML",
+      "perfume-name-btso-drunk-lovers-cream": "BORNTOSTANDOUT DRUNK LOVERS HAND & BODY CREAM 350ML",
+      "perfume-name-btso-drunk-lovers-wash": "BORNTOSTANDOUT DRUNK LOVERS HAND & BODY WASH 350ML",
+      "perfume-name-jhag-ego-stratis": "JULIETTE HAS A GUN EGO STRATIS EDP",
+      "perfume-name-jhag-lust-for-sun": "JULIETTE HAS A GUN LUST FOR SUN EDP",
+      "perfume-name-jhag-ode-to-dullness": "JULIETTE HAS A GUN ODE TO DULLNESS EDP 50ML",
+      "perfume-name-mancera-instant-crush": "MANCERA INSTANT CRUSH EDP",
+      "perfume-name-mancera-jardin-exclusif": "MANCERA JARDIN EXCLUSIF EDP",
+      "perfume-name-mancera-red-tobacco": "MANCERA RED TOBACCO EDP",
+      "perfume-name-mancera-holidays": "MANCERA HOLIDAYS EDP",
+      "perfume-name-mancera-intense-cedrat-boise": "MANCERA INTENSE CEDRAT BOISE",
+      "perfume-name-montale-dark-vanilla": "MONTALE DARK VANILLA EDP 100ML",
+      "perfume-name-xerjoff-40-knots": "XERJOFF JTC 40 KNOTS EDP 100ML",
+      "perfume-name-xerjoff-don": "XERJOFF JTC DON EDP",
+      "perfume-name-xerjoff-comandante": "XERJOFF JTC COMANDANTE! EDP 100ML",
+      "perfume-name-xerjoff-more-than-words": "XERJOFF JTC MORE THAN WORDS EDP",
+      "perfume-name-xerjoff-decas": "XERJOFF 1861 DECAS EDP 100ML",
+      "perfume-name-xerjoff-naxos": "XERJOFF 1861 NAXOS EDP 100ML",
+      "perfume-name-xerjoff-renaissance": "XERJOFF 1861 RENAISSANCE EDP 100ML",
+      "perfume-name-xerjoff-la-capitale": "XERJOFF LA CAPITALE PARFUM 50ML",
+      "perfume-name-xerjoff-nio": "XERJOFF NIO PARFUM 50ML",
+      "perfume-name-xerjoff-golden-dallah": "XERJOFF GOLDEN DALLAH PARFUM 50ML",
+      "perfume-name-tiziana-terenzi-nero-oudh": "TIZIANA TERENZI NERO OUDH EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-delox": "TIZIANA TERENZI DELOX EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-dionisio": "TIZIANA TERENZI DIONISIO EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-leo": "TIZIANA TERENZI LEO EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-libra": "TIZIANA TERENZI LIBRA EXTRAIT DE PARFUM 100ML",
+      "perfume-name-bond-no9-gold-coast": "BOND NO. 9 GOLD COAST EDP 100ML",
+      "perfume-name-jhag-lili-fantasy": "JULIETTE HAS A GUN LILI FANTASY EDP 100ML",
+      "perfume-name-jhag-magnolia-bliss": "JULIETTE HAS A GUN MAGNOLIA BLISS EDP",
+      "perfume-name-mancera-aoud-vanille": "MANCERA AOUD VANILLE EDP",
+      "perfume-name-mancera-cedrat-boise": "MANCERA CEDRAT BOISE EDP",
+      "perfume-name-mancera-choco-violet": "MANCERA CHOCO VIOLET EDP",
+      "perfume-name-mancera-gold-prestigium": "MANCERA GOLD PRESTIGIUM EDP",
+      "perfume-name-mancera-gold-intensive-aoud": "MANCERA GOLD INTENSIVE AOUD EDP 60ML",
+      "perfume-name-mancera-roses-greedy": "MANCERA ROSES GREEDY EDP",
+      "perfume-name-mancera-roses-vanille": "MANCERA ROSES VANILLE EDP",
+      "perfume-name-mancera-velvet-vanilla": "MANCERA VELVET VANILLA EDP 60ML",
+      "perfume-name-mancera-wind-wood": "MANCERA WIND WOOD EDP 120ML",
+      "perfume-name-mancera-black-line": "MANCERA BLACK LINE EDP 60ML",
+      "perfume-name-mancera-black-gold": "MANCERA BLACK GOLD EDP 60ML",
+      "perfume-name-mancera-aoud-lemon-mint": "MANCERA AOUD LEMON MINT EDP 60ML",
+      "perfume-name-montale-aoud-lime": "MONTALE AOUD LIME EDP 100ML",
+      "perfume-name-montale-aoud-night": "MONTALE AOUD NIGHT EDP 100ML",
+      "perfume-name-montale-black-aoud": "MONTALE BLACK AOUD EDP",
+      "perfume-name-montale-black-aoud-intense": "MONTALE BLACK AOUD INTENSE EDP 100ML",
+      "perfume-name-montale-chocolate-greedy": "MONTALE CHOCOLATE GREEDY EDP",
+      "perfume-name-montale-dark-purple": "MONTALE DARK PURPLE EDP 100ML",
+      "perfume-name-montale-intense-pepper": "MONTALE INTENSE PEPPER EDP",
+      "perfume-name-montale-intense-cafe": "MONTALE INTENSE CAFE EDP",
+      "perfume-name-montale-intense-roses-musk": "MONTALE INTENSE ROSES MUSK EXTRAIT DE PARFUM",
+      "perfume-name-montale-intense-tiare": "MONTALE INTENSE TIARE EDP 100ML",
+      "perfume-name-montale-oudmazing": "MONTALE OUDMAZING EDP",
+      "perfume-name-montale-rose-elixir": "MONTALE ROSE ELIXIR EDP",
+      "perfume-name-montale-santal-wood": "MONTALE SANTAL WOOD EDP 100ML",
+      "perfume-name-montale-soleil-de-capri": "MONTALE SOLEIL DE CAPRI EDP",
+      "perfume-name-montale-starry-nights": "MONTALE STARRY NIGHTS EDP",
+      "perfume-name-montale-sweet-vanilla": "MONTALE SWEET VANILLA EDP",
+      "perfume-name-montale-vanilla-extasy": "MONTALE VANILLA EXTASY EDP 100ML",
+      "perfume-name-montale-vanille-absolu": "MONTALE VANILLE ABSOLU EDP",
+      "perfume-name-montale-white-musk": "MONTALE WHITE MUSK EDP 100ML",
+      "perfume-name-montale-wood-spices": "MONTALE WOOD & SPICES EDP",
+      "perfume-name-montale-sweet-peony": "MONTALE SWEET PEONY EDP",
+      "perfume-name-montale-oud-dream": "MONTALE OUD DREAM EDP",
+      "perfume-name-montale-sensual-instinct": "MONTALE SENSUAL INSTINCT EDP",
+      "perfume-name-montale-arabians-tonka": "MONTALE ARABIANS TONKA EDP 100ML",
+      "perfume-name-montale-oud-tobacco": "MONTALE OUD TOBACCO EDP",
+      "perfume-name-tiziana-terenzi-ursa": "TIZIANA TERENZI URSA EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-al-contrario": "TIZIANA TERENZI AL CONTRARIO EXTRAIT DE PARFUM 50ML",
+      "perfume-name-tiziana-terenzi-cassiopea": "TIZIANA TERENZI CASSIOPEA EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-draco": "TIZIANA TERENZI DRACO EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-orion": "TIZIANA TERENZI ORION EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-andromeda": "TIZIANA TERENZI ANDROMEDA EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-andromeda-body-lotion": "TIZIANA TERENZI ANDROMEDA BODY LOTION 250ML",
+      "perfume-name-tiziana-terenzi-kirke": "TIZIANA TERENZI KIRKE EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-borea": "TIZIANA TERENZI BOREA EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-spirito-fiorentino": "TIZIANA TERENZI SPIRITO FIORENTINO EXTRAIT DE PARFUM 100ML",
+      "perfume-name-xerjoff-casamorati-regio": "XERJOFF CASAMORATI REGIO EDP 100ML",
+      "perfume-name-xerjoff-casamorati-bouquet-ideale": "XERJOFF CASAMORATI BOUQUET IDEALE EDP",
+      "perfume-name-xerjoff-casamorati-1888": "XERJOFF CASAMORATI 1888 EDP 100ML",
+      "perfume-name-xerjoff-casamorati-dama-bianca": "XERJOFF CASAMORATI DAMA BIANCA EDP",
+      "perfume-name-xerjoff-casamorati-fiero": "XERJOFF CASAMORATI FIERO EDP 100ML",
+      "perfume-name-xerjoff-casamorati-fiore-d-ulivo": "XERJOFF CASAMORATI FIORE D'ULIVO EDP 100ML",
+      "perfume-name-xerjoff-casamorati-gran-ballo": "XERJOFF CASAMORATI GRAN BALLO EDP 100ML",
+      "perfume-name-xerjoff-casamorati-la-tosca": "XERJOFF CASAMORATI LA TOSCA EDP",
+      "perfume-name-xerjoff-casamorati-lira": "XERJOFF CASAMORATI LIRA EDP 100ML",
+      "perfume-name-xerjoff-casamorati-dolce-amalfi": "XERJOFF CASAMORATI DOLCE AMALFI EDP",
+      "perfume-name-jhag-mmmm": "JHAG MMMM... EDP 100ML",
+      "perfume-name-jhag-another-oud": "JHAG ANOTHER OUD EDP 100ML",
+      "perfume-name-jhag-sunny-side-up": "JHAG SUNNY SIDE UP EDP 100ML",
+      "perfume-name-jhag-vanilla-vibes": "JHAG VANILLA VIBES EDP 100ML",
+      "perfume-name-jhag-musc-invisible": "JHAG MUSC INVISIBLE EDP 100ML",
+      "perfume-name-bond-no9-lafayette-street": "BOND NO.9 LAFAYETTE STREET EDP 100ML",
+      "perfume-name-bond-no9-tribeca": "BOND NO.9 TRIBECA EDP 100ML",
+      "perfume-name-shiseido-fslx-cleansing-foam": "SHISEIDO FUTURE SOLUTION LX EXTRA RICH CLEANSING FOAM 125ML",
+      "perfume-name-shiseido-fslx-eye-lip-cream": "SHISEIDO FUTURE SOLUTION LX EYE AND LIP CONTOUR REGENERATING CREAM 17ML",
+      "perfume-name-shiseido-fslx-total-protective-cream": "SHISEIDO FUTURE SOLUTION LX TOTAL PROTECTIVE CREAM SPF30 50ML",
+      "perfume-name-shiseido-fslx-total-regenerating-cream": "SHISEIDO FUTURE SOLUTION LX TOTAL REGENERATING CREAM 50ML",
+      "perfume-name-shiseido-fslx-brightening-softener": "SHISEIDO FUTURE SOLUTION LX CONCENTRATED BRIGHTENING SOFTENER 150ML",
+      "perfume-name-shiseido-legendary-enmei-cream": "SHISEIDO FUTURE SOLUTION LX LEGENDARY ENMEI ULTIMATE RENEWING CREAM 50ML",
+      "perfume-name-shiseido-legendary-enmei-serum": "SHISEIDO FUTURE SOLUTION LX LEGENDARY ENMEI ULTIMATE LUMINANCE SERUM 30ML",
+      "perfume-name-shiseido-legendary-enmei-eye-cream": "SHISEIDO FUTURE SOLUTION LX LEGENDARY ENMEI ULTIMATE RADIANCE EYE CREAM 15ML",
+      "perfume-name-shiseido-vp-advanced-cream": "SHISEIDO VITAL PERFECTION UPLIFTING AND FIRMING ADVANCED CREAM 50ML",
+      "perfume-name-shiseido-vp-day-cream-spf30": "SHISEIDO VITAL PERFECTION UPLIFTING AND FIRMING ADVANCED DAY CREAM SPF30 50ML",
+      "perfume-name-shiseido-vp-eye-cream": "SHISEIDO VITAL PERFECTION UPLIFTING AND FIRMING ADVANCED EYE CREAM 15ML",
+      "perfume-name-shiseido-vp-wrinklespot-treatment": "SHISEIDO VITAL PERFECTION INTENSIVE WRINKLESPOT TREATMENT 20ML",
+      "perfume-name-shiseido-vp-overnight-firming-treatment": "SHISEIDO VITAL PERFECTION OVERNIGHT FIRMING TREATMENT 50ML",
+      "perfume-name-shiseido-vp-concentrated-supreme-cream": "SHISEIDO VITAL PERFECTION CONCENTRATED SUPREME CREAM 50ML",
+      "perfume-name-shiseido-bop-micro-click-concentrate": "SHISEIDO BIO-PERFORMANCE MICRO-CLICK CONCENTRATE",
+      "perfume-name-shiseido-bop-skin-hiforce-cream": "SHISEIDO BIO-PERFORMANCE SKIN HIFORCE CREAM 50ML",
+      "perfume-name-shiseido-bop-super-revitalizing-cream": "SHISEIDO BIO-PERFORMANCE ADVANCED SUPER REVITALIZING CREAM",
+      "perfume-name-shiseido-ultimune-serum": "SHISEIDO ULTIMUNE POWER INFUSING SERUM",
+      "perfume-name-shiseido-ultimune-oil": "SHISEIDO ULTIMUNE POWER INFUSING OIL 75ML",
+      "perfume-name-shiseido-ultimune-hand-cream": "SHISEIDO ULTIMUNE POWER INFUSING HAND CREAM 50ML",
+      "perfume-name-shiseido-ultimune-future-power-shot": "SHISEIDO ULTIMUNE FUTURE POWER SHOT 15ML",
+      "perfume-name-shiseido-men-total-revitalizer-cream": "SHISEIDO MEN TOTAL REVITALIZER CREAM 50ML",
+      "perfume-name-shiseido-men-total-revitalizer-eye": "SHISEIDO MEN TOTAL REVITALIZER EYE 15ML",
+      "perfume-name-shiseido-men-total-revitalizer-light-fluid": "SHISEIDO MEN TOTAL REVITALIZER LIGHT FLUID 70ML",
+      "perfume-name-shiseido-men-skin-empowering-cream": "SHISEIDO MEN SKIN EMPOWERING CREAM 50ML",
+      "perfume-name-shiseido-refreshing-cleansing-water": "SHISEIDO REFRESHING CLEANSING WATER 180ML",
+      "perfume-name-shiseido-complete-cleansing-microfoam": "SHISEIDO COMPLETE CLEANSING MICROFOAM 180ML",
+      "perfume-name-shiseido-benefiance-contour-serum": "SHISEIDO BENEFIANCE WRINKLE SMOOTHING CONTOUR SERUM 30ML",
+      "perfume-name-shiseido-benefiance-eye-cream": "SHISEIDO BENEFIANCE WRINKLE SMOOTHING EYE CREAM 15ML",
+      "perfume-name-shiseido-eudermine-activating-essence": "SHISEIDO EUDERMINE ACTIVATING ESSENCE 145ML",
+      "perfume-name-shiseido-eye-lip-makeup-remover": "SHISEIDO INSTANT EYE AND LIP MAKEUP REMOVER 125ML",
+      "perfume-name-shiseido-clear-sun-stick-spf50": "SHISEIDO EXPERT SUN PROTECTOR CLEAR STICK SPF50+ 20G",
+      "perfume-name-shiseido-expert-sun-lotion-spf50": "SHISEIDO EXPERT SUN PROTECTOR LOTION SPF50+ 150ML",
+      "perfume-name-shiseido-expert-sun-cream-spf50": "SHISEIDO EXPERT SUN PROTECTOR CREAM SPF50+ 50ML",
+      "perfume-name-shiseido-expert-sun-lotion-spf30": "SHISEIDO EXPERT SUN PROTECTOR LOTION SPF30 150ML",
+      "perfume-name-shiseido-zen-essence": "SHISEIDO ZEN ESSENCE EDP",
+      "perfume-name-shiseido-ginza-datura": "SHISEIDO GINZA DATURA EDP",
+      "perfume-name-shiseido-ginza-intense": "SHISEIDO GINZA INTENSE EDP",
+      "perfume-name-shiseido-ginza-night-intense": "SHISEIDO GINZA NIGHT EDP INTENSE",
+      "perfume-name-shiseido-synchro-skin-radiant-lifting-foundation": "SHISEIDO SYNCHRO SKIN RADIANT LIFTING FOUNDATION SPF30 30ML",
+      "perfume-name-shiseido-synchro-skin-self-refreshing-foundation": "SHISEIDO SYNCHRO SKIN SELF-REFRESHING FOUNDATION SPF30 30ML",
+      "perfume-name-shiseido-revitalessence-skin-glow-foundation": "SHISEIDO REVITALESSENCE SKIN GLOW FOUNDATION SPF30 30ML",
+      "perfume-name-shiseido-technosatin-gel-lipstick": "SHISEIDO TECHNOSATIN GEL LIPSTICK",
+      "perfume-name-shiseido-controlledchaos-mascaraink": "SHISEIDO CONTROLLEDCHAOS MASCARAINK",
+      "perfume-name-shiseido-sports-bb": "SHISEIDO SPORTS BB SPF50+ 30ML",
+      "perfume-name-shiseido-sports-bb-compact": "SHISEIDO SPORTS BB COMPACT SPF50+ 12G",
+      "perfume-name-bond-no9-sutton-place": "BOND NO.9 SUTTON PLACE EDP 100ML",
+      "perfume-name-shiseido-lipliner-inkduo": "SHISEIDO LIPLINER INKDUO PRIME + LINE",
+      "perfume-name-shiseido-benefiance-overnight-cream": "SHISEIDO BENEFIANCE OVERNIGHT WRINKLE RESISTING CREAM 50ML",
+      "perfume-name-shiseido-synchro-skin-soft-blurring-primer": "SHISEIDO SYNCHRO SKIN SOFT BLURRING PRIMER 30ML",
+      "perfume-name-shiseido-vp-liftdefine-mask": "SHISEIDO VITAL PERFECTION LIFTDEFINE RADIANCE FACE MASK (6 PAIRS)",
+      "perfume-name-shiseido-ginza": "SHISEIDO GINZA EDP",
+      "perfume-name-shiseido-ginza-body-lotion": "SHISEIDO GINZA PERFUMED BODY LOTION 200ML",
+      "perfume-name-shiseido-ginza-murasaki": "SHISEIDO GINZA MURASAKI EDP",
+      "perfume-name-shiseido-zen": "SHISEIDO ZEN EDP",
+      "perfume-name-shiseido-men-face-cleanser": "SHISEIDO MEN FACE CLEANSER 125ML",
+      "perfume-name-shiseido-men-energizing-moisturizer-fluid": "SHISEIDO MEN ENERGIZING MOISTURIZER EXTRA LIGHT FLUID 100ML",
+      "perfume-name-shiseido-microliner-ink": "SHISEIDO MICROLINER INK",
+      "perfume-name-shiseido-waso-gel-to-oil-cleanser": "SHISEIDO WASO SHIKULIME GEL-TO-OIL CLEANSER 125ML",
+      "perfume-name-shiseido-waso-yuzu-c-sleeping-mask": "SHISEIDO WASO YUZU-C BEAUTY SLEEPING MASK 50ML",
+      "perfume-name-shiseido-waso-color-control-moisturizer": "SHISEIDO WASO SHIKULIME COLOR CONTROL OIL-FREE MOISTURIZER SPF30 50ML",
+      "perfume-name-shiseido-waso-mega-hydrating-moisturizer": "SHISEIDO WASO SHIKULIME MEGA HYDRATING MOISTURIZER 50ML",
+      "perfume-name-shiseido-ee-hydrating-cream": "SHISEIDO ESSENTIAL ENERGY HYDRATING CREAM 50ML",
+      "perfume-name-shiseido-ee-hydrating-day-cream-spf20": "SHISEIDO ESSENTIAL ENERGY HYDRATING DAY CREAM SPF20 50ML",
+      "perfume-name-shiseido-bop-skin-filler": "SHISEIDO BIO-PERFORMANCE SKIN FILLER SERUMS (2 X 30ML)",
+      "perfume-name-shiseido-clarifying-cleansing-foam": "SHISEIDO CLARIFYING CLEANSING FOAM 125ML",
+      "perfume-name-shiseido-extra-rich-cleansing-milk": "SHISEIDO EXTRA RICH CLEANSING MILK 125ML",
+      "perfume-name-shiseido-deep-cleansing-foam": "SHISEIDO DEEP CLEANSING FOAM 125ML",
+      "perfume-name-shiseido-treatment-softener": "SHISEIDO TREATMENT SOFTENER 150ML",
+      "perfume-name-shiseido-revitalizing-treatment-softener": "SHISEIDO REVITALIZING TREATMENT SOFTENER 150ML",
+      "perfume-name-shiseido-benefiance-day-cream-spf25": "SHISEIDO BENEFIANCE WRINKLE SMOOTHING DAY CREAM SPF25 50ML",
+      "perfume-name-shiseido-benefiance-wrinkle-smoothing-cream": "SHISEIDO BENEFIANCE WRINKLE SMOOTHING CREAM 50ML",
+      "perfume-name-shiseido-fslx-total-radiance-foundation": "SHISEIDO FUTURE SOLUTION LX TOTAL RADIANCE FOUNDATION SPF20 30ML",
+      "perfume-name-shiseido-maru-fude-brush": "SHISEIDO MARU FUDE MULTI FACE BRUSH",
+      "perfume-name-shiseido-naname-fude-brush": "SHISEIDO NANAME FUDE MULTI EYE BRUSH",
+      "perfume-name-shiseido-hasu-fude-brush": "SHISEIDO HASU FUDE FOUNDATION BRUSH",
+      "perfume-name-shiseido-daiya-fude-brush": "SHISEIDO DAIYA FUDE FACE DUO BRUSH",
+      "perfume-name-shiseido-tsutsu-fude-brush": "SHISEIDO TSUTSU FUDE CONCEALER BRUSH",
+      "perfume-name-shiseido-hanatsubaki-hake-brush": "SHISEIDO HANATSUBAKI HAKE POLISHING FACE BRUSH",
+      "perfume-name-shiseido-colorgel-lipbalm": "SHISEIDO COLORGEL LIPBALM",
+      "perfume-name-shiseido-synchro-skin-powder-foundation": "SHISEIDO SYNCHRO SKIN SELF-REFRESHING CUSTOM FINISH POWDER FOUNDATION 9G",
+      "perfume-name-shiseido-benefiance-nutriperfect-day-cream": "SHISEIDO BENEFIANCE NUTRIPERFECT DAY CREAM SPF15 50ML",
+      "perfume-name-shiseido-benefiance-nutriperfect-night-cream": "SHISEIDO BENEFIANCE NUTRIPERFECT NIGHT CREAM 50ML",
+      "perfume-name-shiseido-archliner-ink": "SHISEIDO ARCHLINER INK 01 SHIBUI BLACK",
+      "perfume-name-shiseido-brow-inktrio": "SHISEIDO BROW INKTRIO",
+      "perfume-name-shiseido-imperiallash-mascaraink": "SHISEIDO IMPERIALLASH MASCARAINK 01 SUMI BLACK",
       "perfume-name-diesel": "DIESEL LOVERDOSE",
-      "perfume-name-dkny": "DKNY BE DELICIOUS",
-      "perfume-name-juliet": "JULIET HAS A GUN",
-      "perfume-name-prada": "Prada Candy",
-      "perfume-name-roberto": "Roberto Cavalli Just Cavalli For Her",
       "perfume-name-valentino": "Valentino Born In Roma",
-      "perfume-name-thierry": "Thierry Mugler MU ANG NOVA",
-      "perfume-name-ralph": "Ralph Lauren Polo Blue",
-      "perfume-name-montale": "MONTALE AOUD LIME",
       "perfume-name-viktor": "FLBB EDP SPRAY",
-      "perfume-name-yves": "YVES SAINT LAURENT",
       "decor-alt-valentine": "Valentins-Zimmerdekoration",
       "decor-alt-birthday": "Geburtstags-Zimmerdekoration",
       "decor-alt-custom": "Individuelle Zimmerdekoration",
@@ -677,7 +5923,7 @@
       "decor-story-birthday-price": "Geburtstags-Zimmerdekoration \u2014 60\u20ac",
     },
     al: {
-      "extra-page-title": "Concierge | Hotel n\u00eb Prishtin\u00eb",
+      "extra-page-title": "Concierge & Dhurata | Derand Hotel Prishtina",
       "extra-meta-description":
         "Derand Hotel Extra ofron surpriza dhe shtesa premium n\u00eb dhom\u00eb n\u00eb Prishtin\u00eb.",
       "extra-hero-title": "Krijoni momentet tuaja të përsosura.",
@@ -763,10 +6009,18 @@
       "extra-cart-delivery-title": "Detajet e dorëzimit",
       "extra-cart-delivery-hint":
         "Na tregoni kur ta çojmë porosinë në dhomën tuaj.",
-      "extra-cart-delivery-24h":
-        "Lule dhe parfume kërkojnë të paktën 24 orë njoftim për dorëzim.",
+      "extra-cart-delivery-30min":
+        "Ju lutemi prisni deri në 30 minuta që porosia juaj të dorëzohet në dhomën tuaj.",
       "extra-cart-delivery-24h-error":
-        "Dorëzimi i luleve ose parfumeve duhet të jetë të paktën 24 orë nga tani. Ju lutemi zgjidhni datë dhe orë më vonë.",
+        "Dorëzimi kërkon të paktën 30 minuta nga tani. Ju lutemi zgjidhni një orë më vonë.",
+      "extra-cart-night-tomorrow":
+        "Dorëzimi në dhomë bëhet nga ora 09:00 deri në 21:00. Porositë e bëra tani do të dorëzohen nesër në mëngjes në orën 09:00.",
+      "extra-cart-night-today":
+        "Dorëzimi në dhomë fillon në orën 09:00. Porositë e bëra tani do të dorëzohen sot në mëngjes në orën 09:00.",
+      "extra-cart-delivery-hours-error":
+        "Dorëzimi në dhomë është i mundur nga ora 09:00 deri në 21:00. Ju lutemi zgjidhni një orë brenda këtij intervali.",
+      "extra-cart-delivery-night-error":
+        "Porositë pas orës 21:00 dorëzohen nga ora 09:00. Ju lutemi zgjidhni orën 09:00 ose më vonë.",
       "extra-cart-name-label": "Emri në rezervim",
       "extra-cart-name-placeholder": "Si në rezervimin tuaj",
       "extra-cart-room-label": "Numri i dhomës",
@@ -853,27 +6107,1743 @@
       "spirit-desc-jager":
         "Likier bimor i servirur i ftohur në dhomë me qelq premium.",
       "perfume-desc-armani":
-        "Aromë legjendare ujore me nota deti dhe bergamot mbi bazë kedri.",
+        "Një aromë elegante dhe freskuese për femra që përzien freskinë e limonit dhe mentes me nota të ngrohta jasemini dhe druri kedri. Një aromë ikonike floral-ujore, e përkryer për përdorim të përditshëm.",
+      "perfume-desc-cacharel":
+        "Një aromë magjepsëse dhe passionante për femra që kombinon nota të gjalla të grejpfrutit rozë dhe mandarinës me një zemër trëndafili të kuq dhe bazë të ngrohtë vanilje-amber. Një aromë e re floral-frutore dhe romantike, e përkryer për çdo rast.",
+      "perfume-desc-armani-code":
+        "Një aromë elegante dhe seduktive për femra me nota kryesore portokalli italian dhe jasemin, zemër luleshtrydhi portokalli dhe bazë të ngrohtë sensuale mjalti dhe vanilje. Një aromë sofistikuar floral-orientale, e përkryer për veshje mbrëmjeje dhe raste speciale.",
+      "perfume-desc-lancome":
+        "Një aromë e ndritshme dhe gëzuar për femra që hapet me currant të zi dhe dardhë të ndritshme, lulëzon në një zemër iris dhe jasemini, dhe përfundon në një bazë të shijshme gourmand pralinë, patchouli dhe vanilje. Një aromë ngritëse floral-gourmand që feston momentet e bukura të jetës.",
+      "perfume-desc-mon-paris":
+        "Një aromë magjepsëse dhe romantike për femra që shpërth me bergamot calabrian, luleshtrydhe dhe mali të freskëta, evoluon në një zemër të ndritshme lule datura dhe pioni, dhe mbetet me bazë chypre sensuale patchouli dhe mushk të bardhë. Një aromë e gjallë floral-frutore e frymëzuar nga magjia e Parisit.",
+      "perfume-desc-black-opium":
+        "Një aromë vartëse dhe seduktive për femra që hapet me një shpërthim të guximshëm kafeje të pasur dhe piper rozë të ëmbël, shpaloset në një zemër të ndritshme jasemini dhe luleshtrydhi portokalli, dhe përfundon në një bazë të ngrohtë vanilje dhe patchouli. Një aromë magjepsëse oriental-gourmand, e përkryer për veshje mbrëmjeje.",
+      "perfume-desc-diesel-brave":
+        "Një aromë e guximshme dhe karizmatike për burra që hapet me limon dhe mandarinë të freskët, forcohet me një zemër druri kedri dhe koriandër, dhe përfundon me një bazë të thellë maskuline amberi dhe benzoe. Një aromë e sigurt aromatike-druri për burrin modern.",
+      "perfume-desc-lhomme-nuit":
+        "Një aromë seduktive dhe intensive për burra që hapet me piper të zi pikant dhe kardamom, thellohet me një zemër të pasur labdanumi dhe patchouli, dhe mbetet me bazë të tymtë magnetike vetiveri dhe vanilje. Një aromë e fuqishme druri-orientale e krijuar për netë të paharrueshme.",
+      "perfume-desc-armani-babel-he":
+        "Një aromë sofistikuar dhe moderne për burra që përzien agrume të freskëta dhe livandë aromatike me një zemër të ngrohtë geraniumi dhe bazë të butë druri-amber. Një aromë maskuline e përshtatshme për ditë dhe mbrëmje.",
+      "perfume-desc-y-edp":
+        "Një aromë e thellë dhe e sigurt për burra që hapet me mollë të freskët, xhenxhefil dhe bergamot, evoluon përmes një zemre aromatike trumzi, juniperi dhe geraniumi, dhe mbetet mbi bazë të guximshme druri amberwood, kedri dhe vetiveri. Një aromë moderne aromatike-fougère për burrin që krijon suksesin e vet.",
+      "perfume-desc-libre-edt":
+        "Një aromë e guximshme dhe e lirë për femra që përzien mandarinë të gjallë dhe livandë me një zemër të ndritshme luleshtrydhi portokalli dhe jasemini, dhe përfundon me bazë sensuale ambergrisi dhe vanilje. Një aromë moderne floral-aromatike që feston lirinë dhe vetëbesimin.",
+      "perfume-desc-valentino-voce-viva":
+        "Një aromë e ndritshme dhe shprehëse për femra që hapet me mandarinë shkëlqyese dhe bergamot të freskët, lulëzon në një zemër të pasur luleshtrydhi portokalli dhe gardenie, dhe përfundon në bazë të ngrohtë sofistikuese moss kristal dhe vanilje. Një aromë e gjallë florale që feston fuqinë e zërit dhe individualitetin.",
+      "perfume-desc-valentino-donna":
+        "Një aromë moderne dhe sofistikuese për femra që hapet me aronë të lëngshme dhe jasemin shkëlqyese, zhvillohet në një zemër florale të ndritshme dhe përfundon me bazë të pasur sensuale vanilje dhe bourbon. Një aromë elegante amber-florale që kap glamourin romak dhe feminitetin bashkëkohor.",
+      "perfume-desc-libre-edp-intense":
+        "Një interpretim më i thellë dhe sensual i Libre që thekson livandën dhe luleshtrydhnë portokalli me një zemër voluptuoze orkideje dhe bazë të pasur intense vanilje dhe amber. Një aromë e fuqishme floral-amber për femrat që festojnë feminitetin e guximshëm dhe lirinë pa kufij.",
+      "perfume-desc-valentino-donna-yellow":
+        "Një aromë e ndritshme dhe e lëmuar për femra që hapet me limon italian shkëlqyese dhe bergamot të lëngshme, lulëzon në një zemër delikate trëndafili absolut dhe jasemini, dhe shkrihet në bazë të ngrohtë diellore vanilje dhe mushku. Një aromë e gëzueshme floral-gourmand që kap ngrohtësinë e artë të verës romake.",
+      "perfume-desc-armani-my-way":
+        "Një aromë e ndritshme dhe ngritëse për femra që hapet me bergamot të freskët dhe luleshtrydhnë portokalli nga India, zhvillohet në një zemër opulente tuberoze dhe jasemini nga Egjipti, dhe përfundon me bazë të ngrohtë elegante kedri virginian dhe vanilje nga Madagaskari. Një aromë florale frymëzuese që feston zbulimin, lidhjen dhe feminitetin me qëllim.",
+      "perfume-desc-lancome-idole":
+        "Një aromë e pastër dhe e ndritshme për femra që hapet me dardhë shkëlqyese, bergamot dhe piper rozë, lulëzon në një zemër radiante trëndafili dhe jasemini, dhe përfundon me bazë të butë moderne mushk të bardhë dhe patchouli. Një aromë florale e freskët që përfaqëson vetëbesimin, elegancën dhe fuqinë e çdo gruaje.",
+      "perfume-desc-armani-in-love-with-you":
+        "Një aromë lozonjare dhe seduktive për femra që hapet me aronë të hidhur dhe mali të lëngshme, lulëzon në një zemër florale trëndafili dhe jasemini, dhe shkrihet në bazë të ngrohtë adiktive patchouli dhe vanilje. Një aromë frutore-florale shkëlqyese që kap emocionin e të dashuruarit.",
+      "perfume-desc-prada-luna-rossa-carbon":
+        "Një aromë e guximshme dhe sofistikuese për burra që hapet me bergamot të freskët dhe livandë të gjallë, evoluon përmes një zemre metalike qymri dhe notash ujore, dhe përfundon me bazë të thatë elegante patchouli dhe ambroxan. Një aromë moderne aromatike-fougère e frymëzuar nga shpirti i lundrimit dhe maskuliniteti i rafinuar.",
+      "perfume-desc-prada-luna-rossa-black":
+        "Një aromë e errët dhe magnetike për burra që hapet me bergamot të ndritshme dhe angelikë, thellohet në një zemër intense patchouli dhe coumarin, dhe mbetet mbi bazë të pasur sensuale amber dhe mushku. Një aromë sofistikuese druri-aromatike që kap forcën, misterin dhe elegancën moderne.",
+      "perfume-desc-prada-lhomme":
+        "Një aromë e rafinuar dhe elegante për burra që hapet me neroli të freskët dhe piper të zi, zhvillohet në një zemër pluhurore iris dhe amber, dhe përfundon me bazë të lëmuar sofistikuese patchouli dhe kedri. Një aromë moderne aromatike që përfaqëson luksin e matur dhe stilin pa përpjekje.",
+      "perfume-desc-prada-la-femme":
+        "Një aromë sofistikuese dhe sensuale për femra që hapet me magnoli të ndritshme dhe frangipani, lulëzon në një zemër florale të pasur tuberoze dhe ylang-ylang, dhe shkrihet në bazë të ngrohtë mbështjellëse dylli bletësh dhe vanilje. Një aromë elegante oriental-florale që feston feminitetin modern me vetëbesim të qetë.",
+      "perfume-desc-armani-si-passione":
+        "Një aromë e pasionuar dhe e gjallë për femra që hapet me aronë të lëngshme dhe dardhë shkëlqyese, lulëzon në një zemër romantike trëndafili dhe jasemini, dhe përfundon me bazë të ngrohtë sensuale vanilje dhe kedri. Një aromë e guximshme frutore-florale që përfaqëson vetëbesimin, tërheqjen dhe fuqinë e pasionit.",
+      "perfume-desc-viktor-spicebomb-extreme":
+        "Një aromë e fuqishme dhe adiktive për burra që hapet me grejpfrut të ndritshme dhe kokrra pimenti, ndërtohet në një zemër zjarri kanellë dhe shafran, dhe përfundon me bazë të pasur të dehur duhan, vanilje dhe vetiver bourbon. Një aromë intense oriental-spicy që rrezaton ngrohtësi, vetëbesim dhe seduktion.",
+      "perfume-desc-viktor-bonbon":
+        "Një aromë e ëmbël dhe feminine që hapet me portokall të lëngshme dhe pjeshkë të ndritshme, lulëzon në një zemër delikate karamel dhe jasemini, dhe përfundon me bazë kremoze adiktive sandal dhe kedri. Një aromë lozonjare gourmand-florale që kap kënaqësinë, karizmën dhe feminitetin e parezistueshëm.",
+      "perfume-desc-cacharel-noa":
+        "Një aromë e butë dhe ngushëlluese për femra që hapet me paeoni të ndritshme dhe mushk të bardhë, zhvillohet në një zemër delikate lule kafeje dhe jasemini, dhe përfundon me bazë të ngrohtë pluhurore vanilje dhe sandal. Një aromë e butë florale që evokon qetësi, pastërti dhe feminitet të përjetshëm.",
+      "perfume-desc-armani-acqua-gio-stick":
+        "Një stick elegant aromatik që kap shpirtin e ndritshëm të Acqua di Gioia me limon shkëlqyese, jasemin dhe nota kedri. Një format praktik 75g që ofron freski të qëndrueshme dhe karakterin ujor-floral të këtij aromi të dashur Armani.",
+      "perfume-desc-armani-black-code-stick":
+        "Një stick deodorant sofistikuar i frymëzuar nga aroma ikonike Armani Code, që përzien bergamot të freskët dhe anis me një zemër të ngrohtë luleshtrydhi ulliri dhe bazë sensuale tonka dhe kedri. Një format praktik 75g që ofron freski të qëndrueshme dhe maskulinitetin elegant të Armani Code.",
+      "perfume-desc-armani-si-edp":
+        "Një aromë shik dhe moderne për femra që hapet me nektar të ndritshëm aronë dhe fresi të butë, zhvillohet në një zemër elegante trëndafili dhe jasemini, dhe mbetet mbi bazë të ngrohtë sensuale vanilje, patchouli dhe druri. Një aromë sofistikuese chypre-frutore që përfaqëson elegancën, forcën dhe feminitetin bashkëkohor.",
+      "perfume-desc-diesel-brave-tattoo":
+        "Një aromë e guximshme dhe rebel për burra që hapet me mollë të gjallë dhe lëvozhgë limoni, evoluon përmes një zemre lëkure dhe korianderi, dhe përfundon me bazë të ngrohtë të qëndrueshme amberwood dhe patchouli. Një aromë aromatike-druri me karakter, e frymëzuar nga boja, qëndrimi dhe individualiteti pa frikë.",
+      "perfume-desc-lancome-lveb-body-milk":
+        "Një qumësht trupi luksoze me aromën ikonike La Vie Est Belle, që përzien iris të ndritshëm dhe jasemin delikat me vanilje të ngrohtë dhe patchouli. Një formulë ushqyese 200ml që lë lëkurën të butë, të parfumuar dhe të shndritshme nga gëzimi.",
+      "perfume-desc-lancome-tresor-edp":
+        "Një aromë e përjetshme dhe romantike për femra që hapet me lule kajsi delikate dhe pjeshkë, lulëzon në një zemër të pasur trëndafili dhe jargoni, dhe përfundon me bazë të ngrohtë sensuale vanilje, sandal dhe mushk. Një aromë elegante florale-frutore që përfaqëson dashurinë, feminitetin dhe elegancën e qëndrueshme.",
+      "perfume-desc-biotherm-aqp-fresh-eyes":
+        "Një gel freskues për sytë që ftoh dhe hidraton menjëherë konturin delikat të syve, duke ndihmuar të zvogëlojë dukjen e ënjtjeve dhe lodhjes. I pasuruar me Life Plankton të Biotherm dhe ujë malor të pastër, kjo formulë 15ml i lë sytë të pushuar, të ndritshëm dhe të rigjallëruar.",
+      "perfume-desc-biotherm-aquafitness-shower-gel":
+        "Një gel dushi tonizues që pastron dhe freskon lëkurën me një aromë ujore të qartë, të frymëzuar nga energjia e sporteve ujore. I pasuruar me Life Plankton të Biotherm dhe agjentë hidratues, kjo formulë 200ml e lë lëkurën të pastër, tonizuar dhe të rigjallëruar pas çdo dushi.",
+      "perfume-desc-lancome-effacernes":
+        "Long-wear softening concealer with SPF 30. Choose your shade — the lightweight 15ml formula covers dark circles, evens skin tone and minimises fine lines for a natural, rested look.",
+      "perfume-desc-lancome-grandiose-01":
+        "Grandiôse Mascara in shade 01 Noir Mirifique with Lancôme's Swan-Neck wand. Amplifies, curls and lengthens lashes for a wide-angle fan effect with clump-free volume.",
+      "perfume-desc-lancome-hypnose-clean-volume-01":
+        "Hypnôse Clean Volume mascara in shade 01 Black. Buildable volume and lash separation with a lightweight, smudge-resistant formula for soft, supple lashes.",
+      "perfume-desc-lancome-bi-facil-125":
+        "Bi-Facil double-action eye makeup remover, available in 75ml and 125ml. The bi-phase formula gently removes all eye makeup, including waterproof mascara, without drying delicate skin.",
+      "perfume-desc-lancome-galatee-confort-200":
+        "Galatée Confort cleansing milk for dry skin in 200ml. Enriched with honey and almond extract, it removes makeup and impurities while leaving skin calm, soothed and hydrated.",
+      "perfume-desc-lancome-crayon-khol-noir":
+        "Le Crayon Khôl in Noir — a creamy, ultra-blendable eye pencil for intense definition. Perfect for sharp lines or soft smoky eyes with high colour payoff.",
+      "perfume-desc-lancome-genifique-cream-50":
+        "Advanced Génifique Youth Activating Cream in a 50ml jar. A lightweight day moisturiser that targets visible signs of ageing and fatigue for smoother, radiant skin.",
+      "perfume-desc-lancome-hypnose-doll-eyes-wp-01":
+        "Hypnôse Doll Eyes Waterproof mascara in 01 Black. Cone-shaped brush coats lashes for volume, length and lift with a bold, curved, clump-free finish.",
+      "perfume-desc-lancome-hypnose-doll-eyes-01":
+        "Hypnôse Doll Eyes mascara in shade 01. Weightless formula with a cone-shaped brush thickens, extends and lifts lashes for a dramatic wide-eye effect.",
+      "perfume-desc-lancome-creme-mousse-confort-125":
+        "Crème Mousse Confort creamy foaming cleanser for dry skin, 125ml. Infused with Rose de France, it transforms into a rich foam that removes impurities and waterproof makeup.",
+      "perfume-desc-lancome-eau-micellaire-douceur-400":
+        "Eau Micellaire Douceur express cleansing water, 400ml. Micellar technology removes makeup and impurities from face, eyes and lips while keeping skin hydrated and silky soft.",
+      "perfume-desc-lancome-renergie-multilift-night-50":
+        "Rénergie Multi-Lift Night Cream, 50ml. Anti-ageing night moisturiser with Multi-Tension Technology that firms, smooths and rejuvenates skin while you sleep.",
+      "perfume-desc-lancome-renergie-creme-50":
+        "Rénergie Multi-Lift Day Cream in a 50ml jar. Lifts, firms and plumps skin while minimising fine lines. Includes SPF 15 for daily protection and revived radiance.",
+      "perfume-desc-lancome-tonique-douceur-400":
+        "Tonique Douceur softening hydrating toner, 400ml. Alcohol-free formula with plant extracts refines pores, tones and preps normal to combination skin for moisturiser.",
+      "perfume-desc-ysl-mascara-mvefc-01":
+        "YSL Mascara Volume Effet Faux Cils in 01 Black. Iconic false-lash effect mascara delivering instant volume, length and ultra-black drama with a flexible brush.",
+      "perfume-desc-ysl-dessin-sourcils-02":
+        "YSL Dessin des Sourcils eyebrow pencil, 1.3g. Choose your shade — defines and shapes brows with natural, buildable colour for a polished, structured look, with a built-in brow brush.",
+      "perfume-desc-ysl-mascara-vefc-wp-01":
+        "YSL Volume Effet Faux Cils Waterproof mascara in 01. Delivers intense volume and length with smudge-proof, long-wearing false-lash effect.",
+      "perfume-desc-armani-babel-she-edp":
+        "A seductive and sparkling fragrance for women that opens with juicy raspberry and aromatic neroli, blooms into rose absolute and closes with creamy vanilla and warm musk. The feminine counterpart to Emporio Babel HE.",
+      "perfume-desc-lancome-monsieur-big-01":
+        "Monsieur Big mascara in shade 01 Big Is The New Black. Ultra-creamy formula with a large brush delivers up to 12x more volume, intense black pigment and up to 24-hour wear without flaking or smudging.",
+      "perfume-desc-biotherm-waterlover-spf30-200":
+        "Waterlover face and body sun milk SPF 30, 200ml. Lightweight milky texture with eco-conscious filters protects against UVA and UVB while hydrating skin with Life Plankton — no white cast, suitable for sensitive skin.",
+      "perfume-desc-biotherm-waterlover-spf50-200":
+        "Waterlover face and body sun milk SPF 50, 200ml. High broad-spectrum protection in a fast-absorbing milk that leaves no white marks. Enriched with Life Plankton for hydration; water-resistant and suitable for sensitive skin.",
+      "perfume-desc-biotherm-blue-therapy-big-eye-15":
+        "Blue Therapy Eye cream, 15ml. Anti-ageing eye care that targets crow's feet, under-eye bags and loss of firmness. Rich yet fresh texture regenerates the delicate eye contour for a brighter, younger-looking gaze.",
+      "perfume-desc-ysl-touche-eclat-3":
+        "YSL Touche Éclat Radiant Touch illuminating pen. Choose your shade — it brightens under-eyes, highlights cheekbones and adds a natural, luminous glow.",
+      "perfume-desc-ysl-primer-moisture-glow":
+        "YSL Top Secrets Instant Moisture Glow, 40ml — a hydrating primer and moisturiser in one. Up to 72 hours of hydration, blurs fine lines and imperfections, preps the skin for makeup and leaves a fresh, dewy glow.",
+      "perfume-desc-lancome-hydra-zen-spf15-50":
+        "Hydra Zen anti-stress moisturising cream with SPF 15, 50ml jar. Soothes and comforts stressed skin, delivers long-lasting hydration and protects against daily UV exposure for a calm, healthy-looking complexion.",
+      "perfume-desc-lancome-absolu-plumper":
+        "Lancôme L'Absolu Gloss Rôsy Plump, 8ml — a light-pink plumping lip gloss with a creamy, non-sticky, high-shine finish. Hyaluronic acid keeps lips hydrated for up to 6 hours, while a cooling menthol touch leaves them looking fuller. Wear it alone or over your favourite lipstick.",
+      "perfume-desc-lancome-teint-miracle":
+        "Teint Miracle hydrating foundation with SPF 15, 30ml pump bottle. Choose your shade — the lightweight, buildable formula evens the complexion and gives skin a natural, lit-from-within glow.",
+      "perfume-desc-biotherm-lait-corporel-400":
+        "Biotherm's iconic Lait Corporel anti-drying body milk in a 400ml bottle. Enriched with Life Plankton and citrus extracts, it hydrates for up to 48 hours and leaves skin soft, smooth and delicately fresh-scented.",
+      "perfume-desc-biotherm-rasage-sensitive-200":
+        "Biotherm Homme Foam Shaver for sensitive skin, 200ml. A dense, rich shaving foam that cushions the razor for a close, comfortable shave and helps prevent irritation, redness and razor burn. With soothing allantoin, moisturising glycerin and Life Plankton™.",
+      "perfume-desc-biotherm-deo-pure-ecocert":
+        "Biotherm Deo Pure Natural Protect roll-on, 75ml — Biotherm's first Ecocert-certified organic deodorant. Free from aluminium salts and parabens, it gives 24-hour odour protection with natural-origin ingredients and aloe vera to soothe the skin. Leaves no marks on clothes.",
+      "perfume-desc-viktor-spicebomb-edt":
+        "Spicebomb Eau de Toilette by Viktor&Rolf — an explosive spicy-woody fragrance for men. Fresh bergamot and grapefruit open onto a fiery heart of chilli, saffron and cinnamon, settling into a warm base of leather, tobacco and vetiver.",
+      "perfume-desc-viktor-flowerbomb-nectar":
+        "Flowerbomb Nectar Eau de Parfum by Viktor&Rolf — a richer, more intense take on the iconic Flowerbomb. Luminous orange blossom and jasmine meet a sweet, gourmand heart of vanilla and an addictive amber-woody trail.",
+      "perfume-desc-biotherm-aquasource-serum-biphase-50":
+        "Biotherm Aquasource Aura Concentrate bi-phase serum, 50ml, for dry to very dry skin. Shake to activate the moisture micro-droplets — with Life Plankton™, Medicinal Aura Leaf and macadamia oil, it gives 24-hour regenerating hydration, refines skin texture and revives the glow.",
+      "perfume-desc-biotherm-aquapower-cleanser":
+        "Biotherm Homme Aquapower ultra-cleansing face wash for men, 125ml. A fresh gel that turns into a creamy foam, removing impurities with oligo-elements and Life Plankton™ — leaves skin clean, refreshed and ready for shaving.",
+      "perfume-desc-lancome-hypnose":
+        "Lancôme Hypnôse volumising mascara. Choose your shade — the buildable formula and signature brush give up to 6x more volume for intense, defined lashes without clumps.",
+      "perfume-desc-lancome-cils-booster-xl":
+        "Lancôme Cils Booster XL enhancing lash primer, 5.5ml. A white base with XL micro-fibres and vitamins B5 and E, applied before mascara to boost length, volume and curl without clumps. Suitable for sensitive eyes and contact lens wearers.",
+      "perfume-desc-lancome-monsieur-big-wp-01":
+        "Monsieur Big Waterproof mascara in 01 Big Is The New Black. The big brush delivers bold, intense volume in a waterproof formula that resists water, sweat and humidity all day.",
+      "perfume-desc-lancome-loose-setting-powder":
+        "Lancôme Long Time No Shine loose setting powder in Translucent, 15g. A weightless powder with ultra-fine mica and silica that absorbs oil, controls shine and extends foundation wear — a smooth matte finish with no white cast.",
+      "perfume-desc-lancome-setting-spray":
+        "Lancôme Fix It Forget It setting spray, 100ml. A refreshing mist with hyaluronic acid, kiwi and moringa extracts that keeps makeup in place for up to 24 hours — sweat- and weather-proof with a natural, shine-free finish.",
+      "perfume-desc-lancome-blush-subtil":
+        "Lancôme Blush Subtil powder blush. Choose your shade — the silky, buildable powder blends seamlessly for a fresh, natural flush of colour that lasts all day.",
+      "perfume-desc-armani-ea-with-you-intensely":
+        "Emporio Armani Stronger With You Intensely Eau de Parfum for men. Spicy pink pepper and juniper open onto a warm heart of toffee, cinnamon and lavender, settling into an addictive base of vanilla, tonka bean and amber.",
+      "perfume-desc-prada-candy":
+        "Prada Candy Eau de Parfum — a playful, sensual gourmand for women. Soft white musks open onto warm benzoin and a rich caramel accord for a smooth, addictive trail.",
+      "perfume-desc-prada-la-femme-intense":
+        "Prada La Femme Intense Eau de Parfum — a deeper, more sensual interpretation of La Femme. Frangipani and ylang-ylang open onto an intensified heart of tuberose, jasmine sambac and orange blossom, resting on warm patchouli, vanilla and vetiver.",
+      "perfume-desc-prada-lhomme-intense":
+        "Prada L'Homme Intense Eau de Parfum — a richer, warmer take on L'Homme. Powdery iris and amber deepen with patchouli and tonka bean for an elegant, sensual woody signature.",
+      "perfume-desc-prada-lhomme-leau":
+        "Prada L'Homme L'Eau Eau de Toilette — a fresh, luminous version of L'Homme. Bright ginger and neroli meet the signature iris, resting on a clean base of cedar, amber and sandalwood.",
+      "perfume-desc-biotherm-life-plankton-eye-15":
+        "Biotherm Life Plankton™ Eye cream, 15ml. With Biotherm's highest concentration of Life Plankton™ and bio-fermented hyaluronic acid, it targets crow's feet, wrinkles, puffiness and dark circles. Light, creamy texture — suitable for sensitive eyes and contact lens wearers.",
+      "perfume-desc-biotherm-tpur-salty-gel-cleanser-125":
+        "Biotherm Homme T-Pur Anti-Oil & Shine cleansing gel, 125ml. An exfoliating, detoxifying gel with French sea salts that reduces shine and blemishes and removes pollution particles. Ideal for oily skin — use every morning before shaving or in the shower.",
+      "perfume-desc-biotherm-aqs-concentrate-bounce-50":
+        "Biotherm Aqua Bounce Super Concentrate, 50ml. Hyaluronic acid, glycerin and Life Plankton™ water plump and soften dry, dehydrated skin. A fast-absorbing gel-fluid with 24-hour hydration.",
+      "perfume-desc-biotherm-aqs-concentrate-pure-50":
+        "Biotherm Aqua Pure Super Concentrate, 50ml, for combination to oily skin. Salicylic acid, glycerin and Life Plankton™ water tighten pores, reduce excess sebum and control shine in a fresh, oil-free gel.",
+      "perfume-desc-biotherm-aqs-concentrate-glow-50":
+        "Biotherm Aqua Glow Super Concentrate, 50ml, for dull or uneven skin. A vitamin complex, glycerin and Life Plankton™ water brighten and even the skin tone in a light fluid with 24-hour moisture.",
+      "perfume-desc-lancome-brow-define-pencil":
+        "Lancôme Brôw Define Pencil, 0.09g. Choose your shade — an ultra-fine retractable tip draws precise, hair-like strokes, and the spoolie brush blends them for natural, defined brows. Waterproof and long-lasting.",
+      "perfume-desc-lancome-hypnose-palette":
+        "Lancôme Hypnôse Palette 5 Couleurs, 4g. Choose your shade — five coordinated shades from matte to shimmer in a soft, creamy powder that blends easily from day to night looks. Long-wearing and crease-resistant, with more intense colour when applied wet.",
+      "perfume-desc-biotherm-aquapower-deo-roll-75":
+        "Biotherm Homme Aquapower 48H Protection antiperspirant roll-on, 75ml. Self-reactive freshness technology releases freshness when it detects sweat, while Life Plankton™ water keeps skin dry and comfortable. Fluid, non-greasy texture with the fresh Aquapower scent.",
+      "perfume-desc-ysl-lhomme-nuit-edp-100":
+        "Yves Saint Laurent La Nuit de L'Homme Eau de Parfum — a seductive, intense take on the night-time classic. Spicy cardamom and lavender over a warm, sensual woody base.",
+      "perfume-desc-lancome-mademoiselle-shine":
+        "Lancôme L'Absolu Mademoiselle Shine lipstick, 3.2g. Choose your shade — a balmy, conditioning lipstick that glides on with juicy colour and a high-shine finish. Enriched with Pro-Xylane and rose oil to keep lips soft, hydrated and supple.",
+      "perfume-desc-libre-edp":
+        "Yves Saint Laurent Libre Eau de Parfum — the floral lavender of freedom. Mandarin and lavender essence open onto a sensual heart of orange blossom and jasmine, resting on warm Madagascar vanilla and musk.",
+      "perfume-desc-biotherm-amber-algae-revitalize-day":
+        "Biotherm Blue Therapy Amber Algae Revitalize day cream, 50ml. Amber algae energises the skin while calcium, plant oils and shea butter nourish and strengthen it. A velvety cream with light-reflecting micro-pearls for an instant glow — anti-ageing care for mature or dull skin.",
+      "perfume-desc-biotherm-amber-algae-revitalize-night":
+        "Biotherm Blue Therapy Amber Algae Revitalize night cream, 50ml. Amber algae with resveratrol, hyaluronic acid and shea butter in a rich, melting balm that works overnight to firm the skin and smooth crow's feet. For dry or mature skin.",
+      "perfume-desc-lancome-genifique-serum-50":
+        "Lancôme Advanced Génifique Youth Activating serum, 50ml. Pre- and probiotic fractions, hyaluronic acid and vitamin Cg strengthen the skin barrier and boost radiance, for visibly younger-looking skin in 7 days. A lightweight first step morning and night, suitable for all skin types, including sensitive.",
+      "perfume-desc-lancome-rose-sugar-scrub":
+        "Lancôme Rose Sugar Scrub, 100ml — a gentle exfoliating scrub. Fine sugar grains melt as you massage, while acacia honey, rose water and hyaluronic acid leave the skin smooth, soft and comforted. Suitable for sensitive skin; use 2–3 times a week.",
+      "perfume-desc-lancome-hydra-zen-cream-50":
+        "Lancôme Hydra Zen Cream, 50ml — a moisturising, soothing day and night cream with hyaluronic acid for normal to dry skin, including sensitive. Gives up to 48 hours of hydration and strengthens the moisture barrier for calmer, more comfortable skin.",
+      "perfume-desc-lancome-hydra-zen-nuit-50":
+        "Lancôme Hydra Zen Night Cream, 50ml. A silky night cream with hyaluronic acid, rose and moringa extracts that recharges moisture and soothes stressed, sensitive skin overnight, so it looks rested and fresh in the morning.",
+      "perfume-desc-lancome-hydra-zen-glow-50":
+        "Lancôme Hydra Zen Anti-Stress Glow Liquid Moisturizer, 50ml. A lightweight fluid with 14 amino acids, hyaluronic acid, aloe vera and rose extract for 24-hour hydration, a stronger moisture barrier and a healthy glow. Non-comedogenic and suitable for all skin types.",
+      "perfume-desc-ysl-lhomme-le-parfum-100":
+        "Yves Saint Laurent L'Homme Le Parfum, 100ml — a woody aromatic fragrance for men. Cardamom, ozonic notes and Primofiori lemon open onto a heart of basil, geranium and violet leaf, resting on cedar, vetiver and warm amberwood.",
+      "perfume-desc-biotherm-tpur-cleanser-125":
+        "Biotherm Homme T-Pur Cleanser, 125ml — an unclogging, oil-control cleanser for normal to oily skin. The white clay-like texture lathers into a foam, while sea minerals, zinc and absorbent perlite purify pores and reduce shine. Use morning (before shaving) and evening.",
+      "perfume-desc-ysl-mascara-mvefc-the-curler":
+        "YSL Mascara Volume Effet Faux Cils The Curler in 01 Rebellious Black, 6.6ml. A dual-sided brush — black fibres for volume and a pink comb to lift — curls and holds lashes all day, with a formula enriched with coconut, walnut-leaf and bamboo oils.",
+      "perfume-desc-ysl-eyeliner-couture-01":
+        "YSL Couture Eyeliner in 1 Noir Minimal Mat, 2.95ml. A liquid liner with an ultra-fine felt tip for precise lines, in a deep black, quick-drying matte finish that lasts all day without smudging.",
+      "perfume-desc-biotherm-aqua-super-mask-glow":
+        "Biotherm Aqua Glow Flash Mask, one 31g sheet mask. Life Plankton™ water and a vitamin complex deliver a boost of hydration and radiance to dull skin in 15 minutes — no rinsing needed. Suitable for all skin types.",
+      "perfume-desc-biotherm-aqua-super-mask-bounce":
+        "Biotherm Aqua Bounce Flash Mask, one 31g sheet mask. Life Plankton™ water and hyaluronic acid plump and hydrate the skin in 15 minutes for a firmer, bouncier look — no rinsing needed. Suitable for all skin types.",
+      "perfume-desc-biotherm-aqua-super-mask-pure":
+        "Biotherm Aqua Pure Flash Mask, one 31g sheet mask. Life Plankton™ water and salicylic acid hydrate while refining pores for a fresh, purified complexion in 15 minutes — no rinsing needed. Suitable for all skin types.",
+      "perfume-desc-ysl-tatouage-velvet-cream-201":
+        "YSL Tatouage Couture Velvet Cream liquid lipstick in 201 Rouge Tatouage, a vivid classic red, 6ml. A creamy matte texture with a velvety feel and high coverage that lasts without drying the lips, applied with a precise angled cushion applicator.",
+      "perfume-desc-biotherm-life-plankton-body-milk-400":
+        "Biotherm Life Plankton™ Multi-Corrective Body Milk, 400ml pump bottle. A silky, fast-absorbing milk with Life Plankton™, plant oils and shea butter that firms, nourishes and smooths the skin. Suitable for sensitive skin, with a light musky scent.",
+      "perfume-desc-ysl-satin-crush-eyeshadow-05":
+        "YSL Satin Crush mono eyeshadow in 05 Radical Rust, a rosy rust-burgundy. A powdery-creamy texture with a satin glow and buildable intensity, applied with a finger or brush, in a mirrored black-and-gold compact.",
+      "perfume-desc-lancome-cils-booster-serum":
+        "Lancôme Cils Booster Lash Revitalizing Serum, 4ml. Hyaluronic acid, an amino-acid complex and cica condition lashes from root to tip and reduce lash loss. Apply twice a day along the lash line — ophthalmologist-tested and suitable for sensitive eyes.",
+      "perfume-desc-valentino-born-in-roma-uomo-edt":
+        "Valentino Born in Roma Uomo Eau de Toilette — a woody aromatic vetiver for men. Violet leaf, ginger and lemon open onto clary sage, a fresh peppermint accord and mineral salt, resting on smoky vetiver, guaiac wood and leather.",
+      "perfume-desc-valentino-donna-edp-30":
+        "Valentino Donna Eau de Parfum — a couture floral for women in the iconic studded bottle. Grapefruit, bergamot and blackcurrant open onto a heart of rose, peach and iris, resting on patchouli, vanilla and praline.",
+      "perfume-desc-valentino-uomo-edt":
+        "Valentino Uomo Eau de Toilette — an elegant woody fragrance for men. Bergamot, lemon and cardamom open onto clary sage, lavandin and black pepper, resting on cedar, vetiver, vanilla and iris.",
+      "perfume-desc-ysl-mascara-mvefc-radical-01":
+        "YSL Mascara Volume Effet Faux Cils Radical in 01 Black Over Black, 7.5ml. An ultra-black, carbon-pigment formula with argan oil and walnut-leaf extract, and a brush mixing soft and stiff bristles for extreme false-lash volume.",
+      "perfume-desc-lancome-lash-idole-01":
+        "Lancôme Lash Idôle lash-lifting and volumising mascara in 01 Glossy Black, 8ml. Choose classic or waterproof — a lightweight gel formula with white tea extract and a curved 360-bristle wand lifts, fans out and volumises lashes without clumps, flaking or smudging for up to 24 hours.",
+      "perfume-desc-armani-stronger-with-you-absolu":
+        "Emporio Armani Stronger With You Absolutely — the most intense, addictive version of Stronger With You for men. Rum, elemi and bergamot open onto lavender and davana, resting on a warm, gourmand base of chestnut, Madagascar vanilla, cedar and patchouli.",
+      "perfume-desc-valentino-born-in-roma-uomo-yellow-dream":
+        "Valentino Born in Roma Uomo Yellow Dream Eau de Toilette, 100ml — a sunny, woody aromatic for men in the yellow Rockstud bottle. Italian mandarin and pineapple open onto a spicy gingerbread accord, resting on vanilla absolute and cedarwood.",
+      "perfume-desc-ysl-crushliner":
+        "YSL Crushliner Stylo waterproof eyeliner. Choose your shade — a retractable pencil with intense colour in one stroke that lasts up to 24 hours on the lash line, resisting water and smudging. Infused with pomegranate extract and ophthalmologist-tested.",
+      "perfume-desc-cacharel-yes-i-am":
+        "Cacharel Yes I Am Eau de Parfum — a bold amber floral for women in the iconic lipstick-shaped bottle. Raspberry, mandarin and bergamot open onto gardenia, jasmine and ginger flower, resting on a creamy milk accord with caramel, vanilla, cardamom and sandalwood.",
+      "perfume-desc-cacharel-yes-i-am-purple":
+        "Cacharel Yes I Am Fabulous Eau de Parfum, 30ml — a fruity, creamy amber-vanilla scent in the purple lipstick bottle. Juicy blackberry opens onto purple heliotrope, resting on a gourmand base of milk and hazelnut.",
+      "perfume-desc-cacharel-yes-i-am-glorious":
+        "Cacharel Yes I Am Glorious Eau de Parfum, 50ml — a luminous fruity floral in the peach lipstick bottle. Peach nectar and mandarin open onto frangipani, tiaré and magnolia, resting on a creamy milkshake accord with sandalwood and white cedar.",
+      "perfume-desc-cacharel-loulou":
+        "Cacharel LouLou Eau de Parfum — the cult 1987 oriental floral in its iconic blue bottle. Plum, iris, violet and mimosa open onto tiaré flower, tuberose and orange blossom, resting on warm vanilla, sandalwood, incense and musk.",
+      "perfume-desc-viktor-spicebomb-night-vision-edt":
+        "Viktor&Rolf Spicebomb Night Vision Eau de Toilette, 90ml — a fresh, spicy-woody fragrance for men. Bergamot, green mandarin, grapefruit, apple and cardamom open onto clary sage, geranium and lavandin, resting on roasted almond, tonka bean, patchouli and cedarwood.",
+      "perfume-desc-viktor-flowerbomb-dew":
+        "Viktor&Rolf Flowerbomb Dew Eau de Parfum, 50ml — a fresh, dewy floral for women. Bergamot, pear and ambrette open onto a dewy rose accord and iris, resting on soft white musk, cashmeran and heliotrope.",
+      "perfume-desc-diesel-bad":
+        "Diesel Bad Eau de Toilette — a woody fragrance for men in a bottle inspired by a leather biker jacket. Bergamot, cardamom and lavender open onto a caviar accord with orris and sage, resting on tobacco, tonka bean, Ambroxan and patchouli.",
+      "perfume-desc-diesel-fuel-for-life-homme":
+        "Diesel Fuel for Life Homme Eau de Toilette — an aromatic fougère for men in the retro flask bottle. Star anise and grapefruit open onto raspberry and lavender, resting on woods and heliotrope.",
+      "perfume-desc-mugler-alien-edp":
+        "Mugler Alien Eau de Parfum — a mysterious, radiant floral woody amber for women in the iconic amethyst talisman bottle. Luminous sambac jasmine meets solar cashmeran wood, resting on a warm trail of white amber. The 60ml bottle is refillable.",
+      "perfume-desc-mugler-alien-goddess":
+        "Mugler Alien Goddess Eau de Parfum, refillable — a sunny floral woody fragrance for women in a golden talisman bottle. Bergamot and coconut water open onto jasmine grandiflorum and heliotrope, resting on bourbon vanilla and cashmeran.",
+      "perfume-desc-armani-my-way-intense":
+        "Giorgio Armani My Way Eau de Parfum Intense, refillable — a deeper, more sensual take on My Way. Orange blossom opens onto an intense floral heart of tuberose and jasmine, resting on creamy sandalwood and Madagascar vanilla.",
+      "perfume-desc-prada-luna-rossa-ocean":
+        "Prada Luna Rossa Ocean Eau de Toilette — a fresh aromatic fougère for men inspired by the sea. Bergamot, pink pepper and artemisia open onto lavender, iris, sage, suede and saffron, resting on musk, caramel, vetiver and patchouli.",
+      "perfume-desc-biotherm-aquasource-gel-50":
+        "Biotherm Aquasource Hyalu Plump Gel, 50ml, for normal to combination skin. Two types of hyaluronic acid and Life Plankton™ give up to 48 hours of hydration in a light, fresh gel that plumps the skin and suits sensitive skin too.",
+      "perfume-desc-lancome-hypnose-absolu-de-noir":
+        "Lancôme Hypnôse L'Absolu de Noir mascara in 01 Extra Black, 6.2ml. The extra-black version of Hypnôse — a 30% darker, semi-matte formula with the 1,000-bristle brush for buildable, dramatic volume that doesn't flake.",
+      "perfume-desc-lancome-24h-drama-liqui-pencil":
+        "Lancôme Drama Liqui-Pencil, 1.2g. Choose your shade — a hybrid gel eyeliner pencil with the intense colour of a liquid liner. Waterproof and long-wearing for up to 24 hours without smudging, flaking or transferring; suitable for sensitive eyes and contact lens wearers.",
+      "perfume-desc-lancome-tiuw-stick":
+        "Lancôme Teint Idole Ultra Wear foundation stick, 9g. Choose your shade — a cream-to-powder formula with medium to full coverage and a natural matte finish that lasts up to 24 hours and resists transfer. Use it as foundation, concealer or contour with the built-in brush.",
+      "perfume-desc-lancome-tiuw-stick-blush-03":
+        "Lancôme Teint Idole Ultra Wear blush stick in 03 Wild Ruby, a deep red-pink, 9g. A lightweight cream-to-powder texture with buildable colour from a natural flush to bold, transfer- and smudge-resistant and non-comedogenic.",
+      "perfume-desc-lancome-tiuw-stick-highlighter":
+        "Lancôme Teint Idole Ultra Wear highlighter stick, 9g. Choose your shade — a cream-to-powder texture with light-reflecting particles for a second-skin glow, from natural radiance to dramatic, and transfer-resistant.",
+      "perfume-desc-lancome-tiuw-concealer":
+        "Lancôme Teint Idole Ultra Wear All Over Concealer, 13ml. Choose your shade — full, buildable coverage with a natural matte finish and up to 24 hours of wear and hydration without creasing. Use it as a concealer or all-over foundation; suitable for sensitive skin.",
+      "perfume-desc-viktor-spicebomb-night-vision-edp":
+        "Viktor&Rolf Spicebomb Night Vision Eau de Parfum, 90ml — the deeper, more intense Eau de Parfum version of Night Vision for men. Fresh citrus and spices meet aromatic herbs, resting on a warm, addictive base of tonka bean and woods.",
+      "perfume-desc-ralph-lauren-polo-red-edp":
+        "Ralph Lauren Polo Red Eau de Parfum, 75ml — a bold, seductive woody fragrance for men and a warmer, more intense take on Polo Red. Vibrant citrus and spicy notes open onto a rich, sensual woody base.",
+      "perfume-desc-valentino-born-in-roma-uomo-coral-fantasy":
+        "Valentino Born in Roma Uomo Coral Fantasy Eau de Toilette — a vibrant, fruity aromatic woody fragrance for men in the coral-tinted Rockstud bottle, pairing juicy fruit and aromatic notes with a smoky, woody base.",
+      "perfume-desc-valentino-born-in-roma-donna-coral-fantasy":
+        "Valentino Born in Roma Donna Coral Fantasy Eau de Parfum — a radiant fruity floral for women in the coral Rockstud bottle, with juicy fruit and blooming florals over a warm, sensual vanilla base.",
+      "perfume-desc-prada-luna-rossa-sport":
+        "Prada Luna Rossa Sport Eau de Toilette, 50ml — an energising, sporty fragrance for men in the red Luna Rossa bottle. Fresh ginger and juniper berries meet a warm, smooth heart of tonka bean and vanilla.",
+      "perfume-desc-ysl-y-edt":
+        "Yves Saint Laurent Y Eau de Toilette — a fresh, aromatic woody fragrance for men. Crisp bergamot and ginger open onto aromatic sage, resting on a clean woody base of cedarwood and vetiver.",
+      "perfume-desc-lancome-genifique-sensitive-20":
+        "Lancôme Advanced Génifique Sensitive dual concentrate, 20ml. A twist of the cap releases a blue concentrate with ferulic acid and vitamin E into the pre- and probiotic serum, to soothe, strengthen the skin barrier and reduce visible redness. For all skin types, including sensitive.",
+      "perfume-desc-lancome-absolu-rouge-drama-ink":
+        "Lancôme L'Absolu Rouge Drama Ink liquid lipstick, 6ml. Choose your shade — a semi-matte lip ink, twice as pigmented and four times thinner than a classic lipstick, applied with a curved precision tip for up to 8 hours of transfer-proof colour.",
+      "perfume-desc-lancome-le-stylo-waterproof":
+        "Lancôme Le Stylo Waterproof long-lasting eyeliner, 0.35g. Choose your shade — a creamy, waterproof pencil with a retractable fine tip and a built-in smudger, for the lash line or waterline, that lasts without flaking.",
+      "perfume-desc-lancome-liner-idole":
+        "Lancôme Idôle Liner in 01 Glossy Black, 1ml. An ultra-precise waterproof liquid liner with a flexible felt tip for lines as fine as 0.1mm, in an intense black that resists transfer, flaking and smudging for up to 24 hours.",
+      "perfume-desc-lancome-renergie-hcf-triple-serum-50":
+        "Lancôme Rénergie H.C.F. Triple Serum, 50ml. A three-chamber anti-ageing serum combining hyaluronic acid, vitamin C with niacinamide, and ferulic acid to target wrinkles, loss of firmness and volume, and dark spots. Use two pumps morning and/or evening.",
+      "perfume-desc-lancome-nutrix-face-cream":
+        "Lancôme Nutrix nourishing and soothing rich cream, 50ml — Lancôme's very first cream, created in 1936, now in a white jar. A rich formula for very dry, sensitive or fragile skin that relieves tightness and deeply nourishes and comforts.",
+      "perfume-desc-lancome-genifique-light-pearl-20":
+        "Lancôme Advanced Génifique Yeux Light-Pearl eye and lash concentrate, 20ml. Pre- and probiotic fractions, caffeine and arginine target puffiness and care for lashes, applied with a cooling 360° massaging pearl. Suitable for sensitive eyes and contact lens wearers.",
+      "perfume-desc-lancome-absolu-rouge-cream-366":
+        "Lancôme L'Absolu Rouge Cream lipstick, 3.4g. Choose your shade — enriched with 30% rose balm and hyaluronic acid for a luminous cream finish, intense colour and up to 18 hours of comfort.",
+      "perfume-desc-biotherm-tpur-gel-50":
+        "Biotherm Homme T-Pur Gel Ultra-Mattifying & Oil-Control, 50ml pump. A lightweight, non-sticky gel moisturiser for normal to oily skin with French sea salts and salicylic acid that controls oil and shine for up to 8 hours while keeping skin hydrated.",
+      "perfume-desc-biotherm-aquapower-comfort-gel-75":
+        "Biotherm Homme Aquapower Comfort Gel, 75ml pump, for dry skin. A fresh water-gel moisturiser with Life Plankton™, ceramides, shea butter and apricot kernel oil that boosts hydration and instantly cools and comforts the skin — ideal after shaving.",
+      "perfume-desc-biotherm-homme-ultra-confort-balm-75":
+        "Biotherm Homme Basics Line Comfort Balm, 75ml pump — a soothing, nourishing aftershave balm. A rich but non-greasy texture with Life Plankton™ that calms razor burn, redness and tightness, strengthens the skin barrier and hydrates for 24 hours.",
+      "perfume-desc-biotherm-blue-pro-retinol-50":
+        "Biotherm Blue Pro-Retinol Multi-Correct Cream, 50ml. An anti-wrinkle cream with pro-retinol, niacinamide and Life Plankton™ in a fresh, melting texture that visibly reduces wrinkles and refines skin texture. 92% natural-origin formula.",
+      "perfume-desc-ysl-rouge-pur-couture-the-slim-32":
+        "YSL Rouge Pur Couture The Slim leather-matte lipstick in 32 Rouge Rage, a deep, warm brick red, 2.2g. Highly pigmented, full-coverage colour in a creamy, comfortable formula, with a slanted square bullet that lines the lips precisely.",
+      "perfume-desc-ysl-lash-clash-01":
+        "YSL Lash Clash Extreme Volume Mascara. Choose your shade — an oversized double-cone brush delivers up to 200% more volume with 24-hour smudge-resistant wear, in a fragrance-free formula with iris extract to care for the lashes.",
+      "perfume-desc-lancome-absolu-rouge-drama-matte":
+        "Lancôme L'Absolu Rouge Drama Matte lipstick, 3.4g. Choose your shade — intense pure pigments give a bold, powdery matte finish with full coverage, while ceramides, hyaluronic acid and rose extracts keep lips comfortable for up to 8 hours. The petal-shaped bullet applies precisely in one stroke.",
+      "perfume-desc-biotherm-waterlover-sun-mist-spf30":
+        "Biotherm Waterlover Sun Mist SPF 30, 200ml — an invisible face and body sun mist with UVA/UVB protection. The transparent, ultra-light dual-layer texture with Life Plankton™ and vitamin E sprays on evenly, is water-resistant and leaves no white residue. Suitable for all skin types, including sensitive skin.",
+      "perfume-desc-biotherm-life-plankton-elixir-75":
+        "Biotherm Life Plankton Elixir, 75ml — a fundamental regenerating serum and the first step of the routine. With 5% Life Plankton™ (Biotherm's highest concentration), hyaluronic acid and a vitamin C complex, it strengthens and regenerates the skin, leaving it visibly smoother, firmer and more radiant.",
+      "perfume-desc-prada-luna-rossa-edt":
+        "Prada Luna Rossa Eau de Toilette — the original fresh, aromatic fragrance for men. Lavender and bitter orange open onto a cool heart of spearmint and clary sage, resting on a warm, sensual base of ambrette and ambroxan.",
+      "perfume-desc-armani-code-le-parfum":
+        "Armani Code Le Parfum for men, refillable — an intense woody-iris fragrance in the black lacquered Code bottle. Bergamot and bergamot leaf open onto a powdery heart of iris and clary sage, resting on a warm, sensual base of tonka bean absolute and cedarwood.",
+      "perfume-desc-lancome-advanced-genifique-night-cream":
+        "Lancôme Advanced Génifique Repairing Night Cream, 50ml jar. Inspired by microbiome science, it repairs the skin barrier overnight with a patented complex of 7 pre- and probiotic fractions, triple ceramides and hyaluronic acid. The melting texture leaves skin plumper, smoother and well-rested by morning; 94% natural-origin ingredients, suitable for sensitive skin.",
+      "perfume-desc-diesel-d-by-diesel-edt":
+        "D by Diesel Eau de Toilette, 50ml — a gender-fluid fragrance for everyone. Energising ginger and lavender open onto a soft denim-cotton accord, settling into a warm, sensual vanilla infusion. Refillable bottle in plastic-free packaging.",
+      "perfume-desc-ysl-libre-le-parfum":
+        "Yves Saint Laurent Libre Le Parfum — the most intense, ambery version of Libre for women. Bergamot, mandarin, ginger and saffron open onto a floral heart of orange blossom and lavender, resting on a warm, addictive base of Bourbon vanilla, honey and tonka bean.",
+      "perfume-desc-prada-paradoxe-edp":
+        "Prada Paradoxe Eau de Parfum, refillable — a modern amber-floral fragrance for women in the iconic triangle bottle. Bergamot, tangerine and pear open onto a luminous heart of neroli, orange blossom and jasmine, resting on amber, benzoin, Bourbon vanilla and white musk.",
+      "perfume-desc-lancome-bi-facil-clean-care-125":
+        "Lancôme Bi-Facil Clean & Care Eye Makeup Remover, 125ml. The bi-phase formula (55% oil, 45% water) removes even waterproof and long-wear eye makeup instantly: jojoba and almond oils dissolve makeup while nourishing, and Damascena rose water soothes the eye area and lashes. Gentle enough for sensitive eyes; at least 95% natural-origin ingredients.",
+      "perfume-desc-lancome-hypnose-gift-set":
+        "Lancôme Le 8 Hypnôse gift set — Le 8 Hypnôse volumising serum mascara in black plus a Cils Booster XL lash primer, in a gift box. The mascara's caring black balm with 8 amino acids builds bold volume while caring for the lashes and removes easily with warm water; apply the white primer first for extra volume and length.",
+      "perfume-desc-valentino-donna-yellow-dream-set":
+        "Valentino Donna Born in Roma Yellow Dream gift set — a 50ml Eau de Parfum plus a 15ml travel-size Eau de Parfum. A sunny floral-musky fragrance: Calabrian bergamot and Italian primofiore lemon open onto Damascena rose and peony, resting on white musk and Madagascan vanilla.",
+      "perfume-desc-lancome-tiuw-care-glow-foundation":
+        "Lancôme Teint Idole Ultra Wear Care & Glow foundation, 30ml, SPF 25. Choose your shade — a healthy-glow serum foundation with 82% skincare, hyaluronic and mandelic acids, giving medium, buildable coverage that lasts 24 hours without transferring, fading or settling into fine lines. Suitable for all skin types.",
+      "perfume-desc-ysl-all-hours-foundation":
+        "Yves Saint Laurent All Hours Foundation Luminous Matte, 25ml, SPF 39. Choose your shade — up to 24 hours of full coverage with a natural luminous-matte finish and a weightless, breathable feel. Transfer-proof, waterproof and sweat-proof, with a 77% skincare base including hyaluronic acid.",
+      "perfume-desc-viktor-rolf-good-fortune-edp":
+        "Viktor&Rolf Good Fortune Eau de Parfum, 50ml — an amber floral fragrance for women in the orb-shaped lilac bottle with an amethyst-like cap. Spicy fennel and gentian flower open onto a rich jasmine superinfusion, resting on creamy Madagascan bourbon vanilla.",
+      "perfume-desc-ysl-lhomme-edp":
+        "Yves Saint Laurent L'Homme Eau de Parfum, 100ml — a richer, liqueur-like take on L'Homme in a bourbon-coloured bottle. Bitter orange and bergamot open onto lavender and geranium, resting on a warm woody base of cognac-cask oak, cedar and vetiver.",
+      "perfume-desc-ysl-black-opium-le-parfum":
+        "Yves Saint Laurent Black Opium Le Parfum — the most intense, vanilla-rich Black Opium, in a glossy black couture bottle. Green mandarin, pear and cinnamon open onto jasmine sambac and orange blossom, resting on an espresso coffee accord, patchouli and four Madagascan vanillas.",
+      "perfume-desc-ysl-libre-body-balm":
+        "Yves Saint Laurent Libre Perfumed Body Balm, 200ml tube. A soft, ultra-moisturising balm with shea butter, sweet almond oil and soothing verbena that absorbs quickly without feeling greasy, leaving skin delicately scented with Libre's lavender, orange blossom and vanilla signature.",
+      "perfume-desc-armani-code-edt":
+        "Armani Code Eau de Toilette for men, refillable — an ambery-woody fragrance in the black Code bottle with silver accents. Bright green mandarin from Italy opens onto a modern, magnetic heart of lavandin, resting on a warm, comforting base of tonka bean absolute and cedarwood.",
+      "perfume-desc-valentino-born-in-roma-uomo-intense":
+        "Valentino Uomo Born in Roma Intense Eau de Parfum — a deeper, more sensual take on Born in Roma Uomo in a dark studded bottle. Creamy bourbon vanilla and a touch of ginger meet an aromatic heart of lavandin, resting on a smoky vetiver base.",
+      "perfume-desc-valentino-born-in-roma-donna-intense":
+        "Valentino Donna Born in Roma Intense Eau de Parfum — an intense amber-vanilla take on Born in Roma Donna in a deep pink studded bottle. Bourbon vanilla lifted by bergamot and blackcurrant meets a trio of jasmines, resting on warm benzoin resin.",
+      "perfume-desc-armani-my-way-le-parfum":
+        "Giorgio Armani My Way Le Parfum, refillable — the most intense My Way, in a pink-to-blue gradient bottle. Bergamot and orange blossom open onto a heart of tuberose, iris and ambrette, resting on cedarwood, bourbon vanilla and white musk.",
+      "perfume-desc-viktor-rolf-flowerbomb-ruby-orchid":
+        "Viktor&Rolf Flowerbomb Ruby Orchid Eau de Parfum — a floral-gourmand take on Flowerbomb in a ruby-pink grenade bottle. Vine peach accord and freesia open onto a heart of jasmine grandiflorum and ruby orchid, resting on red vanilla bean and a Bourbon vanilla infusion.",
+      "perfume-desc-ysl-myslf-edp":
+        "Yves Saint Laurent MYSLF Eau de Parfum for men, refillable — a woody floral fragrance in a sleek black bottle with the Cassandre logo. Calabrian bergamot opens onto a heart of Tunisian orange blossom absolute, resting on Indonesian patchouli and ambery woods.",
+      "perfume-desc-armani-si-intense-edp":
+        "Giorgio Armani Sì Eau de Parfum Intense, refillable — a richer, more sensual Sì for women. Blackcurrant nectar opens onto a heart of Damascena rose absolute and davana essential oil, resting on Madagascar Bourbon vanilla with a hint of black tea.",
+      "perfume-desc-lancome-hypnose-mascara-set":
+        "Lancôme Le 8 Hypnôse mascara gift set — the full-size Le 8 Hypnôse volumising serum mascara in black plus a travel-size L'Absolu Rouge Cream lipstick, in a gift box. The mascara's caring black balm builds bold, buildable volume and removes easily with warm water.",
+      "perfume-desc-biotherm-blue-pro-retinol-eye-cream":
+        "Biotherm Blue Pro-Retinol Eye Cream, 15ml — an anti-wrinkle eye cream with pro-retinol, peptides, caffeine and Life Plankton™. Use morning and night: the eye contour looks brighter and firmer from the first week and wrinkles are visibly reduced. 95% natural-origin, vegan and ophthalmologist-tested.",
+      "perfume-desc-prada-paradoxe-intense":
+        "Prada Paradoxe Intense Eau de Parfum, refillable — a deeper, more enveloping floral amber with a woody twist. A jasmine superinfusion meets a warm amber accord and a moss accord for an intense, sensual trail.",
+      "perfume-desc-ysl-libre-absolu-platine":
+        "Yves Saint Laurent Libre L'Absolu Platine — the most concentrated Libre, in a mirrored platinum bottle with the gold Cassandre. Bergamot, mandarin and a natural aldehyde open onto orange blossom and Diva lavender, resting on Bourbon vanilla and an ambergris accord.",
+      "perfume-desc-lancome-renergie-hpn-300-peptide":
+        "Lancôme Rénergie H.P.N. 300-Peptide Cream, 50ml — an anti-ageing cream with hyaluronic acid, over 300 peptides and niacinamide for morning and/or evening. Visibly reduces wrinkles, fine lines and dark spots while firming and lifting the skin, with first results in as little as 2 weeks.",
+      "perfume-desc-armani-prive-cuir-zerzura":
+        "Giorgio Armani Privé Cuir Zerzura Eau de Parfum — a refined leather from Armani's haute couture fragrance collection. Violet leaf, elemi and mandarin open onto iris and rose, resting on a soft leather, Bourbon vanilla and cedar base.",
+      "perfume-desc-armani-prive-musc-shamal":
+        "Giorgio Armani Privé Musc Shamal Eau de Parfum — a luminous musky amber from Armani's haute couture fragrance collection. Sparkling aldehydes and citrus open onto a heart of musk, rose and jasmine, resting on amber, vanilla and cedar.",
+      "perfume-desc-armani-prive-sable-nuit":
+        "Giorgio Armani Privé Sable Nuit Eau de Parfum — a warm, resinous amber from Armani's haute couture fragrance collection. Olibanum and pink pepper open onto cedar, benzoin, labdanum and patchouli, resting on vanilla and ambroxan.",
+      "perfume-desc-armani-prive-bois-encens":
+        "Giorgio Armani Privé Bois d'Encens Eau de Parfum — a woody incense from Armani's haute couture fragrance collection. Black pepper and vetiver frame a smoky heart of frankincense, with cedar and labdanum in the base.",
+      "perfume-desc-armani-prive-cuir-amethyste":
+        "Giorgio Armani Privé Cuir Améthyste Eau de Parfum — a floral leather from Armani's haute couture fragrance collection. Coriander, rose and bergamot open onto violet and birch leather with patchouli, resting on benzoin, labdanum and Bourbon vanilla.",
+      "perfume-desc-armani-prive-oud-royal":
+        "Giorgio Armani Privé Oud Royal Eau de Parfum — a regal oud from Armani's haute couture fragrance collection. Saffron opens onto Laotian oud and rose, resting on frankincense, myrrh, amber and sandalwood.",
+      "perfume-desc-armani-prive-cypres-pantelleria":
+        "Giorgio Armani Privé Cyprès Pantelleria Eau de Toilette — a fresh Mediterranean citrus-woody scent from Armani's haute couture fragrance collection. Citron, bergamot, neroli and mandarin open onto watery notes, cypress and clary sage, resting on oakmoss, vetiver, amberwood and patchouli.",
+      "perfume-desc-armani-prive-figuier-eden":
+        "Giorgio Armani Privé Figuier Eden Eau de Toilette — a green, juicy fig scent from Armani's haute couture fragrance collection. Bergamot, pink pepper and mandarin open onto fig, tea and green grass, resting on iris and amber.",
+      "perfume-desc-armani-prive-jasmin-kusamono":
+        "Giorgio Armani Privé Jasmin Kusamono Eau de Toilette — a delicate white floral from Armani's haute couture fragrance collection. Nashi pear and pink pepper open onto lily-of-the-valley, jasmine sambac and orange blossom, resting on sandalwood and cedar.",
+      "perfume-desc-armani-prive-rose-arabie":
+        "Giorgio Armani Privé Rose d'Arabie Eau de Parfum — an opulent oriental rose from Armani's haute couture fragrance collection. Saffron opens onto Damask rose, dark woods and patchouli, resting on warm amber.",
+      "perfume-desc-armani-prive-orangerie-venise":
+        "Giorgio Armani Privé Orangerie Venise Eau de Toilette — a sunny Venetian citrus from Armani's haute couture fragrance collection. Bitter orange, citrus and bergamot open onto neroli and buchu, resting on ambroxan, cedar and moss.",
+      "perfume-desc-armani-prive-pivoine-suzhou":
+        "Giorgio Armani Privé Pivoine Suzhou Eau de Toilette — a fresh, fruity peony from Armani's haute couture fragrance collection. Raspberry, pink pepper and mandarin open onto peony and May rose, resting on musk, amber and patchouli.",
+      "perfume-desc-armani-prive-rose-alexandrie":
+        "Giorgio Armani Privé Rose Alexandrie Eau de Toilette — a soft, powdery rose from Armani's haute couture fragrance collection. Bergamot, mandarin and neroli open onto centifolia rose and yellow mimosa, softened by benzoin and vanilla.",
+      "perfume-desc-armani-prive-rose-milano":
+        "Giorgio Armani Privé Rose Milano Eau de Toilette — a bright, modern rose from Armani's haute couture fragrance collection. Pear, bergamot and Primofiore lemon open onto Damask rose and jasmine, resting on moss and patchouli.",
+      "perfume-desc-armani-prive-the-yulong":
+        "Giorgio Armani Privé Thé Yulong Eau de Toilette — a fresh tea from Armani's haute couture fragrance collection. Mandarin, petitgrain and cardamom open onto green and black tea with orange blossom and jasmine, resting on vetiver, ambrette and iris.",
+      "perfume-desc-armani-prive-vetiver-hiver":
+        "Giorgio Armani Privé Vétiver d'Hiver Eau de Toilette — a crisp, elegant vetiver from Armani's haute couture fragrance collection. Bergamot, cedrat and mandarin open onto pink pepper, cardamom and coriander, resting on vetiver and patchouli.",
+      "perfume-desc-armani-prive-bleu-lazuli":
+        "Giorgio Armani Privé Bleu Lazuli Eau de Parfum — a precious-stone collection scent from Armani's haute couture fragrance collection. Maté, cardamom and bergamot open onto plum, osmanthus and jasmine, resting on honey, tobacco, vanilla and sandalwood.",
+      "perfume-desc-armani-prive-magenta-tanzanite":
+        "Giorgio Armani Privé Magenta Tanzanite Eau de Parfum — a spicy precious-stone collection scent from Armani's haute couture fragrance collection. Cardamom, ginger and bergamot open onto cinnamon, myrrh and coffee, resting on tobacco, vanilla and tonka.",
+      "perfume-desc-armani-prive-rouge-malachite":
+        "Giorgio Armani Privé Rouge Malachite Eau de Parfum — an opulent white-floral precious-stone collection scent from Armani's haute couture fragrance collection. Tuberose and pink pepper open onto jasmine sambac, ylang-ylang and orange blossom, resting on a warm tuberose and amber base.",
+      "perfume-desc-armani-prive-santal-dan-sha":
+        "Giorgio Armani Privé Santal Dān Shā Eau de Toilette — a creamy, luminous sandalwood from Armani's haute couture fragrance collection. Calabrian bergamot, cardamom and violet leaf open onto elemi, frankincense and musk, resting on New Caledonian sandalwood and cedar.",
+      "perfume-desc-armani-eyes-to-kill-classico":
+        "Giorgio Armani Eyes to Kill Classico mascara in black — a lengthening and volumising formula with a precise brush for defined, curled lashes. Available in the full 10ml size or a 4.8ml midi size.",
+      "perfume-desc-armani-eyes-to-kill-eccentrico":
+        "Giorgio Armani Eyes to Kill Eccentrico mascara, 10ml — a high-volume mascara with a patented elastomer brush that builds dramatic, separated lashes without clumps or flakes.",
+      "perfume-desc-armani-eyes-to-kill-stellar":
+        "Giorgio Armani Eyes to Kill Stellar mono eyeshadow, 4g — a bouncy gel-to-powder texture that applies easily with a fingertip for a sparkling, metallic-shimmer finish.",
+      "perfume-desc-armani-eye-tint":
+        "Giorgio Armani Eye Tint long-lasting liquid eyeshadow. Choose your shade — a doe-foot applicator lays down intense colour that dries crease-resistant, in shimmer (S) and matte (M) finishes.",
+      "perfume-desc-armani-smooth-silk-eye-pencil":
+        "Giorgio Armani Smooth Silk Eye Pencil, 1.05g. Choose your shade — a silky, soft waterproof kohl that glides on for precise lining or smudges into a smoky look.",
+      "perfume-desc-armani-fluid-sheer":
+        "Giorgio Armani Fluid Sheer, 18ml. Choose your shade — a liquid glow enhancer to wear alone, mix with foundation or use as a highlighter for a luminous, sheer-colour finish.",
+      "perfume-desc-armani-luminous-silk-concealer":
+        "Giorgio Armani Luminous Silk Concealer, 12ml. Choose your shade — a lightweight, hydrating multi-purpose concealer that brightens and blurs with buildable coverage and Armani's signature radiant, skin-like finish.",
+      "perfume-desc-armani-lip-power":
+        "Giorgio Armani Lip Power longwear satin lipstick. Choose your shade — oils and highly concentrated pigments give vivid, comfortable colour for up to 8 hours, with a drop-shaped bullet for precise application.",
+      "perfume-desc-armani-lip-power-matte":
+        "Giorgio Armani Lip Power Matte lipstick. Choose your shade — a cream-to-powder matte formula with jojoba and olive oils for intense colour and all-day comfort, in the red and black soft-matte case.",
+      "perfume-desc-armani-concealer-brush":
+        "Giorgio Armani Maestro Spot Concealer Brush — a small brush with a dense, pointed tip for precise spot concealing and seamless blending around the eyes and nose.",
+      "perfume-desc-armani-luminous-silk-glow-blush":
+        "Giorgio Armani Luminous Silk Glow Blush. Choose your shade — a silky powder blush that blends into a natural, radiant flush with a luminous, buildable finish.",
+      "perfume-desc-armani-power-fabric-concealer":
+        "Giorgio Armani Power Fabric+ Concealer. Choose your shade — a high-coverage liquid concealer with a natural matte finish that stays crease-resistant for up to 24 hours, with a doe-foot applicator.",
+      "perfume-desc-armani-lip-maestro":
+        "Giorgio Armani Lip Maestro liquid lipstick, 6.5ml. Choose your shade — a soft-matte 'kissed' finish from mineral matte powders, in Armani's classic red-cap tube with doe-foot applicator.",
+      "perfume-desc-armani-lip-maestro-satin":
+        "Giorgio Armani Lip Maestro Satin liquid lipstick, 4ml. Choose your shade — two gels combine stick-like colour, balm-like care and liquid wear in a satin finish that turns luminous and blurred, with a diamond-shaped applicator.",
+      "perfume-desc-armani-power-fabric-compact":
+        "Giorgio Armani Power Fabric Compact foundation, 9g — a balm-to-cream-powder compact for high, buildable coverage with a matte-velvet finish and a waterproof veil. Includes a sponge.",
+      "perfume-desc-armani-luminous-silk-glow-fusion-powder":
+        "Giorgio Armani Luminous Silk Glow Fusion Powder, 3.5g — a pressed powder with water-memory technology that melts onto the skin like a fluid, setting and blurring while keeping a natural glow.",
+      "perfume-desc-ralph-lauren-polo-red-parfum":
+        "Ralph Lauren Polo Red Parfum — the most intense Polo Red, in a deep red refillable flask. Blood orange, bergamot and pink pepper open onto absinthe, lavender and orris, resting on musk, cedar and opoponax.",
+      "perfume-desc-mugler-alien-goddess-supra-florale":
+        "Mugler Alien Goddess Supra Florale Eau de Parfum, refillable — a radiant floral take on Alien Goddess in a rose-gold talisman bottle. Prickly pear and cactus flower open onto jasmine sambac and immortelle, resting on amber, musk and desert rose.",
+      "perfume-desc-prada-luna-rossa-ocean-edp":
+        "Prada Luna Rossa Ocean Eau de Parfum — a deeper, warmer take on Luna Rossa Ocean for men, in a dark navy bottle. Grapefruit opens onto woody notes and frankincense, resting on vanilla and AmberXtreme.",
+      "perfume-desc-ysl-y-edp-intense":
+        "Yves Saint Laurent Y Eau de Parfum Intense for men — a more intense, aromatic take on Y in a night-blue bottle. Ginger, juniper berries and bergamot open onto sage, lavender and geranium, resting on vetiver, patchouli and cedar.",
+      "perfume-desc-lancome-renergie-yeux":
+        "Lancôme Rénergie Yeux eye cream, 15ml — a lifting, filling eye cream with next-generation hyaluronic acid, linseed peptides, caffeine and cocoa seed butter. Visibly reduces dark circles, puffiness and wrinkles while firming the eye contour, with 24-hour hydration. Tested under ophthalmological control.",
+      "perfume-desc-lancome-absolu-rouge-intimatte":
+        "Lancôme L'Absolu Rouge Intimatte lipstick, 3.4g. Choose your shade — a soft, blurred matte finish with up to 12 hours of wear, enriched with centifolia rose extract, ceramides and hyaluronic acid for lasting comfort.",
+      "perfume-desc-lancome-hypnose-genifique-bifacil-set":
+        "Lancôme Hypnôse gift set — the full-size Hypnôse mascara in 01 Noir, Advanced Génifique Yeux Light-Pearl eye and lash serum (5ml) and Bi-Facil eye make-up remover (30ml). Hypnôse builds up to 8× thicker lashes with its 1,000-bristle brush; Light-Pearl's cooling applicator de-puffs the eye area.",
+      "perfume-desc-lancome-genifique-happiness-set":
+        "Lancôme Advanced Génifique gift set — Advanced Génifique Serum (30ml), Advanced Génifique Yeux Light-Pearl eye and lash serum (5ml) and Advanced Génifique Yeux eye cream (5ml), in a confetti-rose gift box. The probiotic-fraction serum with hyaluronic acid strengthens the skin's moisture barrier for a radiant, healthy-looking complexion.",
+      "perfume-desc-ysl-couture-mini-clutch":
+        "Yves Saint Laurent Couture Mini Clutch eyeshadow palette. Choose your shade — four coordinated mattes, satins and shimmers in a quilted clutch case, with pigments enriched with sweet almond, coffee seed and fig cactus oils. Comes with two applicators.",
+      "perfume-desc-diesel-d-red-edp":
+        "Diesel D RED Eau de Parfum — a bold, aromatic woody fragrance in a red embossed DIESEL bottle. Grapefruit and geranium open onto lavender and aldehydes, resting on a sandalwood accord and ambery woods.",
+      "perfume-desc-ysl-black-opium-over-red":
+        "Yves Saint Laurent Black Opium Eau de Parfum Over Red — a fruity, addictive take on Black Opium in a lacquered red bottle. A cherry accord and mandarin open onto jasmine, black tea and orange blossom, resting on the signature black coffee accord, Madagascar vanilla and patchouli.",
+      "perfume-desc-armani-acqua-di-gio-edt-set":
+        "Giorgio Armani Acqua di Giò Eau de Toilette gift set for men — a 100ml Eau de Toilette, a 15ml travel spray and a 75g deodorant stick in a gift box. The iconic aquatic fragrance: Calabrian bergamot, neroli and green tangerine open onto marine notes, jasmine, rosemary and persimmon, resting on patchouli.",
+      "perfume-desc-prada-infusion-cedre":
+        "Prada Les Infusions Infusion de Cèdre Eau de Parfum, 100ml — a clean, woody-resinous scent from Prada's Les Infusions collection. Cedarwood and mandarin rest on a warm base of benzoin and incense.",
+      "perfume-desc-prada-infusion-fleur-oranger":
+        "Prada Les Infusions Infusion de Fleur d'Oranger Eau de Parfum, 100ml — a luminous white floral from Prada's Les Infusions collection. Neroli opens onto a radiant orange blossom heart, resting on jasmine and sandalwood.",
+      "perfume-desc-prada-infusion-figue":
+        "Prada Les Infusions Infusion de Figue Eau de Parfum, 100ml — a green, Mediterranean fig scent from Prada's Les Infusions collection. Mandarin opens onto a milky fig accord, resting on mastic and green galbanum.",
+      "perfume-desc-valentino-green-stravaganza-donna":
+        "Valentino Donna Born in Roma Green Stravaganza Eau de Parfum — a floral amber in a lime-green studded bottle. A smoky lapsang souchong tea accord opens onto jasmine absolute, resting on a warm vanilla extract base.",
+      "perfume-desc-valentino-green-stravaganza-uomo":
+        "Valentino Uomo Born in Roma Green Stravaganza Eau de Toilette — a fougère amber for men in a green studded bottle. Calabrian bergamot opens onto a rich coffee accord, resting on Haitian vetiver.",
+      "perfume-desc-armani-my-way-nectar":
+        "Giorgio Armani My Way Nectar Eau de Parfum, refillable — a juicy fruity floral take on My Way in an all-pink bottle. Pear, rhubarb, bergamot and orange blossom open onto tuberose absolute, resting on bourbon vanilla, cedarwood and white musk.",
+      "perfume-desc-ysl-all-hours-concealer":
+        "Yves Saint Laurent All Hours Concealer, 15ml. Choose your shade — up to 24-hour full coverage with a luminous matte finish and an 85% skincare base with caffeine and jasmine petal extract. The precise angled applicator conceals, sculpts or covers the whole face. Fragrance-free.",
+      "perfume-desc-lancome-idole-tint":
+        "Lancôme Idôle Tint liquid eyeshadow and liner, 7ml. Choose your shade — a two-sided applicator lays down shadow with the flat side and liner with the thin side; it also works as a blush or highlighter. Up to 16 hours of transfer-, crease- and smudge-resistant wear.",
+      "perfume-desc-lancome-lveb-rose-extraordinaire":
+        "Lancôme La Vie est Belle Rose Extraordinaire Eau de Parfum, refillable — a luminous rose take on La Vie est Belle in a pink rose-engraved bottle. Fresh rose water, a Space Rose accord and Rose Damascena absolute open onto iris concrete, resting on a woody musk.",
+      "perfume-desc-lancome-advanced-genifique-serum-set":
+        "Lancôme Advanced Génifique serum gift set — Advanced Génifique Serum 50ml, a 10ml travel-size serum and Advanced Génifique Eye Cream 5ml, in a holiday gift box. The probiotic-fraction serum with hyaluronic acid strengthens the skin's moisture barrier for a radiant, healthy-looking complexion.",
+      "perfume-desc-armani-stronger-with-you-edt-set":
+        "Emporio Armani Stronger With You Eau de Toilette gift set for men — 100ml Eau de Toilette, a 15ml travel spray and a 75ml all-over body shampoo. Cardamom, pink pepper and violet leaves open onto sage, resting on a glazed chestnut accord, vanilla and amberwood.",
+      "perfume-desc-ysl-touche-eclat-blur-primer":
+        "Yves Saint Laurent Touche Éclat Blur Primer, 30ml — a clear gel primer with a subtle gold shimmer that blurs pores and texture and boosts radiance. Enriched with corn, apricot kernel, passion fruit and rice bran oils; wear it alone or under foundation. Suits all skin tones.",
+      "perfume-desc-armani-prive-blanc-kogane":
+        "Giorgio Armani Privé Blanc Kogane Eau de Parfum, 100ml — a luminous white floral from the Les Terres Précieuses collection, in an ivory lacquer bottle with gold kintsugi lines. Aldehydes, lemon and pink berry open onto jasmine, mahonial and ylang-ylang, resting on white musk, vetiver and patchouli.",
+      "perfume-desc-armani-prive-noir-kogane":
+        "Giorgio Armani Privé Noir Kogane Eau de Parfum, 100ml — a dark, resinous scent from the Les Terres Précieuses collection, in a black lacquer bottle with gold kintsugi lines. Elemi, cumin and pink pepper open onto saffron, olibanum and cistus, resting on patchouli, woody leather and vetiver.",
+      "perfume-desc-mugler-alien-hypersense":
+        "Mugler Alien Hypersense Eau de Parfum, refillable — a vibrant floral woody take on Alien in a violet-to-scarlet faceted bottle. Pear and green mandarin open onto jasmine sambac and Indian jasmine, resting on cashmeran, musk, amberwood and driftwood.",
+      "perfume-desc-viktor-rolf-flowerbomb-tiger-lily":
+        "Viktor&Rolf Flowerbomb Tiger Lily Eau de Parfum — a sunny, solar floral take on Flowerbomb in an amber-orange grenade bottle. Coconut milk and bergamot open onto tiger lily, jasmine and freesia, resting on juicy mango and benzoin.",
+      "perfume-desc-azzaro-the-most-wanted-edt-intense":
+        "Azzaro The Most Wanted Eau de Toilette Intense for men — a fresh yet bold aromatic fragrance in a smoky grey revolver-style bottle. Bergamot opens onto a lavender heart, resting on a warm liquor accord and moss.",
+      "perfume-desc-azzaro-wanted-by-night":
+        "Azzaro Wanted by Night Eau de Parfum, 100ml — a seductive spicy-woody fragrance for men in a gunmetal bottle with red-amber juice. Cinnamon, mandarin and lavender open onto incense, cumin and red cedar, resting on tobacco, vanilla, leather and patchouli.",
+      "perfume-desc-ysl-y-elixir":
+        "Yves Saint Laurent Y L'Elixir, 60ml — the most intense Y, a concentrated parfum in a metallic navy bottle. Lavender opens onto geranium, resting on a deep, smoky base of frankincense and oud.",
+      "perfume-desc-lancome-uv-expert-supra-screen":
+        "Lancôme UV Expert Supra Screen SPF 50+, 40ml — an invisible, fast-absorbing serum-sunscreen with very high UVA/UVB and anti-pollution protection (PA++++). Niacinamide, vitamin E and dandelion extract give antioxidant, brightening care. Suitable for all skin types; apply as the last step of your morning routine.",
+      "perfume-desc-lancome-renergie-triple-serum-eye":
+        "Lancôme Rénergie H.C.F. Triple Serum Eye, 20ml — three actives in one bottle: vitamin C derivative and niacinamide for dark circles, vitamin F and hyaluronic acid to plump fine lines, and a firming tri-peptide. Press once to mix, then massage around the eye for a smoother, brighter, less puffy eye area.",
+      "perfume-desc-biotherm-blue-peptides-uplift-cream":
+        "Biotherm Blue Peptides Uplift Cream — a firming, plumping day cream with collagen peptide fractions and Life Plankton™ that visibly lifts the skin and reduces wrinkles, with a radiant rosy finish. Firmer-looking skin in 4 hours. 100% vegan formula, 92% natural-origin ingredients.",
+      "perfume-desc-biotherm-blue-peptides-uplift-night":
+        "Biotherm Blue Peptides Uplift Night Cream, 50ml — firms and re-plumps the skin overnight with peptides and Life Plankton™, reducing the look of wrinkles and pores for lifted, redefined contours and a rosier complexion by morning. Suitable for all skin types.",
+      "perfume-desc-ysl-rouge-pur-couture":
+        "Yves Saint Laurent Rouge Pur Couture caring satin lipstick, 3.8g. Choose your shade — full-coverage colour with a weightless, creamy satin finish and an 80% lip-care base with ceramides, tuberose and prickly pear extracts for up to 16 hours of comfort. Refillable gold case.",
+      "perfume-desc-ysl-loveshine":
+        "Yves Saint Laurent Loveshine lip oil stick, 3.2g. Choose your shade — a lipstick that melts into a lip oil, with a 60% oil base, six nourishing oils and fig pulp for up to 24 hours of hydration and a light-reflecting, buildable wet-shine finish.",
+      "perfume-desc-azzaro-wanted-edt":
+        "Azzaro Wanted Eau de Toilette for men, refillable — a fresh, spicy woody fragrance in the chrome barrel bottle. Lemon, ginger, lavender and mint open onto apple, cardamom, juniper and geranium, resting on tonka bean, amberwood and Haitian vetiver.",
+      "perfume-desc-azzaro-chrome-edt":
+        "Azzaro Chrome Eau de Toilette for men — a clean, fresh citrus-aquatic classic in the pale-blue glass bottle. Lemon, rosemary, bergamot, neroli and pineapple open onto jasmine, cyclamen and coriander, resting on musk, oakmoss, cedar, sandalwood and tonka bean.",
+      "perfume-desc-azzaro-pour-homme-edt":
+        "Azzaro Pour Homme Eau de Toilette, refillable — the iconic aromatic fougère for men in the amber octagonal bottle. Lavender, lemon, basil, bergamot, clary sage and star anise open onto vetiver, cedar, patchouli, sandalwood and cardamom, resting on oakmoss, leather, amber, musk and tonka bean.",
+      "perfume-desc-azzaro-the-most-wanted-edp-intense":
+        "Azzaro The Most Wanted Eau de Parfum Intense for men — a warm, addictive ambery fougère in a matte-black revolver-style bottle. Cardamom opens onto a toffee heart, resting on a sensual amberwood base.",
+      "perfume-desc-azzaro-the-most-wanted-parfum":
+        "Azzaro The Most Wanted Parfum for men — the most intense of The Most Wanted, in a black and amber bottle. Fiery red ginger opens onto woody notes, resting on a rich bourbon vanilla base.",
+      "perfume-desc-azzaro-chrome-edp":
+        "Azzaro Chrome Eau de Parfum for men — a deeper, woodier Chrome in a navy-to-light-blue bottle. Green mandarin opens onto a lavender heart, resting on a fresh pine base.",
+      "perfume-desc-azzaro-chrome-parfum":
+        "Azzaro Chrome Parfum for men — the most intense Chrome, in a deep-blue bottle. Bergamot opens onto aromatic sage, resting on a warm base of fir balsam and lentisk.",
+      "perfume-desc-azzaro-wanted-edp":
+        "Azzaro Wanted Eau de Parfum for men — a bold aromatic woody fragrance in a full-silver metal-jacket bottle. Juniper berries open onto sage, resting on a smoky vetiver base.",
+      "perfume-desc-lancome-hypnose-drama":
+        "Lancôme Hypnôse Drama mascara in 01 Excessive Black, 8ml — instant extreme volume of up to 17× with an S-shaped brush, onyx-black pigments and a bonding complex for up to 24-hour wear. Also available in a waterproof formula. Suitable for sensitive eyes and contact lens wearers.",
+      "perfume-desc-biotherm-homme-force-supreme-blue-serum":
+        "Biotherm Homme Force Supreme Blue Serum, 30ml — a fast-absorbing anti-ageing gel serum for men with Pro-Retinol, Life Plankton™ and Pro-Xylane that visibly reduces wrinkles and improves elasticity in 4 weeks.",
+      "perfume-desc-biotherm-life-plankton-body-oil":
+        "Biotherm Life Plankton Multi-Corrective Body Oil, 125ml — a nourishing dry oil with Life Plankton™ water and olive, canola, sweet almond and sunflower oils that targets stretch marks and dry areas, leaving skin visibly firmer and softer.",
+      "perfume-desc-biotherm-life-plankton-sensitive-balm":
+        "Biotherm Life Plankton Sensitive Balm, 50ml — a rich, soothing balm with 5% Life Plankton™ for sensitive, dry skin, in a hygienic airless jar. Hypoallergenic and non-comedogenic; visibly reduces dryness and redness.",
+      "perfume-desc-biotherm-blue-retinol-night-serum":
+        "Biotherm Blue Retinol Night Serum, 30ml — a resurfacing and repairing night serum with 0.25% pure retinol and Life Plankton™ that visibly reduces wrinkles such as crow's feet and smooths skin texture overnight. Vegan formula.",
+      "perfume-desc-biotherm-waterlover-sun-milk-spf30-400":
+        "Biotherm Waterlover Hydrating Sun Milk SPF 30, 400ml pump bottle — a water-resistant face and body sun milk with UVA/UVB protection and 24-hour hydration that leaves no white marks. Suitable for sensitive skin.",
+      "perfume-desc-armani-acqua-di-gioia-edp-intense":
+        "Giorgio Armani Acqua di Gioia Eau de Parfum Intense, refillable — a fresh floral citrus for women, more intense than the original. Bergamot and a red fruits accord open onto jasmine and Damascena rose, resting on cedarwood and musks.",
+      "perfume-desc-armani-prive-cuir-noir":
+        "Giorgio Armani Privé Cuir Noir Eau de Parfum, 100ml — a dark, refined leather from Armani's haute couture fragrance collection. Sandalwood, rose, coriander and nutmeg open onto leather, smoky guaiac wood and oud, resting on Tahitian vanilla and benzoin.",
+      "perfume-desc-armani-prive-the-yulong-soie-de-nacre":
+        "Giorgio Armani Privé Thé Yulong Soie de Nacre Eau de Toilette, 100ml — a limited edition of Thé Yulong with pearly shimmer in the juice and a mother-of-pearl cap. Mandarin, petitgrain and cardamom open onto green and black tea with jasmine and orange blossom, resting on vetiver, ambrette and iris.",
+      "perfume-desc-armani-maestro-fusion-foundation":
+        "Giorgio Armani Maestro Fusion Make Up foundation SPF 15, 30ml — a water-free, powder-free liquid foundation with a dropper and five time-released oils for an airbrushed, natural-radiant finish. Non-comedogenic.",
+      "perfume-desc-armani-prisma-glass":
+        "Giorgio Armani Prisma Glass lip gloss, 3.5ml. Choose your shade — an oil-in-gloss with 15% squalane for a mirror-like, prismatic shine, sheer colour and 24-hour hydration. Non-sticky; wear alone or over lipstick.",
+      "perfume-desc-armani-luminous-silk-cheek-tint":
+        "Giorgio Armani Luminous Silk Cheek Tint liquid blush, 12ml. Choose your shade — a water-in-oil formula with a doe-foot applicator that builds from a natural to an intense flush and wears up to 12 hours.",
+      "perfume-desc-ysl-all-hours-hyper-finish":
+        "Yves Saint Laurent All Hours Hyper Finish pressed powder, 7.5g. Choose your shade — a multi-use soft-matte powder that sets makeup for up to 24 hours, blurs imperfections and minimises the look of pores. Enriched with hyaluronic acid and niacinamide; sweat-, water- and crease-proof, in a quilted compact with mirror and two-sided applicator.",
+      "perfume-desc-armani-acqua-di-gio-profondo-parfum":
+        "Giorgio Armani Acqua di Giò Profondo Parfum for men — the deepest, most intense take on Profondo, in a gradient deep-blue bottle. Marine notes, bergamot and lemon open onto immortelle, violet leaf and lavandin, settling on cistus, vetiver, patchouli and a mineral accord.",
+      "perfume-desc-armani-stronger-with-you-tobacco":
+        "Emporio Armani Stronger With You Tobacco Eau de Parfum for men — a warm, spicy exclusive edition. Pink and black pepper, cardamom and sage lead to tobacco, chestnut and cinnamon leaf over bourbon vanilla, amber, guaiac wood and benzoin.",
+      "perfume-desc-viktor-rolf-spicebomb-infrared-edp":
+        "Viktor&Rolf Spicebomb Infrared Eau de Parfum for men — an explosive leather-amber scent in the black grenade bottle with a red band. Red, pink and chili pepper with cinnamon ignite a leather heart, drying down to resins and woods.",
+      "perfume-desc-lancome-idole-edt":
+        "Lancôme Idôle L'Eau de Toilette for women — a fresher, livelier take on the Idôle signature. A Shincha green tea accord opens onto rose water, Damascena rose and Italian bergamot, settling on Bourbon vanilla, cedarwood, patchouli and musk for a second-skin finish.",
+      "perfume-desc-lancome-tiuw-serum-bronzer":
+        "Lancôme Teint Idole Ultra Wear C.E. Skin Transforming Bronzer, 10g. Choose your shade — a serum-infused, micro-fine powder with vitamins C and E, moringa oil and pomegranate extract for a natural matte, buildable warmth that lasts up to 24 hours.",
+      "perfume-desc-lancome-tiuw-serum-highlighter":
+        "Lancôme Teint Idole Ultra Wear C.E. Skin Transforming Highlighter, 10g. Choose your shade — a silky, serum-infused powder with micro light-catching pearls for a natural, multidimensional glow that is glowy, never glittery, and lasts up to 24 hours.",
+      "perfume-desc-lancome-lip-idole-butterglow":
+        "Lancôme Lip Idôle Squalane-12 Butterglow hydrating lip balm, 3g. Choose your shade — a buttery, non-sticky balm-in-a-stick with at least 12% squalane, ceramides and shea butter for buildable sheer colour, a high-shine glow and up to 24 hours of hydration.",
+      "perfume-desc-lancome-lip-idole-liner":
+        "Lancôme Lip Idôle Lip Shaper lip liner, 1.2g. Choose your shade — a creamy, soft-matte pencil with ceramides and jojoba oil that glides on without tugging, resists smudging and feathering, and stays waterproof for up to 8 hours. Designed to pair with Lip Idôle Butterglow.",
+      "perfume-desc-prada-luna-rossa-ocean-le-parfum":
+        "Prada Luna Rossa Ocean Le Parfum for men — the most intense Luna Rossa Ocean, in a refillable bottle fading from deep blue to red. Fresh lemon contrasts with a warm saffron heart, resting on smoky oakwood and an Amber Xtreme accord.",
+      "perfume-desc-armani-acqua-di-gio-edp":
+        "Giorgio Armani Acqua di Giò Eau de Parfum for men, refillable — a deeper, more aromatic Acqua di Giò in a clear-to-black bottle. Marine notes and green mandarin open onto clary sage, lavandin and geranium, resting on vetiver and patchouli.",
+      "perfume-desc-armani-acqua-di-gio-edt":
+        "Giorgio Armani Acqua di Giò Eau de Toilette for men, in the refillable bottle — the original 1996 aquatic classic. Marine notes, bergamot, neroli and green tangerine meet rosemary and persimmon over cedarwood and patchouli.",
+      "perfume-desc-armani-acqua-di-gio-parfum":
+        "Giorgio Armani Acqua di Giò Parfum for men, refillable — the richest Acqua di Giò in a black gradient bottle. Calabrian bergamot and marine notes open onto clary sage, rosemary and geranium, settling on patchouli and incense.",
+      "perfume-desc-armani-acqua-di-gio-profondo-edp":
+        "Giorgio Armani Acqua di Giò Profondo Eau de Parfum for men, refillable — an intense marine fragrance in a deep-blue gradient bottle. Marine notes, green mandarin and bergamot open onto lavandin, rosemary and cypress, resting on patchouli, musk and mineral amber.",
+      "perfume-desc-armani-acqua-di-gio-profondo-edt":
+        "Giorgio Armani Acqua di Giò Profondo Eau de Toilette for men (2025) — a fresher, brighter Profondo in a light-blue gradient bottle. Lemon, grapefruit and spices lead to calone, lavender and cypress over mineral notes, woods and Guatemalan patchouli.",
+      "perfume-desc-armani-acqua-di-gio-elixir":
+        "Giorgio Armani Acqua di Giò Elixir for men, 50ml — the most concentrated Acqua di Giò. Bergamot, green mandarin and nutmeg meet violet leaf and an aquatic accord, deepening into leather, patchouli, vetiver and labdanum.",
+      "perfume-desc-armani-code-edp-homme":
+        "Giorgio Armani Code Eau de Parfum for men, refillable — a spicy amber fougère in the black Code bottle. Italian green mandarin opens onto nutmeg, resting on tonka bean absolute.",
+      "perfume-desc-armani-emporio-he":
+        "Emporio Armani He Eau de Toilette for men, 100ml — a woody amber in a matte black cylinder bottle. Japanese yuzu, sage and cardamom lead to nutmeg, rose and orris over vetiver, sandalwood, white musk and tonka.",
+      "perfume-desc-armani-si-passione-intense":
+        "Giorgio Armani Sì Passione Eau de Parfum Intense, refillable — a deeper Sì Passione in a red bottle fading to black. Blackcurrant and pear open onto jasmine, resting on warm vanilla and sandalwood.",
+      "perfume-desc-armani-si-passione-red-musk":
+        "Giorgio Armani Sì Passione Red Musk Eau de Parfum — a fruity floral musk in a see-through red Sì bottle. Red musk with strawberry extract opens onto rose absolute and milky notes, settling on white musks and vanilla.",
+      "perfume-desc-armani-my-way-ylang":
+        "Giorgio Armani My Way Ylang Eau de Parfum, refillable — a sunny fruity floral in a coral bottle. Mango, white flowers and bergamot open onto Madagascar ylang-ylang, coconut water and tuberose, resting on white musk, Bourbon vanilla and cedar.",
+      "perfume-desc-armani-stronger-with-you-parfum":
+        "Emporio Armani Stronger With You Parfum for men — the most intense Stronger With You, in a deep red-amber bottle. Pink pepper and lavender lead to the signature candied chestnut accord with leathery vanilla.",
+      "perfume-desc-armani-prive-vert-malachite":
+        "Armani Privé Vert Malachite Eau de Parfum, 100ml — from Les Terres Précieuses collection, in a green bottle with malachite banding. A luminous white floral built on a white lily accord with ylang-ylang, jasmine sambac, bitter orange and vanilla absolute.",
+      "perfume-desc-armani-luminous-silk-acqua-highlighter":
+        "Giorgio Armani Luminous Silk Acqua Highlighter, 12ml. Choose your shade — a water-based liquid highlighter with white and tinted micro-pearls, niacinamide and caffeine, applied with a doe-foot for a fresh, luminous glow.",
+      "perfume-desc-armani-designer-glow-foundation":
+        "Giorgio Armani Designer Glow Radiant Revitalizing Foundation SPF 15, 30ml. Choose your shade — a radiant, medium-coverage foundation with Prussian Blue pearl, hyaluronic acid and ceramides for a healthy, luminous finish.",
+      "perfume-desc-armani-vertigo-lift-mascara":
+        "Giorgio Armani Vertigo Lift Extreme Length mascara in 01 Black, 10ml — an Infinity-Loop brush lifts and lengthens lashes up to 70% visibly longer with a smudge-proof, arginine-enriched formula.",
+      "perfume-desc-armani-luminous-silk-bronzer":
+        "Giorgio Armani Luminous Silk Bronzer in 120 Sunbathed Dune, 18g — the deepest shade, a rich warm cocoa bronze with a subtle shimmer. A creamy powder with a sun-ray embossed design for a natural sun-kissed warmth.",
+      "perfume-desc-armani-luminous-silk-cheek-tint-shine":
+        "Giorgio Armani Luminous Silk Cheek Tint Shine, 12ml. Choose your shade — a pearly liquid blush that builds from a soft flush to radiant colour with a luminous sheen, wearing up to 12 hours.",
+      "perfume-desc-armani-code-edp-set":
+        "Giorgio Armani Code Eau de Parfum gift set for men — the refillable amber fougère with bergamot, iris and tonka bean, in a red holiday box with a travel spray.",
+      "perfume-desc-armani-si-edp-body-set":
+        "Giorgio Armani Sì Eau de Parfum gift set — the modern chypre of blackcurrant nectar, freesia and blond musky woods, with matching body care in a red holiday box.",
+      "perfume-desc-armani-si-passione-set":
+        "Giorgio Armani Sì Passione Eau de Parfum gift set — a vibrant fruity floral with blackcurrant, pink pepper, rose, heliotrope, vanilla and cedar, with a travel spray.",
+      "perfume-desc-armani-my-way-edp-set":
+        "Giorgio Armani My Way Eau de Parfum gift set — the refillable floral with orange blossom, bergamot, tuberose, jasmine, vanilla and cedar, with a travel spray.",
+      "perfume-desc-armani-acqua-di-gio-profondo-set":
+        "Giorgio Armani Acqua di Giò Profondo Eau de Parfum gift set — an aromatic aquatic with marine notes, green mandarin, lavender, rosemary, cedar and patchouli.",
+      "perfume-desc-armani-swy-intensely-set":
+        "Emporio Armani Stronger With You Intensely gift set — an amber woody fougère with pink pepper, chestnut, lavender, sage, amberwood and vanilla.",
+      "perfume-desc-armani-swy-parfum-set":
+        "Emporio Armani Stronger With You Parfum gift set — an amber leather fougère with pink pepper, mandarin, lavender, chestnut, vanilla and leather.",
+      "perfume-desc-armani-acqua-di-gio-edt-set-50":
+        "Giorgio Armani Acqua di Giò Eau de Toilette gift set — the fresh aquatic classic with marine notes, bergamot, rosemary and white musk, with a matching shower gel.",
+      "perfume-desc-armani-acqua-di-gio-parfum-set":
+        "Giorgio Armani Acqua di Giò Parfum gift set — the intense refillable aquatic with marine notes, bergamot, clary sage, geranium, incense and patchouli.",
+      "perfume-desc-armani-my-way-body-set":
+        "Giorgio Armani My Way Eau de Parfum gift set — the luminous floral with orange blossom, tuberose and vanilla, with perfumed body care in a pink box.",
+      "perfume-desc-armani-si-edp-spring-set":
+        "Giorgio Armani Sì Eau de Parfum gift set — the blackcurrant, freesia and musky woods chypre with a travel spray and body lotion, in a pink box.",
+      "perfume-desc-valentino-uomo-born-in-roma-edt-set":
+        "Valentino Uomo Born in Roma Eau de Toilette gift set — a woody aromatic with mineral salt, ginger, violet leaf and vetiver, in a black gift box with a travel spray.",
+      "perfume-desc-valentino-donna-born-in-roma-edp-set":
+        "Valentino Donna Born in Roma Eau de Parfum gift set — a floral amber with a jasmine trio, Bourbon vanilla and cashmeran, with a travel spray.",
+      "perfume-desc-prada-paradoxe-holiday-set":
+        "Prada Paradoxe Eau de Parfum holiday gift set — the floral amber Paradoxe (neroli, amber, white musk) in a festive ornament box, with a travel spray to take along.",
+      "perfume-desc-prada-luna-rossa-ocean-edp-set":
+        "Prada Luna Rossa Ocean Eau de Parfum gift set — an amber fougère for men with lemon, saffron and leathery oakwood, in a silver ornament box with a travel spray.",
+      "perfume-desc-prada-paradoxe-virtual-flower-set":
+        "Prada Paradoxe Virtual Flower Eau de Parfum gift set — a fresh floral musk of green bergamot, jasmine, neroli, musk and ambrette, in a saffiano-textured envelope box.",
+      "perfume-desc-prada-luna-rossa-carbon-set":
+        "Prada Luna Rossa Carbon Eau de Toilette gift set — an aromatic fougère for men with bergamot, pepper, lavender, patchouli and amber, in an envelope gift box.",
+      "perfume-desc-prada-luna-rossa-black-set":
+        "Prada Luna Rossa Black Eau de Parfum gift set — an amber woody scent for men with bergamot, angelica, patchouli, amber, musk and coumarin, in an envelope gift box.",
+      "perfume-desc-prada-paradoxe-edp-spring-set":
+        "Prada Paradoxe Eau de Parfum gift set — the floral amber Paradoxe (neroli, amber, white musk) in a mint-and-pink envelope box, with a matching travel spray.",
+      "perfume-desc-ysl-y-le-parfum-set":
+        "Yves Saint Laurent Y Le Parfum holiday gift set — the intense woody fougère for men (apple, ginger, lavender, sage, cedar, tonka) in a black lace-pattern box.",
+      "perfume-desc-ysl-myslf-le-parfum-set":
+        "Yves Saint Laurent MYSLF Le Parfum gift set — a woody amber for men with black pepper, orange blossom, Bourbon vanilla and patchouli, in a black lace-pattern box.",
+      "perfume-desc-ysl-myslf-edp-set":
+        "Yves Saint Laurent MYSLF Eau de Parfum gift set — a woody floral for men with bergamot, Tunisian orange blossom, patchouli and Ambrofix, in a brushed-silver box.",
+      "perfume-desc-ysl-black-opium-set-30":
+        "Yves Saint Laurent Black Opium Eau de Parfum gift set — the amber floral with black coffee, vanilla, white flowers and patchouli, in a nude box with the YSL logo.",
+      "perfume-desc-ysl-black-opium-set-50":
+        "Yves Saint Laurent Black Opium Eau de Parfum spring gift set — the amber floral with black coffee, vanilla and white flowers, with a mini Lash Clash mascara and a YSL pouch.",
+      "perfume-desc-lancome-idole-holiday-set":
+        "Lancôme Idôle Eau de Parfum holiday gift set — the clean floral Idôle (bergamot, pear, rose, jasmine, white musk) with a matching scented body cream and a mini Lash Idôle mascara.",
+      "perfume-desc-lancome-iconic-mascara-set":
+        "Lancôme Iconic Mascara holiday set — four full-size lash favourites for volume, length and care in one festive box.",
+      "perfume-desc-lancome-lveb-elixir-set":
+        "Lancôme La Vie Est Belle L'Elixir Eau de Parfum gift set — the rich gourmand L'Elixir (raspberry, violet leaf, rose, cocoa butter, leather) with a travel spray of the original.",
+      "perfume-desc-lancome-lveb-candle-set":
+        "Lancôme La Vie Est Belle Eau de Parfum candle set — the iconic iris, patchouli and vanilla gourmand paired with a mini scented candle in the same fragrance.",
+      "perfume-desc-lancome-hypnose-drama-set":
+        "Lancôme Hypnôse Drama set — extreme-volume mascara with a mini kohl pencil and Bi-Facil eye make-up remover for a complete dramatic eye look.",
+      "perfume-desc-viktor-rolf-spicebomb-extreme-set":
+        "Viktor&Rolf Spicebomb Extreme Eau de Parfum gift set — the explosive spicy oriental (grapefruit, black pepper, cinnamon, saffron, tobacco, vanilla) with a travel spray.",
+      "perfume-desc-cacharel-yes-i-am-set":
+        "Cacharel Yes I Am Eau de Parfum gift set — the playful raspberry, gardenia and cardamom-milk scent in the lipstick-shaped bottle, with a travel spray.",
+      "perfume-desc-mugler-angel-elixir-set":
+        "Mugler Angel Elixir Eau de Parfum gift set — a floral gourmand (pink pepper, ylang-ylang, orange blossom, sandalwood, Bourbon vanilla) in the refillable star bottle, with a travel spray.",
+      "perfume-desc-biotherm-homme-force-supreme-set":
+        "Biotherm Homme Force Supreme gift set — an anti-ageing, firming routine for men with the Force Supreme cream, a cleanser and a shaving foam.",
+      "perfume-desc-ysl-all-hours-hyper-bronze":
+        "Yves Saint Laurent All Hours Hyper Bronze bronzing powder, 7.5g. Choose your shade — a multi-use bronzer with a soft matte finish and subtle sheen that lasts up to 24 hours. Enriched with hyaluronic acid and niacinamide; fragrance-free, sweat- and water-proof.",
+      "perfume-desc-ysl-all-hours-hyper-luminize":
+        "Yves Saint Laurent All Hours Hyper Luminize highlighter, 5g. Choose your shade — an ultra-creamy powder with micro-pearls for a 12-hour glow, enriched with hyaluronic acid and niacinamide, in a quilted compact.",
+      "perfume-desc-ysl-all-hours-hyper-blur-loose-powder":
+        "Yves Saint Laurent All Hours Hyper Blur Loose Powder, 10g. Choose your shade — a loose setting powder with 1% hyaluronic acid and niacinamide that mattifies for up to 14 hours, blurs lines and pores and resists sweat and transfer. Comes with a powder puff.",
+      "perfume-desc-ysl-loveshine-balm":
+        "Yves Saint Laurent Loveshine Candy Glow Tinted Butter Balm, 3.1g. Choose your shade — a tinted lip balm with shea butter and maracuja oil whose pH-adjusting pigments give a sheer, personalised flush with a soft shine. Also works as a lip primer.",
+      "perfume-desc-ysl-lines-liberated":
+        "Yves Saint Laurent Lines Liberated waterproof eye pencil, 1.2g. Choose your shade — a smudge-resistant liner with up to 24-hour wear and a 3-in-1 angled brush to sculpt, blend and stretch the line. Enriched with cactus fig flower oil; safe for the waterline.",
+      "perfume-desc-ysl-make-me-blush-liquid":
+        "Yves Saint Laurent Make Me Blush liquid blush, 15ml. Choose your shade — a lightweight, non-sticky liquid blush with a second-skin natural-matte finish and up to 12 hours of wear. Doe-foot applicator; suitable for sensitive skin.",
+      "perfume-desc-ysl-make-me-blush-bold":
+        "Yves Saint Laurent Make Me Blush Bold Blurring powder blush, 6g. Choose your shade — a silky, pore-blurring powder with squalane and rosehip that is waterproof and sweat-proof for up to 24 hours, in a gold compact with a quilted lid.",
+      "perfume-desc-ysl-loveshine-gloss":
+        "Yves Saint Laurent Loveshine Plumping Lip Oil Gloss, 6ml. Choose your shade — a high-shine gloss made of 95% oils, with ginger and pepper oils for a tingling plumping effect, hyaluronic acid and fig pulp. Up to 8 hours of glassy shine and 24 hours of hydration.",
+      "perfume-desc-ysl-libre-flowers-flames":
+        "Yves Saint Laurent Libre Flowers & Flames Eau de Parfum Florale — a warm floral take on Libre with golden-sand juice. Lavender and bergamot open onto a desert lily accord, palm flower, orange blossom absolute and Diva lavender, over Bourbon vanilla.",
+      "perfume-desc-ysl-myslf-le-parfum":
+        "Yves Saint Laurent MYSLF Le Parfum for men, refillable — a spicy woody floral in a matte black bottle. Black pepper essence opens onto Tunisian orange blossom absolute, resting on woods and a Bourbon vanilla infusion.",
+      "perfume-desc-ysl-black-opium-glitter":
+        "Yves Saint Laurent Black Opium Eau de Parfum Glitter — a sparkling Black Opium in a silver glitter bottle. Pear, green mandarin and lemon meet orange blossom over a marshmallow musk accord, coffee, Bourbon vanilla and patchouli.",
+      "perfume-desc-ysl-libre-leau-nue":
+        "Yves Saint Laurent Libre L'Eau Nue Parfum de Peau — YSL's first alcohol-free fragrance, an oil-in-water skin scent. Green mandarin and Calabrian bergamot open onto Moroccan orange blossom and lavender, settling on vanilla, musk and ambergris.",
+      "perfume-desc-ysl-y-le-parfum":
+        "Yves Saint Laurent Y Le Parfum for men — the most intense Y, an aromatic fougère in a deep blue-black bottle. Apple, aldehydes, grapefruit and ginger lead to sage, lavender and geranium over cedar, olibanum, patchouli and tonka.",
+      "perfume-desc-prada-paradoxe-virtual-flower":
+        "Prada Paradoxe Virtual Flower Eau de Parfum Florale, refillable — a fresh floral musk in the light-pink triangle bottle. Vert de bergamot opens onto a jasmine accord and neroli, resting on musk and ambrette.",
+      "perfume-desc-prada-infusion-vanille":
+        "Prada Les Infusions Infusion de Vanille Eau de Parfum, 100ml — a unisex woody amber vanilla. Bergamot and neroli open onto a vanilla infusion and angelica seed, softened by musk.",
+      "perfume-desc-valentino-born-in-roma-the-gold-uomo":
+        "Valentino Born in Roma The Gold Uomo Eau de Toilette, 100ml — a 2024 limited edition in the Rockstud bottle dressed in gold. Solar notes, spices and nutmeg lead to Virginia cedar over a warm vanilla and amber base.",
+      "perfume-desc-valentino-born-in-roma-the-gold-donna":
+        "Valentino Born in Roma The Gold Donna Eau de Parfum — a 2024 limited edition in the gold Rockstud bottle. A fruity white floral of Italian mandarin, a golden gardenia accord and a solar coconut accord over vanilla and cedar.",
+      "perfume-desc-valentino-born-in-roma-uomo-extradose":
+        "Valentino Born in Roma Uomo Extradose Parfum — the most concentrated Born in Roma Uomo, in glossy black studded glass. Bergamot and mandarin open onto lavandin and spices, resting on an overdose of vetiver with guaiac wood.",
+      "perfume-desc-valentino-born-in-roma-donna-extradose":
+        "Valentino Born in Roma Donna Extradose Le Parfum — an intense floral amber in a bottle fading to deep fuchsia. A blackcurrant accord opens onto a rum accord and jasmine sambac, over an overdose of Madagascar Bourbon vanilla.",
+      "perfume-desc-lancome-lveb-elixir":
+        "Lancôme La Vie Est Belle L'Elixir Eau de Parfum, refillable — a deeper, richer La Vie Est Belle with red juice and a glitter ribbon. A raspberry liqueur accord and Calabrian bergamot open onto violet leaf and rose, resting on cocoa butter absolute, leather and cedar.",
+      "perfume-desc-lancome-idole-power":
+        "Lancôme Idôle Power L'Eau de Parfum Intense — the first fruity-woody Idôle, in a red-to-pink gradient bottle. A candied-apple pomarose accord meets Damascena rose over creamy Australian sandalwood.",
+      "perfume-desc-lancome-tresor-la-nuit-vanille-noire":
+        "Lancôme La Nuit Trésor Vanille Noire Eau de Parfum — Lancôme's first amber, in the diamond-cut Trésor bottle with a black leather rose. Honeyed Damascena rose meets leathery Madagascar Bourbon vanilla absolute and an oud wood accord.",
+      "perfume-desc-ralph-lauren-ralphs-club-edt":
+        "Ralph Lauren Ralph's Club Eau de Toilette for men — a refined woody aromatic scent inspired by Parisian nightlife. Lavender and clary sage open onto Virginia cedar, resting on vetiver.",
+      "perfume-desc-mugler-angel-fantasm":
+        "Mugler Angel Fantasm Eau de Parfum Sensuelle, refillable — the first black Angel star bottle. Pineapple and bergamot open onto coconut and tiaré flower, settling on patchouli, Bourbon vanilla and amber.",
+      "perfume-desc-mugler-amen-fantasm":
+        "Mugler A*Men Fantasm Eau de Parfum Sensuelle for men, 100ml — in a matte black bottle with a silver star. Pink pepper, citrus and bergamot meet dark chocolate and clary sage over a deep patchouli base.",
+      "perfume-desc-mugler-alien-extraintense":
+        "Mugler Alien Extraintense Eau de Parfum Intense, refillable — a deeper, more radiant Alien in a purple-to-black bottle. Petitgrain opens onto jasmine and tuberose, settling on vanilla, cashmeran and amberwood.",
+      "perfume-desc-cacharel-ella-ella":
+        "Cacharel Ella Ella Eau de Parfum, refillable — a joyful floral gourmand in a butterfly bottle. Coconut and bergamot open onto orange blossom and jasmine, resting on patchouli and Bourbon vanilla.",
+      "perfume-desc-viktor-rolf-spicebomb-dark-leather":
+        "Viktor&Rolf Spicebomb Dark Leather Eau de Parfum for men — a smoky, spicy leather in the matte black grenade bottle. Black pepper and nutmeg ignite incense and cinnamon over dark leather and tobacco.",
+      "perfume-desc-diesel-only-the-brave-edp":
+        "Diesel Only The Brave Eau de Parfum for men — a stronger take on the iconic fist bottle, in deep blue. Lemon, mandarin and coriander lead to clary sage and lavandin over a warm suede base.",
+      "perfume-desc-azzaro-forever-wanted-elixir":
+        "Azzaro Forever Wanted Elixir Parfum for men — an intense, long-lasting Wanted in a gold bottle. Raspberry, green mandarin and bergamot meet cardamom, lavender and clary sage over leather, vetiver and wolfwood.",
+      "perfume-desc-lancome-lip-idole-juicytreat":
+        "Lancôme Lip Idôle Juicytreat oil-in-gloss, 8.5ml. Choose your shade — a cushiony gloss with 20% squalane, hyaluronic acid and Maxi-Lip peptides for juicy, plumped-looking lips, a cooling menthol feel and up to 24 hours of hydration.",
+      "perfume-desc-lancome-lash-idole-flutter":
+        "Lancôme Lash Idôle Flutter Extension mascara in 01 True Black, 8.5ml — a lengthening wax-in-water formula with a nano-bristle brush for up to 75% visibly longer lashes and up to 24 hours of clump- and flake-free wear.",
+      "perfume-desc-lancome-tiuw-setting-powder":
+        "Lancôme Teint Idole Ultra Wear Skin Refining Setting Powder, 10g. Choose your shade — a soft-matte pressed powder with squalane, niacinamide, hyaluronic acid and vitamin E that blurs pores and sets makeup without creasing or caking. Includes a puff.",
+      "perfume-desc-lancome-tiuw-care-glow-concealer":
+        "Lancôme Teint Idole Ultra Wear Care & Glow Serum Concealer in 125W, a light beige with a warm undertone, 13ml. An 81% serum base with hyaluronic acid, ceramides and peptides gives medium, buildable coverage with a natural glow and up to 24 hours of hydration.",
+      "perfume-desc-lancome-hydra-zen-gel-cream":
+        "Lancôme Hydra Zen Gel Cream, 50ml — an oil-free moisturising gel cream for oily and combination skin, including sensitive. Centifolia rose extract, hyaluronic acid and bisabolol give up to 72 hours of hydration and visibly calm redness.",
+      "perfume-desc-lancome-genifique-ultimate":
+        "Lancôme Génifique Ultimate serum — a skin-barrier repair serum with 98% pure Beta-Glucan-CM, 7 pre- and probiotic fractions, hyaluronic acid and licorice extract. Visibly reduces redness, fine lines and pores; 97% natural-origin ingredients and tested on sensitive skin.",
+      "perfume-desc-lancome-renergie-crx-triple-serum-retinol":
+        "Lancôme Rénergie C.R.x. Triple Serum Retinol, 50ml — three chambers of pure vitamin C gel-serum, pure retinol serum-emulsion and an X-peptide cream-serum with ceramides, mixed with every pump for faster-looking skin renewal. Suitable for sensitive skin.",
+      "perfume-desc-lancome-renergie-hpn-uvmune-spf50":
+        "Lancôme Rénergie H.P.N. UVMUNE Cream SPF50, 50ml — an anti-dark-spot, anti-sagging day cream with 300-Peptide, hyaluronic acid and niacinamide, plus UVMUNE filters with Mexoryl 400 against ultra-long UVA rays.",
+      "perfume-desc-lancome-tonique-confort-200":
+        "Lancôme Tonique Confort re-hydrating toner, 200ml — for dry and sensitive skin, with Centifolia rose water, hyaluronic acid and squalane to soothe instantly and help repair the skin barrier. 97% natural-origin ingredients.",
+      "perfume-desc-biotherm-life-plankton-regenerating-serum":
+        "Biotherm Life Plankton Regenerating Serum — a full anti-ageing serum with 5% Biotech Plankton (35 micronutrients), vitamin CG and hyaluronic acid that visibly improves 10 signs of ageing. 95% natural-origin, vegan and suitable for sensitive skin.",
+      "perfume-desc-biotherm-homme-aquapower-advanced-gel":
+        "Biotherm Homme Aquapower Advanced Gel — a cooling water-gel moisturiser for men with normal to combination skin. Biotech Plankton and bio-ceramides give 48-hour hydration and strengthen the skin barrier; tested on sensitive skin.",
+      "perfume-desc-biotherm-lait-corporel-active-recovery":
+        "Biotherm Lait Corporel Active Recovery body milk, 400ml — an accelerated-repair body milk that instantly soothes tightness and roughness, with the brand's signature bergamot and almond scent. Pump bottle.",
+      "perfume-desc-biotherm-blue-peptides-eyes-lips":
+        "Biotherm Blue Peptides Eyes & Lips Contour Reshaper, 15ml — a pink balm for the eye area and lip contour with collagen peptides, green-tea caffeine and Biotech Plankton, applied with a cooling metal tip. 93% natural-origin.",
+      "perfume-desc-biotherm-aquasource-hydra-barrier-cleanser":
+        "Biotherm Aquasource Hydra Barrier Cleanser, 150ml — a soap-free cream-to-foam cleanser for sensitive skin with Biotech Plankton, bio-ceramides and niacinamide that cleanses without tightness. 99% biodegradable formula.",
+      "perfume-desc-biotherm-aquasource-hydra-barrier-cream":
+        "Biotherm Aquasource Hydra Barrier Cream — a barrier-strengthening moisturiser with Biotech Plankton, bio-ceramides, hyaluronic acid, centella and adenosine for up to 72 hours of hydration. 94% natural-origin, in a recycled-glass jar.",
+      "perfume-desc-lancome-o-de-lancome-off-now":
+        "Lancôme Ôff Now Eau de Toilette, 100ml — a calming woody citrus from the Ô de Lancôme collection by Fabrice Pellegrin. Verbena from Lancôme's Domaine de la Rose in Grasse meets a creamy sandalwood accord.",
+      "perfume-desc-lancome-o-de-lancome-over-the-top":
+        "Lancôme Ôver The Top Eau de Toilette, 100ml — a bold green floral with a fruity touch from the Ô de Lancôme collection by Carlos Benaïm. A crisp tomato-leaf accord opens onto jasmine absolute from the Domaine de la Rose.",
+      "perfume-desc-lancome-o-de-lancome-ozenith":
+        "Lancôme Ô Zénith Eau de Toilette, 100ml — a joyful floral fruity from the Ô de Lancôme collection, an 'explosion of happiness' pairing jasmine absolute from the Domaine de la Rose with an exotic monoï accord.",
+      "perfume-desc-armani-prive-iris-bleu":
+        "Armani Privé Iris Bleu Eau de Toilette from Les Eaux collection — a floral green musk inspired by the Mediterranean 'blue hour'. Galbanum, bergamot and lemon open onto orris butter and jasmine, resting on white musk, Virginia cedar and guaiac wood.",
+      "perfume-desc-armani-prive-gardenia-antigua":
+        "Armani Privé Gardénia Antigua Eau de Toilette, 100ml — a sunny unisex gardenia inspired by Giorgio Armani's Antigua retreat. Mandarin and neroli open onto gardenia and jasmine sambac, softened by a salty sea-spray accord, patchouli, Ambroxan and white musks.",
+      "perfume-desc-armani-prive-indigo-tanzanite":
+        "Armani Privé Indigo Tanzanite Eau de Parfum, 100ml, from Les Terres Précieuses collection — a woody amber inspired by Tanzanian night skies: bergamot and almond over heliotrope and a milky accord, wrapped in patchouli, benzoin, labdanum and tolu balsam.",
+      "perfume-desc-cacharel-anais-anais":
+        "Cacharel Anaïs Anaïs L'Original Eau de Toilette — the classic 1978 white floral in its pale-pink bottle. Hyacinth, honeysuckle and orange blossom open onto lily, jasmine and rose over amber, incense, sandalwood and musk.",
+      "perfume-desc-armani-code-edp-75-spring-set":
+        "Giorgio Armani Code Eau de Parfum spring gift set for men, in a plastic-free teal ginkgo-leaf box — an ambery, spicy fougère with green mandarin, nutmeg and tonka bean absolute.",
+      "perfume-desc-armani-code-edt-50-spring-set":
+        "Giorgio Armani Code Eau de Toilette spring gift set for men, in a teal ginkgo-leaf box — bergamot and lemon over olive blossom and star anise, with tonka, guaiac wood and leather.",
+      "perfume-desc-lancome-lash-idole-idole-edp-set":
+        "Lancôme Lash Idôle and Idôle gift set — the lifting, volumising Lash Idôle mascara paired with a travel spray of the rose-and-jasmine Idôle Eau de Parfum.",
+      "perfume-desc-lancome-lash-idole-flutter-extension-set":
+        "Lancôme Lash Idôle Flutter Extension gift set — the lengthening Flutter Extension mascara with up to 24-hour wear, plus a mini Lip Idôle Butterglow squalane lip balm.",
+      "perfume-desc-valentino-uomo-born-in-roma-edt-50-set":
+        "Valentino Uomo Born in Roma Eau de Toilette gift set — the woody aromatic with mineral salt, ginger, violet leaf and vetiver, in a black-and-pink floral Valentino box.",
+      "perfume-desc-biotherm-homme-aquapower-routine-set":
+        "Biotherm Homme Aquapower routine set — a men's hydrating 'Refresh. Recharge. Repeat.' routine with the Aquapower Advanced Gel moisturiser and cleanser.",
+      "perfume-desc-biotherm-homme-force-supreme-routine-set":
+        "Biotherm Homme Force Supreme routine set — an anti-ageing routine for men that targets firmness and wrinkles, with a cleanser and a shaving foam for sensitive skin.",
+      "perfume-desc-lancome-genifique-ultimate-routine-set":
+        "Lancôme Génifique Ultimate 3-step skin repair routine set — the Beta-Glucan-CM Génifique Ultimate serum with Rénergie H.P.N. 300-Peptide cream and Advanced Génifique eye cream.",
+      "perfume-desc-lancome-juicy-tubes":
+        "Lancôme Juicy Tubes Original lip gloss, 15ml. Choose your shade — the iconic high-shine, flavoured squeeze-tube gloss, relaunched with up to 4 hours of hydration for a juicy, glassy finish.",
+      "perfume-desc-lancome-skin-idole-supertint":
+        "Lancôme Skin Idôle 3 Serum Supertint, 30ml. Choose your shade — a tinted serum with an 87% skincare base (2% niacinamide, 1% hyaluronic acid and vitamin E) giving light-to-medium buildable coverage, a luminous skin-like finish and up to 24 hours of wear.",
+      "perfume-desc-lancome-genifique-eye-cream":
+        "Lancôme Génifique Ultimate eye cream, 20ml — the 2025 dual-repair eye cream with Beta-Glucan-CM and enoxolone that targets dark circles, puffiness, fine lines and wrinkles, with visibly fewer dark circles and wrinkles in 8 weeks.",
+      "perfume-desc-lancome-renergie-multi-glow-day":
+        "Lancôme Rénergie Multi-Glow rosy skin tone reviving day cream, 50ml — an anti-ageing cream for mature skin with collagen peptide fractions, niacinamide and pink pigment beads that leaves skin plumper, firmer and more radiant with a more even tone. Suitable for all skin types, including sensitive.",
+      "perfume-desc-biotherm-waterlover-sun-milk-spf50-400":
+        "Biotherm Waterlover Hydrating Sun Milk SPF 50+, 400ml pump bottle — very high UVA/UVB protection for face and body that is water-resistant, hydrates for 24 hours and leaves no white marks. With Life Plankton™, vitamin E and glycerin, in a 100% recycled bottle.",
+      "perfume-desc-biotherm-waterlover-milky-sun-spray-spf50":
+        "Biotherm Waterlover Milky Sun Spray SPF 50+, 200ml — an ultra-light, oil-free milky sun spray for face and body that is very water-resistant and suits all skin types. With Life Plankton™, in a 100% recycled bottle.",
+      "perfume-desc-biotherm-collagen-fit-body-cream":
+        "Biotherm Collagen Fit Intensive Hydra Body Cream, 200ml jar — a rich body cream with a collagen-support peptide, ceramide NP, shea and cocoa butter that tones, smooths and hydrates for up to 100 hours.",
+      "perfume-desc-biotherm-collagen-fit-body-milk":
+        "Biotherm Collagen Fit Firming Body Milk, 400ml pump bottle — a fast-absorbing firming milk with Biotech Plankton, a collagen peptide fraction and caffeine that gives an instant toning effect and up to 48 hours of hydration.",
+      "perfume-desc-biotherm-homme-force-supreme-body-reshaper":
+        "Biotherm Homme Force Supreme Body Reshaper, 125ml tube — a cooling, toning body cryo-gel for men, focused on the abdomen, with Biotech Plankton, caffeine and creatine.",
+      "perfume-desc-biotherm-homme-force-supreme-face-reshaper":
+        "Biotherm Homme Force Supreme Face Reshaper multi-reshaping and anti-wrinkle cream, 50ml — a light, non-greasy men's face cream with Biotech Plankton and Men Neo-Proxylane that firms, smooths wrinkles and redefines facial contours.",
+      "perfume-desc-armani-prisma-glass-icy-plumper":
+        "Giorgio Armani Prisma Glass Icy Plumper volumising lip gloss, 3.5ml. Choose your shade — a cooling plumping gloss with a frosted, prismatic shimmer, enriched with hyaluronic acid, squalane and peptides for up to 24 hours of hydration.",
+      "perfume-desc-ysl-loveshine-candy-glaze":
+        "Yves Saint Laurent Loveshine Candy Glaze lip gloss stick, 3.2g. Choose your shade — a sheer, juicy gloss-in-a-stick with hyaluronic acid, vitamin E, mango oil and pomegranate extract for a high-shine, plumped-looking finish.",
+      "perfume-desc-margiela-replica-beach-walk":
+        "Maison Margiela Replica Beach Walk Eau de Toilette — a sunny, salty stroll along the shore. Bergamot, lemon and pink pepper open onto ylang-ylang, coconut milk and heliotrope over musk, benzoin and cedar.",
+      "perfume-desc-margiela-replica-by-the-fireplace":
+        "Maison Margiela Replica By the Fireplace Eau de Toilette, 30ml — smoky and warm, like roasting chestnuts by a wood fire. Clove, pink pepper and orange blossom lead to chestnut, guaiac wood and juniper over vanilla, Peru balsam and cashmeran.",
+      "perfume-desc-margiela-replica-jazz-club":
+        "Maison Margiela Replica Jazz Club Eau de Toilette — the warm, spicy atmosphere of cigars and cocktails in a Brooklyn club. Pink pepper, neroli and lemon meet rum, clary sage and vetiver over tobacco leaf, vanilla and styrax.",
+      "perfume-desc-margiela-replica-lazy-sunday-morning":
+        "Maison Margiela Replica Lazy Sunday Morning Eau de Toilette — a clean floral musk of freshly washed linen. Aldehydes, pear and lily of the valley open onto iris, rose and orange blossom over white musk, patchouli and ambrette.",
+      "perfume-desc-margiela-replica-afternoon-delight":
+        "Maison Margiela Replica Afternoon Delight Eau de Toilette — a creamy gourmand built around a warm madeleine. Bitter almond and angelica lead to a madeleine accord and carrot over Madagascar vanilla, sandalwood and musk.",
+      "perfume-desc-margiela-replica-autumn-vibes":
+        "Maison Margiela Replica Autumn Vibes Eau de Toilette, 30ml — a woody, spicy walk through an autumn forest, with cardamom, carrot seed and red berries over cedarwood and a moss accord.",
+      "perfume-desc-margiela-replica-from-the-garden":
+        "Maison Margiela Replica From the Garden Eau de Toilette — fresh and green, like an afternoon in a sunny kitchen garden. Tomato leaf and green mandarin with geranium over patchouli, moss and white musk.",
+      "perfume-desc-margiela-replica-sailing-day":
+        "Maison Margiela Replica Sailing Day Eau de Toilette, 100ml — an aquatic sea-breeze scent. Sea notes, aldehydes, coriander and red pepper meet juniper and iris over seaweed, ambergris, cedar and amberwood.",
+      "perfume-desc-margiela-replica-on-a-date":
+        "Maison Margiela Replica On a Date Eau de Toilette, 30ml — a fruity chypre of sun-warmed grapes and roses. Blackcurrant liqueur, bergamot and pink pepper open onto Isparta rose, geranium and davana over patchouli, vetiver, moss and musks.",
+      "perfume-desc-margiela-replica-when-the-rain-stops":
+        "Maison Margiela Replica When the Rain Stops Eau de Toilette — an aromatic aquatic that captures fresh air after a spring shower. Green notes, bergamot and pink pepper meet a rain accord with rose and jasmine over pine, moss and patchouli.",
+      "perfume-desc-margiela-replica-under-the-stars":
+        "Maison Margiela Replica Under the Stars Eau de Toilette — a warm, smoky woody scent of a night around a campfire. Black pepper and cinnamon leaf lead to cypriol and cedar over labdanum, oud and a leather accord.",
+      "perfume-desc-margiela-replica-coffee-break":
+        "Maison Margiela Replica Coffee Break Eau de Toilette, 100ml — an amber-vanilla moment of calm. Pepper, orange blossom and patchouli open onto lavender, coffee, milk and tonka over vanilla, cedar and vetiver.",
+      "perfume-desc-margiela-replica-flying":
+        "Maison Margiela Replica Flying Eau de Parfum, 100ml, from the black-bottle Replica Dreams collection — a fresh, airy citrus with petitgrain, orange blossom, bergamot and neroli over an ozonic cloud accord, musk and moss.",
+      "perfume-desc-margiela-replica-ideal-one":
+        "Maison Margiela Replica Ideal One Eau de Parfum, 100ml, from the Replica Dreams collection — an amber-woody skin scent of elemi, bergamot and orange with orange blossom and lavender over musk, oud, guaiac wood, styrax and vanilla.",
+      "perfume-desc-margiela-replica-dancing-on-the-moon":
+        "Maison Margiela Replica Dancing on the Moon Eau de Parfum, 100ml, from the Replica Dreams collection — a powdery white floral of aldehydes, frangipani, jasmine sambac and iris over cashmeran, ambergris and musk, with a 'moon dust' note.",
+      "perfume-desc-margiela-replica-celestial-whispers":
+        "Maison Margiela Replica Celestial Whispers Eau de Parfum, 100ml, from the Replica Dreams collection — a smoky amber-woody scent of incense and metallic aldehydes with iris and myrrh over vanilla, musks and cedar.",
+      "perfume-desc-margiela-replica-under-the-lemon-trees":
+        "Maison Margiela Replica Under the Lemon Trees Eau de Toilette, 100ml — a sparkling woody citrus of a lazy afternoon on a Mediterranean terrace. Lime, petitgrain and cardamom with coriander, mate and green tea over cedar, cistus and white musk.",
+      "perfume-desc-margiela-replica-bubble-bath":
+        "Maison Margiela Replica Bubble Bath Eau de Toilette, 100ml — a clean floral musk inspired by a warm, foamy bath. A soap accord, bergamot and lavender meet jasmine and rose over coconut, white musk and patchouli.",
+      "perfume-desc-margiela-replica-lazy-sunday-morning-candle":
+        "Maison Margiela Replica Lazy Sunday Morning scented candle, 165g (about 41 hours of burn time) — the soft-skin-and-clean-linen scent of aldehydes, lily of the valley and pear with iris, orange blossom and rose over ambrette, patchouli and white musk.",
+      "perfume-desc-mugler-amen-stellar":
+        "Mugler A*Men Stellar Eau de Parfum Lumineuse for men (2025) — an amber aromatic gourmand that reworks A*Men around a creamy pistachio accord, with bergamot and lavender over a woody base.",
+      "perfume-desc-mugler-angel-stellar":
+        "Mugler Angel Stellar Eau de Parfum Lumineuse (2025), in a refillable cobalt-blue star — a powdery amber gourmand of creamy pistachio and sparkling bergamot over Madagascar Bourbon vanilla and woods.",
+      "perfume-desc-mugler-angel-edp":
+        "Mugler Angel Eau de Parfum in the refillable star bottle — the original 1992 amber gourmand. Calabrian bergamot, praline, red fruits and caramel over patchouli and vanilla. The 100ml comes as the standing star.",
+      "perfume-desc-mugler-angel-nova":
+        "Mugler Angel Nova Eau de Parfum, 25ml refillable — a fruity floral woody scent of raspberry and Damascena rose over Akigalawood.",
+      "perfume-desc-ralph-lauren-big-pony-1":
+        "Ralph Lauren Polo Big Pony #1 Eau de Toilette for men, 100ml, in the blue bottle — a fresh, sporty scent of lime, lemon, grapefruit and aquatic notes over a woody, musky base.",
+      "perfume-desc-ralph-lauren-polo-blue-parfum":
+        "Ralph Lauren Polo Blue Parfum, 75ml — a fresh woody scent of mandarin, cardamom and pink pepper with clary sage, smoky vetiver and jasmine over upcycled oakwood, olibanum and patchouli.",
+      "perfume-desc-ralph-lauren-polo-67-edt":
+        "Ralph Lauren Polo 67 Eau de Toilette (2024) — a woody aromatic of pineapple, bergamot and lemon with sage, juniper and rose hip over vetiver, patchouli and goldenrod.",
+      "perfume-desc-ralph-lauren-polo-67-edp":
+        "Ralph Lauren Polo 67 Eau de Parfum — a warmer, richer Polo 67 with pineapple, green mandarin, bergamot and cardamom, a touch of cypress and lavandin, over cedar, benzoin and vetiver.",
+      "perfume-desc-viktor-rolf-spicebomb-metallic-musk":
+        "Viktor&Rolf Spicebomb Metallic Musk Eau de Parfum for men (2025) — an amber spicy scent of black pepper, bergamot, elemi and aldehydes with cinnamon, chili and lavender over ambrette, cistus, a suede-leather accord and musk.",
+      "perfume-desc-viktor-rolf-flowerbomb-extreme":
+        "Viktor&Rolf Flowerbomb Extreme Eau de Parfum Intense (2025), in a matte-pink bottle — a vanilla-boosted floral of raspberry, bergamot and tea with jasmine sambac, rose, orange blossom and freesia over vanilla bean, patchouli and Peru balsam.",
+      "perfume-desc-prada-paradoxe-radical-essence":
+        "Prada Paradoxe Radical Essence Parfum (2025) — the most concentrated Paradoxe, in a deep-pink lacquered refillable bottle. Neroli and orange flower absolute meet a salted pistachio accord over creamy sandalwood.",
+      "perfume-desc-prada-paradoxe-hair-mist":
+        "Prada Paradoxe Hair Mist, 30ml — a lighter take on Paradoxe for the hair, with bergamot, neroli and jasmine over musks and ambrette, plus argan oil and rice vinegar for a silky finish.",
+      "perfume-desc-prada-paradoxe-intense-90-set":
+        "Prada Paradoxe Intense Eau de Parfum gift set in a mint-green Saffiano envelope box — the amber floral with neroli, jasmine, Ambrofix and a moss accord.",
+      "perfume-desc-ysl-myslf-labsolu":
+        "Yves Saint Laurent MYSLF L'Absolu Parfum (2025), in a mirror-silver bottle — a woody spicy scent of ginger, bergamot and cardamom with Moroccan orange blossom over Indonesian patchouli.",
+      "perfume-desc-valentino-born-in-roma-body-shimmer":
+        "Valentino Born in Roma Donna Perfumed Body Shimmer, 125ml — a shimmering gel lotion in the Donna scent with pearl and mother-of-pearl and hyaluronic acid for up to 12 hours of glow and hydration.",
+      "perfume-desc-valentino-born-in-roma-hair-body-mist":
+        "Valentino Born in Roma Donna Perfumed Hair & Body Mist, 90ml — bergamot, jasmine, woods and bourbon vanilla in a light mist with argan oil.",
+      "perfume-desc-armani-code-elixir":
+        "Giorgio Armani Code Elixir for men, 50ml (2025) — the most concentrated scent in the Code range. A Calabrian green mandarin opening leads to a spicy liquor accord and smoky leather over grilled tonka bean.",
+      "perfume-desc-armani-si-parfum":
+        "Giorgio Armani Sì Parfum (2025) — a gourmand leather chypre built around smoky vanilla. Blackcurrant nectar and a saffron accord open onto Damask rose over vanilla, a suede-like leather accord and patchouli.",
+      "perfume-desc-armani-swy-intensely-edp-50-set":
+        "Emporio Armani Stronger With You Intensely gift set for men, in a teal ginkgo-pattern box — the warm amber fougère with pink pepper, toffee, cinnamon, lavender, vanilla and tonka bean.",
+      "perfume-desc-lancome-lveb-vanille-nude":
+        "Lancôme La vie est belle Vanille Nude Eau de Parfum (2025) — Lancôme's first vanilla-musk, a 'glazed vanilla and creamy musk' of grandiflorum jasmine from the Domaine de la Rose, Madagascar bourbon vanilla, an overdose of white musk and sandalwood.",
+      "perfume-desc-lancome-absolue-longevity-soft-cream":
+        "Lancôme Absolue Longevity The Soft Cream, 60ml jar — Lancôme's first PDRN cream, with rose-derived Absolue PDRN, Perpetual Rose extract and Pro-Xylane to firm, redefine facial contours and hydrate for up to 24 hours. Melts into a light, serum-like texture; suits all skin types, including sensitive.",
+      "perfume-desc-biotherm-aquascreen-uv-daily-spf50":
+        "Biotherm Aquascreen Activewear Daily UV Fluid SPF 50+ (PA++++), 40ml — an ultra-light, invisible face sunscreen that resists sweat, sebum and friction, with peptides, vitamins B3 and E and Biotech Plankton.",
+      "perfume-desc-lancome-skin-idole-juicy-blush":
+        "Lancôme Skin Idôle Juicy Blush liquid blush, 9ml. Choose your shade — a buildable soft-matte liquid blush with an 85% skincare base, niacinamide and vitamins B5 and E, for a fresh flush that lasts up to 12 hours.",
+      "perfume-desc-ysl-the-inks-blur":
+        "Yves Saint Laurent The Inks Blur blurring matte lip stain, 5.5ml. Choose your shade — a weightless liquid stain with a soft-focus matte finish, up to 12 hours of wear and up to 24 hours of moisture.",
+      "perfume-desc-ysl-the-inks-vinyl-cream":
+        "Yves Saint Laurent The Inks Vinyl Cream high-shine lip stain, 5.5ml. Choose your shade — a lacquered, mirror-shine liquid stain with about 90% care ingredients (tuberose and prickly pear) and up to 24 hours of moisture.",
+      "perfume-desc-ysl-the-slim-couture-matte":
+        "Yves Saint Laurent The Slim Couture Matte Lipstick, 2.2g — the 2025 relaunch in a gold Cassandre case. Choose your shade — a velvety matte colour with a square, angled tip that lines and fills in one stroke, on a 67% care base with ceramides, rosehip and jojoba oils, for up to 10 hours of colour.",
+      "perfume-desc-ysl-all-hours-glow-foundation":
+        "Yves Saint Laurent All Hours Glow Foundation, 25ml — the radiant-finish All Hours (2025). Choose your shade — a serum-based formula with hyaluronic acid, niacinamide, macadamia oil and jasmine petal extract for buildable medium-to-full coverage, a skin-like glow and up to 24-hour wear.",
+      "perfume-desc-armani-skin-tint":
+        "Giorgio Armani Skin Tint long-wear & care skin tint, 30ml. Choose your shade — a 92% serum formula with Golden Hour Pearls, hyaluronic acid and niacinamide for buildable sheer-to-medium coverage, a radiant finish and 24-hour hydration.",
+      "perfume-desc-armani-luminous-silk-foundation":
+        "Giorgio Armani Luminous Silk Foundation, 30ml — the reformulated natural-glow blurring foundation. Choose your shade — medium buildable coverage with a silky natural glow, niacinamide, 24-hour wear and hydration; non-comedogenic and suitable for all skin types.",
+      "perfume-desc-armani-luminous-silk-glow-primer":
+        "Giorgio Armani Luminous Silk Illuminating Primer, 30ml — a glow-extending, water-based face base with Golden Hour pearls and hyaluronic acid. Wear alone for a dewy glow, under foundation, or mixed in; 24-hour hydration in one universal shade.",
+      "perfume-desc-armani-prive-cuir-nu":
+        "Armani/Privé Cuir Nu Eau de Parfum Intense — from Les Mille et Une Nuits collection (2025, Delphine Lebeau). An ambery leather inspired by Venetian tanneries: blue cardamom and dark-roasted Arabica coffee, Damask rose and nappa leather, over amber, labdanum and toasted tonka.",
+      "perfume-desc-armani-power-of-you":
+        "Emporio Armani Power of You Eau de Parfum for women (2026), in a ruby bottle with rose-gold rings — a floral fruity gourmand of passionfruit, bitter orange and lemon, frangipani and solar notes, over Madagascar vanilla, benzoin and labdanum.",
+      "perfume-desc-armani-stronger-with-you-amber":
+        "Emporio Armani Stronger With You Amber Eau de Parfum, 100ml — the first unisex scent of the line (2023, Cécile Matton). An ambery fougère of Provençal lavender, a rich amber accord and Madagascar bourbon vanilla.",
+      "perfume-desc-lancome-magie-noire":
+        "Lancôme Magie Noire Eau de Toilette, 75ml — the legendary 1978 oriental chypre. Blackcurrant bud, bergamot and galbanum open onto Bulgarian rose, jasmine and tuberose, over a mysterious base of patchouli, oakmoss, sandalwood, vetiver and amber.",
+      "perfume-desc-lancome-absolue-lextrait-cream":
+        "Lancôme Absolue L'Extrait Elixir Cream, 50ml — Lancôme's most exceptional regenerating cream, concentrated with Lancôme rose native cells and rose extracts from its Valensole gardens. A rich, melting texture that visibly regenerates, firms and restores radiance, in the black-and-gold jar.",
+      "perfume-desc-lancome-absolue-lextrait-yeux":
+        "Lancôme Absolue L'Extrait Yeux eye cream, 15ml — the ultimate regenerating eye elixir with Lancôme rose native cells, to visibly smooth lines, reduce puffiness and dark circles and illuminate the eye contour.",
+      "perfume-desc-biotherm-aquasource-vitamin-glow-gel":
+        "Biotherm Aquasource+ Vitamin Glow Gel, 50ml — a fresh, vitamin-rich gel moisturiser with vitamin C and Life Plankton™ that deeply hydrates and boosts radiance for a healthy-looking glow.",
+      "perfume-desc-biotherm-aquasource-cica-nutri-cream":
+        "Biotherm Aquasource Cica Nutri Cream, 30ml tube — a nourishing, soothing cream for dry and sensitive skin with cica (centella asiatica) and Life Plankton™, to comfort, repair the skin barrier and hydrate.",
+      "perfume-desc-prada-paradigme-edp":
+        "Prada Paradigme Eau de Parfum for men (2025), in a refillable green-to-black bottle — an ambery woody scent of Calabrian bergamot and airy musks over rosy-green Bourbon geranium, on Peru balsam, benzoin and guaiac wood.",
+      "perfume-desc-valentino-born-in-roma-rendez-vous-uomo":
+        "Valentino Uomo Born in Roma Rendez-Vous Ivory Eau de Toilette, 100ml — a 2025 limited edition in an ivory-lacquered studded bottle. Bergamot and lavandin over a smoky open-hearth accord.",
+      "perfume-desc-valentino-born-in-roma-rendez-vous-donna":
+        "Valentino Donna Born in Roma Rendez-Vous Ivory Eau de Parfum — a 2025 limited edition in an ivory-lacquered studded bottle. Green mandarin and orange blossom with a marshmallow heart over Madagascar vanilla and musk.",
+      "perfume-desc-valentino-born-in-roma-purple-melancholia-uomo":
+        "Valentino Uomo Born in Roma Purple Melancholia Eau de Toilette (2026) — an ambery aromatic woody scent of cardamom and lavandin over ambery woods and a creamy coconut accord.",
+      "perfume-desc-valentino-born-in-roma-purple-melancholia-donna":
+        "Valentino Donna Born in Roma Purple Melancholia Eau de Parfum (2026) — a fruity chypre of juicy plum and osmanthus over rich vanilla extract.",
+      "perfume-desc-ysl-libre-vanille-couture":
+        "Yves Saint Laurent Libre Vanille Couture Eau de Parfum, 50ml — a 2025 limited edition in a textured metallic-gold Libre bottle. Libre's lavender and orange blossom turned gourmand by a vanilla caviar accord dipped in golden liquor, with rum facets.",
+      "perfume-desc-margiela-untitled-l-eau":
+        "Maison Margiela (untitled) L'eau Eau de Toilette, 100ml — a fresh, green unisex citrus of mandarin, lemon, galbanum, buchu and spearmint over orange blossom, incense, patchouli and white musk.",
+      "perfume-desc-margiela-untitled-edp":
+        "Maison Margiela (untitled) Eau de Parfum, 100ml — the house's debut fragrance (2010), a green floral evoking a spring morning: galbanum, bitter orange and box-tree green, jasmine and lentisk, on incense, white musk and cedar.",
+      "perfume-desc-margiela-replica-beach-vibes-candle":
+        "Maison Margiela Replica Beach Vibes scented candle, 165g — \"Calvi, 1972: sun-kissed salty skin\". Bergamot, pink pepper and lemon over ylang-ylang, sunflower and coconut milk, on cedar, benzoin and musk; about 40 hours of burn time.",
+      "perfume-desc-margiela-replica-jazz-club-diffuser":
+        "Maison Margiela Replica Jazz Club reed diffuser, 185ml — \"Brooklyn, 2013: heady cocktails and cigars\". Pink pepper, lemon and neroli, a rum accord with clary sage, then vanilla, tonka, styrax, vetiver and tobacco leaf; white bottle with white reeds.",
+      "perfume-desc-margiela-replica-from-the-garden-candle":
+        "Maison Margiela Replica From the Garden scented candle, 165g — \"Puglia, 1998: earth and tomato leaves\". Tomato leaf and green mandarin with patchouli and geranium; over 40 hours of burn time.",
+      "perfume-desc-margiela-replica-lazy-sunday-morning-shower-gel":
+        "Maison Margiela Replica Lazy Sunday Morning perfumed shower gel, 200ml — a gentle foaming gel with plant glycerin in the clean-linen scent of lily of the valley, iris, ambrette and white musk.",
+      "perfume-desc-margiela-replica-lazy-sunday-morning-body-lotion":
+        "Maison Margiela Replica Lazy Sunday Morning perfumed body lotion, 200ml — a fast-absorbing lotion with shea butter, rapeseed oil and plant glycerin in the clean-linen scent; helps the matching eau de toilette last longer.",
+      "perfume-desc-dkny-be-delicious":
+        "DKNY Be Delicious Eau de Parfum (2004, Maurice Roucel), in the iconic green apple bottle — a fresh floral-fruity scent of crisp apple, cucumber and grapefruit over magnolia, rose and violet, on sandalwood and white amber.",
+      "perfume-desc-dkny-be-100-delicious":
+        "DKNY Be 100% Delicious Eau de Parfum (2021) — a juicy fruity floral of pear, pistachio, blackcurrant and mandarin, with magnolia, rose water and orange blossom over sandalwood, tonka and white woods.",
+      "perfume-desc-dkny-be-delicious-fresh-blossom":
+        "DKNY Be Delicious Fresh Blossom Eau de Parfum (2009), in the pink apple bottle — a soft floral inspired by apple blossom in Central Park: grapefruit, cassis and apricot, lily of the valley, rose and jasmine, over blonde woods.",
+      "perfume-desc-dkny-be-extra-delicious":
+        "DKNY Be Extra Delicious Eau de Parfum (2020) — a floral gourmand of crisp pear, gardenia and creamy caramel with raspberry and ambroxan, made to wear alone or layered over Be Delicious.",
+      "perfume-desc-dkny-women-edp":
+        "DKNY Women Energizing Eau de Parfum, in the tall skyscraper bottle — an urban floral of blood orange, chilled vodka and tomato leaf, water lily, orchid and daffodil, over white birch and tulip-tree bark.",
+      "perfume-desc-dkny-be-delicious-orchard-street":
+        "DKNY Be Delicious Orchard St. Eau de Parfum (2023), inspired by New York's Lower East Side — Pink Lady apple and pink grapefruit, jasmine, raspberry and pomegranate, over cedarwood and leather.",
+      "perfume-desc-cavalli-paradiso":
+        "Roberto Cavalli Paradiso Eau de Parfum — a luminous floral-woody musk of neroli and mandarin, a wild jasmine heart, and cypress and musk in the base.",
+      "perfume-desc-just-cavalli-her":
+        "Just Cavalli for Her Eau de Toilette — a creamy floral of neroli and Tahitian tiare flower over rosewood.",
+      "perfume-desc-just-cavalli-him":
+        "Just Cavalli for Him Eau de Toilette — a leather fragrance with pepper and vetiver on a leather base.",
+      "perfume-desc-cavalli-signature":
+        "Roberto Cavalli Signature Eau de Parfum — an oriental floral of green mandarin, pink pepper and ambrette, orange blossom, jasmine sambac and mirabelle plum, on benzoin, patchouli and vanilla.",
+      "perfume-desc-cavalli-nero-assoluto":
+        "Roberto Cavalli Nero Assoluto Eau de Parfum, 75ml — an oriental floral of mandarin, peach and orchid, orange flower, cedarwood and black vanilla, on sandalwood, musk and ebony wood.",
+      "perfume-desc-cavalli-sweet-ferocious":
+        "Roberto Cavalli Signature Sweet Ferocious Eau de Parfum (2024) — an oriental woody scent of pomelo, saffron, orange peel and elemi, a vanilla, tonka, amber and oud heart, on cypriol, guaiac wood and sandalwood.",
+      "perfume-desc-just-cavalli-wild-heart-her":
+        "Just Cavalli Wild Heart for Her Eau de Parfum (2024) — a fruity floral of red currant, apricot and bergamot, peony, mimosa and violet leaf, on cedar, coconut water and musk.",
+      "perfume-desc-just-cavalli-wild-heart-him":
+        "Just Cavalli Wild Heart for Him Eau de Toilette (2024) — a spicy woody amber of bergamot, saffron and boxwood, pepper, nutmeg and geranium, on cedar, tobacco and vetiver.",
+      "perfume-desc-cavalli-paradiso-rosa":
+        "Roberto Cavalli Paradiso Rosa Eau de Parfum (2025) — a fruity floral of raspberry, pink grapefruit, bergamot and pink pepper, peony, water jasmine and plumeria, on coconut water, benzoin, sandalwood and musk.",
+      "perfume-desc-cavalli-serpentine":
+        "Roberto Cavalli Serpentine Parfum (2025 relaunch), in a white bottle coiled with a gold snake — pink pepper, bergamot and blackcurrant, jasmine sambac, lavender, saffron and rose, over Madagascar vanilla, tonka and patchouli.",
+      "perfume-desc-just-cavalli-give-me-magic-him":
+        "Just Cavalli Give Me Magic for Him Eau de Toilette (2025) — a woody spicy scent of cardamom, pink pepper and lavender, cedarwood, hinoki and incense, on leather, tobacco, vanilla and guaiac wood.",
+      "perfume-desc-just-cavalli-give-me-magic-her":
+        "Just Cavalli Give Me Magic for Her Eau de Parfum (2025) — a spicy amber of nutmeg and jasmine, saffron, incense and oud, on patchouli, oakmoss and vetiver.",
+      "perfume-desc-ysl-libre-edp-loveshine-set":
+        "Yves Saint Laurent Libre Eau de Parfum holiday gift set (2025) — the lavender and orange blossom floral paired with a Loveshine lipstick.",
+      "perfume-desc-ysl-black-opium-holiday-set-50":
+        "Yves Saint Laurent Black Opium Eau de Parfum holiday gift set (2025) — the coffee and vanilla floral with a travel spray and a mini Lash Clash mascara.",
+      "perfume-desc-ysl-myslf-le-parfum-holiday-set":
+        "Yves Saint Laurent MYSLF Le Parfum holiday gift set (2025) — the intense woody floral with a MYSLF Eau de Parfum travel spray.",
+      "perfume-desc-ysl-myslf-edp-holiday-set-60":
+        "Yves Saint Laurent MYSLF Eau de Parfum holiday gift set (2025) — the orange blossom woody floral for men with a travel spray.",
+      "perfume-desc-ysl-myslf-edp-holiday-set-40":
+        "Yves Saint Laurent MYSLF Eau de Parfum holiday gift set (2025) — the orange blossom woody floral for men with a travel spray.",
+      "perfume-desc-ysl-libre-edp-intense-holiday-set":
+        "Yves Saint Laurent Libre Eau de Parfum Intense holiday gift set (2025) — the richer lavender, orange blossom and vanilla Libre with a travel spray.",
+      "perfume-desc-prada-paradoxe-intense-holiday-set":
+        "Prada Paradoxe Intense Eau de Parfum holiday gift set (2025) — the ambery floral with jasmine and vanilla, with a travel spray.",
+      "perfume-desc-prada-paradoxe-holiday-set-2025":
+        "Prada Paradoxe Eau de Parfum holiday gift set (2025) — neroli, orange blossom and amber in the refillable bottle, with a travel spray.",
+      "perfume-desc-prada-paradigme-set":
+        "Prada Paradigme Eau de Parfum gift set — the ambery woody men's scent of bergamot, geranium and benzoin, with a travel spray.",
+      "perfume-desc-prada-luna-rossa-black-set-100":
+        "Prada Luna Rossa Black Eau de Parfum gift set — the ambery woody scent of bergamot, patchouli and amber, with a travel spray.",
+      "perfume-desc-armani-si-passione-holiday-set":
+        "Armani Sì Passione Eau de Parfum holiday gift set (2025) — the fruity floral of blackcurrant, rose and vanilla, with a travel spray.",
+      "perfume-desc-armani-stronger-with-you-intensely-set-100":
+        "Emporio Armani Stronger With You Intensely Eau de Parfum holiday gift set (2025) — spicy, ambery and vanilla-rich, with a travel spray.",
+      "perfume-desc-armani-stronger-with-you-intensely-set-50":
+        "Emporio Armani Stronger With You Intensely Eau de Parfum holiday gift set (2025) — spicy, ambery and vanilla-rich, with a shower gel.",
+      "perfume-desc-armani-si-edp-holiday-set":
+        "Armani Sì Eau de Parfum holiday gift set (2025) — the blackcurrant, rose and vanilla chypre with matching body care.",
+      "perfume-desc-armani-code-edt-holiday-set":
+        "Armani Code Eau de Toilette holiday gift set (2025) — the refillable men's classic of bergamot, olive blossom and tonka, with a shower gel.",
+      "perfume-desc-armani-my-way-holiday-set":
+        "Armani My Way Eau de Parfum holiday gift set (2025) — the orange blossom, tuberose and white musk floral with matching body care.",
+      "perfume-desc-armani-stronger-with-you-edt-holiday-set":
+        "Emporio Armani Stronger With You Eau de Toilette holiday gift set (2025, blue-silver box) — cardamom, sage and chestnut accord, with a travel spray and shower gel.",
+      "perfume-desc-lancome-la-vie-est-belle-edp-30-set":
+        "Lancôme La Vie est Belle Eau de Parfum gift set (Holiday 2025) in the pink 90th-anniversary box — the iris, praline and vanilla scent with matching body care.",
+      "perfume-desc-lancome-juicy-tubes-mini-set":
+        "Lancôme \"The Juicy Gift\" (Holiday 2025) — three mini Juicy Tubes glosses for a high-shine, non-sticky lip.",
+      "perfume-desc-lancome-idole-edp-25-set":
+        "Lancôme Idôle Eau de Parfum gift set (Holiday 2025) — the clean rose, jasmine and white musk scent with a travel spray and a mini mascara.",
+      "perfume-desc-lancome-idole-edp-50-set":
+        "Lancôme Idôle Eau de Parfum gift set (Holiday 2025) — the clean rose, jasmine and white musk scent with a scented body cream and a mini mascara.",
+      "perfume-desc-lancome-la-vie-est-belle-edp-50-set":
+        "Lancôme La Vie est Belle Eau de Parfum gift set (Holiday 2025) — the refillable 50ml bottle with a travel spray and a mini Lash Idôle mascara.",
+      "perfume-desc-lancome-la-vie-est-belle-vanille-nude-set":
+        "Lancôme La Vie est Belle Vanille Nude Eau de Parfum gift set (Holiday 2025) — the creamy vanilla take on La Vie est Belle with a matching shower gel.",
+      "perfume-desc-lancome-renergie-triple-serum-20-set":
+        "Lancôme Rénergie Triple Serum gift set (Holiday 2025) — face and eye Triple Serums with a mini eye cream for firmer, more even-looking skin.",
+      "perfume-desc-lancome-renergie-crx-triple-serum-50-set":
+        "Lancôme Rénergie gift set (Holiday 2025) built around the C.R.x. Triple Serum with retinol, plus peptide cream and eye cream minis in a pink pouch.",
+      "perfume-desc-lancome-la-vie-est-belle-edp-100-set":
+        "Lancôme La Vie est Belle Eau de Parfum gift set (Holiday 2025) — the full 100ml bottle with a generous body lotion and a purse-size mini.",
+      "perfume-desc-lancome-la-vie-est-belle-elixir-petit-theatre":
+        "Lancôme La Vie est Belle L'Elixir Eau de Parfum 50ml, Holiday 2025 limited edition — presented in the collectible pink \"Lancôme Express\" train-carriage box (\"Petit Théâtre\") designed by Safia Ouares for Lancôme's 90th anniversary.",
+      "perfume-desc-lancome-la-vie-est-belle-petit-theatre":
+        "Lancôme La Vie est Belle Eau de Parfum 50ml, Holiday 2025 limited edition — the refillable bottle presented in the collectible pink \"Lancôme Express\" train-carriage box (\"Petit Théâtre\") designed by Safia Ouares for Lancôme's 90th anniversary.",
+      "perfume-desc-lancome-renergie-hpn-300-peptide-50-set":
+        "Lancôme Rénergie H.P.N. 300-Peptide Cream gift set (Holiday 2025) — the lifting, firming peptide cream with a travel size and a mini eye cream.",
+      "perfume-desc-lancome-hypnose-drama-mascara-set":
+        "Lancôme Hypnôse Drama mascara gift set (Christmas 2025) — the extreme-volume mascara plus three travel-size Hypnôse mascaras to try.",
+      "perfume-desc-lancome-monsieur-big-set":
+        "Lancôme Monsieur Big mascara holiday set — big-volume mascara with a dual-phase eye make-up remover and a mini kohl pencil.",
+      "perfume-desc-biotherm-homme-aquafitness-set":
+        "Biotherm Homme Aquafitness holiday set (2025) — an energising hair and body wash with a 48-hour roll-on antiperspirant.",
+      "perfume-desc-biotherm-homme-force-supreme-reshaper-set":
+        "Biotherm Homme Force Supreme holiday set (2025) — the anti-ageing Face Reshaper cream with a cleanser and a 48-hour roll-on.",
+      "perfume-desc-biotherm-deo-pure-duo-set":
+        "Biotherm Deo Pure duo holiday set (limited edition 2025) — two 48-hour antiperspirant roll-ons.",
+      "perfume-desc-biotherm-aqua-drop-set":
+        "Biotherm Aqua Drop set from The Drop Collection — Biotherm essentials with a reusable 1-litre mint sports bottle.",
+      "perfume-desc-biotherm-homme-power-drop-set":
+        "Biotherm Homme Power Drop set from The Drop Collection — men's essentials with a reusable 1-litre blue sports bottle.",
+      "perfume-desc-valentino-uomo-born-in-roma-edt-holiday-set":
+        "Valentino Uomo Born in Roma Eau de Toilette holiday gift set — the woody-spicy scent of violet leaf, sage, ginger and vetiver, with a travel spray.",
+      "perfume-desc-valentino-donna-born-in-roma-intense-set":
+        "Valentino Donna Born in Roma Intense Eau de Parfum holiday gift set — the floral ambery scent of bourbon vanilla, jasmine and benzoin, with a travel spray.",
+      "perfume-desc-valentino-donna-born-in-roma-edp-holiday-set":
+        "Valentino Donna Born in Roma Eau de Parfum holiday gift set (2025) — blackcurrant, jasmine and bourbon vanilla, with a pink studded travel spray.",
+      "perfume-desc-valentino-uomo-born-in-roma-extradose-set":
+        "Valentino Uomo Born in Roma Extradose Parfum gift set — a woody ambery fougère of spices, lavandin and vetiver, with a travel spray.",
+      "perfume-desc-valentino-donna-born-in-roma-extradose-set":
+        "Valentino Donna Born in Roma Extradose Parfum gift set — a floral ambery scent of cassis, rum accord and vanilla extract, with a travel spray.",
+      "perfume-desc-guess-seductive-edt":
+        "Guess Seductive Eau de Toilette for women (2010) — a floral-fruity woody scent: pear, bergamot and blackcurrant over jasmine, orange blossom and iris, settling on vanilla, frankincense and cashmere wood.",
+      "perfume-desc-guess-seductive-noir-edt":
+        "Guess Seductive Noir Eau de Toilette for women (2019) — an oriental floral in a lacquered black bottle: bergamot, sage and peony over iris, jasmine sambac and lily of the valley, on vanilla, vetiver and suede.",
+      "perfume-desc-guess-seductive-red-edt":
+        "Guess Seductive Red Eau de Toilette for women (2021) — a floral-fruity gourmand: cherry, almond and pink pepper over cherry blossom, magnolia and violet, on tonka bean, vanilla and sandalwood.",
+      "perfume-desc-guess-seductive-red-mist":
+        "Guess Seductive Red fragrance mist, 250ml — a light all-over body spray of the Seductive Red scent: cherry, almond and pink pepper, cherry blossom, magnolia and violet, on sandalwood, tonka and vanilla.",
+      "perfume-desc-guess-iconic-edp":
+        "Guess Iconic Eau de Parfum for women (2024) — a bright floral: pink pepper and mandarin over orange blossom, ylang-ylang and geranium with a marine accord, on amber, moss and musk.",
+      "perfume-desc-guess-iconic-men-edp":
+        "Guess Iconic Eau de Parfum for men (2025) — a woody aromatic: Sichuan and black pepper with mandarin over mate, clary sage and geranium, on vetiver, labdanum and suede.",
+      "perfume-desc-guess-bella-vita-edp":
+        "Guess Bella Vita Eau de Parfum (2020) — a fruity floral oriental for women: Italian lemon, cassis and black cherry over jasmine, tuberose and vanilla orchid, on amberwood, tonka bean, praline and musk.",
+      "perfume-desc-guess-bella-vita-mist":
+        "Guess Bella Vita fragrance mists, 250ml — the black cherry, tuberose and praline scent of Bella Vita as a light all-over body spray, also available with fine gold shimmer.",
+      "perfume-desc-guess-bella-vita-rosa-edt":
+        "Guess Bella Vita Rosa Eau de Toilette (2022) — a fruity floral of Italian lemon, blackcurrant and quince over jasmine, magnolia and lily of the valley, on orris, moss, sandalwood and musk.",
+      "perfume-desc-guess-bella-vita-rosa-mist":
+        "Guess Bella Vita Rosa fragrance mists, 250ml — the lemon, magnolia and moss scent of Bella Vita Rosa as a light all-over body spray, also available with shimmer.",
+      "perfume-desc-guess-bella-vita-paradiso-edp":
+        "Guess Bella Vita Paradiso Eau de Parfum (2023) — a floral amber gourmand of Italian mandarin, pear blossom and red berries over jasmine, gardenia and tuberose, on patchouli, amber and musk, in a glittering Bella Vita bottle.",
+      "perfume-desc-guess-love-fragrance-mist":
+        "Guess Love fragrance mists, 250ml — light, fruity-floral body sprays for an all-over veil of scent. Choose your fragrance.",
+      "perfume-desc-guess-sexy-skin-fragrance-mist":
+        "Guess Sexy Skin fragrance mists, 250ml — playful fruity body sprays in colour-coded bottles. Choose your fragrance.",
+      "perfume-desc-armani-prive-les-eaux-holiday-discovery-set":
+        "Armani/Privé Les Eaux holiday discovery set (2025) — four fresh haute couture Eaux de Toilette in a gold-to-silver glitter coffret, from delicate peony and cardamom sandalwood to smoky tea and zesty vetiver.",
+      "perfume-desc-biotherm-homme-aquapower-essentials-set":
+        "Biotherm Homme Aquapower holiday set (2025) — a three-step men's routine to cleanse, hydrate with Life Plankton™ and stay fresh with 48-hour protection.",
+      "perfume-desc-lancome-la-nuit-tresor-holiday-set":
+        "Lancôme La Nuit Trésor Eau de Parfum holiday gift set (2025) — the gourmand woody floral of raspberry, black rose, praline and vanilla orchid with matching perfumed body care.",
+      "perfume-desc-lancome-absolue-soft-cream-holiday-set":
+        "Lancôme Absolue holiday set (2025) — the full-size Absolue Longevity Soft Cream with deluxe minis of the serum, eye cream and Rich Cream, in a 90th-anniversary box illustrated by Safia Ouares.",
+      "perfume-desc-prada-luna-rossa-ocean-edt-set":
+        "Prada Luna Rossa Ocean Eau de Toilette gift set (2025) — the aromatic fougère of bergamot, lavender, iris and suede over vetiver and musk, with a travel spray.",
+      "perfume-desc-ysl-libre-berry-crush":
+        "Yves Saint Laurent Libre Berry Crush Eau de Parfum (2026) — the first fruity-floral Libre: a tangy raspberry accord and mandarin over French lavender and Moroccan orange blossom, melting into creamy coconut, Bourbon vanilla, amber and musks, in a berry-red Libre bottle.",
+      "perfume-desc-lancome-lash-idole-curl-goddess":
+        "Lancôme Lash Idôle Curl Goddess Mascara in 01 Divine Black — a fast-setting curl-and-volume mascara with a 40° twisted brush: up to 1.5× curl, up to +800% volume and up to 30-hour wear without clumps or smudges. Ophthalmologist-tested, suitable for sensitive eyes and contact-lens wearers.",
+      "perfume-desc-guess-iconic-mist":
+        "Guess Iconic fragrance mist for women, 250ml — a light all-over body spray of the Iconic amber floral: pink pepper and mandarin over orange blossom, ylang-ylang and a marine accord, on amber, moss and musk.",
+      "perfume-desc-guess-iconic-sublime-edp":
+        "Guess Iconic Sublime Eau de Parfum (2026) — a fresher floral amber companion to Iconic: mandarin, cardamom and an aquatic accord over blue lotus, jasmine and magnolia, on vanilla, sandalwood and amber, in a pale aqua Iconic bottle.",
+      "perfume-desc-guess-iconic-sublime-mist":
+        "Guess Iconic Sublime fragrance mist, 250ml — a light all-over body spray of Iconic Sublime: mandarin and an aquatic accord over blue lotus and jasmine, on vanilla and sandalwood.",
+      "perfume-desc-guess-seductive-noir-homme-edt":
+        "Guess Seductive Homme Noir Eau de Toilette for men (2019) — an oriental fougère in a matte black bottle: nutmeg, black pepper and grapefruit over apple, lavender and orange blossom, on tonka bean, sandalwood and amber.",
+      "perfume-desc-azzaro-forever-wanted-absolu":
+        "Azzaro Forever Wanted Absolu Parfum (2026) — a smoky, boozy amber fougère for men: incense over a whisky accord and warm vanilla, in the barrel-shaped Wanted bottle.",
+      "perfume-desc-mugler-alien-pulp":
+        "Mugler Alien Pulp Eau de Parfum Fruitée (2026) by Dominique Ropion — the first fruity-floral Alien: a raspberry accord and lemon peel over jasmine, sweet orange and green mandarin, on musk, vanillin and Cashmeran, in a refillable pink-to-clear faceted bottle.",
+      "perfume-desc-armani-acqua-di-gio-edp-intense":
+        "Giorgio Armani Acqua di Giò Eau de Parfum Intense (2026) — a deeper, longer-lasting aromatic aquatic: Calabrian bergamot and green apple over marine notes and clary sage, on amber and woods, in a black-to-clear bottle.",
+      "perfume-desc-armani-stronger-with-you-powerfully":
+        "Emporio Armani Stronger With You Powerfully Eau de Parfum (2026) by Cécile Matton — an ambery gourmand fougère: cherry, mandarin and bergamot over lavender and spices, on vanilla, amberwood and sugared chestnut.",
+      "perfume-desc-lancome-goddess-dimension-eyeshadow":
+        "Lancôme Idôle Goddess Dimension Mono Eyeshadow, 1.2g — a highly pigmented pressed powder with a smooth, creamy glide and intense colour in one swipe, in matte, shimmer and sparkle finishes. Buildable, easy to blend and crease-resistant. Choose your shade.",
+      "perfume-desc-biotherm-aquasource-electrolyte-dewy-gel":
+        "Biotherm Aquasource+ Electrolyte Dewy Gel 100H, 100ml — a lightweight gel moisturiser inspired by sports hydration, with an electrolyte complex and Hyalu B3 for up to 100 hours of hydration and visibly smoother fine lines; silicone- and alcohol-free.",
+      "perfume-desc-lancome-mascara-melter":
+        "Lancôme Mascara Melter caring mascara remover (2026, Lash Idôle line) — a two-sided wand coats lashes in a 93% skincare formula with jojoba oil and squalane that dissolves even waterproof mascara in about a minute. Suitable for sensitive eyes and contact-lens wearers.",
+      "perfume-desc-lancome-o-juicy-hair-body-mist":
+        "Lancôme Ô Juicy Hair & Body Mists, 100ml (2026) — light, fruity scents from the Ô de Lancôme family to spray on skin, hair or clothes. Choose your fragrance.",
+      "perfume-desc-lancome-idole-peach-n-roses":
+        "Lancôme Idôle Peach 'N Roses Eau de Parfum (2026) — a fruity floral Idôle: red berries and pink pepper over a natural Peach Orpur™ extract, on Damascena rose absolute, in a peachy-orange lacquered Idôle bottle.",
+      "perfume-desc-miu-miu-edp":
+        "Miu Miu Eau de Parfum (2015, Daniela Andrier) — the house's first fragrance, a green floral woody: lily of the valley with bergamot over a green accord, dog rose and jasmine, on Akigalawood and white musk, in the quilted turquoise bottle with a red cap.",
+      "perfume-desc-miu-miu-eau-bleue":
+        "Miu Miu L'Eau Bleue Eau de Parfum (2017, Daniela Andrier) — a fresher green floral take on the original: lily of the valley over violet leaf, jasmine and wild rose, on white musk and Akigalawood, in a clear turquoise quilted bottle with a yellow cap.",
+      "perfume-desc-miu-miu-eau-rosee":
+        "Miu Miu L'Eau Rosée Eau de Toilette (2018) — a dewy floral chypre: lychee over lily of the valley on soft white musk, in a light-pink quilted bottle with an ivory cap.",
+      "perfume-desc-miu-miu-fleur-de-lait":
+        "Miu Miu Fleur de Lait Eau de Parfum (2023, Daniela Andrier) — a fruity floral gourmand inspired by a mango pomelo dessert: juicy mango over apricot-like osmanthus, on creamy coconut milk, in a milk-white quilted bottle with a blue cap.",
+      "perfume-desc-miu-miu-miutine":
+        "Miu Miu Miutine Eau de Parfum (2025, Dominique Ropion) — a rebellious fruity gourmand chypre: wild strawberry and citrus over gardenia, jasmine and rose, on brown sugar, bourbon vanilla, patchouli and oakmoss, in a toffee-toned quilted bottle.",
+      "perfume-desc-lancome-renergie-nano-resurfacer-starter":
+        "Lancôme Rénergie Nano-Resurfacer 400 Booster — an at-home device inspired by microneedling. Single-use cartridges with 484 nano-tips create invisible micro-channels that boost absorption of Rénergie H.C.F. Triple Serum (sold separately), with no pain or downtime.",
+      "perfume-desc-lancome-renergie-nano-resurfacer-refill":
+        "Lancôme Rénergie Nano-Resurfacer 400 Booster refill — replacement single-use cartridges with 484 nano-tips each for the Nano-Resurfacer device (sold separately).",
+      "perfume-desc-lancome-renergie-collagen-lift-xtend-cream":
+        "Lancôme Rénergie Collagen+ Lift-Xtend Cream, 50ml — a highly tightening and firming cream inspired by thread lifts, combining collagen fibres with a collagen peptide and copper tripeptide in a stretchy, thread-like texture.",
+      "perfume-desc-lancome-renergie-yeux-lifting-20":
+        "Lancôme Rénergie Yeux lifting eye cream, 20ml — small-molecule hyaluronic acid with French linseed peptides for an immediate hydration boost and, over 8 weeks, fewer wrinkles, lifted-looking eyelids and softened dark circles.",
+      "perfume-desc-lancome-la-nuit-tresor-rouge-drama":
+        "Lancôme La Nuit Trésor Rouge Drama Eau de Parfum Intense, 50ml — a floral fruity inspired by the Louvre's Red Rooms: strawberry coulis over Damask rose absolute and a red-rose accord, on patchouli, in a smoky black diamond-cut bottle with a ruby-red heart.",
+      "perfume-desc-lancome-la-vie-est-belle-edp-30-body-lotion-set-s26":
+        "Lancôme La Vie est Belle Eau de Parfum gift set (Mother's Day 2026) — the iconic iris, patchouli and vanilla floral gourmand in a refillable bottle, with matching perfumed body lotion, in a limited 'Garden of Dreams' box illustrated by Barbara Cox.",
+      "perfume-desc-prada-paradigme-edp-50-set-s26":
+        "Prada Paradigme Eau de Parfum gift set (Spring 2026) — Prada's ambery woody men's signature with green Bourbon geranium and Calabrian bergamot over warm ambery woods, with a travel spray.",
+      "perfume-desc-prada-paradoxe-edp-30-set-s26":
+        "Prada Paradoxe Eau de Parfum gift set (Spring 2026) — the floral amber of neroli bud, Ambrofix™ amber and Serenolide™ musk in the refillable triangle bottle, with a travel spray.",
+      "perfume-desc-valentino-uomo-born-in-roma-intense-50-set-s26":
+        "Valentino Uomo Born in Roma Intense Eau de Parfum gift set (Spring 2026) — an intense vanilla infusion with smoked vetiver and fresh lavandin in the studded Rockstud bottle, with a travel spray.",
+      "perfume-desc-ysl-myslf-edp-60-shower-gel-set-s26":
+        "Yves Saint Laurent MYSLF Eau de Parfum gift set (Spring 2026) — the refillable woody floral of Calabrian bergamot, orange blossom absolute and warm woods, with matching shower gel.",
+      "perfume-desc-ysl-libre-edp-90-body-balm-set-s26":
+        "Yves Saint Laurent Libre Eau de Parfum gift set (Spring 2026) — the floral lavender of French lavender, Moroccan orange blossom, musk and warm vanilla, with a travel spray and nourishing perfumed body balm.",
+      "perfume-desc-ysl-libre-edp-50-mirror-set-s26":
+        "Yves Saint Laurent Libre Eau de Parfum gift set (Spring 2026) — the floral lavender of French lavender, Moroccan orange blossom, musk and warm vanilla, with a travel spray and a gold YSL Beauté mirror.",
+      "perfume-desc-ysl-libre-edp-30-set-s26":
+        "Yves Saint Laurent Libre Eau de Parfum gift set (Spring 2026) — the floral lavender of French lavender, Moroccan orange blossom, musk and warm vanilla, with a travel spray.",
+      "perfume-desc-ysl-libre-edp-50-candy-glaze-set-s26":
+        "Yves Saint Laurent Libre Eau de Parfum gift set (Spring 2026) — the floral lavender of French lavender, Moroccan orange blossom, musk and warm vanilla, with a travel spray and a Loveshine Candy Glaze lip gloss stick.",
+      "perfume-desc-armani-prive-orange-mediterranee":
+        "Giorgio Armani Privé Orange Méditerranée Eau de Toilette (2025, Daniela Andrier) — a citrus aromatic from Armani's Les Eaux haute couture collection. Italian bitter orange purified by molecular distillation meets cedrat, fennel seed and a tea accord.",
+      "perfume-desc-armani-prive-oud-nacre":
+        "Giorgio Armani Privé Oud Nacré Eau de Parfum (2025, Alberto Morillas) — from Les Terres Précieuses, inspired by the Armani Privé 'Perles' haute couture collection. A saffron accord and jasmine grandiflorum over an oud accord and chocolatey Guatemalan patchouli, on Ambrox, in a mother-of-pearl-effect bottle.",
+      "perfume-desc-armani-si-nude-bloom":
+        "Giorgio Armani Sì Nude Bloom Eau de Parfum, 50ml (2026 limited edition) — a floral chypre: a blackcurrant accord with mandarin, lemon, bergamot and black pepper opens onto a trio of roses including May rose absolute, on patchouli and Bourbon vanilla.",
+      "perfume-desc-armani-si-passione-red-bloom":
+        "Giorgio Armani Sì Passione Red Bloom Eau de Parfum, 50ml (2026) — a floral ambery fruity: a raspberry accord, bergamot and blackcurrant bud absolute over iris pallida and a two-faceted rose, on Bourbon vanilla and cashmeran.",
+      "perfume-desc-ysl-y-iced-cologne":
+        "Yves Saint Laurent Y Iced Cologne Eau de Toilette Intense (2025, Dominique Ropion) — an icy aromatic fougère for men. Ice mint with a cooling Arctical accord, mint and blue sage from YSL's Ourika gardens, on ambroxan and patchouli, with up to a 12-hour trail.",
+      "perfume-desc-ysl-lash-latex":
+        "YSL Lash Latex Lengthening & Lift-Sculpting Mascara in black, 8.5ml (2025) — a 496 micro-bristle brush gives up to 1.6× longer lashes with up to 24-hour lift, in a sweat- and smudge-resistant formula with hyaluronic acid and iris florentina, suitable for sensitive eyes and contact lens wearers.",
+      "perfume-desc-ysl-lovenude-kiss-shaper":
+        "YSL Lovenude Kiss Shaper sculpting lip liner, 1.2g (2026). Choose your shade — a creamy matte pencil that glides on to shape and define for a visibly fuller look, with 12-hour second-skin wear, enriched with nigella sativa seed extract, coffee seed oil, jojoba and vitamin E.",
+      "perfume-desc-ysl-lovenude-lip-blusher":
+        "YSL Lovenude Lip Blusher sheer blur balm, 3g (2026). Choose your shade — a balm-lipstick hybrid with a sheer, buildable soft-matte blur finish, 12-hour blur and 24-hour hydration, in a 90% balm base with Pro-Xylane, nigella sativa, coffee oil and blueberry extracts.",
+      "perfume-desc-guess-iconic-blue-men-edp":
+        "Guess Iconic Blue for Men Eau de Parfum (2026, Christine Hassan) — a salty woody aromatic fougère inspired by an Italian speedboat ride. Italian bergamot, lemon and sea salt open onto blue lavender, black pepper and geranium, on cedarwood, vetiver and tonka, in a deep-blue square bottle with a stitched leather-look cap and gold 'G' buckle.",
+      "perfume-desc-guess-seductive-desire-men-edt":
+        "Guess Seductive Desire for Men Eau de Toilette (2026) — an oriental fougère: pineapple, orange, blackcurrant and elemi open onto sage, lavender, verbena and coriander, on Bourbon vanilla, amber, patchouli, labdanum and moss, in a bronze-metal bottle with a gold GUESS band.",
+      "perfume-desc-guess-seductive-desire-women-edt":
+        "Guess Seductive Desire for Women Eau de Toilette (2026) — an amber woody fruity floral: watery notes, pear, melon, mandarin and apricot open onto jasmine, osmanthus and cypress, on amber, woods, musk, vanilla and pink pepper, in the Seductive bottle in luminous gold with a brown stitched label.",
+      "perfume-desc-guess-seductive-desire-women-mist":
+        "Guess Seductive Desire for Women Fragrance Mist, 250ml — a light body mist of the amber woody fruity floral: pear, melon and apricot over jasmine and osmanthus, on amber, musk and vanilla, in a gold bottle.",
+      "perfume-desc-cavalli-florence":
+        "Roberto Cavalli Florence Eau de Parfum (2017) — a floral chypre for women: tangerine and blackcurrant open onto orange blossom, grapefruit blossom and hibiscus seed, on patchouli, musk and amber.",
+      "perfume-desc-cavalli-paradiso-assoluto":
+        "Roberto Cavalli Paradiso Assoluto Eau de Parfum (2016) — a more seductive floral take on Paradiso: pink peppercorn and wisteria open onto wild jasmine and red lily, on sandalwood, patchouli and vanilla.",
+      "perfume-desc-cavalli-paradiso-azzurro":
+        "Roberto Cavalli Paradiso Azzurro Eau de Parfum, 75ml — an aquatic floral aromatic: bergamot and lavender open onto wild jasmine, on cypress and cashmere wood.",
+      "perfume-desc-just-cavalli-wild-blue-him":
+        "Just Cavalli Wild Blue for Him Eau de Toilette (2026) — a green citrus aromatic fougère: bergamot opens onto mint, lychee and pepper, on hyacinth and artemisia.",
+      "perfume-desc-just-cavalli-wild-pink-her":
+        "Just Cavalli Wild Pink for Her Eau de Parfum (2026) — a floral fruity: hibiscus, lily and peach open onto peony, Bulgarian rose and tiaré, on musk, ambergris and rosewood.",
+      "perfume-desc-armani-stronger-with-you-spices":
+        "Emporio Armani Stronger With You Spices Eau de Parfum, 100ml (2026 limited edition) — an intense amber spicy fougère in a metallic terracotta bottle: black pepper, a saffron accord with spices and lavender, the signature candied chestnut, Madagascar Bourbon vanilla and amberwood.",
+      "perfume-desc-armani-my-way-sunny-vanilla":
+        "Giorgio Armani My Way Sunny Vanilla Eau de Parfum (2025) — a gourmand floral fruity My Way in a bright yellow bottle: pineapple and bergamot open onto tuberose and jasmine, on Madagascar vanilla and creamy musk.",
+      "perfume-desc-prada-paradoxe-hand-cream":
+        "Prada Paradoxe Hand Cream, 50ml — a triple-care cream for hands, nails and cuticles, scented with Paradoxe's neroli, amber and musk, in a pink triangular tube.",
+      "perfume-desc-prada-luna-rossa-ocean-le-parfum-set":
+        "Prada Luna Rossa Ocean Le Parfum gift set — the most intense Luna Rossa Ocean with a travel spray, in an envelope-style gift box.",
+      "perfume-desc-armani-stronger-with-you-edt-valentines-set":
+        "Emporio Armani Stronger With You Eau de Toilette gift set (Valentine's Day 2026 limited edition) — the spicy, candied-chestnut fougère with a travel spray, in a backgammon-motif box.",
+      "perfume-desc-armani-stronger-with-you-intensely-valentines-set":
+        "Emporio Armani Stronger With You Intensely Eau de Parfum gift set (Valentine's Day 2026 limited edition) — the amber, toffee and vanilla fougère with a travel spray, in a backgammon-motif box.",
+      "perfume-desc-prada-paradigme-edp-30-set":
+        "Prada Paradigme Eau de Parfum gift set — Prada's ambery woody men's signature with green Bourbon geranium and Calabrian bergamot, with a travel spray, in a box patterned from Prada's archive.",
+      "perfume-desc-ysl-lash-clash-loveshine-set-s26":
+        "Yves Saint Laurent makeup gift set (Spring 2026) — Lash Clash extreme volume mascara with a Loveshine lipstick, in a red chevron box.",
+      "perfume-desc-ysl-myslf-edp-100-set-s26":
+        "Yves Saint Laurent MYSLF Eau de Parfum gift set (Spring 2026) — the refillable woody floral of Calabrian bergamot, orange blossom absolute and warm woods, with a travel spray, in a blue chevron box.",
+      "perfume-desc-ysl-lash-clash-libre-set-s26":
+        "Yves Saint Laurent gift set (Spring 2026) — Lash Clash extreme volume mascara with a Libre Eau de Parfum travel spray, in a red chevron box.",
+      "perfume-desc-lancome-tiuw-shape-stick":
+        "Lancôme Teint Idôle Ultra Wear Shape Stick, 9g (2026). Choose your shade — a creamy multi-use stick for foundation, concealer and contour with a 19° slanted bullet, medium-to-full buildable coverage, a natural matte finish and up to 24-hour wear, with squalane and vitamin E.",
+      "perfume-desc-lancome-tiuw-shape-stick-blush":
+        "Lancôme Teint Idôle Shape Stick Blush (2026). Choose your shade — a creamy, buildable blush stick with jojoba oil for a dewy, skin-like flush and up to 24-hour wear.",
+      "perfume-desc-lancome-tiuw-shape-stick-highlighter":
+        "Lancôme Teint Idôle Shape Stick Highlighter (Glass Glow), 6g (2026) — a universal, glitter-free balm highlighter for a dewy glass-skin glow.",
+      "perfume-desc-lancome-lip-idole-cuddle-blur":
+        "Lancôme Lip Idôle CuddleBlur™ Inflatable Lip Velvet, 8.5ml (2026). Choose your shade — a cushiony, squalane-enriched liquid matte that blurs lip lines for up to 12 hours, with a curved lip-cuddling applicator.",
+      "perfume-desc-margiela-replica-chasing-sunsets":
+        "Maison Margiela Replica Chasing Sunsets Eau de Toilette, 100ml (2026) — 'Ipanema, 1965': a woody fruity sunset on the beach. A mango accord and cardamom over solar tuberose, on creamy sandalwood, vanilla and crystal moss.",
+      "perfume-desc-margiela-replica-up-at-dawn":
+        "Maison Margiela Replica Up at Dawn Eau de Toilette (Juliette Karagueuzoglou) — 'Windsor, 2025': an English rose garden at daybreak. Pink pepper, elemi and a soil accord open onto rose absolute, orris and ambrette, on musks, patchouli moss and cashmeran.",
+      "perfume-desc-mugler-angel-blush":
+        "Mugler Angel Blush Eau de Parfum (2026, Louise Turner and Jacques Huclier) — an ambery gourmand musky Angel: an almond milk accord with creamy musk, sandalwood, Bourbon vanilla and patchouli, in the refillable star bottle with a blush-pink heart.",
+      "perfume-desc-ralph-lauren-polo-67-extreme":
+        "Ralph Lauren Polo 67 Eau de Parfum Extreme (2026) — a woody aromatic for men: bergamot, lemon and cardamom open onto a pineapple accord, clary sage, Bourbon geranium and a solar accord, on leather, Virginia cedar, vetiver and sandalwood, in a refillable matte-silver flask.",
+      "perfume-desc-ralph-lauren-polo-red-extreme-edp":
+        "Ralph Lauren Polo Red Eau de Parfum Extreme (2026) — the most intense Polo Red, an ambery woody leather: bitter orange, red apple and cardamom over clary sage, leather and coffee, on vanilla, patchouli, benzoin and cedar, in a refillable deep-burgundy bottle.",
+      "perfume-desc-prada-luna-rossa-carbon-edp":
+        "Prada Luna Rossa Carbon Eau de Parfum (2026, Daniela Andrier) — a dark gourmand aromatic fougère: lavender, a liquorice accord and cypress with a warm amber base, in a refillable soft-matte black bottle with the red Prada stripe.",
+      "perfume-desc-lancome-absolue-longevity-md-anticipate-cream":
+        "Lancôme Absolue Longevity MD (2026) — a dermatologist-validated longevity skincare range built on Mitopure® (98.5% pure Urolithin A). Anticipate The Cream, 50ml pump — for under-35s, to anticipate visible signs of ageing, with Epigenomyl, Ectoin, Rose Pro-Xylane and taurine.",
+      "perfume-desc-lancome-absolue-longevity-md-intercept-cream":
+        "Lancôme Absolue Longevity MD (2026) — a dermatologist-validated longevity skincare range built on Mitopure® (98.5% pure Urolithin A). Intercept The Cream, 50ml jar — for ages 35–55, to target signs of ageing as they appear, with LHA, Matrixyl, niacinamide, Rose Pro-Xylane and taurine.",
+      "perfume-desc-lancome-absolue-longevity-md-intercept-serum":
+        "Lancôme Absolue Longevity MD (2026) — a dermatologist-validated longevity skincare range built on Mitopure® (98.5% pure Urolithin A). Intercept The Serum, 50ml — the serum partner to Intercept The Cream for ages 35–55, with the same Mitopure® and Intercept compound.",
+      "perfume-desc-lancome-absolue-longevity-md-reset-cream":
+        "Lancôme Absolue Longevity MD (2026) — a dermatologist-validated longevity skincare range built on Mitopure® (98.5% pure Urolithin A). Reset The Cream, 50ml jar — for 55+, to visibly reverse signs of ageing, with Senevisium, rhamnose, niacinamide, Rose Pro-Xylane and taurine.",
+      "perfume-desc-lancome-absolue-longevity-md-reset-serum":
+        "Lancôme Absolue Longevity MD (2026) — a dermatologist-validated longevity skincare range built on Mitopure® (98.5% pure Urolithin A). Reset The Serum, 50ml — for 55+, the serum partner to Reset The Cream for firmer, more toned-looking skin.",
+      "perfume-desc-lancome-lveb-hair-body-mist":
+        "Lancôme La vie est belle Hair & Body Mist, 100ml — a lighter take on La vie est belle for hair and body, in a bag-size bottle with a golden wing. Choose your scent.",
+      "perfume-desc-armani-si-passione-intense-set":
+        "Giorgio Armani Sì Passione Intense Eau de Parfum gift set — the floral ambery woody of pear, jasmine and vanilla with a miniature, in a glittering red and white box.",
+      "perfume-desc-nishane-ani-x":
+        "Nishane Ani X Extrait de Parfum (2023, Cécile Zarokian) — a citrus spicy vanilla from the X Collection: bergamot, lemon, honeydew melon, blue ginger and cardamom over lavender, green apple and rose, on vanilla, cashmere wood and ambergris.",
+      "perfume-desc-nishane-fan-your-flames-x":
+        "Nishane Fan Your Flames X Extrait de Parfum, 50ml (2023) — a softer, tropical take on Fan Your Flames from the X Collection: coconut, rum and lentisque over tobacco, tonka and thyme, on cedar, oakmoss and patchouli.",
+      "perfume-desc-nishane-hacivat-x":
+        "Nishane Hacivat X Extrait de Parfum (2023) — a citrus woody chypre reworking of Hacivat from the X Collection: pineapple, bergamot and pink pepper, then lime, jasmine and orange blossom, on patchouli, cedarwood and Haitian vetiver.",
+      "perfume-desc-nishane-hacivat":
+        "Nishane Hacivat Extrait de Parfum, 100ml (2017, Jorge Lee) — a fruity woody chypre from the Shadow Play collection: pineapple, grapefruit and bergamot over cedar, patchouli and jasmine, on oakmoss.",
+      "perfume-desc-nishane-hundred-silent-ways":
+        "Nishane Hundred Silent Ways Extrait de Parfum (2016) — a floral gourmand musk from the Rumi collection: tuberose, peach and mandarin, then gardenia, jasmine and orris, on vanilla, sandalwood and vetiver.",
+      "perfume-desc-nishane-zenne":
+        "Nishane Zenne Extrait de Parfum, 50ml (2017, Jorge Lee) — a fruity floral oriental: blackcurrant, rhubarb and grapefruit, then Turkish rose and gardenia, on vanilla, ambergris and musk.",
+      "perfume-desc-nishane-ani":
+        "Nishane Ani Extrait de Parfum, 50ml (2019, Cécile Zarokian) — a warm spicy vanilla: blue ginger, bergamot and pink pepper, then cardamom, blackcurrant and rose, on vanilla, benzoin and sandalwood.",
+      "perfume-desc-nishane-ege":
+        "Nishane Ege / Αιγαίο Extrait de Parfum, 50ml (2020, Ilias Ermenidis) — a green aquatic aromatic inspired by the Aegean: yuzu, violet leaf and anise, then basil, mint and cardamom, on liquorice and olibanum.",
+      "perfume-desc-nishane-tempfluo":
+        "Nishane Tempfluo Extrait de Parfum, 50ml (2022, Anne Flipo) — a floral gourmand woody from the Time Capsule collection: saffron, bergamot and mandarin, then jasmine sambac, orange blossom and praline, on cashmere wood, cedar and vanilla.",
+      "perfume-desc-nishane-wulong-cha":
+        "Nishane Wulong Chá Extrait de Parfum, 50ml (2015) — a fresh citrus green tea from Nishane's first collection: bergamot and citrus with oolong tea, over fig and musk.",
+      "perfume-desc-mancera-wild-fruits":
+        "Mancera Wild Fruits Eau de Parfum (2011, Pierre Montale) — a fruity woody: citrus opens onto violet with blackcurrant, peach and apple, on cedarwood and white musk.",
+      "perfume-desc-mancera-aoud-blue-notes":
+        "Mancera Aoud Blue Notes Eau de Parfum, 120ml (Pierre Montale) — a fresh oud: bergamot, mandarin and Calabrian lemon over ylang-ylang, violet, rose and iris, drying down to amber, leather, sandalwood and vanilla.",
+      "perfume-desc-mancera-lemon-line":
+        "Mancera Lemon Line Eau de Parfum, 60ml (Pierre Montale) — a cologne-like citrus fougère: lemon and lavender over white flowers, geranium and amber, on white musk and oakmoss.",
+      "perfume-desc-mancera-amore-caffe":
+        "Mancera Amore Caffè Eau de Parfum, 120ml (2023, Pierre Montale) — a coffee and vanilla gourmand: black coffee and amaretto over vanilla ice cream and speculoos, on brown sugar, vanilla and grey amber.",
+      "perfume-desc-mancera-french-riviera":
+        "Mancera French Riviera Eau de Parfum, 120ml (2022, Pierre Montale) — an aromatic aquatic: citrus, ginger and pepper over sea notes, tiaré, pine and mimosa, on sea salt, white musk and amber.",
+      "perfume-desc-mancera-cherry-cherry":
+        "Mancera Cherry Cherry Eau de Parfum (2024, Pierre Montale) — a fruity oriental: black cherry, bergamot and lemon over iris, jasmine, heliotrope and patchouli, on white musk and vanilla.",
+      "perfume-desc-mancera-fig-me-up":
+        "Mancera Fig Me Up Eau de Parfum (Pierre Montale) — a fruity green fig: fig leaf, rhubarb and violet over fig milk, plum, oud and sandalwood, finishing on toffee, tonka, tobacco and musk.",
+      "perfume-desc-mancera-amberful":
+        "Mancera Amberful Eau de Parfum (2024, Pierre Montale) — an amber woody: pink pepper, yuzu, bergamot and nutmeg over amberwood, violet and patchouli, on amber, cedar and moss.",
+      "perfume-desc-mancera-cinque-terre":
+        "Mancera Cinque Terre Eau de Parfum (Pierre Montale) — a woody marine: rosemary, lemon and cardamom over sea salt, fig leaf, cedar and pine, on oakmoss, tonka, sandalwood and labdanum.",
+      "perfume-desc-mancera-eternal-wood":
+        "Mancera Eternal Wood Eau de Parfum (2024, Pierre Montale) — a woody aromatic: oud, davana and saffron over palo santo, copal, guaiac and cashmere wood, on toffee, tonka, amber and oakmoss.",
+      "perfume-desc-mancera-intense-red-tobacco":
+        "Mancera Intense Red Tobacco (2023, Pierre Montale) — the stronger, extrait-strength version of Red Tobacco, a spicy woody: saffron, cinnamon, incense and oud over tobacco and leather, on vanilla, amber, sandalwood and musk.",
+      "perfume-desc-mancera-tonka-cola":
+        "Mancera Tonka Cola Eau de Parfum (2022, Pierre Montale) — a spicy gourmand: lemon, cinnamon and black cherry over fizzy cola, patchouli and orange blossom, on tonka, benzoin, labdanum and vanilla.",
+      "perfume-desc-montale-day-dreams":
+        "Montale Day Dreams Eau de Parfum (2017, Pierre Montale) — a floral fruity gourmand: orange blossom and mandarin over gardenia, jasmine and neroli, on sandalwood, vanilla and coconut.",
+      "perfume-desc-montale-bubble-forever":
+        "Montale Bubble Forever Eau de Parfum (2024, Pierre Montale) — a bubble-gum floral fruity gourmand: pear, grapefruit and lemon over orange blossom, rose and cinnamon, on toffee, vanilla, musk and amber.",
+      "perfume-desc-montale-crazy-in-love":
+        "Montale Crazy In Love Eau de Parfum (2021, Pierre Montale) — an amber floral: saffron, rose petals and cardamom over rose, violet and sandalwood, on amber, vanilla, brown sugar and musk.",
+      "perfume-desc-montale-arabians-musk":
+        "Montale Arabians Musk Eau de Parfum (Pierre Montale) — a powdery oriental musk: honey and bergamot over Medjool date and orange blossom, on vanilla sugar, tonka and musk.",
+      "perfume-desc-montale-arabians":
+        "Montale Arabians Eau de Parfum, 100ml (2017, Pierre Montale) — a leathery spicy oriental: cardamom, lavender and red thyme over rose, patchouli and vetiver, on oud, leather, amber and musk.",
+      "perfume-desc-xerjoff-erba-gold":
+        "Xerjoff Erba Gold Eau de Parfum (Vibe collection) — a unisex fruity citrus twist on Erba Pura: lemon, orange, bergamot and ginger over green apple, melon, pear, cardamom and cloves, on amber, vanilla, musk and woods.",
+      "perfume-desc-xerjoff-erba-pura":
+        "Xerjoff Erba Pura Eau de Parfum (2019, Christian Carbonnel & Laura Santander) — a unisex fruity amber: Sicilian orange, lemon and Calabrian bergamot over a heart of Mediterranean fruits, on white musk, amber and Madagascar vanilla.",
+      "perfume-desc-xerjoff-accento-overdose":
+        "Xerjoff Accento Overdose Eau de Parfum, 100ml (2019, Christian Carbonnel) — a floral aldehyde: fruity green notes and aldehydes over Egyptian jasmine, lily-of-the-valley and Bulgarian rose, with eucalyptus and pine.",
+      "perfume-desc-xerjoff-accento":
+        "Xerjoff Accento Eau de Parfum, 100ml (Vibe collection) — a fresh, musky fruity floral: pineapple and hyacinth over iris, jasmine and pink pepper, on amber, musk, vanilla, patchouli and vetiver.",
+      "perfume-desc-xerjoff-purple-accento":
+        "Xerjoff Purple Accento Eau de Parfum, 100ml (Vibe collection) — Accento with an oud twist: pineapple, bergamot, mandarin and hyacinth over loganberry, orris, jasmine and pink pepper, on oud, amber, musk, vanilla and sandalwood.",
+      "perfume-desc-xerjoff-opera":
+        "Xerjoff Opera Eau de Parfum, 100ml (2019, Chris Maurice) — a woody floral musk: fruits and Turkish rose over ylang-ylang, nutmeg, leather and amber, on vanilla, patchouli, musk, cedar and Haitian vetiver.",
+      "perfume-desc-xerjoff-torino21":
+        "Xerjoff Torino21 Eau de Parfum (2021, Join The Club) — created for the Nitto ATP Finals in Turin; an aromatic green: mint, lemon, basil and thyme over blackcurrant, lavender, rosemary and jasmine, on musk and verbena.",
+      "perfume-desc-xerjoff-alexandria-ii":
+        "Xerjoff Alexandria II Parfum (2012, Chris Maurice, Oud Stars) — an amber woody: rosewood, lavender, cinnamon and apple over rose, cedar and lily-of-the-valley, on Laotian oud, sandalwood, vanilla, amber and musk.",
+      "perfume-desc-xerjoff-alexandria-ii-anniversary":
+        "Xerjoff Alexandria II Anniversary Parfum, 100ml (2024) — a richer oud take on Alexandria II: lavender, Bulgarian rose, cumin and cardamom over oud, orris, amber, civet and sage, on Australian sandalwood, Madagascar vanilla and musk.",
+      "perfume-desc-xerjoff-coro":
+        "Xerjoff Coro Eau de Parfum, 100ml (2025, Vibe collection) — a floral fruity: tropical fruits, mango, pineapple and jasmine on vanilla, amber, musk and sandalwood.",
+      "perfume-desc-xerjoff-neorio":
+        "Xerjoff × Duran Duran NeoRio Parfum, 50ml (2025) — an oriental: candied fig, rum, elemi and cistus over maple syrup, saffron and rose oil, on patchouli, tonka and Peru balsam. One scent in four coloured bottles; choose your colour.",
+      "perfume-desc-xerjoff-black-moonlight":
+        "Xerjoff × Duran Duran Black Moonlight Parfum, 50ml (2025) — a woody oriental: bergamot, mandarin, cardamom and saffron over lavender, myrrh, sambac jasmine and ylang-ylang, on labdanum, patchouli, tonka and tolu balsam.",
+      "perfume-desc-tiziana-terenzi-kirke-overdose":
+        "Tiziana Terenzi Kirkè Overdose Extrait de Parfum, 100ml (2025) — the 10th-anniversary extrait of Kirkè in a gold bottle: passionfruit, peach, raspberry and Bulgarian rose over gardenia, sand accord, jasmine sambac and lily-of-the-valley, on vanilla, musk, ambergris, heliotrope, sandalwood and patchouli.",
+      "perfume-desc-btso-dirty-heaven":
+        "BORNTOSTANDOUT Dirty Heaven Eau de Parfum, 50ml (2023, Margaux Le Paih Guérin) — a unisex amber floral: jasmine, neroli and white flowers over saffron, tonka, vanilla and ambroxan.",
+      "perfume-desc-btso-dirty-rice":
+        "BORNTOSTANDOUT Dirty Rice Eau de Parfum, 50ml (2022, Olivier Cresp) — a milky, woody skin scent: almond and bergamot open onto basmati rice, milk and peony, on sandalwood, cedar, vetiver and musk.",
+      "perfume-desc-btso-angels-powder":
+        "BORNTOSTANDOUT Angels' Powder Eau de Parfum, 50ml — a sweet, powdery unisex gourmand with a soft cotton-candy cloud of sugar, powder and musk.",
+      "perfume-desc-btso-filthy-musk":
+        "BORNTOSTANDOUT Filthy Musk Eau de Parfum, 50ml (2024, Margaux Le Paih Guérin) — an animalic vanilla musk: pineapple and honey over jasmine, nutmeg and patchouli, on civet, caramel, tonka, rum and ambergris.",
+      "perfume-desc-btso-fig-porn":
+        "BORNTOSTANDOUT Fig Porn Eau de Parfum, 50ml (2022, Florian Gallo) — a fruity floral: fig, pear and bergamot with Turkish rose and peony, on vanilla, sandalwood, amber and musk.",
+      "perfume-desc-btso-indecent-cherry":
+        "BORNTOSTANDOUT Indecent Cherry Eau de Parfum, 50ml (2022, Florian Gallo) — a boozy cherry gourmand: cherry, almond and saffron over sour cherry, strawberry, rose and mimosa, on vanilla, benzoin and patchouli.",
+      "perfume-desc-btso-mud":
+        "BORNTOSTANDOUT Mud Eau de Parfum, 50ml (2022, Nathalie Lorson) — an amber vanilla evoking wet earth and dark chocolate: milk and almond, chocolate, plum and rose, on vanilla, elemi and sandalwood.",
+      "perfume-desc-btso-nanatopia":
+        "BORNTOSTANDOUT Nanatopia Eau de Parfum, 50ml (2023, Alex Lee) — a rum-soaked banana bread gourmand: rum, cinnamon and nutmeg over banana bread and melted caramel, on tonka, cypriol and Orcanox.",
+      "perfume-desc-btso-black-mango":
+        "BORNTOSTANDOUT Black Mango Extrait Extrême, 50ml (2025) — a 55–62% concentration extrait aged in Korean Onggi pots; an amber woody: mango and orange with tolu balsam and Bourbon vanilla, on oud, leather, cypriol and sandalwood.",
+      "perfume-desc-btso-oud-candy":
+        "BORNTOSTANDOUT Oud Candy Extrait Extrême, 50ml — a 55–62% concentration extrait aged in Korean Onggi pots: brown sugar, candy, nuts and milk with white flowers, over oud, saffron, black woods, caramel, vanilla and leather.",
+      "perfume-desc-btso-black-guava":
+        "BORNTOSTANDOUT Black Guava Extrait Extrême, 50ml — a 55–62% concentration extrait aged in Korean Onggi pots: guava, cardamom and Madagascar mandarin over rose, geranium and oud, on patchouli, cypriol and ambergris.",
+      "perfume-desc-btso-drunk-lovers-cream":
+        "BORNTOSTANDOUT Drunk Lovers Hand & Body Cream, 350ml — a rich unisex cream with sweet almond and jojoba oil, scented with Drunk Lovers: citrus, red berries and juniper over cognac and spices, on amber, sandalwood, vanilla and musk. Made in Korea.",
+      "perfume-desc-btso-drunk-lovers-wash":
+        "BORNTOSTANDOUT Drunk Lovers Hand & Body Wash, 350ml — a pH-balanced amino-acid wash with jojoba, scented with Drunk Lovers: citrus, red berries and juniper over cognac and spices, on amber, sandalwood, vanilla and musk. Made in Korea.",
+      "perfume-desc-jhag-ego-stratis":
+        "Juliette Has a Gun Ego Stratis Eau de Parfum (2022, Romano Ricci) — an aquatic citrus 'modern cologne': tangerine, bergamot and lemon over calone, blueberry and neroli, on cedar, ambroxan and musk.",
+      "perfume-desc-jhag-lust-for-sun":
+        "Juliette Has a Gun Lust for Sun Eau de Parfum (2023) — a solar floral: freesia, coconut and bergamot over ylang-ylang, jasmine, orange blossom and gardenia, on vanilla, ambroxan and white musk.",
+      "perfume-desc-jhag-ode-to-dullness":
+        "Juliette Has a Gun Ode to Dullness Eau de Parfum, 50ml (2023) — a creamy, comforting musky floral: star anise and freesia over cashmere flower and sandalwood, on tonka and musk.",
+      "perfume-desc-mancera-instant-crush":
+        "Mancera Instant Crush Eau de Parfum (2019, Pierre Montale) — an amber floral: saffron, ginger, Sicilian mandarin and bergamot over amberwood, Moroccan rose, Egyptian jasmine and patchouli, on Madagascar vanilla, white musk, sandalwood and oakmoss.",
+      "perfume-desc-mancera-jardin-exclusif":
+        "Mancera Jardin Exclusif Eau de Parfum (2018, Pierre Montale) — a fruity floral gourmand: pear, white peach, green apple, blackcurrant and caramel over jasmine, violet, Bulgarian rose and ambergris, on white musk, Madagascar vanilla and sandalwood.",
+      "perfume-desc-mancera-red-tobacco":
+        "Mancera Red Tobacco Eau de Parfum (2017, Pierre Montale) — a spicy sweet tobacco: cinnamon, saffron, nutmeg, green apple, incense and oud over patchouli and jasmine, on tobacco, vanilla, amber, guaiac wood and white musk.",
+      "perfume-desc-mancera-holidays":
+        "Mancera Holidays Eau de Parfum (Pierre Montale) — a sunny tropical floral: coconut and bergamot over Tahitian gardenia (tiaré), ylang-ylang and sea notes, on sandalwood, vanilla and white musk.",
+      "perfume-desc-mancera-intense-cedrat-boise":
+        "Mancera Intense Cedrat Boise (2021, Pierre Montale) — the richer, extrait-strength version of Cedrat Boise, a fruity leathery woody: Sicilian citrus, blackcurrant and spices over leather, white sandalwood, Cambodian oud, patchouli and jasmine, on oakmoss, ambergris, white musk and vanilla.",
+      "perfume-desc-montale-dark-vanilla":
+        "Montale Dark Vanilla Eau de Parfum, 100ml (Pierre Montale) — a dark, carnal vanilla: pink pepper, saffron, cumin, cardamom, lemon and coriander over sandalwood, leather, oud and patchouli, on vanilla and amber.",
+      "perfume-desc-xerjoff-40-knots":
+        "Xerjoff 40 Knots Eau de Parfum, 100ml (Join The Club collection) — inspired by yacht-club life on the Mediterranean: a fresh, salty marine woody that opens like a sea breeze, with woody nuances and cedarwood in the drydown.",
+      "perfume-desc-xerjoff-don":
+        "Xerjoff Don Eau de Parfum (Join The Club collection) — a dark, intense woody oriental inspired by Hollywood gangster epics: smoky bars and late-night alleys, with tobacco, whisky, molasses and a gunpowder accord.",
+      "perfume-desc-xerjoff-comandante":
+        "Xerjoff Comandante! Eau de Parfum, 100ml (2021, Join The Club collection) — a woody scent inspired by the classic gentlemen's smoking clubs: dimly lit rooms, worn leather armchairs and fine cigars.",
+      "perfume-desc-xerjoff-more-than-words":
+        "Xerjoff More Than Words Eau de Parfum (Join The Club collection) — a woody floral inspired by a secret society of writers and poets: cinnamon, cardamom, nutmeg and fruits over rose, cedarwood, vetiver and dried fruits, on oud, ambergris, labdanum, amber and vanilla.",
+      "perfume-desc-xerjoff-decas":
+        "Xerjoff Decas Eau de Parfum, 100ml (1861 collection) — named after the Latin for 'ten', a softly sweet amber: Brazilian mandarin, tuberose and tobacco over benzoin, opoponax and Tuscan orris, on musk, tolu balsam and Bourbon vanilla.",
+      "perfume-desc-xerjoff-naxos":
+        "Xerjoff Naxos Eau de Parfum, 100ml (1861 collection) — a tribute to Sicily, an aromatic spicy gourmand: bergamot, lemon and lavender over jasmine sambac, cinnamon, honey and cashmere, on tobacco leaf, tonka bean and vanilla.",
+      "perfume-desc-xerjoff-renaissance":
+        "Xerjoff Renaissance Eau de Parfum, 100ml (1861 collection) — a fresh citrus homage to Italian artistry: Amalfi lemon, mandarin, Calabrian bergamot and petitgrain over mint, lily-of-the-valley and Bulgarian rose, on musk, cedarwood, amber and patchouli.",
+      "perfume-desc-xerjoff-la-capitale":
+        "Xerjoff La Capitale Parfum, 50ml (2018, Chris Maurice) — a sweet fruity oriental: strawberry, peach, caramel and labdanum over leather, amber, Iranian saffron, rose and ginger, on oud, benzoin and Bourbon vanilla.",
+      "perfume-desc-xerjoff-nio":
+        "Xerjoff Nio Parfum, 50ml (Shooting Stars collection) — a fresh woody spicy named after a meteorite that fell over Japan: bergamot, Tunisian neroli, pink pepper, cardamom and nutmeg over green leaves and jasmine, on amber, cedarwood, guaiac wood and Haitian vetiver.",
+      "perfume-desc-xerjoff-golden-dallah":
+        "Xerjoff Golden Dallah Parfum, 50ml (Coffee Break collection) — a warm spiced coffee inspired by Gulf hospitality: fresh exotic spices over coffee absolute, incense, amber, Cambodian oud and rose absolute, on cocoa and tonka bean.",
+      "perfume-desc-tiziana-terenzi-nero-oudh":
+        "Tiziana Terenzi Nero Oudh Extrait de Parfum, 100ml (2019, Paolo Terenzi) — an oriental floral oud: saffron, cypriol, rose geranium, ylang-ylang and magnolia over Bulgarian rose, gurjan balsam, guaiac wood, cedar and orris, on Indian oud, patchouli, ambergris, musk and vanilla.",
+      "perfume-desc-tiziana-terenzi-delox":
+        "Tiziana Terenzi Delox Extrait de Parfum, 100ml (2017, Paolo Terenzi) — a floral woody musk: coffee, iris and white hyacinth over Turkish rose, vanilla and opoponax, on honey, white musk, amber and cedar.",
+      "perfume-desc-tiziana-terenzi-dionisio":
+        "Tiziana Terenzi Dionisio Extrait de Parfum, 100ml (Anniversary Collection, Paolo Terenzi) — an oriental vanilla inspired by the Masque of Dionysus: grey amber and musk over Tahitian vanilla, jasmine and lily-of-the-valley, on oud, musk and Madagascar vanilla.",
+      "perfume-desc-tiziana-terenzi-leo":
+        "Tiziana Terenzi Leo Extrait de Parfum, 100ml (2022, Luna collection) — inspired by the lion of the zodiac, a citrus floral woody: kumquat, Brazilian orange, Sicilian mandarin and bergamot over jasmine sambac, Bulgarian rose, magnolia, violet leaf and myrrh, on oak, cedar, sandalwood, musk, benzoin and tonka.",
+      "perfume-desc-tiziana-terenzi-libra":
+        "Tiziana Terenzi Libra Extrait de Parfum, 100ml (Luna collection) — Tiziana Terenzi's own star sign, an oriental floral: Sorrento lemon, bergamot, grapefruit, tuberose and rose over Atlas cedar, Tuscan orris, grey amber and jasmine sambac, on patchouli, vanilla flower, musk, vetiver, benzoin and oakmoss.",
+      "perfume-desc-bond-no9-gold-coast":
+        "Bond No. 9 Gold Coast Eau de Parfum, 100ml — a soft yet energetic modern rose celebrating New York's historic Gold Coast: lychee, apricot and red apple over rose essence, watermelon and rose absolute, on cedarwood, vanilla and musk.",
+      "perfume-desc-jhag-lili-fantasy":
+        "Juliette Has a Gun Lili Fantasy Eau de Parfum, 100ml — an ambery floral with a gourmand twist: a bubble-gum accord over jasmine and tuberose absolutes, on an ambery accord and ambroxan.",
+      "perfume-desc-jhag-magnolia-bliss":
+        "Juliette Has a Gun Magnolia Bliss Eau de Parfum — a fresh, peaceful fruity floral: bergamot over magnolia essence and juicy mirabelle plum, on ambroxan and musks.",
+      "perfume-desc-mancera-aoud-vanille":
+        "Mancera Aoud Vanille Eau de Parfum (Pierre Montale) — a smooth oud gourmand: saffron and spices over Cambodian oud and rose, on creamy Madagascar vanilla, amber and white musk.",
+      "perfume-desc-mancera-cedrat-boise":
+        "Mancera Cedrat Boise Eau de Parfum (2011, Pierre Montale) — a fruity woody chypre: Sicilian lemon, bergamot, blackcurrant and spices over water fruits, patchouli and jasmine, on cedarwood, leather, sandalwood, oakmoss, vanilla and white musk.",
+      "perfume-desc-mancera-choco-violet":
+        "Mancera Choco Violet Eau de Parfum (Pierre Montale) — a powdery floral gourmand: violet and soft spices over dark chocolate and rose, on vanilla, amber, sandalwood and white musk.",
+      "perfume-desc-mancera-gold-prestigium":
+        "Mancera Gold Prestigium Eau de Parfum (Pierre Montale) — a luminous oriental floral: saffron, bergamot and fruits over rose, jasmine and orange blossom, on amber, oud, vanilla and white musk.",
+      "perfume-desc-mancera-gold-intensive-aoud":
+        "Mancera Gold Intensive Aoud Eau de Parfum, 60ml (Pierre Montale) — a rich golden oud: saffron, rose and spices over Cambodian oud, on amber, sandalwood, vanilla and white musk.",
+      "perfume-desc-mancera-roses-greedy":
+        "Mancera Roses Greedy Eau de Parfum (2014, Pierre Montale) — a fruity rose gourmand: grapefruit and blood orange over Turkish rose, jasmine and raspberry, on vanilla, white musk, sandalwood and amber.",
+      "perfume-desc-mancera-roses-vanille":
+        "Mancera Roses Vanille Eau de Parfum (2010, Pierre Montale) — a sweet rose gourmand: lemon and water notes over Turkish rose and sugar, on Madagascar vanilla, cedarwood and white musk.",
+      "perfume-desc-mancera-velvet-vanilla":
+        "Mancera Velvet Vanilla Eau de Parfum, 60ml (Pierre Montale) — a soft, velvety vanilla: bergamot and spices over vanilla absolute and florals, on tonka bean, sandalwood and white musk.",
+      "perfume-desc-mancera-wind-wood":
+        "Mancera Wind Wood Eau de Parfum, 120ml (2013, Pierre Montale) — a fresh aromatic woody: Calabrian bergamot, Sicilian lemon and pink pepper over Atlas cedar and vetiver, on ambergris, white musk and oakmoss.",
+      "perfume-desc-mancera-black-line":
+        "Mancera Black Line Eau de Parfum, 60ml (2012, Pierre Montale) — a dark spicy oriental: saffron, cinnamon and nutmeg over Bulgarian rose and patchouli, on oud, incense, amber and white musk.",
+      "perfume-desc-mancera-black-gold":
+        "Mancera Black Gold Eau de Parfum, 60ml (2017, Pierre Montale) — an aromatic woody: lavender, bergamot and spices over iris and leather, on oud, amber, vanilla and white musk.",
+      "perfume-desc-mancera-aoud-lemon-mint":
+        "Mancera Aoud Lemon Mint Eau de Parfum, 60ml (2013, Pierre Montale) — a fresh oud: Sicilian lemon and mint over rose and spices, on Cambodian oud, sandalwood, amber and white musk.",
+      "perfume-desc-montale-aoud-lime":
+        "Montale Aoud Lime Eau de Parfum, 100ml (2011, Pierre Montale) — a zesty citrus oud: lime, lemon and bergamot over aromatic herbs and rose, on oud, cedarwood and white musk.",
+      "perfume-desc-montale-aoud-night":
+        "Montale Aoud Night Eau de Parfum, 100ml (2016, Pierre Montale) — a dark woody oud: grapefruit and bergamot over Turkish rose and jasmine, on Indonesian oud, guaiac wood and vanilla.",
+      "perfume-desc-montale-black-aoud":
+        "Montale Black Aoud Eau de Parfum (2006, Pierre Montale) — a classic rose-oud: mandarin over Turkish rose, on oud, patchouli and musk.",
+      "perfume-desc-montale-black-aoud-intense":
+        "Montale Black Aoud Intense Eau de Parfum, 100ml (Pierre Montale) — a deeper, more concentrated take on Black Aoud: Turkish rose and spices over dark oud and patchouli, on amber, leather and musk.",
+      "perfume-desc-montale-chocolate-greedy":
+        "Montale Chocolate Greedy Eau de Parfum (2008, Pierre Montale) — a gourmand chocolate: bitter orange and coffee over cocoa, tonka bean and dried fruits, on vanilla and musk.",
+      "perfume-desc-montale-dark-purple":
+        "Montale Dark Purple Eau de Parfum, 100ml (2013, Pierre Montale) — a fruity floral chypre: plum, blackcurrant and orange over Bulgarian rose and geranium, on patchouli, vanilla and amber.",
+      "perfume-desc-montale-intense-pepper":
+        "Montale Intense Pepper Eau de Parfum (Pierre Montale) — a spicy woody: black, pink and Sichuan pepper over saffron and incense, on oud, tonka bean, vanilla and amber.",
+      "perfume-desc-montale-intense-cafe":
+        "Montale Intense Cafe Eau de Parfum (2013, Pierre Montale) — a rose-coffee gourmand: coffee over Bulgarian rose and floral notes, on vanilla, amber and white musk.",
+      "perfume-desc-montale-intense-roses-musk":
+        "Montale Intense Roses Musk Extrait de Parfum (Pierre Montale) — a richer, extrait-strength version of Roses Musk: Moroccan rose and jasmine over amber, on white musk.",
+      "perfume-desc-montale-intense-tiare":
+        "Montale Intense Tiare Eau de Parfum, 100ml (2010, Pierre Montale) — a sunny tropical floral: bergamot and lemon over Tahitian tiaré (gardenia) and coconut, on vanilla and musk.",
+      "perfume-desc-montale-oudmazing":
+        "Montale Oudmazing Eau de Parfum (2017, Pierre Montale) — a spicy woody oud: saffron, cardamom and pink pepper over leather and Turkish rose, on oud, patchouli, amber and musk.",
+      "perfume-desc-montale-rose-elixir":
+        "Montale Rose Elixir Eau de Parfum (2010, Pierre Montale) — a radiant fruity rose: bergamot, mandarin and pink pepper over Turkish rose and lily-of-the-valley, on patchouli, white musk and vanilla.",
+      "perfume-desc-montale-santal-wood":
+        "Montale Santal Wood Eau de Parfum, 100ml (Pierre Montale) — a creamy woody: bergamot and spices over sandalwood and cedarwood, on vanilla, amber and musk.",
+      "perfume-desc-montale-soleil-de-capri":
+        "Montale Soleil de Capri Eau de Parfum (2014, Pierre Montale) — a bright summer citrus floral: bergamot, mandarin and orange over jasmine and tiaré, on coconut, vanilla, sandalwood and white musk.",
+      "perfume-desc-montale-starry-nights":
+        "Montale Starry Nights Eau de Parfum (2017, Pierre Montale) — a fruity floral: bergamot, apple and black pepper over Turkish rose and iris, on patchouli, vanilla, white musk and woods.",
+      "perfume-desc-montale-sweet-vanilla":
+        "Montale Sweet Vanilla Eau de Parfum (Pierre Montale) — a sweet gourmand vanilla: bergamot and almond over orange blossom and caramel, on Madagascar vanilla, tonka bean and white musk.",
+      "perfume-desc-montale-vanilla-extasy":
+        "Montale Vanilla Extasy Eau de Parfum, 100ml (2008, Pierre Montale) — a floral vanilla: orange and bergamot over jasmine and violet, on Madagascar vanilla and white musk.",
+      "perfume-desc-montale-vanille-absolu":
+        "Montale Vanille Absolu Eau de Parfum (2006, Pierre Montale) — a dark, smoky vanilla: bergamot over vanilla and spices, on oud, patchouli and white musk.",
+      "perfume-desc-montale-white-musk":
+        "Montale White Musk Eau de Parfum, 100ml (Pierre Montale) — a clean powdery musk: white flowers and rose over iris, on white musk and amber.",
+      "perfume-desc-montale-wood-spices":
+        "Montale Wood & Spices Eau de Parfum (Pierre Montale) — a warm spicy woody: cardamom, ginger and cinnamon over cedarwood and vetiver, on oud, sandalwood, amber and musk.",
+      "perfume-desc-montale-sweet-peony":
+        "Montale Sweet Peony Eau de Parfum (Pierre Montale) — a soft fruity floral: lychee and pink pepper over peony and rose, on vanilla, white musk and woods.",
+      "perfume-desc-montale-oud-dream":
+        "Montale Oud Dream Eau de Parfum (Pierre Montale) — a smooth woody oud: bergamot and saffron over rose and jasmine, on oud, sandalwood, vanilla and amber.",
+      "perfume-desc-montale-sensual-instinct":
+        "Montale Sensual Instinct Eau de Parfum (Pierre Montale) — a warm amber floral: pink pepper and red fruits over rose and jasmine, on vanilla, benzoin, amber and white musk.",
+      "perfume-desc-montale-arabians-tonka":
+        "Montale Arabians Tonka Eau de Parfum, 100ml (2019, Pierre Montale) — a rich oriental gourmand: saffron and bergamot over Bulgarian rose and oud, on tonka bean, amber, sugar and white musk.",
+      "perfume-desc-montale-oud-tobacco":
+        "Montale Oud Tobacco Eau de Parfum (Pierre Montale) — a smoky woody: spices and dried fruits over tobacco leaf and incense, on oud, vanilla, amber and leather.",
+      "perfume-desc-tiziana-terenzi-ursa":
+        "Tiziana Terenzi Ursa Extrait de Parfum, 100ml (Luna collection, Paolo Terenzi) — a fresh green floral: bergamot, lemon and green notes over jasmine, lily-of-the-valley and rose, on cedarwood, white musk and amber.",
+      "perfume-desc-tiziana-terenzi-al-contrario":
+        "Tiziana Terenzi Al Contrario Extrait de Parfum, 50ml (2015, Paolo Terenzi) — a woody gourmand about the journey home: cocoa beans, malt and ebony wood over vanilla, orchid and tonka bean, on cane sugar, hazelnut, sandalwood and benzoin.",
+      "perfume-desc-tiziana-terenzi-cassiopea":
+        "Tiziana Terenzi Cassiopea Extrait de Parfum, 100ml (Luna collection, Paolo Terenzi) — a fruity amber: blackberry, blackcurrant and plum over rose and jasmine, on vanilla, patchouli, amber and musk.",
+      "perfume-desc-tiziana-terenzi-draco":
+        "Tiziana Terenzi Draco Extrait de Parfum, 100ml (Luna collection, Paolo Terenzi) — a fruity gourmand: peach, pear, plum and almond over jasmine and rose, on vanilla, praline, cedarwood and musk.",
+      "perfume-desc-tiziana-terenzi-orion":
+        "Tiziana Terenzi Orion Extrait de Parfum, 100ml (Luna collection, Paolo Terenzi) — a woody fruity: bergamot, mandarin and fruits over jasmine and orange blossom, on sandalwood, vetiver, amber and musk.",
+      "perfume-desc-tiziana-terenzi-andromeda":
+        "Tiziana Terenzi Andromeda Extrait de Parfum, 100ml (Luna collection, Paolo Terenzi) — a soft floral gourmand: bergamot, cut grass and ylang-ylang over lily, Damask rose, pear nectar, heliotrope and peach, on coconut, amber, vanilla, cashmere, ebony, tonka bean and powdered sugar.",
+      "perfume-desc-tiziana-terenzi-andromeda-body-lotion":
+        "Tiziana Terenzi Andromeda Parfum Body Lotion, 250ml — a nourishing body lotion with shea butter, almond oil and vitamin E, scented with Andromeda: bergamot and ylang-ylang over lily, rose and pear, on vanilla, amber and tonka bean.",
+      "perfume-desc-tiziana-terenzi-kirke":
+        "Tiziana Terenzi Kirke Extrait de Parfum, 100ml (2015, Paolo Terenzi) — a juicy fruity musk: passion fruit, peach, raspberry, blackcurrant and pear over lily-of-the-valley, on sandalwood, musk, vanilla, patchouli and heliotrope.",
+      "perfume-desc-tiziana-terenzi-borea":
+        "Tiziana Terenzi Borea Extrait de Parfum, 100ml (Paolo Terenzi) — named after the northern wind, a fresh aromatic woody: bergamot, mandarin and juniper over lavender and herbs, on vetiver, cedarwood, amber and musk.",
+      "perfume-desc-tiziana-terenzi-spirito-fiorentino":
+        "Tiziana Terenzi Spirito Fiorentino Extrait de Parfum, 100ml (Paolo Terenzi) — a tribute to Florence, a fruity floral: blackcurrant, bergamot and berries over rose and jasmine, on patchouli, vanilla, amber and musk.",
+      "perfume-desc-xerjoff-casamorati-regio":
+        "Xerjoff Casamorati Regio Eau de Parfum, 100ml (Casamorati 1888 collection) — a regal aromatic woody: bergamot, mandarin and spices over iris and floral notes, on sandalwood, amber, vanilla and musk.",
+      "perfume-desc-xerjoff-casamorati-bouquet-ideale":
+        "Xerjoff Casamorati Bouquet Ideale Eau de Parfum (Casamorati 1888 collection) — a sweet fruity floral: raspberry, blackcurrant and bergamot over Bulgarian rose, jasmine and heliotrope, on vanilla, tonka bean, amber and musk.",
+      "perfume-desc-xerjoff-casamorati-1888":
+        "Xerjoff Casamorati 1888 Eau de Parfum, 100ml (Casamorati 1888 collection) — a warm spicy oriental: bergamot, mandarin and cinnamon over cardamom, jasmine and rose, on sandalwood, vanilla, amber and musk.",
+      "perfume-desc-xerjoff-casamorati-dama-bianca":
+        "Xerjoff Casamorati Dama Bianca Eau de Parfum (Casamorati 1888 collection) — an elegant powdery floral: bergamot and mandarin over orange blossom, jasmine and iris, on vanilla, sandalwood, amber and musk.",
+      "perfume-desc-xerjoff-casamorati-fiero":
+        "Xerjoff Casamorati Fiero Eau de Parfum, 100ml (Casamorati 1888 collection) — a fresh aromatic fougère: bergamot, grapefruit and green notes over lavender and geranium, on vetiver, cedarwood, amber and musk.",
+      "perfume-desc-xerjoff-casamorati-fiore-d-ulivo":
+        "Xerjoff Casamorati Fiore d'Ulivo Eau de Parfum, 100ml (Casamorati 1888 collection) — a sunny Mediterranean floral: bergamot, lemon and pink pepper over olive blossom, jasmine and rose, on sandalwood, amber, vanilla and musk.",
+      "perfume-desc-xerjoff-casamorati-gran-ballo":
+        "Xerjoff Casamorati Gran Ballo Eau de Parfum, 100ml (Casamorati 1888 collection) — inspired by a grand Viennese ball, a fruity floral: bergamot, orange and pear over jasmine, rose and orange blossom, on vanilla, sandalwood and musk.",
+      "perfume-desc-xerjoff-casamorati-la-tosca":
+        "Xerjoff Casamorati La Tosca Eau de Parfum (Casamorati 1888 collection) — a tribute to Puccini's opera, a fruity floral gourmand: bergamot and mandarin over Bulgarian rose and jasmine, on vanilla, almond, amber and musk.",
+      "perfume-desc-xerjoff-casamorati-lira":
+        "Xerjoff Casamorati Lira Eau de Parfum, 100ml (Casamorati 1888 collection) — a caramel citrus gourmand: blood orange, bergamot and lavender over cinnamon, liquorice and jasmine, on caramel, vanilla and musk.",
+      "perfume-desc-xerjoff-casamorati-dolce-amalfi":
+        "Xerjoff Casamorati Dolce Amalfi Eau de Parfum (Casamorati 1888 collection) — a sweet sunny floral of the Amalfi coast: bergamot, lemon and mandarin over orange blossom, jasmine and rose, on vanilla, amber, sandalwood and musk.",
+      "perfume-desc-jhag-mmmm":
+        "Juliette Has A Gun Mmmm... Eau de Parfum, 100ml — a playful gourmand: jasmine and blackcurrant over vanilla, on caramel and musk.",
+      "perfume-desc-jhag-another-oud":
+        "Juliette Has A Gun Another Oud Eau de Parfum, 100ml (2019, Romano Ricci) — a light, unconventional oud: raspberry and pink pepper over Turkish rose, on synthetic oud, ambroxan and musk.",
+      "perfume-desc-jhag-sunny-side-up":
+        "Juliette Has A Gun Sunny Side Up Eau de Parfum, 100ml (2017, Romano Ricci) — a creamy solar woody: sandalwood and ambrette over coconut milk, vanilla and clean musk.",
+      "perfume-desc-jhag-vanilla-vibes":
+        "Juliette Has A Gun Vanilla Vibes Eau de Parfum, 100ml (2018, Romano Ricci) — a salty beach vanilla: sea salt and orchid over Tahitian vanilla, on tonka bean, benzoin and sandalwood.",
+      "perfume-desc-jhag-musc-invisible":
+        "Juliette Has A Gun Musc Invisible Eau de Parfum, 100ml (2019, Romano Ricci) — a soft skin musk: bergamot and pink pepper over jasmine and lily-of-the-valley, on white musk and ambrette.",
+      "perfume-desc-bond-no9-lafayette-street":
+        "Bond No.9 Lafayette Street Eau de Parfum, 100ml — an urban spicy woody: bergamot and spices over leather, tobacco and floral notes, on oud, sandalwood, amber and musk.",
+      "perfume-desc-bond-no9-tribeca":
+        "Bond No.9 Tribeca Eau de Parfum, 100ml (2014) — a sweet oriental gourmand: bergamot and violet over heliotrope, praline and tonka, on vanilla, sandalwood and musk.",
+      "perfume-desc-shiseido-fslx-cleansing-foam":
+        "Shiseido Future Solution LX Extra Rich Cleansing Foam, 125ml — a luxurious, creamy foam that gently removes impurities while keeping skin soft and moist, the first step of the Future Solution LX ritual.",
+      "perfume-desc-shiseido-fslx-eye-lip-cream":
+        "Shiseido Future Solution LX Eye and Lip Contour Regenerating Cream, 17ml — a rich regenerating cream for the delicate eye and lip areas that visibly smooths wrinkles, firms and brightens.",
+      "perfume-desc-shiseido-fslx-total-protective-cream":
+        "Shiseido Future Solution LX Total Protective Cream SPF30, 50ml — a luxurious day cream that hydrates, firms and protects from UV and daily environmental damage for radiant, youthful-looking skin.",
+      "perfume-desc-shiseido-fslx-total-regenerating-cream":
+        "Shiseido Future Solution LX Total Regenerating Cream, 50ml — a rich night cream that works while you sleep to regenerate, firm and smooth, revealing radiant, resilient skin by morning.",
+      "perfume-desc-shiseido-fslx-brightening-softener":
+        "Shiseido Future Solution LX Concentrated Brightening Softener, 150ml — a silky softening lotion that deeply hydrates, refines texture and preps skin for the treatments that follow.",
+      "perfume-desc-shiseido-legendary-enmei-cream":
+        "Shiseido Future Solution LX Legendary Enmei Ultimate Renewing Cream, 50ml — Shiseido's most prestigious cream, with rare Enmei herb, that visibly renews, firms and brings deep, lasting radiance.",
+      "perfume-desc-shiseido-legendary-enmei-serum":
+        "Shiseido Future Solution LX Legendary Enmei Ultimate Luminance Serum, 30ml — a prestigious serum with Enmei herb that visibly firms, smooths and gives skin an inner luminance.",
+      "perfume-desc-shiseido-legendary-enmei-eye-cream":
+        "Shiseido Future Solution LX Legendary Enmei Ultimate Radiance Eye Cream, 15ml — a luxurious eye cream that visibly reduces wrinkles, dark circles and puffiness for a bright, lifted eye area.",
+      "perfume-desc-shiseido-vp-advanced-cream":
+        "Shiseido Vital Perfection Uplifting and Firming Advanced Cream, 50ml — a lifting and firming cream that visibly smooths wrinkles, reduces dark spots and redefines facial contours. Choose your texture: Advanced Cream, Soft or Enriched.",
+      "perfume-desc-shiseido-vp-day-cream-spf30":
+        "Shiseido Vital Perfection Uplifting and Firming Advanced Day Cream SPF30, 50ml — a lifting, firming day cream that targets wrinkles and dark spots while protecting skin from UV damage.",
+      "perfume-desc-shiseido-vp-eye-cream":
+        "Shiseido Vital Perfection Uplifting and Firming Advanced Eye Cream, 15ml — an eye cream that visibly lifts, firms and reduces wrinkles and dark circles around the eyes.",
+      "perfume-desc-shiseido-vp-wrinklespot-treatment":
+        "Shiseido Vital Perfection Intensive WrinkleSpot Treatment, 20ml — a targeted treatment that visibly reduces deep wrinkles and dark spots for smoother, more even-toned skin.",
+      "perfume-desc-shiseido-vp-overnight-firming-treatment":
+        "Shiseido Vital Perfection Overnight Firming Treatment, 50ml — a night gel-cream that works with skin's overnight renewal to firm, lift and restore radiance by morning.",
+      "perfume-desc-shiseido-vp-concentrated-supreme-cream":
+        "Shiseido Vital Perfection Concentrated Supreme Cream, 50ml — an ultra-rich, concentrated cream that intensely nourishes, firms and visibly lifts mature skin.",
+      "perfume-desc-shiseido-bop-micro-click-concentrate":
+        "Shiseido Bio-Performance Micro-Click Concentrate, 1.4ml — an at-home micro-needle-inspired treatment that delivers concentrated actives to visibly plump and smooth deep wrinkles.",
+      "perfume-desc-shiseido-bop-skin-hiforce-cream":
+        "Shiseido Bio-Performance Skin HiForce Cream, 50ml — a high-performance firming cream that visibly smooths wrinkles, firms and restores radiance and bounce.",
+      "perfume-desc-shiseido-bop-super-revitalizing-cream":
+        "Shiseido Bio-Performance Advanced Super Revitalizing Cream — a rich revitalizing cream that visibly reduces wrinkles and restores firmness, smoothness and radiance.",
+      "perfume-desc-shiseido-ultimune-serum":
+        "Shiseido Ultimune Power Infusing Serum — Shiseido's iconic red serum that strengthens skin's defences, boosts hydration and leaves skin smooth, resilient and radiant.",
+      "perfume-desc-shiseido-ultimune-oil":
+        "Shiseido Ultimune Power Infusing Oil, 75ml — a lightweight, fast-absorbing face oil that nourishes, strengthens and gives skin a healthy, supple glow.",
+      "perfume-desc-shiseido-ultimune-hand-cream":
+        "Shiseido Ultimune Power Infusing Hand Cream, 50ml — a nourishing hand cream that hydrates, softens and protects hands from daily dryness.",
+      "perfume-desc-shiseido-ultimune-future-power-shot":
+        "Shiseido Ultimune Future Power Shot, 15ml — an intensive serum with 15x the concentration of Ultimune's key ingredients (reishi mushroom, iris root, tsubaki seed) for smoother, more radiant, resilient skin; use twice a week.",
+      "perfume-desc-shiseido-men-total-revitalizer-cream":
+        "Shiseido Men Total Revitalizer Cream, 50ml — an anti-ageing cream for men that hydrates, firms and visibly reduces wrinkles and signs of fatigue.",
+      "perfume-desc-shiseido-men-total-revitalizer-eye":
+        "Shiseido Men Total Revitalizer Eye, 15ml — an eye cream for men that reduces the look of dark circles, puffiness and wrinkles.",
+      "perfume-desc-shiseido-men-total-revitalizer-light-fluid":
+        "Shiseido Men Total Revitalizer Light Fluid, 70ml — a lightweight anti-ageing fluid for men that hydrates, firms and energises skin without shine.",
+      "perfume-desc-shiseido-men-skin-empowering-cream":
+        "Shiseido Men Skin Empowering Cream, 50ml — a strengthening anti-wrinkle cream for men that firms, energises and restores skin's vitality.",
+      "perfume-desc-shiseido-refreshing-cleansing-water":
+        "Shiseido Refreshing Cleansing Water, 180ml — a gentle micellar-style cleansing water that removes makeup and impurities, leaving skin fresh and comfortable.",
+      "perfume-desc-shiseido-complete-cleansing-microfoam":
+        "Shiseido Complete Cleansing Microfoam, 180ml — a fine, dense micro-foam that removes makeup and impurities in one step, leaving skin clean and soft.",
+      "perfume-desc-shiseido-benefiance-contour-serum":
+        "Shiseido Benefiance Wrinkle Smoothing Contour Serum, 30ml — a serum that visibly smooths wrinkles and redefines facial contours for firmer, more youthful-looking skin.",
+      "perfume-desc-shiseido-benefiance-eye-cream":
+        "Shiseido Benefiance Wrinkle Smoothing Eye Cream, 15ml — a rich eye cream that visibly smooths wrinkles and fine lines and hydrates the delicate eye area.",
+      "perfume-desc-shiseido-eudermine-activating-essence":
+        "Shiseido Eudermine Activating Essence, 145ml — Shiseido's legendary red lotion (since 1897) that hydrates, softens and preps skin for the rest of the routine.",
+      "perfume-desc-shiseido-eye-lip-makeup-remover":
+        "Shiseido Instant Eye and Lip Makeup Remover, 125ml — a bi-phase remover that quickly dissolves waterproof eye and lip makeup without rubbing.",
+      "perfume-desc-shiseido-clear-sun-stick-spf50":
+        "Shiseido Expert Sun Protector Clear Stick SPF50+, 20g — a transparent, invisible sunscreen stick for face and body, water-resistant and easy to apply on the go.",
+      "perfume-desc-shiseido-expert-sun-lotion-spf50":
+        "Shiseido Expert Sun Protector Lotion SPF50+, 150ml — a very high protection face and body lotion that becomes more effective on contact with water and heat.",
+      "perfume-desc-shiseido-expert-sun-cream-spf50":
+        "Shiseido Expert Sun Protector Cream SPF50+, 50ml — a very high protection face cream, water-resistant and suitable for daily wear and outdoor activities.",
+      "perfume-desc-shiseido-expert-sun-lotion-spf30":
+        "Shiseido Expert Sun Protector Lotion SPF30, 150ml — a high protection face and body lotion that becomes more effective on contact with water and heat.",
+      "perfume-desc-shiseido-zen-essence":
+        "Shiseido Zen Essence Eau de Parfum — a serene floral woody from the Zen line: fresh citrus and bright florals over a soft, meditative heart, on warm woods and musk.",
+      "perfume-desc-shiseido-ginza-datura":
+        "Shiseido Ginza Datura Eau de Parfum — a mysterious white floral inspired by Tokyo's Ginza district at dusk: datura and jasmine over creamy woods and soft musk.",
+      "perfume-desc-shiseido-ginza-intense":
+        "Shiseido Ginza Intense Eau de Parfum — a deeper, warmer version of Ginza: pink pepper and pomegranate over jasmine, orchid and magnolia, on hinoki wood, sandalwood and patchouli.",
+      "perfume-desc-shiseido-ginza-night-intense":
+        "Shiseido Ginza Night Eau de Parfum Intense — the nocturnal side of Ginza: a dark, sensual floral of black pepper and jasmine over orchid, on vanilla, patchouli and woods.",
+      "perfume-desc-shiseido-synchro-skin-radiant-lifting-foundation":
+        "Shiseido Synchro Skin Radiant Lifting Foundation SPF30, 30ml. Choose your shade — a hydrating, medium-to-full buildable coverage foundation with Light-Adjusting Technology for a luminous, lifted finish, 24-hour wear and hydration.",
+      "perfume-desc-shiseido-synchro-skin-self-refreshing-foundation":
+        "Shiseido Synchro Skin Self-Refreshing Foundation SPF30, 30ml. Choose your shade — a long-wearing, medium buildable coverage foundation with a natural satin finish that stays fresh for 24 hours and resists heat, humidity and sweat.",
+      "perfume-desc-shiseido-revitalessence-skin-glow-foundation":
+        "Shiseido Revitalessence Skin Glow Foundation SPF30, 30ml. Choose your shade — a lightweight, skincare-infused foundation with light-to-medium buildable coverage and a fresh, dewy glow that visibly improves skin over time.",
+      "perfume-desc-shiseido-technosatin-gel-lipstick":
+        "Shiseido Technosatin Gel Lipstick, 3.3g. Choose your shade — a high-impact, satin-finish gel lipstick with full colour in one swipe, a comfortable cushiony feel and long-lasting hydration.",
+      "perfume-desc-shiseido-controlledchaos-mascaraink":
+        "Shiseido ControlledChaos MascaraInk, 11.5ml. Choose your shade — a volumising mascara with a dual-sided brush for dramatic volume and length with precise, smudge-proof definition.",
+      "perfume-desc-shiseido-sports-bb":
+        "Shiseido Sports BB SPF50+, 30ml. Choose your shade — a sweat- and water-resistant BB cream with WetForce technology that evens skin tone with light coverage while giving very high sun protection.",
+      "perfume-desc-shiseido-sports-bb-compact":
+        "Shiseido Sports BB Compact SPF50+, 12g. Choose your shade — a cushion-style BB compact with WetForce technology for sweat- and water-resistant coverage and very high sun protection on the go.",
+      "perfume-desc-bond-no9-sutton-place":
+        "Bond No.9 Sutton Place Eau de Parfum, 100ml (2015) — an elegant chypre named after Manhattan's riverside enclave: bergamot, black pepper and grapefruit over rose, freesia and iris, on patchouli, leather and musk.",
+      "perfume-desc-shiseido-lipliner-inkduo":
+        "Shiseido LipLiner InkDuo (Prime + Line), 1.1g. Choose your shade — a 2-in-1 lip primer and liner: one end smooths and preps lips, the other defines with long-wearing, transfer-resistant colour.",
+      "perfume-desc-shiseido-benefiance-overnight-cream":
+        "Shiseido Benefiance Overnight Wrinkle Resisting Cream, 50ml — a rich night cream that works while you sleep to visibly reduce wrinkles and restore firmness and hydration by morning.",
+      "perfume-desc-shiseido-synchro-skin-soft-blurring-primer":
+        "Shiseido Synchro Skin Soft Blurring Primer, 30ml — a lightweight primer that blurs pores and fine lines, controls shine and helps makeup last all day.",
+      "perfume-desc-shiseido-vp-liftdefine-mask":
+        "Shiseido Vital Perfection LiftDefine Radiance Face Mask, 6 pairs — two-piece sheet masks that visibly lift, firm and brighten the face in 10 minutes.",
+      "perfume-desc-shiseido-ginza":
+        "Shiseido Ginza Eau de Parfum (2021) — a floral chypre inspired by Tokyo's Ginza district: pink pepper and pomegranate over jasmine, orchid and magnolia, on hinoki wood, sandalwood and patchouli.",
+      "perfume-desc-shiseido-ginza-body-lotion":
+        "Shiseido Ginza Perfumed Body Lotion, 200ml — a lightweight, moisturising body lotion scented with Ginza's floral chypre of jasmine, magnolia and hinoki wood.",
+      "perfume-desc-shiseido-ginza-murasaki":
+        "Shiseido Ginza Murasaki Eau de Parfum (2023) — a deep, luminous floral: violet leaf and fruity notes over jasmine and orchid, on hinoki wood, patchouli and musk.",
+      "perfume-desc-shiseido-zen":
+        "Shiseido Zen Eau de Parfum (2007) — a serene floral oriental: bergamot and freesia over lotus, jasmine and peony, on amber, sandalwood and musk.",
+      "perfume-desc-shiseido-men-face-cleanser":
+        "Shiseido Men Face Cleanser, 125ml — a rich, foaming cleanser for men that removes dirt and excess oil while keeping skin comfortable and hydrated.",
+      "perfume-desc-shiseido-men-energizing-moisturizer-fluid":
+        "Shiseido Men Energizing Moisturizer Extra Light Fluid, 100ml — an ultra-light, oil-free fluid that hydrates, controls shine and energises tired skin.",
+      "perfume-desc-shiseido-microliner-ink":
+        "Shiseido MicroLiner Ink, 0.08g. Choose your shade — an ultra-fine eyeliner pencil with an ink-like formula for precise, smudge-proof and waterproof definition.",
+      "perfume-desc-shiseido-waso-gel-to-oil-cleanser":
+        "Shiseido Waso Shikulime Gel-to-Oil Cleanser, 125ml — a 2-in-1 cleanser that starts as a cushiony gel and turns into a silky oil to remove impurities and waterproof makeup without drying skin.",
+      "perfume-desc-shiseido-waso-yuzu-c-sleeping-mask":
+        "Shiseido Waso Yuzu-C Beauty Sleeping Mask, 50ml — an overnight gel mask with vitamin C-rich yuzu that brightens, hydrates and revives dull skin by morning.",
+      "perfume-desc-shiseido-waso-color-control-moisturizer":
+        "Shiseido Waso Shikulime Color Control Oil-Free Moisturizer SPF30, 50ml — a tinted, oil-free moisturiser that evens skin tone, controls shine and protects from UV.",
+      "perfume-desc-shiseido-waso-mega-hydrating-moisturizer":
+        "Shiseido Waso Shikulime Mega Hydrating Moisturizer, 50ml — a rich gel-cream that floods skin with long-lasting moisture and supports its barrier.",
+      "perfume-desc-shiseido-ee-hydrating-cream":
+        "Shiseido Essential Energy Hydrating Cream, 50ml — a light, refreshing cream that delivers 48-hour hydration and restores skin's energy and radiance.",
+      "perfume-desc-shiseido-ee-hydrating-day-cream-spf20":
+        "Shiseido Essential Energy Hydrating Day Cream SPF20, 50ml — a moisturising day cream that hydrates, energises and protects skin from UV.",
+      "perfume-desc-shiseido-bop-skin-filler":
+        "Shiseido Bio-Performance Skin Filler, 2 x 30ml — a two-step serum duo that visibly fills and plumps wrinkles from within for smoother, fuller-looking skin.",
+      "perfume-desc-shiseido-clarifying-cleansing-foam":
+        "Shiseido Clarifying Cleansing Foam, 125ml — a rich, creamy foam that removes excess oil and impurities for clear, refreshed skin.",
+      "perfume-desc-shiseido-extra-rich-cleansing-milk":
+        "Shiseido Extra Rich Cleansing Milk, 125ml — a rich, creamy cleansing milk that gently removes makeup and impurities, ideal for dry skin.",
+      "perfume-desc-shiseido-deep-cleansing-foam":
+        "Shiseido Deep Cleansing Foam, 125ml — a dense foam that deeply cleanses pores and removes excess sebum, ideal for oily skin.",
+      "perfume-desc-shiseido-treatment-softener":
+        "Shiseido Treatment Softener, 150ml — a hydrating softening lotion that preps skin to absorb the treatments that follow. Choose your texture: Treatment Softener or Enriched.",
+      "perfume-desc-shiseido-revitalizing-treatment-softener":
+        "Shiseido Revitalizing Treatment Softener, 150ml — a rich, all-in-one softener with Kirishima mineral spring water that gives 24-hour hydration and helps fight the signs of ageing.",
+      "perfume-desc-shiseido-benefiance-day-cream-spf25":
+        "Shiseido Benefiance Wrinkle Smoothing Day Cream SPF25, 50ml — a day cream that visibly smooths wrinkles, hydrates and protects skin from UV.",
+      "perfume-desc-shiseido-benefiance-wrinkle-smoothing-cream":
+        "Shiseido Benefiance Wrinkle Smoothing Cream, 50ml — a cream that visibly reduces wrinkles and restores firmness and hydration. Choose your texture: Cream or Enriched.",
+      "perfume-desc-shiseido-fslx-total-radiance-foundation":
+        "Shiseido Future Solution LX Total Radiance Foundation SPF20, 30ml. Choose your shade — a luxurious cream foundation that gives natural coverage and radiance while caring for skin like an anti-ageing cream.",
+      "perfume-desc-shiseido-maru-fude-brush":
+        "Shiseido Maru Fude Multi Face Brush — a dense, rounded brush inspired by Japanese calligraphy for seamless application of powder, liquid or cream products.",
+      "perfume-desc-shiseido-naname-fude-brush":
+        "Shiseido Naname Fude Multi Eye Brush — an angled brush for precise application and blending of eyeshadow and liner.",
+      "perfume-desc-shiseido-hasu-fude-brush":
+        "Shiseido Hasu Fude Foundation Brush — a flat, lotus-leaf-shaped brush for smooth, streak-free foundation application.",
+      "perfume-desc-shiseido-daiya-fude-brush":
+        "Shiseido Daiya Fude Face Duo — a dual-ended brush with a dense end for contouring and a soft end for blending powders.",
+      "perfume-desc-shiseido-tsutsu-fude-brush":
+        "Shiseido Tsutsu Fude Concealer Brush — a small, dense brush for precise concealer application and flawless blending.",
+      "perfume-desc-shiseido-hanatsubaki-hake-brush":
+        "Shiseido Hanatsubaki Hake Polishing Face Brush — a camellia-shaped brush with petal-like bristle clusters that buffs foundation and powder to a polished finish.",
+      "perfume-desc-shiseido-colorgel-lipbalm":
+        "Shiseido ColorGel LipBalm, 2g. Choose your shade — a tinted lip balm with sheer, buildable colour and 8-hour hydration for soft, healthy-looking lips.",
+      "perfume-desc-shiseido-synchro-skin-powder-foundation":
+        "Shiseido Synchro Skin Self-Refreshing Custom Finish Powder Foundation, 9g. Choose your shade — a long-wearing powder foundation that can be applied dry for a matte finish or wet for more coverage, staying fresh all day.",
+      "perfume-desc-shiseido-benefiance-nutriperfect-day-cream":
+        "Shiseido Benefiance NutriPerfect Day Cream SPF15, 50ml — a nourishing day cream for mature skin that restores density, firmness and radiance while protecting from UV.",
+      "perfume-desc-shiseido-benefiance-nutriperfect-night-cream":
+        "Shiseido Benefiance NutriPerfect Night Cream, 50ml — a rich night cream for mature skin that nourishes, firms and revitalises while you sleep.",
+      "perfume-desc-shiseido-archliner-ink":
+        "Shiseido ArchLiner Ink, 0.4ml, shade 01 Shibui Black — a liquid eyeliner with a flexible, arched tip for precise lines and wings, waterproof and smudge-proof.",
+      "perfume-desc-shiseido-brow-inktrio":
+        "Shiseido Brow InkTrio, 0.31g. Choose your shade — a 3-in-1 brow tool with a precision pencil, a powder and a spoolie to define, fill and set brows.",
+      "perfume-desc-shiseido-imperiallash-mascaraink":
+        "Shiseido ImperialLash MascaraInk, 8.5g, shade 01 Sumi Black — a lengthening, volumising mascara with a dual-sided brush for dramatic, separated lashes.",
       "perfume-desc-diesel":
         "Orientale-druri me anis dhe mandarin mbi bazë ëmbël lakrice e vanilje.",
-      "perfume-desc-dkny":
-        "Floral-frutore me mollë jeshile dhe kastravec mbi magnoli e sandal.",
-      "perfume-desc-juliet": "Floral-gourmand me mali, iris, vanilë e sandal.",
-      "perfume-desc-prada":
-        "Amber-gourmand me mushk të bardhë dhe benzoe mbi karamel.",
-      "perfume-desc-roberto":
-        "Floral provokues me neroli dhe tiaré mbi dru palisander.",
       "perfume-desc-valentino":
         "Amber-floral modern me cassis dhe jasemin mbi vanilë bourbon.",
-      "perfume-desc-thierry":
-        "Amber-floral me mali dhe trëndafil mbi akigalawood.",
-      "perfume-desc-ralph": "Aromatik-ujor me melonë dhe kastravec mbi suede.",
-      "perfume-desc-montale":
-        "Druri-floral me oud pakistanez dhe limë mbi trëndafil e patchouli.",
       "perfume-desc-viktor":
         "Amber-floral me orkide cattleya dhe trëndafil mbi patchouli e vanilje.",
-      "perfume-desc-yves":
-        "Aromatik-druri me mollë jeshile dhe sarri mbi amberwood e tonka.",
       "chocolate-desc-tog":
         "Një udhëtim i pasur dhe i kuruar nëpër shijet tona më të mira. Kjo koleksion balancon kremrat e thellë të çokollatës së errët dhe teksturat e lëmuara të çokollatës së qumështit në harmoni të përsosur—krijuar për të ndarë një pjesë të historisë dhe esencës kombëtare të Kosovës.",
       "chocolate-desc-tog1":
@@ -896,7 +7866,7 @@
       "extra-checkout-payment-sending":
         "Pagesa u konfirmua. Po dërgohet porosia juaj…",
       "extra-checkout-payment-sent":
-        "Pagesa u përfundua. Detajet e porosisë u dërguan në recepsion.",
+        "Pagesa u përfundua. Detajet e porosisë u dërguan në recepsion. Ju lutemi prisni deri në 30 minuta për dorëzimin në dhomën tuaj.",
       "extra-checkout-payment-email-fail":
         "Pagesa u përfundua, por detajet e porosisë nuk u dërguan automatikisht. Ju lutemi shkruani te {email}.",
       "extra-form-sending": "Po dërgohet…",
@@ -981,18 +7951,897 @@
         "Xhaketë — larje dhe hekurosje profesionale, ose vetëm hekurosje, kthyer në dhomën tuaj.",
       "laundry-desc-jacket":
         "Pallto — larje dhe hekurosje profesionale, ose vetëm hekurosje, kthyer në dhomën tuaj.",
-      "perfume-name-armani": "Giorgio Armani",
+      "perfume-name-armani": "ARMANI ACQUA DI GIOIA F.EDP",
+      "perfume-name-cacharel": "CACHAREL AMOR AMOR EDT VAPO F",
+      "perfume-name-armani-code": "ARMANI CODE FEME EDP",
+      "perfume-name-lancome": "LANCOME LA VIE EST BELLE EDP",
+      "perfume-name-mon-paris": "YVES SAINT LAU MON PARIS EDP",
+      "perfume-name-black-opium": "YVES SAINT LAU BLACK OPIUM",
+      "perfume-name-diesel-brave": "DIESEL ONLY THE BRAVE MEN EDT",
+      "perfume-name-lhomme-nuit": "YVES SAINT LAU L'HOMME NUIT LE PARFUM VAPO",
+      "perfume-name-armani-babel-he": "ARMANI EMPORIO BABEL HE EDT",
+      "perfume-name-y-edp": "YVES SAINT LAU Y EDP",
+      "perfume-name-libre-edt": "YVES SAINT LAU LIBRE EDT",
+      "perfume-name-valentino-voce-viva": "VALENTINO VOCE VIVA EAU DE PARFUM",
+      "perfume-name-valentino-donna": "VALENTINO BORN IN ROMA DONNA EAU DE PARFUM",
+      "perfume-name-libre-edp-intense": "YVES SAINT LAU LIBRE EDP INTENSE",
+      "perfume-name-valentino-donna-yellow": "VALENTINO BORN IN ROMA DONNA YELLOW DREAM EAU DE PARFUM",
+      "perfume-name-armani-my-way": "ARMANI MY WAY EDP",
+      "perfume-name-lancome-idole": "LANCOME IDOLE EDP",
+      "perfume-name-armani-in-love-with-you": "ARMANI EMPORIO IN LOVE WITH YOU EDP",
+      "perfume-name-prada-luna-rossa-carbon": "PRADA LUNA ROSSA CARBON EDT",
+      "perfume-name-prada-luna-rossa-black": "PRADA LUNA ROSSA BLACK EDP",
+      "perfume-name-prada-lhomme": "PRADA L'HOMME EDT",
+      "perfume-name-prada-la-femme": "PRADA LA FEMME EDP",
+      "perfume-name-armani-si-passione": "ARMANI SI PASSIONE EDP",
+      "perfume-name-viktor-spicebomb-extreme": "SPB EXTREME EDP",
+      "perfume-name-viktor-bonbon": "BONBON EDP SPRAY",
+      "perfume-name-cacharel-noa": "CACHAREL NOA EDT",
+      "perfume-name-armani-acqua-gio-stick": "ARMANI ACQUA DI GIO H.STICK 75",
+      "perfume-name-armani-black-code-stick": "ARMANI BLACK CODE DEO STICK 75",
+      "perfume-name-armani-si-edp": "ARMANI SI EDP",
+      "perfume-name-diesel-brave-tattoo": "DIESEL ONLY THE BRAVE TATTOO EDT",
+      "perfume-name-lancome-lveb-body-milk": "LANCOME LVEB BODY MILK 200ML",
+      "perfume-name-lancome-tresor-edp": "LANCOME TRESOR EDP",
+      "perfume-name-biotherm-aqp-fresh-eyes": "BIOTHERM BIO AQS FRESH EYE 15ML",
+      "perfume-name-biotherm-aquafitness-shower-gel": "BIOTHERM BIO AQUAFITNESS SHOWER GEL T200",
+      "perfume-name-biotherm-aquapower-72h": "BIOTHERM BIO AQUAPOWER 72H POT 50ML",
+      "perfume-name-biotherm-biocils-waterproof": "BIOTHERM BIO BIOCILS WATERPROOF F100ML 2016",
+      "perfume-name-biotherm-blue-therapy-nuit": "BIOTHERM BIO BLUE THERAPY NUIT SPB 50ML",
+      "perfume-name-biotherm-blue-therapy-reno-serum": "BIOTHERM BIO BLUE THERAPY RENO SERUM FL50ML",
+      "perfume-name-biotherm-deo-pure-invisible": "BIOTHERM BIO DEO PURE INVISIBLE ROLL ON 48H 75ML",
+      "perfume-name-biotherm-lait-corporel-deo": "BIOTHERM BIO-LAIT CORPOREL DEO ROLL ON 75ML",
+      "perfume-name-biotherm-day-control-deo-72h": "BIOTHERM BIO DAY CONTROL DEO 72H ROLL ON 75ML",
+      "perfume-name-biotherm-day-control-ecocert": "BIOTHERM BIO DAY CONTROL ECOCERT ROLL ON 75ML",
+      "perfume-name-biotherm-deo-ato-men": "BIOTHERM BIO DEO ATO 150 ML MEN",
+      "perfume-name-biotherm-deo-pure-krem": "BIOTHERM BIO DEO PURE KREM 75 ML TUBE",
+      "perfume-name-biotherm-deo-pure-rollon": "BIOTHERM BIO DEO PURE ROLLON ON 75ML",
+      "perfume-name-biotherm-deo-pure-stick": "BIOTHERM DEO PURE STICK 24H ANTIPERSPIRANT STICK",
+      "perfume-name-biotherm-deo-rollon-man-pure": "BIOTHERM BIO DEO ROLL ON 75 ML MAN PURE",
+      "perfume-name-biotherm-deo-stick-man": "BIOTHERM BIO DEO STICK 50 ML MAN",
+      "perfume-name-biotherm-eau-vitaminee": "BIOTHERM BIO EAU VITAMINEE SPRAY 100ML",
+      "perfume-name-biotherm-fs-liquid-eyes": "BIOTHERM BIO FS LIQUID EYES",
+      "perfume-name-biotherm-lait-de-douche": "BIOTHERM BIO LAIT DE DOUCHE 200ML",
+      "perfume-name-biotherm-biosource-nett-pnm": "BIOTHERM BIO SOURCE NETT PNM T150ML",
+      "perfume-name-biotherm-biosource-eau-mic": "BIOTHERM BIOSOURCE EAU MIC TTP FL200ML",
+      "perfume-name-biotherm-biosource-gelee-nett": "BIOTHERM BIOSOURCE GELEE NETT EXF 150ML",
+      "perfume-name-biotherm-biosource-lot-adouc": "BIOTHERM BIOSOURCE LOT ADOUC PS FL200ML",
+      "perfume-name-biotherm-biosource-lotion-pnm": "BIOTHERM BIOSOURCE LOTION PNM 200 ML FL",
+      "perfume-name-lancome-effacernes": "LANCOME EFFACERNES 15ML",
+      "perfume-name-lancome-grandiose-01": "LANCOME GRANDIOSE 01",
+      "perfume-name-lancome-hypnose-clean-volume-01": "LANCOME HYPNOSE CLEAN VOLUME 01",
+      "perfume-name-lancome-bi-facil-125": "LANCOME LC BI FACIL EYES",
+      "perfume-name-lancome-galatee-confort-200": "LANCOME LC CONFORT GALATEE 200 ML",
+      "perfume-name-lancome-crayon-khol-noir": "LANCOME LC CRAYON KHOL NOIR",
+      "perfume-name-lancome-genifique-cream-50": "LANCOME LC GENEFIQUE ACT JEUNESSE CR P50ML",
+      "perfume-name-lancome-hypnose-doll-eyes-wp-01": "LANCOME LC HYPNOSE DOLL EYES MASCARA 01 6ML WP",
+      "perfume-name-lancome-hypnose-doll-eyes-01": "LANCOME LC HYPNOSE MASCARA DOLL EYES 01",
+      "perfume-name-lancome-creme-mousse-confort-125": "LANCOME LC PR CONFORT CR MOUSSE T 125ML",
+      "perfume-name-lancome-eau-micellaire-douceur-400": "LANCOME LC PR DOUCEUR EAU MIC FL P 400ML",
+      "perfume-name-lancome-renergie-multilift-night-50": "LANCOME LC RENER MPLIFT NIGHT 50ML",
+      "perfume-name-lancome-renergie-creme-50": "LANCOME LC RENERGIE CREME 50 ML POT",
+      "perfume-name-lancome-tonique-douceur-400": "LANCOME LC TONIQUE DOUCEUR 400 ML FLAC",
+      "perfume-name-ysl-mascara-mvefc-01": "YVES SAINT LAU YSL EYE MASCARA MVEFC 01 black",
+      "perfume-name-ysl-dessin-sourcils-02": "YVES SAINT LAURENT DESSIN DES SOURCILS EYEBROW PENCIL",
+      "perfume-name-ysl-mascara-vefc-wp-01": "YVES SAINT LAU YSL MASCARA VEFC WP 01",
+      "perfume-name-armani-babel-she-edp": "ARMANI EMPORIO BABEL SHE EDP",
+      "perfume-name-lancome-monsieur-big-01": "LANCOME Monsieur Big Mascara 01",
+      "perfume-name-biotherm-waterlover-spf30-200": "BIOTHERM BIO WATERLOVER SUN MILK SPF30 200M",
+      "perfume-name-biotherm-waterlover-spf50-200": "BIOTHERM BIO WATERLOVER SUN MILK SPF50 200M",
+      "perfume-name-biotherm-blue-therapy-big-eye-15": "BIOTHERM BIO BLUE THERAPY BIG EYE 16 5ML",
+      "perfume-name-ysl-touche-eclat-3": "YVES SAINT LAURENT TOUCHE ECLAT RADIANT TOUCH",
+      "perfume-name-ysl-primer-moisture-glow": "YVES SAINT LAU YSL PRIMER INSTANT MOISTURE GLOW",
+      "perfume-name-lancome-hydra-zen-spf15-50": "LANCOME LC HYDRAZEN CREME 50ML SPF15",
+      "perfume-name-lancome-absolu-plumper": "LANCOME L ABSOLU PLUMPER",
+      "perfume-name-lancome-teint-miracle": "LANCOME TEINT MIRACLE F P30ML",
+      "perfume-name-biotherm-lait-corporel-400": "BIOTHERM LAIT CORPOREL L'ORIGINAL",
+      "perfume-name-biotherm-rasage-sensitive-200": "BIOTHERM BIO RASAGE PX SENS 200 ML",
+      "perfume-name-biotherm-deo-pure-ecocert": "BIOTHERM BIO DEO PURE ECOCERT ROLL ON 75ML",
+      "perfume-name-viktor-spicebomb-edt": "VIKTOR&ROLF SPB EDT SPRAY",
+      "perfume-name-viktor-flowerbomb-nectar": "VIKTOR&ROLF FBB NECTAR EDP",
+      "perfume-name-biotherm-aquasource-serum-biphase-50": "BIOTHERM AQUASOURCE SERUM BIPHASE F50ML",
+      "perfume-name-biotherm-aquapower-cleanser": "BIOTHERM AQUAPOWER OLIGO-THERMAL FRESH ULTRA CLEANSER",
+      "perfume-name-lancome-hypnose": "LANCOME HYPNOSE MASCARA",
+      "perfume-name-lancome-cils-booster-xl": "LANCOME CILS BOOSTER XL ENHANCING LASH PRIMER",
+      "perfume-name-lancome-monsieur-big-wp-01": "LANCOME MONSIEUR BIG WATERPROOF MASCARA 01",
+      "perfume-name-lancome-loose-setting-powder": "LANCOME LOOSE SETTING POWDER TRANSLUCENT",
+      "perfume-name-lancome-setting-spray": "LANCOME SETTING SPRAY",
+      "perfume-name-lancome-blush-subtil": "LANCOME BLUSH SUBTIL",
+      "perfume-name-armani-ea-with-you-intensely": "ARMANI EMPORIO STRONGER WITH YOU INTENSELY EDP",
+      "perfume-name-prada-candy": "PRADA CANDY EDP",
+      "perfume-name-prada-la-femme-intense": "PRADA LA FEMME INTENSE EDP",
+      "perfume-name-prada-lhomme-intense": "PRADA L'HOMME INTENSE EDP",
+      "perfume-name-prada-lhomme-leau": "PRADA L'HOMME L'EAU EDT",
+      "perfume-name-biotherm-life-plankton-eye-15": "BIOTHERM LIFE PLANKTON EYE 15ML",
+      "perfume-name-biotherm-tpur-salty-gel-cleanser-125": "BIOTHERM HOMME T-PUR SALTY GEL CLEANSER 125ML",
+      "perfume-name-biotherm-aqs-concentrate-bounce-50": "BIOTHERM AQUASOURCE CONCENTRATE BOUNCE 50ML",
+      "perfume-name-biotherm-aqs-concentrate-pure-50": "BIOTHERM AQUASOURCE CONCENTRATE PURE 50ML",
+      "perfume-name-biotherm-aqs-concentrate-glow-50": "BIOTHERM AQUASOURCE CONCENTRATE GLOW 50ML",
+      "perfume-name-lancome-brow-define-pencil": "LANCOME BROW DEFINE PENCIL",
+      "perfume-name-lancome-hypnose-palette": "LANCOME HYPNOSE PALETTE 5 COULEURS",
+      "perfume-name-biotherm-aquapower-deo-roll-75": "BIOTHERM HOMME AQUAPOWER 48H DEO ROLL ON 75ML",
+      "perfume-name-ysl-lhomme-nuit-edp-100": "YVES SAINT LAU L'HOMME NUIT EDP 100ML",
+      "perfume-name-lancome-mademoiselle-shine": "LANCOME MADEMOISELLE SHINE",
+      "perfume-name-libre-edp": "YVES SAINT LAU LIBRE EDP",
+      "perfume-name-biotherm-amber-algae-revitalize-day": "BIOTHERM BLUE THERAPY AMBER ALGAE REVITALIZE DAY",
+      "perfume-name-biotherm-amber-algae-revitalize-night": "BIOTHERM BLUE THERAPY AMBER ALGAE REVITALIZE NIGHT",
+      "perfume-name-lancome-genifique-serum-50": "LANCOME GENIFIQUE SERUM 50ML",
+      "perfume-name-lancome-rose-sugar-scrub": "LANCOME ROSE SUGAR SCRUB",
+      "perfume-name-lancome-hydra-zen-cream-50": "LANCOME HYDRA ZEN CREAM",
+      "perfume-name-lancome-hydra-zen-nuit-50": "LANCOME HYDRA ZEN NUIT 50ML",
+      "perfume-name-lancome-hydra-zen-glow-50": "LANCOME HYDRA ZEN GLOW 50ML",
+      "perfume-name-ysl-lhomme-le-parfum-100": "YVES SAINT LAU L'HOMME LE PARFUM 100ML",
+      "perfume-name-biotherm-tpur-cleanser-125": "BIOTHERM HOMME T-PUR CLEANSER 125ML",
+      "perfume-name-ysl-mascara-mvefc-the-curler": "YVES SAINT LAU YSL MASCARA MVEFC THE CURLER BLACK",
+      "perfume-name-ysl-eyeliner-couture-01": "YVES SAINT LAU YSL EYELINER COUTURE 1",
+      "perfume-name-biotherm-aqua-super-mask-glow": "BIOTHERM AQUA SUPER MASK GLOW",
+      "perfume-name-biotherm-aqua-super-mask-bounce": "BIOTHERM AQUA SUPER MASK BOUNCE",
+      "perfume-name-biotherm-aqua-super-mask-pure": "BIOTHERM AQUA SUPER MASK PURE",
+      "perfume-name-ysl-tatouage-velvet-cream-201": "YVES SAINT LAU YSL TATOUAGE COUTURE VELVET CREAM 201",
+      "perfume-name-biotherm-life-plankton-body-milk-400": "BIOTHERM LIFE PLANKTON BODY MILK 400ML",
+      "perfume-name-ysl-satin-crush-eyeshadow-05": "YVES SAINT LAU YSL SATIN CRUSH EYESHADOW 05",
+      "perfume-name-lancome-cils-booster-serum": "LANCOME CILS BOOSTER LASH REVITALIZING SERUM",
+      "perfume-name-valentino-born-in-roma-uomo-edt": "VALENTINO BORN IN ROMA UOMO EAU DE TOILETTE",
+      "perfume-name-valentino-donna-edp-30": "VALENTINO DONNA EAU DE PARFUM",
+      "perfume-name-valentino-uomo-edt": "VALENTINO UOMO EAU DE TOILETTE",
+      "perfume-name-ysl-mascara-mvefc-radical-01": "YVES SAINT LAU YSL MASCARA MVEFC RADICAL 01 BLACK",
+      "perfume-name-lancome-lash-idole-01": "LANCOME LASH IDOLE MASCARA",
+      "perfume-name-armani-stronger-with-you-absolu": "ARMANI EMPORIO STRONGER WITH YOU ABSOLUTELY EDP",
+      "perfume-name-valentino-born-in-roma-uomo-yellow-dream": "VALENTINO BORN IN ROMA UOMO YELLOW DREAM EDT 100ML",
+      "perfume-name-ysl-crushliner": "YVES SAINT LAU YSL CRUSHLINER EYELINER",
+      "perfume-name-cacharel-yes-i-am": "CACHAREL YES I AM EDP",
+      "perfume-name-cacharel-yes-i-am-purple": "CACHAREL YES I AM FABULOUS EDP 30ML",
+      "perfume-name-cacharel-yes-i-am-glorious": "CACHAREL YES I AM GLORIOUS EDP 50ML",
+      "perfume-name-cacharel-loulou": "CACHAREL LOULOU EDP",
+      "perfume-name-viktor-spicebomb-night-vision-edt": "VIKTOR&ROLF SPICEBOMB NIGHT VISION EDT 90ML",
+      "perfume-name-viktor-flowerbomb-dew": "VIKTOR&ROLF FLOWERBOMB DEW EDP 50ML",
+      "perfume-name-diesel-bad": "DIESEL BAD EDT",
+      "perfume-name-diesel-fuel-for-life-homme": "DIESEL FUEL FOR LIFE HOMME EDT",
+      "perfume-name-mugler-alien-edp": "THIERRY MUGLER ALIEN EDP",
+      "perfume-name-mugler-alien-goddess": "THIERRY MUGLER ALIEN GODDESS EDP",
+      "perfume-name-armani-my-way-intense": "ARMANI MY WAY EDP INTENSE",
+      "perfume-name-prada-luna-rossa-ocean": "PRADA LUNA ROSSA OCEAN EDT",
+      "perfume-name-biotherm-aquasource-gel-50": "BIOTHERM AQUASOURCE HYALU PLUMP GEL 50ML",
+      "perfume-name-lancome-hypnose-absolu-de-noir": "LANCOME HYPNOSE MASCARA ABSOLU DE NOIR",
+      "perfume-name-lancome-24h-drama-liqui-pencil": "LANCOME 24H DRAMA LIQUI-PENCIL",
+      "perfume-name-lancome-tiuw-stick": "LANCOME TEINT IDOLE ULTRA WEAR STICK",
+      "perfume-name-lancome-tiuw-stick-blush-03": "LANCOME TEINT IDOLE ULTRA WEAR STICK BLUSH 03 WILD RUBY",
+      "perfume-name-lancome-tiuw-stick-highlighter": "LANCOME TEINT IDOLE ULTRA WEAR STICK HIGHLIGHTER",
+      "perfume-name-lancome-tiuw-concealer": "LANCOME TEINT IDOLE ULTRA WEAR ALL OVER CONCEALER",
+      "perfume-name-viktor-spicebomb-night-vision-edp": "VIKTOR&ROLF SPICEBOMB NIGHT VISION EDP 90ML",
+      "perfume-name-ralph-lauren-polo-red-edp": "RALPH LAUREN POLO RED EAU DE PARFUM 75ML",
+      "perfume-name-valentino-born-in-roma-uomo-coral-fantasy": "VALENTINO BORN IN ROMA UOMO CORAL FANTASY EDT",
+      "perfume-name-valentino-born-in-roma-donna-coral-fantasy": "VALENTINO BORN IN ROMA DONNA CORAL FANTASY EDP",
+      "perfume-name-prada-luna-rossa-sport": "PRADA LUNA ROSSA SPORT EDT 50ML",
+      "perfume-name-ysl-y-edt": "YVES SAINT LAU Y EDT",
+      "perfume-name-lancome-genifique-sensitive-20": "LANCOME GENIFIQUE SENSITIVE 20ML",
+      "perfume-name-lancome-absolu-rouge-drama-ink": "LANCOME L'ABSOLU ROUGE DRAMA INK",
+      "perfume-name-lancome-le-stylo-waterproof": "LANCOME LE STYLO WATERPROOF",
+      "perfume-name-lancome-liner-idole": "LANCOME LINER IDOLE 01 GLOSSY BLACK",
+      "perfume-name-lancome-renergie-hcf-triple-serum-50": "LANCOME RENERGIE H.C.F. TRIPLE SERUM",
+      "perfume-name-lancome-nutrix-face-cream": "LANCOME NUTRIX FACE CREAM 50ML",
+      "perfume-name-lancome-genifique-light-pearl-20": "LANCOME GENIFIQUE LIGHT PEARL 20ML",
+      "perfume-name-lancome-absolu-rouge-cream-366": "LANCOME L'ABSOLU ROUGE CREAM",
+      "perfume-name-biotherm-tpur-gel-50": "BIOTHERM HOMME T-PUR ANTI-OIL & SHINE GEL 50ML",
+      "perfume-name-biotherm-aquapower-comfort-gel-75": "BIOTHERM HOMME AQUAPOWER COMFORT GEL 75ML",
+      "perfume-name-biotherm-homme-ultra-confort-balm-75": "BIOTHERM HOMME ULTRA CONFORT BALM 75ML",
+      "perfume-name-biotherm-blue-pro-retinol-50": "BIOTHERM BLUE PRO-RETINOL MULTI-CORRECT CREAM 50ML",
+      "perfume-name-ysl-rouge-pur-couture-the-slim-32": "YVES SAINT LAU YSL ROUGE PUR COUTURE THE SLIM 32",
+      "perfume-name-ysl-lash-clash-01": "YVES SAINT LAURENT LASH CLASH MASCARA",
+      "perfume-name-lancome-absolu-rouge-drama-matte": "LANCOME L'ABSOLU ROUGE DRAMA MATTE",
+      "perfume-name-biotherm-waterlover-sun-mist-spf30": "BIOTHERM WATERLOVER SUN MIST SPF30 200ML",
+      "perfume-name-biotherm-life-plankton-elixir-75": "BIOTHERM LIFE PLANKTON ELIXIR 75ML",
+      "perfume-name-prada-luna-rossa-edt": "PRADA LUNA ROSSA EDT",
+      "perfume-name-armani-code-le-parfum": "ARMANI CODE LE PARFUM",
+      "perfume-name-lancome-advanced-genifique-night-cream": "LANCOME ADVANCED GENIFIQUE NIGHT CREAM 50ML",
+      "perfume-name-diesel-d-by-diesel-edt": "D BY DIESEL EDT 50ML",
+      "perfume-name-ysl-libre-le-parfum": "YVES SAINT LAU LIBRE LE PARFUM",
+      "perfume-name-prada-paradoxe-edp": "PRADA PARADOXE EDP",
+      "perfume-name-lancome-bi-facil-clean-care-125": "LANCOME BI-FACIL CLEAN & CARE MAKE-UP REMOVER 125ML",
+      "perfume-name-lancome-hypnose-gift-set": "LANCOME LE 8 HYPNOSE GIFT SET",
+      "perfume-name-valentino-donna-yellow-dream-set": "VALENTINO DONNA BORN IN ROMA YELLOW DREAM GIFT SET",
+      "perfume-name-lancome-tiuw-care-glow-foundation": "LANCOME TEINT IDOLE ULTRA WEAR CARE & GLOW FOUNDATION 30ML",
+      "perfume-name-ysl-all-hours-foundation": "YVES SAINT LAU YSL ALL HOURS FOUNDATION 25ML",
+      "perfume-name-viktor-rolf-good-fortune-edp": "VIKTOR&ROLF GOOD FORTUNE EDP 50ML",
+      "perfume-name-ysl-lhomme-edp": "YVES SAINT LAU L'HOMME EDP 100ML",
+      "perfume-name-ysl-black-opium-le-parfum": "YVES SAINT LAU BLACK OPIUM LE PARFUM",
+      "perfume-name-ysl-libre-body-balm": "YVES SAINT LAURENT LIBRE BODY BALM 200ML",
+      "perfume-name-armani-code-edt": "ARMANI CODE EDT",
+      "perfume-name-valentino-born-in-roma-uomo-intense": "VALENTINO BORN IN ROMA UOMO INTENSE EDP",
+      "perfume-name-valentino-born-in-roma-donna-intense": "VALENTINO BORN IN ROMA DONNA INTENSE EDP",
+      "perfume-name-armani-my-way-le-parfum": "ARMANI MY WAY LE PARFUM",
+      "perfume-name-viktor-rolf-flowerbomb-ruby-orchid": "VIKTOR&ROLF FLOWERBOMB RUBY ORCHID EDP",
+      "perfume-name-ysl-myslf-edp": "YVES SAINT LAURENT MYSLF EDP",
+      "perfume-name-armani-si-intense-edp": "ARMANI SI EDP INTENSE",
+      "perfume-name-lancome-hypnose-mascara-set": "LANCOME LE 8 HYPNOSE MASCARA SET",
+      "perfume-name-biotherm-blue-pro-retinol-eye-cream": "BIOTHERM BLUE PRO-RETINOL EYE CREAM 15ML",
+      "perfume-name-prada-paradoxe-intense": "PRADA PARADOXE INTENSE EDP",
+      "perfume-name-ysl-libre-absolu-platine": "YVES SAINT LAURENT LIBRE L'ABSOLU PLATINE",
+      "perfume-name-lancome-renergie-hpn-300-peptide": "LANCOME RENERGIE H.P.N. 300-PEPTIDE CREAM 50ML",
+      "perfume-name-armani-prive-cuir-zerzura": "ARMANI PRIVE CUIR ZERZURA EDP",
+      "perfume-name-armani-prive-musc-shamal": "ARMANI PRIVE MUSC SHAMAL EDP",
+      "perfume-name-armani-prive-sable-nuit": "ARMANI PRIVE SABLE NUIT EDP",
+      "perfume-name-armani-prive-bois-encens": "ARMANI PRIVE BOIS D'ENCENS EDP",
+      "perfume-name-armani-prive-cuir-amethyste": "ARMANI PRIVE CUIR AMETHYSTE EDP",
+      "perfume-name-armani-prive-oud-royal": "ARMANI PRIVE OUD ROYAL EDP",
+      "perfume-name-armani-prive-cypres-pantelleria": "ARMANI PRIVE CYPRES PANTELLERIA EDT",
+      "perfume-name-armani-prive-figuier-eden": "ARMANI PRIVE FIGUIER EDEN EDT",
+      "perfume-name-armani-prive-jasmin-kusamono": "ARMANI PRIVE JASMIN KUSAMONO EDT",
+      "perfume-name-armani-prive-rose-arabie": "ARMANI PRIVE ROSE D'ARABIE EDP",
+      "perfume-name-armani-prive-orangerie-venise": "ARMANI PRIVE ORANGERIE VENISE EDT",
+      "perfume-name-armani-prive-pivoine-suzhou": "ARMANI PRIVE PIVOINE SUZHOU EDT",
+      "perfume-name-armani-prive-rose-alexandrie": "ARMANI PRIVE ROSE ALEXANDRIE EDT",
+      "perfume-name-armani-prive-rose-milano": "ARMANI PRIVE ROSE MILANO EDT",
+      "perfume-name-armani-prive-the-yulong": "ARMANI PRIVE THE YULONG EDT",
+      "perfume-name-armani-prive-vetiver-hiver": "ARMANI PRIVE VETIVER D'HIVER EDT",
+      "perfume-name-armani-prive-bleu-lazuli": "ARMANI PRIVE BLEU LAZULI EDP",
+      "perfume-name-armani-prive-magenta-tanzanite": "ARMANI PRIVE MAGENTA TANZANITE EDP",
+      "perfume-name-armani-prive-rouge-malachite": "ARMANI PRIVE ROUGE MALACHITE EDP",
+      "perfume-name-armani-prive-santal-dan-sha": "ARMANI PRIVE SANTAL DAN SHA EDT",
+      "perfume-name-armani-eyes-to-kill-classico": "GIORGIO ARMANI EYES TO KILL CLASSICO MASCARA",
+      "perfume-name-armani-eyes-to-kill-eccentrico": "GIORGIO ARMANI EYES TO KILL ECCENTRICO MASCARA",
+      "perfume-name-armani-eyes-to-kill-stellar": "GIORGIO ARMANI EYES TO KILL STELLAR EYESHADOW",
+      "perfume-name-armani-eye-tint": "GIORGIO ARMANI EYE TINT LIQUID EYESHADOW",
+      "perfume-name-armani-smooth-silk-eye-pencil": "GIORGIO ARMANI SMOOTH SILK EYE PENCIL",
+      "perfume-name-armani-fluid-sheer": "GIORGIO ARMANI FLUID SHEER",
+      "perfume-name-armani-luminous-silk-concealer": "GIORGIO ARMANI LUMINOUS SILK CONCEALER 12ML",
+      "perfume-name-armani-lip-power": "GIORGIO ARMANI LIP POWER LIPSTICK",
+      "perfume-name-armani-lip-power-matte": "GIORGIO ARMANI LIP POWER MATTE LIPSTICK",
+      "perfume-name-armani-concealer-brush": "GIORGIO ARMANI CONCEALER BRUSH",
+      "perfume-name-armani-luminous-silk-glow-blush": "GIORGIO ARMANI LUMINOUS SILK GLOW BLUSH",
+      "perfume-name-armani-power-fabric-concealer": "GIORGIO ARMANI POWER FABRIC+ CONCEALER",
+      "perfume-name-armani-lip-maestro": "GIORGIO ARMANI LIP MAESTRO LIQUID LIPSTICK",
+      "perfume-name-armani-lip-maestro-satin": "GIORGIO ARMANI LIP MAESTRO SATIN",
+      "perfume-name-armani-power-fabric-compact": "GIORGIO ARMANI POWER FABRIC COMPACT FOUNDATION",
+      "perfume-name-armani-luminous-silk-glow-fusion-powder": "GIORGIO ARMANI LUMINOUS SILK GLOW FUSION POWDER",
+      "perfume-name-ralph-lauren-polo-red-parfum": "RALPH LAUREN POLO RED PARFUM",
+      "perfume-name-mugler-alien-goddess-supra-florale": "THIERRY MUGLER ALIEN GODDESS SUPRA FLORALE EDP",
+      "perfume-name-prada-luna-rossa-ocean-edp": "PRADA LUNA ROSSA OCEAN EDP",
+      "perfume-name-ysl-y-edp-intense": "YVES SAINT LAURENT Y EDP INTENSE",
+      "perfume-name-lancome-renergie-yeux": "LANCOME RENERGIE YEUX EYE CREAM 15ML",
+      "perfume-name-lancome-absolu-rouge-intimatte": "LANCOME L'ABSOLU ROUGE INTIMATTE",
+      "perfume-name-lancome-hypnose-genifique-bifacil-set": "LANCOME HYPNOSE MASCARA SET (GENIFIQUE + BI-FACIL)",
+      "perfume-name-lancome-genifique-happiness-set": "LANCOME ADVANCED GENIFIQUE HAPPINESS GIFT SET",
+      "perfume-name-ysl-couture-mini-clutch": "YVES SAINT LAURENT COUTURE MINI CLUTCH EYESHADOW PALETTE",
+      "perfume-name-diesel-d-red-edp": "DIESEL D RED EDP",
+      "perfume-name-ysl-black-opium-over-red": "YVES SAINT LAURENT BLACK OPIUM EDP OVER RED",
+      "perfume-name-armani-acqua-di-gio-edt-set": "ARMANI ACQUA DI GIO EDT GIFT SET",
+      "perfume-name-prada-infusion-cedre": "PRADA LES INFUSIONS INFUSION DE CÈDRE EDP 100ML",
+      "perfume-name-prada-infusion-fleur-oranger": "PRADA LES INFUSIONS INFUSION DE FLEUR D'ORANGER EDP 100ML",
+      "perfume-name-prada-infusion-figue": "PRADA LES INFUSIONS INFUSION DE FIGUE EDP 100ML",
+      "perfume-name-valentino-green-stravaganza-donna": "VALENTINO BORN IN ROMA GREEN STRAVAGANZA DONNA EDP",
+      "perfume-name-valentino-green-stravaganza-uomo": "VALENTINO BORN IN ROMA GREEN STRAVAGANZA UOMO EDT",
+      "perfume-name-armani-my-way-nectar": "ARMANI MY WAY NECTAR EDP",
+      "perfume-name-ysl-all-hours-concealer": "YVES SAINT LAURENT ALL HOURS CONCEALER 15ML",
+      "perfume-name-lancome-idole-tint": "LANCOME IDOLE TINT LIQUID EYEBLUSHER",
+      "perfume-name-lancome-lveb-rose-extraordinaire": "LANCOME LA VIE EST BELLE ROSE EXTRAORDINAIRE EDP",
+      "perfume-name-lancome-advanced-genifique-serum-set": "LANCOME ADVANCED GENIFIQUE SERUM GIFT SET",
+      "perfume-name-armani-stronger-with-you-edt-set": "ARMANI EMPORIO STRONGER WITH YOU EDT GIFT SET",
+      "perfume-name-ysl-touche-eclat-blur-primer": "YVES SAINT LAURENT TOUCHE ECLAT BLUR PRIMER 30ML",
+      "perfume-name-armani-prive-blanc-kogane": "ARMANI PRIVE BLANC KOGANE EDP",
+      "perfume-name-armani-prive-noir-kogane": "ARMANI PRIVE NOIR KOGANE EDP",
+      "perfume-name-mugler-alien-hypersense": "THIERRY MUGLER ALIEN HYPERSENSE EDP",
+      "perfume-name-viktor-rolf-flowerbomb-tiger-lily": "VIKTOR&ROLF FLOWERBOMB TIGER LILY EDP",
+      "perfume-name-azzaro-the-most-wanted-edt-intense": "AZZARO THE MOST WANTED EDT INTENSE",
+      "perfume-name-azzaro-wanted-by-night": "AZZARO WANTED BY NIGHT EDP 100ML",
+      "perfume-name-ysl-y-elixir": "YVES SAINT LAURENT Y ELIXIR 60ML",
+      "perfume-name-lancome-uv-expert-supra-screen": "LANCOME UV EXPERT SUPRA SCREEN SPF50+",
+      "perfume-name-lancome-renergie-triple-serum-eye": "LANCOME RENERGIE H.C.F. TRIPLE SERUM EYE 20ML",
+      "perfume-name-biotherm-blue-peptides-uplift-cream": "BIOTHERM BLUE PEPTIDES UPLIFT CREAM",
+      "perfume-name-biotherm-blue-peptides-uplift-night": "BIOTHERM BLUE PEPTIDES UPLIFT NIGHT CREAM 50ML",
+      "perfume-name-ysl-rouge-pur-couture": "YVES SAINT LAURENT ROUGE PUR COUTURE LIPSTICK",
+      "perfume-name-ysl-loveshine": "YVES SAINT LAURENT LOVESHINE LIPSTICK",
+      "perfume-name-azzaro-wanted-edt": "AZZARO WANTED EDT",
+      "perfume-name-azzaro-chrome-edt": "AZZARO CHROME EDT",
+      "perfume-name-azzaro-pour-homme-edt": "AZZARO POUR HOMME EDT",
+      "perfume-name-azzaro-the-most-wanted-edp-intense": "AZZARO THE MOST WANTED EDP INTENSE",
+      "perfume-name-azzaro-the-most-wanted-parfum": "AZZARO THE MOST WANTED PARFUM",
+      "perfume-name-azzaro-chrome-edp": "AZZARO CHROME EDP",
+      "perfume-name-azzaro-chrome-parfum": "AZZARO CHROME PARFUM",
+      "perfume-name-azzaro-wanted-edp": "AZZARO WANTED EDP",
+      "perfume-name-lancome-hypnose-drama": "LANCOME HYPNOSE DRAMA MASCARA 01 EXCESSIVE BLACK",
+      "perfume-name-biotherm-homme-force-supreme-blue-serum": "BIOTHERM HOMME FORCE SUPREME BLUE SERUM 30ML",
+      "perfume-name-biotherm-life-plankton-body-oil": "BIOTHERM LIFE PLANKTON MULTI-CORRECTIVE BODY OIL 125ML",
+      "perfume-name-biotherm-life-plankton-sensitive-balm": "BIOTHERM LIFE PLANKTON SENSITIVE BALM 50ML",
+      "perfume-name-biotherm-blue-retinol-night-serum": "BIOTHERM BLUE RETINOL NIGHT SERUM 30ML",
+      "perfume-name-biotherm-waterlover-sun-milk-spf30-400": "BIOTHERM WATERLOVER HYDRATING SUN MILK SPF30 400ML",
+      "perfume-name-armani-acqua-di-gioia-edp-intense": "ARMANI ACQUA DI GIOIA EDP INTENSE",
+      "perfume-name-armani-prive-cuir-noir": "ARMANI PRIVE CUIR NOIR EDP",
+      "perfume-name-armani-prive-the-yulong-soie-de-nacre": "ARMANI PRIVE THE YULONG SOIE DE NACRE EDT",
+      "perfume-name-armani-maestro-fusion-foundation": "GIORGIO ARMANI MAESTRO FUSION MAKE UP FOUNDATION 30ML",
+      "perfume-name-armani-prisma-glass": "GIORGIO ARMANI PRISMA GLASS LIP GLOSS",
+      "perfume-name-armani-luminous-silk-cheek-tint": "GIORGIO ARMANI LUMINOUS SILK CHEEK TINT",
+      "perfume-name-ysl-all-hours-hyper-finish": "YSL ALL HOURS HYPER FINISH POWDER",
+      "perfume-name-armani-acqua-di-gio-profondo-parfum": "GIORGIO ARMANI ACQUA DI GIÒ PROFONDO PARFUM",
+      "perfume-name-armani-stronger-with-you-tobacco": "EMPORIO ARMANI STRONGER WITH YOU TOBACCO EDP",
+      "perfume-name-viktor-rolf-spicebomb-infrared-edp": "VIKTOR&ROLF SPICEBOMB INFRARED EDP",
+      "perfume-name-lancome-idole-edt": "LANCOME IDOLE EDT",
+      "perfume-name-lancome-tiuw-serum-bronzer": "LANCOME TEINT IDOLE ULTRA WEAR SKIN TRANSFORMING BRONZER",
+      "perfume-name-lancome-tiuw-serum-highlighter": "LANCOME TEINT IDOLE ULTRA WEAR SKIN TRANSFORMING HIGHLIGHTER",
+      "perfume-name-lancome-lip-idole-butterglow": "LANCOME LIP IDOLE BUTTERGLOW",
+      "perfume-name-lancome-lip-idole-liner": "LANCOME LIP IDOLE LINER",
+      "perfume-name-prada-luna-rossa-ocean-le-parfum": "PRADA LUNA ROSSA OCEAN LE PARFUM",
+      "perfume-name-armani-acqua-di-gio-edp": "GIORGIO ARMANI ACQUA DI GIÒ EDP",
+      "perfume-name-armani-acqua-di-gio-edt": "GIORGIO ARMANI ACQUA DI GIÒ EDT",
+      "perfume-name-armani-acqua-di-gio-parfum": "GIORGIO ARMANI ACQUA DI GIÒ PARFUM",
+      "perfume-name-armani-acqua-di-gio-profondo-edp": "GIORGIO ARMANI ACQUA DI GIÒ PROFONDO EDP",
+      "perfume-name-armani-acqua-di-gio-profondo-edt": "GIORGIO ARMANI ACQUA DI GIÒ PROFONDO EDT",
+      "perfume-name-armani-acqua-di-gio-elixir": "GIORGIO ARMANI ACQUA DI GIÒ ELIXIR 50ML",
+      "perfume-name-armani-code-edp-homme": "ARMANI CODE EDP",
+      "perfume-name-armani-emporio-he": "EMPORIO ARMANI HE EDT 100ML",
+      "perfume-name-armani-si-passione-intense": "ARMANI SI PASSIONE EDP INTENSE",
+      "perfume-name-armani-si-passione-red-musk": "ARMANI SI PASSIONE RED MUSK EDP",
+      "perfume-name-armani-my-way-ylang": "ARMANI MY WAY YLANG EDP",
+      "perfume-name-armani-stronger-with-you-parfum": "EMPORIO ARMANI STRONGER WITH YOU PARFUM",
+      "perfume-name-armani-prive-vert-malachite": "ARMANI PRIVE VERT MALACHITE EDP",
+      "perfume-name-armani-luminous-silk-acqua-highlighter": "GIORGIO ARMANI LUMINOUS SILK ACQUA HIGHLIGHTER",
+      "perfume-name-armani-designer-glow-foundation": "GIORGIO ARMANI DESIGNER GLOW FOUNDATION 30ML",
+      "perfume-name-armani-vertigo-lift-mascara": "GIORGIO ARMANI VERTIGO LIFT MASCARA 01 BLACK",
+      "perfume-name-armani-luminous-silk-bronzer": "GIORGIO ARMANI LUMINOUS SILK BRONZER 120 SUNBATHED DUNE",
+      "perfume-name-armani-luminous-silk-cheek-tint-shine": "GIORGIO ARMANI LUMINOUS SILK CHEEK TINT SHINE",
+      "perfume-name-armani-code-edp-set": "ARMANI CODE EDP GIFT SET",
+      "perfume-name-armani-si-edp-body-set": "ARMANI SI EDP GIFT SET WITH BODY LOTION & SHOWER GEL",
+      "perfume-name-armani-si-passione-set": "ARMANI SI PASSIONE EDP GIFT SET",
+      "perfume-name-armani-my-way-edp-set": "ARMANI MY WAY EDP GIFT SET 50ML + 10ML",
+      "perfume-name-armani-acqua-di-gio-profondo-set": "ARMANI ACQUA DI GIO PROFONDO EDP GIFT SET",
+      "perfume-name-armani-swy-intensely-set": "EMPORIO ARMANI STRONGER WITH YOU INTENSELY GIFT SET",
+      "perfume-name-armani-swy-parfum-set": "EMPORIO ARMANI STRONGER WITH YOU PARFUM GIFT SET",
+      "perfume-name-armani-acqua-di-gio-edt-set-50": "ARMANI ACQUA DI GIO EDT GIFT SET 50ML + SHOWER GEL",
+      "perfume-name-armani-acqua-di-gio-parfum-set": "ARMANI ACQUA DI GIO PARFUM GIFT SET",
+      "perfume-name-armani-my-way-body-set": "ARMANI MY WAY EDP GIFT SET WITH BODY LOTION & SHOWER GEL",
+      "perfume-name-armani-si-edp-spring-set": "ARMANI SI EDP GIFT SET 50ML + 10ML + BODY LOTION",
+      "perfume-name-valentino-uomo-born-in-roma-edt-set": "VALENTINO UOMO BORN IN ROMA EDT GIFT SET",
+      "perfume-name-valentino-donna-born-in-roma-edp-set": "VALENTINO DONNA BORN IN ROMA EDP GIFT SET",
+      "perfume-name-prada-paradoxe-holiday-set": "PRADA PARADOXE EDP HOLIDAY GIFT SET",
+      "perfume-name-prada-luna-rossa-ocean-edp-set": "PRADA LUNA ROSSA OCEAN EDP GIFT SET",
+      "perfume-name-prada-paradoxe-virtual-flower-set": "PRADA PARADOXE VIRTUAL FLOWER EDP GIFT SET",
+      "perfume-name-prada-luna-rossa-carbon-set": "PRADA LUNA ROSSA CARBON EDT GIFT SET",
+      "perfume-name-prada-luna-rossa-black-set": "PRADA LUNA ROSSA BLACK EDP GIFT SET",
+      "perfume-name-prada-paradoxe-edp-spring-set": "PRADA PARADOXE EDP GIFT SET 50ML + 10ML",
+      "perfume-name-ysl-y-le-parfum-set": "YVES SAINT LAURENT Y LE PARFUM GIFT SET",
+      "perfume-name-ysl-myslf-le-parfum-set": "YVES SAINT LAURENT MYSLF LE PARFUM GIFT SET",
+      "perfume-name-ysl-myslf-edp-set": "YVES SAINT LAURENT MYSLF EDP GIFT SET",
+      "perfume-name-ysl-black-opium-set-30": "YVES SAINT LAURENT BLACK OPIUM EDP GIFT SET 30ML + 10ML",
+      "perfume-name-ysl-black-opium-set-50": "YVES SAINT LAURENT BLACK OPIUM EDP GIFT SET 50ML + MASCARA",
+      "perfume-name-lancome-idole-holiday-set": "LANCOME IDOLE EDP 50ML HOLIDAY GIFT SET",
+      "perfume-name-lancome-iconic-mascara-set": "LANCOME ICONIC MASCARA HOLIDAY SET",
+      "perfume-name-lancome-lveb-elixir-set": "LANCOME LA VIE EST BELLE L'ELIXIR EDP GIFT SET",
+      "perfume-name-lancome-lveb-candle-set": "LANCOME LA VIE EST BELLE EDP 50ML + CANDLE SET",
+      "perfume-name-lancome-hypnose-drama-set": "LANCOME HYPNOSE DRAMA MASCARA SET",
+      "perfume-name-viktor-rolf-spicebomb-extreme-set": "VIKTOR&ROLF SPICEBOMB EXTREME EDP GIFT SET",
+      "perfume-name-cacharel-yes-i-am-set": "CACHAREL YES I AM EDP GIFT SET",
+      "perfume-name-mugler-angel-elixir-set": "MUGLER ANGEL ELIXIR EDP GIFT SET",
+      "perfume-name-biotherm-homme-force-supreme-set": "BIOTHERM HOMME FORCE SUPREME GIFT SET",
+      "perfume-name-ysl-all-hours-hyper-bronze": "YSL ALL HOURS HYPER BRONZE",
+      "perfume-name-ysl-all-hours-hyper-luminize": "YSL ALL HOURS HYPER LUMINIZE HIGHLIGHTER",
+      "perfume-name-ysl-all-hours-hyper-blur-loose-powder": "YSL ALL HOURS HYPER BLUR LOOSE POWDER",
+      "perfume-name-ysl-loveshine-balm": "YSL LOVESHINE CANDY GLOW TINTED BUTTER BALM",
+      "perfume-name-ysl-lines-liberated": "YSL LINES LIBERATED WATERPROOF EYE PENCIL",
+      "perfume-name-ysl-make-me-blush-liquid": "YSL MAKE ME BLUSH LIQUID BLUSH",
+      "perfume-name-ysl-make-me-blush-bold": "YSL MAKE ME BLUSH BOLD BLURRING POWDER BLUSH",
+      "perfume-name-ysl-loveshine-gloss": "YSL LOVESHINE PLUMPING LIP OIL GLOSS",
+      "perfume-name-ysl-libre-flowers-flames": "YVES SAINT LAURENT LIBRE FLOWERS & FLAMES EDP FLORALE",
+      "perfume-name-ysl-myslf-le-parfum": "YVES SAINT LAURENT MYSLF LE PARFUM",
+      "perfume-name-ysl-black-opium-glitter": "YVES SAINT LAURENT BLACK OPIUM EDP GLITTER",
+      "perfume-name-ysl-libre-leau-nue": "YVES SAINT LAURENT LIBRE L'EAU NUE",
+      "perfume-name-ysl-y-le-parfum": "YVES SAINT LAURENT Y LE PARFUM",
+      "perfume-name-prada-paradoxe-virtual-flower": "PRADA PARADOXE VIRTUAL FLOWER EDP",
+      "perfume-name-prada-infusion-vanille": "PRADA LES INFUSIONS INFUSION DE VANILLE EDP 100ML",
+      "perfume-name-valentino-born-in-roma-the-gold-uomo": "VALENTINO BORN IN ROMA THE GOLD UOMO EDT 100ML",
+      "perfume-name-valentino-born-in-roma-the-gold-donna": "VALENTINO BORN IN ROMA THE GOLD DONNA EDP",
+      "perfume-name-valentino-born-in-roma-uomo-extradose": "VALENTINO BORN IN ROMA UOMO EXTRADOSE PARFUM",
+      "perfume-name-valentino-born-in-roma-donna-extradose": "VALENTINO BORN IN ROMA DONNA EXTRADOSE PARFUM",
+      "perfume-name-lancome-lveb-elixir": "LANCOME LA VIE EST BELLE L'ELIXIR EDP",
+      "perfume-name-lancome-idole-power": "LANCOME IDOLE POWER EDP INTENSE",
+      "perfume-name-lancome-tresor-la-nuit-vanille-noire": "LANCOME LA NUIT TRESOR VANILLE NOIRE EDP",
+      "perfume-name-ralph-lauren-ralphs-club-edt": "RALPH LAUREN RALPH'S CLUB EDT",
+      "perfume-name-mugler-angel-fantasm": "MUGLER ANGEL FANTASM EDP",
+      "perfume-name-mugler-amen-fantasm": "MUGLER A*MEN FANTASM EDP 100ML",
+      "perfume-name-mugler-alien-extraintense": "MUGLER ALIEN EXTRAINTENSE EDP INTENSE",
+      "perfume-name-cacharel-ella-ella": "CACHAREL ELLA ELLA EDP",
+      "perfume-name-viktor-rolf-spicebomb-dark-leather": "VIKTOR&ROLF SPICEBOMB DARK LEATHER EDP",
+      "perfume-name-diesel-only-the-brave-edp": "DIESEL ONLY THE BRAVE EDP",
+      "perfume-name-azzaro-forever-wanted-elixir": "AZZARO FOREVER WANTED ELIXIR",
+      "perfume-name-lancome-lip-idole-juicytreat": "LANCOME LIP IDOLE JUICYTREAT OIL-IN-GLOSS",
+      "perfume-name-lancome-lash-idole-flutter": "LANCOME LASH IDOLE FLUTTER EXTENSION MASCARA 01",
+      "perfume-name-lancome-tiuw-setting-powder": "LANCOME TEINT IDOLE ULTRA WEAR SKIN REFINING SETTING POWDER",
+      "perfume-name-lancome-tiuw-care-glow-concealer": "LANCOME TEINT IDOLE ULTRA WEAR CARE & GLOW SERUM CONCEALER 125W",
+      "perfume-name-lancome-hydra-zen-gel-cream": "LANCOME HYDRA ZEN GEL CREAM",
+      "perfume-name-lancome-genifique-ultimate": "LANCOME ADVANCED GENIFIQUE ULTIMATE SERUM",
+      "perfume-name-lancome-renergie-crx-triple-serum-retinol": "LANCOME RENERGIE C.R.X. TRIPLE SERUM RETINOL 50ML",
+      "perfume-name-lancome-renergie-hpn-uvmune-spf50": "LANCOME RENERGIE H.P.N. UVMUNE CREAM SPF50 50ML",
+      "perfume-name-lancome-tonique-confort-200": "LANCOME TONIQUE CONFORT 200ML",
+      "perfume-name-biotherm-life-plankton-regenerating-serum": "BIOTHERM LIFE PLANKTON REGENERATING SERUM",
+      "perfume-name-biotherm-homme-aquapower-advanced-gel": "BIOTHERM HOMME AQUAPOWER ADVANCED GEL",
+      "perfume-name-biotherm-lait-corporel-active-recovery": "BIOTHERM LAIT CORPOREL ACTIVE RECOVERY 400ML",
+      "perfume-name-biotherm-blue-peptides-eyes-lips": "BIOTHERM BLUE PEPTIDES EYES & LIPS CONTOUR RESHAPER 15ML",
+      "perfume-name-biotherm-aquasource-hydra-barrier-cleanser": "BIOTHERM AQUASOURCE HYDRA BARRIER CLEANSER 150ML",
+      "perfume-name-biotherm-aquasource-hydra-barrier-cream": "BIOTHERM AQUASOURCE HYDRA BARRIER CREAM",
+      "perfume-name-lancome-o-de-lancome-off-now": "LANCOME LES O DE LANCOME OFF NOW EDT 100ML",
+      "perfume-name-lancome-o-de-lancome-over-the-top": "LANCOME LES O DE LANCOME OVER THE TOP EDT 100ML",
+      "perfume-name-lancome-o-de-lancome-ozenith": "LANCOME LES O DE LANCOME O ZENITH EDT 100ML",
+      "perfume-name-armani-prive-iris-bleu": "ARMANI PRIVE IRIS BLEU EDT",
+      "perfume-name-armani-prive-gardenia-antigua": "ARMANI PRIVE GARDENIA ANTIGUA EDT 100ML",
+      "perfume-name-armani-prive-indigo-tanzanite": "ARMANI PRIVE INDIGO TANZANITE EDP 100ML",
+      "perfume-name-cacharel-anais-anais": "CACHAREL ANAIS ANAIS EDT",
+      "perfume-name-armani-code-edp-75-spring-set": "ARMANI CODE EDP 75ML + 15ML GIFT SET",
+      "perfume-name-armani-code-edt-50-spring-set": "ARMANI CODE EDT 50ML + BODY SHAMPOO GIFT SET",
+      "perfume-name-lancome-lash-idole-idole-edp-set": "LANCOME LASH IDOLE MASCARA + IDOLE EDP 10ML SET",
+      "perfume-name-lancome-lash-idole-flutter-extension-set": "LANCOME LASH IDOLE FLUTTER EXTENSION + LIP IDOLE MINI SET",
+      "perfume-name-valentino-uomo-born-in-roma-edt-50-set": "VALENTINO UOMO BORN IN ROMA EDT 50ML + 15ML SET",
+      "perfume-name-biotherm-homme-aquapower-routine-set": "BIOTHERM HOMME AQUAPOWER ROUTINE SET",
+      "perfume-name-biotherm-homme-force-supreme-routine-set": "BIOTHERM HOMME FORCE SUPREME ROUTINE SET",
+      "perfume-name-lancome-genifique-ultimate-routine-set": "LANCOME GENIFIQUE ULTIMATE SERUM 30ML ROUTINE SET",
+      "perfume-name-lancome-juicy-tubes": "LANCOME JUICY TUBES LIP GLOSS 15ML",
+      "perfume-name-lancome-skin-idole-supertint": "LANCOME SKIN IDOLE 3 SERUM SUPERTINT 30ML",
+      "perfume-name-lancome-genifique-eye-cream": "LANCOME GENIFIQUE ULTIMATE EYE CREAM 20ML",
+      "perfume-name-lancome-renergie-multi-glow-day": "LANCOME RENERGIE MULTI GLOW DAY CREAM 50ML",
+      "perfume-name-biotherm-waterlover-sun-milk-spf50-400": "BIOTHERM WATERLOVER HYDRATING SUN MILK SPF50+ 400ML",
+      "perfume-name-biotherm-waterlover-milky-sun-spray-spf50": "BIOTHERM WATERLOVER MILKY SUN SPRAY SPF50+ 200ML",
+      "perfume-name-biotherm-collagen-fit-body-cream": "BIOTHERM COLLAGEN FIT INTENSIVE HYDRA BODY CREAM 200ML",
+      "perfume-name-biotherm-collagen-fit-body-milk": "BIOTHERM COLLAGEN FIT FIRMING BODY MILK 400ML",
+      "perfume-name-biotherm-homme-force-supreme-body-reshaper": "BIOTHERM HOMME FORCE SUPREME BODY RESHAPER 125ML",
+      "perfume-name-biotherm-homme-force-supreme-face-reshaper": "BIOTHERM HOMME FORCE SUPREME FACE RESHAPER CREAM 50ML",
+      "perfume-name-armani-prisma-glass-icy-plumper": "GIORGIO ARMANI PRISMA GLASS ICY PLUMPER",
+      "perfume-name-ysl-loveshine-candy-glaze": "YSL LOVESHINE CANDY GLAZE LIP GLOSS STICK",
+      "perfume-name-margiela-replica-beach-walk": "MAISON MARGIELA REPLICA BEACH WALK EDT",
+      "perfume-name-margiela-replica-by-the-fireplace": "MAISON MARGIELA REPLICA BY THE FIREPLACE EDT 30ML",
+      "perfume-name-margiela-replica-jazz-club": "MAISON MARGIELA REPLICA JAZZ CLUB EDT",
+      "perfume-name-margiela-replica-lazy-sunday-morning": "MAISON MARGIELA REPLICA LAZY SUNDAY MORNING EDT",
+      "perfume-name-margiela-replica-afternoon-delight": "MAISON MARGIELA REPLICA AFTERNOON DELIGHT EDT",
+      "perfume-name-margiela-replica-autumn-vibes": "MAISON MARGIELA REPLICA AUTUMN VIBES EDT 30ML",
+      "perfume-name-margiela-replica-from-the-garden": "MAISON MARGIELA REPLICA FROM THE GARDEN EDT",
+      "perfume-name-margiela-replica-sailing-day": "MAISON MARGIELA REPLICA SAILING DAY EDT 100ML",
+      "perfume-name-margiela-replica-on-a-date": "MAISON MARGIELA REPLICA ON A DATE EDT 30ML",
+      "perfume-name-margiela-replica-when-the-rain-stops": "MAISON MARGIELA REPLICA WHEN THE RAIN STOPS EDT",
+      "perfume-name-margiela-replica-under-the-stars": "MAISON MARGIELA REPLICA UNDER THE STARS EDT",
+      "perfume-name-margiela-replica-coffee-break": "MAISON MARGIELA REPLICA COFFEE BREAK EDT 100ML",
+      "perfume-name-margiela-replica-flying": "MAISON MARGIELA REPLICA FLYING EDP 100ML",
+      "perfume-name-margiela-replica-ideal-one": "MAISON MARGIELA REPLICA IDEAL ONE EDP 100ML",
+      "perfume-name-margiela-replica-dancing-on-the-moon": "MAISON MARGIELA REPLICA DANCING ON THE MOON EDP 100ML",
+      "perfume-name-margiela-replica-celestial-whispers": "MAISON MARGIELA REPLICA CELESTIAL WHISPERS EDP 100ML",
+      "perfume-name-margiela-replica-under-the-lemon-trees": "MAISON MARGIELA REPLICA UNDER THE LEMON TREES EDT 100ML",
+      "perfume-name-margiela-replica-bubble-bath": "MAISON MARGIELA REPLICA BUBBLE BATH EDT 100ML",
+      "perfume-name-margiela-replica-lazy-sunday-morning-candle": "MAISON MARGIELA REPLICA LAZY SUNDAY MORNING CANDLE 165G",
+      "perfume-name-mugler-amen-stellar": "MUGLER A*MEN STELLAR EDP",
+      "perfume-name-mugler-angel-stellar": "MUGLER ANGEL STELLAR EDP",
+      "perfume-name-mugler-angel-edp": "MUGLER ANGEL EDP",
+      "perfume-name-mugler-angel-nova": "MUGLER ANGEL NOVA EDP 25ML",
+      "perfume-name-ralph-lauren-big-pony-1": "RALPH LAUREN POLO BIG PONY #1 BLUE EDT 100ML",
+      "perfume-name-ralph-lauren-polo-blue-parfum": "RALPH LAUREN POLO BLUE PARFUM 75ML",
+      "perfume-name-ralph-lauren-polo-67-edt": "RALPH LAUREN POLO 67 EDT",
+      "perfume-name-ralph-lauren-polo-67-edp": "RALPH LAUREN POLO 67 EDP",
+      "perfume-name-viktor-rolf-spicebomb-metallic-musk": "VIKTOR&ROLF SPICEBOMB METALLIC MUSK EDP",
+      "perfume-name-viktor-rolf-flowerbomb-extreme": "VIKTOR&ROLF FLOWERBOMB EXTREME EDP INTENSE",
+      "perfume-name-prada-paradoxe-radical-essence": "PRADA PARADOXE RADICAL ESSENCE PARFUM",
+      "perfume-name-prada-paradoxe-hair-mist": "PRADA PARADOXE HAIR MIST 30ML",
+      "perfume-name-prada-paradoxe-intense-90-set": "PRADA PARADOXE INTENSE EDP 90ML + 10ML GIFT SET",
+      "perfume-name-ysl-myslf-labsolu": "YVES SAINT LAURENT MYSLF L'ABSOLU PARFUM",
+      "perfume-name-valentino-born-in-roma-body-shimmer": "VALENTINO BORN IN ROMA DONNA PERFUMED BODY SHIMMER 125ML",
+      "perfume-name-valentino-born-in-roma-hair-body-mist": "VALENTINO BORN IN ROMA DONNA PERFUMED HAIR & BODY MIST 90ML",
+      "perfume-name-armani-code-elixir": "ARMANI CODE ELIXIR 50ML",
+      "perfume-name-armani-si-parfum": "ARMANI SI PARFUM",
+      "perfume-name-armani-swy-intensely-edp-50-set": "EMPORIO ARMANI STRONGER WITH YOU INTENSELY EDP 50ML + SHOWER GEL SET",
+      "perfume-name-lancome-lveb-vanille-nude": "LANCOME LA VIE EST BELLE VANILLE NUDE EDP",
+      "perfume-name-lancome-absolue-longevity-soft-cream": "LANCOME ABSOLUE LONGEVITY THE SOFT CREAM 60ML",
+      "perfume-name-biotherm-aquascreen-uv-daily-spf50": "BIOTHERM AQUASCREEN ACTIVEWEAR DAILY UV FLUID SPF50+ 40ML",
+      "perfume-name-lancome-skin-idole-juicy-blush": "LANCOME SKIN IDOLE JUICY LIQUID BLUSH",
+      "perfume-name-ysl-the-inks-blur": "YSL THE INKS BLUR MATTE LIP STAIN",
+      "perfume-name-ysl-the-inks-vinyl-cream": "YSL THE INKS VINYL CREAM LIP STAIN",
+      "perfume-name-ysl-the-slim-couture-matte": "YSL ROUGE PUR COUTURE THE SLIM MATTE LIPSTICK",
+      "perfume-name-ysl-all-hours-glow-foundation": "YSL ALL HOURS GLOW FOUNDATION 25ML",
+      "perfume-name-armani-skin-tint": "GIORGIO ARMANI SKIN TINT 30ML",
+      "perfume-name-armani-luminous-silk-foundation": "GIORGIO ARMANI LUMINOUS SILK FOUNDATION 30ML",
+      "perfume-name-armani-luminous-silk-glow-primer": "GIORGIO ARMANI LUMINOUS SILK ILLUMINATING PRIMER",
+      "perfume-name-armani-prive-cuir-nu": "ARMANI PRIVE CUIR NU EDP INTENSE",
+      "perfume-name-armani-power-of-you": "EMPORIO ARMANI POWER OF YOU EDP",
+      "perfume-name-armani-stronger-with-you-amber": "EMPORIO ARMANI STRONGER WITH YOU AMBER EDP 100ML",
+      "perfume-name-lancome-magie-noire": "LANCOME MAGIE NOIRE EDT 75ML",
+      "perfume-name-lancome-absolue-lextrait-cream": "LANCOME ABSOLUE L'EXTRAIT ELIXIR CREAM 50ML",
+      "perfume-name-lancome-absolue-lextrait-yeux": "LANCOME ABSOLUE L'EXTRAIT EYE CREAM 15ML",
+      "perfume-name-biotherm-aquasource-vitamin-glow-gel": "BIOTHERM AQUASOURCE+ VITAMIN GLOW GEL 50ML",
+      "perfume-name-biotherm-aquasource-cica-nutri-cream": "BIOTHERM AQUASOURCE CICA NUTRI CREAM 30ML",
+      "perfume-name-prada-paradigme-edp": "PRADA PARADIGME EDP",
+      "perfume-name-valentino-born-in-roma-rendez-vous-uomo": "VALENTINO UOMO BORN IN ROMA RENDEZ-VOUS IVORY EDT 100ML",
+      "perfume-name-valentino-born-in-roma-rendez-vous-donna": "VALENTINO DONNA BORN IN ROMA RENDEZ-VOUS IVORY EDP",
+      "perfume-name-valentino-born-in-roma-purple-melancholia-uomo": "VALENTINO UOMO BORN IN ROMA PURPLE MELANCHOLIA EDT",
+      "perfume-name-valentino-born-in-roma-purple-melancholia-donna": "VALENTINO DONNA BORN IN ROMA PURPLE MELANCHOLIA EDP",
+      "perfume-name-ysl-libre-vanille-couture": "YVES SAINT LAURENT LIBRE VANILLE COUTURE EDP 50ML",
+      "perfume-name-margiela-untitled-l-eau": "MAISON MARGIELA (UNTITLED) L'EAU EDT 100ML",
+      "perfume-name-margiela-untitled-edp": "MAISON MARGIELA (UNTITLED) EDP 100ML",
+      "perfume-name-margiela-replica-beach-vibes-candle": "MAISON MARGIELA REPLICA BEACH VIBES CANDLE 165G",
+      "perfume-name-margiela-replica-jazz-club-diffuser": "MAISON MARGIELA REPLICA JAZZ CLUB DIFFUSER 185ML",
+      "perfume-name-margiela-replica-from-the-garden-candle": "MAISON MARGIELA REPLICA FROM THE GARDEN CANDLE 165G",
+      "perfume-name-margiela-replica-lazy-sunday-morning-shower-gel": "MAISON MARGIELA REPLICA LAZY SUNDAY MORNING SHOWER GEL 200ML",
+      "perfume-name-margiela-replica-lazy-sunday-morning-body-lotion": "MAISON MARGIELA REPLICA LAZY SUNDAY MORNING BODY LOTION 200ML",
+      "perfume-name-dkny-be-delicious": "DKNY BE DELICIOUS EDP",
+      "perfume-name-dkny-be-100-delicious": "DKNY BE 100% DELICIOUS EDP",
+      "perfume-name-dkny-be-delicious-fresh-blossom": "DKNY BE DELICIOUS FRESH BLOSSOM EDP",
+      "perfume-name-dkny-be-extra-delicious": "DKNY BE EXTRA DELICIOUS EDP",
+      "perfume-name-dkny-women-edp": "DKNY WOMEN ENERGIZING EDP",
+      "perfume-name-dkny-be-delicious-orchard-street": "DKNY BE DELICIOUS ORCHARD ST. EDP",
+      "perfume-name-cavalli-paradiso": "ROBERTO CAVALLI PARADISO EDP",
+      "perfume-name-just-cavalli-her": "JUST CAVALLI FOR HER EDT",
+      "perfume-name-just-cavalli-him": "JUST CAVALLI FOR HIM EDT",
+      "perfume-name-cavalli-signature": "ROBERTO CAVALLI SIGNATURE EDP",
+      "perfume-name-cavalli-nero-assoluto": "ROBERTO CAVALLI NERO ASSOLUTO EDP 75ML",
+      "perfume-name-cavalli-sweet-ferocious": "ROBERTO CAVALLI SIGNATURE SWEET FEROCIOUS EDP",
+      "perfume-name-just-cavalli-wild-heart-her": "JUST CAVALLI WILD HEART FOR HER EDP",
+      "perfume-name-just-cavalli-wild-heart-him": "JUST CAVALLI WILD HEART FOR HIM EDT",
+      "perfume-name-cavalli-paradiso-rosa": "ROBERTO CAVALLI PARADISO ROSA EDP",
+      "perfume-name-cavalli-serpentine": "ROBERTO CAVALLI SERPENTINE PARFUM",
+      "perfume-name-just-cavalli-give-me-magic-him": "JUST CAVALLI GIVE ME MAGIC FOR HIM EDT",
+      "perfume-name-just-cavalli-give-me-magic-her": "JUST CAVALLI GIVE ME MAGIC FOR HER EDP",
+      "perfume-name-ysl-libre-edp-loveshine-set": "YVES SAINT LAURENT LIBRE EDP 30ML + LOVESHINE GIFT SET",
+      "perfume-name-ysl-black-opium-holiday-set-50": "YVES SAINT LAURENT BLACK OPIUM EDP 50ML HOLIDAY GIFT SET",
+      "perfume-name-ysl-myslf-le-parfum-holiday-set": "YVES SAINT LAURENT MYSLF LE PARFUM 60ML HOLIDAY GIFT SET",
+      "perfume-name-ysl-myslf-edp-holiday-set-60": "YVES SAINT LAURENT MYSLF EDP 60ML HOLIDAY GIFT SET",
+      "perfume-name-ysl-myslf-edp-holiday-set-40": "YVES SAINT LAURENT MYSLF EDP 40ML HOLIDAY GIFT SET",
+      "perfume-name-ysl-libre-edp-intense-holiday-set": "YVES SAINT LAURENT LIBRE EDP INTENSE 90ML HOLIDAY GIFT SET",
+      "perfume-name-prada-paradoxe-intense-holiday-set": "PRADA PARADOXE INTENSE EDP 50ML HOLIDAY GIFT SET",
+      "perfume-name-prada-paradoxe-holiday-set-2025": "PRADA PARADOXE EDP 50ML HOLIDAY GIFT SET 2025",
+      "perfume-name-prada-paradigme-set": "PRADA PARADIGME EDP 100ML GIFT SET",
+      "perfume-name-prada-luna-rossa-black-set-100": "PRADA LUNA ROSSA BLACK EDP 100ML GIFT SET",
+      "perfume-name-armani-si-passione-holiday-set": "ARMANI SI PASSIONE EDP 50ML HOLIDAY GIFT SET",
+      "perfume-name-armani-stronger-with-you-intensely-set-100": "ARMANI EMPORIO STRONGER WITH YOU INTENSELY EDP 100ML HOLIDAY GIFT SET",
+      "perfume-name-armani-stronger-with-you-intensely-set-50": "ARMANI EMPORIO STRONGER WITH YOU INTENSELY EDP 50ML HOLIDAY GIFT SET",
+      "perfume-name-armani-si-edp-holiday-set": "ARMANI SI EDP 50ML HOLIDAY GIFT SET",
+      "perfume-name-armani-code-edt-holiday-set": "ARMANI CODE EDT 50ML HOLIDAY GIFT SET",
+      "perfume-name-armani-my-way-holiday-set": "ARMANI MY WAY EDP 50ML HOLIDAY GIFT SET",
+      "perfume-name-armani-stronger-with-you-edt-holiday-set": "ARMANI EMPORIO STRONGER WITH YOU EDT 100ML HOLIDAY GIFT SET",
+      "perfume-name-lancome-la-vie-est-belle-edp-30-set": "LANCOME LA VIE EST BELLE EDP 30ML GIFT SET",
+      "perfume-name-lancome-juicy-tubes-mini-set": "LANCOME JUICY TUBES MINI GIFT SET",
+      "perfume-name-lancome-idole-edp-25-set": "LANCOME IDOLE EDP 25ML GIFT SET",
+      "perfume-name-lancome-idole-edp-50-set": "LANCOME IDOLE EDP 50ML GIFT SET",
+      "perfume-name-lancome-la-vie-est-belle-edp-50-set": "LANCOME LA VIE EST BELLE EDP 50ML GIFT SET",
+      "perfume-name-lancome-la-vie-est-belle-vanille-nude-set": "LANCOME LA VIE EST BELLE VANILLE NUDE EDP 50ML GIFT SET",
+      "perfume-name-lancome-renergie-triple-serum-20-set": "LANCOME RENERGIE TRIPLE SERUM 20ML GIFT SET",
+      "perfume-name-lancome-renergie-crx-triple-serum-50-set": "LANCOME RENERGIE C.R.X. TRIPLE SERUM 50ML GIFT SET",
+      "perfume-name-lancome-la-vie-est-belle-edp-100-set": "LANCOME LA VIE EST BELLE EDP 100ML GIFT SET",
+      "perfume-name-lancome-la-vie-est-belle-elixir-petit-theatre": "LANCOME LA VIE EST BELLE L'ELIXIR 50ML PETIT THEATRE",
+      "perfume-name-lancome-la-vie-est-belle-petit-theatre": "LANCOME LA VIE EST BELLE EDP 50ML PETIT THEATRE",
+      "perfume-name-lancome-renergie-hpn-300-peptide-50-set": "LANCOME RENERGIE H.P.N. 300-PEPTIDE CREAM 50ML GIFT SET",
+      "perfume-name-lancome-hypnose-drama-mascara-set": "LANCOME HYPNOSE DRAMA MASCARA GIFT SET",
+      "perfume-name-lancome-monsieur-big-set": "LANCOME MONSIEUR BIG MASCARA GIFT SET",
+      "perfume-name-biotherm-homme-aquafitness-set": "BIOTHERM HOMME AQUAFITNESS GIFT SET",
+      "perfume-name-biotherm-homme-force-supreme-reshaper-set": "BIOTHERM HOMME FORCE SUPREME RESHAPER GIFT SET",
+      "perfume-name-biotherm-deo-pure-duo-set": "BIOTHERM DEO PURE DUO GIFT SET",
+      "perfume-name-biotherm-aqua-drop-set": "BIOTHERM AQUA DROP GIFT SET",
+      "perfume-name-biotherm-homme-power-drop-set": "BIOTHERM HOMME POWER DROP GIFT SET",
+      "perfume-name-valentino-uomo-born-in-roma-edt-holiday-set": "VALENTINO UOMO BORN IN ROMA EDT HOLIDAY GIFT SET",
+      "perfume-name-valentino-donna-born-in-roma-intense-set": "VALENTINO DONNA BORN IN ROMA INTENSE EDP GIFT SET",
+      "perfume-name-valentino-donna-born-in-roma-edp-holiday-set": "VALENTINO DONNA BORN IN ROMA EDP HOLIDAY GIFT SET",
+      "perfume-name-valentino-uomo-born-in-roma-extradose-set": "VALENTINO UOMO BORN IN ROMA EXTRADOSE GIFT SET",
+      "perfume-name-valentino-donna-born-in-roma-extradose-set": "VALENTINO DONNA BORN IN ROMA EXTRADOSE GIFT SET",
+      "perfume-name-guess-seductive-edt": "GUESS SEDUCTIVE FOR WOMEN EDT",
+      "perfume-name-guess-seductive-noir-edt": "GUESS SEDUCTIVE NOIR FOR WOMEN EDT",
+      "perfume-name-guess-seductive-red-edt": "GUESS SEDUCTIVE RED FOR WOMEN EDT",
+      "perfume-name-guess-seductive-red-mist": "GUESS SEDUCTIVE RED FRAGRANCE MIST 250ML",
+      "perfume-name-guess-iconic-edp": "GUESS ICONIC FOR WOMEN EDP",
+      "perfume-name-guess-iconic-men-edp": "GUESS ICONIC FOR MEN EDP",
+      "perfume-name-guess-bella-vita-edp": "GUESS BELLA VITA EDP",
+      "perfume-name-guess-bella-vita-mist": "GUESS BELLA VITA FRAGRANCE MIST 250ML",
+      "perfume-name-guess-bella-vita-rosa-edt": "GUESS BELLA VITA ROSA EDT",
+      "perfume-name-guess-bella-vita-rosa-mist": "GUESS BELLA VITA ROSA FRAGRANCE MIST 250ML",
+      "perfume-name-guess-bella-vita-paradiso-edp": "GUESS BELLA VITA PARADISO EDP",
+      "perfume-name-guess-love-fragrance-mist": "GUESS LOVE FRAGRANCE MIST 250ML",
+      "perfume-name-guess-sexy-skin-fragrance-mist": "GUESS SEXY SKIN FRAGRANCE MIST 250ML",
+      "perfume-name-armani-prive-les-eaux-holiday-discovery-set": "ARMANI PRIVE LES EAUX HOLIDAY DISCOVERY SET 4 X 7.5ML",
+      "perfume-name-biotherm-homme-aquapower-essentials-set": "BIOTHERM HOMME AQUAPOWER ADVANCED GEL 75ML HOLIDAY SET",
+      "perfume-name-lancome-la-nuit-tresor-holiday-set": "LANCOME LA NUIT TRESOR EDP 30ML HOLIDAY GIFT SET",
+      "perfume-name-lancome-absolue-soft-cream-holiday-set": "LANCOME ABSOLUE LONGEVITY SOFT CREAM 60ML HOLIDAY SET",
+      "perfume-name-prada-luna-rossa-ocean-edt-set": "PRADA LUNA ROSSA OCEAN EDT 100ML GIFT SET",
+      "perfume-name-ysl-libre-berry-crush": "YVES SAINT LAURENT LIBRE BERRY CRUSH EDP",
+      "perfume-name-lancome-lash-idole-curl-goddess": "LANCOME LASH IDOLE CURL GODDESS MASCARA 01 DIVINE BLACK",
+      "perfume-name-guess-iconic-mist": "GUESS ICONIC FOR WOMEN FRAGRANCE MIST 250ML",
+      "perfume-name-guess-iconic-sublime-edp": "GUESS ICONIC SUBLIME EDP",
+      "perfume-name-guess-iconic-sublime-mist": "GUESS ICONIC SUBLIME FRAGRANCE MIST 250ML",
+      "perfume-name-guess-seductive-noir-homme-edt": "GUESS SEDUCTIVE HOMME NOIR EDT",
+      "perfume-name-azzaro-forever-wanted-absolu": "AZZARO FOREVER WANTED ABSOLU PARFUM",
+      "perfume-name-mugler-alien-pulp": "MUGLER ALIEN PULP EDP",
+      "perfume-name-armani-acqua-di-gio-edp-intense": "GIORGIO ARMANI ACQUA DI GIO EDP INTENSE",
+      "perfume-name-armani-stronger-with-you-powerfully": "EMPORIO ARMANI STRONGER WITH YOU POWERFULLY EDP",
+      "perfume-name-lancome-goddess-dimension-eyeshadow": "LANCOME IDOLE GODDESS DIMENSION MONO EYESHADOW",
+      "perfume-name-biotherm-aquasource-electrolyte-dewy-gel": "BIOTHERM AQUASOURCE+ ELECTROLYTE DEWY GEL 100H 100ML",
+      "perfume-name-lancome-mascara-melter": "LANCOME MASCARA MELTER CARING MASCARA REMOVER",
+      "perfume-name-lancome-o-juicy-hair-body-mist": "LANCOME O JUICY HAIR & BODY MIST 100ML",
+      "perfume-name-lancome-idole-peach-n-roses": "LANCOME IDOLE PEACH 'N ROSES EDP",
+      "perfume-name-miu-miu-edp": "MIU MIU EDP",
+      "perfume-name-miu-miu-eau-bleue": "MIU MIU L'EAU BLEUE EDP",
+      "perfume-name-miu-miu-eau-rosee": "MIU MIU L'EAU ROSEE EDT",
+      "perfume-name-miu-miu-fleur-de-lait": "MIU MIU FLEUR DE LAIT EDP",
+      "perfume-name-miu-miu-miutine": "MIU MIU MIUTINE EDP",
+      "perfume-name-lancome-renergie-nano-resurfacer-starter": "LANCOME RENERGIE NANO-RESURFACER 400 BOOSTER STARTER KIT",
+      "perfume-name-lancome-renergie-nano-resurfacer-refill": "LANCOME RENERGIE NANO-RESURFACER 400 BOOSTER REFILL",
+      "perfume-name-lancome-renergie-collagen-lift-xtend-cream": "LANCOME RENERGIE COLLAGEN+ LIFT-XTEND CREAM 50ML",
+      "perfume-name-lancome-renergie-yeux-lifting-20": "LANCOME RENERGIE YEUX LIFTING EYE CREAM 20ML",
+      "perfume-name-lancome-la-nuit-tresor-rouge-drama": "LANCOME LA NUIT TRESOR ROUGE DRAMA EDP INTENSE 50ML",
+      "perfume-name-lancome-la-vie-est-belle-edp-30-body-lotion-set-s26": "LANCOME LA VIE EST BELLE EDP 30ML + BODY LOTION 50ML GIFT SET",
+      "perfume-name-prada-paradigme-edp-50-set-s26": "PRADA PARADIGME EDP 50ML + 10ML GIFT SET",
+      "perfume-name-prada-paradoxe-edp-30-set-s26": "PRADA PARADOXE EDP 30ML + 10ML GIFT SET",
+      "perfume-name-valentino-uomo-born-in-roma-intense-50-set-s26": "VALENTINO UOMO BORN IN ROMA INTENSE EDP 50ML + 10ML GIFT SET",
+      "perfume-name-ysl-myslf-edp-60-shower-gel-set-s26": "YVES SAINT LAURENT MYSLF EDP 60ML + SHOWER GEL 50ML GIFT SET",
+      "perfume-name-ysl-libre-edp-90-body-balm-set-s26": "YVES SAINT LAURENT LIBRE EDP 90ML + 10ML + BODY BALM 50ML GIFT SET",
+      "perfume-name-ysl-libre-edp-50-mirror-set-s26": "YVES SAINT LAURENT LIBRE EDP 50ML + 10ML + MIRROR GIFT SET",
+      "perfume-name-ysl-libre-edp-30-set-s26": "YVES SAINT LAURENT LIBRE EDP 30ML + 10ML GIFT SET",
+      "perfume-name-ysl-libre-edp-50-candy-glaze-set-s26": "YVES SAINT LAURENT LIBRE EDP 50ML + 10ML + CANDY GLAZE 15 GIFT SET",
+      "perfume-name-armani-prive-orange-mediterranee": "ARMANI PRIVE ORANGE MEDITERRANEE EDT",
+      "perfume-name-armani-prive-oud-nacre": "ARMANI PRIVE OUD NACRE EDP",
+      "perfume-name-armani-si-nude-bloom": "ARMANI SI NUDE BLOOM EDP 50ML",
+      "perfume-name-armani-si-passione-red-bloom": "ARMANI SI PASSIONE RED BLOOM EDP 50ML",
+      "perfume-name-ysl-y-iced-cologne": "YVES SAINT LAURENT Y ICED COLOGNE EDT INTENSE",
+      "perfume-name-ysl-lash-latex": "YVES SAINT LAURENT LASH LATEX MASCARA",
+      "perfume-name-ysl-lovenude-kiss-shaper": "YVES SAINT LAURENT LOVENUDE KISS SHAPER LIP LINER",
+      "perfume-name-ysl-lovenude-lip-blusher": "YVES SAINT LAURENT LOVENUDE LIP BLUSHER BALM",
+      "perfume-name-guess-iconic-blue-men-edp": "GUESS ICONIC BLUE FOR MEN EDP",
+      "perfume-name-guess-seductive-desire-men-edt": "GUESS SEDUCTIVE DESIRE FOR MEN EDT",
+      "perfume-name-guess-seductive-desire-women-edt": "GUESS SEDUCTIVE DESIRE FOR WOMEN EDT",
+      "perfume-name-guess-seductive-desire-women-mist": "GUESS SEDUCTIVE DESIRE FOR WOMEN FRAGRANCE MIST 250ML",
+      "perfume-name-cavalli-florence": "ROBERTO CAVALLI FLORENCE EDP",
+      "perfume-name-cavalli-paradiso-assoluto": "ROBERTO CAVALLI PARADISO ASSOLUTO EDP",
+      "perfume-name-cavalli-paradiso-azzurro": "ROBERTO CAVALLI PARADISO AZZURRO EDP 75ML",
+      "perfume-name-just-cavalli-wild-blue-him": "JUST CAVALLI WILD BLUE FOR HIM EDT",
+      "perfume-name-just-cavalli-wild-pink-her": "JUST CAVALLI WILD PINK FOR HER EDP",
+      "perfume-name-armani-stronger-with-you-spices": "EMPORIO ARMANI STRONGER WITH YOU SPICES EDP 100ML",
+      "perfume-name-armani-my-way-sunny-vanilla": "ARMANI MY WAY SUNNY VANILLA EDP",
+      "perfume-name-prada-paradoxe-hand-cream": "PRADA PARADOXE HAND CREAM 50ML",
+      "perfume-name-prada-luna-rossa-ocean-le-parfum-set": "PRADA LUNA ROSSA OCEAN LE PARFUM 50ML + 10ML GIFT SET",
+      "perfume-name-armani-stronger-with-you-edt-valentines-set": "ARMANI EMPORIO STRONGER WITH YOU EDT 100ML + 15ML GIFT SET",
+      "perfume-name-armani-stronger-with-you-intensely-valentines-set": "ARMANI EMPORIO STRONGER WITH YOU INTENSELY EDP 100ML + 15ML GIFT SET",
+      "perfume-name-prada-paradigme-edp-30-set": "PRADA PARADIGME EDP 30ML + 10ML GIFT SET",
+      "perfume-name-ysl-lash-clash-loveshine-set-s26": "YVES SAINT LAURENT LASH CLASH MASCARA + LOVESHINE 44 GIFT SET",
+      "perfume-name-ysl-myslf-edp-100-set-s26": "YVES SAINT LAURENT MYSLF EDP 100ML + 10ML GIFT SET",
+      "perfume-name-ysl-lash-clash-libre-set-s26": "YVES SAINT LAURENT LASH CLASH MASCARA + LIBRE EDP 10ML GIFT SET",
+      "perfume-name-lancome-tiuw-shape-stick": "LANCOME TEINT IDOLE ULTRA WEAR SHAPE STICK FOUNDATION",
+      "perfume-name-lancome-tiuw-shape-stick-blush": "LANCOME TEINT IDOLE SHAPE STICK BLUSH",
+      "perfume-name-lancome-tiuw-shape-stick-highlighter": "LANCOME TEINT IDOLE SHAPE STICK HIGHLIGHTER 01 FLEXING LAVENDER",
+      "perfume-name-lancome-lip-idole-cuddle-blur": "LANCOME LIP IDOLE CUDDLEBLUR LIP VELVET",
+      "perfume-name-margiela-replica-chasing-sunsets": "MAISON MARGIELA REPLICA CHASING SUNSETS EDT 100ML",
+      "perfume-name-margiela-replica-up-at-dawn": "MAISON MARGIELA REPLICA UP AT DAWN EDT",
+      "perfume-name-mugler-angel-blush": "MUGLER ANGEL BLUSH EDP",
+      "perfume-name-ralph-lauren-polo-67-extreme": "RALPH LAUREN POLO 67 EDP EXTREME",
+      "perfume-name-ralph-lauren-polo-red-extreme-edp": "RALPH LAUREN POLO RED EDP EXTREME",
+      "perfume-name-prada-luna-rossa-carbon-edp": "PRADA LUNA ROSSA CARBON EDP",
+      "perfume-name-lancome-absolue-longevity-md-anticipate-cream": "LANCOME ABSOLUE LONGEVITY MD ANTICIPATE THE CREAM 50ML",
+      "perfume-name-lancome-absolue-longevity-md-intercept-cream": "LANCOME ABSOLUE LONGEVITY MD INTERCEPT THE CREAM 50ML",
+      "perfume-name-lancome-absolue-longevity-md-intercept-serum": "LANCOME ABSOLUE LONGEVITY MD INTERCEPT THE SERUM 50ML",
+      "perfume-name-lancome-absolue-longevity-md-reset-cream": "LANCOME ABSOLUE LONGEVITY MD RESET THE CREAM 50ML",
+      "perfume-name-lancome-absolue-longevity-md-reset-serum": "LANCOME ABSOLUE LONGEVITY MD RESET THE SERUM 50ML",
+      "perfume-name-lancome-lveb-hair-body-mist": "LANCOME LA VIE EST BELLE HAIR & BODY MIST 100ML",
+      "perfume-name-armani-si-passione-intense-set": "ARMANI SI PASSIONE INTENSE EDP 50ML + 7ML GIFT SET",
+      "perfume-name-nishane-ani-x": "NISHANE ANI X EXTRAIT DE PARFUM",
+      "perfume-name-nishane-fan-your-flames-x": "NISHANE FAN YOUR FLAMES X EXTRAIT DE PARFUM 50ML",
+      "perfume-name-nishane-hacivat-x": "NISHANE HACIVAT X EXTRAIT DE PARFUM",
+      "perfume-name-nishane-hacivat": "NISHANE HACIVAT EXTRAIT DE PARFUM 100ML",
+      "perfume-name-nishane-hundred-silent-ways": "NISHANE HUNDRED SILENT WAYS EXTRAIT DE PARFUM",
+      "perfume-name-nishane-zenne": "NISHANE ZENNE EXTRAIT DE PARFUM 50ML",
+      "perfume-name-nishane-ani": "NISHANE ANI EXTRAIT DE PARFUM 50ML",
+      "perfume-name-nishane-ege": "NISHANE EGE EXTRAIT DE PARFUM 50ML",
+      "perfume-name-nishane-tempfluo": "NISHANE TEMPFLUO EXTRAIT DE PARFUM 50ML",
+      "perfume-name-nishane-wulong-cha": "NISHANE WULONG CHA EXTRAIT DE PARFUM 50ML",
+      "perfume-name-mancera-wild-fruits": "MANCERA WILD FRUITS EDP",
+      "perfume-name-mancera-aoud-blue-notes": "MANCERA AOUD BLUE NOTES EDP 120ML",
+      "perfume-name-mancera-lemon-line": "MANCERA LEMON LINE EDP 60ML",
+      "perfume-name-mancera-amore-caffe": "MANCERA AMORE CAFFE EDP 120ML",
+      "perfume-name-mancera-french-riviera": "MANCERA FRENCH RIVIERA EDP 120ML",
+      "perfume-name-mancera-cherry-cherry": "MANCERA CHERRY CHERRY EDP",
+      "perfume-name-mancera-fig-me-up": "MANCERA FIG ME UP EDP",
+      "perfume-name-mancera-amberful": "MANCERA AMBERFUL EDP",
+      "perfume-name-mancera-cinque-terre": "MANCERA CINQUE TERRE EDP",
+      "perfume-name-mancera-eternal-wood": "MANCERA ETERNAL WOOD EDP",
+      "perfume-name-mancera-intense-red-tobacco": "MANCERA INTENSE RED TOBACCO",
+      "perfume-name-mancera-tonka-cola": "MANCERA TONKA COLA EDP",
+      "perfume-name-montale-day-dreams": "MONTALE DAY DREAMS EDP",
+      "perfume-name-montale-bubble-forever": "MONTALE BUBBLE FOREVER EDP",
+      "perfume-name-montale-crazy-in-love": "MONTALE CRAZY IN LOVE EDP",
+      "perfume-name-montale-arabians-musk": "MONTALE ARABIANS MUSK EDP",
+      "perfume-name-montale-arabians": "MONTALE ARABIANS EDP 100ML",
+      "perfume-name-xerjoff-erba-gold": "XERJOFF ERBA GOLD EDP",
+      "perfume-name-xerjoff-erba-pura": "XERJOFF ERBA PURA EDP",
+      "perfume-name-xerjoff-accento-overdose": "XERJOFF ACCENTO OVERDOSE EDP 100ML",
+      "perfume-name-xerjoff-accento": "XERJOFF ACCENTO EDP 100ML",
+      "perfume-name-xerjoff-purple-accento": "XERJOFF PURPLE ACCENTO EDP 100ML",
+      "perfume-name-xerjoff-opera": "XERJOFF OPERA EDP 100ML",
+      "perfume-name-xerjoff-torino21": "XERJOFF TORINO21 EDP",
+      "perfume-name-xerjoff-alexandria-ii": "XERJOFF ALEXANDRIA II PARFUM",
+      "perfume-name-xerjoff-alexandria-ii-anniversary": "XERJOFF ALEXANDRIA II ANNIVERSARY PARFUM 100ML",
+      "perfume-name-xerjoff-coro": "XERJOFF CORO EDP 100ML",
+      "perfume-name-xerjoff-neorio": "XERJOFF X DURAN DURAN NEORIO PARFUM 50ML",
+      "perfume-name-xerjoff-black-moonlight": "XERJOFF X DURAN DURAN BLACK MOONLIGHT PARFUM 50ML",
+      "perfume-name-tiziana-terenzi-kirke-overdose": "TIZIANA TERENZI KIRKE OVERDOSE EXTRAIT DE PARFUM 100ML",
+      "perfume-name-btso-dirty-heaven": "BORNTOSTANDOUT DIRTY HEAVEN EDP 50ML",
+      "perfume-name-btso-dirty-rice": "BORNTOSTANDOUT DIRTY RICE EDP 50ML",
+      "perfume-name-btso-angels-powder": "BORNTOSTANDOUT ANGELS' POWDER EDP 50ML",
+      "perfume-name-btso-filthy-musk": "BORNTOSTANDOUT FILTHY MUSK EDP 50ML",
+      "perfume-name-btso-fig-porn": "BORNTOSTANDOUT FIG PORN EDP 50ML",
+      "perfume-name-btso-indecent-cherry": "BORNTOSTANDOUT INDECENT CHERRY EDP 50ML",
+      "perfume-name-btso-mud": "BORNTOSTANDOUT MUD EDP 50ML",
+      "perfume-name-btso-nanatopia": "BORNTOSTANDOUT NANATOPIA EDP 50ML",
+      "perfume-name-btso-black-mango": "BORNTOSTANDOUT BLACK MANGO EXTRAIT EXTREME 50ML",
+      "perfume-name-btso-oud-candy": "BORNTOSTANDOUT OUD CANDY EXTRAIT EXTREME 50ML",
+      "perfume-name-btso-black-guava": "BORNTOSTANDOUT BLACK GUAVA EXTRAIT EXTREME 50ML",
+      "perfume-name-btso-drunk-lovers-cream": "BORNTOSTANDOUT DRUNK LOVERS HAND & BODY CREAM 350ML",
+      "perfume-name-btso-drunk-lovers-wash": "BORNTOSTANDOUT DRUNK LOVERS HAND & BODY WASH 350ML",
+      "perfume-name-jhag-ego-stratis": "JULIETTE HAS A GUN EGO STRATIS EDP",
+      "perfume-name-jhag-lust-for-sun": "JULIETTE HAS A GUN LUST FOR SUN EDP",
+      "perfume-name-jhag-ode-to-dullness": "JULIETTE HAS A GUN ODE TO DULLNESS EDP 50ML",
+      "perfume-name-mancera-instant-crush": "MANCERA INSTANT CRUSH EDP",
+      "perfume-name-mancera-jardin-exclusif": "MANCERA JARDIN EXCLUSIF EDP",
+      "perfume-name-mancera-red-tobacco": "MANCERA RED TOBACCO EDP",
+      "perfume-name-mancera-holidays": "MANCERA HOLIDAYS EDP",
+      "perfume-name-mancera-intense-cedrat-boise": "MANCERA INTENSE CEDRAT BOISE",
+      "perfume-name-montale-dark-vanilla": "MONTALE DARK VANILLA EDP 100ML",
+      "perfume-name-xerjoff-40-knots": "XERJOFF JTC 40 KNOTS EDP 100ML",
+      "perfume-name-xerjoff-don": "XERJOFF JTC DON EDP",
+      "perfume-name-xerjoff-comandante": "XERJOFF JTC COMANDANTE! EDP 100ML",
+      "perfume-name-xerjoff-more-than-words": "XERJOFF JTC MORE THAN WORDS EDP",
+      "perfume-name-xerjoff-decas": "XERJOFF 1861 DECAS EDP 100ML",
+      "perfume-name-xerjoff-naxos": "XERJOFF 1861 NAXOS EDP 100ML",
+      "perfume-name-xerjoff-renaissance": "XERJOFF 1861 RENAISSANCE EDP 100ML",
+      "perfume-name-xerjoff-la-capitale": "XERJOFF LA CAPITALE PARFUM 50ML",
+      "perfume-name-xerjoff-nio": "XERJOFF NIO PARFUM 50ML",
+      "perfume-name-xerjoff-golden-dallah": "XERJOFF GOLDEN DALLAH PARFUM 50ML",
+      "perfume-name-tiziana-terenzi-nero-oudh": "TIZIANA TERENZI NERO OUDH EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-delox": "TIZIANA TERENZI DELOX EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-dionisio": "TIZIANA TERENZI DIONISIO EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-leo": "TIZIANA TERENZI LEO EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-libra": "TIZIANA TERENZI LIBRA EXTRAIT DE PARFUM 100ML",
+      "perfume-name-bond-no9-gold-coast": "BOND NO. 9 GOLD COAST EDP 100ML",
+      "perfume-name-jhag-lili-fantasy": "JULIETTE HAS A GUN LILI FANTASY EDP 100ML",
+      "perfume-name-jhag-magnolia-bliss": "JULIETTE HAS A GUN MAGNOLIA BLISS EDP",
+      "perfume-name-mancera-aoud-vanille": "MANCERA AOUD VANILLE EDP",
+      "perfume-name-mancera-cedrat-boise": "MANCERA CEDRAT BOISE EDP",
+      "perfume-name-mancera-choco-violet": "MANCERA CHOCO VIOLET EDP",
+      "perfume-name-mancera-gold-prestigium": "MANCERA GOLD PRESTIGIUM EDP",
+      "perfume-name-mancera-gold-intensive-aoud": "MANCERA GOLD INTENSIVE AOUD EDP 60ML",
+      "perfume-name-mancera-roses-greedy": "MANCERA ROSES GREEDY EDP",
+      "perfume-name-mancera-roses-vanille": "MANCERA ROSES VANILLE EDP",
+      "perfume-name-mancera-velvet-vanilla": "MANCERA VELVET VANILLA EDP 60ML",
+      "perfume-name-mancera-wind-wood": "MANCERA WIND WOOD EDP 120ML",
+      "perfume-name-mancera-black-line": "MANCERA BLACK LINE EDP 60ML",
+      "perfume-name-mancera-black-gold": "MANCERA BLACK GOLD EDP 60ML",
+      "perfume-name-mancera-aoud-lemon-mint": "MANCERA AOUD LEMON MINT EDP 60ML",
+      "perfume-name-montale-aoud-lime": "MONTALE AOUD LIME EDP 100ML",
+      "perfume-name-montale-aoud-night": "MONTALE AOUD NIGHT EDP 100ML",
+      "perfume-name-montale-black-aoud": "MONTALE BLACK AOUD EDP",
+      "perfume-name-montale-black-aoud-intense": "MONTALE BLACK AOUD INTENSE EDP 100ML",
+      "perfume-name-montale-chocolate-greedy": "MONTALE CHOCOLATE GREEDY EDP",
+      "perfume-name-montale-dark-purple": "MONTALE DARK PURPLE EDP 100ML",
+      "perfume-name-montale-intense-pepper": "MONTALE INTENSE PEPPER EDP",
+      "perfume-name-montale-intense-cafe": "MONTALE INTENSE CAFE EDP",
+      "perfume-name-montale-intense-roses-musk": "MONTALE INTENSE ROSES MUSK EXTRAIT DE PARFUM",
+      "perfume-name-montale-intense-tiare": "MONTALE INTENSE TIARE EDP 100ML",
+      "perfume-name-montale-oudmazing": "MONTALE OUDMAZING EDP",
+      "perfume-name-montale-rose-elixir": "MONTALE ROSE ELIXIR EDP",
+      "perfume-name-montale-santal-wood": "MONTALE SANTAL WOOD EDP 100ML",
+      "perfume-name-montale-soleil-de-capri": "MONTALE SOLEIL DE CAPRI EDP",
+      "perfume-name-montale-starry-nights": "MONTALE STARRY NIGHTS EDP",
+      "perfume-name-montale-sweet-vanilla": "MONTALE SWEET VANILLA EDP",
+      "perfume-name-montale-vanilla-extasy": "MONTALE VANILLA EXTASY EDP 100ML",
+      "perfume-name-montale-vanille-absolu": "MONTALE VANILLE ABSOLU EDP",
+      "perfume-name-montale-white-musk": "MONTALE WHITE MUSK EDP 100ML",
+      "perfume-name-montale-wood-spices": "MONTALE WOOD & SPICES EDP",
+      "perfume-name-montale-sweet-peony": "MONTALE SWEET PEONY EDP",
+      "perfume-name-montale-oud-dream": "MONTALE OUD DREAM EDP",
+      "perfume-name-montale-sensual-instinct": "MONTALE SENSUAL INSTINCT EDP",
+      "perfume-name-montale-arabians-tonka": "MONTALE ARABIANS TONKA EDP 100ML",
+      "perfume-name-montale-oud-tobacco": "MONTALE OUD TOBACCO EDP",
+      "perfume-name-tiziana-terenzi-ursa": "TIZIANA TERENZI URSA EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-al-contrario": "TIZIANA TERENZI AL CONTRARIO EXTRAIT DE PARFUM 50ML",
+      "perfume-name-tiziana-terenzi-cassiopea": "TIZIANA TERENZI CASSIOPEA EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-draco": "TIZIANA TERENZI DRACO EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-orion": "TIZIANA TERENZI ORION EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-andromeda": "TIZIANA TERENZI ANDROMEDA EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-andromeda-body-lotion": "TIZIANA TERENZI ANDROMEDA BODY LOTION 250ML",
+      "perfume-name-tiziana-terenzi-kirke": "TIZIANA TERENZI KIRKE EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-borea": "TIZIANA TERENZI BOREA EXTRAIT DE PARFUM 100ML",
+      "perfume-name-tiziana-terenzi-spirito-fiorentino": "TIZIANA TERENZI SPIRITO FIORENTINO EXTRAIT DE PARFUM 100ML",
+      "perfume-name-xerjoff-casamorati-regio": "XERJOFF CASAMORATI REGIO EDP 100ML",
+      "perfume-name-xerjoff-casamorati-bouquet-ideale": "XERJOFF CASAMORATI BOUQUET IDEALE EDP",
+      "perfume-name-xerjoff-casamorati-1888": "XERJOFF CASAMORATI 1888 EDP 100ML",
+      "perfume-name-xerjoff-casamorati-dama-bianca": "XERJOFF CASAMORATI DAMA BIANCA EDP",
+      "perfume-name-xerjoff-casamorati-fiero": "XERJOFF CASAMORATI FIERO EDP 100ML",
+      "perfume-name-xerjoff-casamorati-fiore-d-ulivo": "XERJOFF CASAMORATI FIORE D'ULIVO EDP 100ML",
+      "perfume-name-xerjoff-casamorati-gran-ballo": "XERJOFF CASAMORATI GRAN BALLO EDP 100ML",
+      "perfume-name-xerjoff-casamorati-la-tosca": "XERJOFF CASAMORATI LA TOSCA EDP",
+      "perfume-name-xerjoff-casamorati-lira": "XERJOFF CASAMORATI LIRA EDP 100ML",
+      "perfume-name-xerjoff-casamorati-dolce-amalfi": "XERJOFF CASAMORATI DOLCE AMALFI EDP",
+      "perfume-name-jhag-mmmm": "JHAG MMMM... EDP 100ML",
+      "perfume-name-jhag-another-oud": "JHAG ANOTHER OUD EDP 100ML",
+      "perfume-name-jhag-sunny-side-up": "JHAG SUNNY SIDE UP EDP 100ML",
+      "perfume-name-jhag-vanilla-vibes": "JHAG VANILLA VIBES EDP 100ML",
+      "perfume-name-jhag-musc-invisible": "JHAG MUSC INVISIBLE EDP 100ML",
+      "perfume-name-bond-no9-lafayette-street": "BOND NO.9 LAFAYETTE STREET EDP 100ML",
+      "perfume-name-bond-no9-tribeca": "BOND NO.9 TRIBECA EDP 100ML",
+      "perfume-name-shiseido-fslx-cleansing-foam": "SHISEIDO FUTURE SOLUTION LX EXTRA RICH CLEANSING FOAM 125ML",
+      "perfume-name-shiseido-fslx-eye-lip-cream": "SHISEIDO FUTURE SOLUTION LX EYE AND LIP CONTOUR REGENERATING CREAM 17ML",
+      "perfume-name-shiseido-fslx-total-protective-cream": "SHISEIDO FUTURE SOLUTION LX TOTAL PROTECTIVE CREAM SPF30 50ML",
+      "perfume-name-shiseido-fslx-total-regenerating-cream": "SHISEIDO FUTURE SOLUTION LX TOTAL REGENERATING CREAM 50ML",
+      "perfume-name-shiseido-fslx-brightening-softener": "SHISEIDO FUTURE SOLUTION LX CONCENTRATED BRIGHTENING SOFTENER 150ML",
+      "perfume-name-shiseido-legendary-enmei-cream": "SHISEIDO FUTURE SOLUTION LX LEGENDARY ENMEI ULTIMATE RENEWING CREAM 50ML",
+      "perfume-name-shiseido-legendary-enmei-serum": "SHISEIDO FUTURE SOLUTION LX LEGENDARY ENMEI ULTIMATE LUMINANCE SERUM 30ML",
+      "perfume-name-shiseido-legendary-enmei-eye-cream": "SHISEIDO FUTURE SOLUTION LX LEGENDARY ENMEI ULTIMATE RADIANCE EYE CREAM 15ML",
+      "perfume-name-shiseido-vp-advanced-cream": "SHISEIDO VITAL PERFECTION UPLIFTING AND FIRMING ADVANCED CREAM 50ML",
+      "perfume-name-shiseido-vp-day-cream-spf30": "SHISEIDO VITAL PERFECTION UPLIFTING AND FIRMING ADVANCED DAY CREAM SPF30 50ML",
+      "perfume-name-shiseido-vp-eye-cream": "SHISEIDO VITAL PERFECTION UPLIFTING AND FIRMING ADVANCED EYE CREAM 15ML",
+      "perfume-name-shiseido-vp-wrinklespot-treatment": "SHISEIDO VITAL PERFECTION INTENSIVE WRINKLESPOT TREATMENT 20ML",
+      "perfume-name-shiseido-vp-overnight-firming-treatment": "SHISEIDO VITAL PERFECTION OVERNIGHT FIRMING TREATMENT 50ML",
+      "perfume-name-shiseido-vp-concentrated-supreme-cream": "SHISEIDO VITAL PERFECTION CONCENTRATED SUPREME CREAM 50ML",
+      "perfume-name-shiseido-bop-micro-click-concentrate": "SHISEIDO BIO-PERFORMANCE MICRO-CLICK CONCENTRATE",
+      "perfume-name-shiseido-bop-skin-hiforce-cream": "SHISEIDO BIO-PERFORMANCE SKIN HIFORCE CREAM 50ML",
+      "perfume-name-shiseido-bop-super-revitalizing-cream": "SHISEIDO BIO-PERFORMANCE ADVANCED SUPER REVITALIZING CREAM",
+      "perfume-name-shiseido-ultimune-serum": "SHISEIDO ULTIMUNE POWER INFUSING SERUM",
+      "perfume-name-shiseido-ultimune-oil": "SHISEIDO ULTIMUNE POWER INFUSING OIL 75ML",
+      "perfume-name-shiseido-ultimune-hand-cream": "SHISEIDO ULTIMUNE POWER INFUSING HAND CREAM 50ML",
+      "perfume-name-shiseido-ultimune-future-power-shot": "SHISEIDO ULTIMUNE FUTURE POWER SHOT 15ML",
+      "perfume-name-shiseido-men-total-revitalizer-cream": "SHISEIDO MEN TOTAL REVITALIZER CREAM 50ML",
+      "perfume-name-shiseido-men-total-revitalizer-eye": "SHISEIDO MEN TOTAL REVITALIZER EYE 15ML",
+      "perfume-name-shiseido-men-total-revitalizer-light-fluid": "SHISEIDO MEN TOTAL REVITALIZER LIGHT FLUID 70ML",
+      "perfume-name-shiseido-men-skin-empowering-cream": "SHISEIDO MEN SKIN EMPOWERING CREAM 50ML",
+      "perfume-name-shiseido-refreshing-cleansing-water": "SHISEIDO REFRESHING CLEANSING WATER 180ML",
+      "perfume-name-shiseido-complete-cleansing-microfoam": "SHISEIDO COMPLETE CLEANSING MICROFOAM 180ML",
+      "perfume-name-shiseido-benefiance-contour-serum": "SHISEIDO BENEFIANCE WRINKLE SMOOTHING CONTOUR SERUM 30ML",
+      "perfume-name-shiseido-benefiance-eye-cream": "SHISEIDO BENEFIANCE WRINKLE SMOOTHING EYE CREAM 15ML",
+      "perfume-name-shiseido-eudermine-activating-essence": "SHISEIDO EUDERMINE ACTIVATING ESSENCE 145ML",
+      "perfume-name-shiseido-eye-lip-makeup-remover": "SHISEIDO INSTANT EYE AND LIP MAKEUP REMOVER 125ML",
+      "perfume-name-shiseido-clear-sun-stick-spf50": "SHISEIDO EXPERT SUN PROTECTOR CLEAR STICK SPF50+ 20G",
+      "perfume-name-shiseido-expert-sun-lotion-spf50": "SHISEIDO EXPERT SUN PROTECTOR LOTION SPF50+ 150ML",
+      "perfume-name-shiseido-expert-sun-cream-spf50": "SHISEIDO EXPERT SUN PROTECTOR CREAM SPF50+ 50ML",
+      "perfume-name-shiseido-expert-sun-lotion-spf30": "SHISEIDO EXPERT SUN PROTECTOR LOTION SPF30 150ML",
+      "perfume-name-shiseido-zen-essence": "SHISEIDO ZEN ESSENCE EDP",
+      "perfume-name-shiseido-ginza-datura": "SHISEIDO GINZA DATURA EDP",
+      "perfume-name-shiseido-ginza-intense": "SHISEIDO GINZA INTENSE EDP",
+      "perfume-name-shiseido-ginza-night-intense": "SHISEIDO GINZA NIGHT EDP INTENSE",
+      "perfume-name-shiseido-synchro-skin-radiant-lifting-foundation": "SHISEIDO SYNCHRO SKIN RADIANT LIFTING FOUNDATION SPF30 30ML",
+      "perfume-name-shiseido-synchro-skin-self-refreshing-foundation": "SHISEIDO SYNCHRO SKIN SELF-REFRESHING FOUNDATION SPF30 30ML",
+      "perfume-name-shiseido-revitalessence-skin-glow-foundation": "SHISEIDO REVITALESSENCE SKIN GLOW FOUNDATION SPF30 30ML",
+      "perfume-name-shiseido-technosatin-gel-lipstick": "SHISEIDO TECHNOSATIN GEL LIPSTICK",
+      "perfume-name-shiseido-controlledchaos-mascaraink": "SHISEIDO CONTROLLEDCHAOS MASCARAINK",
+      "perfume-name-shiseido-sports-bb": "SHISEIDO SPORTS BB SPF50+ 30ML",
+      "perfume-name-shiseido-sports-bb-compact": "SHISEIDO SPORTS BB COMPACT SPF50+ 12G",
+      "perfume-name-bond-no9-sutton-place": "BOND NO.9 SUTTON PLACE EDP 100ML",
+      "perfume-name-shiseido-lipliner-inkduo": "SHISEIDO LIPLINER INKDUO PRIME + LINE",
+      "perfume-name-shiseido-benefiance-overnight-cream": "SHISEIDO BENEFIANCE OVERNIGHT WRINKLE RESISTING CREAM 50ML",
+      "perfume-name-shiseido-synchro-skin-soft-blurring-primer": "SHISEIDO SYNCHRO SKIN SOFT BLURRING PRIMER 30ML",
+      "perfume-name-shiseido-vp-liftdefine-mask": "SHISEIDO VITAL PERFECTION LIFTDEFINE RADIANCE FACE MASK (6 PAIRS)",
+      "perfume-name-shiseido-ginza": "SHISEIDO GINZA EDP",
+      "perfume-name-shiseido-ginza-body-lotion": "SHISEIDO GINZA PERFUMED BODY LOTION 200ML",
+      "perfume-name-shiseido-ginza-murasaki": "SHISEIDO GINZA MURASAKI EDP",
+      "perfume-name-shiseido-zen": "SHISEIDO ZEN EDP",
+      "perfume-name-shiseido-men-face-cleanser": "SHISEIDO MEN FACE CLEANSER 125ML",
+      "perfume-name-shiseido-men-energizing-moisturizer-fluid": "SHISEIDO MEN ENERGIZING MOISTURIZER EXTRA LIGHT FLUID 100ML",
+      "perfume-name-shiseido-microliner-ink": "SHISEIDO MICROLINER INK",
+      "perfume-name-shiseido-waso-gel-to-oil-cleanser": "SHISEIDO WASO SHIKULIME GEL-TO-OIL CLEANSER 125ML",
+      "perfume-name-shiseido-waso-yuzu-c-sleeping-mask": "SHISEIDO WASO YUZU-C BEAUTY SLEEPING MASK 50ML",
+      "perfume-name-shiseido-waso-color-control-moisturizer": "SHISEIDO WASO SHIKULIME COLOR CONTROL OIL-FREE MOISTURIZER SPF30 50ML",
+      "perfume-name-shiseido-waso-mega-hydrating-moisturizer": "SHISEIDO WASO SHIKULIME MEGA HYDRATING MOISTURIZER 50ML",
+      "perfume-name-shiseido-ee-hydrating-cream": "SHISEIDO ESSENTIAL ENERGY HYDRATING CREAM 50ML",
+      "perfume-name-shiseido-ee-hydrating-day-cream-spf20": "SHISEIDO ESSENTIAL ENERGY HYDRATING DAY CREAM SPF20 50ML",
+      "perfume-name-shiseido-bop-skin-filler": "SHISEIDO BIO-PERFORMANCE SKIN FILLER SERUMS (2 X 30ML)",
+      "perfume-name-shiseido-clarifying-cleansing-foam": "SHISEIDO CLARIFYING CLEANSING FOAM 125ML",
+      "perfume-name-shiseido-extra-rich-cleansing-milk": "SHISEIDO EXTRA RICH CLEANSING MILK 125ML",
+      "perfume-name-shiseido-deep-cleansing-foam": "SHISEIDO DEEP CLEANSING FOAM 125ML",
+      "perfume-name-shiseido-treatment-softener": "SHISEIDO TREATMENT SOFTENER 150ML",
+      "perfume-name-shiseido-revitalizing-treatment-softener": "SHISEIDO REVITALIZING TREATMENT SOFTENER 150ML",
+      "perfume-name-shiseido-benefiance-day-cream-spf25": "SHISEIDO BENEFIANCE WRINKLE SMOOTHING DAY CREAM SPF25 50ML",
+      "perfume-name-shiseido-benefiance-wrinkle-smoothing-cream": "SHISEIDO BENEFIANCE WRINKLE SMOOTHING CREAM 50ML",
+      "perfume-name-shiseido-fslx-total-radiance-foundation": "SHISEIDO FUTURE SOLUTION LX TOTAL RADIANCE FOUNDATION SPF20 30ML",
+      "perfume-name-shiseido-maru-fude-brush": "SHISEIDO MARU FUDE MULTI FACE BRUSH",
+      "perfume-name-shiseido-naname-fude-brush": "SHISEIDO NANAME FUDE MULTI EYE BRUSH",
+      "perfume-name-shiseido-hasu-fude-brush": "SHISEIDO HASU FUDE FOUNDATION BRUSH",
+      "perfume-name-shiseido-daiya-fude-brush": "SHISEIDO DAIYA FUDE FACE DUO BRUSH",
+      "perfume-name-shiseido-tsutsu-fude-brush": "SHISEIDO TSUTSU FUDE CONCEALER BRUSH",
+      "perfume-name-shiseido-hanatsubaki-hake-brush": "SHISEIDO HANATSUBAKI HAKE POLISHING FACE BRUSH",
+      "perfume-name-shiseido-colorgel-lipbalm": "SHISEIDO COLORGEL LIPBALM",
+      "perfume-name-shiseido-synchro-skin-powder-foundation": "SHISEIDO SYNCHRO SKIN SELF-REFRESHING CUSTOM FINISH POWDER FOUNDATION 9G",
+      "perfume-name-shiseido-benefiance-nutriperfect-day-cream": "SHISEIDO BENEFIANCE NUTRIPERFECT DAY CREAM SPF15 50ML",
+      "perfume-name-shiseido-benefiance-nutriperfect-night-cream": "SHISEIDO BENEFIANCE NUTRIPERFECT NIGHT CREAM 50ML",
+      "perfume-name-shiseido-archliner-ink": "SHISEIDO ARCHLINER INK 01 SHIBUI BLACK",
+      "perfume-name-shiseido-brow-inktrio": "SHISEIDO BROW INKTRIO",
+      "perfume-name-shiseido-imperiallash-mascaraink": "SHISEIDO IMPERIALLASH MASCARAINK 01 SUMI BLACK",
       "perfume-name-diesel": "DIESEL LOVERDOSE",
-      "perfume-name-dkny": "DKNY BE DELICIOUS",
-      "perfume-name-juliet": "JULIET HAS A GUN",
-      "perfume-name-prada": "Prada Candy",
-      "perfume-name-roberto": "Roberto Cavalli Just Cavalli For Her",
       "perfume-name-valentino": "Valentino Born In Roma",
-      "perfume-name-thierry": "Thierry Mugler MU ANG NOVA",
-      "perfume-name-ralph": "Ralph Lauren Polo Blue",
-      "perfume-name-montale": "MONTALE AOUD LIME",
       "perfume-name-viktor": "FLBB EDP SPRAY",
-      "perfume-name-yves": "YVES SAINT LAURENT",
       "decor-alt-valentine": "Dekor dhome Valentini",
       "decor-alt-birthday": "Dekor dhome ditëlindjeje",
       "decor-alt-custom": "Dekor dhome personalizuar",
